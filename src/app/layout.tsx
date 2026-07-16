@@ -17,6 +17,28 @@ export const metadata: Metadata = {
   },
 }
 
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'SolviqLab',
+  url: 'https://solviqlab.com',
+  logo: 'https://solviqlab.com/favicon.svg',
+  description: 'Free professional calculators for health, finance, math and unit conversions.',
+  contactPoint: { '@type': 'ContactPoint', contactType: 'Support', email: 'support@solviqlab.com' },
+}
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'SolviqLab',
+  url: 'https://solviqlab.com',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: { '@type': 'EntryPoint', urlTemplate: 'https://solviqlab.com/en/{search_term_string}' },
+    'query-input': 'required name=search_term_string',
+  },
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -25,6 +47,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={inter.variable}>
       <body className="font-sans antialiased bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
         {children}
       </body>
     </html>

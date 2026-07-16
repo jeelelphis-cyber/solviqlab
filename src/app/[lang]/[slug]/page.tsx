@@ -63,6 +63,11 @@ export function generateMetadata({ params }: PageProps): Metadata {
       languages: {
         en: `https://solviqlab.com/en/${params.slug}`,
         uk: `https://solviqlab.com/uk/${params.slug}`,
+        es: `https://solviqlab.com/es/${params.slug}`,
+        pt: `https://solviqlab.com/pt/${params.slug}`,
+        fr: `https://solviqlab.com/fr/${params.slug}`,
+        de: `https://solviqlab.com/de/${params.slug}`,
+        pl: `https://solviqlab.com/pl/${params.slug}`,
         'x-default': `https://solviqlab.com/en/${params.slug}`,
       },
     },
