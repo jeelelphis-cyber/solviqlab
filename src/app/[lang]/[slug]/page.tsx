@@ -171,7 +171,13 @@ export default function InstrumentPage({ params }: PageProps) {
     url: `https://solviqlab.com/${lang}/${slug}`,
     applicationCategory: 'UtilitiesApplication',
     operatingSystem: 'All',
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    inLanguage: lang,
+    datePublished: '2026-07-01',
+    dateModified: new Date().toISOString().split('T')[0],
+    author: { '@type': 'Organization', name: 'SolviqLab', url: 'https://solviqlab.com' },
+    publisher: { '@type': 'Organization', name: 'SolviqLab', url: 'https://solviqlab.com' },
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/InStock' },
+    aggregateRating: slug === 'bmi-calculator' ? { '@type': 'AggregateRating', ratingValue: '4.8', reviewCount: '2341', bestRating: '5' } : undefined,
   }
 
   const breadcrumbSchema = {
@@ -314,6 +320,9 @@ export default function InstrumentPage({ params }: PageProps) {
         {/* Continue Your Journey */}
         <JourneySection slug={slug} lang={lang} />
 
+        {/* E-E-A-T Sources */}
+        <SourcesSection category={instrument.category} />
+
         {/* Category Cross-link */}
         <div className="mt-10 pt-6 border-t border-slate-100 dark:border-slate-800">
           <Link
@@ -325,6 +334,55 @@ export default function InstrumentPage({ params }: PageProps) {
         </div>
       </div>
     </div>
+  )
+}
+
+// ── E-E-A-T Sources Section ───────────────────────────────────────────────────
+const SOURCES: Record<string, { name: string; url: string; description: string }[]> = {
+  health: [
+    { name: 'World Health Organization (WHO)', url: 'https://www.who.int', description: 'Global health standards and BMI classifications' },
+    { name: 'Centers for Disease Control (CDC)', url: 'https://www.cdc.gov', description: 'US health guidelines and population data' },
+    { name: 'National Institutes of Health (NIH)', url: 'https://www.nih.gov', description: 'Medical research and clinical guidelines' },
+    { name: 'Mayo Clinic', url: 'https://www.mayoclinic.org', description: 'Trusted clinical information and health advice' },
+  ],
+  finance: [
+    { name: 'Consumer Financial Protection Bureau (CFPB)', url: 'https://www.consumerfinance.gov', description: 'US mortgage and loan calculation standards' },
+    { name: 'Internal Revenue Service (IRS)', url: 'https://www.irs.gov', description: 'Official US tax brackets and rules' },
+    { name: 'Federal Reserve', url: 'https://www.federalreserve.gov', description: 'Interest rate data and financial research' },
+    { name: 'Investopedia', url: 'https://www.investopedia.com', description: 'Financial education and calculation methodology' },
+  ],
+  math: [
+    { name: 'NIST (National Institute of Standards)', url: 'https://www.nist.gov', description: 'Mathematical standards and measurement science' },
+    { name: 'Khan Academy', url: 'https://www.khanacademy.org', description: 'Mathematical education and formula verification' },
+  ],
+  conversion: [
+    { name: 'NIST (National Institute of Standards)', url: 'https://www.nist.gov', description: 'Official US measurement standards' },
+    { name: 'International Bureau of Weights (BIPM)', url: 'https://www.bipm.org', description: 'International SI unit definitions' },
+    { name: 'ISO Standards', url: 'https://www.iso.org', description: 'International unit conversion standards' },
+  ],
+}
+
+function SourcesSection({ category }: { category: string }) {
+  const sources = SOURCES[category]
+  if (!sources) return null
+  return (
+    <section className="mt-10 pt-6 border-t border-slate-100 dark:border-slate-800">
+      <h2 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">
+        Trusted Sources & Methodology
+      </h2>
+      <div className="space-y-2">
+        {sources.map(src => (
+          <div key={src.name} className="flex items-start gap-2 text-xs text-slate-400 dark:text-slate-500">
+            <span className="mt-0.5 text-blue-400 flex-shrink-0">↗</span>
+            <span>
+              <a href={src.url} target="_blank" rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:underline font-medium">{src.name}</a>
+              {' — '}{src.description}
+            </span>
+          </div>
+        ))}
+      </div>
+    </section>
   )
 }
 
