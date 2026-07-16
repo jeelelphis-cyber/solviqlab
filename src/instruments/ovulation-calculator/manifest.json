@@ -2,33 +2,100 @@
   "slug": "ovulation-calculator",
   "name": "Ovulation Calculator",
   "seoTitle": "Ovulation Calculator — Fertile Window & Ovulation Date",
-  "seoDescription": "Find your ovulation date and fertile window based on your last period and cycle length. Plan or track conception with accurate cycle predictions.",
+  "seoDescription": "Find ovulation date and fertile window based on last period and cycle length. Track conception with accurate predictions. Free ovulation calculator, no sign-up.",
   "primaryKeyword": "ovulation calculator",
   "type": "calculator",
   "category": "health",
   "isYMYL": true,
   "version": "1.0.0",
   "status": "live",
-  "capabilities": ["formula", "seo", "localization"],
+  "capabilities": [
+    "formula",
+    "seo",
+    "localization"
+  ],
   "inputs": [
-    {"name": "lastPeriodDate", "type": "string", "required": true, "description": "Date of first day of last menstrual period (YYYY-MM-DD)"},
-    {"name": "cycleLength", "type": "number", "required": false, "min": 21, "max": 45, "description": "Average menstrual cycle length in days", "default": 28}
+    {
+      "name": "lastPeriodDate",
+      "type": "string",
+      "required": true,
+      "description": "Date of first day of last menstrual period (YYYY-MM-DD)"
+    },
+    {
+      "name": "cycleLength",
+      "type": "number",
+      "required": false,
+      "min": 21,
+      "max": 45,
+      "description": "Average menstrual cycle length in days",
+      "default": 28
+    }
   ],
   "outputs": [
-    {"name": "ovulationDate", "type": "string", "description": "Predicted ovulation date (YYYY-MM-DD)"},
-    {"name": "fertileWindowStart", "type": "string", "description": "Start of fertile window (YYYY-MM-DD)"},
-    {"name": "fertileWindowEnd", "type": "string", "description": "End of fertile window (YYYY-MM-DD)"},
-    {"name": "nextPeriodDate", "type": "string", "description": "Predicted next period date (YYYY-MM-DD)"},
-    {"name": "daysUntilOvulation", "type": "number", "description": "Days from today until ovulation (negative if past)"}
+    {
+      "name": "ovulationDate",
+      "type": "string",
+      "description": "Predicted ovulation date (YYYY-MM-DD)"
+    },
+    {
+      "name": "fertileWindowStart",
+      "type": "string",
+      "description": "Start of fertile window (YYYY-MM-DD)"
+    },
+    {
+      "name": "fertileWindowEnd",
+      "type": "string",
+      "description": "End of fertile window (YYYY-MM-DD)"
+    },
+    {
+      "name": "nextPeriodDate",
+      "type": "string",
+      "description": "Predicted next period date (YYYY-MM-DD)"
+    },
+    {
+      "name": "daysUntilOvulation",
+      "type": "number",
+      "description": "Days from today until ovulation (negative if past)"
+    }
   ],
   "keywords": [
-    {"term": "ovulation calculator", "intent": "transactional", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"},
-    {"term": "fertile window calculator", "intent": "transactional", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"},
-    {"term": "when do I ovulate", "intent": "informational", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"}
+    {
+      "term": "ovulation calculator",
+      "intent": "transactional",
+      "language": "en",
+      "source": "dataforseo",
+      "retrievedAt": "2026-07-16"
+    },
+    {
+      "term": "fertile window calculator",
+      "intent": "transactional",
+      "language": "en",
+      "source": "dataforseo",
+      "retrievedAt": "2026-07-16"
+    },
+    {
+      "term": "when do I ovulate",
+      "intent": "informational",
+      "language": "en",
+      "source": "dataforseo",
+      "retrievedAt": "2026-07-16"
+    }
   ],
-  "related": ["bmi-calculator", "bmr-calculator", "body-fat-calculator", "tdee-calculator"],
-  "supportedLanguages": ["en"],
+  "related": [
+    "bmi-calculator",
+    "bmr-calculator",
+    "body-fat-calculator",
+    "tdee-calculator"
+  ],
+  "supportedLanguages": [
+    "en"
+  ],
   "createdAt": "2026-07-16",
   "updatedAt": "2026-07-16",
-  "releaseHistory": [{"status": "live", "timestamp": "2026-07-16T00:00:00.000Z"}]
+  "releaseHistory": [
+    {
+      "status": "live",
+      "timestamp": "2026-07-16T00:00:00.000Z"
+    }
+  ]
 }

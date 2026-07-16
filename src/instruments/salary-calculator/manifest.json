@@ -2,36 +2,126 @@
   "slug": "salary-calculator",
   "name": "Salary Calculator",
   "seoTitle": "Salary Calculator — Hourly to Annual Salary Converter",
-  "seoDescription": "Convert hourly wage to annual salary or annual to hourly. Calculate weekly, biweekly, monthly, and yearly earnings instantly.",
+  "seoDescription": "Convert hourly to annual salary or annual to hourly. Get weekly, biweekly, and monthly earnings. Free salary calculator for any pay period. No sign-up.",
   "primaryKeyword": "salary calculator",
   "type": "calculator",
   "category": "finance",
   "isYMYL": false,
   "version": "1.0.0",
   "status": "live",
-  "capabilities": ["formula", "seo", "localization"],
+  "capabilities": [
+    "formula",
+    "seo",
+    "localization"
+  ],
   "inputs": [
-    {"name": "salaryType", "type": "select", "required": true, "enumValues": ["hourly", "annual"], "description": "Type of salary input"},
-    {"name": "amount", "type": "number", "required": true, "min": 0, "max": 10000000, "description": "Salary amount"},
-    {"name": "hoursPerWeek", "type": "number", "required": false, "min": 1, "max": 168, "description": "Hours worked per week", "default": 40},
-    {"name": "weeksPerYear", "type": "number", "required": false, "min": 1, "max": 52, "description": "Weeks worked per year", "default": 52}
+    {
+      "name": "salaryType",
+      "type": "select",
+      "required": true,
+      "enumValues": [
+        "hourly",
+        "annual"
+      ],
+      "description": "Type of salary input"
+    },
+    {
+      "name": "amount",
+      "type": "number",
+      "required": true,
+      "min": 0,
+      "max": 10000000,
+      "description": "Salary amount"
+    },
+    {
+      "name": "hoursPerWeek",
+      "type": "number",
+      "required": false,
+      "min": 1,
+      "max": 168,
+      "description": "Hours worked per week",
+      "default": 40
+    },
+    {
+      "name": "weeksPerYear",
+      "type": "number",
+      "required": false,
+      "min": 1,
+      "max": 52,
+      "description": "Weeks worked per year",
+      "default": 52
+    }
   ],
   "outputs": [
-    {"name": "hourly", "type": "number", "description": "Hourly rate"},
-    {"name": "daily", "type": "number", "description": "Daily rate"},
-    {"name": "weekly", "type": "number", "description": "Weekly pay"},
-    {"name": "biweekly", "type": "number", "description": "Biweekly pay"},
-    {"name": "monthly", "type": "number", "description": "Monthly pay"},
-    {"name": "annual", "type": "number", "description": "Annual salary"}
+    {
+      "name": "hourly",
+      "type": "number",
+      "description": "Hourly rate"
+    },
+    {
+      "name": "daily",
+      "type": "number",
+      "description": "Daily rate"
+    },
+    {
+      "name": "weekly",
+      "type": "number",
+      "description": "Weekly pay"
+    },
+    {
+      "name": "biweekly",
+      "type": "number",
+      "description": "Biweekly pay"
+    },
+    {
+      "name": "monthly",
+      "type": "number",
+      "description": "Monthly pay"
+    },
+    {
+      "name": "annual",
+      "type": "number",
+      "description": "Annual salary"
+    }
   ],
   "keywords": [
-    {"term": "salary calculator", "intent": "transactional", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"},
-    {"term": "hourly to annual salary", "intent": "transactional", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"},
-    {"term": "annual to hourly wage converter", "intent": "transactional", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"}
+    {
+      "term": "salary calculator",
+      "intent": "transactional",
+      "language": "en",
+      "source": "dataforseo",
+      "retrievedAt": "2026-07-16"
+    },
+    {
+      "term": "hourly to annual salary",
+      "intent": "transactional",
+      "language": "en",
+      "source": "dataforseo",
+      "retrievedAt": "2026-07-16"
+    },
+    {
+      "term": "annual to hourly wage converter",
+      "intent": "transactional",
+      "language": "en",
+      "source": "dataforseo",
+      "retrievedAt": "2026-07-16"
+    }
   ],
-  "related": ["tax-calculator", "retirement-calculator", "investment-calculator", "loan-calculator"],
-  "supportedLanguages": ["en"],
+  "related": [
+    "tax-calculator",
+    "retirement-calculator",
+    "investment-calculator",
+    "loan-calculator"
+  ],
+  "supportedLanguages": [
+    "en"
+  ],
   "createdAt": "2026-07-16",
   "updatedAt": "2026-07-16",
-  "releaseHistory": [{"status": "live", "timestamp": "2026-07-16T00:00:00.000Z"}]
+  "releaseHistory": [
+    {
+      "status": "live",
+      "timestamp": "2026-07-16T00:00:00.000Z"
+    }
+  ]
 }
