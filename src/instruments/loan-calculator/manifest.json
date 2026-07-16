@@ -62,6 +62,12 @@
   "keywords": [
     "loan calculator"
   ],
+  "related": [
+    "mortgage-calculator",
+    "compound-interest-calculator",
+    "salary-calculator",
+    "vat-calculator"
+  ],
   "supportedLanguages": [
     "en"
   ],

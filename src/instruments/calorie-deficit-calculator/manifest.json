@@ -78,6 +78,12 @@
   "keywords": [
     "calorie deficit calculator"
   ],
+  "related": [
+    "tdee-calculator",
+    "bmr-calculator",
+    "bmi-calculator",
+    "ideal-weight-calculator"
+  ],
   "supportedLanguages": [
     "en"
   ],

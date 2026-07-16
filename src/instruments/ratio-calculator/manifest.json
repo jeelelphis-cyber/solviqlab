@@ -60,6 +60,12 @@
   "keywords": [
     "ratio calculator"
   ],
+  "related": [
+    "percentage-calculator",
+    "fraction-calculator",
+    "average-calculator",
+    "scientific-notation-calculator"
+  ],
   "supportedLanguages": [
     "en"
   ],

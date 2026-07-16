@@ -84,6 +84,13 @@
   "keywords": [
     "mortgage calculator"
   ],
+  "related": [
+    "loan-calculator",
+    "compound-interest-calculator",
+    "salary-calculator",
+    "retirement-calculator",
+    "tax-calculator"
+  ],
   "supportedLanguages": [
     "en"
   ],

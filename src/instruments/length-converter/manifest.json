@@ -77,6 +77,12 @@
   "keywords": [
     "length converter"
   ],
+  "related": [
+    "weight-converter",
+    "temperature-converter",
+    "area-converter",
+    "volume-converter"
+  ],
   "supportedLanguages": [
     "en"
   ],

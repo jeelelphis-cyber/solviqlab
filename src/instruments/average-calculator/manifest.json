@@ -54,6 +54,12 @@
   "keywords": [
     "average calculator"
   ],
+  "related": [
+    "percentage-calculator",
+    "fraction-calculator",
+    "ratio-calculator",
+    "scientific-notation-calculator"
+  ],
   "supportedLanguages": [
     "en"
   ],

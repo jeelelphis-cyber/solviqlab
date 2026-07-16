@@ -60,6 +60,12 @@
   "keywords": [
     "ideal weight calculator"
   ],
+  "related": [
+    "bmi-calculator",
+    "body-fat-calculator",
+    "bmr-calculator",
+    "tdee-calculator"
+  ],
   "supportedLanguages": [
     "en"
   ],

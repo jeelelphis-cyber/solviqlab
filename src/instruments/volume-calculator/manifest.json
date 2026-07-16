@@ -61,6 +61,12 @@
   "keywords": [
     "volume calculator"
   ],
+  "related": [
+    "area-calculator",
+    "volume-converter",
+    "length-converter",
+    "area-converter"
+  ],
   "supportedLanguages": [
     "en"
   ],

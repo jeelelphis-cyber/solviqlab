@@ -94,8 +94,8 @@
   ],
   "related": [
     "bmi-calculator",
-    "bmr-calculator",
     "tdee-calculator",
+    "bmr-calculator",
     "calorie-deficit-calculator"
   ],
   "supportedLanguages": [

@@ -81,6 +81,12 @@
   "keywords": [
     "compound interest calculator"
   ],
+  "related": [
+    "investment-calculator",
+    "retirement-calculator",
+    "inflation-calculator",
+    "loan-calculator"
+  ],
   "supportedLanguages": [
     "en"
   ],

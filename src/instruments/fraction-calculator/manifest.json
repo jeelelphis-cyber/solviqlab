@@ -74,6 +74,12 @@
   "keywords": [
     "fraction calculator"
   ],
+  "related": [
+    "percentage-calculator",
+    "ratio-calculator",
+    "average-calculator",
+    "scientific-notation-calculator"
+  ],
   "supportedLanguages": [
     "en"
   ],

@@ -83,6 +83,12 @@
   "keywords": [
     "body fat calculator"
   ],
+  "related": [
+    "bmi-calculator",
+    "ideal-weight-calculator",
+    "tdee-calculator",
+    "bmr-calculator"
+  ],
   "supportedLanguages": [
     "en"
   ],

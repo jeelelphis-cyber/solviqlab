@@ -61,6 +61,12 @@
   "keywords": [
     "bmr calculator"
   ],
+  "related": [
+    "tdee-calculator",
+    "calorie-deficit-calculator",
+    "bmi-calculator",
+    "ideal-weight-calculator"
+  ],
   "supportedLanguages": [
     "en"
   ],

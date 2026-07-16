@@ -70,6 +70,12 @@
   "keywords": [
     "weight converter"
   ],
+  "related": [
+    "length-converter",
+    "temperature-converter",
+    "bmi-calculator",
+    "body-fat-calculator"
+  ],
   "supportedLanguages": [
     "en"
   ],

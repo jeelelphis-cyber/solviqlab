@@ -169,8 +169,9 @@
   "related": [
     "body-fat-calculator",
     "ideal-weight-calculator",
-    "calorie-calculator",
-    "tdee-calculator"
+    "tdee-calculator",
+    "bmr-calculator",
+    "calorie-deficit-calculator"
   ],
   "supportedLanguages": [
     "en"

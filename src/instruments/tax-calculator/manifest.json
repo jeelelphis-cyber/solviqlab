@@ -93,9 +93,9 @@
   ],
   "related": [
     "salary-calculator",
-    "retirement-calculator",
-    "investment-calculator",
-    "loan-calculator"
+    "vat-calculator",
+    "discount-calculator",
+    "mortgage-calculator"
   ],
   "supportedLanguages": [
     "en"

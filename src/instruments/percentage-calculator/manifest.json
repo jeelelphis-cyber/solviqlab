@@ -126,10 +126,11 @@
     }
   ],
   "related": [
-    "bmi-calculator",
-    "compound-interest-calculator",
-    "tip-calculator",
-    "discount-calculator"
+    "fraction-calculator",
+    "ratio-calculator",
+    "average-calculator",
+    "discount-calculator",
+    "vat-calculator"
   ],
   "seo": {
     "titleTemplate": "{name} — 4 Modes, Free & Instant",

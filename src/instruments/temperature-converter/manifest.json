@@ -56,6 +56,12 @@
   "keywords": [
     "temperature converter"
   ],
+  "related": [
+    "length-converter",
+    "weight-converter",
+    "area-converter",
+    "volume-converter"
+  ],
   "supportedLanguages": [
     "en"
   ],

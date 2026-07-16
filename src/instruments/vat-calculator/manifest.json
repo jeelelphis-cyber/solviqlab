@@ -63,6 +63,12 @@
   "keywords": [
     "vat calculator"
   ],
+  "related": [
+    "discount-calculator",
+    "tax-calculator",
+    "percentage-calculator",
+    "salary-calculator"
+  ],
   "supportedLanguages": [
     "en"
   ],

@@ -49,6 +49,12 @@
   "keywords": [
     "discount calculator"
   ],
+  "related": [
+    "vat-calculator",
+    "percentage-calculator",
+    "tax-calculator",
+    "fraction-calculator"
+  ],
   "supportedLanguages": [
     "en"
   ],

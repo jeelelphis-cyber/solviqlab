@@ -46,6 +46,12 @@
   "keywords": [
     "scientific notation calculator"
   ],
+  "related": [
+    "average-calculator",
+    "fraction-calculator",
+    "ratio-calculator",
+    "percentage-calculator"
+  ],
   "supportedLanguages": [
     "en"
   ],

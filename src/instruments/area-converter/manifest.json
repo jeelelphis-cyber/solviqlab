@@ -72,6 +72,12 @@
   "keywords": [
     "area converter"
   ],
+  "related": [
+    "area-calculator",
+    "volume-converter",
+    "length-converter",
+    "weight-converter"
+  ],
   "supportedLanguages": [
     "en"
   ],

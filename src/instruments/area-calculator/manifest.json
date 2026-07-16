@@ -60,6 +60,12 @@
   "keywords": [
     "area calculator"
   ],
+  "related": [
+    "volume-calculator",
+    "area-converter",
+    "length-converter",
+    "ratio-calculator"
+  ],
   "supportedLanguages": [
     "en"
   ],
