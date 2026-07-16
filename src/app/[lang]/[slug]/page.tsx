@@ -56,7 +56,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const instrument = getInstrument(params.slug)
   if (!instrument) return { title: 'Not Found' }
   return {
-    title: `${instrument.seoTitle} | CALCO`,
+    title: `${instrument.seoTitle} | SolviqLab`,
     description: instrument.seoDescription,
     alternates: {
       canonical: `https://solviqlab.com/${params.lang}/${params.slug}`,
@@ -72,15 +72,16 @@ export function generateMetadata({ params }: PageProps): Metadata {
       },
     },
     openGraph: {
-      title: `${instrument.seoTitle} | CALCO`,
+      title: `${instrument.seoTitle} | SolviqLab`,
       description: instrument.seoDescription,
-      images: [`https://solviqlab.com/og/${params.slug}.png`],
+      images: [{ url: `https://solviqlab.com/og/${params.slug}`, width: 1200, height: 630, alt: instrument.seoTitle }],
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${instrument.seoTitle} | CALCO`,
+      title: `${instrument.seoTitle} | SolviqLab`,
       description: instrument.seoDescription,
+      images: [`https://solviqlab.com/og/${params.slug}`],
     },
   }
 }

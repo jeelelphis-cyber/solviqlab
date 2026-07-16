@@ -27,7 +27,7 @@ export function generateMetadata({ params }: { params: { lang: string } }): Meta
       description,
       url: `${BASE}/${params.lang}`,
       type: 'website',
-      images: [{ url: `${BASE}/og-home.png`, width: 1200, height: 630, alt: 'SolviqLab — Free Calculators' }],
+      images: [{ url: `${BASE}/og/home`, width: 1200, height: 630, alt: 'SolviqLab — Free Calculators' }],
     },
     twitter: {
       card: 'summary_large_image',
