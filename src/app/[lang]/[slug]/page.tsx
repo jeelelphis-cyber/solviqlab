@@ -310,7 +310,7 @@ export default function InstrumentPage({ params }: PageProps) {
         </div>
 
         {/* SEO Content Blocks */}
-        <ContentSection translations={translations} />
+        <ContentSection translations={translations} primaryKeyword={instrument.primaryKeyword ?? slug} />
 
         {/* FAQ Section */}
         {faqItems.length > 0 && (
@@ -435,7 +435,7 @@ function InstrumentUI({
 }
 
 // ── SEO Content Blocks ────────────────────────────────────────────────────────
-function ContentSection({ translations }: { translations: Record<string, unknown> }) {
+function ContentSection({ translations, primaryKeyword }: { translations: Record<string, unknown>; primaryKeyword: string }) {
   const content = translations['content'] as Record<string, string> | undefined
   if (!content?.['whatIs']) return null
 
@@ -445,12 +445,15 @@ function ContentSection({ translations }: { translations: Record<string, unknown
     content['howItWorks_3'],
   ].filter(Boolean)
 
+  const kw = primaryKeyword.replace(/-/g, ' ')
+  const kwCapitalized = kw.charAt(0).toUpperCase() + kw.slice(1)
+
   return (
     <div className="space-y-8 mt-10">
-      {/* What Is */}
+      {/* What Is — H2 with keyword */}
       <section>
         <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-          What is this calculator?
+          What is the {kwCapitalized}?
         </h2>
         <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
           {content['whatIs']}
@@ -461,7 +464,7 @@ function ContentSection({ translations }: { translations: Record<string, unknown
       {content['formula'] && (
         <section>
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-            Formula
+            {kwCapitalized} Formula
           </h2>
           <div className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-5 py-4">
             <p className="text-slate-700 dark:text-slate-200 text-sm leading-relaxed font-mono whitespace-pre-wrap">
@@ -475,7 +478,7 @@ function ContentSection({ translations }: { translations: Record<string, unknown
       {content['example'] && (
         <section>
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-            Example
+            {kwCapitalized} Example
           </h2>
           <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
             {content['example']}
@@ -487,7 +490,7 @@ function ContentSection({ translations }: { translations: Record<string, unknown
       {steps.length > 0 && (
         <section>
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">
-            How to use
+            How to Use the {kwCapitalized}
           </h2>
           <ol className="space-y-2">
             {steps.map((step, i) => (
