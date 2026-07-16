@@ -1,0 +1,33 @@
+{
+  "title": "Calculateur de notation scientifique — Convertir et calculer",
+  "description": "Convertissez des nombres en notation scientifique et inversement. Additionnez, soustrayez, multipliez et divisez des nombres en notation scientifique instantanément.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_value": "Nombre",
+  "label_coefficient": "Coefficient",
+  "label_exponent": "Exposant (puissance de 10)",
+  "label_scientific": "Notation scientifique",
+  "label_engineering": "Notation ingénieur",
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "q1": "Comment convertir un nombre comme 0,00045 en notation scientifique ?",
+    "a1": "Déplacez la virgule vers la droite jusqu'à obtenir un nombre entre 1 et 10. Pour 0,00045, déplacez la virgule de 4 positions vers la droite pour obtenir 4,5. L'exposant est -4 car vous avez déplacé vers la droite. La notation scientifique est donc 4,5 × 10^-4.",
+    "q2": "Quelle est la différence entre la notation scientifique et la notation ingénieur ?",
+    "a2": "La notation scientifique exige que le coefficient soit compris entre 1 et 10 (valeur absolue). La notation ingénieur exige que l'exposant soit un multiple de 3, donc le coefficient est compris entre 1 et 1000. Par exemple, 1234 devient 1,234×10^3 en notation scientifique et 1,234×10^3 en notation ingénieur (car l'exposant 3 est un multiple de 3), mais 0,01234 devient 1,234×10^-2 en notation scientifique et 12,34×10^-3 en notation ingénieur.",
+    "q3": "Ce calculateur peut-il traiter des nombres très grands ou très petits ?",
+    "a3": "Oui, il accepte des nombres jusqu'à ±1×10^300 et aussi petits que ±1×10^-300. Cela couvre la plupart des applications scientifiques et d'ingénierie, y compris le nombre d'Avogadro (6,022×10^23) et la constante de Planck (6,626×10^-34).",
+    "q4": "Que signifie la sortie 'Coefficient' ?",
+    "a4": "Le coefficient est les chiffres significatifs du nombre, aussi appelé mantisse. En notation scientifique, il est toujours compris entre 1 et 10 (ou -10 et -1 pour les nombres négatifs). Par exemple, pour 0,00045, le coefficient est 4,5. Il représente la précision du nombre.",
+    "q5": "Existe-t-il une norme officielle pour la notation scientifique ?",
+    "a5": "Oui, la notation scientifique suit la norme IEEE pour l'arithmétique à virgule flottante (IEEE 754) et est largement utilisée dans la norme ISO 80000-1 pour les grandeurs et unités. La notation a × 10^b est universellement acceptée en science et en ingénierie."
+  },
+  "content": {
+    "whatIs": "Ce calculateur de notation scientifique convertit tout nombre réel en notation scientifique (a × 10^b) et en notation ingénieur (a × 10^b où b est un multiple de 3). Il effectue également des opérations arithmétiques sur des nombres en notation scientifique, bien que la version actuelle se concentre sur la conversion.",
+    "formula": "La notation scientifique exprime un nombre comme un coefficient (a) multiplié par une puissance de 10 (10^b), où 1 ≤ |a| < 10 et b est un entier. La notation ingénieur restreint b aux multiples de 3. Le calculateur utilise l'algorithme standard : déplacer la virgule pour obtenir un coefficient entre 1 et 10, compter les déplacements comme exposant (positif pour la gauche, négatif pour la droite).",
+    "example": "Pour la valeur d'entrée 123400, le calculateur affiche coefficient 1,234, exposant 5, notation scientifique 1,234 × 10^5, et notation ingénieur 123,4 × 10^3. Pour 0,000567, il affiche coefficient 5,67, exposant -4, notation scientifique 5,67 × 10^-4, et notation ingénieur 567 × 10^-6.",
+    "howItWorks_1": "Entrez un nombre réel dans le champ 'valeur'. Il peut s'agir d'un nombre décimal, entier ou en notation scientifique (par exemple, 2,5e3). Le nombre doit être compris entre -1×10^300 et 1×10^300.",
+    "howItWorks_2": "Cliquez sur le bouton 'Calculer'. Le calculateur traite l'entrée en identifiant la virgule et en la déplaçant pour créer un coefficient entre 1 et 10 (ou entre 1 et 1000 pour la notation ingénieur). Le nombre de positions déplacées devient l'exposant.",
+    "howItWorks_3": "Les résultats affichent quatre sorties : Coefficient (la mantisse), Exposant (puissance de 10), Notation scientifique (forme standard) et Notation ingénieur (exposant multiple de 3). Utilisez la notation scientifique pour des usages généraux ; utilisez la notation ingénieur lorsque vous travaillez avec des préfixes SI (par exemple, kilo, méga, micro)."
+  }
+}

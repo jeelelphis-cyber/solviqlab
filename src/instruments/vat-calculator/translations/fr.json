@@ -1,0 +1,36 @@
+{
+  "title": "Calculateur de TVA — Ajouter ou Supprimer la TVA Instantanément",
+  "description": "Ajoutez ou supprimez la TVA de tout prix. Prend en charge tous les taux de TVA (5 %, 10 %, 15 %, 20 %, 21 %, 25 %). Calcul instantané pour les entreprises et les consommateurs.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_amount": "Montant",
+  "label_vatRate": "Taux de TVA",
+  "label_mode": "Mode",
+  "label_netAmount": "Montant net (hors TVA)",
+  "label_vatAmount": "Montant de la TVA",
+  "label_grossAmount": "Montant brut (TVA incluse)",
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "q1": "Comment le montant de la TVA est-il calculé lors de l'ajout de la TVA ?",
+    "a1": "Lors de l'ajout de la TVA, le montant de la TVA est calculé comme suit : Montant de la TVA = Montant net × (Taux de TVA / 100). Par exemple, avec un montant net de 200 $ et un taux de TVA de 10 %, Montant de la TVA = 200 $ × 0,10 = 20 $.",
+    "q2": "Que signifie le résultat 'Montant net' lors de la suppression de la TVA ?",
+    "a2": "Le montant net lors de la suppression de la TVA est le prix d'origine avant l'ajout de la TVA. Il est calculé en divisant le montant brut par (1 + Taux de TVA/100). Par exemple, si le montant brut est de 110 $ et le taux de TVA de 10 %, Montant net = 110 $ / 1,10 = 100 $.",
+    "q3": "Puis-je utiliser ce calculateur pour tout taux de TVA, y compris les taux non standard ?",
+    "a3": "Oui, vous pouvez saisir tout taux de TVA de 0 % à 100 %. Cela inclut les taux standard comme 5 %, 10 %, 20 % ou des taux personnalisés. Le calculateur fonctionne pour tous les taux, mais notez que les taux de TVA sont généralement fixés par les autorités fiscales et peuvent varier selon le pays et le type de produit.",
+    "q4": "Que représente le résultat 'Montant brut' ?",
+    "a4": "Le montant brut est le prix total incluant la TVA. En mode 'ajouter', c'est le montant net plus le montant de la TVA. En mode 'supprimer', c'est le montant saisi (le prix incluant la TVA). Par exemple, si le net est de 50 $ et la TVA de 20 %, le brut = 60 $.",
+    "q5": "Quelle autorité fixe les taux et les règles de la TVA ?",
+    "a5": "La TVA est une taxe à la consommation régie par les autorités fiscales nationales. Par exemple, dans l'Union européenne, les taux de TVA sont fixés par chaque État membre dans le cadre des directives de l'UE. Au Royaume-Uni, le HM Revenue & Customs (HMRC) administre la TVA. En Australie, l'Australian Taxation Office (ATO) gère la GST, une taxe similaire. Référez-vous toujours à votre autorité fiscale locale pour les taux applicables."
+  },
+  "opt_add": "Ajouter la TVA",
+  "opt_remove": "Supprimer la TVA",
+  "content": {
+    "whatIs": "Le calculateur de TVA ajoute ou supprime instantanément la taxe sur la valeur ajoutée (TVA) de tout prix. Il calcule le montant net, le montant de la TVA et le montant brut en fonction du prix saisi et du taux de TVA, en utilisant les formules standard de la TVA.",
+    "formula": "Lors de l'ajout de la TVA : Montant brut = Montant net × (1 + Taux de TVA/100) et Montant de la TVA = Montant brut - Montant net. Lors de la suppression de la TVA : Montant net = Montant brut / (1 + Taux de TVA/100) et Montant de la TVA = Montant brut - Montant net. Le taux de TVA est exprimé en pourcentage.",
+    "example": "Pour un prix net de 100 $ avec un taux de TVA de 20 % en mode 'ajouter' : Montant brut = 100 $ × (1 + 20/100) = 120 $, Montant de la TVA = 20 $. Pour un prix brut de 120 $ en mode 'supprimer' : Montant net = 120 $ / (1 + 20/100) = 100 $, Montant de la TVA = 20 $.",
+    "howItWorks_1": "Saisissez le montant dans le champ 'Montant' (en dollars) et le taux de TVA en pourcentage dans le champ 'Taux de TVA'. Sélectionnez le mode : 'Ajouter la TVA' pour calculer le montant brut incluant la TVA, ou 'Supprimer la TVA' pour extraire le montant net d'un prix brut.",
+    "howItWorks_2": "Cliquez sur le bouton Calculer. Le calculateur applique la formule appropriée en fonction du mode sélectionné et calcule instantanément le montant net, le montant de la TVA et le montant brut.",
+    "howItWorks_3": "Consultez les trois champs de résultat : Montant net (prix hors TVA), Montant de la TVA (la part de taxe) et Montant brut (prix total incluant la TVA). Utilisez ces valeurs pour la facturation, la tarification ou les déclarations fiscales."
+  }
+}

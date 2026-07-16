@@ -1,0 +1,35 @@
+{
+  "title": "Convertisseur de volume — Litres, Gallons, ml, Tasses & plus",
+  "description": "Convertissez instantanément les unités de volume : litres, gallons, millilitres, tasses, onces liquides, mètres cubes, pieds cubes. Convertisseur d'unités de volume gratuit.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_value": "Valeur",
+  "label_fromUnit": "De",
+  "label_liters": "Litres",
+  "label_milliliters": "Millilitres",
+  "label_gallons": "Gallons US",
+  "label_cups": "Tasses",
+  "label_fluidOunces": "Onces liquides",
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Quel est le facteur de conversion des litres en gallons US ?",
+    "a1": "1 litre équivaut à 0,264172 gallon US. Pour convertir des litres en gallons, multipliez la valeur en litres par 0,264172. Par exemple, 10 L × 0,264172 = 2,64172 gal.",
+    "q2": "Comment interpréter le résultat en 'Tasses' ? Est-ce des tasses US ou métriques ?",
+    "a2": "Le résultat en 'Tasses' utilise les tasses US, où 1 tasse US = 236,588 mL. Cela diffère des tasses métriques (250 mL) ou impériales. La conversion est basée sur le standard US.",
+    "q3": "Ce convertisseur peut-il gérer de très grands volumes, comme des mètres cubes ?",
+    "a3": "Oui, le convertisseur accepte des valeurs jusqu'à 1 000 000 000 000. Cependant, il affiche uniquement les résultats en litres, millilitres, gallons, tasses et onces liquides. Pour les mètres cubes, vous devez convertir manuellement : 1 m³ = 1000 L.",
+    "q4": "Que représente le résultat en 'Onces liquides' ?",
+    "a4": "Les onces liquides (fl oz) sont une unité de volume du système US, pas de poids. 1 once liquide US = 29,5735 mL. Le résultat montre le volume équivalent en onces liquides basé sur l'entrée.",
+    "q5": "Quelle norme définit les facteurs de conversion utilisés ?",
+    "a5": "Les facteurs de conversion sont basés sur le système coutumier US tel que défini par le National Institute of Standards and Technology (NIST). Par exemple, 1 gallon US = 3,785411784 L exactement, et 1 tasse US = 236,5882365 mL."
+  },
+  "content": {
+    "whatIs": "Le Convertisseur de volume est un outil qui convertit un volume donné d'une unité vers plusieurs autres unités simultanément. Il utilise des facteurs de conversion entre unités comme les litres, gallons, tasses et onces liquides, tous basés sur les systèmes métrique et coutumier US.",
+    "formula": "La conversion utilise l'unité de base qu'est le litre. Pour chaque unité, un facteur de conversion est appliqué : 1 L = 1000 mL = 0,264172 gal = 4,22675 tasses = 33,814 fl oz. La formule est : résultat = valeur * (facteur de conversion de fromUnit à L) * (facteur de conversion de L à targetUnit).",
+    "example": "Par exemple, convertir 2 gallons en autres unités : 2 gal × 3,78541 L/gal = 7,57082 L, puis 7,57082 L × 1000 = 7570,82 mL, × 4,22675 = 32 tasses, × 33,814 = 256 fl oz.",
+    "howItWorks_1": "Entrez la valeur numérique du volume dans le champ 'valeur' (par exemple, 5).",
+    "howItWorks_2": "Sélectionnez l'unité de la valeur saisie dans le menu déroulant 'fromUnit' (par exemple, 'gal' pour gallons). Le calculateur applique ensuite les facteurs de conversion pour calculer les volumes équivalents en litres, millilitres, gallons, tasses et onces liquides.",
+    "howItWorks_3": "Les résultats sont affichés dans les champs de sortie : Litres, Millilitres, Gallons US, Tasses et Onces liquides. Chacun montre la valeur convertie avec son étiquette d'unité."
+  }
+}

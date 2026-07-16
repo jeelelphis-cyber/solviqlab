@@ -1,0 +1,37 @@
+{
+  "title": "Ovulation Calculator — Fertile Window & Cycle Tracker",
+  "description": "Find your ovulation date and fertile window based on your last period and cycle length. Plan or track conception with accurate menstrual cycle predictions.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_lastPeriodDate": "First Day of Last Period",
+  "label_cycleLength": "Average Cycle Length",
+  "label_ovulationDate": "Ovulation Date",
+  "label_fertileWindowStart": "Fertile Window Start",
+  "label_fertileWindowEnd": "Fertile Window End",
+  "label_nextPeriodDate": "Next Period Date",
+  "label_daysUntilOvulation": "Days Until Ovulation",
+  "unit_days": "days",
+  "ymyl_disclaimer": "This calculator provides estimates based on a standard ovulation model. Individual cycles vary. This tool is not a substitute for medical advice or contraception. Consult a healthcare provider for fertility planning.",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How is the ovulation date calculated?",
+    "a1": "Ovulation is estimated to occur 14 days before the start of the next period, regardless of cycle length. This is because the luteal phase (post-ovulation) is consistently about 14 days. The formula is: Ovulation Date = Last Period Date + (Cycle Length − 14 days). For a 28-day cycle, ovulation is on day 14. For a 32-day cycle, it falls on day 18.",
+    "q2": "What is the fertile window?",
+    "a2": "The fertile window is the period when conception is most likely. Sperm can survive in the fallopian tubes for up to 5 days, and the egg is viable for 12–24 hours after ovulation. This gives a fertile window of approximately 5 days before ovulation through 1 day after. This calculator sets the window from 5 days before to 1 day after the estimated ovulation date.",
+    "q3": "How accurate is this ovulation calculator?",
+    "a3": "This calculator uses the standard calendar/rhythm method, which assumes a regular cycle and fixed luteal phase. It is most accurate for women with consistent cycle lengths between 21 and 45 days. Factors like stress, illness, travel, PCOS, or breastfeeding can shift ovulation. For greater accuracy, combine this with basal body temperature (BBT) tracking or LH surge testing.",
+    "q4": "What does a negative 'Days Until Ovulation' mean?",
+    "a4": "A negative number means the estimated ovulation date has already passed in the current cycle. For example, −3 means ovulation was estimated to have occurred 3 days ago. This is normal if you're in the second half of your cycle. The next period date shown will tell you when your new cycle is expected to begin.",
+    "q5": "Can I use this calculator to avoid pregnancy?",
+    "a5": "This calculator is not intended or reliable for contraception. The calendar method has a typical use failure rate of about 24% per year. For contraception, consult a healthcare provider. This tool is best used for understanding your cycle and increasing chances of conception when trying to get pregnant."
+  },
+  "content": {
+    "whatIs": "This ovulation calculator predicts your ovulation date, fertile window, and next period date based on your last menstrual period and average cycle length. It uses the standard calendar method widely referenced in obstetrics and gynecology.",
+    "formula": "Ovulation Day = Cycle Length − 14\nOvulation Date = Last Period Date + Ovulation Day\nFertile Window Start = Ovulation Date − 5 days\nFertile Window End = Ovulation Date + 1 day\nNext Period Date = Last Period Date + Cycle Length",
+    "example": "Last period January 1, cycle length 28 days: Ovulation day = 28 − 14 = 14. Ovulation Date = January 15. Fertile window: January 10–16. Next period: January 29.",
+    "howItWorks_1": "Enter the date of the first day of your last menstrual period.",
+    "howItWorks_2": "Enter your average cycle length in days (typical range is 21–45, default is 28).",
+    "howItWorks_3": "Click Calculate to see your estimated ovulation date, fertile window, next period date, and how many days until ovulation from today."
+  }
+}

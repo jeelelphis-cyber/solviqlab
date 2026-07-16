@@ -1,0 +1,40 @@
+{
+  "title": "Kalkulator Snu — Najlepsze Pory Snu i Pobudki według Cykli Snu",
+  "description": "Znajdź idealną porę snu lub pobudki w oparciu o 90-minutowe cykle snu. Obudź się wypoczęty, dopasowując sen do pełnych cykli REM.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Twój Harmonogram Snu",
+  "label_mode": "Tryb",
+  "label_targetTime": "Godzina",
+  "label_fallAsleepMinutes": "Minuty do zaśnięcia",
+  "opt_waketime": "Chcę obudzić się o...",
+  "opt_bedtime": "Idę spać o...",
+  "label_cycle4": "4 cykle — 6 godzin",
+  "label_cycle5": "5 cykli — 7,5 godziny",
+  "label_cycle6": "6 cykli — 9 godzin",
+  "label_cycle7": "7 cykli — 10,5 godziny",
+  "tag_light": "Lekki",
+  "tag_optimal": "Optymalny",
+  "tag_too_much": "Za długo",
+  "faq": {
+    "title": "Najczęściej Zadawane Pytania",
+    "q1": "Czym jest cykl snu i dlaczego trwa 90 minut?",
+    "a1": "Cykl snu składa się z czterech faz: N1 (sen lekki), N2 (sen lekki), N3 (sen głęboki/wolnofalowy) i REM (szybkie ruchy gałek ocznych). Jeden pełny cykl trwa średnio 90 minut, choć może wynosić od 70 do 120 minut, a proporcje snu głębokiego i REM zmieniają się w ciągu nocy. Budzenie się na końcu pełnego cyklu — zamiast w trakcie snu głębokiego — wiąże się z większą czujnością i mniejszym otępieniem.",
+    "q2": "Dlaczego zaleca się 5 lub 6 cykli snu?",
+    "a2": "Większość dorosłych potrzebuje 7–9 godzin snu na dobę, co odpowiada 5–6 pełnym 90-minutowym cyklom. Pięć cykli to 7,5 godziny, a sześć cykli to 9 godzin. Cztery cykle (6 godzin) są na ogół niewystarczające dla większości dorosłych w dłuższej perspektywie. Siedem cykli (10,5 godziny) może oznaczać przesypianie, co w niektórych badaniach wiąże się z ryzykiem zdrowotnym.",
+    "q3": "Co to są 'minuty do zaśnięcia' i jak wpływają na obliczenia?",
+    "a3": "Latencja snu (czas do zaśnięcia) to opóźnienie między położeniem się a faktycznym zaśnięciem. Średnia dla zdrowych dorosłych wynosi 15–20 minut. Kalkulator odejmuje ten czas, aby uwzględnić go w alarmach. Jeśli masz bezsenność lub zasypiasz szybko, dostosuj tę wartość. Dla trybu 'pobudka': pora snu = docelowa pobudka − czas zaśnięcia − (cykle × 90 min).",
+    "q4": "Czy to uwzględnia drzemki?",
+    "a4": "Ten kalkulator jest przeznaczony do głównej sesji snu nocnego. W przypadku drzemek idealny jest jeden 90-minutowy cykl (lub nawet 20 minut, aby uniknąć otępienia). Możesz użyć tego kalkulatora do drzemek, wprowadzając czas rozpoczęcia drzemki w trybie 'pora snu' i odczytując czas cyklu 4 jako idealny czas pobudki po 90-minutowej drzemce.",
+    "q5": "Czy lepiej obudzić się po 5 czy 6 cyklach?",
+    "a5": "Oba mieszczą się w zalecanym zakresie 7–9 godzin dla dorosłych. Większość ludzi dobrze funkcjonuje przy 7,5 godzinach (5 cykli), szczególnie jeśli mają stały harmonogram snu. Sześć cykli (9 godzin) jest lepsze dla osób nadrabiających dług senny, chorych lub z naturalnie większym zapotrzebowaniem na sen. Kluczem jest budzenie się na końcu pełnego cyklu, co ten kalkulator pomaga odpowiednio wyliczyć."
+  },
+  "content": {
+    "whatIs": "Ten kalkulator snu pomaga znaleźć najlepszą porę snu lub pobudki w oparciu o 90-minutowe cykle snu. Dopasowując sen tak, aby kończył się po pełnym cyklu, zwiększasz szansę na obudzenie się wypoczętym, a nie otępiałym.",
+    "formula": "Pora snu (tryb pobudki) = Pobudka − Minuty do zaśnięcia − (Cykle × 90 min)\nPobudka (tryb snu) = Pora snu + Minuty do zaśnięcia + (Cykle × 90 min)\nGodziny automatycznie przechodzą przez północ.",
+    "example": "Jeśli musisz obudzić się o 07:00 i zasypiasz w 15 minut: 5 cykli = 07:00 − 15 min − 450 min = pora snu 23:05. 6 cykli = 07:00 − 15 min − 540 min = pora snu 21:35.",
+    "howItWorks_1": "Wybierz tryb: 'Chcę obudzić się o' aby obliczyć pory snu, lub 'Idę spać o' aby obliczyć pory pobudki.",
+    "howItWorks_2": "Wprowadź docelową godzinę w formacie GG:MM i w razie potrzeby dostosuj minuty do zaśnięcia (domyślnie 15).",
+    "howItWorks_3": "Kliknij Oblicz, aby zobaczyć cztery zalecane godziny odpowiadające 4, 5, 6 i 7 pełnym cyklom snu."
+  }
+}

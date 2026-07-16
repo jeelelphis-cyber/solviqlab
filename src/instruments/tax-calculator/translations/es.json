@@ -1,0 +1,40 @@
+{
+  "title": "Calculadora de Impuestos — Impuesto Federal sobre la Renta de EE. UU. 2024",
+  "description": "Calcule su impuesto federal sobre la renta de EE. UU. para 2024, tasa impositiva efectiva, tasa marginal y salario neto según su estado civil y sus ingresos.",
+  "calculate": "Calcular",
+  "reset": "Restablecer",
+  "result": "Resultado",
+  "label_income": "Ingreso Bruto Anual",
+  "label_filingStatus": "Estado Civil",
+  "label_federalTax": "Impuesto Federal",
+  "label_effectiveRate": "Tasa Impositiva Efectiva",
+  "label_marginalRate": "Tasa Marginal",
+  "label_takeHomePay": "Salario Neto",
+  "label_standardDeduction": "Deducción Estándar",
+  "label_taxableIncome": "Ingreso Imponible",
+  "opt_single": "Soltero",
+  "opt_married_jointly": "Casado que presenta declaración conjunta",
+  "opt_head_of_household": "Cabeza de Familia",
+  "ymyl_disclaimer": "Esta calculadora proporciona estimaciones basadas en los tramos impositivos federales de 2024. No tiene en cuenta impuestos estatales, FICA, créditos ni deducciones detalladas. Consulte a un profesional de impuestos para obtener asesoramiento.",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cuál es la diferencia entre la tasa impositiva efectiva y la tasa marginal?",
+    "a1": "La tasa marginal es la tasa aplicada al último dólar de su ingreso imponible — el tramo más alto que alcanza. La tasa efectiva es la tasa promedio pagada sobre la totalidad de sus ingresos. Debido a que EE. UU. utiliza tramos progresivos, la mayoría de las personas pagan una tasa efectiva más baja que su tasa marginal. Por ejemplo, un declarante soltero con $80,000 de ingresos tiene una tasa marginal del 22% pero una tasa efectiva de aproximadamente el 12.7%.",
+    "q2": "¿Cuál es la deducción estándar para 2024?",
+    "a2": "Para el año fiscal 2024, las deducciones estándar del IRS son: $14,600 para declarantes solteros, $29,200 para casados que presentan declaración conjunta y $21,900 para cabeza de familia. Esta cantidad se resta del ingreso bruto antes de aplicar los tramos impositivos. Debe detallar las deducciones solo si superan la deducción estándar para su estado civil.",
+    "q3": "¿Esta calculadora incluye los impuestos FICA (Seguro Social y Medicare)?",
+    "a3": "No. Esta calculadora solo cubre el impuesto federal sobre la renta utilizando los tramos impositivos del IRS de 2024 y las deducciones estándar. No incluye los impuestos del Seguro Social (6.2% hasta $168,600) ni de Medicare (1.45%), impuestos estatales sobre la renta, impuestos locales ni ningún crédito fiscal. Su salario neto real será menor después de esas deducciones.",
+    "q4": "¿Cuándo debo elegir el estado civil 'Cabeza de Familia'?",
+    "a4": "Puede presentar la declaración como Cabeza de Familia si no está casado o se considera no casado, pagó más de la mitad del costo de mantener un hogar y tuvo un dependiente calificado viviendo con usted durante más de la mitad del año. HOH proporciona una deducción estándar mayor ($21,900) y tramos más favorables que los declarantes solteros.",
+    "q5": "¿Cuáles son los tramos impositivos federales de 2024 para un declarante soltero?",
+    "a5": "Para declarantes solteros en 2024 (aplicados al ingreso imponible después de la deducción estándar de $14,600): 10% sobre los primeros $11,600; 12% sobre $11,601–$47,150; 22% sobre $47,151–$100,525; 24% sobre $100,526–$191,950; 32% sobre $191,951–$243,725; 35% sobre $243,726–$609,350; 37% sobre $609,350."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de impuestos federales sobre la renta de EE. UU. utiliza los tramos impositivos del IRS de 2024 y las deducciones estándar para estimar su obligación tributaria federal, tasa efectiva y salario neto. Admite los tres estados civiles principales.",
+    "formula": "Ingreso Imponible = max(0, Ingreso Bruto − Deducción Estándar)\nImpuesto Federal = suma del ingreso en cada tramo × tasa del tramo\nTasa Efectiva = Impuesto Federal / Ingreso Bruto × 100\nSalario Neto = Ingreso Bruto − Impuesto Federal",
+    "example": "Un declarante soltero que gana $75,000: Deducción estándar $14,600 → Ingreso imponible $60,400. Impuesto = $1,160 (10%) + $4,266 (12%) + $2,915.50 (22%) = $8,341.50. Tasa efectiva ≈ 11.1%. Salario neto: $66,658.50.",
+    "howItWorks_1": "Ingrese su ingreso bruto anual y seleccione su estado civil federal (Soltero, Casado que presenta declaración conjunta o Cabeza de Familia).",
+    "howItWorks_2": "Haga clic en Calcular. La calculadora aplica la deducción estándar de 2024 y los tramos impositivos progresivos para calcular su impuesto federal.",
+    "howItWorks_3": "Revise sus resultados: impuesto federal adeudado, tasa efectiva, tasa marginal, deducción estándar aplicada, ingreso imponible y salario neto estimado."
+  }
+}

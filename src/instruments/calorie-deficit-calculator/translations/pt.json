@@ -1,0 +1,40 @@
+{
+  "title": "Calculadora de Déficit Calórico — Quantas Calorias para Perder Peso",
+  "description": "Calcule o déficit calórico exato necessário para atingir sua meta de perda de peso. Baseado no TDEE com recomendações seguras de déficit de nutricionistas.",
+  "calculate": "Calcular",
+  "reset": "Redefinir",
+  "result": "Resultado",
+  "label_currentWeight": "Peso Atual",
+  "label_targetWeight": "Peso Alvo",
+  "label_tdee": "Necessidade Calórica Diária (TDEE)",
+  "label_weeklyLossGoal": "Meta de Perda Semanal",
+  "label_dailyDeficit": "Déficit Calórico Diário",
+  "label_dailyTarget": "Meta Calórica Diária",
+  "label_weeksToGoal": "Semanas para a Meta",
+  "label_totalDeficit": "Déficit Calórico Total Necessário",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Como o valor de 7700 kcal por kg é derivado?",
+    "a1": "As 7700 kcal por kg são baseadas no conteúdo energético do tecido adiposo humano. Aproximadamente 1 kg de gordura corporal contém cerca de 7700 kcal de energia. Esse valor é amplamente utilizado em cálculos de perda de peso e é apoiado por pesquisas sobre composição corporal.",
+    "q2": "O que significa 'Meta Calórica Diária' e como usá-la?",
+    "a2": "Meta Calórica Diária é o número de calorias que você deve consumir por dia para alcançar a perda semanal desejada. É o seu TDEE menos o déficit diário. Por exemplo, se seu TDEE é 2500 kcal e o déficit é 500 kcal, sua meta é 2000 kcal. Mantenha essa ingestão consistentemente para melhores resultados.",
+    "q3": "Quando devo usar esta calculadora e quais são suas limitações?",
+    "a3": "Use esta calculadora quando você tem uma meta específica de perda de peso e conhece seu TDEE. As limitações incluem que ela assume que toda a perda de peso vem da gordura, mas a perda real inclui água e músculo. Além disso, o metabolismo individual varia, então os resultados são estimativas. Consulte um profissional para aconselhamento personalizado.",
+    "q4": "O que 'Semanas para a Meta' representa e é preciso?",
+    "a4": "Semanas para a Meta estima o tempo necessário para atingir seu peso alvo se você mantiver o déficit diário exato. É calculado como (pesoAtual - pesoAlvo) / metaDePerdaSemanal. A precisão depende da adesão ao déficit e das adaptações metabólicas. É uma diretriz, não uma garantia.",
+    "q5": "Qual autoridade recomenda uma taxa segura de perda de peso semanal?",
+    "a5": "Os Centros de Controle e Prevenção de Doenças (CDC) e os Institutos Nacionais de Saúde (NIH) recomendam uma taxa de perda de peso segura e sustentável de 0,5 a 1 kg (1-2 libras) por semana. Essa taxa minimiza os riscos à saúde e promove o sucesso a longo prazo."
+  },
+  "opt_loss_025": "0,25 kg/semana — Leve",
+  "opt_loss_05": "0,5 kg/semana — Moderado",
+  "opt_loss_075": "0,75 kg/semana — Rápido",
+  "opt_loss_10": "1,0 kg/semana — Agressivo",
+  "content": {
+    "whatIs": "Uma calculadora de déficit calórico determina o déficit calórico diário necessário para atingir uma meta de perda de peso. Ela usa seu Gasto Energético Total Diário (TDEE) e uma taxa segura de perda semanal para calcular a redução necessária na ingestão calórica, garantindo perda de peso sustentável.",
+    "formula": "O déficit diário é calculado como: Déficit Diário = (metaSemanal * 7700) / 7, onde 7700 kcal é o déficit energético aproximado necessário para perder 1 kg de gordura corporal. A meta calórica diária é então: Meta Diária = TDEE - Déficit Diário. Déficit total necessário = metaSemanal * 7700, e semanas para a meta = (pesoAtual - pesoAlvo) / metaSemanal.",
+    "example": "Para uma pessoa com peso atual 80 kg, peso alvo 70 kg, TDEE 2500 kcal e meta de perda semanal de 0,5 kg: déficit diário = (0,5 * 7700) / 7 ≈ 550 kcal, meta diária = 2500 - 550 = 1950 kcal, déficit total = 0,5 * 7700 = 3850 kcal, semanas para a meta = (80 - 70) / 0,5 = 20 semanas.",
+    "howItWorks_1": "Insira seu peso atual (kg), peso alvo (kg) e Gasto Energético Total Diário (TDEE em kcal). Em seguida, selecione sua meta de perda de peso semanal desejada no menu suspenso (0,25, 0,5, 0,75 ou 1,0 kg por semana).",
+    "howItWorks_2": "Clique em Calcular. A ferramenta aplica a fórmula de déficit calórico para calcular seu déficit diário, meta calórica diária, déficit total necessário e semanas estimadas para atingir sua meta.",
+    "howItWorks_3": "Revise os resultados: Déficit Calórico Diário mostra quantas calorias cortar por dia; Meta Calórica Diária é sua nova ingestão diária; Semanas para a Meta estima a duração; Déficit Calórico Total é o déficit cumulativo necessário. Use esses dados para planejar sua dieta e acompanhar o progresso."
+  }
+}

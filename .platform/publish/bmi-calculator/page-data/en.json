@@ -1,0 +1,290 @@
+{
+  "slug": "bmi-calculator",
+  "name": "BMI Calculator",
+  "type": "calculator",
+  "category": "health",
+  "isYMYL": true,
+  "capabilities": [
+    "formula",
+    "unit-conversion",
+    "ai-interpretation",
+    "seo",
+    "localization",
+    "analytics"
+  ],
+  "language": "en",
+  "seo": {
+    "title": "BMI Calculator — Body Mass Index with Interpretation",
+    "description": "Calculate your BMI instantly. Get WHO category, healthy weight range, BMI Prime, and AI-powered health interpretation — free, fast, and accurate.",
+    "canonical": "https://aifabrica.com/en/bmi-calculator",
+    "alternates": {
+      "en": "https://aifabrica.com/en/bmi-calculator",
+      "x-default": "https://aifabrica.com/en/bmi-calculator"
+    },
+    "ogImage": "https://aifabrica.com/og/bmi-calculator.png",
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "BMI Calculator",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://aifabrica.com/en"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "BMI Calculator",
+            "item": "https://aifabrica.com/en/bmi-calculator"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is BMI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BMI (Body Mass Index) is calculated from your height and weight. Formula: BMI = weight (kg) ÷ height² (m²). WHO defines four categories: Underweight (<18.5), Normal (18.5–24.9), Overweight (25–29.9), and Obese (≥30)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a healthy BMI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "According to the WHO, a healthy BMI for adults is between 18.5 and 24.9."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is BMI accurate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BMI is a useful screening tool but has limitations. It does not directly measure body fat and does not account for muscle mass, bone density, or fat distribution."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is BMI Prime?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BMI Prime is your BMI divided by 25. A value of 1.0 means you are at the upper limit of normal weight. Below 1.0 is normal or underweight; above 1.0 is overweight or obese."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the Ponderal Index?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Ponderal Index is weight (kg) ÷ height³ (m³). It scales better than BMI for very tall or short individuals. Normal range is approximately 11–14 kg/m³."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalWebPage",
+        "audience": {
+          "@type": "MedicalAudience",
+          "audienceType": "Patient"
+        }
+      }
+    ]
+  },
+  "translations": {
+    "meta": {
+      "title": "BMI Calculator — Body Mass Index with Interpretation",
+      "description": "Calculate your BMI instantly. Get WHO category, healthy weight range, BMI Prime, and AI-powered health interpretation — free, fast, and accurate."
+    },
+    "form": {
+      "title": "BMI Calculator",
+      "height_label": "Height",
+      "height_placeholder_cm": "e.g. 175",
+      "height_placeholder_ft": "ft",
+      "height_placeholder_in": "in",
+      "weight_label": "Weight",
+      "weight_placeholder_kg": "e.g. 70",
+      "weight_placeholder_lb": "e.g. 154",
+      "age_label": "Age (optional)",
+      "age_placeholder": "e.g. 30",
+      "sex_label": "Sex (optional)",
+      "sex_male": "Male",
+      "sex_female": "Female",
+      "sex_other": "Other / Prefer not to say",
+      "unit_metric": "Metric (cm, kg)",
+      "unit_imperial": "Imperial (ft, lb)",
+      "calculate_button": "Calculate BMI",
+      "reset_button": "Reset"
+    },
+    "validation": {
+      "height_required": "Please enter your height.",
+      "height_too_low": "Height must be at least {min} cm.",
+      "height_too_high": "Height must be at most {max} cm.",
+      "weight_required": "Please enter your weight.",
+      "weight_too_low": "Weight must be at least {min} kg.",
+      "weight_too_high": "Weight must be at most {max} kg.",
+      "invalid_number": "Please enter a valid number (e.g. 70 or 70.5).",
+      "unknown": "Invalid input."
+    },
+    "result": {
+      "title": "Your BMI Result",
+      "bmi_label": "BMI",
+      "category_label": "Category",
+      "bmi_prime_label": "BMI Prime",
+      "ponderal_index_label": "Ponderal Index",
+      "healthy_range_label": "Healthy weight range",
+      "body_fat_label": "Estimated body fat",
+      "body_fat_unavailable": "Enter age and sex for body fat estimate",
+      "categories": {
+        "underweight_severe": "Severely Underweight",
+        "underweight": "Underweight",
+        "normal": "Normal Weight",
+        "overweight": "Overweight",
+        "obese_1": "Obese (Class I)",
+        "obese_2": "Obese (Class II)",
+        "obese_3": "Obese (Class III)"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "What is BMI?",
+      "a1": "BMI (Body Mass Index) is calculated from your height and weight. Formula: BMI = weight (kg) ÷ height² (m²). WHO defines four categories: Underweight (<18.5), Normal (18.5–24.9), Overweight (25–29.9), and Obese (≥30).",
+      "q2": "What is a healthy BMI?",
+      "a2": "According to the WHO, a healthy BMI for adults is between 18.5 and 24.9.",
+      "q3": "Is BMI accurate?",
+      "a3": "BMI is a useful screening tool but has limitations. It does not directly measure body fat and does not account for muscle mass, bone density, or fat distribution.",
+      "q4": "What is BMI Prime?",
+      "a4": "BMI Prime is your BMI divided by 25. A value of 1.0 means you are at the upper limit of normal weight. Below 1.0 is normal or underweight; above 1.0 is overweight or obese.",
+      "q5": "What is the Ponderal Index?",
+      "a5": "The Ponderal Index is weight (kg) ÷ height³ (m³). It scales better than BMI for very tall or short individuals. Normal range is approximately 11–14 kg/m³."
+    },
+    "aria": {
+      "result_announcement": "Result: BMI {bmi}. Category: {category}. {summary}.",
+      "form_description": "Enter your height and weight to calculate your Body Mass Index.",
+      "loading": "Calculating your BMI..."
+    }
+  },
+  "inputs": [
+    {
+      "name": "height_cm",
+      "type": "number",
+      "required": true,
+      "unit": "cm",
+      "min": 50,
+      "max": 250,
+      "description": "Height in centimeters"
+    },
+    {
+      "name": "weight_kg",
+      "type": "number",
+      "required": true,
+      "unit": "kg",
+      "min": 20,
+      "max": 300,
+      "description": "Weight in kilograms"
+    },
+    {
+      "name": "age",
+      "type": "number",
+      "required": false,
+      "min": 18,
+      "max": 120,
+      "description": "Age in years (used for Deurenberg body fat estimation)"
+    },
+    {
+      "name": "sex",
+      "type": "enum",
+      "required": false,
+      "enumValues": [
+        "male",
+        "female",
+        "other"
+      ],
+      "description": "Biological sex (used for Deurenberg body fat estimation)"
+    },
+    {
+      "name": "unitSystem",
+      "type": "enum",
+      "required": false,
+      "enumValues": [
+        "metric",
+        "imperial"
+      ],
+      "description": "Unit system for display (default: metric)"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "bmi",
+      "type": "number",
+      "unit": "kg/m²",
+      "description": "Body Mass Index value"
+    },
+    {
+      "name": "category",
+      "type": "enum",
+      "description": "WHO BMI category"
+    },
+    {
+      "name": "bmiPrime",
+      "type": "number",
+      "description": "BMI Prime (ratio to upper limit of normal, 25)"
+    },
+    {
+      "name": "ponderalIndex",
+      "type": "number",
+      "unit": "kg/m³",
+      "description": "Ponderal Index (alternative to BMI)"
+    },
+    {
+      "name": "healthyWeightMin",
+      "type": "number",
+      "unit": "kg",
+      "description": "Lower bound of healthy weight range for this height"
+    },
+    {
+      "name": "healthyWeightMax",
+      "type": "number",
+      "unit": "kg",
+      "description": "Upper bound of healthy weight range for this height"
+    },
+    {
+      "name": "bodyFatPercentage",
+      "type": "number",
+      "unit": "%",
+      "description": "Estimated body fat % via Deurenberg formula (requires age + sex)"
+    }
+  ],
+  "related": [
+    "body-fat-calculator",
+    "ideal-weight-calculator",
+    "calorie-calculator",
+    "tdee-calculator"
+  ],
+  "keywords": [
+    "bmi calculator",
+    "body mass index calculator",
+    "calculate my bmi",
+    "bmi for adults",
+    "what is a healthy bmi",
+    "bmi chart by age"
+  ]
+}

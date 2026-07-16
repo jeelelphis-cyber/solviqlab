@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Prozentrechner — 4 Modi, kostenlos & sofort",
+    "description": "Vier Prozentrechner in einem: Finde % einer Zahl, berechne % Änderung, bestimme, was % X von Y ist, oder passe einen Wert um einen beliebigen Prozentsatz an. Kostenlos."
+  },
+  "form": {
+    "title": "Prozentrechner",
+    "mode_label": "Berechnungsart",
+    "mode_percent_of": "Was ist X% von Y?",
+    "mode_is_what_percent": "X ist wie viel % von Y?",
+    "mode_percent_change": "% Änderung von X zu Y?",
+    "mode_percent_adjust": "Erhöhe / Verringere X um Y%",
+    "field_a_label": "X (erster Wert)",
+    "field_b_label": "Y (zweiter Wert)",
+    "direction_label": "Richtung",
+    "direction_increase": "Erhöhen",
+    "direction_decrease": "Verringern",
+    "field_a_placeholder": "z.B. 25",
+    "field_b_placeholder": "z.B. 200",
+    "calculate_button": "Berechnen",
+    "reset_button": "Zurücksetzen"
+  },
+  "validation": {
+    "mode_required": "Bitte wählen Sie eine Berechnungsart.",
+    "invalid_mode": "Unbekannte Berechnungsart.",
+    "a_required": "Bitte geben Sie einen Wert für X ein.",
+    "b_required": "Bitte geben Sie einen Wert für Y ein.",
+    "too_high": "Der Wert darf maximal 1.000.000.000 betragen.",
+    "invalid_number": "Bitte geben Sie eine gültige Zahl ein (z.B. 42 oder 3,14).",
+    "unknown": "Ungültige Eingabe."
+  },
+  "result": {
+    "title": "Ergebnis",
+    "percent_of_label": "ist X% von Y",
+    "is_what_percent_label": "% von Y",
+    "percent_change_label": "Änderung",
+    "percent_adjust_label": "nach Anpassung"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie berechne ich einen Prozentsatz einer Zahl?",
+    "a1": "Verwenden Sie den Modus 'Prozentsatz von'. Um zum Beispiel 20% von 150 zu finden, setzen Sie a=20, b=150. Die Formel lautet (20/100)*150 = 30. Das Ergebnis ist 30.",
+    "q2": "Was bedeutet die Ausgabe 'isIncrease' im Modus Prozentänderung?",
+    "a2": "Im Modus 'Prozentänderung' ist isIncrease wahr, wenn die prozentuale Änderung positiv ist (d.h. Y > X), also eine Erhöhung. Wenn falsch, handelt es sich um eine Verringerung. Zum Beispiel ergibt von 100 auf 120 eine 20%ige Erhöhung (isIncrease: true).",
+    "q3": "Wann sollte ich den Modus 'Prozentanpassung' verwenden?",
+    "a3": "Verwenden Sie 'Prozentanpassung', um eine Zahl um einen bestimmten Prozentsatz zu erhöhen oder zu verringern. Um zum Beispiel 200 um 10% zu erhöhen, setzen Sie Modus auf 'Prozentanpassung', a=10, b=200, Richtung='Erhöhen'. Das Ergebnis ist 220. Für eine 10%ige Verringerung setzen Sie Richtung='Verringern', um 180 zu erhalten.",
+    "q4": "Was zeigt das Feld 'roundedResult' an?",
+    "a4": "Das 'roundedResult' ist das rohe Ergebnis auf zwei Dezimalstellen gerundet. Wenn das rohe Ergebnis zum Beispiel 33,3333... ist, ist das gerundete Ergebnis 33,33. Dies ist nützlich für Berichte oder finanzielle Berechnungen, bei denen zwei Dezimalstellen Standard sind.",
+    "q5": "Gibt es einen offiziellen Standard für Prozentberechnungen?",
+    "a5": "Prozentberechnungen folgen grundlegenden arithmetischen Regeln, die in der Mathematik definiert sind, nicht einem spezifischen regulatorischen Standard. Im Finanzwesen geben jedoch die SEC und der IRS Richtlinien für prozentuale Offenlegungen und Steuerberechnungen. Die hier verwendeten Formeln sind allgemein anerkannt."
+  },
+  "aria": {
+    "result_announcement": "Ergebnis: {value}. {summary}.",
+    "form_description": "Wählen Sie einen Berechnungsmodus und geben Sie Werte ein, um einen Prozentsatz zu berechnen.",
+    "loading": "Berechne..."
+  },
+  "content": {
+    "whatIs": "Dieser Prozentrechner berechnet vier häufige Prozentszenarien: Was ist X% von Y, wie viel Prozent ist X von Y, prozentuale Änderung von X zu Y und prozentuale Erhöhung oder Verringerung von Y um X%. Das zugrundeliegende Konzept ist, dass ein Prozentsatz einen Bruchteil von 100 darstellt, was proportionale Vergleiche zwischen Werten ermöglicht.",
+    "formula": "Für 'Prozentsatz von': Ergebnis = (X/100) * Y. Für 'ist wie viel Prozent': Ergebnis = (X/Y) * 100. Für 'Prozentänderung': Ergebnis = ((Y - X) / X) * 100. Für 'Prozentanpassung': Ergebnis = Y * (1 ± X/100), wobei + für Erhöhung und - für Verringerung steht.",
+    "example": "Um 15% von 200 zu finden, setzen Sie Modus auf 'Prozentsatz von', a=15, b=200. Das Ergebnis ist 30. Um zu finden, wie viel Prozent 30 von 200 ist, setzen Sie Modus auf 'ist wie viel Prozent', a=30, b=200; Ergebnis ist 15%.",
+    "howItWorks_1": "Wählen Sie den Berechnungsmodus aus dem Dropdown: 'Prozentsatz von', 'ist wie viel Prozent', 'Prozentänderung' oder 'Prozentanpassung'. Geben Sie dann den ersten Wert (X) und den zweiten Wert (Y) in die Zahlenfelder ein.",
+    "howItWorks_2": "Klicken Sie auf die Schaltfläche Berechnen. Der Rechner wendet die entsprechende Formel basierend auf dem ausgewählten Modus an und berechnet das Ergebnis, gerundet auf zwei Dezimalstellen.",
+    "howItWorks_3": "Die Ausgabe zeigt das rohe Ergebnis und das gerundete Ergebnis. Im Modus 'Prozentänderung' wird auch angezeigt, ob die Änderung eine Erhöhung (positiv) oder Verringerung (negativ) ist. Verwenden Sie das gerundete Ergebnis für praktische Zwecke."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Przelicznik objętości — litry, galony, ml, filiżanki i więcej",
+  "description": "Błyskawicznie przelicz jednostki objętości: litry, galony, mililitry, filiżanki, uncje płynu, metry sześcienne, stopy sześcienne. Darmowy przelicznik jednostek objętości.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_value": "Wartość",
+  "label_fromUnit": "Z",
+  "label_liters": "Litry",
+  "label_milliliters": "Mililitry",
+  "label_gallons": "Galony (USA)",
+  "label_cups": "Filiżanki",
+  "label_fluidOunces": "Uncje płynu",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jaki jest współczynnik konwersji z litrów na galony amerykańskie?",
+    "a1": "1 litr to 0,264172 galona amerykańskiego. Aby przeliczyć litry na galony, pomnóż wartość w litrach przez 0,264172. Na przykład 10 L × 0,264172 = 2,64172 gal.",
+    "q2": "Jak interpretować wynik w 'Filiżankach'? Czy to filiżanki amerykańskie czy metryczne?",
+    "a2": "Wynik w 'Filiżankach' używa amerykańskich filiżanek zwyczajowych, gdzie 1 filiżanka amerykańska = 236,588 mL. Różni się to od filiżanek metrycznych (250 mL) lub imperialnych. Konwersja opiera się na standardzie amerykańskim.",
+    "q3": "Czy ten przelicznik obsługuje bardzo duże objętości, np. metry sześcienne?",
+    "a3": "Tak, przelicznik akceptuje wartości do 1 000 000 000 000. Jednak wyniki podaje tylko w litrach, mililitrach, galonach, filiżankach i uncjach płynu. W przypadku metrów sześciennych należy przeliczyć ręcznie: 1 m³ = 1000 L.",
+    "q4": "Co oznacza wynik w 'Uncjach płynu'?",
+    "a4": "Uncje płynu (fl oz) to amerykańska jednostka objętości, a nie wagi. 1 amerykańska uncja płynu = 29,5735 mL. Wynik pokazuje równoważną objętość w uncjach płynu na podstawie wprowadzonej wartości.",
+    "q5": "Jaki standard definiuje użyte współczynniki konwersji?",
+    "a5": "Współczynniki konwersji opierają się na amerykańskim systemie zwyczajowym zdefiniowanym przez National Institute of Standards and Technology (NIST). Na przykład 1 galon amerykański = 3,785411784 L dokładnie, a 1 filiżanka amerykańska = 236,5882365 mL."
+  },
+  "content": {
+    "whatIs": "Przelicznik objętości to narzędzie, które przelicza daną objętość z jednej jednostki na wiele innych jednocześnie. Używa współczynników konwersji między jednostkami takimi jak litry, galony, filiżanki i uncje płynu, opartych na systemie metrycznym i amerykańskim zwyczajowym.",
+    "formula": "Konwersja wykorzystuje jednostkę bazową litrów. Dla każdej jednostki stosowany jest współczynnik konwersji: 1 L = 1000 mL = 0,264172 gal = 4,22675 filiżanki = 33,814 fl oz. Wzór: wynik = wartość * (współczynnik konwersji z jednostki źródłowej do L) * (współczynnik konwersji z L do jednostki docelowej).",
+    "example": "Na przykład przeliczenie 2 galonów na inne jednostki: 2 gal × 3,78541 L/gal = 7,57082 L, następnie 7,57082 L × 1000 = 7570,82 mL, × 4,22675 = 32 filiżanki, × 33,814 = 256 fl oz.",
+    "howItWorks_1": "Wprowadź liczbową wartość objętości w polu 'Wartość' (np. 5).",
+    "howItWorks_2": "Wybierz jednostkę wprowadzonej wartości z listy rozwijanej 'Z' (np. 'gal' dla galonów). Kalkulator stosuje współczynniki konwersji, aby obliczyć równoważne objętości w litrach, mililitrach, galonach, filiżankach i uncjach płynu.",
+    "howItWorks_3": "Wyniki wyświetlane są w polach wyjściowych: Litry, Mililitry, Galony (USA), Filiżanki i Uncje płynu. Każde pokazuje przeliczoną wartość z etykietą jednostki."
+  }
+}

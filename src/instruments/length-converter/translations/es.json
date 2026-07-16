@@ -1,0 +1,36 @@
+{
+  "title": "Conversor de Longitud — Convierta Cualquier Unidad de Longitud",
+  "description": "Convierta entre metros, pies, pulgadas, centímetros, kilómetros, millas y más. Conversor instantáneo de unidades de longitud con más de 15 unidades.",
+  "calculate": "Calcular",
+  "reset": "Reiniciar",
+  "result": "Resultado",
+  "label_value": "Valor",
+  "label_fromUnit": "Desde",
+  "label_meters": "Metros",
+  "label_kilometers": "Kilómetros",
+  "label_centimeters": "Centímetros",
+  "label_feet": "Pies",
+  "label_inches": "Pulgadas",
+  "label_miles": "Millas",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cómo se define un metro y por qué es la unidad base para las conversiones de longitud?",
+    "a1": "El metro es la unidad base de longitud en el Sistema Internacional de Unidades (SI), definido como la distancia que recorre la luz en el vacío en 1/299,792,458 de segundo. Todas las demás unidades de longitud en el conversor se derivan del metro utilizando factores de conversión fijos, lo que garantiza consistencia y precisión.",
+    "q2": "¿Qué representa el valor de salida en 'Millas'?",
+    "a2": "La salida 'Millas' muestra la longitud equivalente en millas estatutarias, donde 1 milla equivale exactamente a 1609.344 metros. Por ejemplo, 1 kilómetro se convierte aproximadamente a 0.621371 millas. Esta unidad se usa comúnmente en Estados Unidos y el Reino Unido para distancias por carretera.",
+    "q3": "¿Puede este conversor de longitud manejar valores muy grandes o muy pequeños?",
+    "a3": "Sí, el conversor acepta valores desde 0 hasta 1,000,000,000,000,000 (10^15). Sin embargo, para valores extremadamente grandes (por ejemplo, distancias astronómicas), unidades como años luz o pársecs son más apropiadas, las cuales no están incluidas en esta herramienta. Para valores muy pequeños (por ejemplo, escalas atómicas), están disponibles nanómetros y micrómetros.",
+    "q4": "¿Qué significa la salida 'Pies' y cómo se calcula?",
+    "a4": "La salida 'Pies' muestra la longitud en pies, donde 1 pie equivale exactamente a 0.3048 metros. Por ejemplo, 1 metro se convierte aproximadamente a 3.28084 pies. Esta unidad se usa ampliamente en Estados Unidos para medir altura, distancias cortas y en aviación.",
+    "q5": "¿Cuál es el estándar oficial para los factores de conversión utilizados en esta calculadora?",
+    "a5": "Los factores de conversión se basan en el Sistema Internacional de Unidades (SI) y el acuerdo internacional de la yarda y la libra de 1959. Por ejemplo, 1 pulgada se define exactamente como 25.4 mm, y 1 pie como 0.3048 m. Estos estándares son mantenidos por la Oficina Internacional de Pesas y Medidas (BIPM)."
+  },
+  "content": {
+    "whatIs": "Un conversor de longitud es una herramienta que convierte una medida de una unidad de longitud a otra, como metros a pies o kilómetros a millas. Utiliza factores de conversión basados en el Sistema Internacional de Unidades (SI) y otras definiciones estándar para proporcionar resultados precisos en más de 15 unidades.",
+    "formula": "La conversión se realiza multiplicando el valor de entrada por el factor de conversión adecuado. Por ejemplo, para convertir de metros a pies, multiplique por 3.28084 (ya que 1 m = 3.28084 pies). La fórmula general es: resultado = valor * (factor_unidad_destino / factor_unidad_origen), donde cada unidad tiene un factor predefinido relativo al metro.",
+    "example": "Convierta 5 kilómetros a millas. Dado que 1 km = 0.621371 millas, multiplique 5 por 0.621371 para obtener 3.10686 millas. El conversor también muestra el equivalente en metros (5000 m), centímetros (500,000 cm), pies (16404.2 pies) y pulgadas (196850.4 pulgadas).",
+    "howItWorks_1": "Ingrese el valor numérico que desea convertir en el campo 'valor'. Luego seleccione la unidad de ese valor en el menú desplegable 'desde' (por ejemplo, 'km' para kilómetros).",
+    "howItWorks_2": "Después de hacer clic en el botón Calcular, la herramienta aplica la fórmula de conversión utilizando la unidad de origen seleccionada y los factores de conversión predefinidos para calcular las longitudes equivalentes en todas las unidades de salida.",
+    "howItWorks_3": "Los resultados se muestran en una tabla que indica cada unidad de salida (Metros, Kilómetros, Centímetros, Pies, Pulgadas, Millas) con el valor numérico convertido. Puede usar estos valores directamente para sus cálculos o conversiones adicionales."
+  }
+}

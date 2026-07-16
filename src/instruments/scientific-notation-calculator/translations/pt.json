@@ -1,0 +1,33 @@
+{
+  "title": "Calculadora de Notação Científica — Converter e Calcular",
+  "description": "Converta números para notação científica e vice-versa. Adicione, subtraia, multiplique e divida números em notação científica instantaneamente.",
+  "calculate": "Calcular",
+  "reset": "Limpar",
+  "result": "Resultado",
+  "label_value": "Número",
+  "label_coefficient": "Coeficiente",
+  "label_exponent": "Expoente (potência de 10)",
+  "label_scientific": "Notação Científica",
+  "label_engineering": "Notação de Engenharia",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Como converter um número como 0,00045 para notação científica?",
+    "a1": "Mova a vírgula decimal para a direita até obter um número entre 1 e 10. Para 0,00045, mova a vírgula 4 casas para a direita para obter 4,5. O expoente é -4 porque você moveu para a direita. Portanto, a notação científica é 4,5 × 10^-4.",
+    "q2": "Qual é a diferença entre notação científica e notação de engenharia?",
+    "a2": "A notação científica exige que o coeficiente esteja entre 1 e 10 (valor absoluto). A notação de engenharia exige que o expoente seja um múltiplo de 3, então o coeficiente fica entre 1 e 1000. Por exemplo, 1234 torna-se 1,234×10^3 em notação científica e 1,234×10^3 em notação de engenharia (já que o expoente 3 é múltiplo de 3), mas 0,01234 torna-se 1,234×10^-2 em notação científica e 12,34×10^-3 em notação de engenharia.",
+    "q3": "Esta calculadora pode lidar com números muito grandes ou muito pequenos?",
+    "a3": "Sim, ela aceita números de até ±1×10^300 e tão pequenos quanto ±1×10^-300. Isso cobre a maioria das aplicações científicas e de engenharia, incluindo o número de Avogadro (6,022×10^23) e a constante de Planck (6,626×10^-34).",
+    "q4": "O que significa a saída 'Coeficiente'?",
+    "a4": "O coeficiente são os dígitos significativos do número, também chamado de mantissa. Na notação científica, está sempre entre 1 e 10 (ou -10 e -1 para números negativos). Por exemplo, para 0,00045, o coeficiente é 4,5. Ele representa a precisão do número.",
+    "q5": "Existe um padrão oficial para notação científica?",
+    "a5": "Sim, a notação científica segue o padrão IEEE para aritmética de ponto flutuante (IEEE 754) e é amplamente utilizada na ISO 80000-1 para grandezas e unidades. A notação a × 10^b é universalmente aceita em ciência e engenharia."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de notação científica converte qualquer número real em notação científica (a × 10^b) e notação de engenharia (a × 10^b onde b é múltiplo de 3). Ela também realiza operações aritméticas com números em notação científica, embora a versão atual foque na conversão.",
+    "formula": "A notação científica expressa um número como um coeficiente (a) vezes uma potência de 10 (10^b), onde 1 ≤ |a| < 10 e b é um inteiro. A notação de engenharia restringe b a múltiplos de 3. A calculadora usa o algoritmo padrão: mova a vírgula decimal para obter um coeficiente entre 1 e 10, conte os movimentos como expoente (positivo para esquerda, negativo para direita).",
+    "example": "Para o valor de entrada 123400, a calculadora retorna coeficiente 1,234, expoente 5, notação científica 1,234 × 10^5 e notação de engenharia 123,4 × 10^3. Para 0,000567, retorna coeficiente 5,67, expoente -4, notação científica 5,67 × 10^-4 e notação de engenharia 567 × 10^-6.",
+    "howItWorks_1": "Insira qualquer número real no campo 'valor'. Pode ser um decimal, inteiro ou número em notação científica (ex.: 2,5e3). O número deve estar entre -1×10^300 e 1×10^300.",
+    "howItWorks_2": "Clique no botão 'Calcular'. A calculadora processa a entrada identificando a vírgula decimal e movendo-a para criar um coeficiente entre 1 e 10 (ou entre 1 e 1000 para notação de engenharia). O número de casas movidas torna-se o expoente.",
+    "howItWorks_3": "Os resultados mostram quatro saídas: Coeficiente (a mantissa), Expoente (potência de 10), Notação Científica (forma padrão) e Notação de Engenharia (expoente múltiplo de 3). Use a notação científica para fins gerais; use a notação de engenharia ao trabalhar com prefixos SI (ex.: quilo, mega, micro)."
+  }
+}

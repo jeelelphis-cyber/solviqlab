@@ -1,0 +1,36 @@
+{
+  "title": "Mehrwertsteuer-Rechner — MwSt. sofort hinzufügen oder entfernen",
+  "description": "Fügen Sie Mehrwertsteuer zu jedem Preis hinzu oder entfernen Sie sie. Unterstützt alle MwSt.-Sätze (5%, 10%, 15%, 20%, 21%, 25%). Sofortige Berechnung für Unternehmen und Verbraucher.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_amount": "Betrag",
+  "label_vatRate": "MwSt.-Satz",
+  "label_mode": "Modus",
+  "label_netAmount": "Nettobetrag (ohne MwSt.)",
+  "label_vatAmount": "MwSt.-Betrag",
+  "label_grossAmount": "Bruttobetrag (inkl. MwSt.)",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie wird der MwSt.-Betrag beim Hinzufügen von MwSt. berechnet?",
+    "a1": "Beim Hinzufügen von MwSt. wird der MwSt.-Betrag wie folgt berechnet: MwSt.-Betrag = Nettobetrag × (MwSt.-Satz / 100). Zum Beispiel bei einem Nettobetrag von 200 $ und einem MwSt.-Satz von 10 % ergibt sich ein MwSt.-Betrag von 200 $ × 0,10 = 20 $.",
+    "q2": "Was bedeutet die Ausgabe 'Nettobetrag' beim Entfernen von MwSt.?",
+    "a2": "Der Nettobetrag beim Entfernen von MwSt. ist der ursprüngliche Preis vor Hinzufügen der MwSt. Er wird berechnet, indem der Bruttobetrag durch (1 + MwSt.-Satz/100) geteilt wird. Wenn der Bruttobetrag beispielsweise 110 $ und der MwSt.-Satz 10 % beträgt, ergibt sich ein Nettobetrag von 110 $ / 1,10 = 100 $.",
+    "q3": "Kann ich diesen Rechner für jeden MwSt.-Satz verwenden, auch für nicht standardmäßige?",
+    "a3": "Ja, Sie können jeden MwSt.-Satz von 0 % bis 100 % eingeben. Dies umfasst Standardsätze wie 5 %, 10 %, 20 % oder benutzerdefinierte Sätze. Der Rechner funktioniert für alle Sätze, beachten Sie jedoch, dass MwSt.-Sätze typischerweise von Steuerbehörden festgelegt werden und je nach Land und Produktart variieren können.",
+    "q4": "Was stellt die Ausgabe 'Bruttobetrag' dar?",
+    "a4": "Der Bruttobetrag ist der Gesamtpreis inklusive MwSt. Im Modus 'Hinzufügen' ist es der Nettobetrag plus der MwSt.-Betrag. Im Modus 'Entfernen' ist es der eingegebene Betrag (der Preis inklusive MwSt.). Zum Beispiel: Wenn der Nettobetrag 50 $ und der MwSt.-Satz 20 % beträgt, ergibt sich ein Bruttobetrag von 60 $.",
+    "q5": "Welche Behörde legt MwSt.-Sätze und -Regeln fest?",
+    "a5": "Die MwSt. ist eine Verbrauchssteuer, die von nationalen Steuerbehörden geregelt wird. In der Europäischen Union beispielsweise werden die MwSt.-Sätze von jedem Mitgliedstaat im Rahmen der EU-Richtlinien festgelegt. Im Vereinigten Königreich verwaltet HM Revenue & Customs (HMRC) die MwSt. In Australien ist das Australian Taxation Office (ATO) für die GST zuständig, eine ähnliche Steuer. Für geltende Sätze konsultieren Sie bitte Ihre örtliche Steuerbehörde."
+  },
+  "opt_add": "MwSt. hinzufügen",
+  "opt_remove": "MwSt. entfernen",
+  "content": {
+    "whatIs": "Der MwSt.-Rechner fügt die Mehrwertsteuer (MwSt.) sofort zu jedem Preis hinzu oder entfernt sie. Er berechnet den Nettobetrag, den MwSt.-Betrag und den Bruttobetrag basierend auf dem eingegebenen Preis und MwSt.-Satz unter Verwendung der Standard-MwSt.-Formeln.",
+    "formula": "Beim Hinzufügen von MwSt.: Bruttobetrag = Nettobetrag × (1 + MwSt.-Satz/100) und MwSt.-Betrag = Bruttobetrag - Nettobetrag. Beim Entfernen von MwSt.: Nettobetrag = Bruttobetrag / (1 + MwSt.-Satz/100) und MwSt.-Betrag = Bruttobetrag - Nettobetrag. Der MwSt.-Satz wird als Prozentsatz angegeben.",
+    "example": "Für einen Nettopreis von 100 $ mit einem MwSt.-Satz von 20 % im Modus 'Hinzufügen': Bruttobetrag = 100 $ × (1 + 20/100) = 120 $, MwSt.-Betrag = 20 $. Für einen Bruttopreis von 120 $ im Modus 'Entfernen': Nettobetrag = 120 $ / (1 + 20/100) = 100 $, MwSt.-Betrag = 20 $.",
+    "howItWorks_1": "Geben Sie den Preisbetrag in das Feld 'Betrag' (in Dollar) und den MwSt.-Satz als Prozentsatz in das Feld 'MwSt.-Satz' ein. Wählen Sie den Modus: 'MwSt. hinzufügen', um den Bruttobetrag inklusive MwSt. zu berechnen, oder 'MwSt. entfernen', um den Nettobetrag aus einem Bruttopreis zu extrahieren.",
+    "howItWorks_2": "Klicken Sie auf die Schaltfläche 'Berechnen'. Der Rechner wendet die entsprechende Formel basierend auf dem ausgewählten Modus an und berechnet sofort den Nettobetrag, den MwSt.-Betrag und den Bruttobetrag.",
+    "howItWorks_3": "Überprüfen Sie die drei Ausgabefelder: Nettobetrag (Preis vor MwSt.), MwSt.-Betrag (der Steueranteil) und Bruttobetrag (Gesamtpreis inklusive MwSt.). Verwenden Sie diese Werte für Rechnungsstellung, Preisgestaltung oder Steuerberichterstattung."
+  }
+}

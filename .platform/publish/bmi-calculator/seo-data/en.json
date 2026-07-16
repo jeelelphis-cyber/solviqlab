@@ -1,0 +1,96 @@
+{
+  "title": "BMI Calculator — Body Mass Index with Interpretation",
+  "description": "Calculate your BMI instantly. Get WHO category, healthy weight range, BMI Prime, and AI-powered health interpretation — free, fast, and accurate.",
+  "canonical": "https://aifabrica.com/en/bmi-calculator",
+  "alternates": {
+    "en": "https://aifabrica.com/en/bmi-calculator",
+    "x-default": "https://aifabrica.com/en/bmi-calculator"
+  },
+  "ogImage": "https://aifabrica.com/og/bmi-calculator.png",
+  "structuredData": [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "BMI Calculator",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://aifabrica.com/en"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "BMI Calculator",
+          "item": "https://aifabrica.com/en/bmi-calculator"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is BMI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BMI (Body Mass Index) is calculated from your height and weight. Formula: BMI = weight (kg) ÷ height² (m²). WHO defines four categories: Underweight (<18.5), Normal (18.5–24.9), Overweight (25–29.9), and Obese (≥30)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a healthy BMI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "According to the WHO, a healthy BMI for adults is between 18.5 and 24.9."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is BMI accurate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BMI is a useful screening tool but has limitations. It does not directly measure body fat and does not account for muscle mass, bone density, or fat distribution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is BMI Prime?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BMI Prime is your BMI divided by 25. A value of 1.0 means you are at the upper limit of normal weight. Below 1.0 is normal or underweight; above 1.0 is overweight or obese."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Ponderal Index?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Ponderal Index is weight (kg) ÷ height³ (m³). It scales better than BMI for very tall or short individuals. Normal range is approximately 11–14 kg/m³."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "audience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Patient"
+      }
+    }
+  ]
+}

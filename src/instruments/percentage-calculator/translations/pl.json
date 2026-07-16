@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Kalkulator procentowy — 4 tryby, darmowy i natychmiastowy",
+    "description": "Cztery kalkulatory procentowe w jednym: znajdź % liczby, oblicz % zmiany, określ, jaki % X stanowi Y, lub dostosuj wartość o dowolny procent. Darmowe."
+  },
+  "form": {
+    "title": "Kalkulator procentowy",
+    "mode_label": "Rodzaj obliczenia",
+    "mode_percent_of": "Ile to X% z Y?",
+    "mode_is_what_percent": "X to jaki % z Y?",
+    "mode_percent_change": "% zmiany z X na Y?",
+    "mode_percent_adjust": "Zwiększ / Zmniejsz X o Y%",
+    "field_a_label": "X (pierwsza wartość)",
+    "field_b_label": "Y (druga wartość)",
+    "direction_label": "Kierunek",
+    "direction_increase": "Zwiększ",
+    "direction_decrease": "Zmniejsz",
+    "field_a_placeholder": "np. 25",
+    "field_b_placeholder": "np. 200",
+    "calculate_button": "Oblicz",
+    "reset_button": "Resetuj"
+  },
+  "validation": {
+    "mode_required": "Proszę wybrać rodzaj obliczenia.",
+    "invalid_mode": "Nieznany rodzaj obliczenia.",
+    "a_required": "Proszę wprowadzić wartość X.",
+    "b_required": "Proszę wprowadzić wartość Y.",
+    "too_high": "Wartość musi być co najwyżej 1 000 000 000.",
+    "invalid_number": "Proszę wprowadzić poprawną liczbę (np. 42 lub 3.14).",
+    "unknown": "Nieprawidłowe dane wejściowe."
+  },
+  "result": {
+    "title": "Wynik",
+    "percent_of_label": "to X% z Y",
+    "is_what_percent_label": "% z Y",
+    "percent_change_label": "zmiana",
+    "percent_adjust_label": "po dostosowaniu"
+  },
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jak obliczyć procent z liczby?",
+    "a1": "Użyj trybu 'percent-of'. Na przykład, aby znaleźć 20% ze 150, ustaw a=20, b=150. Wzór to (20/100)*150 = 30. Wynik to 30.",
+    "q2": "Co oznacza wynik 'isIncrease' w trybie zmiany procentowej?",
+    "a2": "W trybie 'percent-change' isIncrease ma wartość true, jeśli zmiana procentowa jest dodatnia (tj. Y > X), co oznacza wzrost. Jeśli false, zmiana jest spadkiem. Na przykład, ze 100 do 120 daje 20% wzrost (isIncrease: true).",
+    "q3": "Kiedy powinienem użyć trybu 'percent-adjust'?",
+    "a3": "Użyj 'percent-adjust', aby zwiększyć lub zmniejszyć liczbę o dany procent. Na przykład, aby zwiększyć 200 o 10%, ustaw tryb na 'percent-adjust', a=10, b=200, kierunek='increase'. Wynik to 220. Aby zmniejszyć o 10%, ustaw kierunek='decrease', aby otrzymać 180.",
+    "q4": "Co pokazuje pole 'roundedResult'?",
+    "a4": "'roundedResult' to surowy wynik zaokrąglony do dwóch miejsc po przecinku. Na przykład, jeśli surowy wynik to 33.3333..., zaokrąglony wynik to 33.33. Jest to przydatne do raportowania lub obliczeń finansowych, gdzie standardem są dwa miejsca po przecinku.",
+    "q5": "Czy istnieje oficjalny standard obliczeń procentowych?",
+    "a5": "Obliczenia procentowe opierają się na podstawowych zasadach arytmetyki zdefiniowanych w matematyce, a nie na konkretnym standardzie regulacyjnym. Jednak w finansach SEC i IRS dostarczają wytycznych dotyczących ujawnień procentowych i obliczeń podatkowych. Użyte tutaj wzory są powszechnie akceptowane."
+  },
+  "aria": {
+    "result_announcement": "Wynik: {value}. {summary}.",
+    "form_description": "Wybierz tryb obliczeń i wprowadź wartości, aby obliczyć procent.",
+    "loading": "Obliczanie..."
+  },
+  "content": {
+    "whatIs": "Ten kalkulator procentowy oblicza cztery typowe scenariusze procentowe: ile to X% z Y, jaki procent X stanowi Y, procentowa zmiana z X na Y oraz procentowe zwiększenie lub zmniejszenie Y o X%. Podstawowa koncepcja polega na tym, że procent reprezentuje ułamek 100, umożliwiając proporcjonalne porównania między wartościami.",
+    "formula": "Dla 'percent of': wynik = (X/100) * Y. Dla 'is what percent': wynik = (X/Y) * 100. Dla 'percent change': wynik = ((Y - X) / X) * 100. Dla 'percent adjust': wynik = Y * (1 ± X/100), gdzie + oznacza zwiększenie, a - zmniejszenie.",
+    "example": "Aby znaleźć 15% z 200, ustaw tryb na 'percent-of', a=15, b=200. Wynik to 30. Aby znaleźć, jaki procent 30 stanowi z 200, ustaw tryb na 'is-what-percent', a=30, b=200; wynik to 15%.",
+    "howItWorks_1": "Wybierz tryb obliczeń z rozwijanej listy: 'percent-of', 'is-what-percent', 'percent-change' lub 'percent-adjust'. Następnie wprowadź pierwszą wartość (X) i drugą wartość (Y) w polach liczbowych.",
+    "howItWorks_2": "Kliknij przycisk Oblicz. Kalkulator stosuje odpowiedni wzór w zależności od wybranego trybu i oblicza wynik, zaokrąglając go do dwóch miejsc po przecinku.",
+    "howItWorks_3": "Wynik pokazuje surowy wynik i zaokrąglony wynik. W trybie 'percent-change' wskazuje również, czy zmiana jest wzrostem (dodatnia) czy spadkiem (ujemna). Użyj zaokrąglonego wyniku do celów praktycznych."
+  }
+}

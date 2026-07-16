@@ -1,0 +1,35 @@
+{
+  "title": "Durchschnittsrechner — Mittelwert, Median, Modus & mehr",
+  "description": "Berechnen Sie Mittelwert, Median, Modus, Spannweite und Standardabweichung aus einer beliebigen Liste von Zahlen. Sofortige Statistiken für Studenten und Berufstätige.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_numbers": "Zahlen (kommagetrennt)",
+  "label_mean": "Mittelwert (Durchschnitt)",
+  "label_median": "Median",
+  "label_mode": "Modus",
+  "label_range": "Spannweite",
+  "label_count": "Anzahl",
+  "label_sum": "Summe",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Was ist der Unterschied zwischen Mittelwert und Median?",
+    "a1": "Der Mittelwert ist der arithmetische Durchschnitt und empfindlich gegenüber Ausreißern. Der Median ist der mittlere Wert, wenn die Daten sortiert sind, und robust gegenüber extremen Werten. Zum Beispiel in {1,2,3,100} ist der Mittelwert = 26,5, der Median = 2,5.",
+    "q2": "Wie wird der Modus berechnet, wenn keine Zahl wiederholt wird?",
+    "a2": "Wenn keine Zahl mehr als einmal vorkommt, hat der Datensatz keinen Modus. Manche Rechner melden dann 'kein Modus' oder listen alle Werte auf. Unser Rechner gibt den/die häufigsten Wert(e) zurück; wenn alle eindeutig sind, ist der Modus undefiniert.",
+    "q3": "Wann sollte ich den Median anstelle des Mittelwerts verwenden?",
+    "a3": "Verwenden Sie den Median bei schiefen Verteilungen oder wenn Ausreißer vorhanden sind, wie bei Einkommensdaten. Der Mittelwert eignet sich für symmetrische Verteilungen ohne Extremwerte. Der Median repräsentiert einen typischen Wert in schiefen Daten besser.",
+    "q4": "Was sagt mir die Spannweite über meine Daten?",
+    "a4": "Spannweite = Maximum - Minimum. Sie misst die Gesamtstreuung der Daten. Eine große Spannweite deutet auf hohe Variabilität hin, eine kleine Spannweite darauf, dass die Datenpunkte nahe beieinander liegen. Allerdings ist die Spannweite empfindlich gegenüber Ausreißern.",
+    "q5": "Gibt es eine Standardreferenz für die Berechnung von Mittelwert und Median?",
+    "a5": "Ja, die Formeln folgen den standardmäßigen statistischen Definitionen gemäß ISO 3534-1 und der American Statistical Association. Mittelwert und Median sind grundlegende deskriptive Statistiken, die weltweit in der Datenanalyse verwendet werden."
+  },
+  "content": {
+    "whatIs": "Der Durchschnittsrechner berechnet den Mittelwert, Median, Modus, Spannweite, Anzahl und Summe einer Liste von Zahlen. Der Mittelwert ist der arithmetische Durchschnitt, berechnet durch Summieren aller Zahlen und Teilen durch die Anzahl. Er liefert eine schnelle Übersicht über zentrale Tendenz und Streuung.",
+    "formula": "Mittelwert = (Summe aller Zahlen) / (Anzahl der Zahlen). Der Median ist der mittlere Wert, wenn die Zahlen sortiert sind; bei gerader Anzahl ist der Median der Durchschnitt der beiden mittleren Zahlen. Der Modus ist der/die häufigste(n) Wert(e). Spannweite = Maximum - Minimum. Die Standardabweichung (falls enthalten) misst die Streuung.",
+    "example": "Für die Zahlen 2, 4, 4, 6, 8: Summe = 24, Anzahl = 5, Mittelwert = 24/5 = 4,8. Sortiert: 2,4,4,6,8, Median = 4 (dritter Wert). Modus = 4 (kommt zweimal vor). Spannweite = 8-2 = 6.",
+    "howItWorks_1": "Geben Sie Ihre Liste von Zahlen in das Eingabefeld ein, getrennt durch Kommas oder Leerzeichen. Jede Zahl kann positiv, negativ oder eine Dezimalzahl sein.",
+    "howItWorks_2": "Klicken Sie auf die Schaltfläche Berechnen. Das Werkzeug verarbeitet Ihre Zahlen: es zählt sie, summiert sie, sortiert sie für Median und Modus und berechnet Spannweite und Standardabweichung.",
+    "howItWorks_3": "Überprüfen Sie die Ergebnisse: Mittelwert (Durchschnitt), Median (mittlerer Wert), Modus (häufigster Wert), Spannweite (Streuung), Anzahl (Anzahl der Einträge) und Summe (Gesamtsumme). Nutzen Sie diese, um die zentrale Tendenz und Variabilität Ihrer Daten zu verstehen."
+  }
+}

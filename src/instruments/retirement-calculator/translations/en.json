@@ -1,0 +1,39 @@
+{
+  "title": "Retirement Calculator — Savings Projection & Monthly Income Estimate",
+  "description": "Project your retirement savings with compound growth and monthly contributions. Estimate monthly income using the 4% rule and see real value in today's dollars.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_currentAge": "Current Age",
+  "label_retirementAge": "Retirement Age",
+  "label_currentSavings": "Current Savings",
+  "label_monthlyContribution": "Monthly Contribution",
+  "label_annualReturn": "Expected Annual Return",
+  "label_inflationRate": "Expected Inflation Rate",
+  "label_projectedSavings": "Projected Savings",
+  "label_totalContributions": "Total Contributions",
+  "label_totalGrowth": "Investment Growth",
+  "label_monthlyIncomeEstimate": "Est. Monthly Income",
+  "label_realValueToday": "Real Value (Today's $)",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "What is the 4% rule for retirement income?",
+    "a1": "The 4% rule, popularized by the Trinity Study, suggests withdrawing 4% of your retirement portfolio per year to make it last at least 30 years. The monthly income estimate in this calculator is projectedSavings × 0.04 / 12. For a $1,000,000 portfolio, that's $40,000/year or $3,333/month. The rule assumes a diversified stock/bond portfolio with historical market returns.",
+    "q2": "What annual return rate should I use?",
+    "a2": "A commonly used assumption for a diversified US stock/bond portfolio is 6–8% nominal return. The S&P 500 has averaged about 10% nominal and 7% real (inflation-adjusted) returns historically. This calculator defaults to 7%, which is a conservative estimate for a mixed portfolio. For bond-heavy portfolios, use 4–5%.",
+    "q3": "What does 'Real Value in Today's Dollars' mean?",
+    "a3": "Real value adjusts the projected savings for inflation to show what your nest egg will actually be worth in today's purchasing power. It is calculated as projectedSavings / (1 + inflationRate/100)^years. At 3% inflation over 30 years, $1M in future dollars is equivalent to about $412,000 today.",
+    "q4": "How are monthly contributions compounded?",
+    "a4": "Monthly contributions are treated as an ordinary annuity — each payment earns interest from the time it is made. The formula is FV = contribution × ((1+r)^n − 1) / r, where r is the monthly rate (annualReturn/12/100) and n is total months. This accurately models dollar-cost averaging into an investment account.",
+    "q5": "Does this include Social Security or pension income?",
+    "a5": "No. This calculator only projects savings growth from your personal contributions and existing savings. Social Security benefits, pension income, or other income sources are not included. For a full retirement income picture, add expected Social Security payments to the monthly income estimate shown here."
+  },
+  "content": {
+    "whatIs": "This retirement calculator projects how much your savings will grow by retirement using compound interest on existing savings plus monthly contributions. It applies the 4% safe withdrawal rule to estimate monthly retirement income and adjusts for inflation to show real value in today's dollars.",
+    "formula": "FV_principal = currentSavings × (1 + r)^n\nFV_contributions = monthlyContribution × ((1+r)^n − 1) / r\nProjected Savings = FV_principal + FV_contributions\nMonthly Income = Projected Savings × 0.04 / 12\nReal Value = Projected Savings / (1 + inflation)^years",
+    "example": "Age 30, retiring at 65, $50,000 saved, $500/month contribution, 7% return, 3% inflation: 35 years × 12 = 420 months. Monthly rate = 0.5833%. Projected ≈ $1,298,635. Monthly income ≈ $4,329. Real value today ≈ $460,000.",
+    "howItWorks_1": "Enter your current age, target retirement age, current savings, and monthly contribution amount.",
+    "howItWorks_2": "Adjust the expected annual return (default 7%) and inflation rate (default 3%) as needed.",
+    "howItWorks_3": "Click Calculate to see your projected retirement savings, total growth, estimated monthly income, and the real inflation-adjusted value."
+  }
+}

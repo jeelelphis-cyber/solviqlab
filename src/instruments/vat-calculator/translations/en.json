@@ -1,0 +1,36 @@
+{
+  "title": "VAT Calculator — Add or Remove VAT Instantly",
+  "description": "Add or remove VAT from any price. Supports all VAT rates (5%, 10%, 15%, 20%, 21%, 25%). Instant calculation for businesses and consumers.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_amount": "Amount",
+  "label_vatRate": "VAT Rate",
+  "label_mode": "Mode",
+  "label_netAmount": "Net Amount (excl. VAT)",
+  "label_vatAmount": "VAT Amount",
+  "label_grossAmount": "Gross Amount (incl. VAT)",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How is the VAT amount calculated when adding VAT?",
+    "a1": "When adding VAT, the VAT amount is calculated as: VAT Amount = Net Amount × (VAT Rate / 100). For example, with a net amount of $200 and a 10% VAT rate, VAT Amount = $200 × 0.10 = $20.",
+    "q2": "What does the 'Net Amount' output mean when removing VAT?",
+    "a2": "The Net Amount when removing VAT is the original price before VAT was added. It is calculated by dividing the gross amount by (1 + VAT Rate/100). For instance, if the gross amount is $110 and VAT rate is 10%, Net Amount = $110 / 1.10 = $100.",
+    "q3": "Can I use this calculator for any VAT rate, including non-standard ones?",
+    "a3": "Yes, you can enter any VAT rate from 0% to 100%. This includes standard rates like 5%, 10%, 20%, or custom rates. The calculator works for all rates, but note that VAT rates are typically set by tax authorities and may vary by country and product type.",
+    "q4": "What does the 'Gross Amount' output represent?",
+    "a4": "The Gross Amount is the total price including VAT. In 'add' mode, it is the net amount plus the VAT amount. In 'remove' mode, it is the entered amount (the price including VAT). For example, if net is $50 and VAT is 20%, gross = $60.",
+    "q5": "Which authority sets VAT rates and rules?",
+    "a5": "VAT is a consumption tax governed by national tax authorities. For example, in the European Union, VAT rates are set by each member state within EU directives. In the UK, HM Revenue & Customs (HMRC) administers VAT. In Australia, the Australian Taxation Office (ATO) handles GST, a similar tax. Always refer to your local tax authority for applicable rates."
+  },
+  "opt_add": "Add VAT",
+  "opt_remove": "Remove VAT",
+  "content": {
+    "whatIs": "The VAT Calculator instantly adds or removes Value Added Tax (VAT) from any price. It computes the net amount, VAT amount, and gross amount based on the entered price and VAT rate, using the standard VAT formulas.",
+    "formula": "When adding VAT: Gross Amount = Net Amount × (1 + VAT Rate/100) and VAT Amount = Gross Amount - Net Amount. When removing VAT: Net Amount = Gross Amount / (1 + VAT Rate/100) and VAT Amount = Gross Amount - Net Amount. The VAT Rate is expressed as a percentage.",
+    "example": "For a net price of $100 with a 20% VAT rate in 'add' mode: Gross Amount = $100 × (1 + 20/100) = $120, VAT Amount = $20. For a gross price of $120 in 'remove' mode: Net Amount = $120 / (1 + 20/100) = $100, VAT Amount = $20.",
+    "howItWorks_1": "Enter the price amount in the 'Amount' field (in dollars) and the VAT rate as a percentage in the 'VAT Rate' field. Select the mode: 'Add VAT' to compute the gross amount including VAT, or 'Remove VAT' to extract the net amount from a gross price.",
+    "howItWorks_2": "Click the Calculate button. The calculator applies the appropriate formula based on the selected mode and instantly computes the net amount, VAT amount, and gross amount.",
+    "howItWorks_3": "Review the three output fields: Net Amount (price before VAT), VAT Amount (the tax portion), and Gross Amount (total price including VAT). Use these values for invoicing, pricing, or tax reporting."
+  }
+}

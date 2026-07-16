@@ -1,0 +1,39 @@
+{
+  "title": "Calculadora de Gordura Corporal — Estime seu % de Gordura Corporal",
+  "description": "Calcule o percentual de gordura corporal usando o método da Marinha dos EUA. Insira medidas do pescoço, cintura e quadril para uma estimativa precisa da composição corporal.",
+  "calculate": "Calcular",
+  "reset": "Redefinir",
+  "result": "Resultado",
+  "label_height": "Altura",
+  "label_neck": "Circunferência do Pescoço",
+  "label_waist": "Circunferência da Cintura",
+  "label_hip": "Circunferência do Quadril (apenas mulheres)",
+  "label_sex": "Sexo",
+  "label_bodyFat": "Gordura Corporal",
+  "label_fatMass": "Massa Gorda",
+  "label_leanMass": "Massa Magra",
+  "label_category": "Categoria",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Como o método da Marinha dos EUA difere de outras técnicas de medição de gordura corporal?",
+    "a1": "O método da Marinha dos EUA usa medidas simples de circunferência (pescoço, cintura, quadril) e altura, sendo conveniente e não invasivo. Ele estima a densidade corporal por meio de equações de regressão e depois converte em percentual de gordura corporal. É menos preciso que DEXA ou pesagem hidrostática, mas mais acessível e reproduzível.",
+    "q2": "O que significam as categorias de gordura corporal (Essencial, Atleta, Fitness, Média, Obeso)?",
+    "a2": "As categorias são baseadas em faixas padrão: Gordura essencial (2-5% homens, 10-13% mulheres), Atleta (6-13% homens, 14-20% mulheres), Fitness (14-17% homens, 21-24% mulheres), Média (18-24% homens, 25-31% mulheres), Obeso (25%+ homens, 32%+ mulheres). Estas são diretrizes gerais; a saúde individual depende de muitos fatores.",
+    "q3": "Quando devo usar esta calculadora e quais são suas limitações?",
+    "a3": "Use esta calculadora para uma estimativa rápida e não invasiva do percentual de gordura corporal, por exemplo, para acompanhar mudanças ao longo do tempo. Limitações: a precisão depende da técnica de medição precisa; pode não ser precisa para indivíduos muito musculosos ou com formas corporais incomuns. Ela assume uma certa distribuição de densidade corporal.",
+    "q4": "O que significam 'Massa Gorda' e 'Massa Magra' no resultado?",
+    "a4": "Massa Gorda é o peso total da gordura corporal, calculado como (% de gordura corporal / 100) * peso corporal total. Massa Magra é todo o resto: músculo, osso, órgãos, água, calculado como peso total menos massa gorda. Isso ajuda a entender sua composição corporal além da porcentagem.",
+    "q5": "Em que autoridade ou padrão o método da Marinha dos EUA se baseia?",
+    "a5": "O método da Marinha dos EUA foi desenvolvido pela Marinha dos EUA e baseia-se na pesquisa de Hodgdon e Beckett (1984). É amplamente utilizado para militares e avaliações de condicionamento físico. A fórmula de Brozek usada para conversão é uma equação padrão para estimar gordura corporal a partir da densidade."
+  },
+  "opt_male": "Masculino",
+  "opt_female": "Feminino",
+  "content": {
+    "whatIs": "Esta calculadora de gordura corporal estima seu percentual de gordura corporal usando o método de circunferência da Marinha dos EUA. Ela usa medidas do pescoço, cintura e quadril (para mulheres) juntamente com a altura para estimar a densidade corporal e depois converte em percentual de gordura corporal usando a fórmula de Brozek.",
+    "formula": "Para homens: Densidade Corporal = 1,0323 - 0,154 * log10(cintura - pescoço) + 0,025 * log10(altura). Para mulheres: Densidade Corporal = 1,29579 - 0,35004 * log10(cintura + quadril - pescoço) + 0,221 * log10(altura). % Gordura Corporal = (4,95 / Densidade Corporal - 4,50) * 100. Todas as medidas em cm.",
+    "example": "Um homem de 180 cm de altura com pescoço 40 cm e cintura 85 cm: Densidade Corporal = 1,0323 - 0,154 * log10(85-40) + 0,025 * log10(180) = 1,0323 - 0,154 * 1,6532 + 0,025 * 2,2553 = 1,0323 - 0,2546 + 0,0564 = 0,8341. % Gordura Corporal = (4,95/0,8341 - 4,50)*100 = (5,934 - 4,50)*100 = 14,34%.",
+    "howItWorks_1": "Insira sua altura, circunferência do pescoço, circunferência da cintura e, se for mulher, circunferência do quadril. Selecione seu sexo no menu suspenso.",
+    "howItWorks_2": "Ao clicar em Calcular, a ferramenta aplica a fórmula da Marinha dos EUA para calcular a densidade corporal e depois converte em percentual de gordura corporal. Ela também calcula a massa gorda e a massa magra com base no seu peso (se fornecido) ou usa um peso estimado a partir da altura.",
+    "howItWorks_3": "Os resultados mostram seu percentual de gordura corporal, massa gorda, massa magra e uma categoria (por exemplo, Essencial, Atleta, Fitness, Média, Obeso) com base em faixas padrão. Use a categoria para avaliar sua composição corporal em relação às normas de saúde."
+  }
+}

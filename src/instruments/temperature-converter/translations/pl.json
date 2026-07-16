@@ -1,0 +1,33 @@
+{
+  "title": "Konwerter temperatury — Celsjusz, Fahrenheit, Kelvin",
+  "description": "Konwertuj temperaturę między Celsjuszem, Fahrenheitem, Kelvinem i Rankine'em natychmiast. Najdokładniejszy darmowy konwerter temperatury online.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_value": "Temperatura",
+  "label_fromUnit": "Z",
+  "label_celsius": "Celsjusz",
+  "label_fahrenheit": "Fahrenheit",
+  "label_kelvin": "Kelvin",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jaki jest wzór na przeliczenie Fahrenheita na Celsjusza?",
+    "a1": "Wzór to: Celsjusz = (Fahrenheit - 32) × 5/9. Na przykład 98,6°F przelicza się na (98,6 - 32) × 5/9 = 37°C.",
+    "q2": "Dlaczego skala Kelvina nie ma symbolu stopnia?",
+    "a2": "Kelvin to absolutna termodynamiczna skala temperatury, gdzie 0 K to zero absolutne. Nie mierzy się jej w stopniach, ale w kelwinach (K), ponieważ jest jednostką miary w Międzynarodowym Układzie Jednostek (SI).",
+    "q3": "Kiedy powinienem używać Rankine'a zamiast Kelvina?",
+    "a3": "Rankine jest używany głównie w niektórych dziedzinach inżynierii, zwłaszcza w Stanach Zjednoczonych, do obliczeń termodynamicznych. Jest odpowiednikiem Fahrenheita dla Kelvina: Rankine używa tej samej skali co Fahrenheit, ale zaczyna się od zera absolutnego.",
+    "q4": "Co oznacza wynik w Celsjuszach?",
+    "a4": "Wynik w Celsjuszach pokazuje temperaturę w skali Celsjusza, gdzie 0°C to temperatura zamarzania wody, a 100°C to temperatura wrzenia przy standardowym ciśnieniu atmosferycznym. Jest to najczęściej używana skala na świecie do codziennych temperatur.",
+    "q5": "Jaki jest standard odniesienia dla tych skal temperatury?",
+    "a5": "Skale Celsjusza i Kelvina są zdefiniowane przez Międzynarodowy Układ Jednostek (SI). Skala Kelvina opiera się na punkcie potrójnym wody (273,16 K). Fahrenheit i Rankine są zdefiniowane względem odpowiednio Celsjusza i Kelvina przez Międzynarodową Skalę Temperatury z 1990 roku (ITS-90)."
+  },
+  "content": {
+    "whatIs": "Ten konwerter temperatury natychmiast konwertuje między skalami Celsjusza, Fahrenheita, Kelvina i Rankine'a. Używa liniowych wzorów konwersji opartych na temperaturach zamarzania i wrzenia wody oraz zera absolutnego.",
+    "formula": "Wzory konwersji to: Celsjusz na Fahrenheit: F = C × 9/5 + 32; Fahrenheit na Celsjusz: C = (F - 32) × 5/9; Celsjusz na Kelvin: K = C + 273,15; Kelvin na Celsjusz: C = K - 273,15; Celsjusz na Rankine: R = (C + 273,15) × 9/5; Rankine na Celsjusz: C = (R - 491,67) × 5/9. Podobne wzory dotyczą innych par.",
+    "example": "Przelicz 100°C na Fahrenheit, Kelvin i Rankine. Fahrenheit: 100 × 9/5 + 32 = 212°F. Kelvin: 100 + 273,15 = 373,15 K. Rankine: (100 + 273,15) × 9/5 = 671,67 °R.",
+    "howItWorks_1": "Wprowadź wartość temperatury w polu 'Wartość' i wybierz jednostkę, z której konwertujesz, z rozwijanej listy 'Z jednostki' (Celsjusz, Fahrenheit, Kelvin lub Rankine).",
+    "howItWorks_2": "Kalkulator automatycznie stosuje odpowiednie wzory konwersji, aby obliczyć równoważne temperatury w Celsjuszach, Fahrenheitach i Kelvinach. Nie trzeba klikać przycisku; wyniki aktualizują się natychmiast.",
+    "howItWorks_3": "Wyniki są wyświetlane w trzech polach: Celsjusz (°C), Fahrenheit (°F) i Kelvin (K). Użyj tych wartości do zastosowań naukowych, kulinarnych lub związanych z pogodą."
+  }
+}

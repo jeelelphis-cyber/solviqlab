@@ -1,0 +1,191 @@
+{
+  "slug": "bmi-calculator",
+  "name": "BMI Calculator",
+  "seoTitle": "BMI Calculator — Body Mass Index",
+  "seoDescription": "Calculate your Body Mass Index (BMI) instantly. Find out if you are underweight, normal weight, overweight, or obese based on WHO standards.",
+  "primaryKeyword": "bmi calculator",
+  "type": "calculator",
+  "category": "health",
+  "isYMYL": true,
+  "version": "1.0.0",
+  "status": "live",
+  "capabilities": [
+    "formula",
+    "unit-conversion",
+    "ai-interpretation",
+    "seo",
+    "localization",
+    "analytics"
+  ],
+  "inputs": [
+    {
+      "name": "height_cm",
+      "type": "number",
+      "required": true,
+      "unit": "cm",
+      "min": 50,
+      "max": 250,
+      "description": "Height in centimeters"
+    },
+    {
+      "name": "weight_kg",
+      "type": "number",
+      "required": true,
+      "unit": "kg",
+      "min": 20,
+      "max": 300,
+      "description": "Weight in kilograms"
+    },
+    {
+      "name": "age",
+      "type": "number",
+      "required": false,
+      "min": 18,
+      "max": 120,
+      "description": "Age in years (used for Deurenberg body fat estimation)"
+    },
+    {
+      "name": "sex",
+      "type": "enum",
+      "required": false,
+      "enumValues": [
+        "male",
+        "female",
+        "other"
+      ],
+      "description": "Biological sex (used for Deurenberg body fat estimation)"
+    },
+    {
+      "name": "unitSystem",
+      "type": "enum",
+      "required": false,
+      "enumValues": [
+        "metric",
+        "imperial"
+      ],
+      "description": "Unit system for display (default: metric)"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "bmi",
+      "type": "number",
+      "unit": "kg/m²",
+      "description": "Body Mass Index value"
+    },
+    {
+      "name": "category",
+      "type": "enum",
+      "description": "WHO BMI category"
+    },
+    {
+      "name": "bmiPrime",
+      "type": "number",
+      "description": "BMI Prime (ratio to upper limit of normal, 25)"
+    },
+    {
+      "name": "ponderalIndex",
+      "type": "number",
+      "unit": "kg/m³",
+      "description": "Ponderal Index (alternative to BMI)"
+    },
+    {
+      "name": "healthyWeightMin",
+      "type": "number",
+      "unit": "kg",
+      "description": "Lower bound of healthy weight range for this height"
+    },
+    {
+      "name": "healthyWeightMax",
+      "type": "number",
+      "unit": "kg",
+      "description": "Upper bound of healthy weight range for this height"
+    },
+    {
+      "name": "bodyFatEstimate",
+      "type": "number",
+      "unit": "%",
+      "description": "Estimated body fat % via Deurenberg formula (requires age + sex)"
+    }
+  ],
+  "keywords": [
+    {
+      "term": "bmi calculator",
+      "intent": "transactional",
+      "language": "en",
+      "source": "seed",
+      "retrievedAt": "2026-07-16"
+    },
+    {
+      "term": "body mass index calculator",
+      "intent": "informational",
+      "language": "en",
+      "source": "seed",
+      "retrievedAt": "2026-07-16"
+    },
+    {
+      "term": "calculate my bmi",
+      "intent": "transactional",
+      "language": "en",
+      "source": "seed",
+      "retrievedAt": "2026-07-16"
+    },
+    {
+      "term": "bmi for adults",
+      "intent": "informational",
+      "language": "en",
+      "source": "seed",
+      "retrievedAt": "2026-07-16"
+    },
+    {
+      "term": "what is a healthy bmi",
+      "intent": "informational",
+      "language": "en",
+      "source": "seed",
+      "retrievedAt": "2026-07-16"
+    },
+    {
+      "term": "bmi chart by age",
+      "intent": "informational",
+      "language": "en",
+      "source": "seed",
+      "retrievedAt": "2026-07-16"
+    },
+    {
+      "term": "calculadora de imc",
+      "intent": "transactional",
+      "language": "es",
+      "source": "seed",
+      "retrievedAt": "2026-07-16"
+    },
+    {
+      "term": "calculadora imc",
+      "intent": "transactional",
+      "language": "pt",
+      "source": "seed",
+      "retrievedAt": "2026-07-16"
+    }
+  ],
+  "related": [
+    "body-fat-calculator",
+    "ideal-weight-calculator",
+    "calorie-calculator",
+    "tdee-calculator"
+  ],
+  "supportedLanguages": [
+    "en"
+  ],
+  "createdAt": "2026-07-15",
+  "updatedAt": "2026-07-15",
+  "releaseHistory": [
+    {
+      "status": "live",
+      "timestamp": "2026-07-15T11:34:40.446Z"
+    },
+    {
+      "status": "live",
+      "timestamp": "2026-07-15T11:53:18.010Z",
+      "notes": "Re-release via Publishing Pipeline"
+    }
+  ]
+}

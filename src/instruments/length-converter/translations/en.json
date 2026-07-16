@@ -1,0 +1,36 @@
+{
+  "title": "Length Converter — Convert Any Unit of Length",
+  "description": "Convert between meters, feet, inches, centimeters, kilometers, miles, and more. Instant length unit converter with 15+ units.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_value": "Value",
+  "label_fromUnit": "From",
+  "label_meters": "Meters",
+  "label_kilometers": "Kilometers",
+  "label_centimeters": "Centimeters",
+  "label_feet": "Feet",
+  "label_inches": "Inches",
+  "label_miles": "Miles",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How is a meter defined and why is it the base unit for length conversions?",
+    "a1": "The meter is the base unit of length in the International System of Units (SI), defined as the distance light travels in a vacuum in 1/299,792,458 of a second. All other length units in the converter are derived from the meter using fixed conversion factors, ensuring consistency and accuracy.",
+    "q2": "What does the output value in 'Miles' represent?",
+    "a2": "The 'Miles' output shows the equivalent length in statute miles, where 1 mile equals exactly 1609.344 meters. For example, 1 kilometer converts to approximately 0.621371 miles. This unit is commonly used in the United States and the United Kingdom for road distances.",
+    "q3": "Can this length converter handle very large or very small values?",
+    "a3": "Yes, the converter accepts values from 0 up to 1,000,000,000,000,000 (10^15). However, for extremely large values (e.g., astronomical distances), units like light-years or parsecs are more appropriate, which are not included in this tool. For very small values (e.g., atomic scales), nanometers and micrometers are available.",
+    "q4": "What does the 'Feet' output mean and how is it calculated?",
+    "a4": "The 'Feet' output displays the length in feet, where 1 foot equals exactly 0.3048 meters. For instance, 1 meter converts to approximately 3.28084 feet. This unit is widely used in the United States for measuring height, short distances, and in aviation.",
+    "q5": "What is the official standard for the conversion factors used in this calculator?",
+    "a5": "The conversion factors are based on the International System of Units (SI) and the international yard and pound agreement of 1959. For example, 1 inch is defined as exactly 25.4 mm, and 1 foot as 0.3048 m. These standards are maintained by the International Bureau of Weights and Measures (BIPM)."
+  },
+  "content": {
+    "whatIs": "A length converter is a tool that converts a measurement from one unit of length to another, such as meters to feet or kilometers to miles. It uses conversion factors based on the International System of Units (SI) and other standard definitions to provide accurate results across 15+ units.",
+    "formula": "The conversion is performed by multiplying the input value by the appropriate conversion factor. For example, to convert from meters to feet, multiply by 3.28084 (since 1 m = 3.28084 ft). The general formula is: result = value * (target_unit_factor / source_unit_factor), where each unit has a predefined factor relative to the meter.",
+    "example": "Convert 5 kilometers to miles. Since 1 km = 0.621371 miles, multiply 5 by 0.621371 to get 3.10686 miles. The converter also outputs the equivalent in meters (5000 m), centimeters (500,000 cm), feet (16404.2 ft), and inches (196850.4 in).",
+    "howItWorks_1": "Enter the numeric value you want to convert in the 'value' field. Then select the unit of that value from the 'fromUnit' dropdown menu (e.g., 'km' for kilometers).",
+    "howItWorks_2": "After clicking the Calculate button, the tool applies the conversion formula using the selected source unit and predefined conversion factors to compute the equivalent lengths in all output units.",
+    "howItWorks_3": "The results are displayed in a table showing each output unit (Meters, Kilometers, Centimeters, Feet, Inches, Miles) with the converted numeric value. You can use these values directly for your calculations or further conversions."
+  }
+}

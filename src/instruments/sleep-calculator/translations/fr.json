@@ -1,0 +1,40 @@
+{
+  "title": "Calculateur de sommeil — Meilleurs horaires de coucher et de réveil selon les cycles de sommeil",
+  "description": "Trouvez l'heure idéale pour vous coucher ou vous réveiller en fonction des cycles de sommeil de 90 minutes. Réveillez-vous en pleine forme en programmant votre sommeil pour terminer des cycles REM complets.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Votre horaire de sommeil",
+  "label_mode": "Mode",
+  "label_targetTime": "Heure",
+  "label_fallAsleepMinutes": "Minutes pour s'endormir",
+  "opt_waketime": "Je veux me réveiller à...",
+  "opt_bedtime": "Je vais me coucher à...",
+  "label_cycle4": "4 cycles — 6 heures",
+  "label_cycle5": "5 cycles — 7,5 heures",
+  "label_cycle6": "6 cycles — 9 heures",
+  "label_cycle7": "7 cycles — 10,5 heures",
+  "tag_light": "Léger",
+  "tag_optimal": "Optimal",
+  "tag_too_much": "Trop long",
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Qu'est-ce qu'un cycle de sommeil et pourquoi dure-t-il 90 minutes ?",
+    "a1": "Un cycle de sommeil comprend quatre stades : N1 (sommeil léger), N2 (sommeil léger), N3 (sommeil profond à ondes lentes) et REM (mouvements oculaires rapides). Un cycle complet dure en moyenne 90 minutes, bien que les cycles puissent varier de 70 à 120 minutes et que la proportion de sommeil profond par rapport au sommeil REM change au cours de la nuit. Se réveiller à la fin d'un cycle complet — plutôt que pendant le sommeil profond — est associé à une sensation de plus grande vigilance et de moins de somnolence.",
+    "q2": "Pourquoi 5 ou 6 cycles de sommeil sont-ils recommandés ?",
+    "a2": "La plupart des adultes ont besoin de 7 à 9 heures de sommeil par nuit, ce qui correspond à 5 à 6 cycles complets de 90 minutes. Cinq cycles équivalent à 7,5 heures et six cycles à 9 heures. Quatre cycles (6 heures) sont généralement insuffisants pour la plupart des adultes à long terme. Sept cycles (10,5 heures) peuvent indiquer un excès de sommeil, associé à des risques pour la santé dans certaines recherches.",
+    "q3": "Que sont les « minutes pour s'endormir » et comment affectent-elles le calcul ?",
+    "a3": "La latence d'endormissement (temps pour s'endormir) est le délai entre le moment où l'on se couche et celui où l'on s'endort réellement. La moyenne est de 15 à 20 minutes pour un adulte en bonne santé. Ce calculateur soustrait ce temps afin que vos alarmes en tiennent compte. Si vous souffrez d'insomnie ou si vous vous endormez rapidement, ajustez cette valeur. Pour le mode « heure de réveil », l'heure du coucher = heure de réveil cible − temps d'endormissement − (cycles × 90 min).",
+    "q4": "Ce calculateur prend-il en compte les siestes ?",
+    "a4": "Ce calculateur est conçu pour une session de sommeil principale de nuit. Pour les siestes, un seul cycle de 90 minutes est idéal (ou même 20 minutes pour éviter la somnolence). Vous pouvez utiliser ce calculateur pour les siestes en entrant l'heure de début de la sieste en mode « coucher » et en lisant l'heure du cycle 4 comme heure de réveil idéale pour une sieste de 90 minutes.",
+    "q5": "Est-il préférable de se réveiller après 5 ou 6 cycles ?",
+    "a5": "Les deux se situent dans la fourchette recommandée de 7 à 9 heures pour les adultes. La plupart des gens se portent bien avec 7,5 heures (5 cycles), surtout s'ils ont un horaire de sommeil régulier. Six cycles (9 heures) sont meilleurs pour les personnes qui récupèrent d'une dette de sommeil, qui sont malades ou qui ont naturellement des besoins de sommeil plus élevés. L'essentiel est de se réveiller à la fin d'un cycle complet, ce que ce calculateur aide à bien chronométrer."
+  },
+  "content": {
+    "whatIs": "Ce calculateur de sommeil vous aide à trouver le meilleur moment pour vous coucher ou vous réveiller en fonction des cycles de sommeil de 90 minutes. En programmant votre sommeil pour qu'il se termine à la fin d'un cycle complet, vous avez plus de chances de vous réveiller en pleine forme plutôt que groggy.",
+    "formula": "Heure du coucher (mode réveil) = Heure de réveil − Minutes d'endormissement − (Cycles × 90 min)\nHeure de réveil (mode sommeil) = Heure du coucher + Minutes d'endormissement + (Cycles × 90 min)\nLes heures s'enroulent automatiquement autour de minuit.",
+    "example": "Si vous devez vous réveiller à 07h00 et que vous mettez 15 minutes à vous endormir : 5 cycles = 07h00 − 15 min − 450 min = 23h05 comme heure de coucher. 6 cycles = 07h00 − 15 min − 540 min = 21h35 comme heure de coucher.",
+    "howItWorks_1": "Choisissez votre mode : « Je veux me réveiller à » pour calculer les heures de coucher, ou « Je vais me coucher à » pour calculer les heures de réveil.",
+    "howItWorks_2": "Entrez votre heure cible au format HH:MM et ajustez les minutes pour vous endormir si nécessaire (par défaut 15).",
+    "howItWorks_3": "Cliquez sur Calculer pour voir quatre heures recommandées correspondant à 4, 5, 6 et 7 cycles de sommeil complets."
+  }
+}

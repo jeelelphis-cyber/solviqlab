@@ -1,0 +1,37 @@
+{
+  "title": "Calculadora de Inversiones — Crecimiento Compuesto y Retorno de Inversión",
+  "description": "Calcule cómo crece su inversión con interés compuesto y aportaciones mensuales. Vea su valor final, interés total ganado y cuánto tiempo tarda en duplicar su dinero.",
+  "calculate": "Calcular",
+  "reset": "Reiniciar",
+  "result": "Resultado",
+  "label_initialAmount": "Inversión Inicial",
+  "label_monthlyContribution": "Aportación Mensual",
+  "label_annualReturn": "Tasa de Retorno Anual",
+  "label_years": "Período de Inversión",
+  "label_finalValue": "Valor Final",
+  "label_totalContributions": "Total Invertido",
+  "label_totalInterest": "Retornos Totales",
+  "label_doublingTime": "Tiempo de Duplicación",
+  "unit_years": "años",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cómo se calcula el interés compuesto con aportaciones mensuales?",
+    "a1": "El valor futuro total combina dos partes: (1) el crecimiento del monto único de su inversión inicial — VF = P × (1+r)^n — y (2) el valor futuro de sus aportaciones mensuales como una anualidad — VF = C × ((1+r)^n − 1) / r. Aquí r es la tasa mensual (tasa anual / 12) y n es el total de meses (años × 12). Ambas se suman para obtener el valor final de la cartera.",
+    "q2": "¿Qué es la Regla del 72?",
+    "a2": "La Regla del 72 es un atajo para estimar cuánto tiempo se tarda en duplicar su inversión: Tiempo de Duplicación ≈ 72 / Tasa de Retorno Anual. Con un retorno del 7%, su inversión se duplica en aproximadamente 72/7 ≈ 10.3 años. Con un 10%, se duplica en 7.2 años. Esta regla funciona porque ln(2) / ln(1+r) ≈ 0.693 / r ≈ 72 / (100r) para tasas de interés típicas.",
+    "q3": "¿Qué tasa de retorno anual debo asumir?",
+    "a3": "Promedios históricos para tipos comunes de inversión: fondo índice S&P 500 ≈ 10% nominal, 7% real (ajustado por inflación); cartera equilibrada de acciones/bonos ≈ 6–8%; fondos de bonos ≈ 3–5%; cuenta de ahorros ≈ 1–5%. Esta calculadora usa un 7% por defecto, que es una estimación conservadora para una cartera diversificada a largo plazo.",
+    "q4": "¿Esta calculadora considera impuestos o inflación?",
+    "a4": "No. La calculadora muestra retornos nominales antes de impuestos o inflación. Para estimar retornos reales (ajustados por inflación), reste la tasa de inflación de su retorno anual antes de ingresarlo. Por ejemplo, si espera un 7% nominal y un 3% de inflación, ingrese 4% para ver el crecimiento real. El tratamiento fiscal depende del tipo de cuenta (sujeta a impuestos vs. 401k vs. IRA).",
+    "q5": "¿Cuál es la diferencia entre total de aportaciones y retornos totales?",
+    "a5": "El total de aportaciones es simplemente el dinero que realmente invirtió: inversión inicial más todas las aportaciones mensuales. Los retornos totales (interés) son el crecimiento generado por la capitalización — es la diferencia entre el valor final y el total de aportaciones. Para períodos largos con tasas moderadas, los retornos totales suelen superar con creces las aportaciones totales debido a la naturaleza exponencial del crecimiento compuesto."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de inversiones muestra cómo crece su cartera con el tiempo mediante el interés compuesto sobre una inversión inicial más aportaciones mensuales regulares. También utiliza la Regla del 72 para estimar cuánto tiempo se tarda en duplicar su dinero con la tasa de retorno dada.",
+    "formula": "r = retornoAnual / 100 / 12 (tasa mensual)\nn = años × 12 (total de meses)\nValor Final = montoInicial × (1+r)^n + aportacionMensual × ((1+r)^n − 1) / r\nTotal Aportado = montoInicial + aportacionMensual × n\nRetornos Totales = Valor Final − Total Aportado\nTiempo de Duplicación ≈ 72 / retornoAnual",
+    "example": "$10,000 inicial, $200/mes, 7% retorno anual, 20 años: r = 0.5833%/mes, n = 240 meses. Final ≈ $144,959. Total aportado: $58,000. Retornos totales: $86,959. Tiempo de duplicación al 7%: ≈ 10.3 años.",
+    "howItWorks_1": "Ingrese el monto de su inversión inicial y la aportación mensual opcional.",
+    "howItWorks_2": "Establezca la tasa de retorno anual esperada (por defecto 7%) y el período de inversión en años (por defecto 10).",
+    "howItWorks_3": "Haga clic en Calcular para ver el valor final de su cartera, el monto total invertido, los retornos totales obtenidos y el tiempo de duplicación de su inversión mediante la Regla del 72."
+  }
+}

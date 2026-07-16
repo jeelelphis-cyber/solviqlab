@@ -1,0 +1,35 @@
+{
+  "title": "Calculadora de Razão — Simplifique e Resolva Razões",
+  "description": "Simplifique razões, resolva proporções e escale receitas ou medidas. A calculadora de razão mais rápida online com soluções passo a passo.",
+  "calculate": "Calcular",
+  "reset": "Limpar",
+  "result": "Resultado",
+  "label_a": "A",
+  "label_b": "B",
+  "label_c": "C (opcional, resolva para D)",
+  "label_simplifiedA": "A simplificado",
+  "label_simplifiedB": "B simplificado",
+  "label_d": "D (se C fornecido)",
+  "label_decimal": "A/B como decimal",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Como simplificar uma razão como 15:25?",
+    "a1": "Encontre o MDC de 15 e 25, que é 5. Divida ambos os termos por 5: 15/5 = 3, 25/5 = 5, então a razão simplificada é 3:5.",
+    "q2": "O que significa a saída 'D (se C fornecido)'?",
+    "a2": "Se você fornecer um valor para c, a calculadora resolve a proporção a:b = c:d para d usando multiplicação cruzada: d = (b * c) / a. Isso dá a quarta proporcional.",
+    "q3": "Posso usar esta calculadora para escalar receitas?",
+    "a3": "Sim. Por exemplo, se uma receita usa 2 xícaras de farinha para 3 xícaras de açúcar (2:3) e você quer usar 4 xícaras de farinha, insira a=2, b=3, c=4 para descobrir que precisa de d=6 xícaras de açúcar.",
+    "q4": "O que a saída decimal representa?",
+    "a4": "O decimal é o valor de a dividido por b. Para uma razão 3:4, o decimal é 0,75, significando que a é 75% de b. É útil para comparar quantidades.",
+    "q5": "Existe um padrão oficial para simplificar razões?",
+    "a5": "A simplificação de razões segue o princípio matemático de dividir pelo máximo divisor comum (MDC), que é um método aritmético padrão. Não há autoridade regulatória específica para simplificação de razões."
+  },
+  "content": {
+    "whatIs": "A Calculadora de Razão simplifica razões para seus termos mais baixos, resolve um valor ausente em uma proporção (a:b = c:d) e calcula o equivalente decimal de uma razão. Ela usa o conceito de razões equivalentes e multiplicação cruzada.",
+    "formula": "Para simplificar uma razão a:b, divida ambos os termos pelo seu máximo divisor comum (MDC). Para encontrar d em a:b = c:d, use multiplicação cruzada: d = (b * c) / a. O decimal é a / b.",
+    "example": "Para entradas a=8, b=12, c=6, a calculadora simplifica 8:12 para 2:3, encontra d = (12*6)/8 = 9, e mostra decimal 8/12 = 0,6667.",
+    "howItWorks_1": "Insira os valores para a e b (obrigatório). Opcionalmente, insira um valor para c para resolver d na proporção a:b = c:d.",
+    "howItWorks_2": "Clique em Calcular. A ferramenta calcula o MDC de a e b para simplificar a razão, realiza multiplicação cruzada se c for fornecido, e divide a por b para o decimal.",
+    "howItWorks_3": "Os resultados mostram a razão simplificada (A simplificado : B simplificado), o valor ausente D (se c foi inserido) e a representação decimal de a/b."
+  }
+}

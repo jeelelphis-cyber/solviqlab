@@ -1,0 +1,38 @@
+{
+  "title": "Calculadora de Volumen — Cubo, Esfera, Cilindro y Más",
+  "description": "Calcula el volumen de cualquier forma 3D: cubo, esfera, cilindro, cono, prisma rectangular. Resultados instantáneos con fórmulas para matemáticas e ingeniería.",
+  "calculate": "Calcular",
+  "reset": "Reiniciar",
+  "result": "Resultado",
+  "label_shape": "Forma",
+  "label_a": "Longitud / Radio / Lado",
+  "label_b": "Ancho (si es necesario)",
+  "label_h": "Altura (si es necesario)",
+  "label_volume": "Volumen",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cuál es la fórmula para el volumen de una esfera?",
+    "a1": "El volumen de una esfera es V = (4/3)πr³, donde r es el radio. Por ejemplo, una esfera con radio 3 unidades tiene volumen (4/3)π×27 = 36π ≈ 113.1 unidades³.",
+    "q2": "¿Cómo interpreto el resultado del volumen en unidades cúbicas?",
+    "a2": "El resultado está en unidades cúbicas (ej. cm³, m³, in³). Si ingresas dimensiones en metros, el volumen está en metros cúbicos. Esto representa la cantidad de espacio que ocupa la forma.",
+    "q3": "¿Cuándo debo usar esta calculadora de volumen?",
+    "a3": "Úsala para cualquier tarea que requiera cálculo de volumen: determinar cuánto líquido contiene un recipiente, estimar material necesario para un objeto 3D o resolver problemas de geometría. Cubre cinco formas comunes pero no objetos irregulares.",
+    "q4": "¿Qué representa la salida de 'volumen'?",
+    "a4": "La salida de volumen es el espacio total encerrado por la forma 3D, expresado en unidades cúbicas. Para un cubo con lado 2 unidades, volumen = 8 unidades³, lo que significa que puede contener 8 cubos unitarios.",
+    "q5": "¿Estas fórmulas de volumen se basan en definiciones matemáticas estándar?",
+    "a5": "Sí, las fórmulas se derivan de la geometría euclidiana y son universalmente aceptadas en matemáticas e ingeniería. Están definidas por el Sistema Internacional de Unidades (SI) para la medición de volumen (metros cúbicos)."
+  },
+  "opt_cube": "Cubo",
+  "opt_sphere": "Esfera",
+  "opt_cylinder": "Cilindro",
+  "opt_cone": "Cono",
+  "opt_rect_prism": "Prisma Rectangular",
+  "content": {
+    "whatIs": "Esta calculadora de volumen calcula el volumen de formas 3D comunes: cubo, esfera, cilindro, cono y prisma rectangular. El volumen mide la cantidad de espacio que ocupa un objeto, calculado usando fórmulas geométricas específicas para cada forma.",
+    "formula": "Para un cubo: V = a³ (a = longitud del lado). Esfera: V = (4/3)πr³ (r = radio). Cilindro: V = πr²h (r = radio, h = altura). Cono: V = (1/3)πr²h. Prisma rectangular: V = lwh (l = largo, w = ancho, h = altura). La calculadora usa estas fórmulas según la forma seleccionada.",
+    "example": "Para un cilindro con radio 5 unidades y altura 10 unidades, volumen = π × 5² × 10 = 250π ≈ 785.4 unidades³. Ingresa forma 'cilindro', a=5, h=10, y el resultado muestra 785.4 unidades³.",
+    "howItWorks_1": "Selecciona la forma del menú desplegable. Luego ingresa las dimensiones requeridas: para cubo, ingresa la longitud del lado 'a'; para esfera, ingresa el radio 'a'; para cilindro, ingresa el radio 'a' y la altura 'h'; para cono, ingresa el radio 'a' y la altura 'h'; para prisma rectangular, ingresa largo 'a', ancho 'b' y altura 'h'.",
+    "howItWorks_2": "Haz clic en el botón Calcular. La calculadora aplica la fórmula de volumen adecuada usando tus entradas y calcula el resultado.",
+    "howItWorks_3": "El resultado muestra el volumen en unidades cúbicas (unidades³). Usa este valor para aplicaciones como llenar un recipiente, estimación de materiales o diseño de ingeniería."
+  }
+}

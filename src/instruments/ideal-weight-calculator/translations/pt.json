@@ -1,0 +1,36 @@
+{
+  "title": "Calculadora de Peso Ideal — Encontre seu Peso Saudável",
+  "description": "Calcule seu peso corporal ideal usando 4 fórmulas médicas (Robinson, Miller, Devine, Hamwi). Obtenha sua faixa de peso saudável por altura e sexo.",
+  "calculate": "Calcular",
+  "reset": "Limpar",
+  "result": "Resultado",
+  "label_height": "Altura",
+  "label_sex": "Sexo",
+  "label_robinson": "Fórmula de Robinson",
+  "label_miller": "Fórmula de Miller",
+  "label_devine": "Fórmula de Devine",
+  "label_average": "Peso Ideal Médio",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Qual é a diferença entre as fórmulas Robinson, Miller, Devine e Hamwi?",
+    "a1": "Essas fórmulas diferem no peso base e no ajuste por polegada acima de 5 pés. Por exemplo, para homens, Robinson começa com 52 kg com 1,9 kg/polegada, enquanto Hamwi começa com 48 kg com 2,7 kg/polegada. Elas foram desenvolvidas a partir de diferentes populações e períodos de tempo, então os resultados variam ligeiramente.",
+    "q2": "Como devo interpretar o peso ideal médio?",
+    "a2": "A média é a média dos resultados das quatro fórmulas, fornecendo um único ponto de referência. Não é um padrão clínico, mas um resumo conveniente. Seu peso saudável real pode variar com base na massa muscular, densidade óssea e composição corporal.",
+    "q3": "Quando devo usar esta calculadora e quais são suas limitações?",
+    "a3": "Use-a para conscientização geral sobre saúde ou como ponto de partida para metas de peso. Limitações: não leva em conta idade, percentual de gordura corporal ou massa muscular. Atletas ou idosos podem achar as estimativas menos precisas.",
+    "q4": "O que significa o resultado da fórmula Devine?",
+    "a4": "A fórmula Devine foi originalmente desenvolvida para calcular o peso corporal ideal para dosagem de medicamentos. Para um homem de 170 cm, ela dá 65,9 kg. É amplamente usada em ambientes clínicos, mas pode subestimar o peso ideal para indivíduos mais altos.",
+    "q5": "Essas fórmulas são baseadas nos padrões da OMS?",
+    "a5": "Não, essas fórmulas são anteriores às diretrizes de IMC da OMS. Elas foram desenvolvidas por clínicos (Robinson, Miller, Devine, Hamwi) para estimar o peso ideal. A OMS usa categorias de IMC (18,5-24,9) para peso saudável, que é uma abordagem diferente."
+  },
+  "opt_male": "Masculino",
+  "opt_female": "Feminino",
+  "content": {
+    "whatIs": "A Calculadora de Peso Ideal estima seu peso corporal ideal com base na sua altura e sexo usando quatro fórmulas médicas estabelecidas: Robinson, Miller, Devine e Hamwi. Essas fórmulas fornecem uma faixa de peso associada a menores riscos à saúde para a maioria dos adultos.",
+    "formula": "Para homens: Robinson = 52 kg + 1,9 kg por polegada acima de 5 pés; Miller = 56,2 kg + 1,41 kg por polegada acima de 5 pés; Devine = 50 kg + 2,3 kg por polegada acima de 5 pés; Hamwi = 48 kg + 2,7 kg por polegada acima de 5 pés. Para mulheres: Robinson = 49 kg + 1,7 kg por polegada acima de 5 pés; Miller = 53,1 kg + 1,36 kg por polegada acima de 5 pés; Devine = 45,5 kg + 2,3 kg por polegada acima de 5 pés; Hamwi = 45,5 kg + 2,2 kg por polegada acima de 5 pés. A altura em polegadas é convertida de centímetros.",
+    "example": "Um homem de 170 cm (66,9 polegadas): Robinson = 52 + 1,9*(66,9-60) = 65,1 kg; Miller = 56,2 + 1,41*(66,9-60) = 65,9 kg; Devine = 50 + 2,3*(66,9-60) = 65,9 kg; Hamwi = 48 + 2,7*(66,9-60) = 66,6 kg; Média = (65,1+65,9+65,9+66,6)/4 = 65,9 kg.",
+    "howItWorks_1": "Insira sua altura em centímetros (entre 100 e 250) e selecione seu sexo (masculino ou feminino) no menu suspenso.",
+    "howItWorks_2": "Clique no botão Calcular. A ferramenta aplica cada fórmula para calcular seu peso ideal em quilogramas para Robinson, Miller, Devine e Hamwi, e então calcula a média.",
+    "howItWorks_3": "Revise os resultados: cada fórmula fornece um valor ligeiramente diferente. A média fornece uma estimativa única. Compare esses números com seu peso atual para avaliar se você está dentro de uma faixa saudável."
+  }
+}

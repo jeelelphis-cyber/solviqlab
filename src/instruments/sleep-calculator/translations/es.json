@@ -1,0 +1,40 @@
+{
+  "title": "Calculadora de Sueño — Mejores Horas para Acostarse y Despertarse según Ciclos de Sueño",
+  "description": "Encuentra la hora ideal para acostarte o despertarte basada en ciclos de sueño de 90 minutos. Despierta renovado sincronizando el sueño para completar ciclos REM completos.",
+  "calculate": "Calcular",
+  "reset": "Reiniciar",
+  "result": "Tu Horario de Sueño",
+  "label_mode": "Modo",
+  "label_targetTime": "Hora",
+  "label_fallAsleepMinutes": "Minutos para Quedarse Dormido",
+  "opt_waketime": "Quiero despertarme a las...",
+  "opt_bedtime": "Me voy a dormir a las...",
+  "label_cycle4": "4 Ciclos — 6 horas",
+  "label_cycle5": "5 Ciclos — 7.5 horas",
+  "label_cycle6": "6 Ciclos — 9 horas",
+  "label_cycle7": "7 Ciclos — 10.5 horas",
+  "tag_light": "Ligero",
+  "tag_optimal": "Óptimo",
+  "tag_too_much": "Demasiado Largo",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Qué es un ciclo de sueño y por qué dura 90 minutos?",
+    "a1": "Un ciclo de sueño consta de cuatro etapas: N1 (sueño ligero), N2 (sueño ligero), N3 (sueño profundo/ondas lentas) y REM (movimiento ocular rápido). Un ciclo completo promedia 90 minutos, aunque los ciclos pueden variar de 70 a 120 minutos y la proporción de sueño profundo vs REM cambia durante la noche. Despertarse al final de un ciclo completo, en lugar de durante el sueño profundo, se asocia con sentirse más alerta y menos aturdido.",
+    "q2": "¿Por qué se recomiendan 5 o 6 ciclos de sueño?",
+    "a2": "La mayoría de los adultos necesitan de 7 a 9 horas de sueño por noche, lo que corresponde a 5–6 ciclos completos de 90 minutos. Cinco ciclos equivalen a 7.5 horas y seis ciclos a 9 horas. Cuatro ciclos (6 horas) generalmente son insuficientes para la mayoría de los adultos a largo plazo. Siete ciclos (10.5 horas) pueden indicar dormir demasiado, lo que se asocia con riesgos para la salud en algunas investigaciones.",
+    "q3": "¿Qué son los 'minutos para quedarse dormido' y cómo afectan el cálculo?",
+    "a3": "La latencia de inicio del sueño (tiempo para dormirse) es el retraso entre acostarse y realmente dormirse. El promedio es de 15 a 20 minutos para adultos sanos. Esta calculadora resta este tiempo para que tus alarmas lo tengan en cuenta. Si tienes insomnio o te duermes rápidamente, ajusta este valor. Para modo='hora de despertar', hora de acostarse = hora objetivo de despertar − tiempo para dormirse − (ciclos × 90 min).",
+    "q4": "¿Esto considera siestas?",
+    "a4": "Esta calculadora está diseñada para una sesión principal de sueño nocturno. Para siestas, un solo ciclo de 90 minutos es ideal (o incluso 20 minutos para evitar aturdimiento). Puedes usar esta calculadora para siestas ingresando la hora de inicio de la siesta en modo 'acostarse' y leyendo el tiempo del ciclo4 como la hora ideal para despertar de una siesta de 90 minutos.",
+    "q5": "¿Es mejor despertarse después de 5 o 6 ciclos?",
+    "a5": "Ambos están dentro del rango recomendado de 7 a 9 horas para adultos. La mayoría de las personas prosperan con 7.5 horas (5 ciclos), especialmente si tienen un horario de sueño consistente. Seis ciclos (9 horas) es mejor para personas que se recuperan de deuda de sueño, enfermedad o con necesidades de sueño naturalmente más altas. La clave es despertar al final de un ciclo completo, lo que esta calculadora ayuda a sincronizar correctamente."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de sueño te ayuda a encontrar la mejor hora para dormir o despertar basada en ciclos de sueño de 90 minutos. Al sincronizar tu sueño para que termine al completar un ciclo completo, es más probable que te despiertes sintiéndote renovado en lugar de aturdido.",
+    "formula": "Hora de acostarse (modo despertar) = Hora de despertar − Minutos para dormirse − (Ciclos × 90 min)\nHora de despertar (modo dormir) = Hora de acostarse + Minutos para dormirse + (Ciclos × 90 min)\nLas horas se ajustan automáticamente alrededor de la medianoche.",
+    "example": "Si necesitas despertarte a las 07:00 y te toma 15 minutos dormirte: 5 ciclos = 07:00 − 15 min − 450 min = 23:05 hora de acostarse. 6 ciclos = 07:00 − 15 min − 540 min = 21:35 hora de acostarse.",
+    "howItWorks_1": "Elige tu modo: 'Quiero despertarme a las' para calcular horas de acostarse, o 'Me voy a dormir a las' para calcular horas de despertar.",
+    "howItWorks_2": "Ingresa tu hora objetivo en formato HH:MM y ajusta los minutos para dormirte si es necesario (por defecto 15).",
+    "howItWorks_3": "Haz clic en Calcular para ver cuatro horas recomendadas correspondientes a 4, 5, 6 y 7 ciclos completos de sueño."
+  }
+}

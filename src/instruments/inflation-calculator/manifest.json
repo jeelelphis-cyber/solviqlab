@@ -1,0 +1,34 @@
+{
+  "slug": "inflation-calculator",
+  "name": "Inflation Calculator",
+  "seoTitle": "Inflation Calculator — Purchasing Power & CPI Adjustment",
+  "seoDescription": "Calculate the adjusted value of money over time using a custom inflation rate. See how inflation erodes purchasing power between any two years.",
+  "primaryKeyword": "inflation calculator",
+  "type": "calculator",
+  "category": "finance",
+  "isYMYL": false,
+  "version": "1.0.0",
+  "status": "live",
+  "capabilities": ["formula", "seo", "localization"],
+  "inputs": [
+    {"name": "amount", "type": "number", "required": true, "min": 0, "max": 1000000000, "description": "Original amount of money"},
+    {"name": "fromYear", "type": "number", "required": true, "min": 1900, "max": 2100, "description": "Starting year", "default": 2000},
+    {"name": "toYear", "type": "number", "required": true, "min": 1900, "max": 2100, "description": "Ending year", "default": 2024},
+    {"name": "inflationRate", "type": "number", "required": false, "min": 0, "max": 100, "description": "Annual inflation rate (%)", "default": 3.0}
+  ],
+  "outputs": [
+    {"name": "adjustedAmount", "type": "number", "description": "Value in target year dollars"},
+    {"name": "totalInflation", "type": "number", "description": "Total inflation over period (%)"},
+    {"name": "purchasingPowerLoss", "type": "number", "description": "Loss of purchasing power (%)"},
+    {"name": "yearsElapsed", "type": "number", "description": "Number of years elapsed"}
+  ],
+  "keywords": [
+    {"term": "inflation calculator", "intent": "transactional", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"},
+    {"term": "purchasing power calculator", "intent": "transactional", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"}
+  ],
+  "related": ["salary-calculator", "investment-calculator", "retirement-calculator", "compound-interest-calculator"],
+  "supportedLanguages": ["en"],
+  "createdAt": "2026-07-16",
+  "updatedAt": "2026-07-16",
+  "releaseHistory": [{"status": "live", "timestamp": "2026-07-16T00:00:00.000Z"}]
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Calculateur de BMR — Taux Métabolique de Base",
+  "description": "Calculez votre taux métabolique de base (BMR) à l'aide de l'équation de Mifflin-St Jeor. Découvrez combien de calories votre corps brûle au repos complet.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_weight": "Poids",
+  "label_height": "Taille",
+  "label_age": "Âge",
+  "label_sex": "Sexe",
+  "label_bmr": "BMR",
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "q1": "Pourquoi l'équation de Mifflin-St Jeor utilise-t-elle des formules différentes pour les hommes et les femmes ?",
+    "a1": "Les hommes ont généralement plus de masse musculaire maigre et un métabolisme plus élevé que les femmes, donc l'équation ajoute 5 pour les hommes et soustrait 161 pour les femmes pour tenir compte de ces différences.",
+    "q2": "Que signifie mon nombre de BMR pour la perte de poids ?",
+    "a2": "Votre BMR est le minimum de calories nécessaires aux fonctions de base. Pour perdre du poids, vous devez consommer moins de calories que votre dépense énergétique totale quotidienne (BMR plus activité), généralement un déficit de 500 à 1000 kcal/jour pour une perte sûre.",
+    "q3": "Puis-je utiliser ce calculateur de BMR si j'ai moins de 15 ans ou plus de 100 ans ?",
+    "a3": "L'équation de Mifflin-St Jeor est validée pour les adultes de 19 à 100 ans. Pour les 15-18 ans, elle peut encore fournir une estimation raisonnable, mais pour les enfants de moins de 15 ans, d'autres équations (par exemple, Schofield) sont plus appropriées.",
+    "q4": "Que signifie 'kcal/jour' dans le résultat ?",
+    "a4": "kcal/jour signifie kilocalories par jour, l'unité standard pour l'énergie alimentaire. Une kilocalorie équivaut à 1 000 calories (petites calories). Cela représente l'énergie que votre corps brûle en une journée au repos.",
+    "q5": "L'équation de Mifflin-St Jeor est-elle recommandée par les autorités sanitaires ?",
+    "a5": "Oui, l'Académie de Nutrition et de Diététique recommande l'équation de Mifflin-St Jeor comme la plus précise pour estimer le BMR chez les individus non obèses et obèses. Elle est largement utilisée en milieu clinique."
+  },
+  "opt_male": "Homme",
+  "opt_female": "Femme",
+  "content": {
+    "whatIs": "Ce calculateur de BMR estime votre taux métabolique de base (BMR) à l'aide de l'équation de Mifflin-St Jeor. Le BMR est le nombre de calories que votre corps brûle au repos complet pour maintenir les fonctions vitales comme la respiration et la circulation.",
+    "formula": "Pour les hommes : BMR = 10 × poids(kg) + 6,25 × taille(cm) - 5 × âge(ans) + 5. Pour les femmes : BMR = 10 × poids(kg) + 6,25 × taille(cm) - 5 × âge(ans) - 161. Le résultat est en kcal/jour.",
+    "example": "Un homme de 30 ans pesant 80 kg et mesurant 180 cm : BMR = 10×80 + 6,25×180 - 5×30 + 5 = 800 + 1125 - 150 + 5 = 1780 kcal/jour. Cela signifie que son corps brûle environ 1780 calories par jour au repos.",
+    "howItWorks_1": "Entrez votre poids en kilogrammes, votre taille en centimètres, votre âge en années et sélectionnez votre sexe (homme ou femme).",
+    "howItWorks_2": "Cliquez sur le bouton Calculer. Le calculateur applique l'équation de Mifflin-St Jeor pour calculer votre BMR en fonction des entrées.",
+    "howItWorks_3": "Le résultat affiche votre BMR en kcal/jour. Utilisez ce nombre comme base pour vos besoins caloriques quotidiens ; ajoutez les calories d'activité pour estimer la dépense énergétique totale."
+  }
+}

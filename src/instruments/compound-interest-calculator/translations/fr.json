@@ -1,0 +1,41 @@
+{
+  "title": "Calculateur d'intérêts composés — Voyez votre argent fructifier",
+  "description": "Calculez les intérêts composés au fil du temps avec des apports mensuels. Voyez comment votre investissement croît année après année grâce au pouvoir de la capitalisation.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_principal": "Investissement initial",
+  "label_annualRate": "Taux d'intérêt annuel",
+  "label_years": "Période",
+  "label_monthlyContribution": "Apport mensuel",
+  "label_compoundFrequency": "Fréquence de capitalisation",
+  "label_finalAmount": "Montant final",
+  "label_totalContributions": "Total des apports",
+  "label_totalInterest": "Intérêts totaux gagnés",
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Quelle est la différence entre intérêts simples et intérêts composés ?",
+    "a1": "Les intérêts simples sont calculés uniquement sur le capital initial, tandis que les intérêts composés sont calculés sur le capital plus les intérêts accumulés. Par exemple, 10 000 $ à 5 % d'intérêts simples sur 10 ans rapportent 5 000 $ d'intérêts, mais capitalisés mensuellement, ils rapportent environ 6 470 $ d'intérêts.",
+    "q2": "Comment la fréquence de capitalisation affecte-t-elle le montant final ?",
+    "a2": "Une capitalisation plus fréquente génère des rendements plus élevés car les intérêts sont ajoutés plus souvent. Pour 10 000 $ à 5 % sur 10 ans : annuellement donne 16 288,95 $, trimestriellement 16 453,09 $, mensuellement 16 470,09 $ et quotidiennement 16 474,61 $.",
+    "q3": "Puis-je utiliser ce calculateur pour des prêts ainsi que pour des investissements ?",
+    "a3": "Oui, la même formule s'applique aux prêts avec intérêts composés. Cependant, pour les prêts, le résultat représente le montant total dû. Ce calculateur ne tient pas compte des remboursements de prêt ; il suppose qu'aucun retrait n'est effectué.",
+    "q4": "Que signifie 'Total des apports' dans les résultats ?",
+    "a4": "Le total des apports est la somme du capital initial et de tous les apports mensuels effectués sur la période d'investissement. Par exemple, si vous commencez avec 10 000 $ et ajoutez 100 $ par mois pendant 10 ans, le total des apports = 10 000 $ + (100 $ × 120) = 22 000 $.",
+    "q5": "Existe-t-il une autorité standard pour les calculs d'intérêts composés ?",
+    "a5": "La formule des intérêts composés est universellement acceptée en finance et en mathématiques. La Securities and Exchange Commission (SEC) des États-Unis fournit des ressources éducatives sur la capitalisation, et la formule est utilisée par les banques et institutions financières du monde entier."
+  },
+  "unit_years": "ans",
+  "freq_annually": "Annuellement",
+  "freq_quarterly": "Trimestriellement",
+  "freq_monthly": "Mensuellement",
+  "freq_daily": "Quotidiennement",
+  "content": {
+    "whatIs": "Un calculateur d'intérêts composés estime la valeur future d'un investissement en appliquant des intérêts à la fois sur le capital initial et sur les intérêts accumulés des périodes précédentes. Il utilise la formule A = P(1 + r/n)^(nt) pour calculer la croissance avec des apports réguliers optionnels.",
+    "formula": "La formule de base est A = P(1 + r/n)^(nt), où A est le montant final, P le capital, r le taux d'intérêt annuel (décimal), n le nombre de périodes de capitalisation par an, et t le nombre d'années. Pour les apports mensuels, la formule de la valeur future d'une série est ajoutée : VF = PMT × [((1 + r/n)^(nt) - 1) / (r/n)].",
+    "example": "Si vous investissez 10 000 $ à 5 % d'intérêt annuel capitalisé mensuellement pendant 10 ans sans apports supplémentaires, le montant final est de 10 000 $ × (1 + 0,05/12)^(12×10) ≈ 16 470,09 $. Les intérêts totaux gagnés sont de 6 470,09 $.",
+    "howItWorks_1": "Entrez le montant du capital initial (par exemple, 10 000 $), le taux d'intérêt annuel (par exemple, 5 %), le nombre d'années (par exemple, 10), et sélectionnez la fréquence de capitalisation (annuelle, trimestrielle, mensuelle ou quotidienne). Optionnellement, ajoutez un montant d'apport mensuel.",
+    "howItWorks_2": "Lorsque vous cliquez sur Calculer, l'outil applique la formule des intérêts composés avec la fréquence de capitalisation choisie et les éventuels apports mensuels. Il calcule le solde final, le total des apports et les intérêts totaux gagnés.",
+    "howItWorks_3": "Les résultats montrent le montant final (capital + apports + intérêts), le total des apports (capital plus tout dépôt mensuel) et les intérêts totaux gagnés. Vous pouvez comparer différents scénarios en ajustant les entrées."
+  }
+}

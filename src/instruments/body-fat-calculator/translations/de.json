@@ -1,0 +1,39 @@
+{
+  "title": "Körperfettrechner — Schätzen Sie Ihren Körperfettanteil",
+  "description": "Berechnen Sie den Körperfettanteil mit der US-Navy-Methode. Geben Sie Hals-, Taillen- und Hüftumfang für eine genaue Körperzusammensetzungsschätzung ein.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_height": "Größe",
+  "label_neck": "Halsumfang",
+  "label_waist": "Taillenumfang",
+  "label_hip": "Hüftumfang (nur Frauen)",
+  "label_sex": "Geschlecht",
+  "label_bodyFat": "Körperfett",
+  "label_fatMass": "Fettmasse",
+  "label_leanMass": "Magergewicht",
+  "label_category": "Kategorie",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie unterscheidet sich die US-Navy-Methode von anderen Körperfettmessverfahren?",
+    "a1": "Die US-Navy-Methode verwendet einfache Umfangsmessungen (Hals, Taille, Hüfte) und die Körpergröße, was sie bequem und nicht-invasiv macht. Sie schätzt die Körperdichte über Regressionsgleichungen und wandelt diese in den Körperfettanteil um. Sie ist weniger genau als DEXA oder hydrostatisches Wiegen, aber zugänglicher und wiederholbar.",
+    "q2": "Was bedeuten die Körperfettkategorien (Essentiell, Athlet, Fitness, Durchschnitt, Übergewichtig)?",
+    "a2": "Die Kategorien basieren auf Standardbereichen: Essentielles Fett (2-5% Männer, 10-13% Frauen), Athlet (6-13% Männer, 14-20% Frauen), Fitness (14-17% Männer, 21-24% Frauen), Durchschnitt (18-24% Männer, 25-31% Frauen), Übergewichtig (25%+ Männer, 32%+ Frauen). Dies sind allgemeine Richtlinien; die individuelle Gesundheit hängt von vielen Faktoren ab.",
+    "q3": "Wann sollte ich diesen Rechner verwenden und welche Einschränkungen gibt es?",
+    "a3": "Verwenden Sie diesen Rechner für eine schnelle, nicht-invasive Schätzung des Körperfettanteils, z.B. zur Verfolgung von Veränderungen im Laufe der Zeit. Einschränkungen: Die Genauigkeit hängt von präziser Messtechnik ab; er kann für sehr muskulöse Personen oder Personen mit ungewöhnlichen Körperformen ungenau sein. Er geht von einer bestimmten Körperdichteverteilung aus.",
+    "q4": "Was bedeuten 'Fettmasse' und 'Magergewicht' im Ergebnis?",
+    "a4": "Fettmasse ist das Gesamtgewicht des Körperfetts, berechnet als (Körperfettanteil / 100) * Gesamtkörpergewicht. Magergewicht ist alles andere: Muskeln, Knochen, Organe, Wasser, berechnet als Gesamtgewicht minus Fettmasse. Diese helfen Ihnen, Ihre Körperzusammensetzung über den Prozentsatz hinaus zu verstehen.",
+    "q5": "Auf welcher Autorität oder Norm basiert die US-Navy-Methode?",
+    "a5": "Die US-Navy-Methode wurde von der US-Marine entwickelt und basiert auf Forschungen von Hodgdon und Beckett (1984). Sie wird häufig beim Militär und bei Fitnesstests eingesetzt. Die verwendete Brozek-Formel ist eine Standardgleichung zur Schätzung des Körperfetts aus der Dichte."
+  },
+  "opt_male": "Männlich",
+  "opt_female": "Weiblich",
+  "content": {
+    "whatIs": "Dieser Körperfettrechner schätzt Ihren Körperfettanteil mit der US-Navy-Umfangsmethode. Er verwendet Hals-, Taillen- und Hüftumfang (bei Frauen) sowie die Körpergröße, um die Körperdichte zu schätzen, und wandelt diese dann mit der Brozek-Formel in den Körperfettanteil um.",
+    "formula": "Für Männer: Körperdichte = 1,0323 - 0,154 * log10(Taille - Hals) + 0,025 * log10(Größe). Für Frauen: Körperdichte = 1,29579 - 0,35004 * log10(Taille + Hüfte - Hals) + 0,221 * log10(Größe). Körperfettanteil = (4,95 / Körperdichte - 4,50) * 100. Alle Maße in cm.",
+    "example": "Ein 180 cm großer Mann mit Halsumfang 40 cm und Taillenumfang 85 cm: Körperdichte = 1,0323 - 0,154 * log10(85-40) + 0,025 * log10(180) = 1,0323 - 0,154 * 1,6532 + 0,025 * 2,2553 = 1,0323 - 0,2546 + 0,0564 = 0,8341. Körperfettanteil = (4,95/0,8341 - 4,50)*100 = (5,934 - 4,50)*100 = 14,34%.",
+    "howItWorks_1": "Geben Sie Ihre Größe, Ihren Halsumfang, Taillenumfang und bei Frauen den Hüftumfang ein. Wählen Sie Ihr Geschlecht aus dem Dropdown-Menü.",
+    "howItWorks_2": "Wenn Sie auf Berechnen klicken, wendet das Tool die US-Navy-Formel an, um die Körperdichte zu berechnen, und wandelt diese dann in den Körperfettanteil um. Es berechnet auch Fettmasse und Magergewicht basierend auf Ihrem Gewicht (falls angegeben) oder verwendet ein geschätztes Gewicht aus der Größe.",
+    "howItWorks_3": "Die Ergebnisse zeigen Ihren Körperfettanteil, Fettmasse, Magergewicht und eine Kategorie (z.B. Essentiell, Athlet, Fitness, Durchschnitt, Übergewichtig) basierend auf Standardbereichen. Verwenden Sie die Kategorie, um Ihre Körperzusammensetzung im Verhältnis zu Gesundheitsnormen zu bewerten."
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Percentage Calculator — 4 Modes, Free & Instant",
+    "description": "Four percentage calculators in one: find % of a number, calculate % change, determine what % X is of Y, or adjust a value by any percentage. Free."
+  },
+  "form": {
+    "title": "Percentage Calculator",
+    "mode_label": "Calculation type",
+    "mode_percent_of": "What is X% of Y?",
+    "mode_is_what_percent": "X is what % of Y?",
+    "mode_percent_change": "% change from X to Y?",
+    "mode_percent_adjust": "Increase / Decrease X by Y%",
+    "field_a_label": "X (first value)",
+    "field_b_label": "Y (second value)",
+    "direction_label": "Direction",
+    "direction_increase": "Increase",
+    "direction_decrease": "Decrease",
+    "field_a_placeholder": "e.g. 25",
+    "field_b_placeholder": "e.g. 200",
+    "calculate_button": "Calculate",
+    "reset_button": "Reset"
+  },
+  "validation": {
+    "mode_required": "Please select a calculation type.",
+    "invalid_mode": "Unknown calculation type.",
+    "a_required": "Please enter a value for X.",
+    "b_required": "Please enter a value for Y.",
+    "too_high": "Value must be at most 1,000,000,000.",
+    "invalid_number": "Please enter a valid number (e.g. 42 or 3.14).",
+    "unknown": "Invalid input."
+  },
+  "result": {
+    "title": "Result",
+    "percent_of_label": "is X% of Y",
+    "is_what_percent_label": "% of Y",
+    "percent_change_label": "change",
+    "percent_adjust_label": "after adjustment"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How do I calculate a percentage of a number?",
+    "a1": "Use the 'percent-of' mode. For example, to find 20% of 150, set a=20, b=150. The formula is (20/100)*150 = 30. The result is 30.",
+    "q2": "What does the 'isIncrease' output mean in percentage change mode?",
+    "a2": "In 'percent-change' mode, isIncrease is true if the percentage change is positive (i.e., Y > X), meaning an increase. If false, the change is a decrease. For example, from 100 to 120 gives a 20% increase (isIncrease: true).",
+    "q3": "When should I use the 'percent-adjust' mode?",
+    "a3": "Use 'percent-adjust' to increase or decrease a number by a given percentage. For instance, to increase 200 by 10%, set mode to 'percent-adjust', a=10, b=200, direction='increase'. The result is 220. For a 10% decrease, set direction='decrease' to get 180.",
+    "q4": "What does the 'roundedResult' field show?",
+    "a4": "The 'roundedResult' is the raw result rounded to two decimal places. For example, if the raw result is 33.3333..., the rounded result is 33.33. This is useful for reporting or financial calculations where two decimal places are standard.",
+    "q5": "Is there an official standard for percentage calculations?",
+    "a5": "Percentage calculations follow basic arithmetic rules defined in mathematics, not a specific regulatory standard. However, in finance, the SEC and IRS provide guidelines for percentage-based disclosures and tax calculations. The formulas used here are universally accepted."
+  },
+  "aria": {
+    "result_announcement": "Result: {value}. {summary}.",
+    "form_description": "Select a calculation mode and enter values to compute a percentage.",
+    "loading": "Calculating..."
+  },
+  "content": {
+    "whatIs": "This percentage calculator computes four common percentage scenarios: what is X% of Y, what percent is X of Y, percentage change from X to Y, and percentage increase or decrease of Y by X%. The underlying concept is that a percentage represents a fraction of 100, allowing proportional comparisons between values.",
+    "formula": "For 'percent of': result = (X/100) * Y. For 'is what percent': result = (X/Y) * 100. For 'percent change': result = ((Y - X) / X) * 100. For 'percent adjust': result = Y * (1 ± X/100), where + is increase and - is decrease.",
+    "example": "To find 15% of 200, set mode to 'percent-of', a=15, b=200. The result is 30. To find what percent 30 is of 200, set mode to 'is-what-percent', a=30, b=200; result is 15%.",
+    "howItWorks_1": "Select the calculation mode from the dropdown: 'percent-of', 'is-what-percent', 'percent-change', or 'percent-adjust'. Then enter the first value (X) and second value (Y) in the number fields.",
+    "howItWorks_2": "Click the Calculate button. The calculator applies the appropriate formula based on the selected mode and computes the result, rounding it to two decimal places.",
+    "howItWorks_3": "The output shows the raw result and the rounded result. For 'percent-change' mode, it also indicates whether the change is an increase (positive) or decrease (negative). Use the rounded result for practical purposes."
+  }
+}

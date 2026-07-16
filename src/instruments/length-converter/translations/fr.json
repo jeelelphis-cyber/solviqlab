@@ -1,0 +1,36 @@
+{
+  "title": "Convertisseur de longueur — Convertir n'importe quelle unité de longueur",
+  "description": "Convertissez entre mètres, pieds, pouces, centimètres, kilomètres, miles et plus encore. Convertisseur instantané d'unités de longueur avec plus de 15 unités.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_value": "Valeur",
+  "label_fromUnit": "De",
+  "label_meters": "Mètres",
+  "label_kilometers": "Kilomètres",
+  "label_centimeters": "Centimètres",
+  "label_feet": "Pieds",
+  "label_inches": "Pouces",
+  "label_miles": "Miles",
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Comment le mètre est-il défini et pourquoi est-il l'unité de base pour les conversions de longueur ?",
+    "a1": "Le mètre est l'unité de base de longueur dans le Système international d'unités (SI), défini comme la distance parcourue par la lumière dans le vide en 1/299 792 458 de seconde. Toutes les autres unités de longueur du convertisseur sont dérivées du mètre à l'aide de facteurs de conversion fixes, garantissant cohérence et précision.",
+    "q2": "Que représente la valeur de sortie en 'Miles' ?",
+    "a2": "La sortie 'Miles' affiche la longueur équivalente en miles terrestres, où 1 mile équivaut exactement à 1609,344 mètres. Par exemple, 1 kilomètre équivaut à environ 0,621371 mile. Cette unité est couramment utilisée aux États-Unis et au Royaume-Uni pour les distances routières.",
+    "q3": "Ce convertisseur de longueur peut-il gérer des valeurs très grandes ou très petites ?",
+    "a3": "Oui, le convertisseur accepte des valeurs de 0 à 1 000 000 000 000 000 (10^15). Cependant, pour des valeurs extrêmement grandes (par exemple, distances astronomiques), des unités comme les années-lumière ou les parsecs sont plus appropriées, mais ne sont pas incluses dans cet outil. Pour les très petites valeurs (par exemple, échelles atomiques), les nanomètres et les micromètres sont disponibles.",
+    "q4": "Que signifie la sortie 'Pieds' et comment est-elle calculée ?",
+    "a4": "La sortie 'Pieds' affiche la longueur en pieds, où 1 pied équivaut exactement à 0,3048 mètre. Par exemple, 1 mètre équivaut à environ 3,28084 pieds. Cette unité est largement utilisée aux États-Unis pour mesurer la hauteur, les courtes distances et dans l'aviation.",
+    "q5": "Quelle est la norme officielle pour les facteurs de conversion utilisés dans ce calculateur ?",
+    "a5": "Les facteurs de conversion sont basés sur le Système international d'unités (SI) et l'accord international du yard et de la livre de 1959. Par exemple, 1 pouce est défini comme exactement 25,4 mm, et 1 pied comme 0,3048 m. Ces normes sont maintenues par le Bureau international des poids et mesures (BIPM)."
+  },
+  "content": {
+    "whatIs": "Un convertisseur de longueur est un outil qui convertit une mesure d'une unité de longueur à une autre, par exemple des mètres en pieds ou des kilomètres en miles. Il utilise des facteurs de conversion basés sur le Système international d'unités (SI) et d'autres définitions standard pour fournir des résultats précis sur plus de 15 unités.",
+    "formula": "La conversion s'effectue en multipliant la valeur d'entrée par le facteur de conversion approprié. Par exemple, pour convertir des mètres en pieds, multipliez par 3,28084 (car 1 m = 3,28084 pi). La formule générale est : résultat = valeur * (facteur_unité_cible / facteur_unité_source), où chaque unité a un facteur prédéfini par rapport au mètre.",
+    "example": "Convertissez 5 kilomètres en miles. Puisque 1 km = 0,621371 mile, multipliez 5 par 0,621371 pour obtenir 3,10686 miles. Le convertisseur affiche également l'équivalent en mètres (5000 m), centimètres (500 000 cm), pieds (16404,2 pi) et pouces (196850,4 po).",
+    "howItWorks_1": "Entrez la valeur numérique à convertir dans le champ 'valeur'. Sélectionnez ensuite l'unité de cette valeur dans le menu déroulant 'de' (par exemple, 'km' pour kilomètres).",
+    "howItWorks_2": "Après avoir cliqué sur le bouton Calculer, l'outil applique la formule de conversion en utilisant l'unité source sélectionnée et les facteurs de conversion prédéfinis pour calculer les longueurs équivalentes dans toutes les unités de sortie.",
+    "howItWorks_3": "Les résultats sont affichés dans un tableau montrant chaque unité de sortie (Mètres, Kilomètres, Centimètres, Pieds, Pouces, Miles) avec la valeur numérique convertie. Vous pouvez utiliser ces valeurs directement pour vos calculs ou conversions ultérieures."
+  }
+}

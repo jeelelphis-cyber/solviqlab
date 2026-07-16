@@ -1,0 +1,39 @@
+{
+  "title": "Calculadora de Aposentadoria — Projeção de Poupança e Estimativa de Renda Mensal",
+  "description": "Projete sua poupança para a aposentadoria com crescimento composto e contribuições mensais. Estime a renda mensal usando a regra dos 4% e veja o valor real em dólares de hoje.",
+  "calculate": "Calcular",
+  "reset": "Redefinir",
+  "result": "Resultado",
+  "label_currentAge": "Idade Atual",
+  "label_retirementAge": "Idade de Aposentadoria",
+  "label_currentSavings": "Poupança Atual",
+  "label_monthlyContribution": "Contribuição Mensal",
+  "label_annualReturn": "Retorno Anual Esperado",
+  "label_inflationRate": "Taxa de Inflação Esperada",
+  "label_projectedSavings": "Poupança Projetada",
+  "label_totalContributions": "Total de Contribuições",
+  "label_totalGrowth": "Crescimento do Investimento",
+  "label_monthlyIncomeEstimate": "Renda Mensal Estimada",
+  "label_realValueToday": "Valor Real (Dólares de Hoje)",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "O que é a regra dos 4% para renda de aposentadoria?",
+    "a1": "A regra dos 4%, popularizada pelo Trinity Study, sugere retirar 4% do seu portfólio de aposentadoria por ano para fazê-lo durar pelo menos 30 anos. A estimativa de renda mensal nesta calculadora é poupançaProjetada × 0,04 / 12. Para um portfólio de $1.000.000, isso dá $40.000/ano ou $3.333/mês. A regra assume um portfólio diversificado de ações/títulos com retornos históricos de mercado.",
+    "q2": "Qual taxa de retorno anual devo usar?",
+    "a2": "Uma suposição comum para um portfólio diversificado de ações/títulos dos EUA é um retorno nominal de 6–8%. O S&P 500 teve uma média de cerca de 10% nominal e 7% real (ajustado pela inflação) historicamente. Esta calculadora usa como padrão 7%, que é uma estimativa conservadora para um portfólio misto. Para portfólios com muitos títulos, use 4–5%.",
+    "q3": "O que significa 'Valor Real em Dólares de Hoje'?",
+    "a3": "O valor real ajusta a poupança projetada pela inflação para mostrar o poder de compra real do seu pé-de-meia. É calculado como poupançaProjetada / (1 + taxaDeInflação/100)^anos. Com inflação de 3% ao longo de 30 anos, $1M em dólares futuros equivale a cerca de $412.000 hoje.",
+    "q4": "Como as contribuições mensais são compostas?",
+    "a4": "As contribuições mensais são tratadas como uma anuidade ordinária — cada pagamento rende juros a partir do momento em que é feito. A fórmula é VF = contribuição × ((1+r)^n − 1) / r, onde r é a taxa mensal (retornoAnual/12/100) e n é o total de meses. Isso modela com precisão a média do custo em dólar em uma conta de investimento.",
+    "q5": "Isso inclui renda da Previdência Social ou pensão?",
+    "a5": "Não. Esta calculadora projeta apenas o crescimento da poupança a partir de suas contribuições pessoais e poupança existente. Benefícios da Previdência Social, renda de pensão ou outras fontes de renda não estão incluídos. Para uma imagem completa da renda de aposentadoria, adicione os pagamentos esperados da Previdência Social à estimativa de renda mensal mostrada aqui."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de aposentadoria projeta quanto sua poupança crescerá até a aposentadoria usando juros compostos sobre a poupança existente mais contribuições mensais. Ela aplica a regra de retirada segura de 4% para estimar a renda mensal de aposentadoria e ajusta pela inflação para mostrar o valor real em dólares de hoje.",
+    "formula": "VF_principal = poupançaAtual × (1 + r)^n\nVF_contribuições = contribuiçãoMensal × ((1+r)^n − 1) / r\nPoupança Projetada = VF_principal + VF_contribuições\nRenda Mensal = Poupança Projetada × 0,04 / 12\nValor Real = Poupança Projetada / (1 + inflação)^anos",
+    "example": "Idade 30, aposentando-se aos 65, $50.000 economizados, contribuição de $500/mês, retorno de 7%, inflação de 3%: 35 anos × 12 = 420 meses. Taxa mensal = 0,5833%. Projetado ≈ $1.298.635. Renda mensal ≈ $4.329. Valor real hoje ≈ $460.000.",
+    "howItWorks_1": "Insira sua idade atual, idade alvo de aposentadoria, poupança atual e valor da contribuição mensal.",
+    "howItWorks_2": "Ajuste o retorno anual esperado (padrão 7%) e a taxa de inflação (padrão 3%) conforme necessário.",
+    "howItWorks_3": "Clique em Calcular para ver sua poupança projetada para aposentadoria, crescimento total, renda mensal estimada e o valor real ajustado pela inflação."
+  }
+}

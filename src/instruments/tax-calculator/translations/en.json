@@ -1,0 +1,40 @@
+{
+  "title": "Tax Calculator — US Federal Income Tax 2024",
+  "description": "Calculate your 2024 US federal income tax, effective tax rate, marginal rate, and take-home pay based on your filing status and income.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_income": "Gross Annual Income",
+  "label_filingStatus": "Filing Status",
+  "label_federalTax": "Federal Tax",
+  "label_effectiveRate": "Effective Tax Rate",
+  "label_marginalRate": "Marginal Rate",
+  "label_takeHomePay": "Take-Home Pay",
+  "label_standardDeduction": "Standard Deduction",
+  "label_taxableIncome": "Taxable Income",
+  "opt_single": "Single",
+  "opt_married_jointly": "Married Filing Jointly",
+  "opt_head_of_household": "Head of Household",
+  "ymyl_disclaimer": "This calculator provides estimates based on 2024 federal tax brackets. It does not account for state taxes, FICA, credits, or itemized deductions. Consult a tax professional for advice.",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "What is the difference between effective tax rate and marginal rate?",
+    "a1": "The marginal tax rate is the rate applied to the last dollar of your taxable income — the highest bracket you reach. The effective tax rate is the average rate paid across your entire income. Because the US uses progressive brackets, most people pay a lower effective rate than their marginal rate. For example, a single filer with $80,000 income has a 22% marginal rate but an effective rate of about 12.7%.",
+    "q2": "What is the 2024 standard deduction?",
+    "a2": "For tax year 2024, the IRS standard deductions are: $14,600 for Single filers, $29,200 for Married Filing Jointly, and $21,900 for Head of Household. This amount is subtracted from gross income before applying tax brackets. You should itemize deductions only if they exceed the standard deduction for your filing status.",
+    "q3": "Does this calculator include FICA taxes (Social Security and Medicare)?",
+    "a3": "No. This calculator only covers federal income tax using the 2024 IRS tax brackets and standard deductions. It does not include Social Security (6.2% up to $168,600) or Medicare (1.45%) taxes, state income taxes, local taxes, or any tax credits. Your actual take-home pay will be lower after those deductions.",
+    "q4": "When should I choose 'Head of Household' filing status?",
+    "a4": "You may file as Head of Household if you are unmarried or considered unmarried, paid more than half the cost of keeping a home, and had a qualifying dependent live with you for more than half the year. HOH provides a larger standard deduction ($21,900) and more favorable brackets than single filers.",
+    "q5": "What are the 2024 federal tax brackets for a single filer?",
+    "a5": "For single filers in 2024 (applied to taxable income after the $14,600 standard deduction): 10% on the first $11,600; 12% on $11,601–$47,150; 22% on $47,151–$100,525; 24% on $100,526–$191,950; 32% on $191,951–$243,725; 35% on $243,726–$609,350; 37% above $609,350."
+  },
+  "content": {
+    "whatIs": "This US federal income tax calculator uses 2024 IRS tax brackets and standard deductions to estimate your federal tax liability, effective rate, and take-home pay. It supports all three main filing statuses.",
+    "formula": "Taxable Income = max(0, Gross Income − Standard Deduction)\nFederal Tax = sum of income in each bracket × bracket rate\nEffective Rate = Federal Tax / Gross Income × 100\nTake-Home Pay = Gross Income − Federal Tax",
+    "example": "A single filer earning $75,000: Standard deduction $14,600 → Taxable income $60,400. Tax = $1,160 (10%) + $4,266 (12%) + $2,915.50 (22%) = $8,341.50. Effective rate ≈ 11.1%. Take-home: $66,658.50.",
+    "howItWorks_1": "Enter your gross annual income and select your federal filing status (Single, Married Filing Jointly, or Head of Household).",
+    "howItWorks_2": "Click Calculate. The calculator applies the 2024 standard deduction and progressive tax brackets to compute your federal tax.",
+    "howItWorks_3": "Review your results: federal tax owed, effective rate, marginal rate, standard deduction applied, taxable income, and estimated take-home pay."
+  }
+}

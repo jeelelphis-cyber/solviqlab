@@ -1,0 +1,35 @@
+{
+  "title": "Calculadora de Promedio — Media, Mediana, Moda y Más",
+  "description": "Calcula la media, mediana, moda, rango y desviación estándar de cualquier lista de números. Estadísticas instantáneas para estudiantes y profesionales.",
+  "calculate": "Calcular",
+  "reset": "Reiniciar",
+  "result": "Resultado",
+  "label_numbers": "Números (separados por comas)",
+  "label_mean": "Media (Promedio)",
+  "label_median": "Mediana",
+  "label_mode": "Moda",
+  "label_range": "Rango",
+  "label_count": "Conteo",
+  "label_sum": "Suma",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cuál es la diferencia entre media y mediana?",
+    "a1": "La media es el promedio aritmético, sensible a valores atípicos. La mediana es el valor medio cuando los datos están ordenados, robusta a valores extremos. Por ejemplo, en {1,2,3,100}, media = 26.5, mediana = 2.5.",
+    "q2": "¿Cómo se calcula la moda si ningún número se repite?",
+    "a2": "Si ningún número aparece más de una vez, el conjunto de datos no tiene moda. Algunas calculadoras pueden reportar 'sin moda' o listar todos los valores. Nuestra calculadora devuelve el(los) valor(es) más frecuente(s); si todos son únicos, la moda no está definida.",
+    "q3": "¿Cuándo debo usar la mediana en lugar de la media?",
+    "a3": "Use la mediana para distribuciones asimétricas o cuando hay valores atípicos, como datos de ingresos. La media es apropiada para distribuciones simétricas sin valores extremos. La mediana representa mejor un valor típico en datos asimétricos.",
+    "q4": "¿Qué me dice el rango sobre mis datos?",
+    "a4": "Rango = máximo - mínimo. Mide la dispersión total de los datos. Un rango grande indica alta variabilidad, mientras que un rango pequeño sugiere que los puntos de datos están cercanos entre sí. Sin embargo, el rango es sensible a valores atípicos.",
+    "q5": "¿Existe una referencia estándar para calcular la media y la mediana?",
+    "a5": "Sí, las fórmulas siguen definiciones estadísticas estándar según ISO 3534-1 y la Asociación Estadounidense de Estadística. La media y la mediana son estadísticas descriptivas fundamentales utilizadas universalmente en el análisis de datos."
+  },
+  "content": {
+    "whatIs": "La calculadora de promedio computa la media, mediana, moda, rango, conteo y suma de una lista de números. La media es el promedio aritmético, calculado sumando todos los números y dividiendo por el conteo. Proporciona una instantánea rápida de la tendencia central y la dispersión.",
+    "formula": "Media = (suma de todos los números) / (conteo de números). La mediana es el valor medio cuando los números están ordenados; si el conteo es par, mediana = promedio de los dos números centrales. La moda es el(los) valor(es) más frecuente(s). Rango = máximo - mínimo. La desviación estándar (si se incluye) mide la dispersión.",
+    "example": "Para los números 2, 4, 4, 6, 8: suma = 24, conteo = 5, media = 24/5 = 4.8. Ordenados: 2,4,4,6,8, mediana = 4 (tercer valor). Moda = 4 (aparece dos veces). Rango = 8-2 = 6.",
+    "howItWorks_1": "Ingrese su lista de números en el campo de entrada, separados por comas o espacios. Cada número puede ser positivo, negativo o decimal.",
+    "howItWorks_2": "Haga clic en el botón Calcular. La herramienta procesa sus números: los cuenta, los suma, los ordena para la mediana y la moda, y calcula el rango y la desviación estándar.",
+    "howItWorks_3": "Revise los resultados: Media (promedio), Mediana (valor medio), Moda (más frecuente), Rango (dispersión), Conteo (número de entradas) y Suma (total). Úselos para entender la tendencia central y la variabilidad de sus datos."
+  }
+}

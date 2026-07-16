@@ -1,0 +1,40 @@
+{
+  "title": "Calculateur d'impôt — Impôt fédéral américain sur le revenu 2024",
+  "description": "Calculez votre impôt fédéral américain sur le revenu 2024, votre taux d'imposition effectif, votre taux marginal et votre salaire net en fonction de votre statut de déclaration et de vos revenus.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_income": "Revenu annuel brut",
+  "label_filingStatus": "Statut de déclaration",
+  "label_federalTax": "Impôt fédéral",
+  "label_effectiveRate": "Taux d'imposition effectif",
+  "label_marginalRate": "Taux marginal",
+  "label_takeHomePay": "Salaire net",
+  "label_standardDeduction": "Déduction forfaitaire",
+  "label_taxableIncome": "Revenu imposable",
+  "opt_single": "Célibataire",
+  "opt_married_jointly": "Marié déclarant conjointement",
+  "opt_head_of_household": "Chef de famille",
+  "ymyl_disclaimer": "Ce calculateur fournit des estimations basées sur les tranches d'imposition fédérales de 2024. Il ne tient pas compte des impôts d'État, de la FICA, des crédits ou des déductions détaillées. Consultez un professionnel de la fiscalité pour obtenir des conseils.",
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "q1": "Quelle est la différence entre le taux d'imposition effectif et le taux marginal ?",
+    "a1": "Le taux marginal d'imposition est le taux appliqué au dernier dollar de votre revenu imposable — la tranche la plus élevée que vous atteignez. Le taux effectif est le taux moyen payé sur l'ensemble de votre revenu. En raison des tranches progressives aux États-Unis, la plupart des gens paient un taux effectif inférieur à leur taux marginal. Par exemple, un déclarant célibataire avec un revenu de 80 000 $ a un taux marginal de 22 % mais un taux effectif d'environ 12,7 %.",
+    "q2": "Quelle est la déduction forfaitaire pour 2024 ?",
+    "a2": "Pour l'année d'imposition 2024, les déductions forfaitaires de l'IRS sont : 14 600 $ pour les déclarants célibataires, 29 200 $ pour les mariés déclarant conjointement et 21 900 $ pour les chefs de famille. Ce montant est soustrait du revenu brut avant d'appliquer les tranches d'imposition. Vous ne devez détailler les déductions que si elles dépassent la déduction forfaitaire pour votre statut de déclaration.",
+    "q3": "Ce calculateur inclut-il les taxes FICA (Sécurité sociale et Medicare) ?",
+    "a3": "Non. Ce calculateur ne couvre que l'impôt fédéral sur le revenu en utilisant les tranches d'imposition de l'IRS 2024 et les déductions forfaitaires. Il n'inclut pas les taxes de Sécurité sociale (6,2 % jusqu'à 168 600 $) ou Medicare (1,45 %), les impôts sur le revenu des États, les impôts locaux ou les crédits d'impôt. Votre salaire net réel sera inférieur après ces déductions.",
+    "q4": "Quand dois-je choisir le statut de déclaration 'Chef de famille' ?",
+    "a4": "Vous pouvez déclarer en tant que chef de famille si vous êtes célibataire ou considéré comme célibataire, avez payé plus de la moitié des frais d'entretien d'un foyer et avez eu un dépendant qualifié vivant avec vous pendant plus de la moitié de l'année. Le statut HOH offre une déduction forfaitaire plus élevée (21 900 $) et des tranches plus favorables que les déclarants célibataires.",
+    "q5": "Quelles sont les tranches d'imposition fédérales 2024 pour un déclarant célibataire ?",
+    "a5": "Pour les déclarants célibataires en 2024 (appliquées au revenu imposable après la déduction forfaitaire de 14 600 $) : 10 % sur les premiers 11 600 $ ; 12 % sur 11 601 $–47 150 $ ; 22 % sur 47 151 $–100 525 $ ; 24 % sur 100 526 $–191 950 $ ; 32 % sur 191 951 $–243 725 $ ; 35 % sur 243 726 $–609 350 $ ; 37 % au-dessus de 609 350 $."
+  },
+  "content": {
+    "whatIs": "Ce calculateur d'impôt fédéral américain sur le revenu utilise les tranches d'imposition de l'IRS 2024 et les déductions forfaitaires pour estimer votre obligation fiscale fédérale, votre taux effectif et votre salaire net. Il prend en charge les trois principaux statuts de déclaration.",
+    "formula": "Revenu imposable = max(0, Revenu brut − Déduction forfaitaire)\nImpôt fédéral = somme des revenus dans chaque tranche × taux de la tranche\nTaux effectif = Impôt fédéral / Revenu brut × 100\nSalaire net = Revenu brut − Impôt fédéral",
+    "example": "Un déclarant célibataire gagnant 75 000 $ : Déduction forfaitaire 14 600 $ → Revenu imposable 60 400 $. Impôt = 1 160 $ (10 %) + 4 266 $ (12 %) + 2 915,50 $ (22 %) = 8 341,50 $. Taux effectif ≈ 11,1 %. Salaire net : 66 658,50 $.",
+    "howItWorks_1": "Entrez votre revenu annuel brut et sélectionnez votre statut de déclaration fédéral (Célibataire, Marié déclarant conjointement ou Chef de famille).",
+    "howItWorks_2": "Cliquez sur Calculer. Le calculateur applique la déduction forfaitaire 2024 et les tranches d'imposition progressives pour calculer votre impôt fédéral.",
+    "howItWorks_3": "Consultez vos résultats : impôt fédéral dû, taux effectif, taux marginal, déduction forfaitaire appliquée, revenu imposable et salaire net estimé."
+  }
+}

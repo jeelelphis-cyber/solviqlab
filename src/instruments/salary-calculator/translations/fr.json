@@ -1,0 +1,40 @@
+{
+  "title": "Calculateur de salaire — Convertisseur horaire en annuel",
+  "description": "Convertissez un salaire horaire en salaire annuel ou inversement. Calculez instantanément vos gains hebdomadaires, bimensuels, mensuels et annuels.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_salaryType": "Type de salaire",
+  "label_amount": "Montant",
+  "label_hoursPerWeek": "Heures par semaine",
+  "label_weeksPerYear": "Semaines par an",
+  "label_hourly": "Taux horaire",
+  "label_daily": "Taux journalier",
+  "label_weekly": "Salaire hebdomadaire",
+  "label_biweekly": "Salaire bimensuel",
+  "label_monthly": "Salaire mensuel",
+  "label_annual": "Salaire annuel",
+  "opt_hourly": "Horaire",
+  "opt_annual": "Annuel",
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Comment convertir un salaire horaire en salaire annuel ?",
+    "a1": "Multipliez votre taux horaire par le nombre d'heures travaillées par semaine, puis par le nombre de semaines travaillées par an. Pour une semaine standard de 40 heures et une année de 52 semaines : Annuel = Horaire × 40 × 52. Par exemple, 25 $/heure × 40 × 52 = 52 000 $ par an.",
+    "q2": "Comment est calculé le taux journalier ?",
+    "a2": "Le taux journalier est calculé en divisant le salaire annuel par 261 — le nombre approximatif de jours ouvrables dans une année (52 semaines × 5 jours). Pour un salaire de 52 000 $ : 52 000 $ / 261 ≈ 199,23 $ par jour. C'est une norme utilisée par les RH et les systèmes de paie aux États-Unis.",
+    "q3": "Quelle est la différence entre un paiement bimensuel et semi-mensuel ?",
+    "a3": "Le paiement bimensuel a lieu toutes les deux semaines — 26 périodes de paie par an. Le paiement semi-mensuel a lieu deux fois par mois — 24 périodes de paie par an. Ce calculateur utilise la norme bimensuelle (26 périodes). La différence compte pour la budgétisation : le bimensuel donne deux mois avec un chèque de paie supplémentaire chaque année.",
+    "q4": "Ce calculateur prend-il en compte les impôts ou les déductions ?",
+    "a4": "Non. Ce calculateur affiche uniquement les chiffres de salaire brut, avant tout impôt fédéral, étatique ou local, Sécurité sociale, Medicare, assurance maladie ou cotisations de retraite. Pour le salaire net après impôts fédéraux, utilisez le calculateur d'impôt.",
+    "q5": "Que faire si je travaille à temps partiel ou de façon saisonnière ?",
+    "a5": "Ajustez les champs 'Heures par semaine' et 'Semaines par an' en fonction de votre emploi du temps réel. Par exemple, un travailleur à temps partiel à 20 heures/semaine pendant 48 semaines gagnant 18 $/heure : 18 $ × 20 × 48 = 17 280 $ de salaire annuel."
+  },
+  "content": {
+    "whatIs": "Ce calculateur de salaire convertit entre salaire horaire et annuel et vous montre votre rémunération équivalente pour chaque période de paie courante : quotidienne, hebdomadaire, bimensuelle, mensuelle et annuelle.",
+    "formula": "Si horaire : Annuel = Montant × Heures/Semaine × Semaines/An\nSi annuel : Horaire = Montant / (Heures/Semaine × Semaines/An)\nMensuel = Annuel / 12\nBimensuel = Annuel / 26\nHebdomadaire = Annuel / 52\nQuotidien = Annuel / 261",
+    "example": "Un travailleur gagnant 25 $/heure à 40 heures/semaine pendant 52 semaines gagne 52 000 $/an. Cela correspond à 1 000 $/semaine, 2 000 $ bimensuel, 4 333,33 $/mois et 199,23 $/jour.",
+    "howItWorks_1": "Sélectionnez si vous connaissez votre taux horaire ou votre salaire annuel, puis saisissez le montant.",
+    "howItWorks_2": "Ajustez les heures par semaine (par défaut 40) et les semaines par an (par défaut 52) si votre emploi du temps diffère.",
+    "howItWorks_3": "Cliquez sur Calculer pour voir instantanément vos équivalents horaire, quotidien, hebdomadaire, bimensuel, mensuel et annuel."
+  }
+}

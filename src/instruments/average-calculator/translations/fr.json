@@ -1,0 +1,35 @@
+{
+  "title": "Calculateur de moyenne — Moyenne, Médiane, Mode et plus",
+  "description": "Calculez la moyenne, la médiane, le mode, l'étendue et l'écart type à partir de n'importe quelle liste de nombres. Statistiques instantanées pour étudiants et professionnels.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_numbers": "Nombres (séparés par des virgules)",
+  "label_mean": "Moyenne",
+  "label_median": "Médiane",
+  "label_mode": "Mode",
+  "label_range": "Étendue",
+  "label_count": "Nombre",
+  "label_sum": "Somme",
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "q1": "Quelle est la différence entre la moyenne et la médiane ?",
+    "a1": "La moyenne est la moyenne arithmétique, sensible aux valeurs aberrantes. La médiane est la valeur du milieu lorsque les données sont triées, robuste aux valeurs extrêmes. Par exemple, dans {1,2,3,100}, moyenne = 26,5, médiane = 2,5.",
+    "q2": "Comment le mode est-il calculé si aucun nombre ne se répète ?",
+    "a2": "Si aucun nombre n'apparaît plus d'une fois, l'ensemble de données n'a pas de mode. Certains calculateurs peuvent indiquer 'pas de mode' ou lister toutes les valeurs. Notre calculateur renvoie la ou les valeurs les plus fréquentes ; si toutes sont uniques, le mode est indéfini.",
+    "q3": "Quand dois-je utiliser la médiane plutôt que la moyenne ?",
+    "a3": "Utilisez la médiane pour les distributions asymétriques ou en présence de valeurs aberrantes, comme les données de revenus. La moyenne est appropriée pour les distributions symétriques sans valeurs extrêmes. La médiane représente mieux une valeur typique dans des données asymétriques.",
+    "q4": "Que m'indique l'étendue sur mes données ?",
+    "a4": "Étendue = maximum - minimum. Elle mesure la dispersion totale des données. Une grande étendue indique une variabilité élevée, tandis qu'une petite étendue suggère que les points de données sont proches les uns des autres. Cependant, l'étendue est sensible aux valeurs aberrantes.",
+    "q5": "Existe-t-il une référence standard pour le calcul de la moyenne et de la médiane ?",
+    "a5": "Oui, les formules suivent les définitions statistiques standard selon l'ISO 3534-1 et l'American Statistical Association. La moyenne et la médiane sont des statistiques descriptives fondamentales utilisées universellement dans l'analyse de données."
+  },
+  "content": {
+    "whatIs": "Le calculateur de moyenne calcule la moyenne, la médiane, le mode, l'étendue, le nombre et la somme d'une liste de nombres. La moyenne est la moyenne arithmétique, calculée en additionnant tous les nombres et en divisant par le nombre. Elle fournit un aperçu rapide de la tendance centrale et de la dispersion.",
+    "formula": "Moyenne = (somme de tous les nombres) / (nombre de nombres). La médiane est la valeur du milieu lorsque les nombres sont triés ; si le nombre est pair, la médiane = moyenne des deux nombres du milieu. Le mode est la ou les valeurs les plus fréquentes. Étendue = maximum - minimum. L'écart type (s'il est inclus) mesure la dispersion.",
+    "example": "Pour les nombres 2, 4, 4, 6, 8 : somme = 24, nombre = 5, moyenne = 24/5 = 4,8. Triés : 2,4,4,6,8, médiane = 4 (troisième valeur). Mode = 4 (apparaît deux fois). Étendue = 8-2 = 6.",
+    "howItWorks_1": "Entrez votre liste de nombres dans le champ de saisie, séparés par des virgules ou des espaces. Chaque nombre peut être positif, négatif ou décimal.",
+    "howItWorks_2": "Cliquez sur le bouton Calculer. L'outil traite vos nombres : il les compte, les additionne, les trie pour la médiane et le mode, et calcule l'étendue et l'écart type.",
+    "howItWorks_3": "Consultez les résultats : Moyenne, Médiane (valeur du milieu), Mode (le plus fréquent), Étendue (dispersion), Nombre (nombre d'entrées) et Somme (total). Utilisez-les pour comprendre la tendance centrale et la variabilité de vos données."
+  }
+}

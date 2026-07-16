@@ -1,0 +1,40 @@
+{
+  "title": "Calculateur de Déficit Calorique — Combien de Calories pour Perdre du Poids",
+  "description": "Calculez le déficit calorique exact nécessaire pour atteindre votre objectif de perte de poids. Basé sur la TDEE avec des recommandations de déficit sécuritaire de la part des nutritionnistes.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_currentWeight": "Poids Actuel",
+  "label_targetWeight": "Poids Cible",
+  "label_tdee": "Besoins Caloriques Quotidiens (TDEE)",
+  "label_weeklyLossGoal": "Objectif de Perte Hebdomadaire",
+  "label_dailyDeficit": "Déficit Calorique Quotidien",
+  "label_dailyTarget": "Apport Calorique Quotidien Cible",
+  "label_weeksToGoal": "Semaines pour Atteindre l'Objectif",
+  "label_totalDeficit": "Déficit Calorique Total Nécessaire",
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "q1": "Comment le chiffre de 7700 kcal par kg est-il dérivé ?",
+    "a1": "Le chiffre de 7700 kcal par kg est basé sur le contenu énergétique du tissu adipeux humain. Environ 1 kg de graisse corporelle contient environ 7700 kcal d'énergie. Cette valeur est largement utilisée dans les calculs de perte de poids et est soutenue par la recherche sur la composition corporelle.",
+    "q2": "Que signifie 'Apport Calorique Quotidien Cible' et comment l'utiliser ?",
+    "a2": "L'apport calorique quotidien cible est le nombre de calories que vous devez consommer chaque jour pour atteindre votre perte hebdomadaire souhaitée. Il correspond à votre TDEE moins le déficit quotidien. Par exemple, si votre TDEE est de 2500 kcal et le déficit de 500 kcal, votre cible est de 2000 kcal. Tenez-vous en à cet apport de manière cohérente pour de meilleurs résultats.",
+    "q3": "Quand dois-je utiliser ce calculateur et quelles sont ses limites ?",
+    "a3": "Utilisez ce calculateur lorsque vous avez un objectif de perte de poids spécifique et que vous connaissez votre TDEE. Les limites incluent le fait qu'il suppose que toute la perte de poids provient de la graisse, mais la perte réelle inclut l'eau et les muscles. De plus, le métabolisme individuel varie, donc les résultats sont des estimations. Consultez un professionnel pour des conseils personnalisés.",
+    "q4": "Que représente 'Semaines pour Atteindre l'Objectif' et est-ce précis ?",
+    "a4": "Semaines pour Atteindre l'Objectif estime le temps nécessaire pour atteindre votre poids cible si vous maintenez exactement le déficit quotidien. Il est calculé comme (poidsActuel - poidsCible) / objectifDePerteHebdomadaire. La précision dépend de l'adhésion au déficit et des adaptations métaboliques. C'est une ligne directrice, pas une garantie.",
+    "q5": "Quelle autorité recommande un taux de perte de poids hebdomadaire sécuritaire ?",
+    "a5": "Les Centers for Disease Control and Prevention (CDC) et les National Institutes of Health (NIH) recommandent un taux de perte de poids sécuritaire et durable de 0,5 à 1 kg (1 à 2 livres) par semaine. Ce taux minimise les risques pour la santé et favorise le succès à long terme."
+  },
+  "opt_loss_025": "0,25 kg/semaine — Doux",
+  "opt_loss_05": "0,5 kg/semaine — Modéré",
+  "opt_loss_075": "0,75 kg/semaine — Rapide",
+  "opt_loss_10": "1,0 kg/semaine — Agressif",
+  "content": {
+    "whatIs": "Un calculateur de déficit calorique détermine le déficit calorique quotidien nécessaire pour atteindre un objectif de perte de poids. Il utilise votre dépense énergétique totale quotidienne (TDEE) et un taux de perte hebdomadaire sécuritaire pour calculer la réduction nécessaire de l'apport calorique, assurant une perte de poids durable.",
+    "formula": "Le déficit quotidien est calculé comme suit : Déficit Quotidien = (objectifDePerteHebdomadaire * 7700) / 7, où 7700 kcal est le déficit énergétique approximatif nécessaire pour perdre 1 kg de graisse corporelle. L'apport calorique quotidien cible est alors : Apport Cible = TDEE - Déficit Quotidien. Le déficit total nécessaire = objectifDePerteHebdomadaire * 7700, et les semaines pour atteindre l'objectif = (poidsActuel - poidsCible) / objectifDePerteHebdomadaire.",
+    "example": "Pour une personne avec un poids actuel de 80 kg, un poids cible de 70 kg, une TDEE de 2500 kcal et un objectif de perte hebdomadaire de 0,5 kg : déficit quotidien = (0,5 * 7700) / 7 ≈ 550 kcal, apport cible = 2500 - 550 = 1950 kcal, déficit total = 0,5 * 7700 = 3850 kcal, semaines pour atteindre l'objectif = (80 - 70) / 0,5 = 20 semaines.",
+    "howItWorks_1": "Entrez votre poids actuel (kg), votre poids cible (kg) et votre dépense énergétique totale quotidienne (TDEE en kcal). Sélectionnez ensuite votre objectif de perte de poids hebdomadaire souhaité dans le menu déroulant (0,25, 0,5, 0,75 ou 1,0 kg par semaine).",
+    "howItWorks_2": "Cliquez sur Calculer. L'outil applique la formule du déficit calorique pour calculer votre déficit quotidien, votre apport calorique quotidien cible, le déficit total nécessaire et le nombre estimé de semaines pour atteindre votre objectif.",
+    "howItWorks_3": "Examinez les résultats : le Déficit Calorique Quotidien indique combien de calories réduire chaque jour ; l'Apport Calorique Quotidien Cible est votre nouvel apport quotidien ; les Semaines pour Atteindre l'Objectif estiment la durée ; le Déficit Calorique Total est le déficit cumulé nécessaire. Utilisez ces informations pour planifier votre régime et suivre vos progrès."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Ratio-Rechner — Verhältnisse vereinfachen & lösen",
+  "description": "Vereinfachen Sie Verhältnisse, lösen Sie Proportionen und skalieren Sie Rezepte oder Maße. Der schnellste Verhältnis-Rechner online mit schrittweisen Lösungen.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_a": "A",
+  "label_b": "B",
+  "label_c": "C (optional, löse nach D)",
+  "label_simplifiedA": "Vereinfachtes A",
+  "label_simplifiedB": "Vereinfachtes B",
+  "label_d": "D (falls C angegeben)",
+  "label_decimal": "A/B als Dezimalzahl",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie vereinfacht man ein Verhältnis wie 15:25?",
+    "a1": "Finden Sie den ggT von 15 und 25, der 5 ist. Teilen Sie beide Terme durch 5: 15/5 = 3, 25/5 = 5, also ist das vereinfachte Verhältnis 3:5.",
+    "q2": "Was bedeutet die Ausgabe 'D (falls C angegeben)'?",
+    "a2": "Wenn Sie einen Wert für c eingeben, löst der Rechner die Proportion a:b = c:d nach d durch Kreuzmultiplikation: d = (b * c) / a. Dies ergibt die vierte Proportionale.",
+    "q3": "Kann ich diesen Rechner zum Skalieren von Rezepten verwenden?",
+    "a3": "Ja. Wenn ein Rezept z.B. 2 Tassen Mehl zu 3 Tassen Zucker (2:3) verwendet und Sie 4 Tassen Mehl verwenden möchten, geben Sie a=2, b=3, c=4 ein, um zu finden, dass Sie d=6 Tassen Zucker benötigen.",
+    "q4": "Was stellt die Dezimalausgabe dar?",
+    "a4": "Die Dezimalzahl ist der Wert von a geteilt durch b. Bei einem Verhältnis 3:4 beträgt die Dezimalzahl 0,75, was bedeutet, dass a 75% von b ist. Dies ist nützlich zum Vergleichen von Mengen.",
+    "q5": "Gibt es einen offiziellen Standard zur Vereinfachung von Verhältnissen?",
+    "a5": "Die Vereinfachung von Verhältnissen folgt dem mathematischen Prinzip der Division durch den größten gemeinsamen Teiler (ggT), einer standardmäßigen arithmetischen Methode. Es gibt keine spezifische Regulierungsbehörde für die Vereinfachung von Verhältnissen."
+  },
+  "content": {
+    "whatIs": "Der Verhältnis-Rechner vereinfacht Verhältnisse auf ihre niedrigsten Terme, löst nach einem fehlenden Wert in einer Proportion (a:b = c:d) und berechnet das Dezimaläquivalent eines Verhältnisses. Er verwendet das Konzept äquivalenter Verhältnisse und Kreuzmultiplikation.",
+    "formula": "Um ein Verhältnis a:b zu vereinfachen, teilen Sie beide Terme durch ihren größten gemeinsamen Teiler (ggT). Um d in a:b = c:d zu finden, verwenden Sie Kreuzmultiplikation: d = (b * c) / a. Die Dezimalzahl ist a / b.",
+    "example": "Für Eingaben a=8, b=12, c=6 vereinfacht der Rechner 8:12 zu 2:3, findet d = (12*6)/8 = 9 und zeigt Dezimalzahl 8/12 = 0,6667.",
+    "howItWorks_1": "Geben Sie die Werte für a und b ein (erforderlich). Optional können Sie einen Wert für c eingeben, um nach d in der Proportion a:b = c:d zu lösen.",
+    "howItWorks_2": "Klicken Sie auf Berechnen. Das Werkzeug berechnet den ggT von a und b, um das Verhältnis zu vereinfachen, führt Kreuzmultiplikation durch, falls c angegeben ist, und teilt a durch b für die Dezimalzahl.",
+    "howItWorks_3": "Die Ergebnisse zeigen das vereinfachte Verhältnis (Vereinfachtes A : Vereinfachtes B), den fehlenden Wert D (falls c eingegeben wurde) und die Dezimaldarstellung von a/b."
+  }
+}

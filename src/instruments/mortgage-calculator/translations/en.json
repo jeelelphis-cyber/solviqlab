@@ -1,0 +1,37 @@
+{
+  "title": "Mortgage Calculator — Monthly Payment & Amortization",
+  "description": "Calculate your monthly mortgage payment, total interest, and amortization schedule. Includes property tax and insurance estimates.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_homePrice": "Home Price",
+  "label_downPayment": "Down Payment",
+  "label_annualRate": "Interest Rate",
+  "label_termYears": "Loan Term",
+  "label_monthlyPayment": "Monthly Payment",
+  "label_principal": "Loan Amount",
+  "label_totalInterest": "Total Interest",
+  "label_totalPayment": "Total Cost",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How is the monthly payment calculated for a fixed-rate mortgage?",
+    "a1": "The monthly payment is derived from the loan amount, monthly interest rate, and number of payments using the formula M = P * [r(1+r)^n] / [(1+r)^n - 1]. For example, a $240,000 loan at 6% annual (0.5% monthly) over 360 months yields a payment of $1,438.92.",
+    "q2": "What does total interest mean and how is it computed?",
+    "a2": "Total interest is the sum of all interest payments over the loan term. It equals total cost minus the loan amount. For a $240,000 loan at 6% over 30 years, total interest is $278,011.20, meaning you pay more in interest than the principal.",
+    "q3": "When should I use this mortgage calculator?",
+    "a3": "Use this calculator when comparing fixed-rate mortgage offers or planning a home purchase. It assumes a constant interest rate and equal payments; it does not account for variable rates, taxes, insurance, or HOA fees.",
+    "q4": "What does the loan amount output represent?",
+    "a4": "The loan amount (principal) is the home price minus your down payment. It is the amount you borrow from the lender. For example, a $300,000 home with $60,000 down gives a $240,000 loan amount.",
+    "q5": "What standard formula does this calculator use?",
+    "a5": "This calculator uses the standard amortization formula defined by the Consumer Financial Protection Bureau (CFPB) and widely adopted in the U.S. mortgage industry. The formula ensures equal monthly payments that fully amortize the loan over the chosen term."
+  },
+  "unit_years": "years",
+  "content": {
+    "whatIs": "This mortgage calculator estimates your monthly payment, total interest, and total cost for a fixed-rate mortgage. It uses the standard amortization formula to compute equal monthly payments over the loan term.",
+    "formula": "The monthly payment M is calculated using the formula M = P * [r(1+r)^n] / [(1+r)^n - 1], where P is the loan amount (home price minus down payment), r is the monthly interest rate (annual rate divided by 12), and n is the total number of monthly payments (term in years times 12). Total interest is the sum of all interest payments over the loan life.",
+    "example": "For a $300,000 home with a 20% down payment ($60,000), a 6% annual rate, and a 30-year term, the loan amount is $240,000. The monthly payment is $1,438.92, total interest is $278,011.20, and total cost is $518,011.20.",
+    "howItWorks_1": "Enter the home price, down payment amount, annual interest rate, and select the loan term in years from the dropdown.",
+    "howItWorks_2": "Click the Calculate button. The calculator computes the loan amount, then applies the amortization formula to determine the monthly payment, total interest, and total cost.",
+    "howItWorks_3": "Review the outputs: Monthly Payment is your fixed monthly amount, Loan Amount is the principal borrowed, Total Interest is the cumulative interest paid, and Total Cost is the sum of principal and interest over the full term."
+  }
+}

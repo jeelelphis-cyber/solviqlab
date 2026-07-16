@@ -1,0 +1,35 @@
+{
+  "title": "Calculadora de TMB — Taxa Metabólica Basal",
+  "description": "Calcule sua Taxa Metabólica Basal (TMB) usando a equação de Mifflin-St Jeor. Descubra quantas calorias seu corpo queima em repouso completo.",
+  "calculate": "Calcular",
+  "reset": "Redefinir",
+  "result": "Resultado",
+  "label_weight": "Peso",
+  "label_height": "Altura",
+  "label_age": "Idade",
+  "label_sex": "Sexo",
+  "label_bmr": "TMB",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Por que a equação de Mifflin-St Jeor usa fórmulas diferentes para homens e mulheres?",
+    "a1": "Homens geralmente têm mais massa muscular magra e taxas metabólicas mais altas que mulheres, então a equação adiciona 5 para homens e subtrai 161 para mulheres para levar em conta essas diferenças.",
+    "q2": "O que meu número de TMB significa para perda de peso?",
+    "a2": "Sua TMB é o mínimo de calorias necessárias para funções básicas. Para perder peso, você deve consumir menos calorias do que seu gasto energético total diário (TMB mais atividade), geralmente um déficit de 500-1000 kcal/dia para perda segura.",
+    "q3": "Posso usar esta calculadora de TMB se tiver menos de 15 ou mais de 100 anos?",
+    "a3": "A equação de Mifflin-St Jeor é validada para adultos de 19 a 100 anos. Para idades de 15 a 18 anos, ainda pode fornecer uma estimativa razoável, mas para crianças menores de 15 anos, outras equações (por exemplo, Schofield) são mais apropriadas.",
+    "q4": "O que significa 'kcal/dia' no resultado?",
+    "a4": "kcal/dia significa quilocalorias por dia, a unidade padrão para energia alimentar. Uma quilocaloria equivale a 1.000 calorias (c minúsculo). Representa a energia que seu corpo queima em um dia em repouso.",
+    "q5": "A equação de Mifflin-St Jeor é recomendada por autoridades de saúde?",
+    "a5": "Sim, a Academia de Nutrição e Dietética recomenda a equação de Mifflin-St Jeor como a mais precisa para estimar a TMB em indivíduos não obesos e obesos. É amplamente utilizada em ambientes clínicos."
+  },
+  "opt_male": "Masculino",
+  "opt_female": "Feminino",
+  "content": {
+    "whatIs": "Esta calculadora de TMB estima sua Taxa Metabólica Basal (TMB) usando a equação de Mifflin-St Jeor. TMB é o número de calorias que seu corpo queima em repouso completo para manter funções vitais como respiração e circulação.",
+    "formula": "Para homens: TMB = 10 × peso(kg) + 6,25 × altura(cm) - 5 × idade(a) + 5. Para mulheres: TMB = 10 × peso(kg) + 6,25 × altura(cm) - 5 × idade(a) - 161. O resultado está em kcal/dia.",
+    "example": "Um homem de 30 anos pesando 80 kg e 180 cm de altura: TMB = 10×80 + 6,25×180 - 5×30 + 5 = 800 + 1125 - 150 + 5 = 1780 kcal/dia. Isso significa que seu corpo queima cerca de 1780 calorias diariamente em repouso.",
+    "howItWorks_1": "Insira seu peso em quilogramas, altura em centímetros, idade em anos e selecione seu sexo (masculino ou feminino).",
+    "howItWorks_2": "Clique no botão Calcular. A calculadora aplica a equação de Mifflin-St Jeor para calcular sua TMB com base nas entradas.",
+    "howItWorks_3": "O resultado mostra sua TMB em kcal/dia. Use este número como base para as necessidades calóricas diárias; adicione calorias de atividade para estimar o gasto energético total."
+  }
+}

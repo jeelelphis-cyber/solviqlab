@@ -1,0 +1,40 @@
+{
+  "title": "Calculadora de Déficit Calórico — Cuántas Calorías para Perder Peso",
+  "description": "Calcula el déficit calórico exacto necesario para alcanzar tu objetivo de pérdida de peso. Basado en el TDEE con recomendaciones seguras de déficit de nutricionistas.",
+  "calculate": "Calcular",
+  "reset": "Reiniciar",
+  "result": "Resultado",
+  "label_currentWeight": "Peso Actual",
+  "label_targetWeight": "Peso Objetivo",
+  "label_tdee": "Necesidades Calóricas Diarias (TDEE)",
+  "label_weeklyLossGoal": "Objetivo de Pérdida Semanal",
+  "label_dailyDeficit": "Déficit Calórico Diario",
+  "label_dailyTarget": "Objetivo Calórico Diario",
+  "label_weeksToGoal": "Semanas para el Objetivo",
+  "label_totalDeficit": "Déficit Calórico Total Necesario",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cómo se deriva la cifra de 7700 kcal por kg?",
+    "a1": "Las 7700 kcal por kg se basan en el contenido energético del tejido adiposo humano. Aproximadamente 1 kg de grasa corporal contiene alrededor de 7700 kcal de energía. Este valor se utiliza ampliamente en los cálculos de pérdida de peso y está respaldado por investigaciones sobre la composición corporal.",
+    "q2": "¿Qué significa 'Objetivo Calórico Diario' y cómo lo uso?",
+    "a2": "El Objetivo Calórico Diario es la cantidad de calorías que debes consumir cada día para lograr la pérdida semanal deseada. Es tu TDEE menos el déficit diario. Por ejemplo, si tu TDEE es 2500 kcal y el déficit es 500 kcal, tu objetivo es 2000 kcal. Mantén esta ingesta de manera constante para obtener los mejores resultados.",
+    "q3": "¿Cuándo debo usar esta calculadora y cuáles son sus limitaciones?",
+    "a3": "Usa esta calculadora cuando tengas un objetivo específico de pérdida de peso y conozcas tu TDEE. Las limitaciones incluyen que asume que toda la pérdida de peso proviene de la grasa, pero la pérdida real incluye agua y músculo. Además, el metabolismo individual varía, por lo que los resultados son estimaciones. Consulta a un profesional para obtener asesoramiento personalizado.",
+    "q4": "¿Qué representa 'Semanas para el Objetivo' y es preciso?",
+    "a4": "Semanas para el Objetivo estima el tiempo necesario para alcanzar tu peso objetivo si mantienes el déficit diario exacto. Se calcula como (pesoActual - pesoObjetivo) / objetivoDePérdidaSemanal. La precisión depende de la adherencia al déficit y las adaptaciones metabólicas. Es una guía, no una garantía.",
+    "q5": "¿Qué autoridad recomienda una tasa segura de pérdida de peso semanal?",
+    "a5": "Los Centros para el Control y la Prevención de Enfermedades (CDC) y los Institutos Nacionales de Salud (NIH) recomiendan una tasa segura y sostenible de pérdida de peso de 0.5 a 1 kg (1-2 libras) por semana. Esta tasa minimiza los riesgos para la salud y promueve el éxito a largo plazo."
+  },
+  "opt_loss_025": "0.25 kg/semana — Suave",
+  "opt_loss_05": "0.5 kg/semana — Moderado",
+  "opt_loss_075": "0.75 kg/semana — Rápido",
+  "opt_loss_10": "1.0 kg/semana — Agresivo",
+  "content": {
+    "whatIs": "Una calculadora de déficit calórico determina el déficit calórico diario necesario para alcanzar un objetivo de pérdida de peso. Utiliza tu Gasto Energético Total Diario (TDEE) y una tasa de pérdida semanal segura para calcular la reducción necesaria en la ingesta calórica, asegurando una pérdida de peso sostenible.",
+    "formula": "El déficit diario se calcula como: Déficit Diario = (objetivoDePérdidaSemanal * 7700) / 7, donde 7700 kcal es el déficit energético aproximado necesario para perder 1 kg de grasa corporal. El objetivo calórico diario es entonces: Objetivo Diario = TDEE - Déficit Diario. Déficit total necesario = objetivoDePérdidaSemanal * 7700, y semanas para el objetivo = (pesoActual - pesoObjetivo) / objetivoDePérdidaSemanal.",
+    "example": "Para una persona con peso actual 80 kg, peso objetivo 70 kg, TDEE 2500 kcal y objetivo de pérdida semanal 0.5 kg: déficit diario = (0.5 * 7700) / 7 ≈ 550 kcal, objetivo diario = 2500 - 550 = 1950 kcal, déficit total = 0.5 * 7700 = 3850 kcal, semanas para el objetivo = (80 - 70) / 0.5 = 20 semanas.",
+    "howItWorks_1": "Ingresa tu peso actual (kg), peso objetivo (kg) y Gasto Energético Total Diario (TDEE en kcal). Luego selecciona tu objetivo de pérdida de peso semanal deseado del menú desplegable (0.25, 0.5, 0.75 o 1.0 kg por semana).",
+    "howItWorks_2": "Haz clic en Calcular. La herramienta aplica la fórmula de déficit calórico para calcular tu déficit diario, objetivo calórico diario, déficit total necesario y semanas estimadas para alcanzar tu objetivo.",
+    "howItWorks_3": "Revisa los resultados: Déficit Calórico Diario muestra cuántas calorías reducir cada día; Objetivo Calórico Diario es tu nueva ingesta diaria; Semanas para el Objetivo estima la duración; Déficit Calórico Total es el déficit acumulado requerido. Úsalos para planificar tu dieta y hacer seguimiento del progreso."
+  }
+}

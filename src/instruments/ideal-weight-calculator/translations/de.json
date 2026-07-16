@@ -1,0 +1,36 @@
+{
+  "title": "Idealgewicht-Rechner — Finden Sie Ihr gesundes Gewicht",
+  "description": "Berechnen Sie Ihr ideales Körpergewicht mit 4 medizinischen Formeln (Robinson, Miller, Devine, Hamwi). Erhalten Sie Ihre gesunde Gewichtsspanne basierend auf Größe und Geschlecht.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_height": "Größe",
+  "label_sex": "Geschlecht",
+  "label_robinson": "Robinson-Formel",
+  "label_miller": "Miller-Formel",
+  "label_devine": "Devine-Formel",
+  "label_average": "Durchschnittliches Idealgewicht",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Was ist der Unterschied zwischen den Formeln von Robinson, Miller, Devine und Hamwi?",
+    "a1": "Diese Formeln unterscheiden sich in ihrem Basisgewicht und der Anpassung pro Zoll über 5 Fuß. Zum Beispiel beginnt Robinson bei Männern mit 52 kg und 1,9 kg/Zoll, während Hamwi mit 48 kg und 2,7 kg/Zoll beginnt. Sie wurden aus verschiedenen Populationen und Zeiträumen entwickelt, daher variieren die Ergebnisse leicht.",
+    "q2": "Wie sollte ich das durchschnittliche Idealgewicht interpretieren?",
+    "a2": "Der Durchschnitt ist der Mittelwert der vier Formelergebnisse und bietet einen einzelnen Referenzpunkt. Es ist kein klinischer Standard, sondern eine praktische Zusammenfassung. Ihr tatsächliches gesundes Gewicht kann je nach Muskelmasse, Knochendichte und Körperzusammensetzung variieren.",
+    "q3": "Wann sollte ich diesen Rechner verwenden und welche Einschränkungen gibt es?",
+    "a3": "Verwenden Sie ihn für das allgemeine Gesundheitsbewusstsein oder als Ausgangspunkt für Gewichtsziele. Einschränkungen: Er berücksichtigt nicht Alter, Körperfettanteil oder Muskelmasse. Sportler oder ältere Menschen könnten die Schätzungen als weniger genau empfinden.",
+    "q4": "Was bedeutet das Ergebnis der Devine-Formel?",
+    "a4": "Die Devine-Formel wurde ursprünglich entwickelt, um das ideale Körpergewicht für die Medikamentendosierung zu berechnen. Für einen 170 cm großen Mann ergibt sie 65,9 kg. Sie wird häufig in klinischen Umgebungen verwendet, kann aber das Idealgewicht für größere Personen unterschätzen.",
+    "q5": "Basieren diese Formeln auf WHO-Standards?",
+    "a5": "Nein, diese Formeln stammen aus der Zeit vor den WHO-BMI-Richtlinien. Sie wurden von Klinikern (Robinson, Miller, Devine, Hamwi) zur Schätzung des Idealgewichts entwickelt. Die WHO verwendet BMI-Kategorien (18,5-24,9) für gesundes Gewicht, was ein anderer Ansatz ist."
+  },
+  "opt_male": "Männlich",
+  "opt_female": "Weiblich",
+  "content": {
+    "whatIs": "Der Idealgewicht-Rechner schätzt Ihr ideales Körpergewicht basierend auf Ihrer Größe und Ihrem Geschlecht unter Verwendung von vier etablierten medizinischen Formeln: Robinson, Miller, Devine und Hamwi. Diese Formeln liefern eine Gewichtsspanne, die bei den meisten Erwachsenen mit geringeren Gesundheitsrisiken verbunden ist.",
+    "formula": "Für Männer: Robinson = 52 kg + 1,9 kg pro Zoll über 5 Fuß; Miller = 56,2 kg + 1,41 kg pro Zoll über 5 Fuß; Devine = 50 kg + 2,3 kg pro Zoll über 5 Fuß; Hamwi = 48 kg + 2,7 kg pro Zoll über 5 Fuß. Für Frauen: Robinson = 49 kg + 1,7 kg pro Zoll über 5 Fuß; Miller = 53,1 kg + 1,36 kg pro Zoll über 5 Fuß; Devine = 45,5 kg + 2,3 kg pro Zoll über 5 Fuß; Hamwi = 45,5 kg + 2,2 kg pro Zoll über 5 Fuß. Die Größe in Zoll wird aus Zentimetern umgerechnet.",
+    "example": "Ein 170 cm (66,9 Zoll) großer Mann: Robinson = 52 + 1,9*(66,9-60) = 65,1 kg; Miller = 56,2 + 1,41*(66,9-60) = 65,9 kg; Devine = 50 + 2,3*(66,9-60) = 65,9 kg; Hamwi = 48 + 2,7*(66,9-60) = 66,6 kg; Durchschnitt = (65,1+65,9+65,9+66,6)/4 = 65,9 kg.",
+    "howItWorks_1": "Geben Sie Ihre Größe in Zentimetern (zwischen 100 und 250) ein und wählen Sie Ihr Geschlecht (männlich oder weiblich) aus dem Dropdown-Menü.",
+    "howItWorks_2": "Klicken Sie auf die Schaltfläche Berechnen. Das Tool wendet jede Formel an, um Ihr Idealgewicht in Kilogramm für Robinson, Miller, Devine und Hamwi zu berechnen und berechnet dann den Durchschnitt.",
+    "howItWorks_3": "Überprüfen Sie die Ergebnisse: Jede Formel liefert einen leicht unterschiedlichen Wert. Der Durchschnitt bietet eine einzelne Schätzung. Vergleichen Sie diese Zahlen mit Ihrem aktuellen Gewicht, um zu beurteilen, ob Sie sich in einem gesunden Bereich befinden."
+  }
+}

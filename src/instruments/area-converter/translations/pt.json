@@ -1,0 +1,35 @@
+{
+  "title": "Conversor de Área — Converta m², ft², acres, hectares e mais",
+  "description": "Converta unidades de área instantaneamente: metros quadrados, pés quadrados, acres, hectares, quilômetros quadrados, milhas quadradas. Conversor gratuito de unidades de área.",
+  "calculate": "Calcular",
+  "reset": "Redefinir",
+  "result": "Resultado",
+  "label_value": "Valor",
+  "label_fromUnit": "De",
+  "label_squareMeters": "Metros Quadrados",
+  "label_squareFeet": "Pés Quadrados",
+  "label_squareKilometers": "Quilômetros Quadrados",
+  "label_acres": "Acres",
+  "label_hectares": "Hectares",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Como converter metros quadrados em acres?",
+    "a1": "Para converter metros quadrados em acres, multiplique a área em metros quadrados por 0,000247105. Por exemplo, 10.000 m² × 0,000247105 = 2,47105 acres.",
+    "q2": "Qual é a diferença entre um acre e um hectare?",
+    "a2": "Um acre é uma unidade de área comumente usada nos EUA e no Reino Unido, equivalente a 43.560 pés quadrados. Um hectare é uma unidade métrica igual a 10.000 metros quadrados. Um hectare equivale aproximadamente a 2,47105 acres.",
+    "q3": "Este conversor pode lidar com áreas muito grandes, como países?",
+    "a3": "Sim, o conversor aceita valores de até 1 quatrilhão (10^15), o que é suficiente para áreas de países (por exemplo, Rússia ~17 milhões de km²). No entanto, para valores extremamente grandes, a precisão pode ser limitada pela representação de ponto flutuante.",
+    "q4": "O que representa a saída 'Quilômetros Quadrados'?",
+    "a4": "A saída 'Quilômetros Quadrados' mostra a área em quilômetros quadrados (km²), uma unidade métrica igual a 1.000.000 de metros quadrados. É comumente usada para medir grandes áreas de terra, como cidades, estados ou países.",
+    "q5": "Os fatores de conversão são baseados em padrões internacionais?",
+    "a5": "Sim, os fatores de conversão são baseados no Sistema Internacional de Unidades (SI) e em acordos internacionais. Por exemplo, 1 pé é definido como exatamente 0,3048 metros, então 1 pé quadrado = 0,09290304 metros quadrados."
+  },
+  "content": {
+    "whatIs": "O Conversor de Área é uma ferramenta que converte um valor de área de uma unidade para várias outras unidades simultaneamente. Ele usa fatores de conversão padrão entre unidades como metros quadrados, pés quadrados, acres, hectares, quilômetros quadrados e milhas quadradas.",
+    "formula": "A conversão é baseada na multiplicação do valor de entrada pelo fator de conversão apropriado. Por exemplo, para converter de pés quadrados para metros quadrados, multiplique por 0,09290304. A ferramenta aplica o fator para a unidade 'de' selecionada para converter para cada unidade de destino.",
+    "example": "Se você inserir 1000 e selecionar 'ft²' como unidade de origem, o conversor exibe: 92,90304 m², 1000 ft², 0,00009290304 km², 0,02295684 acres e 0,009290304 hectares.",
+    "howItWorks_1": "Insira um valor numérico no campo 'valor' (deve ser não negativo).",
+    "howItWorks_2": "Selecione a unidade do valor inserido no menu suspenso 'de' (por exemplo, metros quadrados, acres).",
+    "howItWorks_3": "Os resultados exibem a área equivalente em metros quadrados, pés quadrados, quilômetros quadrados, acres e hectares instantaneamente."
+  }
+}

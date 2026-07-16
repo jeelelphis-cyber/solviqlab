@@ -1,0 +1,38 @@
+{
+  "title": "Kalkulator objętości — sześcian, kula, walec i inne",
+  "description": "Oblicz objętość dowolnego kształtu 3D: sześcianu, kuli, walca, stożka, prostopadłościanu. Natychmiastowe wyniki z wzorami dla matematyki i inżynierii.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_shape": "Kształt",
+  "label_a": "Długość / Promień / Bok",
+  "label_b": "Szerokość (jeśli potrzebna)",
+  "label_h": "Wysokość (jeśli potrzebna)",
+  "label_volume": "Objętość",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jaki jest wzór na objętość kuli?",
+    "a1": "Objętość kuli to V = (4/3)πr³, gdzie r to promień. Na przykład kula o promieniu 3 jednostek ma objętość (4/3)π×27 = 36π ≈ 113,1 jednostek³.",
+    "q2": "Jak interpretować wynik objętości w jednostkach sześciennych?",
+    "a2": "Wynik podawany jest w jednostkach sześciennych (np. cm³, m³, in³). Jeśli wprowadzisz wymiary w metrach, objętość będzie w metrach sześciennych. Reprezentuje to ilość miejsca zajmowaną przez kształt.",
+    "q3": "Kiedy powinienem użyć tego kalkulatora objętości?",
+    "a3": "Użyj go do każdego zadania wymagającego obliczenia objętości: określenia, ile płynu mieści pojemnik, oszacowania materiału potrzebnego dla obiektu 3D lub rozwiązywania problemów geometrycznych. Obejmuje pięć typowych kształtów, ale nie nieregularne obiekty.",
+    "q4": "Co reprezentuje wynik 'objętość'?",
+    "a4": "Wynik objętości to całkowita przestrzeń zamknięta przez kształt 3D, wyrażona w jednostkach sześciennych. Dla sześcianu o boku 2 jednostek objętość = 8 jednostek³, co oznacza, że może pomieścić 8 jednostkowych sześcianów.",
+    "q5": "Czy te wzory objętości opierają się na standardowych definicjach matematycznych?",
+    "a5": "Tak, wzory pochodzą z geometrii euklidesowej i są powszechnie akceptowane w matematyce i inżynierii. Są zdefiniowane przez Międzynarodowy Układ Jednostek (SI) dla pomiaru objętości (metry sześcienne)."
+  },
+  "opt_cube": "Sześcian",
+  "opt_sphere": "Kula",
+  "opt_cylinder": "Walec",
+  "opt_cone": "Stożek",
+  "opt_rect_prism": "Prostopadłościan",
+  "content": {
+    "whatIs": "Ten kalkulator objętości oblicza objętość typowych kształtów 3D: sześcianu, kuli, walca, stożka i prostopadłościanu. Objętość mierzy ilość miejsca zajmowaną przez obiekt, obliczaną za pomocą określonych wzorów geometrycznych dla każdego kształtu.",
+    "formula": "Dla sześcianu: V = a³ (a = długość boku). Kula: V = (4/3)πr³ (r = promień). Walec: V = πr²h (r = promień, h = wysokość). Stożek: V = (1/3)πr²h. Prostopadłościan: V = lwh (l = długość, w = szerokość, h = wysokość). Kalkulator używa tych wzorów w zależności od wybranego kształtu.",
+    "example": "Dla walca o promieniu 5 jednostek i wysokości 10 jednostek objętość = π × 5² × 10 = 250π ≈ 785,4 jednostek³. Wybierz kształt 'walec', a=5, h=10, a wynik pokaże 785,4 jednostek³.",
+    "howItWorks_1": "Wybierz kształt z menu rozwijanego. Następnie wprowadź wymagane wymiary: dla sześcianu podaj długość boku 'a'; dla kuli podaj promień 'a'; dla walca podaj promień 'a' i wysokość 'h'; dla stożka podaj promień 'a' i wysokość 'h'; dla prostopadłościanu podaj długość 'a', szerokość 'b' i wysokość 'h'.",
+    "howItWorks_2": "Kliknij przycisk Oblicz. Kalkulator stosuje odpowiedni wzór objętości na podstawie twoich danych i oblicza wynik.",
+    "howItWorks_3": "Wynik wyświetla objętość w jednostkach sześciennych (jednostki³). Użyj tej wartości do zastosowań takich jak napełnianie pojemnika, szacowanie materiału lub projektowanie inżynieryjne."
+  }
+}

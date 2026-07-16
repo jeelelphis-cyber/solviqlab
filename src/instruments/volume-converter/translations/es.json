@@ -1,0 +1,35 @@
+{
+  "title": "Conversor de Volumen — Litros, Galones, ml, Tazas y más",
+  "description": "Convierte unidades de volumen al instante: litros, galones, mililitros, tazas, onzas líquidas, metros cúbicos, pies cúbicos. Conversor de unidades de volumen gratuito.",
+  "calculate": "Calcular",
+  "reset": "Restablecer",
+  "result": "Resultado",
+  "label_value": "Valor",
+  "label_fromUnit": "De",
+  "label_liters": "Litros",
+  "label_milliliters": "Mililitros",
+  "label_gallons": "Galones US",
+  "label_cups": "Tazas",
+  "label_fluidOunces": "Onzas Líquidas",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cuál es el factor de conversión de litros a galones US?",
+    "a1": "1 litro equivale a 0.264172 galones US. Para convertir litros a galones, multiplica el valor en litros por 0.264172. Por ejemplo, 10 L × 0.264172 = 2.64172 gal.",
+    "q2": "¿Cómo interpreto la salida de 'Tazas'? ¿Son tazas US o métricas?",
+    "a2": "La salida de 'Tazas' utiliza tazas US, donde 1 taza US = 236.588 mL. Esto es diferente de las tazas métricas (250 mL) o las tazas imperiales. La conversión se basa en el estándar US.",
+    "q3": "¿Puede este conversor manejar volúmenes muy grandes, como metros cúbicos?",
+    "a3": "Sí, el conversor acepta valores de hasta 1,000,000,000,000. Sin embargo, solo muestra resultados en litros, mililitros, galones, tazas y onzas líquidas. Para metros cúbicos, necesitarías convertir manualmente: 1 m³ = 1000 L.",
+    "q4": "¿Qué representa la salida de 'Onzas Líquidas'?",
+    "a4": "Las onzas líquidas (fl oz) son una unidad US para volumen, no peso. 1 onza líquida US = 29.5735 mL. La salida muestra el volumen equivalente en onzas líquidas basado en la entrada.",
+    "q5": "¿Qué estándar define los factores de conversión utilizados?",
+    "a5": "Los factores de conversión se basan en el sistema US definido por el Instituto Nacional de Estándares y Tecnología (NIST). Por ejemplo, 1 galón US = 3.785411784 L exactamente, y 1 taza US = 236.5882365 mL."
+  },
+  "content": {
+    "whatIs": "El Conversor de Volumen es una herramienta que convierte un volumen dado de una unidad a múltiples unidades simultáneamente. Utiliza factores de conversión entre unidades como litros, galones, tazas y onzas líquidas, todos basados en los sistemas métrico y US.",
+    "formula": "La conversión utiliza la unidad base de litros. Para cada unidad, se aplica un factor de conversión: 1 L = 1000 mL = 0.264172 gal = 4.22675 tazas = 33.814 fl oz. La fórmula es: resultado = valor * (factor de conversión de fromUnit a L) * (factor de conversión de L a unidad objetivo).",
+    "example": "Por ejemplo, convertir 2 galones a otras unidades: 2 gal × 3.78541 L/gal = 7.57082 L, luego 7.57082 L × 1000 = 7570.82 mL, × 4.22675 = 32 tazas, × 33.814 = 256 fl oz.",
+    "howItWorks_1": "Ingresa el valor numérico del volumen en el campo 'valor' (por ejemplo, 5).",
+    "howItWorks_2": "Selecciona la unidad del valor ingresado en el menú desplegable 'de' (por ejemplo, 'gal' para galones). La calculadora aplica los factores de conversión para calcular volúmenes equivalentes en litros, mililitros, galones, tazas y onzas líquidas.",
+    "howItWorks_3": "Los resultados se muestran en los campos de salida: Litros, Mililitros, Galones US, Tazas y Onzas Líquidas. Cada uno muestra el valor convertido con su etiqueta de unidad."
+  }
+}

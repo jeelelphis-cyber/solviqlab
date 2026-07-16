@@ -1,0 +1,37 @@
+{
+  "title": "Calculadora de Ovulação — Janela Fértil & Rastreador de Ciclo",
+  "description": "Descubra sua data de ovulação e janela fértil com base na sua última menstruação e duração do ciclo. Planeje ou acompanhe a concepção com previsões precisas do ciclo menstrual.",
+  "calculate": "Calcular",
+  "reset": "Limpar",
+  "result": "Resultado",
+  "label_lastPeriodDate": "Primeiro Dia da Última Menstruação",
+  "label_cycleLength": "Duração Média do Ciclo",
+  "label_ovulationDate": "Data da Ovulação",
+  "label_fertileWindowStart": "Início da Janela Fértil",
+  "label_fertileWindowEnd": "Fim da Janela Fértil",
+  "label_nextPeriodDate": "Data da Próxima Menstruação",
+  "label_daysUntilOvulation": "Dias até a Ovulação",
+  "unit_days": "dias",
+  "ymyl_disclaimer": "Esta calculadora fornece estimativas baseadas em um modelo de ovulação padrão. Os ciclos individuais variam. Esta ferramenta não substitui aconselhamento médico ou contracepção. Consulte um profissional de saúde para planejamento de fertilidade.",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Como a data de ovulação é calculada?",
+    "a1": "A ovulação é estimada para ocorrer 14 dias antes do início da próxima menstruação, independentemente da duração do ciclo. Isso ocorre porque a fase lútea (pós-ovulação) é consistentemente de cerca de 14 dias. A fórmula é: Data da Ovulação = Data da Última Menstruação + (Duração do Ciclo − 14 dias). Para um ciclo de 28 dias, a ovulação ocorre no dia 14. Para um ciclo de 32 dias, ocorre no dia 18.",
+    "q2": "O que é a janela fértil?",
+    "a2": "A janela fértil é o período em que a concepção é mais provável. Os espermatozoides podem sobreviver nas trompas de Falópio por até 5 dias, e o óvulo é viável por 12–24 horas após a ovulação. Isso resulta em uma janela fértil de aproximadamente 5 dias antes da ovulação até 1 dia após. Esta calculadora define a janela de 5 dias antes a 1 dia após a data estimada de ovulação.",
+    "q3": "Quão precisa é esta calculadora de ovulação?",
+    "a3": "Esta calculadora usa o método de calendário/ritmo padrão, que assume um ciclo regular e fase lútea fixa. É mais precisa para mulheres com durações de ciclo consistentes entre 21 e 45 dias. Fatores como estresse, doença, viagens, SOP ou amamentação podem alterar a ovulação. Para maior precisão, combine com monitoramento da temperatura basal (BBT) ou teste de pico de LH.",
+    "q4": "O que significa um valor negativo em 'Dias até a Ovulação'?",
+    "a4": "Um número negativo significa que a data estimada de ovulação já passou no ciclo atual. Por exemplo, −3 significa que a ovulação foi estimada para ter ocorrido há 3 dias. Isso é normal se você estiver na segunda metade do seu ciclo. A data da próxima menstruação mostrada indicará quando seu novo ciclo deve começar.",
+    "q5": "Posso usar esta calculadora para evitar a gravidez?",
+    "a5": "Esta calculadora não é destinada nem confiável para contracepção. O método de calendário tem uma taxa de falha de uso típico de cerca de 24% ao ano. Para contracepção, consulte um profissional de saúde. Esta ferramenta é melhor usada para entender seu ciclo e aumentar as chances de concepção quando estiver tentando engravidar."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de ovulação prevê sua data de ovulação, janela fértil e data da próxima menstruação com base na sua última menstruação e duração média do ciclo. Ela usa o método de calendário padrão amplamente referenciado em obstetrícia e ginecologia.",
+    "formula": "Dia da Ovulação = Duração do Ciclo − 14\nData da Ovulação = Data da Última Menstruação + Dia da Ovulação\nInício da Janela Fértil = Data da Ovulação − 5 dias\nFim da Janela Fértil = Data da Ovulação + 1 dia\nData da Próxima Menstruação = Data da Última Menstruação + Duração do Ciclo",
+    "example": "Última menstruação em 1º de janeiro, ciclo de 28 dias: Dia da ovulação = 28 − 14 = 14. Data da ovulação = 15 de janeiro. Janela fértil: 10 a 16 de janeiro. Próxima menstruação: 29 de janeiro.",
+    "howItWorks_1": "Insira a data do primeiro dia da sua última menstruação.",
+    "howItWorks_2": "Insira a duração média do seu ciclo em dias (faixa típica é 21–45, padrão é 28).",
+    "howItWorks_3": "Clique em Calcular para ver sua data estimada de ovulação, janela fértil, data da próxima menstruação e quantos dias faltam para a ovulação a partir de hoje."
+  }
+}

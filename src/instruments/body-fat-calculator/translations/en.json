@@ -1,0 +1,39 @@
+{
+  "title": "Body Fat Calculator — Estimate Your Body Fat %",
+  "description": "Calculate body fat percentage using the US Navy method. Enter neck, waist, and hip measurements for an accurate body composition estimate.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_height": "Height",
+  "label_neck": "Neck Circumference",
+  "label_waist": "Waist Circumference",
+  "label_hip": "Hip Circumference (women only)",
+  "label_sex": "Sex",
+  "label_bodyFat": "Body Fat",
+  "label_fatMass": "Fat Mass",
+  "label_leanMass": "Lean Mass",
+  "label_category": "Category",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How does the US Navy method differ from other body fat measurement techniques?",
+    "a1": "The US Navy method uses simple circumference measurements (neck, waist, hip) and height, making it convenient and non-invasive. It estimates body density via regression equations, then converts to body fat percentage. It is less accurate than DEXA or hydrostatic weighing but more accessible and repeatable.",
+    "q2": "What do the body fat categories (Essential, Athlete, Fitness, Average, Obese) mean?",
+    "a2": "Categories are based on standard ranges: Essential fat (2-5% men, 10-13% women), Athlete (6-13% men, 14-20% women), Fitness (14-17% men, 21-24% women), Average (18-24% men, 25-31% women), Obese (25%+ men, 32%+ women). These are general guidelines; individual health depends on many factors.",
+    "q3": "When should I use this calculator and what are its limitations?",
+    "a3": "Use this calculator for a quick, non-invasive estimate of body fat percentage, e.g., tracking changes over time. Limitations: accuracy depends on precise measurement technique; it may not be accurate for very muscular individuals or those with unusual body shapes. It assumes a certain body density distribution.",
+    "q4": "What does 'Fat Mass' and 'Lean Mass' mean in the output?",
+    "a4": "Fat Mass is the total weight of body fat, calculated as (body fat % / 100) * total body weight. Lean Mass is everything else: muscle, bone, organs, water, calculated as total weight minus fat mass. These help you understand your body composition beyond just percentage.",
+    "q5": "What authority or standard is the US Navy method based on?",
+    "a5": "The US Navy method was developed by the U.S. Navy and is based on research by Hodgdon and Beckett (1984). It is widely used for military personnel and fitness assessments. The Brozek formula used for conversion is a standard equation for estimating body fat from density."
+  },
+  "opt_male": "Male",
+  "opt_female": "Female",
+  "content": {
+    "whatIs": "This body fat calculator estimates your body fat percentage using the US Navy circumference method. It uses neck, waist, and hip (for women) measurements along with height to estimate body density, then converts it to body fat percentage using the Brozek formula.",
+    "formula": "For men: Body Density = 1.0323 - 0.154 * log10(waist - neck) + 0.025 * log10(height). For women: Body Density = 1.29579 - 0.35004 * log10(waist + hip - neck) + 0.221 * log10(height). Body Fat % = (4.95 / Body Density - 4.50) * 100. All measurements in cm.",
+    "example": "A 180 cm tall man with neck 40 cm and waist 85 cm: Body Density = 1.0323 - 0.154 * log10(85-40) + 0.025 * log10(180) = 1.0323 - 0.154 * 1.6532 + 0.025 * 2.2553 = 1.0323 - 0.2546 + 0.0564 = 0.8341. Body Fat % = (4.95/0.8341 - 4.50)*100 = (5.934 - 4.50)*100 = 14.34%.",
+    "howItWorks_1": "Enter your height, neck circumference, waist circumference, and if female, hip circumference. Select your sex from the dropdown.",
+    "howItWorks_2": "When you click Calculate, the tool applies the US Navy formula to compute body density, then converts it to body fat percentage. It also calculates fat mass and lean mass based on your weight (if provided) or uses an estimated weight from height.",
+    "howItWorks_3": "The results show your body fat percentage, fat mass, lean mass, and a category (e.g., Essential, Athlete, Fitness, Average, Obese) based on standard ranges. Use the category to assess your body composition relative to health norms."
+  }
+}

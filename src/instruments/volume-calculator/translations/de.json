@@ -1,0 +1,38 @@
+{
+  "title": "Volumenrechner — Würfel, Kugel, Zylinder und mehr",
+  "description": "Berechnen Sie das Volumen jeder 3D-Form: Würfel, Kugel, Zylinder, Kegel, Quader. Sofortige Ergebnisse mit Formeln für Mathematik und Technik.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_shape": "Form",
+  "label_a": "Länge / Radius / Seite",
+  "label_b": "Breite (falls erforderlich)",
+  "label_h": "Höhe (falls erforderlich)",
+  "label_volume": "Volumen",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie lautet die Formel für das Volumen einer Kugel?",
+    "a1": "Das Volumen einer Kugel ist V = (4/3)πr³, wobei r der Radius ist. Zum Beispiel hat eine Kugel mit Radius 3 Einheiten ein Volumen von (4/3)π×27 = 36π ≈ 113,1 Einheiten³.",
+    "q2": "Wie interpretiere ich das Volumenergebnis in Kubikeinheiten?",
+    "a2": "Das Ergebnis ist in Kubikeinheiten (z. B. cm³, m³, in³). Wenn Sie Maße in Metern eingeben, ist das Volumen in Kubikmetern. Dies stellt den Raum dar, den die Form einnimmt.",
+    "q3": "Wann sollte ich diesen Volumenrechner verwenden?",
+    "a3": "Verwenden Sie ihn für jede Aufgabe, die eine Volumenberechnung erfordert: Bestimmen, wie viel Flüssigkeit ein Behälter fasst, Schätzen des benötigten Materials für ein 3D-Objekt oder Lösen von Geometrieproblemen. Er deckt fünf gängige Formen ab, aber keine unregelmäßigen Objekte.",
+    "q4": "Was stellt die Ausgabe 'Volumen' dar?",
+    "a4": "Die Volumenausgabe ist der gesamte Raum, der von der 3D-Form eingeschlossen wird, ausgedrückt in Kubikeinheiten. Für einen Würfel mit Seite 2 Einheiten beträgt das Volumen 8 Einheiten³, was bedeutet, dass er 8 Einheitswürfel aufnehmen kann.",
+    "q5": "Basieren diese Volumenformeln auf standardmäßigen mathematischen Definitionen?",
+    "a5": "Ja, die Formeln stammen aus der euklidischen Geometrie und sind in Mathematik und Technik allgemein anerkannt. Sie werden durch das Internationale Einheitensystem (SI) für die Volumenmessung (Kubikmeter) definiert."
+  },
+  "opt_cube": "Würfel",
+  "opt_sphere": "Kugel",
+  "opt_cylinder": "Zylinder",
+  "opt_cone": "Kegel",
+  "opt_rect_prism": "Quader",
+  "content": {
+    "whatIs": "Dieser Volumenrechner berechnet das Volumen gängiger 3D-Formen: Würfel, Kugel, Zylinder, Kegel und Quader. Das Volumen misst den Raum, den ein Objekt einnimmt, und wird mit spezifischen geometrischen Formeln für jede Form berechnet.",
+    "formula": "Für einen Würfel: V = a³ (a = Seitenlänge). Kugel: V = (4/3)πr³ (r = Radius). Zylinder: V = πr²h (r = Radius, h = Höhe). Kegel: V = (1/3)πr²h. Quader: V = lwh (l = Länge, w = Breite, h = Höhe). Der Rechner verwendet diese Formeln basierend auf der ausgewählten Form.",
+    "example": "Für einen Zylinder mit Radius 5 Einheiten und Höhe 10 Einheiten beträgt das Volumen π × 5² × 10 = 250π ≈ 785,4 Einheiten³. Wählen Sie die Form 'Zylinder', geben Sie a=5, h=10 ein, und das Ergebnis zeigt 785,4 Einheiten³.",
+    "howItWorks_1": "Wählen Sie die Form aus dem Dropdown-Menü. Geben Sie dann die erforderlichen Maße ein: für Würfel die Seitenlänge 'a'; für Kugel den Radius 'a'; für Zylinder den Radius 'a' und die Höhe 'h'; für Kegel den Radius 'a' und die Höhe 'h'; für Quader die Länge 'a', Breite 'b' und Höhe 'h'.",
+    "howItWorks_2": "Klicken Sie auf die Schaltfläche Berechnen. Der Rechner wendet die entsprechende Volumenformel mit Ihren Eingaben an und berechnet das Ergebnis.",
+    "howItWorks_3": "Das Ergebnis zeigt das Volumen in Kubikeinheiten (Einheiten³). Verwenden Sie diesen Wert für Anwendungen wie das Befüllen eines Behälters, Materialschätzung oder technisches Design."
+  }
+}

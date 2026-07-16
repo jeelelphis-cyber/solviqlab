@@ -1,0 +1,40 @@
+{
+  "title": "Salary Calculator — Hourly to Annual Salary Converter",
+  "description": "Convert hourly wage to annual salary or annual to hourly. Calculate weekly, biweekly, monthly, and yearly earnings instantly.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_salaryType": "Salary Type",
+  "label_amount": "Amount",
+  "label_hoursPerWeek": "Hours Per Week",
+  "label_weeksPerYear": "Weeks Per Year",
+  "label_hourly": "Hourly Rate",
+  "label_daily": "Daily Rate",
+  "label_weekly": "Weekly Pay",
+  "label_biweekly": "Biweekly Pay",
+  "label_monthly": "Monthly Pay",
+  "label_annual": "Annual Salary",
+  "opt_hourly": "Hourly",
+  "opt_annual": "Annual",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How do I convert an hourly wage to an annual salary?",
+    "a1": "Multiply your hourly rate by the number of hours you work per week, then multiply by the number of weeks you work per year. For a standard 40-hour week and 52-week year: Annual = Hourly × 40 × 52. For example, $25/hour × 40 × 52 = $52,000 per year.",
+    "q2": "How is the daily rate calculated?",
+    "a2": "The daily rate is computed by dividing the annual salary by 261 — the approximate number of working days in a year (52 weeks × 5 days). For a $52,000 salary: $52,000 / 261 ≈ $199.23 per day. This is a standard used by HR and payroll systems in the US.",
+    "q3": "What is the difference between biweekly and semimonthly pay?",
+    "a3": "Biweekly pay is paid every two weeks — 26 pay periods per year. Semimonthly pay is paid twice a month — 24 pay periods per year. This calculator uses the biweekly (26 period) standard. The difference matters for budgeting: biweekly results in two extra paycheck months each year.",
+    "q4": "Does this calculator account for taxes or deductions?",
+    "a4": "No. This calculator shows gross salary figures only, before any federal, state, or local taxes, Social Security, Medicare, health insurance, or retirement contributions. For net take-home pay after federal taxes, use the Tax Calculator.",
+    "q5": "What if I work part-time or seasonal hours?",
+    "a5": "Adjust the 'Hours Per Week' and 'Weeks Per Year' fields to match your actual schedule. For example, a part-time worker at 20 hours/week for 48 weeks earning $18/hour: $18 × 20 × 48 = $17,280 annual salary."
+  },
+  "content": {
+    "whatIs": "This salary calculator converts between hourly and annual wages and shows you your equivalent pay across every common pay period: daily, weekly, biweekly, monthly, and yearly.",
+    "formula": "If hourly: Annual = Amount × Hours/Week × Weeks/Year\nIf annual: Hourly = Amount / (Hours/Week × Weeks/Year)\nMonthly = Annual / 12\nBiweekly = Annual / 26\nWeekly = Annual / 52\nDaily = Annual / 261",
+    "example": "A worker earning $25/hour at 40 hours/week for 52 weeks earns $52,000/year. That works out to $1,000/week, $2,000 biweekly, $4,333.33/month, and $199.23/day.",
+    "howItWorks_1": "Select whether you know your hourly rate or your annual salary, then enter the amount.",
+    "howItWorks_2": "Adjust hours per week (default 40) and weeks per year (default 52) if your schedule differs.",
+    "howItWorks_3": "Click Calculate to see your equivalent hourly, daily, weekly, biweekly, monthly, and annual figures instantly."
+  }
+}

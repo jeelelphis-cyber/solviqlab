@@ -1,0 +1,36 @@
+{
+  "title": "Kalkulator inflacji — siła nabywcza i korekta CPI",
+  "description": "Oblicz skorygowaną wartość pieniądza w czasie przy użyciu niestandardowej stopy inflacji. Zobacz, jak inflacja niszczy siłę nabywczą między dowolnymi dwoma latami.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_amount": "Kwota początkowa",
+  "label_fromYear": "Rok początkowy",
+  "label_toYear": "Rok docelowy",
+  "label_inflationRate": "Roczna stopa inflacji",
+  "label_adjustedAmount": "Kwota skorygowana",
+  "label_totalInflation": "Całkowita inflacja",
+  "label_purchasingPowerLoss": "Utrata siły nabywczej",
+  "label_yearsElapsed": "Lata, które upłynęły",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Co oznacza kwota skorygowana?",
+    "a1": "Kwota skorygowana mówi, ile warta jest pierwotna suma pieniędzy w dolarach roku docelowego. Jeśli miałeś 1000 $ w 2000 roku, a inflacja wynosiła średnio 3% rocznie, to w 2024 roku potrzebowałbyś około 2032 $, aby mieć tę samą siłę nabywczą. Alternatywnie, twoje pierwotne 1000 $ z 2000 roku jest warte tylko około 492 $ w przeliczeniu na rok 2024.",
+    "q2": "Jak obliczana jest utrata siły nabywczej?",
+    "a2": "Utrata siły nabywczej pokazuje, o ile mniej twoja pierwotna kwota może kupić w roku docelowym. Oblicza się ją jako: 100 − (kwota pierwotna / kwota skorygowana × 100). Dla 1000 $ skorygowanych do 2032 $ przez 24 lata przy 3%, utrata siły nabywczej wynosi 100 − (1000/2032 × 100) ≈ 50,8%, co oznacza, że pieniądze kupują mniej więcej o połowę mniej.",
+    "q3": "Jaka jest średnia stopa inflacji w USA?",
+    "a3": "Długoterminowa średnia stopa inflacji CPI w USA wynosi około 3% rocznie, choć znacznie różni się w zależności od dekady. Lata 70. odnotowały stopy powyżej 10%, podczas gdy średnia w latach 2010. wynosiła około 1,7%. W ostatnich latach (2021–2023) odnotowano szczyty 7–9%. Domyślna wartość 3% jest rozsądną średnią historyczną do planowania długoterminowego.",
+    "q4": "Czym różni się całkowita inflacja od stopy inflacji?",
+    "a4": "Stopa inflacji to roczna procentowa zmiana cen. Całkowita inflacja to skumulowana zmiana składana w całym okresie. Przy rocznej stopie 3% przez 24 lata całkowita inflacja wynosi (1,03^24 − 1) × 100 ≈ 103,3%, co oznacza, że ceny wzrosły ponad dwukrotnie w tym okresie.",
+    "q5": "Czy mogę użyć tego do prognoz na przyszłość?",
+    "a5": "Tak. Ustaw 'Rok początkowy' na bieżący rok, a 'Rok docelowy' na przyszły rok. Kalkulator używa wzoru kwotaSkorygowana = kwota × (1 + stopa/100)^lata, który jest ważny zarówno do wyszukiwania historycznego, jak i prognozowania w przód — pamiętając, że przyszłe stopy są szacunkowe."
+  },
+  "content": {
+    "whatIs": "Ten kalkulator inflacji pokazuje, ile warta jest suma pieniędzy z jednego roku w innym roku, przy użyciu określonej przez użytkownika rocznej stopy inflacji. Ujawnia również całkowitą skumulowaną inflację i erozję siły nabywczej w danym okresie.",
+    "formula": "Kwota skorygowana = Kwota × (1 + Stopa/100)^(Rok docelowy − Rok początkowy)\nCałkowita inflacja = ((Skorygowana / Pierwotna) − 1) × 100\nUtrata siły nabywczej = 100 − (Pierwotna / Skorygowana × 100)",
+    "example": "Kwota 10 000 $ z 2000 roku skorygowana do 2024 roku przy 3% rocznej inflacji: 10 000 $ × (1,03)^24 ≈ 20 327,94 $. Całkowita inflacja wynosi 103,3%, a utrata siły nabywczej 50,8% — pierwotne 10 000 $ ma teraz siłę nabywczą około 4 919 $.",
+    "howItWorks_1": "Wprowadź pierwotną kwotę pieniędzy i rok początkowy.",
+    "howItWorks_2": "Ustaw rok docelowy i dostosuj roczną stopę inflacji (domyślnie 3%).",
+    "howItWorks_3": "Kliknij Oblicz, aby zobaczyć wartość skorygowaną o inflację, całkowitą skumulowaną inflację oraz utratę siły nabywczej."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Hypothekenrechner — Monatliche Zahlung & Tilgungsplan",
+  "description": "Berechnen Sie Ihre monatliche Hypothekenzahlung, Gesamtzinsen und Tilgungsplan. Enthält Schätzungen für Grundsteuer und Versicherung.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_homePrice": "Kaufpreis",
+  "label_downPayment": "Anzahlung",
+  "label_annualRate": "Zinssatz",
+  "label_termYears": "Darlehenslaufzeit",
+  "label_monthlyPayment": "Monatliche Zahlung",
+  "label_principal": "Darlehensbetrag",
+  "label_totalInterest": "Gesamtzinsen",
+  "label_totalPayment": "Gesamtkosten",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie wird die monatliche Zahlung für eine Festhypothek berechnet?",
+    "a1": "Die monatliche Zahlung wird aus dem Darlehensbetrag, dem monatlichen Zinssatz und der Anzahl der Zahlungen mit der Formel M = P * [r(1+r)^n] / [(1+r)^n - 1] abgeleitet. Beispiel: Ein Darlehen von 240.000 $ bei 6 % jährlich (0,5 % monatlich) über 360 Monate ergibt eine Zahlung von 1.438,92 $.",
+    "q2": "Was bedeuten die Gesamtzinsen und wie werden sie berechnet?",
+    "a2": "Die Gesamtzinsen sind die Summe aller Zinszahlungen über die Darlehenslaufzeit. Sie entsprechen den Gesamtkosten abzüglich des Darlehensbetrags. Bei einem Darlehen von 240.000 $ zu 6 % über 30 Jahre betragen die Gesamtzinsen 278.011,20 $, was bedeutet, dass Sie mehr Zinsen als den Kapitalbetrag zahlen.",
+    "q3": "Wann sollte ich diesen Hypothekenrechner verwenden?",
+    "a3": "Verwenden Sie diesen Rechner, wenn Sie Festhypothekenangebote vergleichen oder einen Hauskauf planen. Er geht von einem konstanten Zinssatz und gleichen Zahlungen aus; er berücksichtigt keine variablen Zinssätze, Steuern, Versicherungen oder HOA-Gebühren.",
+    "q4": "Was stellt der ausgegebene Darlehensbetrag dar?",
+    "a4": "Der Darlehensbetrag (Kapital) ist der Kaufpreis abzüglich Ihrer Anzahlung. Es ist der Betrag, den Sie vom Kreditgeber leihen. Beispiel: Ein Haus für 300.000 $ mit 60.000 $ Anzahlung ergibt einen Darlehensbetrag von 240.000 $.",
+    "q5": "Welche Standardformel verwendet dieser Rechner?",
+    "a5": "Dieser Rechner verwendet die Standard-Tilgungsformel, die vom Consumer Financial Protection Bureau (CFPB) definiert und in der US-Hypothekenbranche weit verbreitet ist. Die Formel gewährleistet gleiche monatliche Zahlungen, die das Darlehen über die gewählte Laufzeit vollständig tilgen."
+  },
+  "unit_years": "Jahre",
+  "content": {
+    "whatIs": "Dieser Hypothekenrechner schätzt Ihre monatliche Zahlung, Gesamtzinsen und Gesamtkosten für eine Festhypothek. Er verwendet die Standard-Tilgungsformel, um gleiche monatliche Zahlungen über die Darlehenslaufzeit zu berechnen.",
+    "formula": "Die monatliche Zahlung M wird mit der Formel M = P * [r(1+r)^n] / [(1+r)^n - 1] berechnet, wobei P der Darlehensbetrag (Kaufpreis minus Anzahlung), r der monatliche Zinssatz (Jahreszins geteilt durch 12) und n die Gesamtzahl der monatlichen Zahlungen (Laufzeit in Jahren mal 12) ist. Die Gesamtzinsen sind die Summe aller Zinszahlungen über die Darlehenslaufzeit.",
+    "example": "Bei einem Haus für 300.000 $ mit einer Anzahlung von 20 % (60.000 $), einem jährlichen Zinssatz von 6 % und einer Laufzeit von 30 Jahren beträgt der Darlehensbetrag 240.000 $. Die monatliche Zahlung beträgt 1.438,92 $, die Gesamtzinsen 278.011,20 $ und die Gesamtkosten 518.011,20 $.",
+    "howItWorks_1": "Geben Sie den Kaufpreis, den Anzahlungsbetrag, den jährlichen Zinssatz ein und wählen Sie die Darlehenslaufzeit in Jahren aus dem Dropdown-Menü.",
+    "howItWorks_2": "Klicken Sie auf die Schaltfläche Berechnen. Der Rechner berechnet den Darlehensbetrag und wendet dann die Tilgungsformel an, um die monatliche Zahlung, die Gesamtzinsen und die Gesamtkosten zu ermitteln.",
+    "howItWorks_3": "Überprüfen Sie die Ergebnisse: Monatliche Zahlung ist Ihr fester monatlicher Betrag, Darlehensbetrag ist das geliehene Kapital, Gesamtzinsen sind die kumulierten Zinszahlungen und Gesamtkosten sind die Summe aus Kapital und Zinsen über die gesamte Laufzeit."
+  }
+}

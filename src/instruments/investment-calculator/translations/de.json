@@ -1,0 +1,37 @@
+{
+  "title": "Investitionsrechner — Zinseszins & Kapitalrendite",
+  "description": "Berechnen Sie, wie Ihre Investition mit Zinseszins und monatlichen Einzahlungen wächst. Sehen Sie Ihren Endwert, die insgesamt erzielten Zinsen und wie lange es dauert, Ihr Geld zu verdoppeln.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_initialAmount": "Anfangsinvestition",
+  "label_monthlyContribution": "Monatlicher Beitrag",
+  "label_annualReturn": "Jährliche Rendite",
+  "label_years": "Anlagedauer",
+  "label_finalValue": "Endwert",
+  "label_totalContributions": "Investiertes Kapital",
+  "label_totalInterest": "Gesamtertrag",
+  "label_doublingTime": "Verdopplungszeit",
+  "unit_years": "Jahre",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie wird der Zinseszins mit monatlichen Einzahlungen berechnet?",
+    "a1": "Der zukünftige Gesamtwert setzt sich aus zwei Teilen zusammen: (1) dem Wachstum der Anfangsinvestition als Einmalanlage — EW = P × (1+r)^n — und (2) dem zukünftigen Wert der monatlichen Einzahlungen als Annuität — EW = C × ((1+r)^n − 1) / r. Dabei ist r der monatliche Zinssatz (Jahreszins / 12) und n die Gesamtzahl der Monate (Jahre × 12). Beide werden zum endgültigen Portfoliowert addiert.",
+    "q2": "Was ist die 72er-Regel?",
+    "a2": "Die 72er-Regel ist ein Faustwert, um zu schätzen, wie lange es dauert, Ihr Investment zu verdoppeln: Verdopplungszeit ≈ 72 / jährliche Rendite. Bei 7% Rendite verdoppelt sich Ihr Investment in etwa 72/7 ≈ 10,3 Jahren. Bei 10% sind es 7,2 Jahre. Diese Regel funktioniert, weil ln(2) / ln(1+r) ≈ 0,693 / r ≈ 72 / (100r) für typische Zinssätze.",
+    "q3": "Welche jährliche Rendite sollte ich annehmen?",
+    "a3": "Historische Durchschnittswerte für gängige Anlageformen: S&P 500 Indexfonds ≈ 10% nominal, 7% real (inflationsbereinigt); ausgewogenes Aktien/Anleihen-Portfolio ≈ 6–8%; Anleihenfonds ≈ 3–5%; Sparkonto ≈ 1–5%. Dieser Rechner verwendet standardmäßig 7%, eine konservative Schätzung für ein diversifiziertes Portfolio über einen langen Zeitraum.",
+    "q4": "Berücksichtigt dieser Rechner Steuern oder Inflation?",
+    "a4": "Nein. Der Rechner zeigt nominale Renditen vor Steuern oder Inflation. Um reale (inflationsbereinigte) Renditen zu schätzen, ziehen Sie die Inflationsrate von Ihrer jährlichen Rendite ab, bevor Sie sie eingeben. Wenn Sie z.B. 7% nominal und 3% Inflation erwarten, geben Sie 4% ein, um das reale Wachstum zu sehen. Die steuerliche Behandlung hängt von der Kontoart ab (steuerpflichtig vs. 401k vs. IRA).",
+    "q5": "Was ist der Unterschied zwischen investiertem Kapital und Gesamtertrag?",
+    "a5": "Das investierte Kapital ist einfach das Geld, das Sie tatsächlich eingezahlt haben: Anfangsinvestition plus alle monatlichen Einzahlungen. Der Gesamtertrag (Zinsen) ist das durch Zinseszins erzielte Wachstum — die Differenz zwischen Endwert und investiertem Kapital. Bei langen Laufzeiten und moderaten Zinssätzen übersteigt der Gesamtertrag aufgrund des exponentiellen Charakters des Zinseszinses typischerweise das investierte Kapital."
+  },
+  "content": {
+    "whatIs": "Dieser Investitionsrechner zeigt, wie Ihr Portfolio im Laufe der Zeit durch Zinseszins auf eine Anfangsinvestition plus regelmäßige monatliche Einzahlungen wächst. Er verwendet auch die 72er-Regel, um zu schätzen, wie lange es dauert, Ihr Geld bei der gegebenen Rendite zu verdoppeln.",
+    "formula": "r = annualReturn / 100 / 12 (monatlicher Zinssatz)\nn = years × 12 (Gesamtmonate)\nEndwert = initialAmount × (1+r)^n + monthlyContribution × ((1+r)^n − 1) / r\nInvestiertes Kapital = initialAmount + monthlyContribution × n\nGesamtertrag = Endwert − Investiertes Kapital\nVerdopplungszeit ≈ 72 / annualReturn",
+    "example": "10.000 $ Anfangsinvestition, 200 $/Monat, 7% jährliche Rendite, 20 Jahre: r = 0,5833%/Monat, n = 240 Monate. Endwert ≈ 144.959 $. Investiertes Kapital: 58.000 $. Gesamtertrag: 86.959 $. Verdopplungszeit bei 7%: ≈ 10,3 Jahre.",
+    "howItWorks_1": "Geben Sie Ihre Anfangsinvestition und optional den monatlichen Beitrag ein.",
+    "howItWorks_2": "Legen Sie die erwartete jährliche Rendite (Standard 7%) und die Anlagedauer in Jahren (Standard 10) fest.",
+    "howItWorks_3": "Klicken Sie auf Berechnen, um Ihren endgültigen Portfoliowert, den investierten Gesamtbetrag, den erzielten Gesamtertrag und die Verdopplungszeit Ihrer Investition gemäß der 72er-Regel zu sehen."
+  }
+}

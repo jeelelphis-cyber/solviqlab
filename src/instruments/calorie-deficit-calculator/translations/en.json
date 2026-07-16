@@ -1,0 +1,40 @@
+{
+  "title": "Calorie Deficit Calculator — How Many Calories to Lose Weight",
+  "description": "Calculate the exact calorie deficit needed to reach your weight loss goal. Based on TDEE with safe deficit recommendations from nutritionists.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_currentWeight": "Current Weight",
+  "label_targetWeight": "Target Weight",
+  "label_tdee": "Daily Calorie Needs (TDEE)",
+  "label_weeklyLossGoal": "Weekly Loss Goal",
+  "label_dailyDeficit": "Daily Calorie Deficit",
+  "label_dailyTarget": "Daily Calorie Target",
+  "label_weeksToGoal": "Weeks to Goal",
+  "label_totalDeficit": "Total Calorie Deficit Needed",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How is the 7700 kcal per kg figure derived?",
+    "a1": "The 7700 kcal per kg is based on the energy content of human adipose tissue. Approximately 1 kg of body fat contains about 7700 kcal of energy. This value is widely used in weight loss calculations and is supported by research on body composition.",
+    "q2": "What does 'Daily Calorie Target' mean and how do I use it?",
+    "a2": "Daily Calorie Target is the number of calories you should consume each day to achieve your desired weekly loss. It is your TDEE minus the daily deficit. For example, if your TDEE is 2500 kcal and deficit is 500 kcal, your target is 2000 kcal. Stick to this intake consistently for best results.",
+    "q3": "When should I use this calculator and what are its limitations?",
+    "a3": "Use this calculator when you have a specific weight loss goal and know your TDEE. Limitations include that it assumes all weight loss comes from fat, but actual loss includes water and muscle. Also, individual metabolism varies, so results are estimates. Consult a professional for personalized advice.",
+    "q4": "What does 'Weeks to Goal' represent and is it accurate?",
+    "a4": "Weeks to Goal estimates the time needed to reach your target weight if you maintain the exact daily deficit. It is calculated as (currentWeight - targetWeight) / weeklyLossGoal. Accuracy depends on adherence to the deficit and metabolic adaptations. It's a guideline, not a guarantee.",
+    "q5": "What authority recommends a safe weekly weight loss rate?",
+    "a5": "The Centers for Disease Control and Prevention (CDC) and the National Institutes of Health (NIH) recommend a safe and sustainable weight loss rate of 0.5 to 1 kg (1-2 pounds) per week. This rate minimizes health risks and promotes long-term success."
+  },
+  "opt_loss_025": "0.25 kg/week — Mild",
+  "opt_loss_05": "0.5 kg/week — Moderate",
+  "opt_loss_075": "0.75 kg/week — Fast",
+  "opt_loss_10": "1.0 kg/week — Aggressive",
+  "content": {
+    "whatIs": "A calorie deficit calculator determines the daily calorie deficit required to achieve a target weight loss goal. It uses your Total Daily Energy Expenditure (TDEE) and a safe weekly loss rate to compute the necessary reduction in calorie intake, ensuring sustainable weight loss.",
+    "formula": "The daily deficit is calculated as: Daily Deficit = (weeklyLossGoal * 7700) / 7, where 7700 kcal is the approximate energy deficit needed to lose 1 kg of body fat. The daily calorie target is then: Daily Target = TDEE - Daily Deficit. Total deficit needed = weeklyLossGoal * 7700, and weeks to goal = (currentWeight - targetWeight) / weeklyLossGoal.",
+    "example": "For a person with current weight 80 kg, target weight 70 kg, TDEE 2500 kcal, and weekly loss goal 0.5 kg: daily deficit = (0.5 * 7700) / 7 ≈ 550 kcal, daily target = 2500 - 550 = 1950 kcal, total deficit = 0.5 * 7700 = 3850 kcal, weeks to goal = (80 - 70) / 0.5 = 20 weeks.",
+    "howItWorks_1": "Enter your current weight (kg), target weight (kg), and Total Daily Energy Expenditure (TDEE in kcal). Then select your desired weekly weight loss goal from the dropdown (0.25, 0.5, 0.75, or 1.0 kg per week).",
+    "howItWorks_2": "Click Calculate. The tool applies the calorie deficit formula to compute your daily deficit, daily calorie target, total deficit needed, and estimated weeks to reach your goal.",
+    "howItWorks_3": "Review the outputs: Daily Calorie Deficit shows how many calories to cut each day; Daily Calorie Target is your new daily intake; Weeks to Goal estimates the duration; Total Calorie Deficit is the cumulative deficit required. Use these to plan your diet and track progress."
+  }
+}

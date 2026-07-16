@@ -1,0 +1,32 @@
+{
+  "title": "Discount Calculator — Final Price After Discount",
+  "description": "Calculate the final price after applying any discount percentage. Also calculates how much you save and the effective discount rate.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_originalPrice": "Original Price",
+  "label_discountPercent": "Discount",
+  "label_discountAmount": "You Save",
+  "label_finalPrice": "Final Price",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How is the discount amount calculated if the discount is a fixed dollar amount instead of a percentage?",
+    "a1": "This calculator only handles percentage discounts. For a fixed dollar discount, simply subtract the fixed amount from the original price: Final Price = Original Price - Fixed Discount. For example, a $10 discount on $50 gives a final price of $40.",
+    "q2": "What does the 'You Save' value represent?",
+    "a2": "The 'You Save' value is the discount amount, which is the difference between the original price and the final price. It tells you how much money you are saving by taking advantage of the discount.",
+    "q3": "Can I use this calculator for discounts greater than 100%?",
+    "a3": "No, discounts over 100% would result in a negative final price, which is not realistic in typical retail scenarios. This calculator limits the discount percent to a maximum of 100%, meaning the final price can be zero at most.",
+    "q4": "What does the 'Final Price' output mean?",
+    "a4": "The 'Final Price' is the amount you actually pay after the discount is applied. It is calculated by subtracting the discount amount from the original price. For example, if the original price is $100 and the discount is 20%, the final price is $80.",
+    "q5": "Is there a standard authority for discount calculations?",
+    "a5": "Discount calculations are based on basic arithmetic and are universally applied in retail and finance. There is no single governing authority, but the formula follows standard percentage calculation principles as taught in mathematics and used by businesses worldwide."
+  },
+  "content": {
+    "whatIs": "This discount calculator computes the sale price and total savings when a percentage discount is applied to an original price. It uses the simple concept of subtracting a percentage of the original price to find the final cost.",
+    "formula": "The discount amount is calculated as: Discount Amount = Original Price × (Discount Percent / 100). The final price is then: Final Price = Original Price - Discount Amount. For example, a 20% discount on $100 gives a discount of $20 and a final price of $80.",
+    "example": "Suppose you have an item originally priced at $250 with a 15% discount. The discount amount is $250 × 0.15 = $37.50, so the final price is $250 - $37.50 = $212.50. You save $37.50.",
+    "howItWorks_1": "Enter the original price of the item in dollars (e.g., 250) and the discount percentage (e.g., 15) into the respective fields.",
+    "howItWorks_2": "Click the Calculate button. The tool instantly applies the discount formula to compute the discount amount and final price.",
+    "howItWorks_3": "The results show 'You Save' (the discount amount in dollars) and 'Final Price' (the amount you pay after the discount). Use these to compare prices or budget your purchase."
+  }
+}

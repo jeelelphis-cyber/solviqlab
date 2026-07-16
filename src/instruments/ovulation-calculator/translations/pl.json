@@ -1,0 +1,37 @@
+{
+  "title": "Kalkulator owulacji — okno płodne i tracker cyklu",
+  "description": "Znajdź datę owulacji i okno płodne na podstawie ostatniej miesiączki i długości cyklu. Planuj lub śledź poczęcie dzięki dokładnym przewidywaniom cyklu miesiączkowego.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_lastPeriodDate": "Pierwszy dzień ostatniej miesiączki",
+  "label_cycleLength": "Średnia długość cyklu",
+  "label_ovulationDate": "Data owulacji",
+  "label_fertileWindowStart": "Początek okna płodnego",
+  "label_fertileWindowEnd": "Koniec okna płodnego",
+  "label_nextPeriodDate": "Data następnej miesiączki",
+  "label_daysUntilOvulation": "Dni do owulacji",
+  "unit_days": "dni",
+  "ymyl_disclaimer": "Ten kalkulator podaje szacunki oparte na standardowym modelu owulacji. Poszczególne cykle mogą się różnić. To narzędzie nie zastępuje porady medycznej ani antykoncepcji. W kwestii planowania płodności skonsultuj się z lekarzem.",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jak obliczana jest data owulacji?",
+    "a1": "Owulacja szacowana jest na 14 dni przed rozpoczęciem następnej miesiączki, niezależnie od długości cyklu. Wynika to z faktu, że faza lutealna (po owulacji) trwa zwykle około 14 dni. Wzór: Data owulacji = Data ostatniej miesiączki + (Długość cyklu − 14 dni). Dla cyklu 28-dniowego owulacja przypada na 14. dzień. Dla cyklu 32-dniowego na 18. dzień.",
+    "q2": "Co to jest okno płodne?",
+    "a2": "Okno płodne to okres, w którym prawdopodobieństwo poczęcia jest największe. Plemniki mogą przeżyć w jajowodach do 5 dni, a komórka jajowa jest zdolna do zapłodnienia przez 12–24 godziny po owulacji. Daje to okno płodne wynoszące około 5 dni przed owulacją i 1 dzień po niej. Ten kalkulator ustawia okno od 5 dni przed do 1 dnia po przewidywanej dacie owulacji.",
+    "q3": "Jak dokładny jest ten kalkulator owulacji?",
+    "a3": "Ten kalkulator wykorzystuje standardową metodę kalendarzową (rytmu), która zakłada regularny cykl i stałą fazę lutealną. Jest najbardziej dokładny dla kobiet z regularnymi cyklami trwającymi od 21 do 45 dni. Czynniki takie jak stres, choroba, podróże, PCOS czy karmienie piersią mogą przesunąć owulację. Dla większej dokładności połącz to z pomiarem temperatury podstawowej (BBT) lub testami LH.",
+    "q4": "Co oznacza ujemna wartość 'Dni do owulacji'?",
+    "a4": "Liczba ujemna oznacza, że przewidywana data owulacji już minęła w bieżącym cyklu. Na przykład −3 oznacza, że owulacja miała nastąpić 3 dni temu. Jest to normalne, jeśli jesteś w drugiej połowie cyklu. Podana data następnej miesiączki wskaże, kiedy spodziewany jest początek nowego cyklu.",
+    "q5": "Czy mogę używać tego kalkulatora, aby uniknąć ciąży?",
+    "a5": "Ten kalkulator nie jest przeznaczony ani niezawodny jako środek antykoncepcyjny. Metoda kalendarzowa ma typowy wskaźnik niepowodzenia wynoszący około 24% rocznie. W kwestii antykoncepcji skonsultuj się z lekarzem. To narzędzie najlepiej służy do zrozumienia własnego cyklu i zwiększenia szans na poczęcie podczas starań o dziecko."
+  },
+  "content": {
+    "whatIs": "Ten kalkulator owulacji przewiduje datę owulacji, okno płodne i datę następnej miesiączki na podstawie ostatniej miesiączki i średniej długości cyklu. Wykorzystuje standardową metodę kalendarzową powszechnie stosowaną w położnictwie i ginekologii.",
+    "formula": "Dzień owulacji = Długość cyklu − 14\nData owulacji = Data ostatniej miesiączki + Dzień owulacji\nPoczątek okna płodnego = Data owulacji − 5 dni\nKoniec okna płodnego = Data owulacji + 1 dzień\nData następnej miesiączki = Data ostatniej miesiączki + Długość cyklu",
+    "example": "Ostatnia miesiączka 1 stycznia, cykl 28 dni: Dzień owulacji = 28 − 14 = 14. Data owulacji = 15 stycznia. Okno płodne: 10–16 stycznia. Następna miesiączka: 29 stycznia.",
+    "howItWorks_1": "Wprowadź datę pierwszego dnia ostatniej miesiączki.",
+    "howItWorks_2": "Wprowadź średnią długość cyklu w dniach (typowy zakres to 21–45, domyślnie 28).",
+    "howItWorks_3": "Kliknij Oblicz, aby zobaczyć przewidywaną datę owulacji, okno płodne, datę następnej miesiączki oraz liczbę dni do owulacji od dzisiaj."
+  }
+}

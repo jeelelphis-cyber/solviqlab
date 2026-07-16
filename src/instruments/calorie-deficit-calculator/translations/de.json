@@ -1,0 +1,40 @@
+{
+  "title": "Kaloriendefizit-Rechner — Wie viele Kalorien zum Abnehmen",
+  "description": "Berechnen Sie das genaue Kaloriendefizit, das erforderlich ist, um Ihr Gewichtsverlustziel zu erreichen. Basierend auf dem TDEE mit sicheren Defizitempfehlungen von Ernährungswissenschaftlern.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_currentWeight": "Aktuelles Gewicht",
+  "label_targetWeight": "Zielgewicht",
+  "label_tdee": "Täglicher Kalorienbedarf (TDEE)",
+  "label_weeklyLossGoal": "Wöchentliches Verlustziel",
+  "label_dailyDeficit": "Tägliches Kaloriendefizit",
+  "label_dailyTarget": "Tägliches Kalorienziel",
+  "label_weeksToGoal": "Wochen bis zum Ziel",
+  "label_totalDeficit": "Erforderliches Gesamtkaloriendefizit",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie wird die Zahl 7700 kcal pro kg abgeleitet?",
+    "a1": "Die 7700 kcal pro kg basieren auf dem Energiegehalt des menschlichen Fettgewebes. Ungefähr 1 kg Körperfett enthält etwa 7700 kcal Energie. Dieser Wert wird häufig in Gewichtsverlustberechnungen verwendet und durch Forschung zur Körperzusammensetzung gestützt.",
+    "q2": "Was bedeutet 'Tägliches Kalorienziel' und wie verwende ich es?",
+    "a2": "Das tägliche Kalorienziel ist die Anzahl der Kalorien, die Sie täglich zu sich nehmen sollten, um Ihren gewünschten wöchentlichen Verlust zu erreichen. Es ist Ihr TDEE minus dem täglichen Defizit. Wenn Ihr TDEE beispielsweise 2500 kcal beträgt und das Defizit 500 kcal, beträgt Ihr Ziel 2000 kcal. Halten Sie sich für beste Ergebnisse konsequent an diese Aufnahme.",
+    "q3": "Wann sollte ich diesen Rechner verwenden und was sind seine Einschränkungen?",
+    "a3": "Verwenden Sie diesen Rechner, wenn Sie ein bestimmtes Gewichtsverlustziel haben und Ihren TDEE kennen. Einschränkungen: Er geht davon aus, dass der gesamte Gewichtsverlust aus Fett stammt, aber tatsächlicher Verlust umfasst Wasser und Muskeln. Auch der individuelle Stoffwechsel variiert, daher sind die Ergebnisse Schätzungen. Konsultieren Sie einen Fachmann für persönliche Beratung.",
+    "q4": "Was stellt 'Wochen bis zum Ziel' dar und ist es genau?",
+    "a4": "Wochen bis zum Ziel schätzt die Zeit, die benötigt wird, um Ihr Zielgewicht zu erreichen, wenn Sie das genaue tägliche Defizit einhalten. Es wird berechnet als (aktuellesGewicht - Zielgewicht) / wöchentlichesVerlustziel. Die Genauigkeit hängt von der Einhaltung des Defizits und metabolischen Anpassungen ab. Es ist eine Richtlinie, keine Garantie.",
+    "q5": "Welche Behörde empfiehlt eine sichere wöchentliche Gewichtsverlustrate?",
+    "a5": "Die Centers for Disease Control and Prevention (CDC) und die National Institutes of Health (NIH) empfehlen eine sichere und nachhaltige Gewichtsverlustrate von 0,5 bis 1 kg (1-2 Pfund) pro Woche. Diese Rate minimiert Gesundheitsrisiken und fördert langfristigen Erfolg."
+  },
+  "opt_loss_025": "0,25 kg/Woche — Mild",
+  "opt_loss_05": "0,5 kg/Woche — Moderat",
+  "opt_loss_075": "0,75 kg/Woche — Schnell",
+  "opt_loss_10": "1,0 kg/Woche — Aggressiv",
+  "content": {
+    "whatIs": "Ein Kaloriendefizit-Rechner ermittelt das tägliche Kaloriendefizit, das erforderlich ist, um ein bestimmtes Gewichtsverlustziel zu erreichen. Er verwendet Ihren Gesamtenergieverbrauch (TDEE) und eine sichere wöchentliche Verlustrate, um die notwendige Reduzierung der Kalorienaufnahme zu berechnen und so einen nachhaltigen Gewichtsverlust zu gewährleisten.",
+    "formula": "Das tägliche Defizit wird berechnet als: Tägliches Defizit = (wöchentlichesVerlustziel * 7700) / 7, wobei 7700 kcal das ungefähre Energiedefizit ist, das benötigt wird, um 1 kg Körperfett zu verlieren. Das tägliche Kalorienziel ist dann: Tägliches Ziel = TDEE - Tägliches Defizit. Gesamtdefizit benötigt = wöchentlichesVerlustziel * 7700, und Wochen bis zum Ziel = (aktuellesGewicht - Zielgewicht) / wöchentlichesVerlustziel.",
+    "example": "Für eine Person mit aktuellem Gewicht 80 kg, Zielgewicht 70 kg, TDEE 2500 kcal und wöchentlichem Verlustziel 0,5 kg: tägliches Defizit = (0,5 * 7700) / 7 ≈ 550 kcal, tägliches Ziel = 2500 - 550 = 1950 kcal, Gesamtdefizit = 0,5 * 7700 = 3850 kcal, Wochen bis zum Ziel = (80 - 70) / 0,5 = 20 Wochen.",
+    "howItWorks_1": "Geben Sie Ihr aktuelles Gewicht (kg), Zielgewicht (kg) und Ihren Gesamtenergieverbrauch (TDEE in kcal) ein. Wählen Sie dann Ihr gewünschtes wöchentliches Gewichtsverlustziel aus dem Dropdown-Menü (0,25, 0,5, 0,75 oder 1,0 kg pro Woche).",
+    "howItWorks_2": "Klicken Sie auf Berechnen. Das Tool wendet die Kaloriendefizit-Formel an, um Ihr tägliches Defizit, tägliches Kalorienziel, benötigtes Gesamtdefizit und geschätzte Wochen bis zum Ziel zu berechnen.",
+    "howItWorks_3": "Überprüfen Sie die Ergebnisse: Tägliches Kaloriendefizit zeigt, wie viele Kalorien Sie täglich einsparen müssen; Tägliches Kalorienziel ist Ihre neue tägliche Aufnahme; Wochen bis zum Ziel schätzt die Dauer; Gesamtkaloriendefizit ist das kumulative erforderliche Defizit. Nutzen Sie diese, um Ihre Ernährung zu planen und den Fortschritt zu verfolgen."
+  }
+}

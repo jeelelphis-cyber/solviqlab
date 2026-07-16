@@ -1,0 +1,39 @@
+{
+  "title": "Flächenrechner — Rechteck, Kreis, Dreieck und mehr",
+  "description": "Berechnen Sie die Fläche jeder Form: Rechteck, Quadrat, Kreis, Dreieck, Trapez und mehr. Sofortige Ergebnisse mit Formelerklärungen.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_shape": "Form",
+  "label_a": "Länge / Radius / Grundseite",
+  "label_b": "Breite / Höhe / zweite Grundseite",
+  "label_area": "Fläche",
+  "label_perimeter": "Umfang",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie wird die Fläche eines Dreiecks berechnet, wenn nur Grundseite und Höhe gegeben sind?",
+    "a1": "Die Fläche eines Dreiecks wird berechnet als 0,5 × Grundseite × Höhe. Zum Beispiel hat ein Dreieck mit Grundseite 6 Einheiten und Höhe 4 Einheiten eine Fläche von 0,5 × 6 × 4 = 12 Einheiten².",
+    "q2": "Was stellt die Umfangsausgabe für einen Kreis dar?",
+    "a2": "Bei einem Kreis wird der Umfang als Kreisumfang bezeichnet. Er wird berechnet als 2π × Radius. Für einen Kreis mit Radius 5 Einheiten beträgt der Umfang etwa 31,42 Einheiten.",
+    "q3": "Kann dieser Rechner unregelmäßige Formen verarbeiten?",
+    "a3": "Nein, dieser Rechner unterstützt nur standardmäßige geometrische Formen: Rechteck, Quadrat, Kreis, Dreieck, Trapez und Ellipse. Für unregelmäßige Formen müssten Sie diese in diese Grundformen zerlegen oder numerische Integrationsmethoden verwenden.",
+    "q4": "Was stellt die Eingabe 'b' für ein Trapez dar?",
+    "a4": "Bei einem Trapez stellt die Eingabe 'b' die Höhe dar (den senkrechten Abstand zwischen den beiden parallelen Seiten). Die beiden parallelen Seiten werden als 'a' (Grundseite1) und 'b' (Grundseite2) in die Eingabefelder eingegeben, aber beachten Sie, dass die Höhe im Feld 'b' eingegeben wird, wenn Trapez ausgewählt ist.",
+    "q5": "Welche Standardformeln verwendet dieser Rechner für den Ellipsenumfang?",
+    "a5": "Der Ellipsenumfang verwendet Ramanujans Näherung: π[3(a+b) - √((3a+b)(a+3b))]. Dies ist eine weit verbreitete Näherung; der exakte Umfang beinhaltet elliptische Integrale."
+  },
+  "opt_rectangle": "Rechteck",
+  "opt_square": "Quadrat",
+  "opt_circle": "Kreis",
+  "opt_triangle": "Dreieck",
+  "opt_trapezoid": "Trapez",
+  "opt_ellipse": "Ellipse",
+  "content": {
+    "whatIs": "Dieser Flächenrechner berechnet die Fläche und den Umfang gängiger geometrischer Formen: Rechteck, Quadrat, Kreis, Dreieck, Trapez und Ellipse. Er verwendet standardmäßige geometrische Formeln basierend auf den Abmessungen der Form und liefert sofortige Ergebnisse mit Formelerklärungen.",
+    "formula": "Für ein Rechteck: Fläche = a × b, Umfang = 2(a + b). Quadrat: Fläche = a², Umfang = 4a. Kreis: Fläche = π × a², Umfang = 2πa. Dreieck: Fläche = 0,5 × a × b, Umfang = a + b + c (c wird mit dem Satz des Pythagoras berechnet, wenn rechtwinkliges Dreieck). Trapez: Fläche = 0,5 × (a + b) × Höhe, Umfang = a + b + c + d. Ellipse: Fläche = π × a × b, Umfang ≈ π[3(a+b) - √((3a+b)(a+3b))].",
+    "example": "Für ein Rechteck mit a=5 Einheiten und b=3 Einheiten beträgt die Fläche 5 × 3 = 15 Einheiten² und der Umfang 2(5+3) = 16 Einheiten. Für einen Kreis mit Radius a=4 Einheiten beträgt die Fläche π × 4² ≈ 50,27 Einheiten², der Umfang 2π × 4 ≈ 25,13 Einheiten.",
+    "howItWorks_1": "Wählen Sie die Form aus dem Dropdown-Menü. Geben Sie dann die erforderlichen Abmessungen ein: für Rechteck die Seitenlängen a und b; für Quadrat die Seite a; für Kreis den Radius a; für Dreieck die Grundseite a und Höhe b; für Trapez die Grundseite a, Grundseite b und Höhe (eingegeben als b); für Ellipse die große Halbachse a und kleine Halbachse b.",
+    "howItWorks_2": "Klicken Sie auf die Schaltfläche Berechnen. Der Rechner wendet die entsprechende Formel für die ausgewählte Form mit den eingegebenen Werten an und berechnet die Fläche und den Umfang.",
+    "howItWorks_3": "Die Ergebnisse zeigen die Fläche in Quadrateinheiten und den Umfang in Einheiten. Sie können diese Werte für weitere Berechnungen verwenden, wie z. B. Materialschätzung oder Vergleich mit anderen Formen."
+  }
+}

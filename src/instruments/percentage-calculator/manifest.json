@@ -1,0 +1,153 @@
+{
+  "slug": "percentage-calculator",
+  "name": "Percentage Calculator",
+  "seoTitle": "Percentage Calculator — All % Calculations",
+  "seoDescription": "Calculate percentages instantly: what is X% of Y, what percent is X of Y, percentage change, and more. The fastest percentage calculator online.",
+  "primaryKeyword": "percentage calculator",
+  "type": "calculator",
+  "category": "math",
+  "isYMYL": false,
+  "version": "1.0.0",
+  "status": "live",
+  "capabilities": [
+    "formula",
+    "multi-mode",
+    "seo",
+    "localization",
+    "analytics"
+  ],
+  "inputs": [
+    {
+      "name": "mode",
+      "type": "enum",
+      "required": true,
+      "enumValues": [
+        "percent-of",
+        "is-what-percent",
+        "percent-change",
+        "percent-adjust"
+      ],
+      "description": "Type of percentage calculation"
+    },
+    {
+      "name": "a",
+      "type": "number",
+      "required": true,
+      "description": "First value (X)"
+    },
+    {
+      "name": "b",
+      "type": "number",
+      "required": true,
+      "description": "Second value (Y)"
+    },
+    {
+      "name": "direction",
+      "type": "enum",
+      "required": false,
+      "enumValues": [
+        "increase",
+        "decrease"
+      ],
+      "description": "Direction for percent-adjust mode (default: increase)"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "number",
+      "description": "Raw calculated result"
+    },
+    {
+      "name": "roundedResult",
+      "type": "number",
+      "description": "Result rounded to 2 decimal places"
+    },
+    {
+      "name": "mode",
+      "type": "enum",
+      "description": "The calculation mode used"
+    },
+    {
+      "name": "isIncrease",
+      "type": "boolean",
+      "description": "Whether change is positive (percent-change mode only)"
+    }
+  ],
+  "keywords": [
+    {
+      "term": "percentage calculator",
+      "intent": "transactional",
+      "language": "en",
+      "source": "seed",
+      "retrievedAt": "2026-07-15"
+    },
+    {
+      "term": "percent calculator",
+      "intent": "transactional",
+      "language": "en",
+      "source": "seed",
+      "retrievedAt": "2026-07-15"
+    },
+    {
+      "term": "percentage change calculator",
+      "intent": "transactional",
+      "language": "en",
+      "source": "seed",
+      "retrievedAt": "2026-07-15"
+    },
+    {
+      "term": "what is x percent of y",
+      "intent": "informational",
+      "language": "en",
+      "source": "seed",
+      "retrievedAt": "2026-07-15"
+    },
+    {
+      "term": "how to calculate percentage",
+      "intent": "informational",
+      "language": "en",
+      "source": "seed",
+      "retrievedAt": "2026-07-15"
+    },
+    {
+      "term": "calculadora de porcentaje",
+      "intent": "transactional",
+      "language": "es",
+      "source": "seed",
+      "retrievedAt": "2026-07-15"
+    },
+    {
+      "term": "calculadora de porcentagem",
+      "intent": "transactional",
+      "language": "pt",
+      "source": "seed",
+      "retrievedAt": "2026-07-15"
+    }
+  ],
+  "related": [
+    "bmi-calculator",
+    "compound-interest-calculator",
+    "tip-calculator",
+    "discount-calculator"
+  ],
+  "seo": {
+    "titleTemplate": "{name} — 4 Modes, Free & Instant",
+    "descriptionTemplate": "Four percentage calculators in one: find % of a number, calculate % change, determine what % X is of Y, or adjust a value by any percentage. Free.",
+    "primarySlug": "/percentage-calculator"
+  },
+  "supportedLanguages": [
+    "en",
+    "es",
+    "pt"
+  ],
+  "createdAt": "2026-07-15",
+  "updatedAt": "2026-07-15",
+  "releaseHistory": [
+    {
+      "status": "live",
+      "timestamp": "2026-07-15T12:02:26.544Z",
+      "notes": "First release via Publishing Pipeline"
+    }
+  ]
+}

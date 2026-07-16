@@ -1,0 +1,37 @@
+{
+  "title": "Calculadora de Hipoteca — Pago Mensual y Amortización",
+  "description": "Calcule su pago mensual de hipoteca, interés total y calendario de amortización. Incluye estimaciones de impuestos a la propiedad y seguros.",
+  "calculate": "Calcular",
+  "reset": "Restablecer",
+  "result": "Resultado",
+  "label_homePrice": "Precio de la Vivienda",
+  "label_downPayment": "Pago Inicial",
+  "label_annualRate": "Tasa de Interés",
+  "label_termYears": "Plazo del Préstamo",
+  "label_monthlyPayment": "Pago Mensual",
+  "label_principal": "Monto del Préstamo",
+  "label_totalInterest": "Interés Total",
+  "label_totalPayment": "Costo Total",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cómo se calcula el pago mensual de una hipoteca de tasa fija?",
+    "a1": "El pago mensual se deriva del monto del préstamo, la tasa de interés mensual y el número de pagos utilizando la fórmula M = P * [r(1+r)^n] / [(1+r)^n - 1]. Por ejemplo, un préstamo de $240,000 al 6% anual (0.5% mensual) a 360 meses produce un pago de $1,438.92.",
+    "q2": "¿Qué significa el interés total y cómo se calcula?",
+    "a2": "El interés total es la suma de todos los pagos de intereses durante el plazo del préstamo. Es igual al costo total menos el monto del préstamo. Para un préstamo de $240,000 al 6% a 30 años, el interés total es $278,011.20, lo que significa que paga más en intereses que el capital.",
+    "q3": "¿Cuándo debo usar esta calculadora de hipoteca?",
+    "a3": "Use esta calculadora al comparar ofertas de hipotecas de tasa fija o al planificar la compra de una vivienda. Asume una tasa de interés constante y pagos iguales; no considera tasas variables, impuestos, seguros ni cuotas de la asociación de propietarios (HOA).",
+    "q4": "¿Qué representa el monto del préstamo en los resultados?",
+    "a4": "El monto del préstamo (capital) es el precio de la vivienda menos su pago inicial. Es la cantidad que pide prestada al prestamista. Por ejemplo, una casa de $300,000 con un pago inicial de $60,000 da un monto de préstamo de $240,000.",
+    "q5": "¿Qué fórmula estándar usa esta calculadora?",
+    "a5": "Esta calculadora utiliza la fórmula de amortización estándar definida por la Oficina de Protección Financiera del Consumidor (CFPB) y ampliamente adoptada en la industria hipotecaria de EE. UU. La fórmula garantiza pagos mensuales iguales que amortizan completamente el préstamo durante el plazo elegido."
+  },
+  "unit_years": "años",
+  "content": {
+    "whatIs": "Esta calculadora de hipoteca estima su pago mensual, interés total y costo total para una hipoteca de tasa fija. Utiliza la fórmula de amortización estándar para calcular pagos mensuales iguales durante el plazo del préstamo.",
+    "formula": "El pago mensual M se calcula usando la fórmula M = P * [r(1+r)^n] / [(1+r)^n - 1], donde P es el monto del préstamo (precio de la vivienda menos pago inicial), r es la tasa de interés mensual (tasa anual dividida entre 12), y n es el número total de pagos mensuales (plazo en años multiplicado por 12). El interés total es la suma de todos los pagos de intereses durante la vida del préstamo.",
+    "example": "Para una casa de $300,000 con un pago inicial del 20% ($60,000), una tasa anual del 6% y un plazo de 30 años, el monto del préstamo es $240,000. El pago mensual es $1,438.92, el interés total es $278,011.20 y el costo total es $518,011.20.",
+    "howItWorks_1": "Ingrese el precio de la vivienda, el monto del pago inicial, la tasa de interés anual y seleccione el plazo del préstamo en años del menú desplegable.",
+    "howItWorks_2": "Haga clic en el botón Calcular. La calculadora calcula el monto del préstamo y luego aplica la fórmula de amortización para determinar el pago mensual, el interés total y el costo total.",
+    "howItWorks_3": "Revise los resultados: Pago Mensual es su monto fijo mensual, Monto del Préstamo es el capital prestado, Interés Total es el interés acumulado pagado, y Costo Total es la suma del capital y los intereses durante todo el plazo."
+  }
+}

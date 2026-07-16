@@ -1,0 +1,35 @@
+{
+  "title": "Conversor de Peso — kg, lb, oz, stones e mais",
+  "description": "Converta peso entre quilogramas, libras, onças, stones, gramas e toneladas. Conversor de unidades de peso instantâneo e preciso.",
+  "calculate": "Calcular",
+  "reset": "Redefinir",
+  "result": "Resultado",
+  "label_value": "Valor",
+  "label_fromUnit": "De",
+  "label_kilograms": "Quilogramas",
+  "label_grams": "Gramas",
+  "label_pounds": "Libras",
+  "label_ounces": "Onças",
+  "label_stones": "Stones",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Como converter libras em quilogramas exatamente?",
+    "a1": "Para converter libras em quilogramas, multiplique o valor em libras por 0,45359237. Por exemplo, 150 lb × 0,45359237 = 68,0389 kg. Este fator é definido pela libra avoirdupois internacional.",
+    "q2": "O que significa a saída 'Stones'?",
+    "a2": "Um stone (st) é uma unidade imperial britânica de peso igual a 14 libras (6,35029 kg). É comumente usado no Reino Unido e na Irlanda para medir peso corporal. O conversor mostra o peso equivalente em stones.",
+    "q3": "Posso usar este conversor para pesos muito grandes, como toneladas?",
+    "a3": "Sim, o conversor aceita valores de até 1.000.000.000.000 (1 trilhão) e inclui a unidade 'tonelada' (tonelada métrica = 1000 kg). No entanto, para pesos extremamente grandes, considere usar notação científica ou ferramentas especializadas.",
+    "q4": "Qual é a diferença entre 'ton' e 'tonne'?",
+    "a4": "Neste conversor, 'ton' refere-se à tonelada métrica (tonne), que é exatamente 1000 kg (2204,62 lb). A tonelada curta dos EUA (2000 lb) e a tonelada longa do Reino Unido (2240 lb) não estão incluídas; use a saída em libras para converter manualmente, se necessário.",
+    "q5": "Qual padrão define os fatores de conversão usados?",
+    "a5": "Os fatores de conversão são baseados no Sistema Internacional de Unidades (SI) e no sistema avoirdupois internacional. O quilograma é definido pela constante de Planck, e a libra é legalmente definida como 0,45359237 kg desde 1959 por acordo internacional."
+  },
+  "content": {
+    "whatIs": "O Conversor de Peso converte instantaneamente um valor de peso entre quilogramas, gramas, miligramas, libras, onças, stones e toneladas. Ele usa fatores de conversão padrão para fornecer resultados precisos para qualquer peso inserido.",
+    "formula": "O conversor multiplica o valor de entrada por um fator de conversão para converter para uma unidade base (quilogramas) e, em seguida, multiplica pelo fator recíproco para obter cada unidade de saída. Por exemplo, para converter libras em quilogramas: quilogramas = libras × 0,45359237. Para converter quilogramas em libras: libras = quilogramas × 2,20462262.",
+    "example": "Se você inserir 10 libras (lb) e selecionar 'lb' como unidade de origem, o conversor exibe: 4,5359 kg, 4535,9 g, 160 oz, 0,7143 st e 0,005 toneladas. Isso mostra como 10 lb se relaciona com outras unidades de peso comuns.",
+    "howItWorks_1": "Insira um valor numérico de peso no campo 'Valor' (por exemplo, 150). Em seguida, selecione a unidade desse valor no menu suspenso 'Unidade de Origem' (por exemplo, 'lb' para libras).",
+    "howItWorks_2": "Clique no botão 'Calcular'. O conversor aplica os fatores de conversão apropriados para calcular o peso equivalente em quilogramas, gramas, libras, onças e stones.",
+    "howItWorks_3": "Os resultados aparecem nos campos de saída: Quilogramas (kg), Gramas (g), Libras (lb), Onças (oz) e Stones (st). Use esses valores diretamente para culinária, transporte, condicionamento físico ou qualquer tarefa relacionada a peso."
+  }
+}

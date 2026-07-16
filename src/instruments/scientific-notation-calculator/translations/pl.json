@@ -1,0 +1,33 @@
+{
+  "title": "Kalkulator notacji naukowej — konwertuj i obliczaj",
+  "description": "Konwertuj liczby na notację naukową i z powrotem. Dodawaj, odejmuj, mnóż i dziel liczby w notacji naukowej natychmiast.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_value": "Liczba",
+  "label_coefficient": "Współczynnik",
+  "label_exponent": "Wykładnik (potęga 10)",
+  "label_scientific": "Notacja naukowa",
+  "label_engineering": "Notacja inżynierska",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jak przekonwertować liczbę taką jak 0,00045 na notację naukową?",
+    "a1": "Przesuń przecinek dziesiętny w prawo, aż otrzymasz liczbę między 1 a 10. Dla 0,00045 przesuń przecinek o 4 miejsca w prawo, aby otrzymać 4,5. Wykładnik wynosi -4, ponieważ przesunąłeś w prawo. Zatem notacja naukowa to 4,5 × 10^-4.",
+    "q2": "Jaka jest różnica między notacją naukową a inżynierską?",
+    "a2": "Notacja naukowa wymaga, aby współczynnik był między 1 a 10 (wartość bezwzględna). Notacja inżynierska wymaga, aby wykładnik był wielokrotnością 3, więc współczynnik jest między 1 a 1000. Na przykład 1234 staje się 1,234×10^3 w notacji naukowej i 1,234×10^3 w inżynierskiej (ponieważ wykładnik 3 jest wielokrotnością 3), ale 0,01234 staje się 1,234×10^-2 w naukowej i 12,34×10^-3 w inżynierskiej.",
+    "q3": "Czy ten kalkulator obsługuje bardzo duże lub bardzo małe liczby?",
+    "a3": "Tak, akceptuje liczby do ±1×10^300 i tak małe jak ±1×10^-300. Obejmuje to większość zastosowań naukowych i inżynierskich, w tym liczbę Avogadra (6,022×10^23) i stałą Plancka (6,626×10^-34).",
+    "q4": "Co oznacza wynik 'Współczynnik'?",
+    "a4": "Współczynnik to cyfry znaczące liczby, zwane również mantysą. W notacji naukowej zawsze jest między 1 a 10 (lub -10 a -1 dla liczb ujemnych). Na przykład dla 0,00045 współczynnik wynosi 4,5. Reprezentuje precyzję liczby.",
+    "q5": "Czy istnieje oficjalny standard notacji naukowej?",
+    "a5": "Tak, notacja naukowa jest zgodna ze standardem IEEE dla arytmetyki zmiennoprzecinkowej (IEEE 754) i jest szeroko stosowana w ISO 80000-1 dla wielkości i jednostek. Zapis a × 10^b jest powszechnie akceptowany w nauce i inżynierii."
+  },
+  "content": {
+    "whatIs": "Ten kalkulator notacji naukowej konwertuje dowolną liczbę rzeczywistą na notację naukową (a × 10^b) i notację inżynierską (a × 10^b, gdzie b jest wielokrotnością 3). Wykonuje również działania arytmetyczne na liczbach w notacji naukowej, choć obecna wersja koncentruje się na konwersji.",
+    "formula": "Notacja naukowa wyraża liczbę jako współczynnik (a) razy potęga 10 (10^b), gdzie 1 ≤ |a| < 10, a b jest liczbą całkowitą. Notacja inżynierska ogranicza b do wielokrotności 3. Kalkulator używa standardowego algorytmu: przesuń przecinek dziesiętny, aby uzyskać współczynnik między 1 a 10, policz przesunięcia jako wykładnik (dodatni w lewo, ujemny w prawo).",
+    "example": "Dla wartości wejściowej 123400 kalkulator wyświetla współczynnik 1,234, wykładnik 5, notację naukową 1,234 × 10^5 i notację inżynierską 123,4 × 10^3. Dla 0,000567 wyświetla współczynnik 5,67, wykładnik -4, notację naukową 5,67 × 10^-4 i notację inżynierską 567 × 10^-6.",
+    "howItWorks_1": "Wprowadź dowolną liczbę rzeczywistą w polu 'wartość'. Może to być ułamek dziesiętny, liczba całkowita lub liczba w notacji naukowej (np. 2,5e3). Liczba musi być między -1×10^300 a 1×10^300.",
+    "howItWorks_2": "Kliknij przycisk 'Oblicz'. Kalkulator przetwarza dane wejściowe, identyfikując przecinek dziesiętny i przesuwając go, aby utworzyć współczynnik między 1 a 10 (lub między 1 a 1000 dla notacji inżynierskiej). Liczba przesuniętych miejsc staje się wykładnikiem.",
+    "howItWorks_3": "Wyniki pokazują cztery wartości: Współczynnik (mantysa), Wykładnik (potęga 10), Notacja naukowa (forma standardowa) i Notacja inżynierska (wykładnik wielokrotność 3). Używaj notacji naukowej do ogólnych celów; używaj notacji inżynierskiej podczas pracy z przedrostkami SI (np. kilo, mega, mikro)."
+  }
+}

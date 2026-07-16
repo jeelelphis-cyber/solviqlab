@@ -1,0 +1,34 @@
+{
+  "title": "Calculadora de Empréstimo — Pagamento Mensal e Juros Totais",
+  "description": "Calcule seu pagamento mensal, juros totais e cronograma completo de amortização. Funciona para empréstimos pessoais, financiamento de veículos e outros.",
+  "calculate": "Calcular",
+  "reset": "Limpar",
+  "result": "Resultado",
+  "label_principal": "Valor do Empréstimo",
+  "label_annualRate": "Taxa de Juros Anual",
+  "label_termMonths": "Prazo do Empréstimo",
+  "label_monthlyPayment": "Pagamento Mensal",
+  "label_totalPayment": "Pagamento Total",
+  "label_totalInterest": "Juros Totais",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Como a taxa de juros mensal é derivada da taxa anual?",
+    "a1": "A taxa de juros mensal é a taxa anual dividida por 12. Por exemplo, uma taxa anual de 6% torna-se 0,5% ao mês (0,06/12 = 0,005). Essa taxa mensal é usada na fórmula de amortização para calcular os pagamentos.",
+    "q2": "O que 'Juros Totais' representa?",
+    "a2": "Juros Totais é o valor total de juros que você pagará durante todo o prazo do empréstimo. É calculado como Pagamento Total menos o Principal. Para um empréstimo de $10.000 a 5% por 36 meses, os juros totais são $789,56.",
+    "q3": "Esta calculadora pode ser usada para hipotecas ou empréstimos estudantis?",
+    "a3": "Esta calculadora é projetada para empréstimos de taxa fixa. Para hipotecas, custos adicionais como impostos sobre a propriedade e seguros não estão incluídos. Para empréstimos estudantis, funciona se a taxa de juros for fixa e os pagamentos forem constantes. Empréstimos com taxa variável exigem uma abordagem diferente.",
+    "q4": "O que o resultado 'Pagamento Mensal' inclui?",
+    "a4": "O Pagamento Mensal inclui tanto a parte do principal quanto dos juros, amortizados de forma que o empréstimo seja totalmente quitado ao final do prazo. Não inclui taxas, impostos ou seguros.",
+    "q5": "Existe uma fórmula padrão usada pelos bancos para amortização de empréstimos?",
+    "a5": "Sim, a fórmula usada é a fórmula de amortização padrão reconhecida por instituições financeiras e órgãos reguladores como o Consumer Financial Protection Bureau (CFPB). Ela garante pagamentos mensais iguais ao longo do prazo do empréstimo."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de empréstimo calcula seu pagamento mensal, pagamento total e juros totais para um empréstimo de taxa fixa usando a fórmula de amortização padrão. É ideal para empréstimos pessoais, financiamento de veículos e outros empréstimos com taxa de juros e prazo fixos.",
+    "formula": "O pagamento mensal é calculado usando a fórmula: M = P * [r(1+r)^n] / [(1+r)^n - 1], onde M é o pagamento mensal, P é o valor principal do empréstimo, r é a taxa de juros mensal (taxa anual dividida por 12) e n é o número de pagamentos mensais (prazo em meses). Pagamento total = M * n, e juros totais = pagamento total - P.",
+    "example": "Para um empréstimo de $10.000 a 5% de juros anuais por 36 meses: taxa mensal = 0,05/12 ≈ 0,004167, n = 36. Pagamento mensal = 10000 * [0,004167*(1,004167)^36] / [(1,004167)^36 - 1] ≈ $299,71. Pagamento total = $299,71 * 36 ≈ $10.789,56, juros totais = $789,56.",
+    "howItWorks_1": "Insira o valor do empréstimo (principal) em dólares, a taxa de juros anual em porcentagem e o prazo do empréstimo em meses. Certifique-se de que os valores estejam dentro das faixas permitidas.",
+    "howItWorks_2": "Clique no botão Calcular. A ferramenta aplica a fórmula de amortização para calcular seu pagamento mensal, pagamento total e juros totais com base nas entradas.",
+    "howItWorks_3": "Revise os resultados: Pagamento Mensal é o que você paga a cada mês; Pagamento Total é a soma de todos os pagamentos ao longo do prazo; Juros Totais é o custo do empréstimo. Use esses valores para comparar ofertas de empréstimo ou planejar seu orçamento."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Ratio Calculator — Simplify & Solve Ratios",
+  "description": "Simplify ratios, solve proportions, and scale recipes or measurements. The fastest ratio calculator online with step-by-step solutions.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_a": "A",
+  "label_b": "B",
+  "label_c": "C (optional, solve for D)",
+  "label_simplifiedA": "Simplified A",
+  "label_simplifiedB": "Simplified B",
+  "label_d": "D (if C given)",
+  "label_decimal": "A/B as decimal",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How do you simplify a ratio like 15:25?",
+    "a1": "Find the GCD of 15 and 25, which is 5. Divide both terms by 5: 15/5 = 3, 25/5 = 5, so the simplified ratio is 3:5.",
+    "q2": "What does the 'D (if C given)' output mean?",
+    "a2": "If you provide a value for c, the calculator solves the proportion a:b = c:d for d using cross-multiplication: d = (b * c) / a. This gives the fourth proportional.",
+    "q3": "Can I use this calculator for scaling recipes?",
+    "a3": "Yes. For example, if a recipe uses 2 cups flour to 3 cups sugar (2:3) and you want to use 4 cups flour, enter a=2, b=3, c=4 to find you need d=6 cups sugar.",
+    "q4": "What does the decimal output represent?",
+    "a4": "The decimal is the value of a divided by b. For a ratio 3:4, the decimal is 0.75, meaning a is 75% of b. It's useful for comparing quantities.",
+    "q5": "Is there an official standard for simplifying ratios?",
+    "a5": "Ratio simplification follows the mathematical principle of dividing by the greatest common divisor (GCD), which is a standard arithmetic method. There is no specific regulatory authority for ratio simplification."
+  },
+  "content": {
+    "whatIs": "The Ratio Calculator simplifies ratios to their lowest terms, solves for a missing value in a proportion (a:b = c:d), and computes the decimal equivalent of a ratio. It uses the concept of equivalent ratios and cross-multiplication.",
+    "formula": "To simplify a ratio a:b, divide both terms by their greatest common divisor (GCD). To find d in a:b = c:d, use cross-multiplication: d = (b * c) / a. The decimal is a / b.",
+    "example": "For inputs a=8, b=12, c=6, the calculator simplifies 8:12 to 2:3, finds d = (12*6)/8 = 9, and shows decimal 8/12 = 0.6667.",
+    "howItWorks_1": "Enter the values for a and b (required). Optionally, enter a value for c to solve for d in the proportion a:b = c:d.",
+    "howItWorks_2": "Click Calculate. The tool computes the GCD of a and b to simplify the ratio, performs cross-multiplication if c is provided, and divides a by b for the decimal.",
+    "howItWorks_3": "The results show the simplified ratio (Simplified A : Simplified B), the missing value D (if c was entered), and the decimal representation of a/b."
+  }
+}

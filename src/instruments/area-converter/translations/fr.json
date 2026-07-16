@@ -1,0 +1,35 @@
+{
+  "title": "Convertisseur de surface — Convertir m², pi², acres, hectares et plus",
+  "description": "Convertissez instantanément des unités de surface : mètres carrés, pieds carrés, acres, hectares, kilomètres carrés, milles carrés. Convertisseur d'unités de surface gratuit.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_value": "Valeur",
+  "label_fromUnit": "De",
+  "label_squareMeters": "Mètres carrés",
+  "label_squareFeet": "Pieds carrés",
+  "label_squareKilometers": "Kilomètres carrés",
+  "label_acres": "Acres",
+  "label_hectares": "Hectares",
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Comment convertir des mètres carrés en acres ?",
+    "a1": "Pour convertir des mètres carrés en acres, multipliez la surface en mètres carrés par 0,000247105. Par exemple, 10 000 m² × 0,000247105 = 2,47105 acres.",
+    "q2": "Quelle est la différence entre un acre et un hectare ?",
+    "a2": "Un acre est une unité de surface couramment utilisée aux États-Unis et au Royaume-Uni, équivalant à 43 560 pieds carrés. Un hectare est une unité métrique équivalant à 10 000 mètres carrés. Un hectare correspond approximativement à 2,47105 acres.",
+    "q3": "Ce convertisseur peut-il gérer de très grandes surfaces comme des pays ?",
+    "a3": "Oui, le convertisseur accepte des valeurs allant jusqu'à 1 quadrillion (10^15), ce qui est suffisant pour les surfaces de pays (par exemple, la Russie ~17 millions de km²). Cependant, pour des valeurs extrêmement grandes, la précision peut être limitée par la représentation en virgule flottante.",
+    "q4": "Que représente la sortie 'Kilomètres carrés' ?",
+    "a4": "La sortie 'Kilomètres carrés' affiche la surface en kilomètres carrés (km²), une unité métrique équivalant à 1 000 000 de mètres carrés. Elle est couramment utilisée pour mesurer de grandes surfaces comme des villes, des États ou des pays.",
+    "q5": "Les facteurs de conversion sont-ils basés sur des normes internationales ?",
+    "a5": "Oui, les facteurs de conversion sont basés sur le Système international d'unités (SI) et des accords internationaux. Par exemple, 1 pied est défini comme exactement 0,3048 mètre, donc 1 pied carré = 0,09290304 mètre carré."
+  },
+  "content": {
+    "whatIs": "Le Convertisseur de surface est un outil qui convertit une valeur de surface donnée d'une unité vers plusieurs autres unités simultanément. Il utilise des facteurs de conversion standard entre les unités telles que les mètres carrés, les pieds carrés, les acres, les hectares, les kilomètres carrés et les milles carrés.",
+    "formula": "La conversion est basée sur la multiplication de la valeur d'entrée par le facteur de conversion approprié. Par exemple, pour convertir des pieds carrés en mètres carrés, multipliez par 0,09290304. L'outil applique le facteur pour l'unité 'de' sélectionnée afin de convertir vers chaque unité cible.",
+    "example": "Si vous entrez 1000 et sélectionnez 'pi²' comme unité de départ, le convertisseur affiche : 92,90304 m², 1000 pi², 0,00009290304 km², 0,02295684 acres et 0,009290304 hectares.",
+    "howItWorks_1": "Entrez une valeur numérique dans le champ 'valeur' (doit être non négative).",
+    "howItWorks_2": "Sélectionnez l'unité de la valeur saisie dans le menu déroulant 'de' (par exemple, mètres carrés, acres).",
+    "howItWorks_3": "Les résultats affichent instantanément la surface équivalente en mètres carrés, pieds carrés, kilomètres carrés, acres et hectares."
+  }
+}

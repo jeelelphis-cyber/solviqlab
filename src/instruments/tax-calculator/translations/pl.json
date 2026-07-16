@@ -1,0 +1,40 @@
+{
+  "title": "Kalkulator podatkowy — US Federalny Podatek Dochodowy 2024",
+  "description": "Oblicz swój federalny podatek dochodowy w USA na 2024 rok, efektywną stawkę podatkową, stawkę krańcową oraz wynagrodzenie netto na podstawie swojego statusu podatkowego i dochodu.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_income": "Roczny dochód brutto",
+  "label_filingStatus": "Status podatkowy",
+  "label_federalTax": "Podatek federalny",
+  "label_effectiveRate": "Efektywna stawka podatkowa",
+  "label_marginalRate": "Stawka krańcowa",
+  "label_takeHomePay": "Wynagrodzenie netto",
+  "label_standardDeduction": "Standardowe odliczenie",
+  "label_taxableIncome": "Dochód podlegający opodatkowaniu",
+  "opt_single": "Samotny",
+  "opt_married_jointly": "Małżeństwo rozliczające się wspólnie",
+  "opt_head_of_household": "Głowa rodziny",
+  "ymyl_disclaimer": "Ten kalkulator dostarcza szacunków opartych na progach podatkowych na 2024 rok. Nie uwzględnia podatków stanowych, FICA, ulg ani odliczeń szczegółowych. Skonsultuj się z doradcą podatkowym w celu uzyskania porady.",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jaka jest różnica między efektywną stawką podatkową a stawką krańcową?",
+    "a1": "Krańcowa stawka podatkowa to stawka stosowana do ostatniego dolara twojego dochodu podlegającego opodatkowaniu — najwyższy próg, który osiągasz. Efektywna stawka podatkowa to średnia stawka płacona od całego dochodu. Ponieważ USA stosuje progresywne progi, większość ludzi płaci niższą stawkę efektywną niż krańcową. Na przykład samotny podatnik z dochodem 80 000 USD ma krańcową stawkę 22%, ale efektywną około 12,7%.",
+    "q2": "Jaka jest standardowa kwota odliczenia na 2024 rok?",
+    "a2": "W roku podatkowym 2024 standardowe odliczenia IRS wynoszą: 14 600 USD dla samotnych, 29 200 USD dla małżeństw rozliczających się wspólnie oraz 21 900 USD dla głowy rodziny. Kwota ta jest odejmowana od dochodu brutto przed zastosowaniem progów podatkowych. Powinieneś stosować odliczenia szczegółowe tylko wtedy, gdy przekraczają one standardowe odliczenie dla twojego statusu.",
+    "q3": "Czy ten kalkulator uwzględnia podatki FICA (Social Security i Medicare)?",
+    "a3": "Nie. Ten kalkulator obejmuje tylko federalny podatek dochodowy przy użyciu progów podatkowych IRS na 2024 rok i standardowych odliczeń. Nie uwzględnia podatków Social Security (6,2% do 168 600 USD) ani Medicare (1,45%), podatków stanowych, lokalnych ani żadnych ulg podatkowych. Twoje rzeczywiste wynagrodzenie netto będzie niższe po tych potrąceniach.",
+    "q4": "Kiedy powinienem wybrać status 'Głowa rodziny'?",
+    "a4": "Możesz rozliczać się jako głowa rodziny, jeśli jesteś stanu wolnego lub uważany za stanu wolnego, pokryłeś więcej niż połowę kosztów utrzymania domu i miałeś kwalifikującego się członka rodziny mieszkającego z tobą przez ponad połowę roku. Status HOH zapewnia wyższe standardowe odliczenie (21 900 USD) i korzystniejsze progi niż dla samotnych.",
+    "q5": "Jakie są progi podatkowe na 2024 rok dla samotnego podatnika?",
+    "a5": "Dla samotnych w 2024 roku (stosowane do dochodu podlegającego opodatkowaniu po standardowym odliczeniu 14 600 USD): 10% od pierwszych 11 600 USD; 12% od 11 601 do 47 150 USD; 22% od 47 151 do 100 525 USD; 24% od 100 526 do 191 950 USD; 32% od 191 951 do 243 725 USD; 35% od 243 726 do 609 350 USD; 37% powyżej 609 350 USD."
+  },
+  "content": {
+    "whatIs": "Ten kalkulator federalnego podatku dochodowego w USA wykorzystuje progi podatkowe IRS na 2024 rok i standardowe odliczenia, aby oszacować twoje zobowiązanie podatkowe, efektywną stawkę i wynagrodzenie netto. Obsługuje wszystkie trzy główne statusy podatkowe.",
+    "formula": "Dochód podlegający opodatkowaniu = max(0, Dochód brutto − Standardowe odliczenie)\nPodatek federalny = suma dochodów w każdym progu × stawka progowa\nStawka efektywna = Podatek federalny / Dochód brutto × 100\nWynagrodzenie netto = Dochód brutto − Podatek federalny",
+    "example": "Samotny podatnik zarabiający 75 000 USD: Standardowe odliczenie 14 600 USD → Dochód podlegający opodatkowaniu 60 400 USD. Podatek = 1 160 USD (10%) + 4 266 USD (12%) + 2 915,50 USD (22%) = 8 341,50 USD. Stawka efektywna ≈ 11,1%. Netto: 66 658,50 USD.",
+    "howItWorks_1": "Wprowadź swój roczny dochód brutto i wybierz federalny status podatkowy (Samotny, Małżeństwo rozliczające się wspólnie lub Głowa rodziny).",
+    "howItWorks_2": "Kliknij Oblicz. Kalkulator stosuje standardowe odliczenie na 2024 rok i progresywne progi podatkowe, aby obliczyć twój federalny podatek.",
+    "howItWorks_3": "Przejrzyj wyniki: należny podatek federalny, stawkę efektywną, stawkę krańcową, zastosowane standardowe odliczenie, dochód podlegający opodatkowaniu oraz szacowane wynagrodzenie netto."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Wissenschaftlicher Notation Rechner — Umrechnen & Berechnen",
+  "description": "Wandeln Sie Zahlen in wissenschaftliche Notation um und zurück. Addieren, subtrahieren, multiplizieren und dividieren Sie Zahlen in wissenschaftlicher Notation sofort.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_value": "Zahl",
+  "label_coefficient": "Koeffizient",
+  "label_exponent": "Exponent (Zehnerpotenz)",
+  "label_scientific": "Wissenschaftliche Notation",
+  "label_engineering": "Technische Notation",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie wandelt man eine Zahl wie 0,00045 in wissenschaftliche Notation um?",
+    "a1": "Verschieben Sie das Dezimalkomma nach rechts, bis Sie eine Zahl zwischen 1 und 10 erhalten. Bei 0,00045 verschieben Sie das Komma um 4 Stellen nach rechts, um 4,5 zu erhalten. Der Exponent ist -4, da Sie nach rechts verschoben haben. Die wissenschaftliche Notation lautet also 4,5 × 10^-4.",
+    "q2": "Was ist der Unterschied zwischen wissenschaftlicher Notation und technischer Notation?",
+    "a2": "Die wissenschaftliche Notation erfordert, dass der Koeffizient zwischen 1 und 10 liegt (Absolutwert). Die technische Notation erfordert, dass der Exponent ein Vielfaches von 3 ist, sodass der Koeffizient zwischen 1 und 1000 liegt. Beispielsweise wird 1234 in wissenschaftlicher Notation zu 1,234×10^3 und in technischer Notation ebenfalls zu 1,234×10^3 (da Exponent 3 ein Vielfaches von 3 ist), aber 0,01234 wird in wissenschaftlicher Notation zu 1,234×10^-2 und in technischer Notation zu 12,34×10^-3.",
+    "q3": "Kann dieser Rechner sehr große oder sehr kleine Zahlen verarbeiten?",
+    "a3": "Ja, er akzeptiert Zahlen bis zu ±1×10^300 und so klein wie ±1×10^-300. Dies deckt die meisten wissenschaftlichen und technischen Anwendungen ab, einschließlich der Avogadro-Zahl (6,022×10^23) und des Planckschen Wirkungsquantums (6,626×10^-34).",
+    "q4": "Was bedeutet die Ausgabe 'Koeffizient'?",
+    "a4": "Der Koeffizient ist die signifikanten Stellen der Zahl, auch Mantisse genannt. In der wissenschaftlichen Notation liegt er immer zwischen 1 und 10 (oder -10 und -1 für negative Zahlen). Für 0,00045 ist der Koeffizient beispielsweise 4,5. Er repräsentiert die Genauigkeit der Zahl.",
+    "q5": "Gibt es einen offiziellen Standard für wissenschaftliche Notation?",
+    "a5": "Ja, die wissenschaftliche Notation folgt dem IEEE-Standard für Gleitkommaarithmetik (IEEE 754) und wird in ISO 80000-1 für Größen und Einheiten weitgehend verwendet. Die Notation a × 10^b ist in Wissenschaft und Technik allgemein anerkannt."
+  },
+  "content": {
+    "whatIs": "Dieser wissenschaftliche Notation Rechner wandelt jede reelle Zahl in wissenschaftliche Notation (a × 10^b) und technische Notation (a × 10^b, wobei b ein Vielfaches von 3 ist) um. Er führt auch Arithmetik mit Zahlen in wissenschaftlicher Notation durch, obwohl sich die aktuelle Version auf die Umwandlung konzentriert.",
+    "formula": "Die wissenschaftliche Notation drückt eine Zahl als Koeffizient (a) mal Zehnerpotenz (10^b) aus, wobei 1 ≤ |a| < 10 und b eine ganze Zahl ist. Die technische Notation beschränkt b auf Vielfache von 3. Der Rechner verwendet den Standardalgorithmus: Verschieben des Dezimalkommas, um einen Koeffizienten zwischen 1 und 10 zu erhalten, und Zählen der Verschiebungen als Exponent (positiv für links, negativ für rechts).",
+    "example": "Für den Eingabewert 123400 gibt der Rechner den Koeffizienten 1,234, den Exponenten 5, die wissenschaftliche Notation 1,234 × 10^5 und die technische Notation 123,4 × 10^3 aus. Für 0,000567 gibt er den Koeffizienten 5,67, den Exponenten -4, die wissenschaftliche Notation 5,67 × 10^-4 und die technische Notation 567 × 10^-6 aus.",
+    "howItWorks_1": "Geben Sie eine beliebige reelle Zahl in das Feld 'Wert' ein. Dies kann eine Dezimalzahl, eine ganze Zahl oder eine Zahl in wissenschaftlicher Notation sein (z. B. 2,5e3). Die Zahl muss zwischen -1×10^300 und 1×10^300 liegen.",
+    "howItWorks_2": "Klicken Sie auf die Schaltfläche 'Berechnen'. Der Rechner verarbeitet die Eingabe, indem er das Dezimalkomma identifiziert und verschiebt, um einen Koeffizienten zwischen 1 und 10 (oder zwischen 1 und 1000 für die technische Notation) zu erzeugen. Die Anzahl der verschobenen Stellen wird zum Exponenten.",
+    "howItWorks_3": "Die Ergebnisse zeigen vier Ausgaben: Koeffizient (die Mantisse), Exponent (Zehnerpotenz), wissenschaftliche Notation (Standardform) und technische Notation (Exponent ein Vielfaches von 3). Verwenden Sie die wissenschaftliche Notation für allgemeine Zwecke; verwenden Sie die technische Notation, wenn Sie mit SI-Präfixen (z. B. Kilo, Mega, Mikro) arbeiten."
+  }
+}

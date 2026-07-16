@@ -1,0 +1,40 @@
+{
+  "title": "Steuerrechner — US-Bundeseinkommensteuer 2024",
+  "description": "Berechnen Sie Ihre US-Bundeseinkommensteuer 2024, Ihren effektiven Steuersatz, Grenzsteuersatz und Nettogehalt basierend auf Ihrem Anmeldestatus und Einkommen.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_income": "Bruttojahreseinkommen",
+  "label_filingStatus": "Anmeldestatus",
+  "label_federalTax": "Bundessteuer",
+  "label_effectiveRate": "Effektiver Steuersatz",
+  "label_marginalRate": "Grenzsteuersatz",
+  "label_takeHomePay": "Nettogehalt",
+  "label_standardDeduction": "Standardabzug",
+  "label_taxableIncome": "Zu versteuerndes Einkommen",
+  "opt_single": "Alleinstehend",
+  "opt_married_jointly": "Gemeinsam veranlagt",
+  "opt_head_of_household": "Familienvorstand",
+  "ymyl_disclaimer": "Dieser Rechner liefert Schätzungen basierend auf den Bundessteuerklassen 2024. Er berücksichtigt keine staatlichen Steuern, FICA, Steuergutschriften oder Einzelabzüge. Konsultieren Sie einen Steuerberater für eine professionelle Beratung.",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Was ist der Unterschied zwischen effektivem Steuersatz und Grenzsteuersatz?",
+    "a1": "Der Grenzsteuersatz ist der Satz, der auf den letzten Dollar Ihres zu versteuernden Einkommens angewendet wird – die höchste Steuerklasse, die Sie erreichen. Der effektive Steuersatz ist der Durchschnittssatz, der auf Ihr gesamtes Einkommen gezahlt wird. Da die USA progressive Steuerklassen verwenden, zahlen die meisten Menschen einen niedrigeren effektiven Satz als ihren Grenzsteuersatz. Beispiel: Ein Alleinstehender mit 80.000 $ Einkommen hat einen Grenzsteuersatz von 22 %, aber einen effektiven Satz von etwa 12,7 %.",
+    "q2": "Wie hoch ist der Standardabzug 2024?",
+    "a2": "Für das Steuerjahr 2024 betragen die IRS-Standardabzüge: 14.600 $ für Alleinstehende, 29.200 $ für gemeinsam Veranlagte und 21.900 $ für Familienvorstände. Dieser Betrag wird vor Anwendung der Steuerklassen vom Bruttoeinkommen abgezogen. Sie sollten Einzelabzüge nur dann geltend machen, wenn sie den Standardabzug für Ihren Anmeldestatus übersteigen.",
+    "q3": "Enthält dieser Rechner FICA-Steuern (Sozialversicherung und Medicare)?",
+    "a3": "Nein. Dieser Rechner deckt nur die Bundeseinkommensteuer unter Verwendung der IRS-Steuerklassen 2024 und Standardabzüge ab. Er enthält keine Sozialversicherungssteuer (6,2 % bis 168.600 $) oder Medicare-Steuer (1,45 %), keine staatlichen Einkommensteuern, lokalen Steuern oder Steuergutschriften. Ihr tatsächliches Nettogehalt wird nach diesen Abzügen niedriger sein.",
+    "q4": "Wann sollte ich den Anmeldestatus 'Familienvorstand' wählen?",
+    "a4": "Sie können als Familienvorstand einreichen, wenn Sie unverheiratet oder als unverheiratet gelten, mehr als die Hälfte der Kosten für die Führung eines Haushalts getragen haben und ein anspruchsberechtigtes Kind mehr als die Hälfte des Jahres bei Ihnen gelebt hat. HOH bietet einen höheren Standardabzug (21.900 $) und günstigere Steuerklassen als Alleinstehende.",
+    "q5": "Wie lauten die Bundessteuerklassen 2024 für einen Alleinstehenden?",
+    "a5": "Für Alleinstehende im Jahr 2024 (angewendet auf das zu versteuernde Einkommen nach dem Standardabzug von 14.600 $): 10 % auf die ersten 11.600 $; 12 % auf 11.601–47.150 $; 22 % auf 47.151–100.525 $; 24 % auf 100.526–191.950 $; 32 % auf 191.951–243.725 $; 35 % auf 243.726–609.350 $; 37 % über 609.350 $."
+  },
+  "content": {
+    "whatIs": "Dieser US-Bundeseinkommensteuerrechner verwendet die IRS-Steuerklassen 2024 und Standardabzüge, um Ihre Bundessteuerschuld, den effektiven Steuersatz und das Nettogehalt zu schätzen. Er unterstützt alle drei Hauptanmeldestatus.",
+    "formula": "Zu versteuerndes Einkommen = max(0, Bruttoeinkommen − Standardabzug)\nBundessteuer = Summe des Einkommens in jeder Steuerklasse × Steuerklassensatz\nEffektiver Steuersatz = Bundessteuer / Bruttoeinkommen × 100\nNettogehalt = Bruttoeinkommen − Bundessteuer",
+    "example": "Ein Alleinstehender mit 75.000 $ Einkommen: Standardabzug 14.600 $ → Zu versteuerndes Einkommen 60.400 $. Steuer = 1.160 $ (10 %) + 4.266 $ (12 %) + 2.915,50 $ (22 %) = 8.341,50 $. Effektiver Steuersatz ≈ 11,1 %. Nettogehalt: 66.658,50 $.",
+    "howItWorks_1": "Geben Sie Ihr Bruttojahreseinkommen ein und wählen Sie Ihren Bundesanmeldestatus (Alleinstehend, Gemeinsam veranlagt oder Familienvorstand).",
+    "howItWorks_2": "Klicken Sie auf Berechnen. Der Rechner wendet den Standardabzug 2024 und die progressiven Steuerklassen an, um Ihre Bundessteuer zu berechnen.",
+    "howItWorks_3": "Überprüfen Sie Ihre Ergebnisse: geschuldete Bundessteuer, effektiver Steuersatz, Grenzsteuersatz, angewandter Standardabzug, zu versteuerndes Einkommen und geschätztes Nettogehalt."
+  }
+}

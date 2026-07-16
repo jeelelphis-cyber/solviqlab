@@ -1,0 +1,37 @@
+{
+  "title": "Calculateur d'ovulation — Fenêtre fertile et suivi du cycle",
+  "description": "Trouvez votre date d'ovulation et votre fenêtre fertile en fonction de vos dernières règles et de la durée de votre cycle. Planifiez ou suivez une conception avec des prédictions précises du cycle menstruel.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_lastPeriodDate": "Premier jour des dernières règles",
+  "label_cycleLength": "Durée moyenne du cycle",
+  "label_ovulationDate": "Date d'ovulation",
+  "label_fertileWindowStart": "Début de la fenêtre fertile",
+  "label_fertileWindowEnd": "Fin de la fenêtre fertile",
+  "label_nextPeriodDate": "Date des prochaines règles",
+  "label_daysUntilOvulation": "Jours avant l'ovulation",
+  "unit_days": "jours",
+  "ymyl_disclaimer": "Ce calculateur fournit des estimations basées sur un modèle d'ovulation standard. Les cycles individuels varient. Cet outil ne remplace pas un avis médical ou une contraception. Consultez un professionnel de santé pour la planification familiale.",
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Comment la date d'ovulation est-elle calculée ?",
+    "a1": "L'ovulation est estimée 14 jours avant le début des prochaines règles, quelle que soit la durée du cycle. En effet, la phase lutéale (post-ovulation) est généralement d'environ 14 jours. La formule est : Date d'ovulation = Date des dernières règles + (Durée du cycle − 14 jours). Pour un cycle de 28 jours, l'ovulation a lieu au jour 14. Pour un cycle de 32 jours, elle a lieu au jour 18.",
+    "q2": "Qu'est-ce que la fenêtre fertile ?",
+    "a2": "La fenêtre fertile est la période pendant laquelle la conception est la plus probable. Les spermatozoïdes peuvent survivre dans les trompes de Fallope jusqu'à 5 jours, et l'ovule est viable 12 à 24 heures après l'ovulation. Cela donne une fenêtre fertile d'environ 5 jours avant l'ovulation jusqu'à 1 jour après. Ce calculateur définit la fenêtre de 5 jours avant à 1 jour après la date d'ovulation estimée.",
+    "q3": "Quelle est la précision de ce calculateur d'ovulation ?",
+    "a3": "Ce calculateur utilise la méthode du calendrier/rythme standard, qui suppose un cycle régulier et une phase lutéale fixe. Il est plus précis pour les femmes ayant des cycles réguliers entre 21 et 45 jours. Des facteurs comme le stress, la maladie, les voyages, le SOPK ou l'allaitement peuvent décaler l'ovulation. Pour une meilleure précision, combinez-le avec le suivi de la température basale (BBT) ou les tests de pic de LH.",
+    "q4": "Que signifie un nombre négatif de 'Jours avant l'ovulation' ?",
+    "a4": "Un nombre négatif signifie que la date d'ovulation estimée est déjà passée dans le cycle en cours. Par exemple, −3 signifie que l'ovulation était estimée il y a 3 jours. C'est normal si vous êtes dans la seconde moitié de votre cycle. La date des prochaines règles indiquera quand votre nouveau cycle devrait commencer.",
+    "q5": "Puis-je utiliser ce calculateur pour éviter une grossesse ?",
+    "a5": "Ce calculateur n'est pas destiné ni fiable pour la contraception. La méthode du calendrier a un taux d'échec typique d'environ 24 % par an. Pour la contraception, consultez un professionnel de santé. Cet outil est mieux utilisé pour comprendre votre cycle et augmenter les chances de conception lorsque vous essayez de tomber enceinte."
+  },
+  "content": {
+    "whatIs": "Ce calculateur d'ovulation prédit votre date d'ovulation, votre fenêtre fertile et la date de vos prochaines règles en fonction de vos dernières règles et de la durée moyenne de votre cycle. Il utilise la méthode du calendrier standard largement référencée en obstétrique et gynécologie.",
+    "formula": "Jour d'ovulation = Durée du cycle − 14\nDate d'ovulation = Date des dernières règles + Jour d'ovulation\nDébut de la fenêtre fertile = Date d'ovulation − 5 jours\nFin de la fenêtre fertile = Date d'ovulation + 1 jour\nDate des prochaines règles = Date des dernières règles + Durée du cycle",
+    "example": "Dernières règles le 1er janvier, cycle de 28 jours : Jour d'ovulation = 28 − 14 = 14. Date d'ovulation = 15 janvier. Fenêtre fertile : 10–16 janvier. Prochaines règles : 29 janvier.",
+    "howItWorks_1": "Entrez la date du premier jour de vos dernières règles.",
+    "howItWorks_2": "Entrez la durée moyenne de votre cycle en jours (plage typique 21–45, par défaut 28).",
+    "howItWorks_3": "Cliquez sur Calculer pour voir votre date d'ovulation estimée, votre fenêtre fertile, la date de vos prochaines règles et le nombre de jours avant l'ovulation à partir d'aujourd'hui."
+  }
+}

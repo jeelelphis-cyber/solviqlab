@@ -1,0 +1,35 @@
+{
+  "title": "Volume Converter — Liters, Gallons, ml, Cups & more",
+  "description": "Convert volume units instantly: liters, gallons, milliliters, cups, fluid ounces, cubic meters, cubic feet. Free volume unit converter.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_value": "Value",
+  "label_fromUnit": "From",
+  "label_liters": "Liters",
+  "label_milliliters": "Milliliters",
+  "label_gallons": "US Gallons",
+  "label_cups": "Cups",
+  "label_fluidOunces": "Fluid Ounces",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "What is the conversion factor from liters to US gallons?",
+    "a1": "1 liter is equal to 0.264172 US gallons. To convert liters to gallons, multiply the liter value by 0.264172. For example, 10 L × 0.264172 = 2.64172 gal.",
+    "q2": "How do I interpret the 'Cups' output? Is it US or metric cups?",
+    "a2": "The 'Cups' output uses US customary cups, where 1 US cup = 236.588 mL. This is different from metric cups (250 mL) or imperial cups. The conversion is based on the US standard.",
+    "q3": "Can this converter handle very large volumes, like cubic meters?",
+    "a3": "Yes, the converter accepts values up to 1,000,000,000,000. However, it only outputs in liters, milliliters, gallons, cups, and fluid ounces. For cubic meters, you would need to convert manually: 1 m³ = 1000 L.",
+    "q4": "What does the 'Fluid Ounces' output represent?",
+    "a4": "Fluid ounces (fl oz) are a US customary unit for volume, not weight. 1 US fluid ounce = 29.5735 mL. The output shows the equivalent volume in fluid ounces based on the input.",
+    "q5": "What standard defines the conversion factors used?",
+    "a5": "The conversion factors are based on the US customary system as defined by the National Institute of Standards and Technology (NIST). For example, 1 US gallon = 3.785411784 L exactly, and 1 US cup = 236.5882365 mL."
+  },
+  "content": {
+    "whatIs": "The Volume Converter is a tool that converts a given volume from one unit to multiple other units simultaneously. It uses conversion factors between units like liters, gallons, cups, and fluid ounces, all based on the metric and US customary systems.",
+    "formula": "The conversion uses the base unit of liters. For each unit, a conversion factor is applied: 1 L = 1000 mL = 0.264172 gal = 4.22675 cups = 33.814 fl oz. The formula is: result = value * (conversion factor from fromUnit to L) * (conversion factor from L to targetUnit).",
+    "example": "For example, converting 2 gallons to other units: 2 gal × 3.78541 L/gal = 7.57082 L, then 7.57082 L × 1000 = 7570.82 mL, × 4.22675 = 32 cups, × 33.814 = 256 fl oz.",
+    "howItWorks_1": "Enter the numeric volume value in the 'value' field (e.g., 5).",
+    "howItWorks_2": "Select the unit of the entered value from the 'fromUnit' dropdown (e.g., 'gal' for gallons). The calculator then applies the conversion factors to compute equivalent volumes in liters, milliliters, gallons, cups, and fluid ounces.",
+    "howItWorks_3": "The results are displayed in the output fields: Liters, Milliliters, US Gallons, Cups, and Fluid Ounces. Each shows the converted value with its unit label."
+  }
+}

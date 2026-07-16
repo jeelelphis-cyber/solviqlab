@@ -1,0 +1,40 @@
+{
+  "title": "Calculadora de Salario — Convertidor de Salario por Hora a Anual",
+  "description": "Convierta salario por hora a anual o anual a por hora. Calcule ganancias semanales, quincenales, mensuales y anuales al instante.",
+  "calculate": "Calcular",
+  "reset": "Reiniciar",
+  "result": "Resultado",
+  "label_salaryType": "Tipo de Salario",
+  "label_amount": "Cantidad",
+  "label_hoursPerWeek": "Horas por Semana",
+  "label_weeksPerYear": "Semanas por Año",
+  "label_hourly": "Tarifa por Hora",
+  "label_daily": "Tarifa Diaria",
+  "label_weekly": "Pago Semanal",
+  "label_biweekly": "Pago Quincenal",
+  "label_monthly": "Pago Mensual",
+  "label_annual": "Salario Anual",
+  "opt_hourly": "Por Hora",
+  "opt_annual": "Anual",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cómo convierto un salario por hora a un salario anual?",
+    "a1": "Multiplique su tarifa por hora por el número de horas que trabaja por semana, luego multiplique por el número de semanas que trabaja por año. Para una semana estándar de 40 horas y un año de 52 semanas: Anual = Por hora × 40 × 52. Por ejemplo, $25/hora × 40 × 52 = $52,000 por año.",
+    "q2": "¿Cómo se calcula la tarifa diaria?",
+    "a2": "La tarifa diaria se calcula dividiendo el salario anual entre 261 — el número aproximado de días laborables en un año (52 semanas × 5 días). Para un salario de $52,000: $52,000 / 261 ≈ $199.23 por día. Este es un estándar utilizado por los sistemas de RRHH y nóminas en EE. UU.",
+    "q3": "¿Cuál es la diferencia entre el pago quincenal y el pago bimensual?",
+    "a3": "El pago quincenal se realiza cada dos semanas — 26 períodos de pago por año. El pago bimensual se realiza dos veces al mes — 24 períodos de pago por año. Esta calculadora utiliza el estándar quincenal (26 períodos). La diferencia importa para la elaboración de presupuestos: el pago quincenal resulta en dos meses con un cheque extra cada año.",
+    "q4": "¿Esta calculadora considera impuestos o deducciones?",
+    "a4": "No. Esta calculadora muestra solo cifras de salario bruto, antes de cualquier impuesto federal, estatal o local, Seguro Social, Medicare, seguro de salud o contribuciones de jubilación. Para el salario neto después de impuestos federales, use la Calculadora de Impuestos.",
+    "q5": "¿Qué pasa si trabajo a tiempo parcial o por temporada?",
+    "a5": "Ajuste los campos 'Horas por Semana' y 'Semanas por Año' para que coincidan con su horario real. Por ejemplo, un trabajador a tiempo parcial con 20 horas/semana durante 48 semanas ganando $18/hora: $18 × 20 × 48 = $17,280 de salario anual."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de salario convierte entre salarios por hora y anuales y le muestra su pago equivalente en cada período de pago común: diario, semanal, quincenal, mensual y anual.",
+    "formula": "Si es por hora: Anual = Cantidad × Horas/Semana × Semanas/Año\nSi es anual: Por hora = Cantidad / (Horas/Semana × Semanas/Año)\nMensual = Anual / 12\nQuincenal = Anual / 26\nSemanal = Anual / 52\nDiario = Anual / 261",
+    "example": "Un trabajador que gana $25/hora con 40 horas/semana durante 52 semanas gana $52,000/año. Eso equivale a $1,000/semana, $2,000 quincenal, $4,333.33/mes y $199.23/día.",
+    "howItWorks_1": "Seleccione si conoce su tarifa por hora o su salario anual, luego ingrese la cantidad.",
+    "howItWorks_2": "Ajuste las horas por semana (predeterminado 40) y las semanas por año (predeterminado 52) si su horario es diferente.",
+    "howItWorks_3": "Haga clic en Calcular para ver sus cifras equivalentes por hora, diarias, semanales, quincenales, mensuales y anuales al instante."
+  }
+}

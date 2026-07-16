@@ -1,0 +1,35 @@
+{
+  "slug": "tax-calculator",
+  "name": "Tax Calculator",
+  "seoTitle": "Tax Calculator — US Federal Income Tax 2024",
+  "seoDescription": "Calculate your 2024 US federal income tax, effective tax rate, marginal rate, and take-home pay based on filing status and income.",
+  "primaryKeyword": "tax calculator",
+  "type": "calculator",
+  "category": "finance",
+  "isYMYL": true,
+  "version": "1.0.0",
+  "status": "live",
+  "capabilities": ["formula", "seo", "localization"],
+  "inputs": [
+    {"name": "income", "type": "number", "required": true, "min": 0, "max": 100000000, "description": "Gross annual income"},
+    {"name": "filingStatus", "type": "select", "required": true, "enumValues": ["single", "married_jointly", "head_of_household"], "description": "Federal filing status", "default": "single"}
+  ],
+  "outputs": [
+    {"name": "federalTax", "type": "number", "description": "Total federal income tax owed"},
+    {"name": "effectiveRate", "type": "number", "description": "Effective tax rate (%)"},
+    {"name": "marginalRate", "type": "number", "description": "Marginal (top bracket) tax rate (%)"},
+    {"name": "takeHomePay", "type": "number", "description": "Take-home pay after federal tax"},
+    {"name": "standardDeduction", "type": "number", "description": "2024 standard deduction applied"},
+    {"name": "taxableIncome", "type": "number", "description": "Income after standard deduction"}
+  ],
+  "keywords": [
+    {"term": "tax calculator", "intent": "transactional", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"},
+    {"term": "federal income tax calculator 2024", "intent": "transactional", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"},
+    {"term": "effective tax rate calculator", "intent": "transactional", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"}
+  ],
+  "related": ["salary-calculator", "retirement-calculator", "investment-calculator", "loan-calculator"],
+  "supportedLanguages": ["en"],
+  "createdAt": "2026-07-16",
+  "updatedAt": "2026-07-16",
+  "releaseHistory": [{"status": "live", "timestamp": "2026-07-16T00:00:00.000Z"}]
+}

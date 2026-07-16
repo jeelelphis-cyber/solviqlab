@@ -1,0 +1,39 @@
+{
+  "title": "Area Calculator — Rectangle, Circle, Triangle & More",
+  "description": "Calculate the area of any shape: rectangle, square, circle, triangle, trapezoid, and more. Instant results with formula explanations.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_shape": "Shape",
+  "label_a": "Length / Radius / Base",
+  "label_b": "Width / Height / Second Base",
+  "label_area": "Area",
+  "label_perimeter": "Perimeter",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How is the area of a triangle calculated if only base and height are given?",
+    "a1": "The area of a triangle is calculated as 0.5 × base × height. For example, a triangle with base 6 units and height 4 units has area = 0.5 × 6 × 4 = 12 units².",
+    "q2": "What does the perimeter output represent for a circle?",
+    "a2": "For a circle, the perimeter is called the circumference. It is calculated as 2π × radius. For a circle with radius 5 units, the circumference is about 31.42 units.",
+    "q3": "Can this calculator handle irregular shapes?",
+    "a3": "No, this calculator only supports standard geometric shapes: rectangle, square, circle, triangle, trapezoid, and ellipse. For irregular shapes, you would need to break them into these basic shapes or use numerical integration methods.",
+    "q4": "What does the 'b' input represent for a trapezoid?",
+    "a4": "For a trapezoid, the 'b' input represents the height (the perpendicular distance between the two parallel sides). The two parallel sides are entered as 'a' (base1) and 'b' (base2) in the input fields, but note that the height is entered in the 'b' field when trapezoid is selected.",
+    "q5": "What standard formulas does this calculator use for ellipse perimeter?",
+    "a5": "The ellipse perimeter uses Ramanujan's approximation: π[3(a+b) - √((3a+b)(a+3b))]. This is a widely accepted approximation; the exact perimeter involves elliptic integrals."
+  },
+  "opt_rectangle": "Rectangle",
+  "opt_square": "Square",
+  "opt_circle": "Circle",
+  "opt_triangle": "Triangle",
+  "opt_trapezoid": "Trapezoid",
+  "opt_ellipse": "Ellipse",
+  "content": {
+    "whatIs": "This area calculator computes the area and perimeter of common geometric shapes: rectangle, square, circle, triangle, trapezoid, and ellipse. It uses standard geometric formulas based on the shape's dimensions, providing instant results with formula explanations.",
+    "formula": "For a rectangle: Area = a × b, Perimeter = 2(a + b). Square: Area = a², Perimeter = 4a. Circle: Area = π × a², Perimeter = 2πa. Triangle: Area = 0.5 × a × b, Perimeter = a + b + c (c calculated via Pythagorean theorem if right triangle). Trapezoid: Area = 0.5 × (a + b) × height, Perimeter = a + b + c + d. Ellipse: Area = π × a × b, Perimeter ≈ π[3(a+b) - √((3a+b)(a+3b))].",
+    "example": "For a rectangle with a=5 units and b=3 units, the area is 5 × 3 = 15 units², and the perimeter is 2(5+3) = 16 units. For a circle with radius a=4 units, area = π × 4² ≈ 50.27 units², perimeter = 2π × 4 ≈ 25.13 units.",
+    "howItWorks_1": "Select the shape from the dropdown menu. Then enter the required dimensions: for rectangle, enter side lengths a and b; for square, enter side a; for circle, enter radius a; for triangle, enter base a and height b; for trapezoid, enter base a, base b, and height (entered as b); for ellipse, enter semi-major axis a and semi-minor axis b.",
+    "howItWorks_2": "Click the Calculate button. The calculator applies the appropriate formula for the selected shape using the entered values and computes the area and perimeter.",
+    "howItWorks_3": "The results display the area in square units and the perimeter in units. You can use these values for further calculations, such as material estimation or comparison with other shapes."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Average Calculator — Mean, Median, Mode & More",
+  "description": "Calculate mean, median, mode, range, and standard deviation from any list of numbers. Instant statistics for students and professionals.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_numbers": "Numbers (comma-separated)",
+  "label_mean": "Mean (Average)",
+  "label_median": "Median",
+  "label_mode": "Mode",
+  "label_range": "Range",
+  "label_count": "Count",
+  "label_sum": "Sum",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "What is the difference between mean and median?",
+    "a1": "Mean is the arithmetic average, sensitive to outliers. Median is the middle value when data is sorted, robust to extreme values. For example, in {1,2,3,100}, mean = 26.5, median = 2.5.",
+    "q2": "How is mode calculated if no number repeats?",
+    "a2": "If no number appears more than once, the dataset has no mode. Some calculators may report 'no mode' or list all values. Our calculator returns the most frequent value(s); if all are unique, mode is undefined.",
+    "q3": "When should I use median instead of mean?",
+    "a3": "Use median for skewed distributions or when outliers are present, such as income data. Mean is appropriate for symmetric distributions without extreme values. Median better represents a typical value in skewed data.",
+    "q4": "What does the range tell me about my data?",
+    "a4": "Range = maximum - minimum. It measures the total spread of the data. A large range indicates high variability, while a small range suggests data points are close together. However, range is sensitive to outliers.",
+    "q5": "Is there a standard reference for calculating mean and median?",
+    "a5": "Yes, the formulas follow standard statistical definitions as per ISO 3534-1 and the American Statistical Association. Mean and median are fundamental descriptive statistics used universally in data analysis."
+  },
+  "content": {
+    "whatIs": "The average calculator computes the mean, median, mode, range, count, and sum of a list of numbers. The mean is the arithmetic average, calculated by summing all numbers and dividing by the count. It provides a quick snapshot of central tendency and spread.",
+    "formula": "Mean = (sum of all numbers) / (count of numbers). Median is the middle value when numbers are sorted; if even count, median = average of two middle numbers. Mode is the most frequent value(s). Range = maximum - minimum. Standard deviation (if included) measures dispersion.",
+    "example": "For numbers 2, 4, 4, 6, 8: sum = 24, count = 5, mean = 24/5 = 4.8. Sorted: 2,4,4,6,8, median = 4 (third value). Mode = 4 (appears twice). Range = 8-2 = 6.",
+    "howItWorks_1": "Enter your list of numbers in the input field, separated by commas or spaces. Each number can be positive, negative, or decimal.",
+    "howItWorks_2": "Click the Calculate button. The tool processes your numbers: it counts them, sums them, sorts them for median and mode, and computes range and standard deviation.",
+    "howItWorks_3": "Review the results: Mean (average), Median (middle value), Mode (most frequent), Range (spread), Count (number of entries), and Sum (total). Use these to understand your data's central tendency and variability."
+  }
+}

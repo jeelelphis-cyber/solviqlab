@@ -1,0 +1,36 @@
+{
+  "title": "Inflationsrechner — Kaufkraft & CPI-Anpassung",
+  "description": "Berechnen Sie den angepassten Geldwert im Zeitverlauf mit einer benutzerdefinierten Inflationsrate. Sehen Sie, wie die Inflation die Kaufkraft zwischen zwei beliebigen Jahren verringert.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_amount": "Ursprünglicher Betrag",
+  "label_fromYear": "Von Jahr",
+  "label_toYear": "Bis Jahr",
+  "label_inflationRate": "Jährliche Inflationsrate",
+  "label_adjustedAmount": "Angepasster Betrag",
+  "label_totalInflation": "Gesamtinflation",
+  "label_purchasingPowerLoss": "Verlorene Kaufkraft",
+  "label_yearsElapsed": "Vergangene Jahre",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Was stellt der angepasste Betrag dar?",
+    "a1": "Der angepasste Betrag gibt an, wie viel die ursprüngliche Geldsumme in Dollar des Zieljahres wert ist. Wenn Sie im Jahr 2000 1.000 $ hatten und die Inflation durchschnittlich 3 % pro Jahr betrug, bräuchten Sie bis 2024 etwa 2.032 $, um die gleiche Kaufkraft zu haben. Alternativ sind Ihre ursprünglichen 1.000 $ aus dem Jahr 2000 in Bezug auf 2024 nur etwa 492 $ wert.",
+    "q2": "Wie wird der Kaufkraftverlust berechnet?",
+    "a2": "Der Kaufkraftverlust zeigt, wie viel weniger Ihr ursprünglicher Betrag im Zieljahr kaufen kann. Er wird berechnet als: 100 − (ursprünglicher Betrag / angepasster Betrag × 100). Für 1.000 $, angepasst auf 2.032 $ über 24 Jahre bei 3 %, beträgt der Kaufkraftverlust 100 − (1000/2032 × 100) ≈ 50,8 %, was bedeutet, dass das Geld etwa halb so viel kauft.",
+    "q3": "Was ist die durchschnittliche US-Inflationsrate?",
+    "a3": "Die langfristige durchschnittliche US-CPI-Inflationsrate beträgt etwa 3 % pro Jahr, variiert jedoch stark je nach Jahrzehnt. In den 1970er Jahren lagen die Raten über 10 %, während sie in den 2010er Jahren durchschnittlich bei etwa 1,7 % lagen. In den letzten Jahren (2021–2023) wurden Spitzenwerte von 7–9 % erreicht. Der Standardwert von 3 % ist ein vernünftiger historischer Durchschnitt für die langfristige Planung.",
+    "q4": "Wie unterscheidet sich die Gesamtinflation von der Inflationsrate?",
+    "a4": "Die Inflationsrate ist die jährliche prozentuale Veränderung der Preise. Die Gesamtinflation ist die kumulierte zusammengesetzte Veränderung über den gesamten Zeitraum. Bei einer jährlichen Rate von 3 % über 24 Jahre beträgt die Gesamtinflation (1,03^24 − 1) × 100 ≈ 103,3 %, was bedeutet, dass sich die Preise in diesem Zeitraum mehr als verdoppelt haben.",
+    "q5": "Kann ich dies für zukünftige Prognosen verwenden?",
+    "a5": "Ja. Setzen Sie 'Von Jahr' auf das aktuelle Jahr und 'Bis Jahr' auf ein zukünftiges Jahr. Der Rechner verwendet die Formel angepassterBetrag = Betrag × (1 + Rate/100)^Jahre, die sowohl für historische Rückblicke als auch für Vorwärtsprognosen gültig ist – wobei zu beachten ist, dass zukünftige Raten Schätzungen sind."
+  },
+  "content": {
+    "whatIs": "Dieser Inflationsrechner zeigt Ihnen, wie viel eine Geldsumme aus einem Jahr in einem anderen Jahr wert ist, unter Verwendung einer benutzerdefinierten jährlichen Inflationsrate. Er zeigt auch die kumulierte Gesamtinflation und den Kaufkraftverlust über den Zeitraum an.",
+    "formula": "Angepasster Betrag = Betrag × (1 + Rate/100)^(BisJahr − VonJahr)\nGesamtinflation = ((Angepasst / Ursprünglich) − 1) × 100\nKaufkraftverlust = 100 − (Ursprünglich / Angepasst × 100)",
+    "example": "Ein Betrag von 10.000 $ aus dem Jahr 2000, angepasst auf 2024 bei 3 % jährlicher Inflation: 10.000 $ × (1,03)^24 ≈ 20.327,94 $. Die Gesamtinflation beträgt 103,3 % und der Kaufkraftverlust 50,8 % – die ursprünglichen 10.000 $ haben jetzt die Kaufkraft von etwa 4.919 $.",
+    "howItWorks_1": "Geben Sie den ursprünglichen Geldbetrag und das Startjahr ein.",
+    "howItWorks_2": "Legen Sie das Zieljahr fest und passen Sie die jährliche Inflationsrate an (Standard 3 %).",
+    "howItWorks_3": "Klicken Sie auf Berechnen, um den inflationsbereinigten Wert, die kumulierte Gesamtinflation und den Verlust an Kaufkraft zu sehen."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Calculateur d'inflation — Pouvoir d'achat et ajustement IPC",
+  "description": "Calculez la valeur ajustée de l'argent au fil du temps en utilisant un taux d'inflation personnalisé. Voyez comment l'inflation érode le pouvoir d'achat entre deux années quelconques.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_amount": "Montant initial",
+  "label_fromYear": "Année de départ",
+  "label_toYear": "Année d'arrivée",
+  "label_inflationRate": "Taux d'inflation annuel",
+  "label_adjustedAmount": "Montant ajusté",
+  "label_totalInflation": "Inflation totale",
+  "label_purchasingPowerLoss": "Pouvoir d'achat perdu",
+  "label_yearsElapsed": "Années écoulées",
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Que représente le montant ajusté ?",
+    "a1": "Le montant ajusté indique la valeur de la somme initiale en dollars de l'année cible. Si vous aviez 1 000 $ en 2000 et que l'inflation moyenne était de 3 % par an, en 2024 vous auriez besoin d'environ 2 032 $ pour avoir le même pouvoir d'achat. Alternativement, vos 1 000 $ de 2000 ne valent qu'environ 492 $ en 2024.",
+    "q2": "Comment est calculée la perte de pouvoir d'achat ?",
+    "a2": "La perte de pouvoir d'achat montre combien votre montant initial peut acheter de moins dans l'année cible. Elle est calculée comme suit : 100 − (montant initial / montant ajusté × 100). Pour 1 000 $ ajustés à 2 032 $ sur 24 ans à 3 %, la perte de pouvoir d'achat est de 100 − (1000/2032 × 100) ≈ 50,8 %, ce qui signifie que l'argent achète environ la moitié de ce qu'il achetait.",
+    "q3": "Quel est le taux d'inflation moyen aux États-Unis ?",
+    "a3": "Le taux d'inflation moyen à long terme de l'IPC américain est d'environ 3 % par an, bien qu'il varie considérablement selon les décennies. Les années 1970 ont connu des taux supérieurs à 10 %, tandis que les années 2010 ont été en moyenne autour de 1,7 %. Les années récentes (2021-2023) ont connu des pics de 7 à 9 %. La valeur par défaut de 3 % est une moyenne historique raisonnable pour une planification à long terme.",
+    "q4": "En quoi l'inflation totale diffère-t-elle du taux d'inflation ?",
+    "a4": "Le taux d'inflation est le pourcentage annuel de variation des prix. L'inflation totale est le changement cumulé composé sur toute la période. À un taux annuel de 3 % sur 24 ans, l'inflation totale est de (1,03^24 − 1) × 100 ≈ 103,3 %, ce qui signifie que les prix ont plus que doublé sur cette période.",
+    "q5": "Puis-je l'utiliser pour des projections futures ?",
+    "a5": "Oui. Définissez 'Année de départ' sur l'année en cours et 'Année d'arrivée' sur une année future. Le calculateur utilise la formule montantAjusté = montant × (1 + taux/100)^années, qui est valable à la fois pour les recherches historiques et les projections futures — en comprenant que les taux futurs sont des estimations."
+  },
+  "content": {
+    "whatIs": "Ce calculateur d'inflation vous montre combien vaut une somme d'argent d'une année donnée dans une autre année, en utilisant un taux d'inflation annuel défini par l'utilisateur. Il révèle également l'inflation cumulative totale et l'érosion du pouvoir d'achat sur la période.",
+    "formula": "Montant ajusté = Montant × (1 + Taux/100)^(AnnéeArrivée − AnnéeDépart)\nInflation totale = ((Ajusté / Original) − 1) × 100\nPerte de pouvoir d'achat = 100 − (Original / Ajusté × 100)",
+    "example": "Un montant de 10 000 $ de 2000 ajusté à 2024 avec une inflation annuelle de 3 % : 10 000 $ × (1,03)^24 ≈ 20 327,94 $. L'inflation totale est de 103,3 % et la perte de pouvoir d'achat est de 50,8 % — les 10 000 $ d'origine ont maintenant le pouvoir d'achat d'environ 4 919 $.",
+    "howItWorks_1": "Entrez le montant initial et l'année de départ.",
+    "howItWorks_2": "Définissez l'année cible et ajustez le taux d'inflation annuel (par défaut 3 %).",
+    "howItWorks_3": "Cliquez sur Calculer pour voir la valeur ajustée à l'inflation, l'inflation cumulative totale et la perte de pouvoir d'achat."
+  }
+}

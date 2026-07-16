@@ -1,0 +1,40 @@
+{
+  "title": "Kalkulator ułamków — dodawanie, odejmowanie, mnożenie, dzielenie",
+  "description": "Obliczaj ułamki błyskawicznie. Dodawaj, odejmuj, mnóż i dziel ułamki z rozwiązaniami krok po kroku. Automatycznie upraszcza wyniki.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_numerator1": "Licznik 1",
+  "label_denominator1": "Mianownik 1",
+  "label_operation": "Działanie",
+  "label_numerator2": "Licznik 2",
+  "label_denominator2": "Mianownik 2",
+  "label_resultNumerator": "Licznik wyniku",
+  "label_resultDenominator": "Mianownik wyniku",
+  "label_decimal": "Ułamek dziesiętny",
+  "faq": {
+    "title": "Najczęściej zadawane pytania",
+    "q1": "Jak kalkulator upraszcza ułamki?",
+    "a1": "Po wykonaniu działania kalkulator znajduje największy wspólny dzielnik (NWD) licznika i mianownika. Następnie dzieli obie liczby przez NWD, aby przedstawić ułamek w najprostszej postaci.",
+    "q2": "Co reprezentuje wynik dziesiętny?",
+    "a2": "Wynik dziesiętny to iloraz uproszczonego licznika przez uproszczony mianownik. Na przykład, jeśli ułamek wynikowy to 3/4, wartość dziesiętna wynosi 0,75.",
+    "q3": "Czy mogę używać tego kalkulatora dla ułamków z liczbami ujemnymi?",
+    "a3": "Tak, kalkulator akceptuje ujemne liczniki i mianowniki. Wynik będzie odpowiednio oznakowany, a upraszczanie poprawnie obsługuje znaki ujemne.",
+    "q4": "Co się stanie, jeśli wpiszę mianownik równy zero?",
+    "a4": "Mianownik równy zero jest w matematyce niezdefiniowany. Kalkulator prawdopodobnie zwróci błąd lub nie wykona obliczeń. Zawsze upewnij się, że mianowniki są różne od zera.",
+    "q5": "Czy istnieje standardowe odniesienie dla arytmetyki ułamków?",
+    "a5": "Arytmetyka ułamków opiera się na standardowych zasadach arytmetyki zdefiniowanych przez matematykę. Nie ma jednej władzy, ale metody są powszechnie nauczane i stosowane w edukacji oraz kontekstach zawodowych."
+  },
+  "opt_add": "Dodawanie",
+  "opt_subtract": "Odejmowanie",
+  "opt_multiply": "Mnożenie",
+  "opt_divide": "Dzielenie",
+  "content": {
+    "whatIs": "Ten kalkulator ułamków wykonuje dodawanie, odejmowanie, mnożenie i dzielenie dwóch ułamków. Automatycznie upraszcza wynik i podaje jego odpowiednik dziesiętny, korzystając ze standardowych działań arytmetycznych na ułamkach.",
+    "formula": "Dla dodawania/odejmowania: a/b ± c/d = (a*d ± c*b) / (b*d). Dla mnożenia: a/b * c/d = (a*c) / (b*d). Dla dzielenia: a/b ÷ c/d = a/b * d/c = (a*d) / (b*c). Wynik jest następnie upraszczany przez podzielenie licznika i mianownika przez ich największy wspólny dzielnik (NWD).",
+    "example": "Aby dodać 1/3 i 1/4, wpisz licznik1=1, mianownik1=3, działanie='dodawanie', licznik2=1, mianownik2=4. Kalkulator oblicza (1*4 + 1*3)/(3*4) = 7/12, co jest już uproszczone, i pokazuje ułamek dziesiętny 0,58333.",
+    "howItWorks_1": "Wprowadź licznik i mianownik pierwszego ułamka w polach 'licznik1' i 'mianownik1'. Następnie wybierz działanie (dodawanie, odejmowanie, mnożenie lub dzielenie) z listy rozwijanej.",
+    "howItWorks_2": "Wprowadź licznik i mianownik drugiego ułamka w polach 'licznik2' i 'mianownik2'. Kliknij przycisk Oblicz, aby wykonać działanie.",
+    "howItWorks_3": "Wynik jest wyświetlany jako uproszczony ułamek (Licznik wyniku i Mianownik wyniku) oraz jako ułamek dziesiętny. Na przykład, jeśli wynik to 2/4, zostanie uproszczony do 1/2."
+  }
+}

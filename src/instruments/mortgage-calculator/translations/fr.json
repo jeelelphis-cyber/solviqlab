@@ -1,0 +1,37 @@
+{
+  "title": "Calculateur hypothécaire — Paiement mensuel et amortissement",
+  "description": "Calculez votre paiement hypothécaire mensuel, l'intérêt total et le calendrier d'amortissement. Inclut les estimations de taxe foncière et d'assurance.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_homePrice": "Prix de la maison",
+  "label_downPayment": "Mise de fonds",
+  "label_annualRate": "Taux d'intérêt",
+  "label_termYears": "Durée du prêt",
+  "label_monthlyPayment": "Paiement mensuel",
+  "label_principal": "Montant du prêt",
+  "label_totalInterest": "Intérêt total",
+  "label_totalPayment": "Coût total",
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Comment est calculé le paiement mensuel pour un prêt hypothécaire à taux fixe ?",
+    "a1": "Le paiement mensuel est dérivé du montant du prêt, du taux d'intérêt mensuel et du nombre de paiements en utilisant la formule M = P * [r(1+r)^n] / [(1+r)^n - 1]. Par exemple, un prêt de 240 000 $ à 6 % annuel (0,5 % mensuel) sur 360 mois donne un paiement de 1 438,92 $.",
+    "q2": "Que signifie l'intérêt total et comment est-il calculé ?",
+    "a2": "L'intérêt total est la somme de tous les paiements d'intérêts sur la durée du prêt. Il est égal au coût total moins le montant du prêt. Pour un prêt de 240 000 $ à 6 % sur 30 ans, l'intérêt total est de 278 011,20 $, ce qui signifie que vous payez plus d'intérêts que le principal.",
+    "q3": "Quand dois-je utiliser ce calculateur hypothécaire ?",
+    "a3": "Utilisez ce calculateur lorsque vous comparez des offres de prêt hypothécaire à taux fixe ou planifiez l'achat d'une maison. Il suppose un taux d'intérêt constant et des paiements égaux ; il ne tient pas compte des taux variables, des taxes, des assurances ou des frais de copropriété.",
+    "q4": "Que représente le montant du prêt affiché ?",
+    "a4": "Le montant du prêt (principal) est le prix de la maison moins votre mise de fonds. C'est le montant que vous empruntez auprès du prêteur. Par exemple, une maison de 300 000 $ avec une mise de fonds de 60 000 $ donne un montant de prêt de 240 000 $.",
+    "q5": "Quelle formule standard ce calculateur utilise-t-il ?",
+    "a5": "Ce calculateur utilise la formule d'amortissement standard définie par le Consumer Financial Protection Bureau (CFPB) et largement adoptée dans l'industrie hypothécaire américaine. La formule garantit des paiements mensuels égaux qui amortissent entièrement le prêt sur la durée choisie."
+  },
+  "unit_years": "ans",
+  "content": {
+    "whatIs": "Ce calculateur hypothécaire estime votre paiement mensuel, l'intérêt total et le coût total pour un prêt hypothécaire à taux fixe. Il utilise la formule d'amortissement standard pour calculer des paiements mensuels égaux sur la durée du prêt.",
+    "formula": "Le paiement mensuel M est calculé à l'aide de la formule M = P * [r(1+r)^n] / [(1+r)^n - 1], où P est le montant du prêt (prix de la maison moins mise de fonds), r est le taux d'intérêt mensuel (taux annuel divisé par 12), et n est le nombre total de paiements mensuels (durée en ans multipliée par 12). L'intérêt total est la somme de tous les paiements d'intérêts sur la durée du prêt.",
+    "example": "Pour une maison de 300 000 $ avec une mise de fonds de 20 % (60 000 $), un taux annuel de 6 % et une durée de 30 ans, le montant du prêt est de 240 000 $. Le paiement mensuel est de 1 438,92 $, l'intérêt total est de 278 011,20 $ et le coût total est de 518 011,20 $.",
+    "howItWorks_1": "Entrez le prix de la maison, le montant de la mise de fonds, le taux d'intérêt annuel et sélectionnez la durée du prêt en années dans le menu déroulant.",
+    "howItWorks_2": "Cliquez sur le bouton Calculer. Le calculateur calcule le montant du prêt, puis applique la formule d'amortissement pour déterminer le paiement mensuel, l'intérêt total et le coût total.",
+    "howItWorks_3": "Consultez les résultats : Paiement mensuel est votre montant mensuel fixe, Montant du prêt est le principal emprunté, Intérêt total est l'intérêt cumulé payé, et Coût total est la somme du principal et des intérêts sur toute la durée."
+  }
+}

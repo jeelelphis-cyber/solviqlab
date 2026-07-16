@@ -1,0 +1,32 @@
+{
+  "title": "Calculateur de réduction — Prix final après remise",
+  "description": "Calculez le prix final après application d'un pourcentage de réduction. Calcule également le montant économisé et le taux de réduction effectif.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_originalPrice": "Prix d'origine",
+  "label_discountPercent": "Réduction",
+  "label_discountAmount": "Vous économisez",
+  "label_finalPrice": "Prix final",
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "q1": "Comment le montant de la réduction est-il calculé si la réduction est un montant fixe en dollars plutôt qu'un pourcentage ?",
+    "a1": "Ce calculateur ne gère que les réductions en pourcentage. Pour une réduction en montant fixe, soustrayez simplement le montant fixe du prix d'origine : Prix final = Prix d'origine - Réduction fixe. Par exemple, une réduction de 10 $ sur 50 $ donne un prix final de 40 $.",
+    "q2": "Que représente la valeur « Vous économisez » ?",
+    "a2": "La valeur « Vous économisez » est le montant de la réduction, soit la différence entre le prix d'origine et le prix final. Elle vous indique combien d'argent vous économisez en profitant de la réduction.",
+    "q3": "Puis-je utiliser ce calculateur pour des réductions supérieures à 100 % ?",
+    "a3": "Non, des réductions supérieures à 100 % entraîneraient un prix final négatif, ce qui n'est pas réaliste dans les scénarios de vente au détail typiques. Ce calculateur limite le pourcentage de réduction à un maximum de 100 %, ce qui signifie que le prix final peut être au maximum nul.",
+    "q4": "Que signifie le résultat « Prix final » ?",
+    "a4": "Le « Prix final » est le montant que vous payez réellement après application de la réduction. Il est calculé en soustrayant le montant de la réduction du prix d'origine. Par exemple, si le prix d'origine est de 100 $ et la réduction de 20 %, le prix final est de 80 $.",
+    "q5": "Existe-t-il une autorité standard pour les calculs de réduction ?",
+    "a5": "Les calculs de réduction sont basés sur l'arithmétique de base et sont universellement appliqués dans le commerce de détail et la finance. Il n'existe pas d'autorité unique, mais la formule suit les principes standard de calcul de pourcentage tels qu'enseignés en mathématiques et utilisés par les entreprises du monde entier."
+  },
+  "content": {
+    "whatIs": "Ce calculateur de réduction calcule le prix de vente et les économies totales lorsqu'un pourcentage de réduction est appliqué à un prix d'origine. Il utilise le concept simple de soustraction d'un pourcentage du prix d'origine pour trouver le coût final.",
+    "formula": "Le montant de la réduction est calculé comme suit : Montant de la réduction = Prix d'origine × (Pourcentage de réduction / 100). Le prix final est alors : Prix final = Prix d'origine - Montant de la réduction. Par exemple, une réduction de 20 % sur 100 $ donne une réduction de 20 $ et un prix final de 80 $.",
+    "example": "Supposons que vous ayez un article initialement à 250 $ avec une réduction de 15 %. Le montant de la réduction est de 250 $ × 0,15 = 37,50 $, donc le prix final est de 250 $ - 37,50 $ = 212,50 $. Vous économisez 37,50 $.",
+    "howItWorks_1": "Entrez le prix d'origine de l'article en dollars (par exemple, 250) et le pourcentage de réduction (par exemple, 15) dans les champs respectifs.",
+    "howItWorks_2": "Cliquez sur le bouton Calculer. L'outil applique instantanément la formule de réduction pour calculer le montant de la réduction et le prix final.",
+    "howItWorks_3": "Les résultats affichent « Vous économisez » (le montant de la réduction en dollars) et « Prix final » (le montant que vous payez après la réduction). Utilisez-les pour comparer les prix ou budgétiser votre achat."
+  }
+}

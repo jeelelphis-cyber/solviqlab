@@ -1,0 +1,35 @@
+{
+  "title": "Kalkulator BMR — Podstawowa Przemiana Materii",
+  "description": "Oblicz swoją podstawową przemianę materii (BMR) za pomocą równania Mifflin-St Jeor. Dowiedz się, ile kalorii spala twoje ciało w całkowitym spoczynku.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_weight": "Waga",
+  "label_height": "Wzrost",
+  "label_age": "Wiek",
+  "label_sex": "Płeć",
+  "label_bmr": "BMR",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Dlaczego równanie Mifflin-St Jeor używa różnych wzorów dla mężczyzn i kobiet?",
+    "a1": "Mężczyźni mają zazwyczaj więcej beztłuszczowej masy mięśniowej i wyższe tempo metabolizmu niż kobiety, dlatego równanie dodaje 5 dla mężczyzn i odejmuje 161 dla kobiet, aby uwzględnić te różnice.",
+    "q2": "Co oznacza moja wartość BMR dla utraty wagi?",
+    "a2": "Twoje BMR to minimalna liczba kalorii potrzebna do podstawowych funkcji. Aby schudnąć, powinieneś spożywać mniej kalorii niż całkowity dzienny wydatek energetyczny (BMR plus aktywność), zazwyczaj deficyt 500-1000 kcal/dzień dla bezpiecznej utraty wagi.",
+    "q3": "Czy mogę użyć tego kalkulatora BMR, jeśli mam mniej niż 15 lub więcej niż 100 lat?",
+    "a3": "Równanie Mifflin-St Jeor jest zatwierdzone dla dorosłych w wieku 19-100 lat. Dla wieku 15-18 lat może nadal dawać rozsądne oszacowanie, ale dla dzieci poniżej 15 lat bardziej odpowiednie są inne równania (np. Schofielda).",
+    "q4": "Co oznacza 'kcal/dzień' w wyniku?",
+    "a4": "kcal/dzień oznacza kilokalorie na dzień, standardową jednostkę energii z pożywienia. Jedna kilokaloria równa się 1000 kalorii (małe c). Reprezentuje energię, którą twoje ciało spala w ciągu jednego dnia w spoczynku.",
+    "q5": "Czy równanie Mifflin-St Jeor jest zalecane przez organy zdrowia?",
+    "a5": "Tak, Akademia Żywienia i Dietetyki zaleca równanie Mifflin-St Jeor jako najdokładniejsze do szacowania BMR u osób nieotyłych i otyłych. Jest szeroko stosowane w warunkach klinicznych."
+  },
+  "opt_male": "Mężczyzna",
+  "opt_female": "Kobieta",
+  "content": {
+    "whatIs": "Ten kalkulator BMR szacuje twoją podstawową przemianę materii (BMR) za pomocą równania Mifflin-St Jeor. BMR to liczba kalorii, które twoje ciało spala w całkowitym spoczynku, aby utrzymać funkcje życiowe, takie jak oddychanie i krążenie.",
+    "formula": "Dla mężczyzn: BMR = 10 × waga(kg) + 6,25 × wzrost(cm) - 5 × wiek(lata) + 5. Dla kobiet: BMR = 10 × waga(kg) + 6,25 × wzrost(cm) - 5 × wiek(lata) - 161. Wynik podawany jest w kcal/dzień.",
+    "example": "30-letni mężczyzna ważący 80 kg i mający 180 cm wzrostu: BMR = 10×80 + 6,25×180 - 5×30 + 5 = 800 + 1125 - 150 + 5 = 1780 kcal/dzień. Oznacza to, że jego ciało spala około 1780 kalorii dziennie w spoczynku.",
+    "howItWorks_1": "Wprowadź swoją wagę w kilogramach, wzrost w centymetrach, wiek w latach i wybierz płeć (mężczyzna lub kobieta).",
+    "howItWorks_2": "Kliknij przycisk Oblicz. Kalkulator stosuje równanie Mifflin-St Jeor do obliczenia twojego BMR na podstawie wprowadzonych danych.",
+    "howItWorks_3": "Wynik pokazuje twoje BMR w kcal/dzień. Użyj tej liczby jako punktu wyjścia do dziennego zapotrzebowania kalorycznego; dodaj kalorie z aktywności, aby oszacować całkowity wydatek energetyczny."
+  }
+}

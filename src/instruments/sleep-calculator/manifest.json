@@ -1,0 +1,35 @@
+{
+  "slug": "sleep-calculator",
+  "name": "Sleep Calculator",
+  "seoTitle": "Sleep Calculator — Best Bedtime & Wake-Up Times by Sleep Cycles",
+  "seoDescription": "Find the ideal bedtime or wake-up time based on 90-minute sleep cycles. Wake up refreshed by timing your sleep to complete full REM cycles.",
+  "primaryKeyword": "sleep calculator",
+  "type": "calculator",
+  "category": "health",
+  "isYMYL": false,
+  "version": "1.0.0",
+  "status": "live",
+  "capabilities": ["formula", "seo", "localization"],
+  "inputs": [
+    {"name": "mode", "type": "select", "required": true, "enumValues": ["waketime", "bedtime"], "description": "Calculate bedtime from wake time, or wake time from bedtime", "default": "waketime"},
+    {"name": "targetTime", "type": "string", "required": true, "description": "Target time in HH:MM format"},
+    {"name": "fallAsleepMinutes", "type": "number", "required": false, "min": 0, "max": 60, "description": "Minutes to fall asleep", "default": 15}
+  ],
+  "outputs": [
+    {"name": "cycle4Time", "type": "string", "description": "Time for 4 sleep cycles (6h)"},
+    {"name": "cycle5Time", "type": "string", "description": "Time for 5 sleep cycles (7.5h)"},
+    {"name": "cycle6Time", "type": "string", "description": "Time for 6 sleep cycles (9h)"},
+    {"name": "cycle7Time", "type": "string", "description": "Time for 7 sleep cycles (10.5h)"},
+    {"name": "recommendation", "type": "string", "description": "General sleep recommendation"}
+  ],
+  "keywords": [
+    {"term": "sleep calculator", "intent": "transactional", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"},
+    {"term": "what time should I go to sleep", "intent": "informational", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"},
+    {"term": "sleep cycle calculator", "intent": "transactional", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"}
+  ],
+  "related": ["bmi-calculator", "bmr-calculator", "tdee-calculator", "calorie-deficit-calculator"],
+  "supportedLanguages": ["en"],
+  "createdAt": "2026-07-16",
+  "updatedAt": "2026-07-16",
+  "releaseHistory": [{"status": "live", "timestamp": "2026-07-16T00:00:00.000Z"}]
+}

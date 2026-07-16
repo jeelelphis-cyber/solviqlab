@@ -1,0 +1,53 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [{ "name": "next" }],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": [
+    "node_modules",
+    "src/instruments/*/plugins",
+    "src/instruments/*/tests",
+    "src/instruments/*/analytics.ts",
+    "src/instruments/*/meta.ts",
+    "src/instruments/*/seo.ts",
+    "src/instruments/*/lib/calculate.test.ts",
+    "src/instruments/bmr-calculator/interpret.ts",
+    "src/instruments/body-fat-calculator/interpret.ts",
+    "src/instruments/calorie-deficit-calculator/interpret.ts",
+    "src/instruments/compound-interest-calculator/interpret.ts",
+    "src/instruments/discount-calculator/interpret.ts",
+    "src/instruments/fraction-calculator/interpret.ts",
+    "src/instruments/ideal-weight-calculator/interpret.ts",
+    "src/instruments/loan-calculator/interpret.ts",
+    "src/instruments/mortgage-calculator/interpret.ts",
+    "src/instruments/vat-calculator/interpret.ts",
+    "src/instruments/ratio-calculator/interpret.ts",
+    "src/instruments/average-calculator/interpret.ts",
+    "src/instruments/scientific-notation-calculator/interpret.ts",
+    "src/instruments/tdee-calculator/interpret.ts",
+    "src/instruments/length-converter/interpret.ts",
+    "src/instruments/weight-converter/interpret.ts",
+    "src/instruments/temperature-converter/interpret.ts",
+    "src/instruments/area-calculator/interpret.ts",
+    "src/instruments/volume-calculator/interpret.ts",
+    "src/instruments/area-converter/interpret.ts",
+    "src/instruments/volume-converter/interpret.ts"
+  ]
+}

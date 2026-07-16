@@ -1,0 +1,35 @@
+{
+  "title": "Calculateur de ratio — Simplifier et résoudre des ratios",
+  "description": "Simplifiez les ratios, résolvez des proportions et adaptez des recettes ou des mesures. Le calculateur de ratio le plus rapide en ligne avec des solutions étape par étape.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_a": "A",
+  "label_b": "B",
+  "label_c": "C (optionnel, résoudre pour D)",
+  "label_simplifiedA": "A simplifié",
+  "label_simplifiedB": "B simplifié",
+  "label_d": "D (si C fourni)",
+  "label_decimal": "A/B en décimal",
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "q1": "Comment simplifier un ratio comme 15:25 ?",
+    "a1": "Trouvez le PGCD de 15 et 25, qui est 5. Divisez les deux termes par 5 : 15/5 = 3, 25/5 = 5, donc le ratio simplifié est 3:5.",
+    "q2": "Que signifie la sortie 'D (si C fourni)' ?",
+    "a2": "Si vous fournissez une valeur pour c, le calculateur résout la proportion a:b = c:d pour d en utilisant la multiplication croisée : d = (b * c) / a. Cela donne la quatrième proportionnelle.",
+    "q3": "Puis-je utiliser ce calculateur pour adapter des recettes ?",
+    "a3": "Oui. Par exemple, si une recette utilise 2 tasses de farine pour 3 tasses de sucre (2:3) et que vous voulez utiliser 4 tasses de farine, entrez a=2, b=3, c=4 pour trouver qu'il vous faut d=6 tasses de sucre.",
+    "q4": "Que représente la sortie décimale ?",
+    "a4": "La décimale est la valeur de a divisée par b. Pour un ratio 3:4, la décimale est 0,75, ce qui signifie que a représente 75 % de b. C'est utile pour comparer des quantités.",
+    "q5": "Existe-t-il une norme officielle pour simplifier les ratios ?",
+    "a5": "La simplification des ratios suit le principe mathématique de division par le plus grand commun diviseur (PGCD), qui est une méthode arithmétique standard. Il n'existe pas d'autorité réglementaire spécifique pour la simplification des ratios."
+  },
+  "content": {
+    "whatIs": "Le calculateur de ratio simplifie les ratios à leur plus simple expression, résout une valeur manquante dans une proportion (a:b = c:d) et calcule l'équivalent décimal d'un ratio. Il utilise le concept de ratios équivalents et de multiplication croisée.",
+    "formula": "Pour simplifier un ratio a:b, divisez les deux termes par leur plus grand commun diviseur (PGCD). Pour trouver d dans a:b = c:d, utilisez la multiplication croisée : d = (b * c) / a. La décimale est a / b.",
+    "example": "Pour les entrées a=8, b=12, c=6, le calculateur simplifie 8:12 en 2:3, trouve d = (12*6)/8 = 9, et affiche la décimale 8/12 = 0,6667.",
+    "howItWorks_1": "Entrez les valeurs pour a et b (obligatoire). Optionnellement, entrez une valeur pour c pour résoudre d dans la proportion a:b = c:d.",
+    "howItWorks_2": "Cliquez sur Calculer. L'outil calcule le PGCD de a et b pour simplifier le ratio, effectue la multiplication croisée si c est fourni, et divise a par b pour la décimale.",
+    "howItWorks_3": "Les résultats montrent le ratio simplifié (A simplifié : B simplifié), la valeur manquante D (si c a été saisi) et la représentation décimale de a/b."
+  }
+}

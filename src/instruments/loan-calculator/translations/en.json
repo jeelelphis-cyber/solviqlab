@@ -1,0 +1,34 @@
+{
+  "title": "Loan Calculator — Monthly Payment & Total Interest",
+  "description": "Calculate your monthly loan payment, total interest paid, and full amortization schedule. Works for personal loans, auto loans, and more.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_principal": "Loan Amount",
+  "label_annualRate": "Annual Interest Rate",
+  "label_termMonths": "Loan Term",
+  "label_monthlyPayment": "Monthly Payment",
+  "label_totalPayment": "Total Payment",
+  "label_totalInterest": "Total Interest",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How is the monthly interest rate derived from the annual rate?",
+    "a1": "The monthly interest rate is the annual rate divided by 12. For example, a 6% annual rate becomes 0.5% per month (0.06/12 = 0.005). This monthly rate is used in the amortization formula to calculate payments.",
+    "q2": "What does 'Total Interest' represent?",
+    "a2": "Total Interest is the total amount of interest you will pay over the entire loan term. It is calculated as Total Payment minus the Principal. For a $10,000 loan at 5% for 36 months, total interest is $789.56.",
+    "q3": "Can this calculator be used for mortgages or student loans?",
+    "a3": "This calculator is designed for fixed-rate installment loans. For mortgages, additional costs like property taxes and insurance are not included. For student loans, it works if the interest rate is fixed and payments are level. Variable-rate loans require a different approach.",
+    "q4": "What does the Monthly Payment output include?",
+    "a4": "The Monthly Payment includes both principal and interest portions, amortized so that the loan is fully paid off by the end of the term. It does not include fees, taxes, or insurance.",
+    "q5": "Is there a standard formula used by banks for loan amortization?",
+    "a5": "Yes, the formula used is the standard amortization formula recognized by financial institutions and regulatory bodies like the Consumer Financial Protection Bureau (CFPB). It ensures equal monthly payments over the loan term."
+  },
+  "content": {
+    "whatIs": "This loan calculator computes your monthly payment, total payment, and total interest for a fixed-rate loan using the standard amortization formula. It is ideal for personal loans, auto loans, and other installment loans with a fixed interest rate and term.",
+    "formula": "The monthly payment is calculated using the formula: M = P * [r(1+r)^n] / [(1+r)^n - 1], where M is the monthly payment, P is the principal loan amount, r is the monthly interest rate (annual rate divided by 12), and n is the number of monthly payments (term in months). Total payment = M * n, and total interest = total payment - P.",
+    "example": "For a $10,000 loan at 5% annual interest for 36 months: monthly rate = 0.05/12 ≈ 0.004167, n = 36. Monthly payment = 10000 * [0.004167*(1.004167)^36] / [(1.004167)^36 - 1] ≈ $299.71. Total payment = $299.71 * 36 ≈ $10,789.56, total interest = $789.56.",
+    "howItWorks_1": "Enter the loan amount (principal) in dollars, the annual interest rate as a percentage, and the loan term in months. Ensure values are within the allowed ranges.",
+    "howItWorks_2": "Click the Calculate button. The tool applies the amortization formula to compute your monthly payment, total payment, and total interest based on the inputs.",
+    "howItWorks_3": "Review the results: Monthly Payment is what you pay each month; Total Payment is the sum of all payments over the term; Total Interest is the cost of borrowing. Use these to compare loan offers or plan your budget."
+  }
+}

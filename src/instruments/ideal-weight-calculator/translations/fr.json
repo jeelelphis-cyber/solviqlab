@@ -1,0 +1,36 @@
+{
+  "title": "Calculateur de poids idéal — Trouvez votre poids santé",
+  "description": "Calculez votre poids corporel idéal à l'aide de 4 formules médicales (Robinson, Miller, Devine, Hamwi). Obtenez votre fourchette de poids santé en fonction de votre taille et de votre sexe.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_height": "Taille",
+  "label_sex": "Sexe",
+  "label_robinson": "Formule de Robinson",
+  "label_miller": "Formule de Miller",
+  "label_devine": "Formule de Devine",
+  "label_average": "Poids idéal moyen",
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "q1": "Quelle est la différence entre les formules de Robinson, Miller, Devine et Hamwi ?",
+    "a1": "Ces formules diffèrent par leur poids de base et l'ajustement par pouce au-dessus de 5 pieds. Par exemple, pour les hommes, Robinson commence à 52 kg avec 1,9 kg/pouce, tandis que Hamwi commence à 48 kg avec 2,7 kg/pouce. Elles ont été développées à partir de populations et de périodes différentes, donc les résultats varient légèrement.",
+    "q2": "Comment interpréter le poids idéal moyen ?",
+    "a2": "La moyenne est la moyenne des résultats des quatre formules, fournissant un point de référence unique. Ce n'est pas une norme clinique mais un résumé pratique. Votre poids santé réel peut varier en fonction de la masse musculaire, de la densité osseuse et de la composition corporelle.",
+    "q3": "Quand utiliser ce calculateur et quelles sont ses limites ?",
+    "a3": "Utilisez-le pour une sensibilisation générale à la santé ou comme point de départ pour des objectifs de poids. Limites : il ne tient pas compte de l'âge, du pourcentage de graisse corporelle ou de la masse musculaire. Les athlètes ou les personnes âgées peuvent trouver les estimations moins précises.",
+    "q4": "Que signifie le résultat de la formule de Devine ?",
+    "a4": "La formule de Devine a été initialement développée pour calculer le poids corporel idéal pour le dosage des médicaments. Pour un homme de 170 cm, elle donne 65,9 kg. Elle est largement utilisée en milieu clinique mais peut sous-estimer le poids idéal pour les personnes plus grandes.",
+    "q5": "Ces formules sont-elles basées sur les normes de l'OMS ?",
+    "a5": "Non, ces formules sont antérieures aux directives de l'OMS sur l'IMC. Elles ont été développées par des cliniciens (Robinson, Miller, Devine, Hamwi) pour estimer le poids idéal. L'OMS utilise les catégories d'IMC (18,5-24,9) pour le poids santé, ce qui est une approche différente."
+  },
+  "opt_male": "Homme",
+  "opt_female": "Femme",
+  "content": {
+    "whatIs": "Le calculateur de poids idéal estime votre poids corporel idéal en fonction de votre taille et de votre sexe à l'aide de quatre formules médicales établies : Robinson, Miller, Devine et Hamwi. Ces formules fournissent une fourchette de poids associée à des risques moindres pour la santé chez la plupart des adultes.",
+    "formula": "Pour les hommes : Robinson = 52 kg + 1,9 kg par pouce au-dessus de 5 pieds ; Miller = 56,2 kg + 1,41 kg par pouce au-dessus de 5 pieds ; Devine = 50 kg + 2,3 kg par pouce au-dessus de 5 pieds ; Hamwi = 48 kg + 2,7 kg par pouce au-dessus de 5 pieds. Pour les femmes : Robinson = 49 kg + 1,7 kg par pouce au-dessus de 5 pieds ; Miller = 53,1 kg + 1,36 kg par pouce au-dessus de 5 pieds ; Devine = 45,5 kg + 2,3 kg par pouce au-dessus de 5 pieds ; Hamwi = 45,5 kg + 2,2 kg par pouce au-dessus de 5 pieds. La taille en pouces est convertie à partir des centimètres.",
+    "example": "Un homme de 170 cm (66,9 pouces) : Robinson = 52 + 1,9*(66,9-60) = 65,1 kg ; Miller = 56,2 + 1,41*(66,9-60) = 65,9 kg ; Devine = 50 + 2,3*(66,9-60) = 65,9 kg ; Hamwi = 48 + 2,7*(66,9-60) = 66,6 kg ; Moyenne = (65,1+65,9+65,9+66,6)/4 = 65,9 kg.",
+    "howItWorks_1": "Entrez votre taille en centimètres (entre 100 et 250) et sélectionnez votre sexe (homme ou femme) dans le menu déroulant.",
+    "howItWorks_2": "Cliquez sur le bouton Calculer. L'outil applique chaque formule pour calculer votre poids idéal en kilogrammes pour Robinson, Miller, Devine et Hamwi, puis calcule la moyenne.",
+    "howItWorks_3": "Consultez les résultats : chaque formule donne une valeur légèrement différente. La moyenne fournit une estimation unique. Comparez ces chiffres à votre poids actuel pour évaluer si vous vous situez dans une fourchette saine."
+  }
+}

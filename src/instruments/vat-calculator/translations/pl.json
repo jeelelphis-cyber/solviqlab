@@ -1,0 +1,36 @@
+{
+  "title": "Kalkulator VAT — dodaj lub usuń VAT natychmiast",
+  "description": "Dodaj lub usuń VAT z dowolnej ceny. Obsługuje wszystkie stawki VAT (5%, 10%, 15%, 20%, 21%, 25%). Błyskawiczne obliczenia dla firm i konsumentów.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_amount": "Kwota",
+  "label_vatRate": "Stawka VAT",
+  "label_mode": "Tryb",
+  "label_netAmount": "Kwota netto (bez VAT)",
+  "label_vatAmount": "Kwota VAT",
+  "label_grossAmount": "Kwota brutto (z VAT)",
+  "faq": {
+    "title": "Najczęściej zadawane pytania",
+    "q1": "Jak obliczana jest kwota VAT przy dodawaniu VAT?",
+    "a1": "Przy dodawaniu VAT kwota VAT jest obliczana jako: Kwota VAT = Kwota netto × (Stawka VAT / 100). Na przykład, dla kwoty netto 200 $ i stawki VAT 10%, Kwota VAT = 200 $ × 0,10 = 20 $.",
+    "q2": "Co oznacza wynik 'Kwota netto' przy usuwaniu VAT?",
+    "a2": "Kwota netto przy usuwaniu VAT to pierwotna cena przed dodaniem VAT. Oblicza się ją dzieląc kwotę brutto przez (1 + Stawka VAT/100). Na przykład, jeśli kwota brutto wynosi 110 $, a stawka VAT 10%, Kwota netto = 110 $ / 1,10 = 100 $.",
+    "q3": "Czy mogę użyć tego kalkulatora dla dowolnej stawki VAT, w tym niestandardowych?",
+    "a3": "Tak, możesz wprowadzić dowolną stawkę VAT od 0% do 100%. Obejmuje to standardowe stawki, takie jak 5%, 10%, 20% lub stawki niestandardowe. Kalkulator działa dla wszystkich stawek, ale należy pamiętać, że stawki VAT są zazwyczaj ustalane przez organy podatkowe i mogą się różnić w zależności od kraju i rodzaju produktu.",
+    "q4": "Co reprezentuje wynik 'Kwota brutto'?",
+    "a4": "Kwota brutto to całkowita cena zawierająca VAT. W trybie 'dodaj' jest to kwota netto plus kwota VAT. W trybie 'usuń' jest to wprowadzona kwota (cena zawierająca VAT). Na przykład, jeśli netto wynosi 50 $, a VAT 20%, brutto = 60 $.",
+    "q5": "Który organ ustala stawki i zasady VAT?",
+    "a5": "VAT jest podatkiem konsumpcyjnym regulowanym przez krajowe organy podatkowe. Na przykład w Unii Europejskiej stawki VAT są ustalane przez każde państwo członkowskie w ramach dyrektyw UE. W Wielkiej Brytanii VAT jest administrowany przez HM Revenue & Customs (HMRC). W Australii Australian Taxation Office (ATO) zajmuje się GST, podobnym podatkiem. Zawsze odwołuj się do lokalnego organu podatkowego w celu uzyskania obowiązujących stawek."
+  },
+  "opt_add": "Dodaj VAT",
+  "opt_remove": "Usuń VAT",
+  "content": {
+    "whatIs": "Kalkulator VAT błyskawicznie dodaje lub usuwa podatek od wartości dodanej (VAT) z dowolnej ceny. Oblicza kwotę netto, kwotę VAT i kwotę brutto na podstawie wprowadzonej ceny i stawki VAT, korzystając ze standardowych wzorów VAT.",
+    "formula": "Przy dodawaniu VAT: Kwota brutto = Kwota netto × (1 + Stawka VAT/100) oraz Kwota VAT = Kwota brutto - Kwota netto. Przy usuwaniu VAT: Kwota netto = Kwota brutto / (1 + Stawka VAT/100) oraz Kwota VAT = Kwota brutto - Kwota netto. Stawka VAT wyrażona jest w procentach.",
+    "example": "Dla ceny netto 100 $ przy stawce VAT 20% w trybie 'dodaj': Kwota brutto = 100 $ × (1 + 20/100) = 120 $, Kwota VAT = 20 $. Dla ceny brutto 120 $ w trybie 'usuń': Kwota netto = 120 $ / (1 + 20/100) = 100 $, Kwota VAT = 20 $.",
+    "howItWorks_1": "Wprowadź kwotę ceny w polu 'Kwota' (w dolarach) oraz stawkę VAT w procentach w polu 'Stawka VAT'. Wybierz tryb: 'Dodaj VAT', aby obliczyć kwotę brutto zawierającą VAT, lub 'Usuń VAT', aby wyodrębnić kwotę netto z ceny brutto.",
+    "howItWorks_2": "Kliknij przycisk Oblicz. Kalkulator stosuje odpowiedni wzór w zależności od wybranego trybu i natychmiast oblicza kwotę netto, kwotę VAT i kwotę brutto.",
+    "howItWorks_3": "Sprawdź trzy pola wynikowe: Kwota netto (cena przed VAT), Kwota VAT (część podatkowa) i Kwota brutto (całkowita cena zawierająca VAT). Użyj tych wartości do fakturowania, ustalania cen lub raportowania podatkowego."
+  }
+}

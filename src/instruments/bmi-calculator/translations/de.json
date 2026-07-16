@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "title": "BMI-Rechner — Body-Mass-Index mit Interpretation",
+    "description": "Berechnen Sie Ihren BMI sofort. Erhalten Sie WHO-Kategorie, gesundes Gewichtsbereich, BMI Prime und KI-gestützte Gesundheitsinterpretation — kostenlos, schnell und genau."
+  },
+  "form": {
+    "title": "BMI-Rechner",
+    "height_label": "Größe",
+    "height_placeholder_cm": "z.B. 175",
+    "height_placeholder_ft": "ft",
+    "height_placeholder_in": "in",
+    "weight_label": "Gewicht",
+    "weight_placeholder_kg": "z.B. 70",
+    "weight_placeholder_lb": "z.B. 154",
+    "age_label": "Alter (optional)",
+    "age_placeholder": "z.B. 30",
+    "sex_label": "Geschlecht (optional)",
+    "sex_male": "Männlich",
+    "sex_female": "Weiblich",
+    "sex_other": "Andere / Keine Angabe",
+    "unit_metric": "Metrisch (cm, kg)",
+    "unit_imperial": "Imperial (ft, lb)",
+    "calculate_button": "BMI berechnen",
+    "reset_button": "Zurücksetzen"
+  },
+  "validation": {
+    "height_required": "Bitte geben Sie Ihre Größe ein.",
+    "height_too_low": "Die Größe muss mindestens {min} cm betragen.",
+    "height_too_high": "Die Größe darf höchstens {max} cm betragen.",
+    "weight_required": "Bitte geben Sie Ihr Gewicht ein.",
+    "weight_too_low": "Das Gewicht muss mindestens {min} kg betragen.",
+    "weight_too_high": "Das Gewicht darf höchstens {max} kg betragen.",
+    "invalid_number": "Bitte geben Sie eine gültige Zahl ein (z.B. 70 oder 70,5).",
+    "unknown": "Ungültige Eingabe."
+  },
+  "result": {
+    "title": "Ihr BMI-Ergebnis",
+    "bmi_label": "BMI",
+    "category_label": "Kategorie",
+    "bmi_prime_label": "BMI Prime",
+    "ponderal_index_label": "Ponderal-Index",
+    "healthy_range_label": "Gesunder Gewichtsbereich",
+    "body_fat_label": "Geschätzter Körperfettanteil",
+    "body_fat_unavailable": "Geben Sie Alter und Geschlecht für eine Körperfettschätzung ein",
+    "categories": {
+      "underweight_severe": "Starkes Untergewicht",
+      "underweight": "Untergewicht",
+      "normal": "Normalgewicht",
+      "overweight": "Übergewicht",
+      "obese_1": "Adipositas (Klasse I)",
+      "obese_2": "Adipositas (Klasse II)",
+      "obese_3": "Adipositas (Klasse III)"
+    }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie wird der BMI bei Kindern oder Jugendlichen berechnet?",
+    "a1": "Dieser Rechner ist für Erwachsene (ab 18 Jahren) ausgelegt. Bei Kindern und Jugendlichen wird der BMI anhand alters- und geschlechtsspezifischer Perzentile der CDC-Wachstumskurven interpretiert, nicht anhand fester WHO-Kategorien.",
+    "q2": "Was bedeutet BMI Prime?",
+    "a2": "BMI Prime ist das Verhältnis Ihres BMI zur Obergrenze des Normalbereichs (BMI 25). Ein Wert von 1,0 entspricht BMI 25. Werte unter 1,0 zeigen Normalgewicht an, über 1,0 Übergewicht oder Adipositas.",
+    "q3": "Kann der BMI bei Sportlern oder muskulösen Personen ungenau sein?",
+    "a3": "Ja, der BMI unterscheidet nicht zwischen Muskel- und Fettmasse. Sportler mit hoher Muskelmasse können einen hohen BMI, aber wenig Körperfett haben. Für solche Personen sind Körperfettanteil oder Taillenumfang aussagekräftiger.",
+    "q4": "Wie wird der Körperfettanteil geschätzt?",
+    "a4": "Die Körperfettschätzung verwendet die Deurenberg-Formel: Körperfett % = 1,20 × BMI + 0,23 × Alter - 10,8 × Geschlecht - 5,4, wobei Geschlecht = 1 für männlich, 0 für weiblich. Diese Formel ist für Erwachsene von 18–80 Jahren validiert.",
+    "q5": "Was sind die WHO-BMI-Kategorien?",
+    "a5": "Die Weltgesundheitsorganisation definiert: Untergewicht (<18,5), Normalgewicht (18,5–24,9), Übergewicht (25–29,9) und Adipositas Klasse I (30–34,9), Klasse II (35–39,9), Klasse III (≥40). Diese basieren auf Bevölkerungsgesundheitsrisiken."
+  },
+  "aria": {
+    "result_announcement": "Ergebnis: BMI {bmi}. Kategorie: {category}. {summary}.",
+    "form_description": "Geben Sie Ihre Größe und Ihr Gewicht ein, um Ihren Body-Mass-Index zu berechnen.",
+    "loading": "Berechne Ihren BMI..."
+  },
+  "content": {
+    "whatIs": "Der BMI-Rechner berechnet Ihren Body-Mass-Index (BMI) anhand Ihrer Größe und Ihres Gewichts. Der BMI ist ein einfaches Maß zur Schätzung des Körperfetts und hilft, den Gewichtsstatus gemäß den Standards der Weltgesundheitsorganisation (WHO) zu kategorisieren.",
+    "formula": "Der BMI wird berechnet als Gewicht in Kilogramm geteilt durch Körpergröße in Metern zum Quadrat: BMI = Gewicht_kg / (Größe_cm / 100)^2. Für imperiale Einheiten: BMI = (Gewicht_lb / (Größe_in)^2) × 703. Der Rechner berechnet auch BMI Prime (BMI/25) und den Ponderal-Index (Gewicht_kg / (Größe_m)^3).",
+    "example": "Für eine Person mit einer Größe von 170 cm und einem Gewicht von 70 kg: BMI = 70 / (1,70)^2 = 24,22 kg/m². Dies liegt in der Kategorie 'Normalgewicht' (18,5–24,9). Der gesunde Gewichtsbereich für diese Größe liegt zwischen 53,5 und 72,3 kg.",
+    "howItWorks_1": "Geben Sie Ihre Größe in Zentimetern (oder Fuß/Zoll bei imperialen Einheiten) und Ihr Gewicht in Kilogramm (oder Pfund) ein. Optional können Sie Alter und Geschlecht für eine Körperfettschätzung angeben.",
+    "howItWorks_2": "Klicken Sie auf 'BMI berechnen', um Ihren BMI, BMI Prime, Ponderal-Index und den gesunden Gewichtsbereich zu erhalten. Wenn Alter und Geschlecht angegeben wurden, wird auch ein geschätzter Körperfettanteil nach der Deurenberg-Formel berechnet.",
+    "howItWorks_3": "Ihr BMI-Wert wird mit den WHO-Kategorien verglichen: Untergewicht (<18,5), Normalgewicht (18,5–24,9), Übergewicht (25–29,9) und Adipositas (≥30). BMI Prime zeigt, wie nah Sie an der oberen Normalgrenze sind (1,0 = BMI 25). Der Ponderal-Index passt die Größe anders an."
+  }
+}

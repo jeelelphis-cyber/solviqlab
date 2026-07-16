@@ -1,0 +1,36 @@
+{
+  "title": "Calculadora de IVA — Adicione ou Remova IVA Instantaneamente",
+  "description": "Adicione ou remova IVA de qualquer preço. Suporta todas as alíquotas de IVA (5%, 10%, 15%, 20%, 21%, 25%). Cálculo instantâneo para empresas e consumidores.",
+  "calculate": "Calcular",
+  "reset": "Limpar",
+  "result": "Resultado",
+  "label_amount": "Valor",
+  "label_vatRate": "Alíquota de IVA",
+  "label_mode": "Modo",
+  "label_netAmount": "Valor Líquido (sem IVA)",
+  "label_vatAmount": "Valor do IVA",
+  "label_grossAmount": "Valor Bruto (com IVA)",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Como é calculado o valor do IVA ao adicionar IVA?",
+    "a1": "Ao adicionar IVA, o valor do IVA é calculado como: Valor do IVA = Valor Líquido × (Alíquota de IVA / 100). Por exemplo, com um valor líquido de $200 e alíquota de 10%, Valor do IVA = $200 × 0,10 = $20.",
+    "q2": "O que significa a saída 'Valor Líquido' ao remover IVA?",
+    "a2": "O Valor Líquido ao remover IVA é o preço original antes da adição do IVA. É calculado dividindo o valor bruto por (1 + Alíquota de IVA/100). Por exemplo, se o valor bruto é $110 e a alíquota de IVA é 10%, Valor Líquido = $110 / 1,10 = $100.",
+    "q3": "Posso usar esta calculadora para qualquer alíquota de IVA, incluindo as não padrão?",
+    "a3": "Sim, você pode inserir qualquer alíquota de IVA de 0% a 100%. Isso inclui alíquotas padrão como 5%, 10%, 20% ou alíquotas personalizadas. A calculadora funciona para todas as alíquotas, mas observe que as alíquotas de IVA são geralmente definidas pelas autoridades fiscais e podem variar por país e tipo de produto.",
+    "q4": "O que representa a saída 'Valor Bruto'?",
+    "a4": "O Valor Bruto é o preço total incluindo IVA. No modo 'adicionar', é o valor líquido mais o valor do IVA. No modo 'remover', é o valor inserido (o preço incluindo IVA). Por exemplo, se o líquido é $50 e o IVA é 20%, o bruto = $60.",
+    "q5": "Qual autoridade define as alíquotas e regras do IVA?",
+    "a5": "O IVA é um imposto sobre consumo regulado pelas autoridades fiscais nacionais. Por exemplo, na União Europeia, as alíquotas de IVA são definidas por cada estado-membro dentro das diretivas da UE. No Reino Unido, a HM Revenue & Customs (HMRC) administra o IVA. Na Austrália, a Australian Taxation Office (ATO) gerencia o GST, um imposto similar. Consulte sempre a autoridade fiscal local para alíquotas aplicáveis."
+  },
+  "opt_add": "Adicionar IVA",
+  "opt_remove": "Remover IVA",
+  "content": {
+    "whatIs": "A Calculadora de IVA adiciona ou remove instantaneamente o Imposto sobre Valor Agregado (IVA) de qualquer preço. Ela calcula o valor líquido, o valor do IVA e o valor bruto com base no preço inserido e na alíquota de IVA, usando as fórmulas padrão do IVA.",
+    "formula": "Ao adicionar IVA: Valor Bruto = Valor Líquido × (1 + Alíquota de IVA/100) e Valor do IVA = Valor Bruto - Valor Líquido. Ao remover IVA: Valor Líquido = Valor Bruto / (1 + Alíquota de IVA/100) e Valor do IVA = Valor Bruto - Valor Líquido. A Alíquota de IVA é expressa como porcentagem.",
+    "example": "Para um preço líquido de $100 com alíquota de 20% no modo 'adicionar': Valor Bruto = $100 × (1 + 20/100) = $120, Valor do IVA = $20. Para um preço bruto de $120 no modo 'remover': Valor Líquido = $120 / (1 + 20/100) = $100, Valor do IVA = $20.",
+    "howItWorks_1": "Insira o valor do preço no campo 'Valor' (em dólares) e a alíquota de IVA como porcentagem no campo 'Alíquota de IVA'. Selecione o modo: 'Adicionar IVA' para calcular o valor bruto incluindo IVA, ou 'Remover IVA' para extrair o valor líquido de um preço bruto.",
+    "howItWorks_2": "Clique no botão Calcular. A calculadora aplica a fórmula apropriada com base no modo selecionado e calcula instantaneamente o valor líquido, o valor do IVA e o valor bruto.",
+    "howItWorks_3": "Revise os três campos de saída: Valor Líquido (preço antes do IVA), Valor do IVA (a parcela do imposto) e Valor Bruto (preço total incluindo IVA). Use esses valores para faturamento, precificação ou declaração de impostos."
+  }
+}

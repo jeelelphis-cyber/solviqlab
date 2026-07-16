@@ -1,0 +1,35 @@
+{
+  "title": "Volumenumrechner — Liter, Gallonen, ml, Tassen & mehr",
+  "description": "Rechnen Sie Volumeneinheiten sofort um: Liter, Gallonen, Milliliter, Tassen, Flüssigunzen, Kubikmeter, Kubikfuß. Kostenloser Volumenumrechner.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_value": "Wert",
+  "label_fromUnit": "Von",
+  "label_liters": "Liter",
+  "label_milliliters": "Milliliter",
+  "label_gallons": "US-Gallonen",
+  "label_cups": "Tassen",
+  "label_fluidOunces": "Flüssigunzen",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie lautet der Umrechnungsfaktor von Litern in US-Gallonen?",
+    "a1": "1 Liter entspricht 0,264172 US-Gallonen. Um Liter in Gallonen umzurechnen, multiplizieren Sie den Literwert mit 0,264172. Beispiel: 10 L × 0,264172 = 2,64172 gal.",
+    "q2": "Wie ist die Ausgabe 'Tassen' zu interpretieren? Handelt es sich um US- oder metrische Tassen?",
+    "a2": "Die Ausgabe 'Tassen' verwendet US-übliche Tassen, wobei 1 US-Tasse = 236,588 ml. Dies unterscheidet sich von metrischen Tassen (250 ml) oder imperialen Tassen. Die Umrechnung basiert auf dem US-Standard.",
+    "q3": "Kann dieser Umrechner sehr große Volumina wie Kubikmeter verarbeiten?",
+    "a3": "Ja, der Umrechner akzeptiert Werte bis zu 1.000.000.000.000. Er gibt jedoch nur in Litern, Millilitern, Gallonen, Tassen und Flüssigunzen aus. Für Kubikmeter müssten Sie manuell umrechnen: 1 m³ = 1000 L.",
+    "q4": "Was stellt die Ausgabe 'Flüssigunzen' dar?",
+    "a4": "Flüssigunzen (fl oz) sind eine US-übliche Volumeneinheit, nicht für Gewicht. 1 US-Flüssigunze = 29,5735 ml. Die Ausgabe zeigt das entsprechende Volumen in Flüssigunzen basierend auf der Eingabe.",
+    "q5": "Welcher Standard definiert die verwendeten Umrechnungsfaktoren?",
+    "a5": "Die Umrechnungsfaktoren basieren auf dem US-üblichen System, wie vom National Institute of Standards and Technology (NIST) definiert. Beispiel: 1 US-Gallone = 3,785411784 L genau, und 1 US-Tasse = 236,5882365 ml."
+  },
+  "content": {
+    "whatIs": "Der Volumenumrechner ist ein Werkzeug, das ein gegebenes Volumen von einer Einheit gleichzeitig in mehrere andere Einheiten umrechnet. Es verwendet Umrechnungsfaktoren zwischen Einheiten wie Liter, Gallonen, Tassen und Flüssigunzen, basierend auf dem metrischen und US-üblichen System.",
+    "formula": "Die Umrechnung verwendet die Basiseinheit Liter. Für jede Einheit wird ein Umrechnungsfaktor angewendet: 1 L = 1000 ml = 0,264172 gal = 4,22675 Tassen = 33,814 fl oz. Die Formel lautet: Ergebnis = Wert * (Umrechnungsfaktor von fromUnit zu L) * (Umrechnungsfaktor von L zu targetUnit).",
+    "example": "Beispiel: Umrechnung von 2 Gallonen in andere Einheiten: 2 gal × 3,78541 L/gal = 7,57082 L, dann 7,57082 L × 1000 = 7570,82 ml, × 4,22675 = 32 Tassen, × 33,814 = 256 fl oz.",
+    "howItWorks_1": "Geben Sie den numerischen Volumenwert in das Feld 'Wert' ein (z. B. 5).",
+    "howItWorks_2": "Wählen Sie die Einheit des eingegebenen Werts aus dem Dropdown 'Von' (z. B. 'gal' für Gallonen). Der Rechner wendet dann die Umrechnungsfaktoren an, um äquivalente Volumina in Litern, Millilitern, Gallonen, Tassen und Flüssigunzen zu berechnen.",
+    "howItWorks_3": "Die Ergebnisse werden in den Ausgabefeldern angezeigt: Liter, Milliliter, US-Gallonen, Tassen und Flüssigunzen. Jedes zeigt den umgerechneten Wert mit seiner Einheitenbezeichnung."
+  }
+}

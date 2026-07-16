@@ -1,0 +1,40 @@
+{
+  "title": "Calculadora de Salário — Conversor de Salário Horário para Anual",
+  "description": "Converta salário horário em salário anual ou anual em horário. Calcule ganhos semanais, quinzenais, mensais e anuais instantaneamente.",
+  "calculate": "Calcular",
+  "reset": "Redefinir",
+  "result": "Resultado",
+  "label_salaryType": "Tipo de Salário",
+  "label_amount": "Valor",
+  "label_hoursPerWeek": "Horas por Semana",
+  "label_weeksPerYear": "Semanas por Ano",
+  "label_hourly": "Taxa Horária",
+  "label_daily": "Taxa Diária",
+  "label_weekly": "Pagamento Semanal",
+  "label_biweekly": "Pagamento Quinzenal",
+  "label_monthly": "Pagamento Mensal",
+  "label_annual": "Salário Anual",
+  "opt_hourly": "Horário",
+  "opt_annual": "Anual",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Como converter um salário horário em salário anual?",
+    "a1": "Multiplique sua taxa horária pelo número de horas trabalhadas por semana e depois pelo número de semanas trabalhadas por ano. Para uma semana padrão de 40 horas e ano de 52 semanas: Anual = Horário × 40 × 52. Por exemplo, $25/hora × 40 × 52 = $52.000 por ano.",
+    "q2": "Como é calculada a taxa diária?",
+    "a2": "A taxa diária é calculada dividindo o salário anual por 261 — o número aproximado de dias úteis em um ano (52 semanas × 5 dias). Para um salário de $52.000: $52.000 / 261 ≈ $199,23 por dia. Este é um padrão usado por RH e sistemas de folha de pagamento nos EUA.",
+    "q3": "Qual é a diferença entre pagamento quinzenal e semimensal?",
+    "a3": "O pagamento quinzenal é feito a cada duas semanas — 26 períodos de pagamento por ano. O pagamento semimensal é feito duas vezes por mês — 24 períodos de pagamento por ano. Esta calculadora usa o padrão quinzenal (26 períodos). A diferença importa para o orçamento: o quinzenal resulta em dois meses com cheque extra a cada ano.",
+    "q4": "Esta calculadora considera impostos ou deduções?",
+    "a4": "Não. Esta calculadora mostra apenas valores brutos de salário, antes de quaisquer impostos federais, estaduais ou locais, Previdência Social, Medicare, seguro saúde ou contribuições para aposentadoria. Para o salário líquido após impostos federais, use a Calculadora de Impostos.",
+    "q5": "E se eu trabalhar meio período ou horas sazonais?",
+    "a5": "Ajuste os campos 'Horas por Semana' e 'Semanas por Ano' para corresponder à sua agenda real. Por exemplo, um trabalhador de meio período com 20 horas/semana durante 48 semanas ganhando $18/hora: $18 × 20 × 48 = $17.280 de salário anual."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de salário converte entre salários horários e anuais e mostra seu pagamento equivalente em cada período comum: diário, semanal, quinzenal, mensal e anual.",
+    "formula": "Se horário: Anual = Valor × Horas/Semana × Semanas/Ano\nSe anual: Horário = Valor / (Horas/Semana × Semanas/Ano)\nMensal = Anual / 12\nQuinzenal = Anual / 26\nSemanal = Anual / 52\nDiário = Anual / 261",
+    "example": "Um trabalhador que ganha $25/hora com 40 horas/semana durante 52 semanas ganha $52.000/ano. Isso equivale a $1.000/semana, $2.000 quinzenal, $4.333,33/mês e $199,23/dia.",
+    "howItWorks_1": "Selecione se você conhece sua taxa horária ou seu salário anual e insira o valor.",
+    "howItWorks_2": "Ajuste as horas por semana (padrão 40) e semanas por ano (padrão 52) se sua agenda for diferente.",
+    "howItWorks_3": "Clique em Calcular para ver seus valores equivalentes horário, diário, semanal, quinzenal, mensal e anual instantaneamente."
+  }
+}

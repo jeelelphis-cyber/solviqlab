@@ -1,0 +1,35 @@
+{
+  "title": "Conversor de Área — Convierte m², ft², acres, hectáreas y más",
+  "description": "Convierte unidades de área al instante: metros cuadrados, pies cuadrados, acres, hectáreas, kilómetros cuadrados, millas cuadradas. Conversor gratuito de unidades de área.",
+  "calculate": "Calcular",
+  "reset": "Reiniciar",
+  "result": "Resultado",
+  "label_value": "Valor",
+  "label_fromUnit": "Desde",
+  "label_squareMeters": "Metros Cuadrados",
+  "label_squareFeet": "Pies Cuadrados",
+  "label_squareKilometers": "Kilómetros Cuadrados",
+  "label_acres": "Acres",
+  "label_hectares": "Hectáreas",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cómo se convierten metros cuadrados a acres?",
+    "a1": "Para convertir metros cuadrados a acres, multiplica el área en metros cuadrados por 0.000247105. Por ejemplo, 10,000 m² × 0.000247105 = 2.47105 acres.",
+    "q2": "¿Cuál es la diferencia entre un acre y una hectárea?",
+    "a2": "Un acre es una unidad de área comúnmente usada en EE. UU. y el Reino Unido, equivalente a 43,560 pies cuadrados. Una hectárea es una unidad métrica equivalente a 10,000 metros cuadrados. Una hectárea es aproximadamente 2.47105 acres.",
+    "q3": "¿Puede este conversor manejar áreas muy grandes como países?",
+    "a3": "Sí, el conversor acepta valores de hasta 1 cuatrillón (10^15), suficiente para áreas de países (ej. Rusia ~17 millones de km²). Sin embargo, para valores extremadamente grandes, la precisión puede estar limitada por la representación de punto flotante.",
+    "q4": "¿Qué representa la salida 'Kilómetros Cuadrados'?",
+    "a4": "La salida 'Kilómetros Cuadrados' muestra el área en kilómetros cuadrados (km²), una unidad métrica equivalente a 1,000,000 de metros cuadrados. Se usa comúnmente para medir grandes áreas terrestres como ciudades, estados o países.",
+    "q5": "¿Los factores de conversión se basan en estándares internacionales?",
+    "a5": "Sí, los factores de conversión se basan en el Sistema Internacional de Unidades (SI) y acuerdos internacionales. Por ejemplo, 1 pie se define exactamente como 0.3048 metros, por lo que 1 pie cuadrado = 0.09290304 metros cuadrados."
+  },
+  "content": {
+    "whatIs": "El Conversor de Área es una herramienta que convierte un valor de área dado de una unidad a múltiples unidades simultáneamente. Utiliza factores de conversión estándar entre unidades como metros cuadrados, pies cuadrados, acres, hectáreas, kilómetros cuadrados y millas cuadradas.",
+    "formula": "La conversión se basa en multiplicar el valor de entrada por el factor de conversión adecuado. Por ejemplo, para convertir de pies cuadrados a metros cuadrados, multiplica por 0.09290304. La herramienta aplica el factor para la unidad 'desde' seleccionada para convertir a cada unidad objetivo.",
+    "example": "Si ingresas 1000 y seleccionas 'ft²' como unidad desde, el conversor muestra: 92.90304 m², 1000 ft², 0.00009290304 km², 0.02295684 acres y 0.009290304 hectáreas.",
+    "howItWorks_1": "Ingresa un valor numérico en el campo 'valor' (debe ser no negativo).",
+    "howItWorks_2": "Selecciona la unidad del valor ingresado en el menú desplegable 'desde' (ej. metros cuadrados, acres).",
+    "howItWorks_3": "Los resultados muestran el área equivalente en metros cuadrados, pies cuadrados, kilómetros cuadrados, acres y hectáreas al instante."
+  }
+}

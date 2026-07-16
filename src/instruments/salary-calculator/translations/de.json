@@ -1,0 +1,40 @@
+{
+  "title": "Gehaltsrechner — Umrechnung von Stundenlohn in Jahresgehalt",
+  "description": "Wandeln Sie Stundenlohn in Jahresgehalt um oder umgekehrt. Berechnen Sie sofort wöchentliches, zweiwöchentliches, monatliches und jährliches Einkommen.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_salaryType": "Gehaltsart",
+  "label_amount": "Betrag",
+  "label_hoursPerWeek": "Stunden pro Woche",
+  "label_weeksPerYear": "Wochen pro Jahr",
+  "label_hourly": "Stundenlohn",
+  "label_daily": "Tageslohn",
+  "label_weekly": "Wochenlohn",
+  "label_biweekly": "Zweiwöchentlicher Lohn",
+  "label_monthly": "Monatslohn",
+  "label_annual": "Jahresgehalt",
+  "opt_hourly": "Stundenlohn",
+  "opt_annual": "Jahresgehalt",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie rechne ich einen Stundenlohn in ein Jahresgehalt um?",
+    "a1": "Multiplizieren Sie Ihren Stundenlohn mit der Anzahl der Stunden, die Sie pro Woche arbeiten, und dann mit der Anzahl der Wochen, die Sie pro Jahr arbeiten. Für eine Standard-40-Stunden-Woche und ein 52-Wochen-Jahr: Jahresgehalt = Stundenlohn × 40 × 52. Beispiel: 25 $/Stunde × 40 × 52 = 52.000 $ pro Jahr.",
+    "q2": "Wie wird der Tageslohn berechnet?",
+    "a2": "Der Tageslohn wird berechnet, indem das Jahresgehalt durch 261 geteilt wird – die ungefähre Anzahl der Arbeitstage in einem Jahr (52 Wochen × 5 Tage). Bei einem Gehalt von 52.000 $: 52.000 $ / 261 ≈ 199,23 $ pro Tag. Dies ist ein Standard, der von Personalabteilungen und Gehaltsabrechnungssystemen in den USA verwendet wird.",
+    "q3": "Was ist der Unterschied zwischen zweiwöchentlicher und halbmonatlicher Bezahlung?",
+    "a3": "Zweiwöchentliche Bezahlung erfolgt alle zwei Wochen – 26 Zahlungsperioden pro Jahr. Halbmonatliche Bezahlung erfolgt zweimal im Monat – 24 Zahlungsperioden pro Jahr. Dieser Rechner verwendet den zweiwöchentlichen Standard (26 Perioden). Der Unterschied ist für die Budgetierung wichtig: Zweiwöchentliche Bezahlung führt zu zwei zusätzlichen Gehaltsmonaten pro Jahr.",
+    "q4": "Berücksichtigt dieser Rechner Steuern oder Abzüge?",
+    "a4": "Nein. Dieser Rechner zeigt nur Bruttogehälter an, vor jeglichen Bundes-, Landes- oder Kommunalsteuern, Sozialversicherung, Medicare, Krankenversicherung oder Rentenbeiträgen. Für das Nettogehalt nach Bundessteuern verwenden Sie den Steuerrechner.",
+    "q5": "Was ist, wenn ich Teilzeit oder saisonal arbeite?",
+    "a5": "Passen Sie die Felder 'Stunden pro Woche' und 'Wochen pro Jahr' an Ihren tatsächlichen Zeitplan an. Beispiel: Ein Teilzeitbeschäftigter mit 20 Stunden/Woche für 48 Wochen bei einem Stundenlohn von 18 $: 18 $ × 20 × 48 = 17.280 $ Jahresgehalt."
+  },
+  "content": {
+    "whatIs": "Dieser Gehaltsrechner rechnet zwischen Stundenlohn und Jahresgehalt um und zeigt Ihnen Ihr entsprechendes Gehalt für jeden gängigen Zahlungszeitraum: täglich, wöchentlich, zweiwöchentlich, monatlich und jährlich.",
+    "formula": "Wenn Stundenlohn: Jahresgehalt = Betrag × Stunden/Woche × Wochen/Jahr\nWenn Jahresgehalt: Stundenlohn = Betrag / (Stunden/Woche × Wochen/Jahr)\nMonatslohn = Jahresgehalt / 12\nZweiwöchentlich = Jahresgehalt / 26\nWöchentlich = Jahresgehalt / 52\nTäglich = Jahresgehalt / 261",
+    "example": "Ein Arbeitnehmer, der 25 $/Stunde bei 40 Stunden/Woche für 52 Wochen verdient, erhält 52.000 $/Jahr. Das entspricht 1.000 $/Woche, 2.000 $ zweiwöchentlich, 4.333,33 $/Monat und 199,23 $/Tag.",
+    "howItWorks_1": "Wählen Sie, ob Sie Ihren Stundenlohn oder Ihr Jahresgehalt kennen, und geben Sie dann den Betrag ein.",
+    "howItWorks_2": "Passen Sie die Stunden pro Woche (Standard 40) und Wochen pro Jahr (Standard 52) an, falls Ihr Zeitplan abweicht.",
+    "howItWorks_3": "Klicken Sie auf Berechnen, um sofort Ihre entsprechenden Stunden-, Tages-, Wochen-, Zweiwochen-, Monats- und Jahresbeträge zu sehen."
+  }
+}

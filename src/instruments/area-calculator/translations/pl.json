@@ -1,0 +1,39 @@
+{
+  "title": "Kalkulator powierzchni — prostokąt, koło, trójkąt i inne",
+  "description": "Oblicz powierzchnię dowolnego kształtu: prostokąta, kwadratu, koła, trójkąta, trapezu i innych. Natychmiastowe wyniki z wyjaśnieniami wzorów.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_shape": "Kształt",
+  "label_a": "Długość / Promień / Podstawa",
+  "label_b": "Szerokość / Wysokość / Druga podstawa",
+  "label_area": "Powierzchnia",
+  "label_perimeter": "Obwód",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jak obliczyć pole trójkąta, jeśli podano tylko podstawę i wysokość?",
+    "a1": "Pole trójkąta oblicza się jako 0,5 × podstawa × wysokość. Na przykład trójkąt o podstawie 6 jednostek i wysokości 4 jednostek ma pole = 0,5 × 6 × 4 = 12 jednostek².",
+    "q2": "Co oznacza wynik obwodu dla koła?",
+    "a2": "Dla koła obwód nazywany jest obwodem koła. Oblicza się go jako 2π × promień. Dla koła o promieniu 5 jednostek obwód wynosi około 31,42 jednostek.",
+    "q3": "Czy ten kalkulator obsługuje nieregularne kształty?",
+    "a3": "Nie, ten kalkulator obsługuje tylko standardowe kształty geometryczne: prostokąt, kwadrat, koło, trójkąt, trapez i elipsę. W przypadku nieregularnych kształtów należy je rozbić na te podstawowe kształty lub zastosować metody całkowania numerycznego.",
+    "q4": "Co oznacza wejście 'b' dla trapezu?",
+    "a4": "Dla trapezu wejście 'b' reprezentuje wysokość (odległość prostopadła między dwoma równoległymi bokami). Dwa równoległe boki są wprowadzane jako 'a' (podstawa1) i 'b' (podstawa2) w polach wejściowych, ale uwaga: wysokość jest wprowadzana w polu 'b' po wybraniu trapezu.",
+    "q5": "Jakie standardowe wzory są używane do obliczania obwodu elipsy?",
+    "a5": "Obwód elipsy jest obliczany za pomocą przybliżenia Ramanujana: π[3(a+b) - √((3a+b)(a+3b))]. Jest to powszechnie akceptowane przybliżenie; dokładny obwód wymaga całek eliptycznych."
+  },
+  "opt_rectangle": "Prostokąt",
+  "opt_square": "Kwadrat",
+  "opt_circle": "Koło",
+  "opt_triangle": "Trójkąt",
+  "opt_trapezoid": "Trapez",
+  "opt_ellipse": "Elipsa",
+  "content": {
+    "whatIs": "Ten kalkulator powierzchni oblicza pole i obwód typowych kształtów geometrycznych: prostokąta, kwadratu, koła, trójkąta, trapezu i elipsy. Używa standardowych wzorów geometrycznych opartych na wymiarach kształtu, zapewniając natychmiastowe wyniki z wyjaśnieniami wzorów.",
+    "formula": "Dla prostokąta: Pole = a × b, Obwód = 2(a + b). Kwadrat: Pole = a², Obwód = 4a. Koło: Pole = π × a², Obwód = 2πa. Trójkąt: Pole = 0,5 × a × b, Obwód = a + b + c (c obliczane z twierdzenia Pitagorasa, jeśli trójkąt prostokątny). Trapez: Pole = 0,5 × (a + b) × wysokość, Obwód = a + b + c + d. Elipsa: Pole = π × a × b, Obwód ≈ π[3(a+b) - √((3a+b)(a+3b))].",
+    "example": "Dla prostokąta o a=5 jednostek i b=3 jednostki pole wynosi 5 × 3 = 15 jednostek², a obwód 2(5+3) = 16 jednostek. Dla koła o promieniu a=4 jednostki pole = π × 4² ≈ 50,27 jednostek², obwód = 2π × 4 ≈ 25,13 jednostek.",
+    "howItWorks_1": "Wybierz kształt z menu rozwijanego. Następnie wprowadź wymagane wymiary: dla prostokąta wprowadź długości boków a i b; dla kwadratu wprowadź bok a; dla koła wprowadź promień a; dla trójkąta wprowadź podstawę a i wysokość b; dla trapezu wprowadź podstawę a, podstawę b i wysokość (wprowadzaną jako b); dla elipsy wprowadź półoś wielką a i półoś małą b.",
+    "howItWorks_2": "Kliknij przycisk Oblicz. Kalkulator stosuje odpowiedni wzór dla wybranego kształtu, używając wprowadzonych wartości, i oblicza pole oraz obwód.",
+    "howItWorks_3": "Wyniki wyświetlają pole w jednostkach kwadratowych i obwód w jednostkach. Możesz użyć tych wartości do dalszych obliczeń, takich jak szacowanie materiału lub porównanie z innymi kształtami."
+  }
+}

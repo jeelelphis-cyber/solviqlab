@@ -1,0 +1,35 @@
+{
+  "title": "BMR Calculator — Basal Metabolic Rate",
+  "description": "Calculate your Basal Metabolic Rate (BMR) using the Mifflin-St Jeor equation. Find how many calories your body burns at complete rest.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_weight": "Weight",
+  "label_height": "Height",
+  "label_age": "Age",
+  "label_sex": "Sex",
+  "label_bmr": "BMR",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "Why does the Mifflin-St Jeor equation use different formulas for men and women?",
+    "a1": "Men generally have more lean muscle mass and higher metabolic rates than women, so the equation adds 5 for males and subtracts 161 for females to account for these differences.",
+    "q2": "What does my BMR number mean for weight loss?",
+    "a2": "Your BMR is the minimum calories needed for basic functions. To lose weight, you should consume fewer calories than your total daily energy expenditure (BMR plus activity), typically a deficit of 500-1000 kcal/day for safe loss.",
+    "q3": "Can I use this BMR calculator if I am under 15 or over 100 years old?",
+    "a3": "The Mifflin-St Jeor equation is validated for adults aged 19-100. For ages 15-18, it may still provide a reasonable estimate, but for children under 15, other equations (e.g., Schofield) are more appropriate.",
+    "q4": "What does 'kcal/day' mean in the output?",
+    "a4": "kcal/day stands for kilocalories per day, the standard unit for food energy. One kilocalorie equals 1,000 calories (small c). It represents the energy your body burns in one day at rest.",
+    "q5": "Is the Mifflin-St Jeor equation recommended by health authorities?",
+    "a5": "Yes, the Academy of Nutrition and Dietetics recommends the Mifflin-St Jeor equation as the most accurate for estimating BMR in non-obese and obese individuals. It is widely used in clinical settings."
+  },
+  "opt_male": "Male",
+  "opt_female": "Female",
+  "content": {
+    "whatIs": "This BMR calculator estimates your Basal Metabolic Rate (BMR) using the Mifflin-St Jeor equation. BMR is the number of calories your body burns at complete rest to maintain vital functions like breathing and circulation.",
+    "formula": "For males: BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age(y) + 5. For females: BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age(y) - 161. The result is in kcal/day.",
+    "example": "A 30-year-old male weighing 80 kg and 180 cm tall: BMR = 10×80 + 6.25×180 - 5×30 + 5 = 800 + 1125 - 150 + 5 = 1780 kcal/day. This means his body burns about 1780 calories daily at rest.",
+    "howItWorks_1": "Enter your weight in kilograms, height in centimeters, age in years, and select your sex (male or female).",
+    "howItWorks_2": "Click the Calculate button. The calculator applies the Mifflin-St Jeor equation to compute your BMR based on the inputs.",
+    "howItWorks_3": "The result shows your BMR in kcal/day. Use this number as a baseline for daily calorie needs; add activity calories to estimate total energy expenditure."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Calculadora de Frações — Adicionar, Subtrair, Multiplicar, Dividir",
+  "description": "Calcule frações instantaneamente. Adicione, subtraia, multiplique e divida frações com soluções passo a passo. Simplifica os resultados automaticamente.",
+  "calculate": "Calcular",
+  "reset": "Limpar",
+  "result": "Resultado",
+  "label_numerator1": "Numerador 1",
+  "label_denominator1": "Denominador 1",
+  "label_operation": "Operação",
+  "label_numerator2": "Numerador 2",
+  "label_denominator2": "Denominador 2",
+  "label_resultNumerator": "Numerador do Resultado",
+  "label_resultDenominator": "Denominador do Resultado",
+  "label_decimal": "Decimal",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Como a calculadora simplifica frações?",
+    "a1": "Após realizar a operação, a calculadora encontra o máximo divisor comum (MDC) do numerador e do denominador. Em seguida, divide ambos pelo MDC para apresentar a fração em sua forma mais simples.",
+    "q2": "O que a saída decimal representa?",
+    "a2": "A saída decimal é o resultado da divisão do numerador simplificado pelo denominador simplificado. Por exemplo, se a fração resultante for 3/4, o decimal é 0,75.",
+    "q3": "Posso usar esta calculadora para frações com números negativos?",
+    "a3": "Sim, a calculadora aceita numeradores e denominadores negativos. O resultado terá o sinal correto e a simplificação lida adequadamente com sinais negativos.",
+    "q4": "O que acontece se eu inserir um denominador igual a zero?",
+    "a4": "Um denominador igual a zero é indefinido em matemática. A calculadora provavelmente retornará um erro ou não calculará. Sempre certifique-se de que os denominadores sejam diferentes de zero.",
+    "q5": "Existe uma referência padrão para aritmética de frações?",
+    "a5": "A aritmética de frações segue as regras padrão da aritmética definidas pela matemática. Não há uma autoridade única, mas os métodos são universalmente ensinados e usados em contextos educacionais e profissionais."
+  },
+  "opt_add": "Adicionar",
+  "opt_subtract": "Subtrair",
+  "opt_multiply": "Multiplicar",
+  "opt_divide": "Dividir",
+  "content": {
+    "whatIs": "Esta calculadora de frações realiza adição, subtração, multiplicação e divisão de duas frações. Ela simplifica o resultado automaticamente e fornece o equivalente decimal, usando as operações aritméticas padrão em frações.",
+    "formula": "Para adição/subtração: a/b ± c/d = (a*d ± c*b) / (b*d). Para multiplicação: a/b * c/d = (a*c) / (b*d). Para divisão: a/b ÷ c/d = a/b * d/c = (a*d) / (b*c). O resultado é então simplificado dividindo numerador e denominador pelo seu máximo divisor comum (MDC).",
+    "example": "Para somar 1/3 e 1/4, insira numerador1=1, denominador1=3, operação='adicionar', numerador2=1, denominador2=4. A calculadora calcula (1*4 + 1*3)/(3*4) = 7/12, que já está simplificado, e mostra o decimal 0,58333.",
+    "howItWorks_1": "Insira o numerador e o denominador da primeira fração nos campos 'numerador1' e 'denominador1'. Em seguida, selecione a operação (adicionar, subtrair, multiplicar ou dividir) no menu suspenso.",
+    "howItWorks_2": "Insira o numerador e o denominador da segunda fração nos campos 'numerador2' e 'denominador2'. Clique no botão Calcular para realizar a operação.",
+    "howItWorks_3": "O resultado é exibido como uma fração simplificada (Numerador do Resultado e Denominador do Resultado) e como decimal. Por exemplo, se o resultado for 2/4, será simplificado para 1/2."
+  }
+}

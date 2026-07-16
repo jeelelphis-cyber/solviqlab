@@ -1,0 +1,36 @@
+{
+  "title": "Längenkonverter — Konvertieren Sie jede Längeneinheit",
+  "description": "Konvertieren Sie zwischen Metern, Fuß, Zoll, Zentimetern, Kilometern, Meilen und mehr. Sofortiger Längeneinheiten-Umrechner mit über 15 Einheiten.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_value": "Wert",
+  "label_fromUnit": "Von",
+  "label_meters": "Meter",
+  "label_kilometers": "Kilometer",
+  "label_centimeters": "Zentimeter",
+  "label_feet": "Fuß",
+  "label_inches": "Zoll",
+  "label_miles": "Meilen",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie ist ein Meter definiert und warum ist er die Basiseinheit für Längenumrechnungen?",
+    "a1": "Der Meter ist die Basiseinheit der Länge im Internationalen Einheitensystem (SI), definiert als die Strecke, die Licht im Vakuum in 1/299.792.458 Sekunde zurücklegt. Alle anderen Längeneinheiten im Konverter werden mit festen Umrechnungsfaktoren vom Meter abgeleitet, was Konsistenz und Genauigkeit gewährleistet.",
+    "q2": "Was stellt der Ausgabewert in 'Meilen' dar?",
+    "a2": "Die Ausgabe 'Meilen' zeigt die entsprechende Länge in statute Meilen, wobei 1 Meile genau 1609,344 Meter entspricht. Beispielsweise entspricht 1 Kilometer etwa 0,621371 Meilen. Diese Einheit wird in den USA und im Vereinigten Königreich häufig für Straßenentfernungen verwendet.",
+    "q3": "Kann dieser Längenkonverter sehr große oder sehr kleine Werte verarbeiten?",
+    "a3": "Ja, der Konverter akzeptiert Werte von 0 bis 1.000.000.000.000.000 (10^15). Für extrem große Werte (z. B. astronomische Entfernungen) sind jedoch Einheiten wie Lichtjahre oder Parsec besser geeignet, die in diesem Tool nicht enthalten sind. Für sehr kleine Werte (z. B. atomare Skalen) stehen Nanometer und Mikrometer zur Verfügung.",
+    "q4": "Was bedeutet die Ausgabe 'Fuß' und wie wird sie berechnet?",
+    "a4": "Die Ausgabe 'Fuß' zeigt die Länge in Fuß, wobei 1 Fuß genau 0,3048 Meter entspricht. Beispielsweise entspricht 1 Meter etwa 3,28084 Fuß. Diese Einheit wird in den USA häufig zur Messung von Körpergröße, kurzen Entfernungen und in der Luftfahrt verwendet.",
+    "q5": "Was ist der offizielle Standard für die in diesem Rechner verwendeten Umrechnungsfaktoren?",
+    "a5": "Die Umrechnungsfaktoren basieren auf dem Internationalen Einheitensystem (SI) und dem internationalen Yard- und Pfund-Abkommen von 1959. Beispielsweise ist 1 Zoll als genau 25,4 mm und 1 Fuß als 0,3048 m definiert. Diese Standards werden vom Internationalen Büro für Maß und Gewicht (BIPM) verwaltet."
+  },
+  "content": {
+    "whatIs": "Ein Längenkonverter ist ein Werkzeug, das eine Messung von einer Längeneinheit in eine andere umwandelt, z. B. von Metern in Fuß oder von Kilometern in Meilen. Es verwendet Umrechnungsfaktoren basierend auf dem Internationalen Einheitensystem (SI) und anderen Standarddefinitionen, um genaue Ergebnisse für über 15 Einheiten zu liefern.",
+    "formula": "Die Umrechnung erfolgt durch Multiplikation des Eingabewerts mit dem entsprechenden Umrechnungsfaktor. Um beispielsweise von Metern in Fuß umzurechnen, multiplizieren Sie mit 3,28084 (da 1 m = 3,28084 ft). Die allgemeine Formel lautet: Ergebnis = Wert * (Zieleinheitsfaktor / Quelleinheitsfaktor), wobei jede Einheit einen vordefinierten Faktor relativ zum Meter hat.",
+    "example": "Konvertieren Sie 5 Kilometer in Meilen. Da 1 km = 0,621371 Meilen, multiplizieren Sie 5 mit 0,621371, um 3,10686 Meilen zu erhalten. Der Konverter gibt auch die Entsprechung in Metern (5000 m), Zentimetern (500.000 cm), Fuß (16404,2 ft) und Zoll (196850,4 in) aus.",
+    "howItWorks_1": "Geben Sie den numerischen Wert, den Sie umrechnen möchten, in das Feld 'Wert' ein. Wählen Sie dann die Einheit dieses Werts aus dem Dropdown-Menü 'Von' (z. B. 'km' für Kilometer).",
+    "howItWorks_2": "Nach dem Klicken auf die Schaltfläche 'Berechnen' wendet das Tool die Umrechnungsformel unter Verwendung der ausgewählten Quelleinheit und vordefinierten Umrechnungsfaktoren an, um die entsprechenden Längen in allen Ausgabeeinheiten zu berechnen.",
+    "howItWorks_3": "Die Ergebnisse werden in einer Tabelle angezeigt, die jede Ausgabeeinheit (Meter, Kilometer, Zentimeter, Fuß, Zoll, Meilen) mit dem umgerechneten numerischen Wert zeigt. Sie können diese Werte direkt für Ihre Berechnungen oder weitere Umrechnungen verwenden."
+  }
+}

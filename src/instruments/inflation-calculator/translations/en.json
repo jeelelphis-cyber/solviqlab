@@ -1,0 +1,36 @@
+{
+  "title": "Inflation Calculator — Purchasing Power & CPI Adjustment",
+  "description": "Calculate the adjusted value of money over time using a custom inflation rate. See how inflation erodes purchasing power between any two years.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_amount": "Original Amount",
+  "label_fromYear": "From Year",
+  "label_toYear": "To Year",
+  "label_inflationRate": "Annual Inflation Rate",
+  "label_adjustedAmount": "Adjusted Amount",
+  "label_totalInflation": "Total Inflation",
+  "label_purchasingPowerLoss": "Purchasing Power Lost",
+  "label_yearsElapsed": "Years Elapsed",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "What does the adjusted amount represent?",
+    "a1": "The adjusted amount tells you what the original sum of money is worth in the target year's dollars. If you had $1,000 in 2000 and inflation averaged 3% per year, by 2024 you would need about $2,032 to have the same purchasing power. Alternatively, your original $1,000 from 2000 is only worth about $492 in 2024 terms.",
+    "q2": "How is purchasing power loss calculated?",
+    "a2": "Purchasing power loss shows how much less your original amount can buy in the target year. It is calculated as: 100 − (original amount / adjusted amount × 100). For $1,000 adjusted to $2,032 over 24 years at 3%, purchasing power loss is 100 − (1000/2032 × 100) ≈ 50.8%, meaning money buys roughly half as much.",
+    "q3": "What is the average US inflation rate?",
+    "a3": "The long-run average US CPI inflation rate is approximately 3% per year, though it varies significantly by decade. The 1970s saw rates above 10%, while the 2010s averaged around 1.7%. Recent years (2021–2023) saw peaks of 7–9%. The default of 3% is a reasonable historical average for long-term planning.",
+    "q4": "How is total inflation different from the inflation rate?",
+    "a4": "The inflation rate is the annual percentage change in prices. Total inflation is the cumulative compounded change over the full period. At a 3% annual rate over 24 years, total inflation is (1.03^24 − 1) × 100 ≈ 103.3%, meaning prices more than doubled over that span.",
+    "q5": "Can I use this for future projections?",
+    "a5": "Yes. Set 'From Year' to the current year and 'To Year' to a future year. The calculator uses the formula adjustedAmount = amount × (1 + rate/100)^years, which is valid for both historical lookups and forward projections — understanding that future rates are estimates."
+  },
+  "content": {
+    "whatIs": "This inflation calculator shows you how much a sum of money from one year is worth in another year, using a user-specified annual inflation rate. It also reveals total cumulative inflation and purchasing power erosion over the period.",
+    "formula": "Adjusted Amount = Amount × (1 + Rate/100)^(ToYear − FromYear)\nTotal Inflation = ((Adjusted / Original) − 1) × 100\nPurchasing Power Loss = 100 − (Original / Adjusted × 100)",
+    "example": "A $10,000 amount from 2000 adjusted to 2024 at 3% annual inflation: $10,000 × (1.03)^24 ≈ $20,327.94. Total inflation is 103.3% and purchasing power loss is 50.8% — the original $10,000 now has the buying power of about $4,919.",
+    "howItWorks_1": "Enter the original amount of money and the starting year.",
+    "howItWorks_2": "Set the target year and adjust the annual inflation rate (default 3%).",
+    "howItWorks_3": "Click Calculate to see the inflation-adjusted value, total cumulative inflation, and how much purchasing power has been lost."
+  }
+}

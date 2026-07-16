@@ -1,0 +1,41 @@
+{
+  "title": "Zinseszinsrechner — Lassen Sie Ihr Geld wachsen",
+  "description": "Berechnen Sie den Zinseszins im Laufe der Zeit mit monatlichen Einzahlungen. Sehen Sie, wie Ihre Investition Jahr für Jahr durch die Kraft des Zinseszinses wächst.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_principal": "Anfangsinvestition",
+  "label_annualRate": "Jährlicher Zinssatz",
+  "label_years": "Laufzeit",
+  "label_monthlyContribution": "Monatlicher Beitrag",
+  "label_compoundFrequency": "Zinseszinshäufigkeit",
+  "label_finalAmount": "Endbetrag",
+  "label_totalContributions": "Gesamteinzahlungen",
+  "label_totalInterest": "Erhaltene Zinsen insgesamt",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Was ist der Unterschied zwischen einfachen Zinsen und Zinseszins?",
+    "a1": "Einfache Zinsen werden nur auf das ursprüngliche Kapital berechnet, während Zinseszins auf das Kapital plus die aufgelaufenen Zinsen berechnet wird. Zum Beispiel: 10.000 $ bei 5 % einfachen Zinsen über 10 Jahre ergeben 5.000 $ Zinsen, aber monatlich verzinst ergeben etwa 6.470 $ Zinsen.",
+    "q2": "Wie wirkt sich die Zinseszinshäufigkeit auf den Endbetrag aus?",
+    "a2": "Häufigere Verzinsung führt zu höheren Renditen, da die Zinsen öfter hinzugefügt werden. Bei 10.000 $ zu 5 % über 10 Jahre: jährlich ergibt 16.288,95 $, vierteljährlich 16.453,09 $, monatlich 16.470,09 $ und täglich 16.474,61 $.",
+    "q3": "Kann ich diesen Rechner auch für Kredite und Investitionen verwenden?",
+    "a3": "Ja, dieselbe Formel gilt für Kredite mit Zinseszins. Bei Krediten stellt das Ergebnis jedoch den geschuldeten Gesamtbetrag dar. Dieser Rechner berücksichtigt keine Kreditzahlungen; er geht von keinen Abhebungen aus.",
+    "q4": "Was bedeutet 'Gesamteinzahlungen' im Ergebnis?",
+    "a4": "Gesamteinzahlungen ist die Summe des Anfangskapitals und aller monatlichen Beiträge über den Anlagezeitraum. Wenn Sie z. B. mit 10.000 $ beginnen und 10 Jahre lang monatlich 100 $ einzahlen, betragen die Gesamteinzahlungen 10.000 $ + (100 $ × 120) = 22.000 $.",
+    "q5": "Gibt es eine Standardautorität für Zinseszinsberechnungen?",
+    "a5": "Die Zinseszinsformel ist in Finanzwesen und Mathematik allgemein anerkannt. Die US-Börsenaufsicht SEC (Securities and Exchange Commission) bietet Bildungsressourcen zum Zinseszins, und die Formel wird von Banken und Finanzinstituten weltweit verwendet."
+  },
+  "unit_years": "Jahre",
+  "freq_annually": "Jährlich",
+  "freq_quarterly": "Vierteljährlich",
+  "freq_monthly": "Monatlich",
+  "freq_daily": "Täglich",
+  "content": {
+    "whatIs": "Ein Zinseszinsrechner schätzt den zukünftigen Wert einer Investition, indem er Zinsen sowohl auf das ursprüngliche Kapital als auch auf die aufgelaufenen Zinsen aus früheren Perioden anwendet. Er verwendet die Formel A = P(1 + r/n)^(nt), um das Wachstum mit optionalen regelmäßigen Einzahlungen zu berechnen.",
+    "formula": "Die Kernformel lautet A = P(1 + r/n)^(nt), wobei A der Endbetrag, P das Kapital, r der jährliche Zinssatz (Dezimal), n die Anzahl der Zinseszinsperioden pro Jahr und t die Anzahl der Jahre ist. Bei monatlichen Beiträgen wird die Formel für den zukünftigen Wert einer Reihe hinzugefügt: FV = PMT × [((1 + r/n)^(nt) - 1) / (r/n)].",
+    "example": "Wenn Sie 10.000 $ zu 5 % jährlichem Zins, monatlich verzinst, für 10 Jahre ohne zusätzliche Einzahlungen investieren, beträgt der Endbetrag 10.000 $ × (1 + 0,05/12)^(12×10) ≈ 16.470,09 $. Die erhaltenen Zinsen insgesamt betragen 6.470,09 $.",
+    "howItWorks_1": "Geben Sie den anfänglichen Kapitalbetrag (z. B. 10.000 $), den jährlichen Zinssatz (z. B. 5 %), die Anzahl der Jahre (z. B. 10) ein und wählen Sie die Zinseszinshäufigkeit (jährlich, vierteljährlich, monatlich oder täglich). Optional können Sie einen monatlichen Beitrag hinzufügen.",
+    "howItWorks_2": "Wenn Sie auf Berechnen klicken, wendet das Tool die Zinseszinsformel mit der gewählten Häufigkeit und etwaigen monatlichen Beiträgen an. Es berechnet den Endsaldo, die Gesamteinzahlungen und die erhaltenen Zinsen insgesamt.",
+    "howItWorks_3": "Die Ergebnisse zeigen den Endbetrag (Kapital + Beiträge + Zinsen), die Gesamteinzahlungen (Kapital plus etwaige monatliche Einzahlungen) und die erhaltenen Zinsen insgesamt. Sie können verschiedene Szenarien vergleichen, indem Sie die Eingaben anpassen."
+  }
+}

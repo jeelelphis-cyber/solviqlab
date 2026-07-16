@@ -1,0 +1,36 @@
+{
+  "title": "Calculadora de Inflação — Poder de Compra e Ajuste pelo IPC",
+  "description": "Calcule o valor ajustado do dinheiro ao longo do tempo usando uma taxa de inflação personalizada. Veja como a inflação corrói o poder de compra entre dois anos quaisquer.",
+  "calculate": "Calcular",
+  "reset": "Redefinir",
+  "result": "Resultado",
+  "label_amount": "Valor Original",
+  "label_fromYear": "Ano Inicial",
+  "label_toYear": "Ano Final",
+  "label_inflationRate": "Taxa de Inflação Anual",
+  "label_adjustedAmount": "Valor Ajustado",
+  "label_totalInflation": "Inflação Total",
+  "label_purchasingPowerLoss": "Perda de Poder de Compra",
+  "label_yearsElapsed": "Anos Decorridos",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "O que representa o valor ajustado?",
+    "a1": "O valor ajustado informa quanto o montante original vale em dólares do ano-alvo. Se você tivesse $1.000 em 2000 e a inflação média fosse de 3% ao ano, em 2024 você precisaria de cerca de $2.032 para ter o mesmo poder de compra. Alternativamente, seus $1.000 originais de 2000 valem apenas cerca de $492 em termos de 2024.",
+    "q2": "Como é calculada a perda de poder de compra?",
+    "a2": "A perda de poder de compra mostra o quanto menos seu valor original pode comprar no ano-alvo. É calculada como: 100 − (valor original / valor ajustado × 100). Para $1.000 ajustados para $2.032 ao longo de 24 anos a 3%, a perda de poder de compra é 100 − (1000/2032 × 100) ≈ 50,8%, significando que o dinheiro compra aproximadamente metade do que comprava.",
+    "q3": "Qual é a taxa média de inflação nos EUA?",
+    "a3": "A taxa média de inflação do IPC dos EUA no longo prazo é de aproximadamente 3% ao ano, embora varie significativamente por década. Os anos 1970 tiveram taxas acima de 10%, enquanto a década de 2010 teve média em torno de 1,7%. Anos recentes (2021–2023) tiveram picos de 7–9%. O padrão de 3% é uma média histórica razoável para planejamento de longo prazo.",
+    "q4": "Como a inflação total difere da taxa de inflação?",
+    "a4": "A taxa de inflação é a variação percentual anual nos preços. A inflação total é a variação cumulativa composta ao longo de todo o período. A uma taxa anual de 3% ao longo de 24 anos, a inflação total é (1,03^24 − 1) × 100 ≈ 103,3%, significando que os preços mais que dobraram nesse período.",
+    "q5": "Posso usar isso para projeções futuras?",
+    "a5": "Sim. Defina 'Ano Inicial' para o ano atual e 'Ano Final' para um ano futuro. A calculadora usa a fórmula valorAjustado = valor × (1 + taxa/100)^anos, que é válida tanto para consultas históricas quanto para projeções futuras — entendendo que as taxas futuras são estimativas."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de inflação mostra quanto vale uma quantia em dinheiro de um ano em outro ano, usando uma taxa de inflação anual definida pelo usuário. Ela também revela a inflação cumulativa total e a erosão do poder de compra ao longo do período.",
+    "formula": "Valor Ajustado = Valor × (1 + Taxa/100)^(AnoFinal − AnoInicial)\nInflação Total = ((Ajustado / Original) − 1) × 100\nPerda de Poder de Compra = 100 − (Original / Ajustado × 100)",
+    "example": "Um valor de $10.000 de 2000 ajustado para 2024 com inflação anual de 3%: $10.000 × (1,03)^24 ≈ $20.327,94. A inflação total é de 103,3% e a perda de poder de compra é de 50,8% — os $10.000 originais agora têm o poder de compra de cerca de $4.919.",
+    "howItWorks_1": "Insira o valor original do dinheiro e o ano inicial.",
+    "howItWorks_2": "Defina o ano-alvo e ajuste a taxa de inflação anual (padrão 3%).",
+    "howItWorks_3": "Clique em Calcular para ver o valor ajustado pela inflação, a inflação cumulativa total e quanto poder de compra foi perdido."
+  }
+}

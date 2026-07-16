@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "title": "Calculadora de IMC — Índice de Masa Corporal con Interpretación",
+    "description": "Calcula tu IMC al instante. Obtén la categoría de la OMS, rango de peso saludable, IMC Prime e interpretación de salud con IA — gratis, rápido y preciso."
+  },
+  "form": {
+    "title": "Calculadora de IMC",
+    "height_label": "Altura",
+    "height_placeholder_cm": "ej. 175",
+    "height_placeholder_ft": "pies",
+    "height_placeholder_in": "pulg",
+    "weight_label": "Peso",
+    "weight_placeholder_kg": "ej. 70",
+    "weight_placeholder_lb": "ej. 154",
+    "age_label": "Edad (opcional)",
+    "age_placeholder": "ej. 30",
+    "sex_label": "Sexo (opcional)",
+    "sex_male": "Masculino",
+    "sex_female": "Femenino",
+    "sex_other": "Otro / Prefiero no decirlo",
+    "unit_metric": "Métrico (cm, kg)",
+    "unit_imperial": "Imperial (pies, lb)",
+    "calculate_button": "Calcular IMC",
+    "reset_button": "Reiniciar"
+  },
+  "validation": {
+    "height_required": "Por favor, ingresa tu altura.",
+    "height_too_low": "La altura debe ser al menos {min} cm.",
+    "height_too_high": "La altura debe ser como máximo {max} cm.",
+    "weight_required": "Por favor, ingresa tu peso.",
+    "weight_too_low": "El peso debe ser al menos {min} kg.",
+    "weight_too_high": "El peso debe ser como máximo {max} kg.",
+    "invalid_number": "Por favor, ingresa un número válido (ej. 70 o 70.5).",
+    "unknown": "Entrada inválida."
+  },
+  "result": {
+    "title": "Tu Resultado de IMC",
+    "bmi_label": "IMC",
+    "category_label": "Categoría",
+    "bmi_prime_label": "IMC Prime",
+    "ponderal_index_label": "Índice Ponderal",
+    "healthy_range_label": "Rango de peso saludable",
+    "body_fat_label": "Grasa corporal estimada",
+    "body_fat_unavailable": "Ingresa edad y sexo para estimar la grasa corporal",
+    "categories": {
+      "underweight_severe": "Bajo peso severo",
+      "underweight": "Bajo peso",
+      "normal": "Peso normal",
+      "overweight": "Sobrepeso",
+      "obese_1": "Obesidad (Clase I)",
+      "obese_2": "Obesidad (Clase II)",
+      "obese_3": "Obesidad (Clase III)"
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cómo se calcula el IMC para niños o adolescentes?",
+    "a1": "Esta calculadora está diseñada para adultos (mayores de 18 años). Para niños y adolescentes, el IMC se interpreta usando percentiles específicos por edad y sexo de las tablas de crecimiento de los CDC, no las categorías fijas de la OMS.",
+    "q2": "¿Qué significa IMC Prime?",
+    "a2": "IMC Prime es la relación entre tu IMC y el límite superior del rango normal (IMC 25). Un valor de 1.0 corresponde a un IMC de 25. Valores por debajo de 1.0 indican peso normal, por encima de 1.0 indican sobrepeso u obesidad.",
+    "q3": "¿Puede el IMC ser inexacto para atletas o personas musculosas?",
+    "a3": "Sí, el IMC no distingue entre músculo y grasa. Los atletas con alta masa muscular pueden tener un IMC alto pero poca grasa corporal. Para estas personas, el porcentaje de grasa corporal o la circunferencia de la cintura pueden ser más informativos.",
+    "q4": "¿Cómo se calcula la estimación de grasa corporal?",
+    "a4": "La estimación de grasa corporal utiliza la fórmula de Deurenberg: % Grasa Corporal = 1.20 × IMC + 0.23 × Edad - 10.8 × Sexo - 5.4, donde Sexo = 1 para hombre, 0 para mujer. Esta fórmula está validada para adultos de 18 a 80 años.",
+    "q5": "¿Cuáles son las categorías de IMC de la OMS?",
+    "a5": "La Organización Mundial de la Salud define: Bajo peso (<18.5), Peso normal (18.5–24.9), Sobrepeso (25–29.9) y Obesidad clase I (30–34.9), clase II (35–39.9), clase III (≥40). Estas se basan en riesgos para la salud de la población."
+  },
+  "aria": {
+    "result_announcement": "Resultado: IMC {bmi}. Categoría: {category}. {summary}.",
+    "form_description": "Ingresa tu altura y peso para calcular tu Índice de Masa Corporal.",
+    "loading": "Calculando tu IMC..."
+  },
+  "content": {
+    "whatIs": "La Calculadora de IMC calcula tu Índice de Masa Corporal (IMC) usando tu altura y peso. El IMC es una medida simple que estima la grasa corporal y ayuda a categorizar el estado de peso según los estándares de la Organización Mundial de la Salud (OMS).",
+    "formula": "El IMC se calcula como el peso en kilogramos dividido por la altura en metros al cuadrado: IMC = peso_kg / (altura_cm / 100)^2. Para unidades imperiales, IMC = (peso_lb / (altura_pulg)^2) × 703. La calculadora también calcula el IMC Prime (IMC/25) y el Índice Ponderal (peso_kg / (altura_m)^3).",
+    "example": "Para una persona con altura 170 cm y peso 70 kg: IMC = 70 / (1.70)^2 = 24.22 kg/m². Esto cae en la categoría 'Peso normal' (18.5–24.9). El rango de peso saludable para esta altura es 53.5–72.3 kg.",
+    "howItWorks_1": "Ingresa tu altura en centímetros (o pies/pulgadas si usas imperial) y tu peso en kilogramos (o libras). Opcionalmente, proporciona tu edad y sexo para una estimación de grasa corporal.",
+    "howItWorks_2": "Haz clic en Calcular para obtener tu IMC, IMC Prime, Índice Ponderal y rango de peso saludable. Si se proporcionan edad y sexo, también se calcula un porcentaje estimado de grasa corporal usando la fórmula de Deurenberg.",
+    "howItWorks_3": "Tu valor de IMC se compara con las categorías de la OMS: Bajo peso (<18.5), Normal (18.5–24.9), Sobrepeso (25–29.9) y Obesidad (≥30). IMC Prime muestra qué tan cerca estás del límite superior normal (1.0 = IMC 25). El Índice Ponderal ajusta la altura de manera diferente."
+  }
+}

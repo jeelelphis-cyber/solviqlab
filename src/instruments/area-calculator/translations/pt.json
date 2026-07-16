@@ -1,0 +1,39 @@
+{
+  "title": "Calculadora de Área — Retângulo, Círculo, Triângulo e Mais",
+  "description": "Calcule a área de qualquer forma: retângulo, quadrado, círculo, triângulo, trapézio e mais. Resultados instantâneos com explicações das fórmulas.",
+  "calculate": "Calcular",
+  "reset": "Limpar",
+  "result": "Resultado",
+  "label_shape": "Forma",
+  "label_a": "Comprimento / Raio / Base",
+  "label_b": "Largura / Altura / Segunda Base",
+  "label_area": "Área",
+  "label_perimeter": "Perímetro",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Como é calculada a área de um triângulo se apenas a base e a altura são fornecidas?",
+    "a1": "A área de um triângulo é calculada como 0,5 × base × altura. Por exemplo, um triângulo com base 6 unidades e altura 4 unidades tem área = 0,5 × 6 × 4 = 12 unidades².",
+    "q2": "O que a saída do perímetro representa para um círculo?",
+    "a2": "Para um círculo, o perímetro é chamado de circunferência. É calculado como 2π × raio. Para um círculo com raio 5 unidades, a circunferência é aproximadamente 31,42 unidades.",
+    "q3": "Esta calculadora pode lidar com formas irregulares?",
+    "a3": "Não, esta calculadora suporta apenas formas geométricas padrão: retângulo, quadrado, círculo, triângulo, trapézio e elipse. Para formas irregulares, você precisaria dividi-las nessas formas básicas ou usar métodos de integração numérica.",
+    "q4": "O que a entrada 'b' representa para um trapézio?",
+    "a4": "Para um trapézio, a entrada 'b' representa a altura (a distância perpendicular entre os dois lados paralelos). Os dois lados paralelos são inseridos como 'a' (base1) e 'b' (base2) nos campos de entrada, mas note que a altura é inserida no campo 'b' quando o trapézio é selecionado.",
+    "q5": "Quais fórmulas padrão esta calculadora usa para o perímetro da elipse?",
+    "a5": "O perímetro da elipse usa a aproximação de Ramanujan: π[3(a+b) - √((3a+b)(a+3b))]. Esta é uma aproximação amplamente aceita; o perímetro exato envolve integrais elípticas."
+  },
+  "opt_rectangle": "Retângulo",
+  "opt_square": "Quadrado",
+  "opt_circle": "Círculo",
+  "opt_triangle": "Triângulo",
+  "opt_trapezoid": "Trapézio",
+  "opt_ellipse": "Elipse",
+  "content": {
+    "whatIs": "Esta calculadora de área calcula a área e o perímetro de formas geométricas comuns: retângulo, quadrado, círculo, triângulo, trapézio e elipse. Ela usa fórmulas geométricas padrão baseadas nas dimensões da forma, fornecendo resultados instantâneos com explicações das fórmulas.",
+    "formula": "Para um retângulo: Área = a × b, Perímetro = 2(a + b). Quadrado: Área = a², Perímetro = 4a. Círculo: Área = π × a², Perímetro = 2πa. Triângulo: Área = 0,5 × a × b, Perímetro = a + b + c (c calculado pelo teorema de Pitágoras se for triângulo retângulo). Trapézio: Área = 0,5 × (a + b) × altura, Perímetro = a + b + c + d. Elipse: Área = π × a × b, Perímetro ≈ π[3(a+b) - √((3a+b)(a+3b))].",
+    "example": "Para um retângulo com a=5 unidades e b=3 unidades, a área é 5 × 3 = 15 unidades², e o perímetro é 2(5+3) = 16 unidades. Para um círculo com raio a=4 unidades, área = π × 4² ≈ 50,27 unidades², perímetro = 2π × 4 ≈ 25,13 unidades.",
+    "howItWorks_1": "Selecione a forma no menu suspenso. Em seguida, insira as dimensões necessárias: para retângulo, insira os comprimentos dos lados a e b; para quadrado, insira o lado a; para círculo, insira o raio a; para triângulo, insira a base a e a altura b; para trapézio, insira a base a, a base b e a altura (inserida como b); para elipse, insira o semieixo maior a e o semieixo menor b.",
+    "howItWorks_2": "Clique no botão Calcular. A calculadora aplica a fórmula apropriada para a forma selecionada usando os valores inseridos e calcula a área e o perímetro.",
+    "howItWorks_3": "Os resultados exibem a área em unidades quadradas e o perímetro em unidades. Você pode usar esses valores para cálculos adicionais, como estimativa de material ou comparação com outras formas."
+  }
+}

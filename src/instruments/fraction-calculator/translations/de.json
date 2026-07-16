@@ -1,0 +1,40 @@
+{
+  "title": "Bruchrechner — Addieren, Subtrahieren, Multiplizieren, Dividieren",
+  "description": "Berechnen Sie Brüche sofort. Addieren, subtrahieren, multiplizieren und dividieren Sie Brüche mit schrittweisen Lösungen. Vereinfacht Ergebnisse automatisch.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_numerator1": "Zähler 1",
+  "label_denominator1": "Nenner 1",
+  "label_operation": "Operation",
+  "label_numerator2": "Zähler 2",
+  "label_denominator2": "Nenner 2",
+  "label_resultNumerator": "Ergebnis Zähler",
+  "label_resultDenominator": "Ergebnis Nenner",
+  "label_decimal": "Dezimal",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie vereinfacht der Rechner Brüche?",
+    "a1": "Nach der Durchführung der Operation ermittelt der Rechner den größten gemeinsamen Teiler (ggT) von Zähler und Nenner. Dann dividiert er beide durch den ggT, um den Bruch in seiner einfachsten Form darzustellen.",
+    "q2": "Was stellt die Dezimalausgabe dar?",
+    "a2": "Die Dezimalausgabe ist das Ergebnis der Division des vereinfachten Zählers durch den vereinfachten Nenner. Wenn der Ergebnisbruch beispielsweise 3/4 ist, beträgt die Dezimalzahl 0,75.",
+    "q3": "Kann ich diesen Rechner für Brüche mit negativen Zahlen verwenden?",
+    "a3": "Ja, der Rechner akzeptiert negative Zähler und Nenner. Das Ergebnis wird korrekt vorzeichenbehaftet, und die Vereinfachung behandelt negative Vorzeichen angemessen.",
+    "q4": "Was passiert, wenn ich einen Nenner von Null eingebe?",
+    "a4": "Ein Nenner von Null ist in der Mathematik nicht definiert. Der Rechner gibt wahrscheinlich einen Fehler aus oder berechnet nichts. Stellen Sie sicher, dass die Nenner immer ungleich Null sind.",
+    "q5": "Gibt es eine Standardreferenz für die Bruchrechnung?",
+    "a5": "Die Bruchrechnung folgt den Standardregeln der Arithmetik, wie sie in der Mathematik definiert sind. Es gibt keine einzelne Autorität, aber die Methoden werden universell in der Bildung und in professionellen Kontexten gelehrt und angewendet."
+  },
+  "opt_add": "Addieren",
+  "opt_subtract": "Subtrahieren",
+  "opt_multiply": "Multiplizieren",
+  "opt_divide": "Dividieren",
+  "content": {
+    "whatIs": "Dieser Bruchrechner führt Addition, Subtraktion, Multiplikation und Division von zwei Brüchen durch. Er vereinfacht das Ergebnis automatisch und liefert das Dezimaläquivalent unter Verwendung der Standardrechenoperationen für Brüche.",
+    "formula": "Für Addition/Subtraktion: a/b ± c/d = (a*d ± c*b) / (b*d). Für Multiplikation: a/b * c/d = (a*c) / (b*d). Für Division: a/b ÷ c/d = a/b * d/c = (a*d) / (b*c). Das Ergebnis wird dann vereinfacht, indem Zähler und Nenner durch ihren größten gemeinsamen Teiler (ggT) dividiert werden.",
+    "example": "Um 1/3 und 1/4 zu addieren, geben Sie Zähler1=1, Nenner1=3, Operation='addieren', Zähler2=1, Nenner2=4 ein. Der Rechner berechnet (1*4 + 1*3)/(3*4) = 7/12, was bereits vereinfacht ist, und zeigt die Dezimalzahl 0,58333 an.",
+    "howItWorks_1": "Geben Sie Zähler und Nenner für den ersten Bruch in die Felder 'Zähler1' und 'Nenner1' ein. Wählen Sie dann die Operation (Addieren, Subtrahieren, Multiplizieren oder Dividieren) aus dem Dropdown-Menü.",
+    "howItWorks_2": "Geben Sie Zähler und Nenner für den zweiten Bruch in die Felder 'Zähler2' und 'Nenner2' ein. Klicken Sie auf die Schaltfläche 'Berechnen', um die Operation durchzuführen.",
+    "howItWorks_3": "Das Ergebnis wird als vereinfachter Bruch (Ergebnis Zähler und Ergebnis Nenner) und als Dezimalzahl angezeigt. Wenn das Ergebnis beispielsweise 2/4 ist, wird es zu 1/2 vereinfacht."
+  }
+}

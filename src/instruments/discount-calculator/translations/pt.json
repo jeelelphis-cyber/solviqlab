@@ -1,0 +1,32 @@
+{
+  "title": "Calculadora de Desconto — Preço Final Após Desconto",
+  "description": "Calcule o preço final após aplicar qualquer porcentagem de desconto. Também calcula quanto você economiza e a taxa de desconto efetiva.",
+  "calculate": "Calcular",
+  "reset": "Redefinir",
+  "result": "Resultado",
+  "label_originalPrice": "Preço Original",
+  "label_discountPercent": "Desconto",
+  "label_discountAmount": "Você Economiza",
+  "label_finalPrice": "Preço Final",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Como o valor do desconto é calculado se o desconto for um valor fixo em dólares em vez de uma porcentagem?",
+    "a1": "Esta calculadora lida apenas com descontos percentuais. Para um desconto fixo em dólares, simplesmente subtraia o valor fixo do preço original: Preço Final = Preço Original - Desconto Fixo. Por exemplo, um desconto de $10 em $50 resulta em um preço final de $40.",
+    "q2": "O que representa o valor 'Você Economiza'?",
+    "a2": "O valor 'Você Economiza' é o valor do desconto, que é a diferença entre o preço original e o preço final. Ele informa quanto dinheiro você está economizando ao aproveitar o desconto.",
+    "q3": "Posso usar esta calculadora para descontos maiores que 100%?",
+    "a3": "Não, descontos acima de 100% resultariam em um preço final negativo, o que não é realista em cenários típicos de varejo. Esta calculadora limita o percentual de desconto a no máximo 100%, significando que o preço final pode ser zero no máximo.",
+    "q4": "O que significa a saída 'Preço Final'?",
+    "a4": "O 'Preço Final' é o valor que você realmente paga após a aplicação do desconto. É calculado subtraindo o valor do desconto do preço original. Por exemplo, se o preço original é $100 e o desconto é 20%, o preço final é $80.",
+    "q5": "Existe uma autoridade padrão para cálculos de desconto?",
+    "a5": "Os cálculos de desconto são baseados em aritmética básica e são universalmente aplicados no varejo e nas finanças. Não há uma única autoridade reguladora, mas a fórmula segue princípios padrão de cálculo percentual, conforme ensinado na matemática e usado por empresas em todo o mundo."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de desconto calcula o preço de venda e a economia total quando um desconto percentual é aplicado a um preço original. Ela usa o conceito simples de subtrair uma porcentagem do preço original para encontrar o custo final.",
+    "formula": "O valor do desconto é calculado como: Valor do Desconto = Preço Original × (Percentual de Desconto / 100). O preço final é então: Preço Final = Preço Original - Valor do Desconto. Por exemplo, um desconto de 20% em $100 resulta em um desconto de $20 e um preço final de $80.",
+    "example": "Suponha que você tenha um item originalmente precificado em $250 com um desconto de 15%. O valor do desconto é $250 × 0,15 = $37,50, então o preço final é $250 - $37,50 = $212,50. Você economiza $37,50.",
+    "howItWorks_1": "Insira o preço original do item em dólares (por exemplo, 250) e a porcentagem de desconto (por exemplo, 15) nos campos respectivos.",
+    "howItWorks_2": "Clique no botão Calcular. A ferramenta aplica instantaneamente a fórmula de desconto para calcular o valor do desconto e o preço final.",
+    "howItWorks_3": "Os resultados mostram 'Você Economiza' (o valor do desconto em dólares) e 'Preço Final' (o valor que você paga após o desconto). Use-os para comparar preços ou planejar sua compra."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Calculateur de fractions — Additionner, Soustraire, Multiplier, Diviser",
+  "description": "Calculez instantanément des fractions. Additionnez, soustrayez, multipliez et divisez des fractions avec des solutions étape par étape. Simplifie automatiquement les résultats.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_numerator1": "Numérateur 1",
+  "label_denominator1": "Dénominateur 1",
+  "label_operation": "Opération",
+  "label_numerator2": "Numérateur 2",
+  "label_denominator2": "Dénominateur 2",
+  "label_resultNumerator": "Numérateur du résultat",
+  "label_resultDenominator": "Dénominateur du résultat",
+  "label_decimal": "Décimal",
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "q1": "Comment le calculateur simplifie-t-il les fractions ?",
+    "a1": "Après avoir effectué l'opération, le calculateur trouve le plus grand commun diviseur (PGCD) du numérateur et du dénominateur. Il divise ensuite les deux par le PGCD pour présenter la fraction sous sa forme la plus simple.",
+    "q2": "Que représente la sortie décimale ?",
+    "a2": "La sortie décimale est le résultat de la division du numérateur simplifié par le dénominateur simplifié. Par exemple, si la fraction résultante est 3/4, la décimale est 0,75.",
+    "q3": "Puis-je utiliser ce calculateur pour des fractions avec des nombres négatifs ?",
+    "a3": "Oui, le calculateur accepte les numérateurs et dénominateurs négatifs. Le résultat sera correctement signé et la simplification gère les signes négatifs de manière appropriée.",
+    "q4": "Que se passe-t-il si j'entre un dénominateur de zéro ?",
+    "a4": "Un dénominateur de zéro n'est pas défini en mathématiques. Le calculateur renverra probablement une erreur ou ne calculera pas. Assurez-vous toujours que les dénominateurs sont non nuls.",
+    "q5": "Existe-t-il une référence standard pour l'arithmétique des fractions ?",
+    "a5": "L'arithmétique des fractions suit les règles standard de l'arithmétique telles que définies par les mathématiques. Il n'y a pas d'autorité unique, mais les méthodes sont universellement enseignées et utilisées dans l'éducation et les contextes professionnels."
+  },
+  "opt_add": "Additionner",
+  "opt_subtract": "Soustraire",
+  "opt_multiply": "Multiplier",
+  "opt_divide": "Diviser",
+  "content": {
+    "whatIs": "Ce calculateur de fractions effectue l'addition, la soustraction, la multiplication et la division de deux fractions. Il simplifie automatiquement le résultat et fournit l'équivalent décimal, en utilisant les opérations arithmétiques standard sur les fractions.",
+    "formula": "Pour l'addition/soustraction : a/b ± c/d = (a*d ± c*b) / (b*d). Pour la multiplication : a/b * c/d = (a*c) / (b*d). Pour la division : a/b ÷ c/d = a/b * d/c = (a*d) / (b*c). Le résultat est ensuite simplifié en divisant le numérateur et le dénominateur par leur plus grand commun diviseur (PGCD).",
+    "example": "Pour additionner 1/3 et 1/4, entrez numérateur1=1, dénominateur1=3, opération='additionner', numérateur2=1, dénominateur2=4. Le calculateur calcule (1*4 + 1*3)/(3*4) = 7/12, qui est déjà simplifié, et affiche la décimale 0,58333.",
+    "howItWorks_1": "Entrez le numérateur et le dénominateur de la première fraction dans les champs 'numérateur1' et 'dénominateur1'. Sélectionnez ensuite l'opération (additionner, soustraire, multiplier ou diviser) dans le menu déroulant.",
+    "howItWorks_2": "Entrez le numérateur et le dénominateur de la deuxième fraction dans les champs 'numérateur2' et 'dénominateur2'. Cliquez sur le bouton Calculer pour effectuer l'opération.",
+    "howItWorks_3": "Le résultat est affiché sous forme de fraction simplifiée (Numérateur du résultat et Dénominateur du résultat) et sous forme décimale. Par exemple, si le résultat est 2/4, il sera simplifié en 1/2."
+  }
+}

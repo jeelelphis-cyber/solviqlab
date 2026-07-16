@@ -1,0 +1,39 @@
+{
+  "title": "Kalkulator tkanki tłuszczowej — oszacuj swój % tkanki tłuszczowej",
+  "description": "Oblicz procent tkanki tłuszczowej metodą US Navy. Wprowadź obwód szyi, talii i bioder, aby uzyskać dokładne oszacowanie składu ciała.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_height": "Wzrost",
+  "label_neck": "Obwód szyi",
+  "label_waist": "Obwód talii",
+  "label_hip": "Obwód bioder (tylko kobiety)",
+  "label_sex": "Płeć",
+  "label_bodyFat": "Tkanka tłuszczowa",
+  "label_fatMass": "Masa tłuszczu",
+  "label_leanMass": "Masa beztłuszczowa",
+  "label_category": "Kategoria",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Czym metoda US Navy różni się od innych technik pomiaru tkanki tłuszczowej?",
+    "a1": "Metoda US Navy wykorzystuje proste pomiary obwodów (szyi, talii, bioder) i wzrostu, co czyni ją wygodną i nieinwazyjną. Szacuje gęstość ciała za pomocą równań regresji, a następnie przelicza na procent tkanki tłuszczowej. Jest mniej dokładna niż DEXA czy ważenie hydrostatyczne, ale bardziej dostępna i powtarzalna.",
+    "q2": "Co oznaczają kategorie tkanki tłuszczowej (Essential, Athlete, Fitness, Average, Obese)?",
+    "a2": "Kategorie opierają się na standardowych zakresach: tłuszcz niezbędny (2-5% mężczyźni, 10-13% kobiety), sportowiec (6-13% mężczyźni, 14-20% kobiety), sprawność (14-17% mężczyźni, 21-24% kobiety), przeciętny (18-24% mężczyźni, 25-31% kobiety), otyłość (25%+ mężczyźni, 32%+ kobiety). Są to ogólne wytyczne; indywidualne zdrowie zależy od wielu czynników.",
+    "q3": "Kiedy powinienem używać tego kalkulatora i jakie są jego ograniczenia?",
+    "a3": "Używaj tego kalkulatora do szybkiego, nieinwazyjnego oszacowania procentu tkanki tłuszczowej, np. do śledzenia zmian w czasie. Ograniczenia: dokładność zależy od precyzyjnej techniki pomiaru; może być niedokładny dla bardzo umięśnionych osób lub osób o nietypowej budowie ciała. Zakłada pewien rozkład gęstości ciała.",
+    "q4": "Co oznaczają 'Masa tłuszczu' i 'Masa beztłuszczowa' w wynikach?",
+    "a4": "Masa tłuszczu to całkowita waga tkanki tłuszczowej, obliczana jako (procent tkanki tłuszczowej / 100) * całkowita masa ciała. Masa beztłuszczowa to wszystko inne: mięśnie, kości, narządy, woda, obliczana jako całkowita masa minus masa tłuszczu. Pomagają zrozumieć skład ciała poza samym procentem.",
+    "q5": "Na jakiej podstawie opiera się metoda US Navy?",
+    "a5": "Metoda US Navy została opracowana przez US Navy i opiera się na badaniach Hodgdon i Beckett (1984). Jest szeroko stosowana w wojsku i ocenie sprawności fizycznej. Wzór Brozka używany do konwersji jest standardowym równaniem do szacowania tkanki tłuszczowej na podstawie gęstości."
+  },
+  "opt_male": "Mężczyzna",
+  "opt_female": "Kobieta",
+  "content": {
+    "whatIs": "Ten kalkulator tkanki tłuszczowej szacuje procent tkanki tłuszczowej metodą obwodów US Navy. Wykorzystuje pomiary obwodu szyi, talii i bioder (u kobiet) oraz wzrostu do oszacowania gęstości ciała, a następnie przelicza na procent tkanki tłuszczowej za pomocą wzoru Brozka.",
+    "formula": "Dla mężczyzn: Gęstość ciała = 1,0323 - 0,154 * log10(talia - szyja) + 0,025 * log10(wzrost). Dla kobiet: Gęstość ciała = 1,29579 - 0,35004 * log10(talia + biodra - szyja) + 0,221 * log10(wzrost). % tkanki tłuszczowej = (4,95 / Gęstość ciała - 4,50) * 100. Wszystkie pomiary w cm.",
+    "example": "Mężczyzna o wzroście 180 cm, obwodzie szyi 40 cm i talii 85 cm: Gęstość ciała = 1,0323 - 0,154 * log10(85-40) + 0,025 * log10(180) = 1,0323 - 0,154 * 1,6532 + 0,025 * 2,2553 = 1,0323 - 0,2546 + 0,0564 = 0,8341. % tkanki tłuszczowej = (4,95/0,8341 - 4,50)*100 = (5,934 - 4,50)*100 = 14,34%.",
+    "howItWorks_1": "Wprowadź swój wzrost, obwód szyi, obwód talii, a jeśli jesteś kobietą, obwód bioder. Wybierz płeć z rozwijanej listy.",
+    "howItWorks_2": "Po kliknięciu Oblicz narzędzie zastosuje wzór US Navy do obliczenia gęstości ciała, a następnie przeliczy na procent tkanki tłuszczowej. Oblicza również masę tłuszczu i masę beztłuszczową na podstawie Twojej wagi (jeśli podana) lub szacuje wagę na podstawie wzrostu.",
+    "howItWorks_3": "Wyniki pokazują procent tkanki tłuszczowej, masę tłuszczu, masę beztłuszczową oraz kategorię (np. Essential, Athlete, Fitness, Average, Obese) opartą na standardowych zakresach. Użyj kategorii, aby ocenić swój skład ciała w odniesieniu do norm zdrowotnych."
+  }
+}

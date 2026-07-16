@@ -1,0 +1,36 @@
+{
+  "title": "Calculadora de IVA — Añadir o Quitar IVA al Instante",
+  "description": "Añada o quite el IVA de cualquier precio. Admite todas las tasas de IVA (5%, 10%, 15%, 20%, 21%, 25%). Cálculo instantáneo para empresas y consumidores.",
+  "calculate": "Calcular",
+  "reset": "Reiniciar",
+  "result": "Resultado",
+  "label_amount": "Importe",
+  "label_vatRate": "Tasa de IVA",
+  "label_mode": "Modo",
+  "label_netAmount": "Importe Neto (sin IVA)",
+  "label_vatAmount": "Importe de IVA",
+  "label_grossAmount": "Importe Bruto (con IVA)",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cómo se calcula el importe del IVA al añadirlo?",
+    "a1": "Al añadir IVA, el importe del IVA se calcula como: Importe de IVA = Importe Neto × (Tasa de IVA / 100). Por ejemplo, con un importe neto de $200 y una tasa de IVA del 10%, el Importe de IVA = $200 × 0.10 = $20.",
+    "q2": "¿Qué significa el resultado 'Importe Neto' al quitar el IVA?",
+    "a2": "El Importe Neto al quitar el IVA es el precio original antes de añadir el IVA. Se calcula dividiendo el importe bruto entre (1 + Tasa de IVA/100). Por ejemplo, si el importe bruto es $110 y la tasa de IVA es del 10%, Importe Neto = $110 / 1.10 = $100.",
+    "q3": "¿Puedo usar esta calculadora para cualquier tasa de IVA, incluyendo las no estándar?",
+    "a3": "Sí, puede ingresar cualquier tasa de IVA del 0% al 100%. Esto incluye tasas estándar como 5%, 10%, 20% o tasas personalizadas. La calculadora funciona para todas las tasas, pero tenga en cuenta que las tasas de IVA suelen ser fijadas por las autoridades fiscales y pueden variar según el país y el tipo de producto.",
+    "q4": "¿Qué representa el resultado 'Importe Bruto'?",
+    "a4": "El Importe Bruto es el precio total incluyendo el IVA. En modo 'añadir', es el importe neto más el importe del IVA. En modo 'quitar', es el importe ingresado (el precio con IVA incluido). Por ejemplo, si el neto es $50 y el IVA es del 20%, el bruto = $60.",
+    "q5": "¿Qué autoridad establece las tasas y reglas del IVA?",
+    "a5": "El IVA es un impuesto al consumo gestionado por las autoridades fiscales nacionales. Por ejemplo, en la Unión Europea, las tasas de IVA las fija cada estado miembro dentro de las directivas de la UE. En el Reino Unido, HM Revenue & Customs (HMRC) administra el IVA. En Australia, la Australian Taxation Office (ATO) maneja el GST, un impuesto similar. Consulte siempre a su autoridad fiscal local para conocer las tasas aplicables."
+  },
+  "opt_add": "Añadir IVA",
+  "opt_remove": "Quitar IVA",
+  "content": {
+    "whatIs": "La Calculadora de IVA añade o quita instantáneamente el Impuesto al Valor Agregado (IVA) de cualquier precio. Calcula el importe neto, el importe del IVA y el importe bruto basándose en el precio ingresado y la tasa de IVA, utilizando las fórmulas estándar del IVA.",
+    "formula": "Al añadir IVA: Importe Bruto = Importe Neto × (1 + Tasa de IVA/100) e Importe de IVA = Importe Bruto - Importe Neto. Al quitar IVA: Importe Neto = Importe Bruto / (1 + Tasa de IVA/100) e Importe de IVA = Importe Bruto - Importe Neto. La Tasa de IVA se expresa como porcentaje.",
+    "example": "Para un precio neto de $100 con una tasa de IVA del 20% en modo 'añadir': Importe Bruto = $100 × (1 + 20/100) = $120, Importe de IVA = $20. Para un precio bruto de $120 en modo 'quitar': Importe Neto = $120 / (1 + 20/100) = $100, Importe de IVA = $20.",
+    "howItWorks_1": "Ingrese el importe del precio en el campo 'Importe' (en dólares) y la tasa de IVA como porcentaje en el campo 'Tasa de IVA'. Seleccione el modo: 'Añadir IVA' para calcular el importe bruto incluyendo IVA, o 'Quitar IVA' para extraer el importe neto de un precio bruto.",
+    "howItWorks_2": "Haga clic en el botón Calcular. La calculadora aplica la fórmula adecuada según el modo seleccionado y calcula instantáneamente el importe neto, el importe del IVA y el importe bruto.",
+    "howItWorks_3": "Revise los tres campos de resultado: Importe Neto (precio antes de IVA), Importe de IVA (la parte del impuesto) e Importe Bruto (precio total incluyendo IVA). Utilice estos valores para facturación, fijación de precios o declaración de impuestos."
+  }
+}

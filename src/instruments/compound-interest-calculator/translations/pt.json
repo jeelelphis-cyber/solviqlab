@@ -1,0 +1,41 @@
+{
+  "title": "Calculadora de Juros Compostos — Veja Seu Dinheiro Crescer",
+  "description": "Calcule juros compostos ao longo do tempo com contribuições mensais. Veja como seu investimento cresce ano a ano com o poder da capitalização.",
+  "calculate": "Calcular",
+  "reset": "Redefinir",
+  "result": "Resultado",
+  "label_principal": "Investimento Inicial",
+  "label_annualRate": "Taxa de Juros Anual",
+  "label_years": "Período de Tempo",
+  "label_monthlyContribution": "Contribuição Mensal",
+  "label_compoundFrequency": "Frequência de Capitalização",
+  "label_finalAmount": "Valor Final",
+  "label_totalContributions": "Total de Contribuições",
+  "label_totalInterest": "Total de Juros Obtidos",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Qual é a diferença entre juros simples e juros compostos?",
+    "a1": "Juros simples são calculados apenas sobre o valor principal, enquanto juros compostos são calculados sobre o principal mais os juros acumulados. Por exemplo, R$ 10.000 a 5% de juros simples por 10 anos rendem R$ 5.000 de juros, mas capitalizados mensalmente rendem cerca de R$ 6.470 de juros.",
+    "q2": "Como a frequência de capitalização afeta o valor final?",
+    "a2": "Capitalizações mais frequentes resultam em retornos maiores porque os juros são adicionados com mais frequência. Para R$ 10.000 a 5% por 10 anos: anualmente rende R$ 16.288,95, trimestralmente R$ 16.453,09, mensalmente R$ 16.470,09 e diariamente R$ 16.474,61.",
+    "q3": "Posso usar esta calculadora para empréstimos também?",
+    "a3": "Sim, a mesma fórmula se aplica a empréstimos com juros compostos. No entanto, para empréstimos, o resultado representa o valor total devido. Esta calculadora não considera pagamentos de empréstimos; assume que não há saques.",
+    "q4": "O que significa 'Total de Contribuições' no resultado?",
+    "a4": "Total de Contribuições é a soma do principal inicial e de todas as contribuições mensais feitas durante o período de investimento. Por exemplo, se você começar com R$ 10.000 e adicionar R$ 100 mensais por 10 anos, total de contribuições = R$ 10.000 + (R$ 100 × 120) = R$ 22.000.",
+    "q5": "Existe uma autoridade padrão para cálculos de juros compostos?",
+    "a5": "A fórmula de juros compostos é universalmente aceita em finanças e matemática. A Comissão de Valores Mobiliários dos EUA (SEC) fornece recursos educacionais sobre capitalização, e a fórmula é usada por bancos e instituições financeiras em todo o mundo."
+  },
+  "unit_years": "anos",
+  "freq_annually": "Anualmente",
+  "freq_quarterly": "Trimestralmente",
+  "freq_monthly": "Mensalmente",
+  "freq_daily": "Diariamente",
+  "content": {
+    "whatIs": "Uma calculadora de juros compostos estima o valor futuro de um investimento aplicando juros sobre o principal inicial e sobre os juros acumulados de períodos anteriores. Ela usa a fórmula A = P(1 + r/n)^(nt) para calcular o crescimento com contribuições regulares opcionais.",
+    "formula": "A fórmula principal é A = P(1 + r/n)^(nt), onde A é o valor final, P é o principal, r é a taxa de juros anual (decimal), n é o número de períodos de capitalização por ano e t é o número de anos. Para contribuições mensais, adiciona-se a fórmula do valor futuro de uma série: FV = PMT × [((1 + r/n)^(nt) - 1) / (r/n)].",
+    "example": "Se você investir R$ 10.000 a 5% de juros anuais capitalizados mensalmente por 10 anos sem contribuições adicionais, o valor final é R$ 10.000 × (1 + 0,05/12)^(12×10) ≈ R$ 16.470,09. O total de juros obtidos é R$ 6.470,09.",
+    "howItWorks_1": "Insira o valor do principal inicial (ex.: R$ 10.000), a taxa de juros anual (ex.: 5%), o número de anos (ex.: 10) e selecione a frequência de capitalização (anual, trimestral, mensal ou diária). Opcionalmente, adicione um valor de contribuição mensal.",
+    "howItWorks_2": "Ao clicar em Calcular, a ferramenta aplica a fórmula de juros compostos com a frequência de capitalização escolhida e quaisquer contribuições mensais. Ela calcula o saldo final, o total de contribuições e o total de juros obtidos.",
+    "howItWorks_3": "Os resultados mostram o valor final (principal + contribuições + juros), o total de contribuições (principal mais depósitos mensais) e o total de juros obtidos. Você pode comparar diferentes cenários ajustando as entradas."
+  }
+}

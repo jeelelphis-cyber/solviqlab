@@ -1,0 +1,39 @@
+{
+  "title": "Calculadora de Área — Rectángulo, Círculo, Triángulo y Más",
+  "description": "Calcula el área de cualquier forma: rectángulo, cuadrado, círculo, triángulo, trapecio y más. Resultados instantáneos con explicaciones de fórmulas.",
+  "calculate": "Calcular",
+  "reset": "Reiniciar",
+  "result": "Resultado",
+  "label_shape": "Forma",
+  "label_a": "Longitud / Radio / Base",
+  "label_b": "Ancho / Altura / Segunda base",
+  "label_area": "Área",
+  "label_perimeter": "Perímetro",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cómo se calcula el área de un triángulo si solo se dan la base y la altura?",
+    "a1": "El área de un triángulo se calcula como 0.5 × base × altura. Por ejemplo, un triángulo con base 6 unidades y altura 4 unidades tiene área = 0.5 × 6 × 4 = 12 unidades².",
+    "q2": "¿Qué representa la salida del perímetro para un círculo?",
+    "a2": "Para un círculo, el perímetro se llama circunferencia. Se calcula como 2π × radio. Para un círculo con radio 5 unidades, la circunferencia es aproximadamente 31.42 unidades.",
+    "q3": "¿Puede esta calculadora manejar formas irregulares?",
+    "a3": "No, esta calculadora solo admite formas geométricas estándar: rectángulo, cuadrado, círculo, triángulo, trapecio y elipse. Para formas irregulares, necesitarías dividirlas en estas formas básicas o usar métodos de integración numérica.",
+    "q4": "¿Qué representa la entrada 'b' para un trapecio?",
+    "a4": "Para un trapecio, la entrada 'b' representa la altura (la distancia perpendicular entre los dos lados paralelos). Los dos lados paralelos se ingresan como 'a' (base1) y 'b' (base2) en los campos de entrada, pero ten en cuenta que la altura se ingresa en el campo 'b' cuando se selecciona trapecio.",
+    "q5": "¿Qué fórmulas estándar usa esta calculadora para el perímetro de una elipse?",
+    "a5": "El perímetro de la elipse usa la aproximación de Ramanujan: π[3(a+b) - √((3a+b)(a+3b))]. Esta es una aproximación ampliamente aceptada; el perímetro exacto involucra integrales elípticas."
+  },
+  "opt_rectangle": "Rectángulo",
+  "opt_square": "Cuadrado",
+  "opt_circle": "Círculo",
+  "opt_triangle": "Triángulo",
+  "opt_trapezoid": "Trapecio",
+  "opt_ellipse": "Elipse",
+  "content": {
+    "whatIs": "Esta calculadora de área calcula el área y el perímetro de formas geométricas comunes: rectángulo, cuadrado, círculo, triángulo, trapecio y elipse. Utiliza fórmulas geométricas estándar basadas en las dimensiones de la forma, proporcionando resultados instantáneos con explicaciones de fórmulas.",
+    "formula": "Para un rectángulo: Área = a × b, Perímetro = 2(a + b). Cuadrado: Área = a², Perímetro = 4a. Círculo: Área = π × a², Perímetro = 2πa. Triángulo: Área = 0.5 × a × b, Perímetro = a + b + c (c calculado mediante el teorema de Pitágoras si es triángulo rectángulo). Trapecio: Área = 0.5 × (a + b) × altura, Perímetro = a + b + c + d. Elipse: Área = π × a × b, Perímetro ≈ π[3(a+b) - √((3a+b)(a+3b))].",
+    "example": "Para un rectángulo con a=5 unidades y b=3 unidades, el área es 5 × 3 = 15 unidades², y el perímetro es 2(5+3) = 16 unidades. Para un círculo con radio a=4 unidades, área = π × 4² ≈ 50.27 unidades², perímetro = 2π × 4 ≈ 25.13 unidades.",
+    "howItWorks_1": "Selecciona la forma del menú desplegable. Luego ingresa las dimensiones requeridas: para rectángulo, ingresa las longitudes de los lados a y b; para cuadrado, ingresa el lado a; para círculo, ingresa el radio a; para triángulo, ingresa la base a y la altura b; para trapecio, ingresa la base a, la base b y la altura (ingresada como b); para elipse, ingresa el semieje mayor a y el semieje menor b.",
+    "howItWorks_2": "Haz clic en el botón Calcular. La calculadora aplica la fórmula adecuada para la forma seleccionada usando los valores ingresados y calcula el área y el perímetro.",
+    "howItWorks_3": "Los resultados muestran el área en unidades cuadradas y el perímetro en unidades. Puedes usar estos valores para cálculos adicionales, como estimación de materiales o comparación con otras formas."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "retirement-calculator",
+  "name": "Retirement Calculator",
+  "seoTitle": "Retirement Calculator — Savings Projection & Monthly Income",
+  "seoDescription": "Project your retirement savings with compound growth, monthly contributions, and inflation adjustment. Estimate monthly income from your nest egg.",
+  "primaryKeyword": "retirement calculator",
+  "type": "calculator",
+  "category": "finance",
+  "isYMYL": false,
+  "version": "1.0.0",
+  "status": "live",
+  "capabilities": ["formula", "seo", "localization"],
+  "inputs": [
+    {"name": "currentAge", "type": "number", "required": true, "min": 18, "max": 80, "description": "Your current age"},
+    {"name": "retirementAge", "type": "number", "required": true, "min": 19, "max": 100, "description": "Target retirement age", "default": 65},
+    {"name": "currentSavings", "type": "number", "required": true, "min": 0, "max": 100000000, "description": "Current retirement savings"},
+    {"name": "monthlyContribution", "type": "number", "required": true, "min": 0, "max": 1000000, "description": "Monthly contribution amount"},
+    {"name": "annualReturn", "type": "number", "required": false, "min": 0, "max": 30, "description": "Expected annual return (%)", "default": 7},
+    {"name": "inflationRate", "type": "number", "required": false, "min": 0, "max": 20, "description": "Expected inflation rate (%)", "default": 3}
+  ],
+  "outputs": [
+    {"name": "projectedSavings", "type": "number", "description": "Total retirement savings at retirement"},
+    {"name": "totalContributions", "type": "number", "description": "Total money contributed"},
+    {"name": "totalGrowth", "type": "number", "description": "Investment growth earned"},
+    {"name": "monthlyIncomeEstimate", "type": "number", "description": "Estimated monthly income (4% rule)"},
+    {"name": "realValueToday", "type": "number", "description": "Projected savings in today's dollars"}
+  ],
+  "keywords": [
+    {"term": "retirement calculator", "intent": "transactional", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"},
+    {"term": "retirement savings calculator", "intent": "transactional", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"},
+    {"term": "how much do I need to retire", "intent": "informational", "language": "en", "source": "dataforseo", "retrievedAt": "2026-07-16"}
+  ],
+  "related": ["investment-calculator", "compound-interest-calculator", "salary-calculator", "inflation-calculator"],
+  "supportedLanguages": ["en"],
+  "createdAt": "2026-07-16",
+  "updatedAt": "2026-07-16",
+  "releaseHistory": [{"status": "live", "timestamp": "2026-07-16T00:00:00.000Z"}]
+}

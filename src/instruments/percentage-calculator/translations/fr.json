@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Calculateur de pourcentage — 4 modes, gratuit et instantané",
+    "description": "Quatre calculateurs de pourcentage en un : trouvez le % d'un nombre, calculez le % de variation, déterminez quel % X représente de Y, ou ajustez une valeur d'un pourcentage donné. Gratuit."
+  },
+  "form": {
+    "title": "Calculateur de pourcentage",
+    "mode_label": "Type de calcul",
+    "mode_percent_of": "Qu'est-ce que X% de Y ?",
+    "mode_is_what_percent": "X représente quel % de Y ?",
+    "mode_percent_change": "Variation en % de X à Y ?",
+    "mode_percent_adjust": "Augmenter / Diminuer X de Y%",
+    "field_a_label": "X (première valeur)",
+    "field_b_label": "Y (deuxième valeur)",
+    "direction_label": "Direction",
+    "direction_increase": "Augmentation",
+    "direction_decrease": "Diminution",
+    "field_a_placeholder": "ex. 25",
+    "field_b_placeholder": "ex. 200",
+    "calculate_button": "Calculer",
+    "reset_button": "Réinitialiser"
+  },
+  "validation": {
+    "mode_required": "Veuillez sélectionner un type de calcul.",
+    "invalid_mode": "Type de calcul inconnu.",
+    "a_required": "Veuillez entrer une valeur pour X.",
+    "b_required": "Veuillez entrer une valeur pour Y.",
+    "too_high": "La valeur doit être au maximum 1 000 000 000.",
+    "invalid_number": "Veuillez entrer un nombre valide (ex. 42 ou 3,14).",
+    "unknown": "Entrée invalide."
+  },
+  "result": {
+    "title": "Résultat",
+    "percent_of_label": "est X% de Y",
+    "is_what_percent_label": "% de Y",
+    "percent_change_label": "variation",
+    "percent_adjust_label": "après ajustement"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Comment calculer un pourcentage d'un nombre ?",
+    "a1": "Utilisez le mode 'pourcentage de'. Par exemple, pour trouver 20% de 150, définissez a=20, b=150. La formule est (20/100)*150 = 30. Le résultat est 30.",
+    "q2": "Que signifie la sortie 'isIncrease' dans le mode de variation en pourcentage ?",
+    "a2": "Dans le mode 'variation en pourcentage', isIncrease est vrai si la variation en pourcentage est positive (c'est-à-dire Y > X), ce qui signifie une augmentation. Si faux, la variation est une diminution. Par exemple, de 100 à 120 donne une augmentation de 20% (isIncrease : true).",
+    "q3": "Quand dois-je utiliser le mode 'ajustement en pourcentage' ?",
+    "a3": "Utilisez 'ajustement en pourcentage' pour augmenter ou diminuer un nombre d'un pourcentage donné. Par exemple, pour augmenter 200 de 10%, réglez le mode sur 'ajustement en pourcentage', a=10, b=200, direction='augmentation'. Le résultat est 220. Pour une diminution de 10%, réglez direction='diminution' pour obtenir 180.",
+    "q4": "Que montre le champ 'roundedResult' ?",
+    "a4": "Le 'roundedResult' est le résultat brut arrondi à deux décimales. Par exemple, si le résultat brut est 33,3333..., le résultat arrondi est 33,33. Ceci est utile pour les rapports ou les calculs financiers où deux décimales sont standard.",
+    "q5": "Existe-t-il une norme officielle pour les calculs de pourcentage ?",
+    "a5": "Les calculs de pourcentage suivent les règles arithmétiques de base définies en mathématiques, et non une norme réglementaire spécifique. Cependant, en finance, la SEC et l'IRS fournissent des directives pour les divulgations et les calculs fiscaux basés sur des pourcentages. Les formules utilisées ici sont universellement acceptées."
+  },
+  "aria": {
+    "result_announcement": "Résultat : {value}. {summary}.",
+    "form_description": "Sélectionnez un mode de calcul et entrez des valeurs pour calculer un pourcentage.",
+    "loading": "Calcul en cours..."
+  },
+  "content": {
+    "whatIs": "Ce calculateur de pourcentage calcule quatre scénarios courants : qu'est-ce que X% de Y, quel pourcentage X représente de Y, la variation en pourcentage de X à Y, et l'augmentation ou la diminution en pourcentage de Y de X%. Le concept sous-jacent est qu'un pourcentage représente une fraction de 100, permettant des comparaisons proportionnelles entre valeurs.",
+    "formula": "Pour 'pourcentage de' : résultat = (X/100) * Y. Pour 'quel pourcentage' : résultat = (X/Y) * 100. Pour 'variation en pourcentage' : résultat = ((Y - X) / X) * 100. Pour 'ajustement en pourcentage' : résultat = Y * (1 ± X/100), où + est une augmentation et - une diminution.",
+    "example": "Pour trouver 15% de 200, réglez le mode sur 'pourcentage de', a=15, b=200. Le résultat est 30. Pour trouver quel pourcentage 30 représente de 200, réglez le mode sur 'quel pourcentage', a=30, b=200 ; le résultat est 15%.",
+    "howItWorks_1": "Sélectionnez le mode de calcul dans la liste déroulante : 'pourcentage de', 'quel pourcentage', 'variation en pourcentage' ou 'ajustement en pourcentage'. Entrez ensuite la première valeur (X) et la deuxième valeur (Y) dans les champs numériques.",
+    "howItWorks_2": "Cliquez sur le bouton Calculer. Le calculateur applique la formule appropriée en fonction du mode sélectionné et calcule le résultat, en l'arrondissant à deux décimales.",
+    "howItWorks_3": "La sortie affiche le résultat brut et le résultat arrondi. Pour le mode 'variation en pourcentage', elle indique également si la variation est une augmentation (positive) ou une diminution (négative). Utilisez le résultat arrondi à des fins pratiques."
+  }
+}

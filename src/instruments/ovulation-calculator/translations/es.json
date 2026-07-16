@@ -1,0 +1,37 @@
+{
+  "title": "Calculadora de Ovulación — Ventana Fértil y Seguimiento del Ciclo",
+  "description": "Encuentre su fecha de ovulación y ventana fértil basándose en su último período y la duración del ciclo. Planifique o realice un seguimiento de la concepción con predicciones precisas del ciclo menstrual.",
+  "calculate": "Calcular",
+  "reset": "Reiniciar",
+  "result": "Resultado",
+  "label_lastPeriodDate": "Primer Día del Último Período",
+  "label_cycleLength": "Duración Promedio del Ciclo",
+  "label_ovulationDate": "Fecha de Ovulación",
+  "label_fertileWindowStart": "Inicio de la Ventana Fértil",
+  "label_fertileWindowEnd": "Fin de la Ventana Fértil",
+  "label_nextPeriodDate": "Fecha del Próximo Período",
+  "label_daysUntilOvulation": "Días Hasta la Ovulación",
+  "unit_days": "días",
+  "ymyl_disclaimer": "Esta calculadora proporciona estimaciones basadas en un modelo de ovulación estándar. Los ciclos individuales varían. Esta herramienta no sustituye el consejo médico ni la anticoncepción. Consulte a un profesional de la salud para la planificación familiar.",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cómo se calcula la fecha de ovulación?",
+    "a1": "La ovulación se estima que ocurre 14 días antes del inicio del próximo período, independientemente de la duración del ciclo. Esto se debe a que la fase lútea (post-ovulación) es consistentemente de aproximadamente 14 días. La fórmula es: Fecha de Ovulación = Fecha del Último Período + (Duración del Ciclo − 14 días). Para un ciclo de 28 días, la ovulación es el día 14. Para un ciclo de 32 días, ocurre el día 18.",
+    "q2": "¿Qué es la ventana fértil?",
+    "a2": "La ventana fértil es el período en el que es más probable la concepción. Los espermatozoides pueden sobrevivir en las trompas de Falopio hasta 5 días, y el óvulo es viable durante 12–24 horas después de la ovulación. Esto da una ventana fértil de aproximadamente 5 días antes de la ovulación hasta 1 día después. Esta calculadora establece la ventana desde 5 días antes hasta 1 día después de la fecha estimada de ovulación.",
+    "q3": "¿Qué tan precisa es esta calculadora de ovulación?",
+    "a3": "Esta calculadora utiliza el método estándar de calendario/ritmo, que asume un ciclo regular y una fase lútea fija. Es más precisa para mujeres con duraciones de ciclo consistentes entre 21 y 45 días. Factores como el estrés, enfermedad, viajes, SOP o lactancia pueden alterar la ovulación. Para mayor precisión, combine esto con el seguimiento de la temperatura basal corporal (TBC) o pruebas de aumento de LH.",
+    "q4": "¿Qué significa un número negativo en 'Días Hasta la Ovulación'?",
+    "a4": "Un número negativo significa que la fecha estimada de ovulación ya ha pasado en el ciclo actual. Por ejemplo, −3 significa que se estimó que la ovulación ocurrió hace 3 días. Esto es normal si se encuentra en la segunda mitad de su ciclo. La fecha del próximo período mostrada le indicará cuándo se espera que comience su nuevo ciclo.",
+    "q5": "¿Puedo usar esta calculadora para evitar el embarazo?",
+    "a5": "Esta calculadora no está diseñada ni es confiable para la anticoncepción. El método del calendario tiene una tasa de falla de uso típico de aproximadamente el 24% por año. Para anticoncepción, consulte a un profesional de la salud. Esta herramienta se utiliza mejor para comprender su ciclo y aumentar las posibilidades de concepción cuando se busca quedar embarazada."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de ovulación predice su fecha de ovulación, ventana fértil y fecha del próximo período basándose en su último período menstrual y la duración promedio del ciclo. Utiliza el método de calendario estándar ampliamente referenciado en obstetricia y ginecología.",
+    "formula": "Día de Ovulación = Duración del Ciclo − 14\nFecha de Ovulación = Fecha del Último Período + Día de Ovulación\nInicio de la Ventana Fértil = Fecha de Ovulación − 5 días\nFin de la Ventana Fértil = Fecha de Ovulación + 1 día\nFecha del Próximo Período = Fecha del Último Período + Duración del Ciclo",
+    "example": "Último período 1 de enero, duración del ciclo 28 días: Día de ovulación = 28 − 14 = 14. Fecha de ovulación = 15 de enero. Ventana fértil: 10–16 de enero. Próximo período: 29 de enero.",
+    "howItWorks_1": "Ingrese la fecha del primer día de su último período menstrual.",
+    "howItWorks_2": "Ingrese su duración promedio del ciclo en días (el rango típico es 21–45, el valor predeterminado es 28).",
+    "howItWorks_3": "Haga clic en Calcular para ver su fecha estimada de ovulación, ventana fértil, fecha del próximo período y cuántos días faltan para la ovulación desde hoy."
+  }
+}

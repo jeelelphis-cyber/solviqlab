@@ -1,0 +1,37 @@
+{
+  "title": "Calculateur d'investissement — Croissance composée et rendement",
+  "description": "Calculez comment votre investissement croît avec les intérêts composés et les contributions mensuelles. Voyez votre valeur finale, les intérêts totaux gagnés et le temps nécessaire pour doubler votre argent.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_initialAmount": "Investissement initial",
+  "label_monthlyContribution": "Contribution mensuelle",
+  "label_annualReturn": "Taux de rendement annuel",
+  "label_years": "Période d'investissement",
+  "label_finalValue": "Valeur finale",
+  "label_totalContributions": "Total investi",
+  "label_totalInterest": "Rendements totaux",
+  "label_doublingTime": "Temps de doublement",
+  "unit_years": "ans",
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Comment les intérêts composés sont-ils calculés avec des contributions mensuelles ?",
+    "a1": "La valeur future totale combine deux parties : (1) la croissance du capital initial — VF = P × (1+r)^n — et (2) la valeur future des contributions mensuelles sous forme d'annuité — VF = C × ((1+r)^n − 1) / r. Ici r est le taux mensuel (taux annuel / 12) et n est le nombre total de mois (années × 12). Les deux sont additionnés pour obtenir la valeur finale du portefeuille.",
+    "q2": "Qu'est-ce que la règle de 72 ?",
+    "a2": "La règle de 72 est un raccourci pour estimer le temps nécessaire pour doubler votre investissement : Temps de doublement ≈ 72 / Taux de rendement annuel. À 7 % de rendement, votre investissement double en environ 72/7 ≈ 10,3 ans. À 10 %, il double en 7,2 ans. Cette règle fonctionne car ln(2) / ln(1+r) ≈ 0,693 / r ≈ 72 / (100r) pour les taux d'intérêt typiques.",
+    "q3": "Quel taux de rendement annuel devrais-je supposer ?",
+    "a3": "Moyennes historiques pour les types d'investissement courants : fonds indiciel S&P 500 ≈ 10 % nominal, 7 % réel (ajusté à l'inflation) ; portefeuille équilibré actions/obligations ≈ 6–8 % ; fonds obligataires ≈ 3–5 % ; compte d'épargne ≈ 1–5 %. Ce calculateur utilise par défaut 7 %, une estimation prudente pour un portefeuille diversifié à long terme.",
+    "q4": "Ce calculateur tient-il compte des impôts ou de l'inflation ?",
+    "a4": "Non. Le calculateur affiche les rendements nominaux avant impôts ou inflation. Pour estimer les rendements réels (ajustés à l'inflation), soustrayez le taux d'inflation de votre rendement annuel avant de le saisir. Par exemple, si vous attendez 7 % nominal et 3 % d'inflation, saisissez 4 % pour voir la croissance réelle. Le traitement fiscal dépend du type de compte (imposable vs 401k vs IRA).",
+    "q5": "Quelle est la différence entre le total des contributions et le total des rendements ?",
+    "a5": "Le total des contributions est simplement l'argent que vous avez réellement investi : investissement initial plus toutes les contributions mensuelles. Le total des rendements (intérêts) est la croissance générée par la capitalisation — c'est la différence entre la valeur finale et le total des contributions. Pour les longues périodes à des taux modérés, les rendements totaux dépassent généralement les contributions totales en raison de la nature exponentielle de la croissance composée."
+  },
+  "content": {
+    "whatIs": "Ce calculateur d'investissement montre comment votre portefeuille croît au fil du temps grâce aux intérêts composés sur un investissement initial et des contributions mensuelles régulières. Il utilise également la règle de 72 pour estimer le temps nécessaire pour doubler votre argent au taux de rendement donné.",
+    "formula": "r = annualReturn / 100 / 12 (taux mensuel)\nn = years × 12 (nombre total de mois)\nValeur finale = initialAmount × (1+r)^n + monthlyContribution × ((1+r)^n − 1) / r\nTotal des contributions = initialAmount + monthlyContribution × n\nRendements totaux = Valeur finale − Total des contributions\nTemps de doublement ≈ 72 / annualReturn",
+    "example": "10 000 $ initial, 200 $/mois, rendement annuel 7 %, 20 ans : r = 0,5833 %/mois, n = 240 mois. Valeur finale ≈ 144 959 $. Total investi : 58 000 $. Rendements totaux : 86 959 $. Temps de doublement à 7 % : ≈ 10,3 ans.",
+    "howItWorks_1": "Saisissez le montant de votre investissement initial et la contribution mensuelle facultative.",
+    "howItWorks_2": "Définissez le taux de rendement annuel attendu (par défaut 7 %) et la période d'investissement en années (par défaut 10).",
+    "howItWorks_3": "Cliquez sur Calculer pour voir la valeur finale de votre portefeuille, le montant total investi, les rendements totaux gagnés et le temps de doublement de votre investissement via la règle de 72."
+  }
+}

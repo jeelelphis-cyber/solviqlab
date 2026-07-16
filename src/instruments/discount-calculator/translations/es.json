@@ -1,0 +1,32 @@
+{
+  "title": "Calculadora de Descuento — Precio Final Después del Descuento",
+  "description": "Calcula el precio final después de aplicar cualquier porcentaje de descuento. También calcula cuánto ahorras y la tasa de descuento efectiva.",
+  "calculate": "Calcular",
+  "reset": "Reiniciar",
+  "result": "Resultado",
+  "label_originalPrice": "Precio Original",
+  "label_discountPercent": "Descuento",
+  "label_discountAmount": "Ahorras",
+  "label_finalPrice": "Precio Final",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cómo se calcula el monto del descuento si el descuento es una cantidad fija en dólares en lugar de un porcentaje?",
+    "a1": "Esta calculadora solo maneja descuentos porcentuales. Para un descuento fijo en dólares, simplemente resta el monto fijo del precio original: Precio Final = Precio Original - Descuento Fijo. Por ejemplo, un descuento de $10 en $50 da un precio final de $40.",
+    "q2": "¿Qué representa el valor 'Ahorras'?",
+    "a2": "El valor 'Ahorras' es el monto del descuento, que es la diferencia entre el precio original y el precio final. Te indica cuánto dinero estás ahorrando al aprovechar el descuento.",
+    "q3": "¿Puedo usar esta calculadora para descuentos mayores al 100%?",
+    "a3": "No, los descuentos superiores al 100% resultarían en un precio final negativo, lo cual no es realista en escenarios minoristas típicos. Esta calculadora limita el porcentaje de descuento a un máximo del 100%, lo que significa que el precio final puede ser cero como máximo.",
+    "q4": "¿Qué significa el resultado 'Precio Final'?",
+    "a4": "El 'Precio Final' es la cantidad que realmente pagas después de aplicar el descuento. Se calcula restando el monto del descuento del precio original. Por ejemplo, si el precio original es $100 y el descuento es del 20%, el precio final es $80.",
+    "q5": "¿Existe una autoridad estándar para los cálculos de descuento?",
+    "a5": "Los cálculos de descuento se basan en aritmética básica y se aplican universalmente en el comercio minorista y las finanzas. No existe una autoridad rectora única, pero la fórmula sigue los principios estándar de cálculo de porcentajes enseñados en matemáticas y utilizados por empresas en todo el mundo."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de descuento calcula el precio de venta y el ahorro total cuando se aplica un descuento porcentual a un precio original. Utiliza el concepto simple de restar un porcentaje del precio original para encontrar el costo final.",
+    "formula": "El monto del descuento se calcula como: Monto del Descuento = Precio Original × (Porcentaje de Descuento / 100). El precio final es entonces: Precio Final = Precio Original - Monto del Descuento. Por ejemplo, un descuento del 20% en $100 da un descuento de $20 y un precio final de $80.",
+    "example": "Supongamos que tienes un artículo con un precio original de $250 y un descuento del 15%. El monto del descuento es $250 × 0.15 = $37.50, por lo que el precio final es $250 - $37.50 = $212.50. Ahorras $37.50.",
+    "howItWorks_1": "Ingresa el precio original del artículo en dólares (por ejemplo, 250) y el porcentaje de descuento (por ejemplo, 15) en los campos respectivos.",
+    "howItWorks_2": "Haz clic en el botón Calcular. La herramienta aplica instantáneamente la fórmula de descuento para calcular el monto del descuento y el precio final.",
+    "howItWorks_3": "Los resultados muestran 'Ahorras' (el monto del descuento en dólares) y 'Precio Final' (la cantidad que pagas después del descuento). Úsalos para comparar precios o presupuestar tu compra."
+  }
+}

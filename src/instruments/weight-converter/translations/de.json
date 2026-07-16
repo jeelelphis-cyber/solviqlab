@@ -1,0 +1,35 @@
+{
+  "title": "Gewichtsumrechner — kg, lb, oz, Stone und mehr",
+  "description": "Konvertieren Sie Gewicht zwischen Kilogramm, Pfund, Unzen, Stone, Gramm und Tonnen. Sofortiger und genauer Gewichtseinheitenumrechner.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_value": "Wert",
+  "label_fromUnit": "Von",
+  "label_kilograms": "Kilogramm",
+  "label_grams": "Gramm",
+  "label_pounds": "Pfund",
+  "label_ounces": "Unzen",
+  "label_stones": "Stone",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie rechnet man Pfund genau in Kilogramm um?",
+    "a1": "Um Pfund in Kilogramm umzurechnen, multiplizieren Sie den Pfundwert mit 0,45359237. Beispiel: 150 lb × 0,45359237 = 68,0389 kg. Dieser Faktor ist durch das internationale Avoirdupois-Pfund definiert.",
+    "q2": "Was bedeutet die Ausgabe 'Stone'?",
+    "a2": "Ein Stone (st) ist eine britische imperiale Gewichtseinheit, die 14 Pfund (6,35029 kg) entspricht. Sie wird im Vereinigten Königreich und in Irland häufig zur Messung des Körpergewichts verwendet. Der Umrechner zeigt das entsprechende Gewicht in Stone an.",
+    "q3": "Kann ich diesen Umrechner für sehr große Gewichte wie Tonnen verwenden?",
+    "a3": "Ja, der Umrechner akzeptiert Werte bis zu 1.000.000.000.000 (1 Billion) und enthält eine Einheit 'Tonne' (metrische Tonne = 1000 kg). Für extrem große Gewichte sollten Sie jedoch wissenschaftliche Notation oder spezielle Werkzeuge in Betracht ziehen.",
+    "q4": "Was ist der Unterschied zwischen 'ton' und 'tonne'?",
+    "a4": "In diesem Umrechner bezieht sich 'Tonne' auf die metrische Tonne (tonne), die genau 1000 kg (2204,62 lb) entspricht. Die US-Short-Tonne (2000 lb) und die UK-Long-Tonne (2240 lb) sind nicht enthalten; verwenden Sie bei Bedarf die Pfund-Ausgabe zur manuellen Umrechnung.",
+    "q5": "Welcher Standard definiert die verwendeten Umrechnungsfaktoren?",
+    "a5": "Die Umrechnungsfaktoren basieren auf dem Internationalen Einheitensystem (SI) und dem internationalen Avoirdupois-System. Das Kilogramm ist durch die Planck-Konstante definiert, und das Pfund ist seit 1959 durch internationale Vereinbarung gesetzlich als 0,45359237 kg festgelegt."
+  },
+  "content": {
+    "whatIs": "Der Gewichtsumrechner wandelt einen Gewichtswert sofort zwischen Kilogramm, Gramm, Milligramm, Pfund, Unzen, Stone und Tonnen um. Er verwendet standardisierte Umrechnungsfaktoren, um genaue Ergebnisse für jedes eingegebene Gewicht zu liefern.",
+    "formula": "Der Umrechner multipliziert den Eingabewert mit einem Umrechnungsfaktor, um in eine Basiseinheit (Kilogramm) umzurechnen, und multipliziert dann mit dem Kehrwert, um jede Ausgabeeinheit zu erhalten. Beispiel: Um Pfund in Kilogramm umzurechnen: Kilogramm = Pfund × 0,45359237. Um Kilogramm in Pfund umzurechnen: Pfund = Kilogramm × 2,20462262.",
+    "example": "Wenn Sie 10 Pfund (lb) eingeben und 'lb' als Ausgangseinheit wählen, gibt der Umrechner aus: 4,5359 kg, 4535,9 g, 160 oz, 0,7143 st und 0,005 Tonnen. Dies zeigt, wie 10 lb zu anderen gängigen Gewichtseinheiten in Beziehung stehen.",
+    "howItWorks_1": "Geben Sie einen numerischen Gewichtswert in das Feld 'Wert' ein (z. B. 150). Wählen Sie dann die Einheit dieses Wertes aus dem Dropdown 'Von Einheit' (z. B. 'lb' für Pfund).",
+    "howItWorks_2": "Klicken Sie auf die Schaltfläche 'Berechnen'. Der Umrechner wendet die entsprechenden Umrechnungsfaktoren an, um das äquivalente Gewicht in Kilogramm, Gramm, Pfund, Unzen und Stone zu berechnen.",
+    "howItWorks_3": "Die Ergebnisse erscheinen in den Ausgabefeldern: Kilogramm (kg), Gramm (g), Pfund (lb), Unzen (oz) und Stone (st). Verwenden Sie diese Werte direkt zum Kochen, Versand, Fitness oder für jede gewichtsbezogene Aufgabe."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Sleep Calculator — Best Bedtime & Wake-Up Times by Sleep Cycles",
+  "description": "Find the ideal bedtime or wake-up time based on 90-minute sleep cycles. Wake up refreshed by timing sleep to complete full REM cycles.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Your Sleep Schedule",
+  "label_mode": "Mode",
+  "label_targetTime": "Time",
+  "label_fallAsleepMinutes": "Minutes to Fall Asleep",
+  "opt_waketime": "I want to wake up at...",
+  "opt_bedtime": "I'm going to sleep at...",
+  "label_cycle4": "4 Cycles — 6 hours",
+  "label_cycle5": "5 Cycles — 7.5 hours",
+  "label_cycle6": "6 Cycles — 9 hours",
+  "label_cycle7": "7 Cycles — 10.5 hours",
+  "tag_light": "Light",
+  "tag_optimal": "Optimal",
+  "tag_too_much": "Too Long",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "What is a sleep cycle and why does it last 90 minutes?",
+    "a1": "A sleep cycle consists of four stages: N1 (light sleep), N2 (light sleep), N3 (deep/slow-wave sleep), and REM (rapid eye movement). One complete cycle averages 90 minutes, though cycles can range from 70 to 120 minutes and the proportion of deep vs REM sleep shifts throughout the night. Waking up at the end of a complete cycle — rather than during deep sleep — is associated with feeling more alert and less groggy.",
+    "q2": "Why is 5 or 6 sleep cycles recommended?",
+    "a2": "Most adults need 7–9 hours of sleep per night, which corresponds to 5–6 complete 90-minute cycles. Five cycles equals 7.5 hours and six cycles equals 9 hours. Four cycles (6 hours) is generally insufficient for most adults long-term. Seven cycles (10.5 hours) may indicate oversleeping, which is associated with health risks in some research.",
+    "q3": "What is 'minutes to fall asleep' and how does it affect the calculation?",
+    "a3": "The sleep onset latency (time to fall asleep) is the delay between lying down and actually falling asleep. The average is 15–20 minutes for healthy adults. This calculator subtracts this time so your alarms account for it. If you have insomnia or fall asleep quickly, adjust this value. For mode='wake time', bedtime = target wake time − fall asleep time − (cycles × 90 min).",
+    "q4": "Does this account for naps?",
+    "a4": "This calculator is designed for a main overnight sleep session. For naps, a single 90-minute cycle is ideal (or even 20 minutes to avoid grogginess). You can use this calculator for naps by entering your nap start time in 'bedtime' mode and reading the cycle4 time as your ideal 90-minute nap wake-up time.",
+    "q5": "Is it better to wake up after 5 or 6 cycles?",
+    "a5": "Both are within the recommended 7–9 hour range for adults. Most people thrive on 7.5 hours (5 cycles), particularly if they have a consistent sleep schedule. Six cycles (9 hours) is better for people recovering from sleep debt, illness, or with naturally higher sleep needs. The key is waking at the end of a complete cycle, which this calculator helps time correctly."
+  },
+  "content": {
+    "whatIs": "This sleep calculator helps you find the best time to go to sleep or wake up based on 90-minute sleep cycles. By timing your sleep to end at the completion of a full cycle, you're more likely to wake up feeling refreshed rather than groggy.",
+    "formula": "Bedtime (wake mode) = Wake Time − Fall Asleep Minutes − (Cycles × 90 min)\nWake Time (sleep mode) = Bedtime + Fall Asleep Minutes + (Cycles × 90 min)\nTimes wrap around midnight automatically.",
+    "example": "If you need to wake up at 07:00 and take 15 minutes to fall asleep: 5 cycles = 07:00 − 15 min − 450 min = 23:05 bedtime. 6 cycles = 07:00 − 15 min − 540 min = 21:35 bedtime.",
+    "howItWorks_1": "Choose your mode: 'I want to wake up at' to calculate bedtimes, or 'I'm going to sleep at' to calculate wake-up times.",
+    "howItWorks_2": "Enter your target time in HH:MM format and adjust the minutes to fall asleep if needed (default 15).",
+    "howItWorks_3": "Click Calculate to see four recommended times corresponding to 4, 5, 6, and 7 complete sleep cycles."
+  }
+}

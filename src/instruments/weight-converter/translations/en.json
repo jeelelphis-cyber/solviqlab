@@ -1,0 +1,35 @@
+{
+  "title": "Weight Converter — kg, lbs, oz, stones and more",
+  "description": "Convert weight between kilograms, pounds, ounces, stones, grams, and tons. Instant and accurate weight unit converter.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_value": "Value",
+  "label_fromUnit": "From",
+  "label_kilograms": "Kilograms",
+  "label_grams": "Grams",
+  "label_pounds": "Pounds",
+  "label_ounces": "Ounces",
+  "label_stones": "Stones",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How do you convert pounds to kilograms exactly?",
+    "a1": "To convert pounds to kilograms, multiply the pound value by 0.45359237. For example, 150 lb × 0.45359237 = 68.0389 kg. This factor is defined by the international avoirdupois pound.",
+    "q2": "What does the 'Stones' output mean?",
+    "a2": "A stone (st) is a British imperial unit of weight equal to 14 pounds (6.35029 kg). It is commonly used in the UK and Ireland for measuring body weight. The converter shows the equivalent weight in stones.",
+    "q3": "Can I use this converter for very large weights like tons?",
+    "a3": "Yes, the converter accepts values up to 1,000,000,000,000 (1 trillion) and includes a 'ton' unit (metric ton = 1000 kg). However, for extremely large weights, consider using scientific notation or specialized tools.",
+    "q4": "What is the difference between 'ton' and 'tonne'?",
+    "a4": "In this converter, 'ton' refers to the metric ton (tonne), which is exactly 1000 kg (2204.62 lb). The US short ton (2000 lb) and UK long ton (2240 lb) are not included; use the pound output to convert manually if needed.",
+    "q5": "What standard defines the conversion factors used?",
+    "a5": "The conversion factors are based on the International System of Units (SI) and the international avoirdupois system. The kilogram is defined by the Planck constant, and the pound is legally defined as 0.45359237 kg since 1959 by international agreement."
+  },
+  "content": {
+    "whatIs": "The Weight Converter instantly converts a weight value between kilograms, grams, milligrams, pounds, ounces, stones, and tons. It uses standard conversion factors to provide accurate results for any input weight.",
+    "formula": "The converter multiplies the input value by a conversion factor to convert to a base unit (kilograms), then multiplies by the reciprocal factor to get each output unit. For example, to convert pounds to kilograms: kilograms = pounds × 0.45359237. To convert kilograms to pounds: pounds = kilograms × 2.20462262.",
+    "example": "If you enter 10 pounds (lb) and select 'lb' as the from unit, the converter outputs: 4.5359 kg, 4535.9 g, 160 oz, 0.7143 st, and 0.005 tons. This shows how 10 lb relates to other common weight units.",
+    "howItWorks_1": "Enter a numeric weight value in the 'Value' field (e.g., 150). Then select the unit of that value from the 'From Unit' dropdown (e.g., 'lb' for pounds).",
+    "howItWorks_2": "Click the 'Calculate' button. The converter applies the appropriate conversion factors to compute the equivalent weight in kilograms, grams, pounds, ounces, and stones.",
+    "howItWorks_3": "The results appear in the output fields: Kilograms (kg), Grams (g), Pounds (lb), Ounces (oz), and Stones (st). Use these values directly for cooking, shipping, fitness, or any weight-related task."
+  }
+}

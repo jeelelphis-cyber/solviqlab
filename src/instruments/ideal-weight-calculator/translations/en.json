@@ -1,0 +1,36 @@
+{
+  "title": "Ideal Weight Calculator — Find Your Healthy Weight",
+  "description": "Calculate your ideal body weight using 4 medical formulas (Robinson, Miller, Devine, Hamwi). Get your healthy weight range by height and sex.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_height": "Height",
+  "label_sex": "Sex",
+  "label_robinson": "Robinson Formula",
+  "label_miller": "Miller Formula",
+  "label_devine": "Devine Formula",
+  "label_average": "Average Ideal Weight",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "What is the difference between the Robinson, Miller, Devine, and Hamwi formulas?",
+    "a1": "These formulas differ in their base weight and adjustment per inch over 5 feet. For example, for men, Robinson starts at 52 kg with 1.9 kg/inch, while Hamwi starts at 48 kg with 2.7 kg/inch. They were developed from different populations and time periods, so results vary slightly.",
+    "q2": "How should I interpret the average ideal weight?",
+    "a2": "The average is the mean of the four formula results, providing a single reference point. It is not a clinical standard but a convenient summary. Your actual healthy weight may vary based on muscle mass, bone density, and body composition.",
+    "q3": "When should I use this calculator and what are its limitations?",
+    "a3": "Use it for general health awareness or as a starting point for weight goals. Limitations: it does not account for age, body fat percentage, or muscle mass. Athletes or elderly individuals may find the estimates less accurate.",
+    "q4": "What does the Devine formula output mean?",
+    "a4": "The Devine formula was originally developed to calculate ideal body weight for drug dosing. For a 170 cm male, it gives 65.9 kg. It is widely used in clinical settings but may underestimate ideal weight for taller individuals.",
+    "q5": "Are these formulas based on WHO standards?",
+    "a5": "No, these formulas predate WHO BMI guidelines. They were developed by clinicians (Robinson, Miller, Devine, Hamwi) for estimating ideal weight. The WHO uses BMI categories (18.5-24.9) for healthy weight, which is a different approach."
+  },
+  "opt_male": "Male",
+  "opt_female": "Female",
+  "content": {
+    "whatIs": "The Ideal Weight Calculator estimates your ideal body weight based on your height and sex using four established medical formulas: Robinson, Miller, Devine, and Hamwi. These formulas provide a weight range that is associated with lower health risks for most adults.",
+    "formula": "For men: Robinson = 52 kg + 1.9 kg per inch over 5 feet; Miller = 56.2 kg + 1.41 kg per inch over 5 feet; Devine = 50 kg + 2.3 kg per inch over 5 feet; Hamwi = 48 kg + 2.7 kg per inch over 5 feet. For women: Robinson = 49 kg + 1.7 kg per inch over 5 feet; Miller = 53.1 kg + 1.36 kg per inch over 5 feet; Devine = 45.5 kg + 2.3 kg per inch over 5 feet; Hamwi = 45.5 kg + 2.2 kg per inch over 5 feet. Height in inches is converted from centimeters.",
+    "example": "A 170 cm (66.9 inches) male: Robinson = 52 + 1.9*(66.9-60) = 65.1 kg; Miller = 56.2 + 1.41*(66.9-60) = 65.9 kg; Devine = 50 + 2.3*(66.9-60) = 65.9 kg; Hamwi = 48 + 2.7*(66.9-60) = 66.6 kg; Average = (65.1+65.9+65.9+66.6)/4 = 65.9 kg.",
+    "howItWorks_1": "Enter your height in centimeters (between 100 and 250) and select your sex (male or female) from the dropdown menu.",
+    "howItWorks_2": "Click the Calculate button. The tool applies each formula to compute your ideal weight in kilograms for Robinson, Miller, Devine, and Hamwi, then calculates the average.",
+    "howItWorks_3": "Review the results: each formula gives a slightly different value. The average provides a single estimate. Compare these numbers to your current weight to assess if you are within a healthy range."
+  }
+}

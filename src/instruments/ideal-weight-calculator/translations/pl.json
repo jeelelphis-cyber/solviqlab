@@ -1,0 +1,36 @@
+{
+  "title": "Kalkulator Idealnej Wagi — Znajdź Swoją Zdrową Wagę",
+  "description": "Oblicz swoją idealną masę ciała za pomocą 4 formuł medycznych (Robinson, Miller, Devine, Hamwi). Uzyskaj zakres zdrowej wagi w zależności od wzrostu i płci.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_height": "Wzrost",
+  "label_sex": "Płeć",
+  "label_robinson": "Formuła Robinsona",
+  "label_miller": "Formuła Millera",
+  "label_devine": "Formuła Devine'a",
+  "label_average": "Średnia Idealna Waga",
+  "faq": {
+    "title": "Najczęściej Zadawane Pytania",
+    "q1": "Jaka jest różnica między formułami Robinsona, Millera, Devine'a i Hamwi?",
+    "a1": "Formuły te różnią się wagą bazową i przelicznikiem na każdy cal powyżej 5 stóp. Na przykład dla mężczyzn Robinson zaczyna od 52 kg z 1,9 kg/cal, podczas gdy Hamwi zaczyna od 48 kg z 2,7 kg/cal. Zostały opracowane na podstawie różnych populacji i okresów, więc wyniki nieznacznie się różnią.",
+    "q2": "Jak interpretować średnią idealną wagę?",
+    "a2": "Średnia to średnia arytmetyczna wyników czterech formuł, stanowiąca pojedynczy punkt odniesienia. Nie jest to standard kliniczny, ale wygodne podsumowanie. Twoja rzeczywista zdrowa waga może się różnić w zależności od masy mięśniowej, gęstości kości i składu ciała.",
+    "q3": "Kiedy używać tego kalkulatora i jakie są jego ograniczenia?",
+    "a3": "Używaj go do ogólnej świadomości zdrowotnej lub jako punktu wyjścia do celów wagowych. Ograniczenia: nie uwzględnia wieku, procentowej zawartości tkanki tłuszczowej ani masy mięśniowej. Sportowcy lub osoby starsze mogą uznać szacunki za mniej dokładne.",
+    "q4": "Co oznacza wynik formuły Devine'a?",
+    "a4": "Formuła Devine'a została pierwotnie opracowana do obliczania idealnej masy ciała dla dawkowania leków. Dla mężczyzny o wzroście 170 cm daje 65,9 kg. Jest szeroko stosowana w warunkach klinicznych, ale może zaniżać idealną wagę u osób wyższych.",
+    "q5": "Czy te formuły opierają się na standardach WHO?",
+    "a5": "Nie, te formuły poprzedzają wytyczne BMI WHO. Zostały opracowane przez klinicystów (Robinson, Miller, Devine, Hamwi) do szacowania idealnej wagi. WHO stosuje kategorie BMI (18,5-24,9) dla zdrowej wagi, co jest innym podejściem."
+  },
+  "opt_male": "Mężczyzna",
+  "opt_female": "Kobieta",
+  "content": {
+    "whatIs": "Kalkulator Idealnej Wagi szacuje Twoją idealną masę ciała na podstawie wzrostu i płci, korzystając z czterech uznanych formuł medycznych: Robinsona, Millera, Devine'a i Hamwi. Formuły te podają zakres wagowy, który dla większości dorosłych wiąże się z niższym ryzykiem zdrowotnym.",
+    "formula": "Dla mężczyzn: Robinson = 52 kg + 1,9 kg na każdy cal powyżej 5 stóp; Miller = 56,2 kg + 1,41 kg na cal powyżej 5 stóp; Devine = 50 kg + 2,3 kg na cal powyżej 5 stóp; Hamwi = 48 kg + 2,7 kg na cal powyżej 5 stóp. Dla kobiet: Robinson = 49 kg + 1,7 kg na cal powyżej 5 stóp; Miller = 53,1 kg + 1,36 kg na cal powyżej 5 stóp; Devine = 45,5 kg + 2,3 kg na cal powyżej 5 stóp; Hamwi = 45,5 kg + 2,2 kg na cal powyżej 5 stóp. Wzrost w calach jest przeliczany z centymetrów.",
+    "example": "Mężczyzna o wzroście 170 cm (66,9 cala): Robinson = 52 + 1,9*(66,9-60) = 65,1 kg; Miller = 56,2 + 1,41*(66,9-60) = 65,9 kg; Devine = 50 + 2,3*(66,9-60) = 65,9 kg; Hamwi = 48 + 2,7*(66,9-60) = 66,6 kg; Średnia = (65,1+65,9+65,9+66,6)/4 = 65,9 kg.",
+    "howItWorks_1": "Wprowadź swój wzrost w centymetrach (między 100 a 250) i wybierz płeć (mężczyzna lub kobieta) z menu rozwijanego.",
+    "howItWorks_2": "Kliknij przycisk Oblicz. Narzędzie stosuje każdą formułę, aby obliczyć Twoją idealną wagę w kilogramach dla Robinsona, Millera, Devine'a i Hamwi, a następnie oblicza średnią.",
+    "howItWorks_3": "Przejrzyj wyniki: każda formuła daje nieco inną wartość. Średnia stanowi pojedyncze oszacowanie. Porównaj te liczby ze swoją aktualną wagą, aby ocenić, czy mieścisz się w zdrowym zakresie."
+  }
+}

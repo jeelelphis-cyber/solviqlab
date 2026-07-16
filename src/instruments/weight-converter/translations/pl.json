@@ -1,0 +1,35 @@
+{
+  "title": "Konwerter wagi — kg, funty, uncje, kamienie i więcej",
+  "description": "Konwertuj wagę między kilogramami, funtami, uncjami, kamieniami, gramami i tonami. Natychmiastowy i dokładny konwerter jednostek wagi.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_value": "Wartość",
+  "label_fromUnit": "Z",
+  "label_kilograms": "Kilogramy",
+  "label_grams": "Gramy",
+  "label_pounds": "Funty",
+  "label_ounces": "Uncje",
+  "label_stones": "Kamienie",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jak dokładnie przeliczyć funty na kilogramy?",
+    "a1": "Aby przeliczyć funty na kilogramy, pomnóż wartość w funtach przez 0,45359237. Na przykład 150 funtów × 0,45359237 = 68,0389 kg. Współczynnik ten jest zdefiniowany przez międzynarodowy funt avoirdupois.",
+    "q2": "Co oznacza wynik w 'kamieniach'?",
+    "a2": "Kamień (st) to brytyjska jednostka masy równa 14 funtom (6,35029 kg). Jest powszechnie używana w Wielkiej Brytanii i Irlandii do pomiaru masy ciała. Konwerter pokazuje równoważną wagę w kamieniach.",
+    "q3": "Czy mogę użyć tego konwertera dla bardzo dużych wag, np. ton?",
+    "a3": "Tak, konwerter akceptuje wartości do 1 000 000 000 000 (bilion) i zawiera jednostkę 'tona' (tona metryczna = 1000 kg). Jednak dla bardzo dużych wag rozważ użycie notacji naukowej lub specjalistycznych narzędzi.",
+    "q4": "Jaka jest różnica między 'ton' a 'tonne'?",
+    "a4": "W tym konwerterze 'ton' odnosi się do tony metrycznej (tonne), która wynosi dokładnie 1000 kg (2204,62 funta). Amerykańska tona krótka (2000 funtów) i brytyjska tona długa (2240 funtów) nie są uwzględnione; w razie potrzeby użyj wyniku w funtach do ręcznego przeliczenia.",
+    "q5": "Jaka norma definiuje użyte współczynniki konwersji?",
+    "a5": "Współczynniki konwersji oparte są na Międzynarodowym Układzie Jednostek Miar (SI) i międzynarodowym systemie avoirdupois. Kilogram jest zdefiniowany przez stałą Plancka, a funt jest prawnie zdefiniowany jako 0,45359237 kg od 1959 roku na mocy międzynarodowego porozumienia."
+  },
+  "content": {
+    "whatIs": "Konwerter wagi natychmiast konwertuje wartość wagi między kilogramami, gramami, miligramami, funtami, uncjami, kamieniami i tonami. Używa standardowych współczynników konwersji, aby zapewnić dokładne wyniki dla dowolnej wprowadzonej wagi.",
+    "formula": "Konwerter mnoży wartość wejściową przez współczynnik konwersji, aby przeliczyć na jednostkę bazową (kilogramy), a następnie mnoży przez odwrotność współczynnika, aby uzyskać każdą jednostkę wyjściową. Na przykład, aby przeliczyć funty na kilogramy: kilogramy = funty × 0,45359237. Aby przeliczyć kilogramy na funty: funty = kilogramy × 2,20462262.",
+    "example": "Jeśli wprowadzisz 10 funtów (lb) i wybierzesz 'lb' jako jednostkę źródłową, konwerter wyświetli: 4,5359 kg, 4535,9 g, 160 oz, 0,7143 st i 0,005 tony. To pokazuje, jak 10 funtów odnosi się do innych powszechnych jednostek wagi.",
+    "howItWorks_1": "Wprowadź liczbową wartość wagi w polu 'Wartość' (np. 150). Następnie wybierz jednostkę tej wartości z listy rozwijanej 'Z jednostki' (np. 'lb' dla funtów).",
+    "howItWorks_2": "Kliknij przycisk 'Oblicz'. Konwerter stosuje odpowiednie współczynniki konwersji, aby obliczyć równoważną wagę w kilogramach, gramach, funtach, uncjach i kamieniach.",
+    "howItWorks_3": "Wyniki pojawiają się w polach wyjściowych: Kilogramy (kg), Gramy (g), Funty (lb), Uncje (oz) i Kamienie (st). Użyj tych wartości bezpośrednio do gotowania, wysyłki, fitnessu lub dowolnego zadania związanego z wagą."
+  }
+}

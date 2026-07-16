@@ -1,0 +1,40 @@
+{
+  "title": "Fraction Calculator — Add, Subtract, Multiply, Divide",
+  "description": "Calculate fractions instantly. Add, subtract, multiply, and divide fractions with step-by-step solutions. Simplifies results automatically.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_numerator1": "Numerator 1",
+  "label_denominator1": "Denominator 1",
+  "label_operation": "Operation",
+  "label_numerator2": "Numerator 2",
+  "label_denominator2": "Denominator 2",
+  "label_resultNumerator": "Result Numerator",
+  "label_resultDenominator": "Result Denominator",
+  "label_decimal": "Decimal",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How does the calculator simplify fractions?",
+    "a1": "After performing the operation, the calculator finds the greatest common divisor (GCD) of the numerator and denominator. It then divides both by the GCD to present the fraction in its simplest form.",
+    "q2": "What does the decimal output represent?",
+    "a2": "The decimal output is the result of dividing the simplified numerator by the simplified denominator. For example, if the result fraction is 3/4, the decimal is 0.75.",
+    "q3": "Can I use this calculator for fractions with negative numbers?",
+    "a3": "Yes, the calculator accepts negative numerators and denominators. The result will be correctly signed, and simplification handles negative signs appropriately.",
+    "q4": "What if I enter a denominator of zero?",
+    "a4": "A denominator of zero is undefined in mathematics. The calculator will likely return an error or not compute. Always ensure denominators are non-zero.",
+    "q5": "Is there a standard reference for fraction arithmetic?",
+    "a5": "Fraction arithmetic follows the standard rules of arithmetic as defined by mathematics. There is no single authority, but the methods are universally taught and used in education and professional contexts."
+  },
+  "opt_add": "Add",
+  "opt_subtract": "Subtract",
+  "opt_multiply": "Multiply",
+  "opt_divide": "Divide",
+  "content": {
+    "whatIs": "This fraction calculator performs addition, subtraction, multiplication, and division of two fractions. It simplifies the result automatically and provides the decimal equivalent, using the standard arithmetic operations on fractions.",
+    "formula": "For addition/subtraction: a/b ± c/d = (a*d ± c*b) / (b*d). For multiplication: a/b * c/d = (a*c) / (b*d). For division: a/b ÷ c/d = a/b * d/c = (a*d) / (b*c). The result is then simplified by dividing numerator and denominator by their greatest common divisor (GCD).",
+    "example": "To add 1/3 and 1/4, enter numerator1=1, denominator1=3, operation='add', numerator2=1, denominator2=4. The calculator computes (1*4 + 1*3)/(3*4) = 7/12, which is already simplified, and shows decimal 0.58333.",
+    "howItWorks_1": "Enter the numerator and denominator for the first fraction in the 'numerator1' and 'denominator1' fields. Then select the operation (add, subtract, multiply, or divide) from the dropdown.",
+    "howItWorks_2": "Enter the numerator and denominator for the second fraction in the 'numerator2' and 'denominator2' fields. Click the Calculate button to perform the operation.",
+    "howItWorks_3": "The result is displayed as a simplified fraction (Result Numerator and Result Denominator) and as a decimal. For example, if the result is 2/4, it will be simplified to 1/2."
+  }
+}

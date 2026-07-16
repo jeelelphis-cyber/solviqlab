@@ -1,0 +1,35 @@
+{
+  "title": "BMR-Rechner — Grundumsatz",
+  "description": "Berechnen Sie Ihren Grundumsatz (BMR) mit der Mifflin-St-Jeor-Formel. Finden Sie heraus, wie viele Kalorien Ihr Körper im völligen Ruhezustand verbrennt.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_weight": "Gewicht",
+  "label_height": "Größe",
+  "label_age": "Alter",
+  "label_sex": "Geschlecht",
+  "label_bmr": "BMR",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Warum verwendet die Mifflin-St-Jeor-Formel unterschiedliche Formeln für Männer und Frauen?",
+    "a1": "Männer haben im Allgemeinen mehr fettfreie Muskelmasse und einen höheren Stoffwechsel als Frauen, daher addiert die Formel bei Männern 5 und subtrahiert bei Frauen 161, um diese Unterschiede zu berücksichtigen.",
+    "q2": "Was bedeutet mein BMR-Wert für die Gewichtsabnahme?",
+    "a2": "Ihr BMR ist die Mindestkalorienmenge, die für grundlegende Funktionen benötigt wird. Um Gewicht zu verlieren, sollten Sie weniger Kalorien zu sich nehmen als Ihren gesamten täglichen Energieverbrauch (BMR plus Aktivität), typischerweise ein Defizit von 500-1000 kcal/Tag für eine sichere Abnahme.",
+    "q3": "Kann ich diesen BMR-Rechner verwenden, wenn ich unter 15 oder über 100 Jahre alt bin?",
+    "a3": "Die Mifflin-St-Jeor-Formel ist für Erwachsene im Alter von 19-100 Jahren validiert. Für 15-18-Jährige kann sie noch eine vernünftige Schätzung liefern, aber für Kinder unter 15 Jahren sind andere Formeln (z. B. Schofield) besser geeignet.",
+    "q4": "Was bedeutet 'kcal/Tag' in der Ausgabe?",
+    "a4": "kcal/Tag steht für Kilokalorien pro Tag, die Standardeinheit für Nahrungsenergie. Eine Kilokalorie entspricht 1.000 Kalorien (kleines c). Sie repräsentiert die Energie, die Ihr Körper an einem Tag im Ruhezustand verbrennt.",
+    "q5": "Wird die Mifflin-St-Jeor-Formel von Gesundheitsbehörden empfohlen?",
+    "a5": "Ja, die Academy of Nutrition and Dietetics empfiehlt die Mifflin-St-Jeor-Formel als die genaueste zur Schätzung des BMR bei nicht-adipösen und adipösen Personen. Sie wird häufig in klinischen Einrichtungen verwendet."
+  },
+  "opt_male": "Männlich",
+  "opt_female": "Weiblich",
+  "content": {
+    "whatIs": "Dieser BMR-Rechner schätzt Ihren Grundumsatz (BMR) mit der Mifflin-St-Jeor-Formel. Der BMR ist die Anzahl der Kalorien, die Ihr Körper im völligen Ruhezustand verbrennt, um lebenswichtige Funktionen wie Atmung und Kreislauf aufrechtzuerhalten.",
+    "formula": "Für Männer: BMR = 10 × Gewicht(kg) + 6,25 × Größe(cm) - 5 × Alter(J) + 5. Für Frauen: BMR = 10 × Gewicht(kg) + 6,25 × Größe(cm) - 5 × Alter(J) - 161. Das Ergebnis ist in kcal/Tag.",
+    "example": "Ein 30-jähriger Mann mit 80 kg und 180 cm Größe: BMR = 10×80 + 6,25×180 - 5×30 + 5 = 800 + 1125 - 150 + 5 = 1780 kcal/Tag. Das bedeutet, sein Körper verbrennt im Ruhezustand etwa 1780 Kalorien pro Tag.",
+    "howItWorks_1": "Geben Sie Ihr Gewicht in Kilogramm, Ihre Größe in Zentimetern, Ihr Alter in Jahren ein und wählen Sie Ihr Geschlecht (männlich oder weiblich).",
+    "howItWorks_2": "Klicken Sie auf die Schaltfläche Berechnen. Der Rechner wendet die Mifflin-St-Jeor-Formel an, um Ihren BMR basierend auf den Eingaben zu berechnen.",
+    "howItWorks_3": "Das Ergebnis zeigt Ihren BMR in kcal/Tag. Verwenden Sie diese Zahl als Basis für den täglichen Kalorienbedarf; addieren Sie Aktivitätskalorien, um den Gesamtenergieverbrauch zu schätzen."
+  }
+}

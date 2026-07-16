@@ -1,0 +1,35 @@
+{
+  "title": "Kalkulator proporcji — upraszczaj i rozwiązuj proporcje",
+  "description": "Upraszczaj proporcje, rozwiązuj proporcje i skaluj przepisy lub pomiary. Najszybszy kalkulator proporcji online z rozwiązaniami krok po kroku.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_a": "A",
+  "label_b": "B",
+  "label_c": "C (opcjonalnie, oblicz D)",
+  "label_simplifiedA": "Uproszczone A",
+  "label_simplifiedB": "Uproszczone B",
+  "label_d": "D (jeśli podano C)",
+  "label_decimal": "A/B jako ułamek dziesiętny",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jak uprościć proporcję, np. 15:25?",
+    "a1": "Znajdź NWD liczb 15 i 25, którym jest 5. Podziel oba wyrazy przez 5: 15/5 = 3, 25/5 = 5, więc uproszczona proporcja to 3:5.",
+    "q2": "Co oznacza wynik 'D (jeśli podano C)'?",
+    "a2": "Jeśli podasz wartość c, kalkulator rozwiązuje proporcję a:b = c:d dla d za pomocą mnożenia krzyżowego: d = (b * c) / a. Otrzymujesz czwartą proporcjonalną.",
+    "q3": "Czy mogę użyć tego kalkulatora do skalowania przepisów?",
+    "a3": "Tak. Na przykład, jeśli przepis wymaga 2 szklanek mąki na 3 szklanki cukru (2:3), a chcesz użyć 4 szklanek mąki, wpisz a=2, b=3, c=4, aby dowiedzieć się, że potrzebujesz d=6 szklanek cukru.",
+    "q4": "Co oznacza wynik dziesiętny?",
+    "a4": "Wartość dziesiętna to a podzielone przez b. Dla proporcji 3:4 wartość dziesiętna wynosi 0,75, co oznacza, że a stanowi 75% b. Jest to przydatne do porównywania ilości.",
+    "q5": "Czy istnieje oficjalny standard upraszczania proporcji?",
+    "a5": "Upraszczanie proporcji opiera się na matematycznej zasadzie dzielenia przez największy wspólny dzielnik (NWD), co jest standardową metodą arytmetyczną. Nie ma konkretnego organu regulacyjnego dla upraszczania proporcji."
+  },
+  "content": {
+    "whatIs": "Kalkulator proporcji upraszcza proporcje do najprostszej postaci, rozwiązuje brakującą wartość w proporcji (a:b = c:d) i oblicza równoważnik dziesiętny proporcji. Wykorzystuje koncepcję proporcji równoważnych i mnożenia krzyżowego.",
+    "formula": "Aby uprościć proporcję a:b, podziel oba wyrazy przez ich największy wspólny dzielnik (NWD). Aby znaleźć d w a:b = c:d, użyj mnożenia krzyżowego: d = (b * c) / a. Wartość dziesiętna to a / b.",
+    "example": "Dla danych wejściowych a=8, b=12, c=6, kalkulator upraszcza 8:12 do 2:3, oblicza d = (12*6)/8 = 9 i pokazuje wartość dziesiętną 8/12 = 0,6667.",
+    "howItWorks_1": "Wprowadź wartości a i b (wymagane). Opcjonalnie wprowadź wartość c, aby obliczyć d w proporcji a:b = c:d.",
+    "howItWorks_2": "Kliknij Oblicz. Narzędzie oblicza NWD a i b, aby uprościć proporcję, wykonuje mnożenie krzyżowe, jeśli podano c, i dzieli a przez b, aby uzyskać wartość dziesiętną.",
+    "howItWorks_3": "Wyniki pokazują uproszczoną proporcję (Uproszczone A : Uproszczone B), brakującą wartość D (jeśli wprowadzono c) oraz dziesiętną reprezentację a/b."
+  }
+}

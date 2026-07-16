@@ -1,0 +1,35 @@
+{
+  "title": "Kalkulator średniej — średnia, mediana, dominanta i więcej",
+  "description": "Oblicz średnią, medianę, dominantę, zakres i odchylenie standardowe z dowolnej listy liczb. Natychmiastowe statystyki dla studentów i profesjonalistów.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_numbers": "Liczby (oddzielone przecinkami)",
+  "label_mean": "Średnia (arytmetyczna)",
+  "label_median": "Mediana",
+  "label_mode": "Dominanta",
+  "label_range": "Zakres",
+  "label_count": "Liczba",
+  "label_sum": "Suma",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jaka jest różnica między średnią a medianą?",
+    "a1": "Średnia to średnia arytmetyczna, wrażliwa na wartości odstające. Mediana to wartość środkowa po posortowaniu danych, odporna na skrajne wartości. Na przykład w {1,2,3,100} średnia = 26,5, mediana = 2,5.",
+    "q2": "Jak obliczana jest dominanta, jeśli żadna liczba się nie powtarza?",
+    "a2": "Jeśli żadna liczba nie występuje więcej niż raz, zbiór danych nie ma dominanty. Niektóre kalkulatory podają 'brak dominanty' lub wymieniają wszystkie wartości. Nasz kalkulator zwraca najczęściej występującą wartość; jeśli wszystkie są unikalne, dominanta jest nieokreślona.",
+    "q3": "Kiedy powinienem użyć mediany zamiast średniej?",
+    "a3": "Użyj mediany dla rozkładów asymetrycznych lub gdy występują wartości odstające, np. w danych o dochodach. Średnia jest odpowiednia dla rozkładów symetrycznych bez skrajnych wartości. Mediana lepiej reprezentuje typową wartość w danych asymetrycznych.",
+    "q4": "Co mówi mi zakres o moich danych?",
+    "a4": "Zakres = maksimum - minimum. Mierzy całkowite rozproszenie danych. Duży zakres wskazuje na wysoką zmienność, mały zakres sugeruje, że punkty danych są blisko siebie. Jednak zakres jest wrażliwy na wartości odstające.",
+    "q5": "Czy istnieje standardowe odniesienie do obliczania średniej i mediany?",
+    "a5": "Tak, wzory są zgodne ze standardowymi definicjami statystycznymi według ISO 3534-1 i Amerykańskiego Stowarzyszenia Statystycznego. Średnia i mediana to podstawowe statystyki opisowe używane powszechnie w analizie danych."
+  },
+  "content": {
+    "whatIs": "Kalkulator średniej oblicza średnią, medianę, dominantę, zakres, liczbę i sumę listy liczb. Średnia to średnia arytmetyczna, obliczana przez zsumowanie wszystkich liczb i podzielenie przez ich liczbę. Zapewnia szybki obraz tendencji centralnej i rozproszenia.",
+    "formula": "Średnia = (suma wszystkich liczb) / (liczba liczb). Mediana to wartość środkowa po posortowaniu liczb; jeśli liczba jest parzysta, mediana = średnia dwóch środkowych liczb. Dominanta to najczęściej występująca wartość. Zakres = maksimum - minimum. Odchylenie standardowe (jeśli uwzględnione) mierzy rozproszenie.",
+    "example": "Dla liczb 2, 4, 4, 6, 8: suma = 24, liczba = 5, średnia = 24/5 = 4,8. Posortowane: 2,4,4,6,8, mediana = 4 (trzecia wartość). Dominanta = 4 (występuje dwa razy). Zakres = 8-2 = 6.",
+    "howItWorks_1": "Wprowadź listę liczb w polu wejściowym, oddzielonych przecinkami lub spacjami. Każda liczba może być dodatnia, ujemna lub dziesiętna.",
+    "howItWorks_2": "Kliknij przycisk Oblicz. Narzędzie przetwarza Twoje liczby: zlicza je, sumuje, sortuje dla mediany i dominanty oraz oblicza zakres i odchylenie standardowe.",
+    "howItWorks_3": "Przejrzyj wyniki: Średnia (średnia arytmetyczna), Mediana (wartość środkowa), Dominanta (najczęstsza), Zakres (rozproszenie), Liczba (ilość wpisów) i Suma (całkowita). Użyj ich, aby zrozumieć tendencję centralną i zmienność danych."
+  }
+}

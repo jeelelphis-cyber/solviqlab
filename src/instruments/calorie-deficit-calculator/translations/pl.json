@@ -1,0 +1,40 @@
+{
+  "title": "Kalkulator deficytu kalorycznego — ile kalorii, aby schudnąć",
+  "description": "Oblicz dokładny deficyt kaloryczny potrzebny do osiągnięcia celu utraty wagi. Oparty na TDEE z bezpiecznymi zaleceniami deficytu od dietetyków.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_currentWeight": "Aktualna waga",
+  "label_targetWeight": "Waga docelowa",
+  "label_tdee": "Dzienne zapotrzebowanie kaloryczne (TDEE)",
+  "label_weeklyLossGoal": "Tygodniowy cel utraty wagi",
+  "label_dailyDeficit": "Dzienny deficyt kaloryczny",
+  "label_dailyTarget": "Dzienny cel kaloryczny",
+  "label_weeksToGoal": "Tygodnie do celu",
+  "label_totalDeficit": "Całkowity potrzebny deficyt kaloryczny",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jak wyprowadzono wartość 7700 kcal na kg?",
+    "a1": "7700 kcal na kg opiera się na zawartości energetycznej tkanki tłuszczowej człowieka. Około 1 kg tkanki tłuszczowej zawiera około 7700 kcal energii. Ta wartość jest powszechnie stosowana w obliczeniach utraty wagi i jest poparta badaniami składu ciała.",
+    "q2": "Co oznacza 'Dzienny cel kaloryczny' i jak go używać?",
+    "a2": "Dzienny cel kaloryczny to liczba kalorii, którą powinieneś spożywać każdego dnia, aby osiągnąć pożądaną tygodniową utratę wagi. Jest to TDEE minus dzienny deficyt. Na przykład, jeśli Twoje TDEE wynosi 2500 kcal, a deficyt 500 kcal, Twój cel to 2000 kcal. Trzymaj się tego spożycia konsekwentnie, aby uzyskać najlepsze rezultaty.",
+    "q3": "Kiedy powinienem używać tego kalkulatora i jakie są jego ograniczenia?",
+    "a3": "Używaj tego kalkulatora, gdy masz konkretny cel utraty wagi i znasz swoje TDEE. Ograniczenia obejmują założenie, że cała utrata wagi pochodzi z tłuszczu, ale rzeczywista utrata obejmuje wodę i mięśnie. Ponadto indywidualny metabolizm jest różny, więc wyniki są szacunkowe. Skonsultuj się z profesjonalistą w celu uzyskania spersonalizowanej porady.",
+    "q4": "Co oznacza 'Tygodnie do celu' i czy jest dokładne?",
+    "a4": "Tygodnie do celu szacują czas potrzebny do osiągnięcia docelowej wagi, jeśli utrzymasz dokładny dzienny deficyt. Oblicza się go jako (aktualna waga - waga docelowa) / tygodniowy cel utraty wagi. Dokładność zależy od przestrzegania deficytu i adaptacji metabolicznych. Jest to wskazówka, a nie gwarancja.",
+    "q5": "Jaka instytucja zaleca bezpieczne tempo utraty wagi?",
+    "a5": "Centers for Disease Control and Prevention (CDC) i National Institutes of Health (NIH) zalecają bezpieczne i zrównoważone tempo utraty wagi wynoszące 0,5 do 1 kg (1-2 funty) na tydzień. To tempo minimalizuje ryzyko zdrowotne i sprzyja długoterminowemu sukcesowi."
+  },
+  "opt_loss_025": "0,25 kg/tydzień — Łagodny",
+  "opt_loss_05": "0,5 kg/tydzień — Umiarkowany",
+  "opt_loss_075": "0,75 kg/tydzień — Szybki",
+  "opt_loss_10": "1,0 kg/tydzień — Agresywny",
+  "content": {
+    "whatIs": "Kalkulator deficytu kalorycznego określa dzienny deficyt kaloryczny wymagany do osiągnięcia celu utraty wagi. Wykorzystuje Twoje całkowite dzienne wydatki energetyczne (TDEE) i bezpieczne tempo utraty wagi na tydzień, aby obliczyć niezbędne zmniejszenie spożycia kalorii, zapewniając zrównoważoną utratę wagi.",
+    "formula": "Dzienny deficyt oblicza się jako: Dzienny deficyt = (tygodniowy cel utraty wagi * 7700) / 7, gdzie 7700 kcal to przybliżony deficyt energetyczny potrzebny do utraty 1 kg tkanki tłuszczowej. Dzienny cel kaloryczny wynosi: Dzienny cel = TDEE - Dzienny deficyt. Całkowity potrzebny deficyt = tygodniowy cel utraty wagi * 7700, a tygodnie do celu = (aktualna waga - waga docelowa) / tygodniowy cel utraty wagi.",
+    "example": "Dla osoby o aktualnej wadze 80 kg, wadze docelowej 70 kg, TDEE 2500 kcal i tygodniowym celu utraty wagi 0,5 kg: dzienny deficyt = (0,5 * 7700) / 7 ≈ 550 kcal, dzienny cel = 2500 - 550 = 1950 kcal, całkowity deficyt = 0,5 * 7700 = 3850 kcal, tygodnie do celu = (80 - 70) / 0,5 = 20 tygodni.",
+    "howItWorks_1": "Wprowadź swoją aktualną wagę (kg), wagę docelową (kg) i całkowite dzienne wydatki energetyczne (TDEE w kcal). Następnie wybierz pożądany tygodniowy cel utraty wagi z listy rozwijanej (0,25, 0,5, 0,75 lub 1,0 kg na tydzień).",
+    "howItWorks_2": "Kliknij Oblicz. Narzędzie stosuje wzór na deficyt kaloryczny, aby obliczyć Twój dzienny deficyt, dzienny cel kaloryczny, całkowity potrzebny deficyt i szacowane tygodnie do osiągnięcia celu.",
+    "howItWorks_3": "Przejrzyj wyniki: Dzienny deficyt kaloryczny pokazuje, ile kalorii należy ciąć każdego dnia; Dzienny cel kaloryczny to Twoje nowe dzienne spożycie; Tygodnie do celu szacują czas trwania; Całkowity deficyt kaloryczny to skumulowany wymagany deficyt. Użyj ich do zaplanowania diety i śledzenia postępów."
+  }
+}

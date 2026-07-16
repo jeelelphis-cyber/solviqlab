@@ -1,0 +1,39 @@
+{
+  "title": "Calculateur de Graisse Corporelle — Estimez votre % de Graisse Corporelle",
+  "description": "Calculez le pourcentage de graisse corporelle selon la méthode de la Marine américaine. Entrez les mesures du cou, de la taille et des hanches pour une estimation précise de la composition corporelle.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_height": "Taille",
+  "label_neck": "Tour de cou",
+  "label_waist": "Tour de taille",
+  "label_hip": "Tour de hanches (femmes uniquement)",
+  "label_sex": "Sexe",
+  "label_bodyFat": "Graisse corporelle",
+  "label_fatMass": "Masse grasse",
+  "label_leanMass": "Masse maigre",
+  "label_category": "Catégorie",
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "q1": "En quoi la méthode de la Marine américaine diffère-t-elle des autres techniques de mesure de la graisse corporelle ?",
+    "a1": "La méthode de la Marine américaine utilise des mesures simples de circonférence (cou, taille, hanches) et la taille, ce qui la rend pratique et non invasive. Elle estime la densité corporelle via des équations de régression, puis la convertit en pourcentage de graisse corporelle. Elle est moins précise que la DEXA ou la pesée hydrostatique, mais plus accessible et reproductible.",
+    "q2": "Que signifient les catégories de graisse corporelle (Essentiel, Athlète, Fitness, Moyen, Obèse) ?",
+    "a2": "Les catégories sont basées sur des plages standard : Graisse essentielle (2-5% hommes, 10-13% femmes), Athlète (6-13% hommes, 14-20% femmes), Fitness (14-17% hommes, 21-24% femmes), Moyen (18-24% hommes, 25-31% femmes), Obèse (25%+ hommes, 32%+ femmes). Ce sont des directives générales ; la santé individuelle dépend de nombreux facteurs.",
+    "q3": "Quand dois-je utiliser ce calculateur et quelles sont ses limites ?",
+    "a3": "Utilisez ce calculateur pour une estimation rapide et non invasive du pourcentage de graisse corporelle, par exemple pour suivre les changements dans le temps. Limites : la précision dépend d'une technique de mesure précise ; il peut ne pas être précis pour les personnes très musclées ou celles ayant des formes corporelles inhabituelles. Il suppose une certaine distribution de la densité corporelle.",
+    "q4": "Que signifient 'Masse grasse' et 'Masse maigre' dans les résultats ?",
+    "a4": "La Masse grasse est le poids total de la graisse corporelle, calculé comme (pourcentage de graisse corporelle / 100) * poids corporel total. La Masse maigre est tout le reste : muscles, os, organes, eau, calculée comme poids total moins masse grasse. Cela vous aide à comprendre votre composition corporelle au-delà du simple pourcentage.",
+    "q5": "Sur quelle autorité ou norme la méthode de la Marine américaine est-elle basée ?",
+    "a5": "La méthode de la Marine américaine a été développée par la Marine américaine et est basée sur les recherches de Hodgdon et Beckett (1984). Elle est largement utilisée pour le personnel militaire et les évaluations de condition physique. La formule de Brozek utilisée pour la conversion est une équation standard pour estimer la graisse corporelle à partir de la densité."
+  },
+  "opt_male": "Homme",
+  "opt_female": "Femme",
+  "content": {
+    "whatIs": "Ce calculateur de graisse corporelle estime votre pourcentage de graisse corporelle en utilisant la méthode des circonférences de la Marine américaine. Il utilise les mesures du cou, de la taille et des hanches (pour les femmes) ainsi que la taille pour estimer la densité corporelle, puis la convertit en pourcentage de graisse corporelle à l'aide de la formule de Brozek.",
+    "formula": "Pour les hommes : Densité corporelle = 1,0323 - 0,154 * log10(taille - cou) + 0,025 * log10(taille). Pour les femmes : Densité corporelle = 1,29579 - 0,35004 * log10(taille + hanches - cou) + 0,221 * log10(taille). % de graisse corporelle = (4,95 / Densité corporelle - 4,50) * 100. Toutes les mesures en cm.",
+    "example": "Un homme de 180 cm avec un cou de 40 cm et une taille de 85 cm : Densité corporelle = 1,0323 - 0,154 * log10(85-40) + 0,025 * log10(180) = 1,0323 - 0,154 * 1,6532 + 0,025 * 2,2553 = 1,0323 - 0,2546 + 0,0564 = 0,8341. % de graisse corporelle = (4,95/0,8341 - 4,50)*100 = (5,934 - 4,50)*100 = 14,34%.",
+    "howItWorks_1": "Entrez votre taille, votre tour de cou, votre tour de taille, et si vous êtes une femme, votre tour de hanches. Sélectionnez votre sexe dans le menu déroulant.",
+    "howItWorks_2": "Lorsque vous cliquez sur Calculer, l'outil applique la formule de la Marine américaine pour calculer la densité corporelle, puis la convertit en pourcentage de graisse corporelle. Il calcule également la masse grasse et la masse maigre en fonction de votre poids (si fourni) ou utilise un poids estimé à partir de la taille.",
+    "howItWorks_3": "Les résultats montrent votre pourcentage de graisse corporelle, votre masse grasse, votre masse maigre et une catégorie (par exemple, Essentiel, Athlète, Fitness, Moyen, Obèse) basée sur des plages standard. Utilisez la catégorie pour évaluer votre composition corporelle par rapport aux normes de santé."
+  }
+}

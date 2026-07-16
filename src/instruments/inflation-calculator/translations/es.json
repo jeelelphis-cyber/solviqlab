@@ -1,0 +1,36 @@
+{
+  "title": "Calculadora de Inflación — Poder Adquisitivo y Ajuste del IPC",
+  "description": "Calcule el valor ajustado del dinero a lo largo del tiempo utilizando una tasa de inflación personalizada. Vea cómo la inflación erosiona el poder adquisitivo entre dos años cualesquiera.",
+  "calculate": "Calcular",
+  "reset": "Restablecer",
+  "result": "Resultado",
+  "label_amount": "Monto Original",
+  "label_fromYear": "Desde el Año",
+  "label_toYear": "Hasta el Año",
+  "label_inflationRate": "Tasa de Inflación Anual",
+  "label_adjustedAmount": "Monto Ajustado",
+  "label_totalInflation": "Inflación Total",
+  "label_purchasingPowerLoss": "Poder Adquisitivo Perdido",
+  "label_yearsElapsed": "Años Transcurridos",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Qué representa el monto ajustado?",
+    "a1": "El monto ajustado indica cuánto vale la suma original de dinero en dólares del año objetivo. Si tenía $1,000 en el año 2000 y la inflación promedio fue del 3% anual, para 2024 necesitaría alrededor de $2,032 para tener el mismo poder adquisitivo. Alternativamente, sus $1,000 originales de 2000 solo valen aproximadamente $492 en términos de 2024.",
+    "q2": "¿Cómo se calcula la pérdida de poder adquisitivo?",
+    "a2": "La pérdida de poder adquisitivo muestra cuánto menos puede comprar su monto original en el año objetivo. Se calcula como: 100 − (monto original / monto ajustado × 100). Para $1,000 ajustados a $2,032 durante 24 años al 3%, la pérdida de poder adquisitivo es 100 − (1000/2032 × 100) ≈ 50.8%, lo que significa que el dinero compra aproximadamente la mitad.",
+    "q3": "¿Cuál es la tasa de inflación promedio en EE. UU.?",
+    "a3": "La tasa de inflación promedio del IPC de EE. UU. a largo plazo es aproximadamente del 3% anual, aunque varía significativamente por década. Los años 70 vieron tasas superiores al 10%, mientras que los años 2010 promediaron alrededor del 1.7%. Los años recientes (2021–2023) alcanzaron picos del 7–9%. El valor predeterminado del 3% es un promedio histórico razonable para la planificación a largo plazo.",
+    "q4": "¿En qué se diferencia la inflación total de la tasa de inflación?",
+    "a4": "La tasa de inflación es el cambio porcentual anual en los precios. La inflación total es el cambio acumulado compuesto durante todo el período. Con una tasa anual del 3% durante 24 años, la inflación total es (1.03^24 − 1) × 100 ≈ 103.3%, lo que significa que los precios se duplicaron con creces en ese lapso.",
+    "q5": "¿Puedo usar esto para proyecciones futuras?",
+    "a5": "Sí. Establezca 'Desde el Año' en el año actual y 'Hasta el Año' en un año futuro. La calculadora utiliza la fórmula montoAjustado = monto × (1 + tasa/100)^años, que es válida tanto para consultas históricas como para proyecciones futuras, entendiendo que las tasas futuras son estimaciones."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de inflación le muestra cuánto vale una suma de dinero de un año en otro año, utilizando una tasa de inflación anual especificada por el usuario. También revela la inflación total acumulada y la erosión del poder adquisitivo durante el período.",
+    "formula": "Monto Ajustado = Monto × (1 + Tasa/100)^(AñoFinal − AñoInicial)\nInflación Total = ((Ajustado / Original) − 1) × 100\nPérdida de Poder Adquisitivo = 100 − (Original / Ajustado × 100)",
+    "example": "Un monto de $10,000 del año 2000 ajustado a 2024 con una inflación anual del 3%: $10,000 × (1.03)^24 ≈ $20,327.94. La inflación total es del 103.3% y la pérdida de poder adquisitivo es del 50.8% — los $10,000 originales ahora tienen el poder adquisitivo de aproximadamente $4,919.",
+    "howItWorks_1": "Ingrese el monto original de dinero y el año de inicio.",
+    "howItWorks_2": "Establezca el año objetivo y ajuste la tasa de inflación anual (por defecto 3%).",
+    "howItWorks_3": "Haga clic en Calcular para ver el valor ajustado por inflación, la inflación total acumulada y cuánto poder adquisitivo se ha perdido."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Calculadora de Jubilación — Proyección de Ahorros y Estimación de Ingresos Mensuales",
+  "description": "Proyecte sus ahorros para la jubilación con crecimiento compuesto y contribuciones mensuales. Estime el ingreso mensual usando la regla del 4% y vea el valor real en dólares de hoy.",
+  "calculate": "Calcular",
+  "reset": "Reiniciar",
+  "result": "Resultado",
+  "label_currentAge": "Edad Actual",
+  "label_retirementAge": "Edad de Jubilación",
+  "label_currentSavings": "Ahorros Actuales",
+  "label_monthlyContribution": "Contribución Mensual",
+  "label_annualReturn": "Rendimiento Anual Esperado",
+  "label_inflationRate": "Tasa de Inflación Esperada",
+  "label_projectedSavings": "Ahorros Proyectados",
+  "label_totalContributions": "Contribuciones Totales",
+  "label_totalGrowth": "Crecimiento de la Inversión",
+  "label_monthlyIncomeEstimate": "Ingreso Mensual Estimado",
+  "label_realValueToday": "Valor Real (Dólares de Hoy)",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Qué es la regla del 4% para el ingreso de jubilación?",
+    "a1": "La regla del 4%, popularizada por el Estudio Trinity, sugiere retirar el 4% de su cartera de jubilación por año para que dure al menos 30 años. La estimación de ingreso mensual en esta calculadora es ahorrosProyectados × 0.04 / 12. Para una cartera de $1,000,000, eso es $40,000/año o $3,333/mes. La regla asume una cartera diversificada de acciones/bonos con rendimientos históricos del mercado.",
+    "q2": "¿Qué tasa de rendimiento anual debo usar?",
+    "a2": "Una suposición comúnmente utilizada para una cartera diversificada de acciones/bonos de EE. UU. es un rendimiento nominal del 6–8%. El S&P 500 ha promediado históricamente alrededor del 10% nominal y 7% real (ajustado por inflación). Esta calculadora usa por defecto 7%, que es una estimación conservadora para una cartera mixta. Para carteras con muchos bonos, use 4–5%.",
+    "q3": "¿Qué significa 'Valor Real en Dólares de Hoy'?",
+    "a3": "El valor real ajusta los ahorros proyectados por inflación para mostrar lo que su fondo realmente valdrá en poder adquisitivo actual. Se calcula como ahorrosProyectados / (1 + tasaInflación/100)^años. Con una inflación del 3% durante 30 años, $1M en dólares futuros equivalen a aproximadamente $412,000 hoy.",
+    "q4": "¿Cómo se capitalizan las contribuciones mensuales?",
+    "a4": "Las contribuciones mensuales se tratan como una anualidad ordinaria: cada pago gana intereses desde el momento en que se realiza. La fórmula es VF = contribución × ((1+r)^n − 1) / r, donde r es la tasa mensual (rendimientoAnual/12/100) y n es el total de meses. Esto modela con precisión el promediado del costo en dólares en una cuenta de inversión.",
+    "q5": "¿Esto incluye ingresos del Seguro Social o pensión?",
+    "a5": "No. Esta calculadora solo proyecta el crecimiento de los ahorros a partir de sus contribuciones personales y ahorros existentes. Los beneficios del Seguro Social, ingresos de pensión u otras fuentes de ingresos no están incluidos. Para una imagen completa de ingresos de jubilación, agregue los pagos esperados del Seguro Social a la estimación de ingreso mensual que se muestra aquí."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de jubilación proyecta cuánto crecerán sus ahorros hasta la jubilación utilizando interés compuesto sobre los ahorros existentes más las contribuciones mensuales. Aplica la regla de retiro seguro del 4% para estimar el ingreso mensual de jubilación y ajusta por inflación para mostrar el valor real en dólares de hoy.",
+    "formula": "VF_principal = ahorrosActuales × (1 + r)^n\nVF_contribuciones = contribuciónMensual × ((1+r)^n − 1) / r\nAhorros Proyectados = VF_principal + VF_contribuciones\nIngreso Mensual = Ahorros Proyectados × 0.04 / 12\nValor Real = Ahorros Proyectados / (1 + inflación)^años",
+    "example": "Edad 30, jubilación a los 65, $50,000 ahorrados, $500/mes de contribución, 7% de rendimiento, 3% de inflación: 35 años × 12 = 420 meses. Tasa mensual = 0.5833%. Proyectado ≈ $1,298,635. Ingreso mensual ≈ $4,329. Valor real hoy ≈ $460,000.",
+    "howItWorks_1": "Ingrese su edad actual, edad objetivo de jubilación, ahorros actuales y monto de contribución mensual.",
+    "howItWorks_2": "Ajuste el rendimiento anual esperado (por defecto 7%) y la tasa de inflación (por defecto 3%) según sea necesario.",
+    "howItWorks_3": "Haga clic en Calcular para ver sus ahorros proyectados para la jubilación, crecimiento total, ingreso mensual estimado y el valor real ajustado por inflación."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Calculadora de Média — Média, Mediana, Moda e Mais",
+  "description": "Calcule média, mediana, moda, amplitude e desvio padrão a partir de qualquer lista de números. Estatísticas instantâneas para estudantes e profissionais.",
+  "calculate": "Calcular",
+  "reset": "Redefinir",
+  "result": "Resultado",
+  "label_numbers": "Números (separados por vírgula)",
+  "label_mean": "Média",
+  "label_median": "Mediana",
+  "label_mode": "Moda",
+  "label_range": "Amplitude",
+  "label_count": "Contagem",
+  "label_sum": "Soma",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Qual é a diferença entre média e mediana?",
+    "a1": "A média é a média aritmética, sensível a valores atípicos. A mediana é o valor do meio quando os dados são ordenados, robusta a valores extremos. Por exemplo, em {1,2,3,100}, média = 26,5, mediana = 2,5.",
+    "q2": "Como a moda é calculada se nenhum número se repete?",
+    "a2": "Se nenhum número aparece mais de uma vez, o conjunto de dados não tem moda. Algumas calculadoras podem informar 'sem moda' ou listar todos os valores. Nossa calculadora retorna o(s) valor(es) mais frequente(s); se todos são únicos, a moda é indefinida.",
+    "q3": "Quando devo usar a mediana em vez da média?",
+    "a3": "Use a mediana para distribuições assimétricas ou quando houver valores atípicos, como dados de renda. A média é adequada para distribuições simétricas sem valores extremos. A mediana representa melhor um valor típico em dados assimétricos.",
+    "q4": "O que a amplitude me diz sobre meus dados?",
+    "a4": "Amplitude = máximo - mínimo. Ela mede a dispersão total dos dados. Uma amplitude grande indica alta variabilidade, enquanto uma amplitude pequena sugere que os pontos de dados estão próximos. No entanto, a amplitude é sensível a valores atípicos.",
+    "q5": "Existe uma referência padrão para calcular média e mediana?",
+    "a5": "Sim, as fórmulas seguem definições estatísticas padrão conforme a ISO 3534-1 e a American Statistical Association. Média e mediana são estatísticas descritivas fundamentais usadas universalmente na análise de dados."
+  },
+  "content": {
+    "whatIs": "A calculadora de média calcula a média, mediana, moda, amplitude, contagem e soma de uma lista de números. A média é a média aritmética, calculada somando todos os números e dividindo pela contagem. Ela fornece uma visão rápida da tendência central e dispersão.",
+    "formula": "Média = (soma de todos os números) / (contagem de números). Mediana é o valor do meio quando os números são ordenados; se a contagem for par, mediana = média dos dois valores centrais. Moda é o(s) valor(es) mais frequente(s). Amplitude = máximo - mínimo. Desvio padrão (se incluído) mede a dispersão.",
+    "example": "Para os números 2, 4, 4, 6, 8: soma = 24, contagem = 5, média = 24/5 = 4,8. Ordenados: 2,4,4,6,8, mediana = 4 (terceiro valor). Moda = 4 (aparece duas vezes). Amplitude = 8-2 = 6.",
+    "howItWorks_1": "Insira sua lista de números no campo de entrada, separados por vírgulas ou espaços. Cada número pode ser positivo, negativo ou decimal.",
+    "howItWorks_2": "Clique no botão Calcular. A ferramenta processa seus números: conta-os, soma-os, ordena-os para mediana e moda, e calcula amplitude e desvio padrão.",
+    "howItWorks_3": "Revise os resultados: Média, Mediana (valor do meio), Moda (mais frequente), Amplitude (dispersão), Contagem (número de entradas) e Soma (total). Use-os para entender a tendência central e a variabilidade dos seus dados."
+  }
+}

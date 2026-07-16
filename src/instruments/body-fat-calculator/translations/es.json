@@ -1,0 +1,39 @@
+{
+  "title": "Calculadora de Grasa Corporal — Estime su % de Grasa Corporal",
+  "description": "Calcule el porcentaje de grasa corporal usando el método de la Marina de EE.UU. Ingrese medidas de cuello, cintura y cadera para una estimación precisa de la composición corporal.",
+  "calculate": "Calcular",
+  "reset": "Reiniciar",
+  "result": "Resultado",
+  "label_height": "Altura",
+  "label_neck": "Circunferencia del Cuello",
+  "label_waist": "Circunferencia de la Cintura",
+  "label_hip": "Circunferencia de la Cadera (solo mujeres)",
+  "label_sex": "Sexo",
+  "label_bodyFat": "Grasa Corporal",
+  "label_fatMass": "Masa Grasa",
+  "label_leanMass": "Masa Magra",
+  "label_category": "Categoría",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿En qué se diferencia el método de la Marina de EE.UU. de otras técnicas de medición de grasa corporal?",
+    "a1": "El método de la Marina de EE.UU. utiliza medidas simples de circunferencia (cuello, cintura, cadera) y altura, lo que lo hace conveniente y no invasivo. Estima la densidad corporal mediante ecuaciones de regresión y luego la convierte en porcentaje de grasa corporal. Es menos preciso que DEXA o el pesaje hidrostático, pero más accesible y repetible.",
+    "q2": "¿Qué significan las categorías de grasa corporal (Esencial, Atleta, Fitness, Promedio, Obeso)?",
+    "a2": "Las categorías se basan en rangos estándar: Grasa esencial (2-5% hombres, 10-13% mujeres), Atleta (6-13% hombres, 14-20% mujeres), Fitness (14-17% hombres, 21-24% mujeres), Promedio (18-24% hombres, 25-31% mujeres), Obeso (25%+ hombres, 32%+ mujeres). Estas son pautas generales; la salud individual depende de muchos factores.",
+    "q3": "¿Cuándo debo usar esta calculadora y cuáles son sus limitaciones?",
+    "a3": "Use esta calculadora para una estimación rápida y no invasiva del porcentaje de grasa corporal, por ejemplo, para rastrear cambios a lo largo del tiempo. Limitaciones: la precisión depende de una técnica de medición precisa; puede no ser precisa para personas muy musculosas o con formas corporales inusuales. Asume una cierta distribución de densidad corporal.",
+    "q4": "¿Qué significan 'Masa Grasa' y 'Masa Magra' en el resultado?",
+    "a4": "La Masa Grasa es el peso total de la grasa corporal, calculado como (% de grasa corporal / 100) * peso corporal total. La Masa Magra es todo lo demás: músculo, hueso, órganos, agua, calculada como peso total menos masa grasa. Estos ayudan a entender su composición corporal más allá del porcentaje.",
+    "q5": "¿En qué autoridad o estándar se basa el método de la Marina de EE.UU.?",
+    "a5": "El método de la Marina de EE.UU. fue desarrollado por la Marina de los EE.UU. y se basa en la investigación de Hodgdon y Beckett (1984). Es ampliamente utilizado para personal militar y evaluaciones de condición física. La fórmula de Brozek utilizada para la conversión es una ecuación estándar para estimar la grasa corporal a partir de la densidad."
+  },
+  "opt_male": "Masculino",
+  "opt_female": "Femenino",
+  "content": {
+    "whatIs": "Esta calculadora de grasa corporal estima su porcentaje de grasa corporal utilizando el método de circunferencia de la Marina de EE.UU. Utiliza medidas de cuello, cintura y cadera (para mujeres) junto con la altura para estimar la densidad corporal, y luego la convierte en porcentaje de grasa corporal usando la fórmula de Brozek.",
+    "formula": "Para hombres: Densidad Corporal = 1.0323 - 0.154 * log10(cintura - cuello) + 0.025 * log10(altura). Para mujeres: Densidad Corporal = 1.29579 - 0.35004 * log10(cintura + cadera - cuello) + 0.221 * log10(altura). % Grasa Corporal = (4.95 / Densidad Corporal - 4.50) * 100. Todas las medidas en cm.",
+    "example": "Un hombre de 180 cm de altura con cuello de 40 cm y cintura de 85 cm: Densidad Corporal = 1.0323 - 0.154 * log10(85-40) + 0.025 * log10(180) = 1.0323 - 0.154 * 1.6532 + 0.025 * 2.2553 = 1.0323 - 0.2546 + 0.0564 = 0.8341. % Grasa Corporal = (4.95/0.8341 - 4.50)*100 = (5.934 - 4.50)*100 = 14.34%.",
+    "howItWorks_1": "Ingrese su altura, circunferencia del cuello, circunferencia de la cintura y, si es mujer, circunferencia de la cadera. Seleccione su sexo en el menú desplegable.",
+    "howItWorks_2": "Cuando haga clic en Calcular, la herramienta aplica la fórmula de la Marina de EE.UU. para calcular la densidad corporal y luego la convierte en porcentaje de grasa corporal. También calcula la masa grasa y la masa magra basándose en su peso (si se proporciona) o utiliza un peso estimado a partir de la altura.",
+    "howItWorks_3": "Los resultados muestran su porcentaje de grasa corporal, masa grasa, masa magra y una categoría (por ejemplo, Esencial, Atleta, Fitness, Promedio, Obeso) basada en rangos estándar. Use la categoría para evaluar su composición corporal en relación con las normas de salud."
+  }
+}

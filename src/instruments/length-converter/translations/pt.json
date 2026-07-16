@@ -1,0 +1,36 @@
+{
+  "title": "Conversor de Comprimento — Converta Qualquer Unidade de Comprimento",
+  "description": "Converta entre metros, pés, polegadas, centímetros, quilômetros, milhas e mais. Conversor instantâneo de unidades de comprimento com mais de 15 unidades.",
+  "calculate": "Calcular",
+  "reset": "Redefinir",
+  "result": "Resultado",
+  "label_value": "Valor",
+  "label_fromUnit": "De",
+  "label_meters": "Metros",
+  "label_kilometers": "Quilômetros",
+  "label_centimeters": "Centímetros",
+  "label_feet": "Pés",
+  "label_inches": "Polegadas",
+  "label_miles": "Milhas",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Como o metro é definido e por que é a unidade base para conversões de comprimento?",
+    "a1": "O metro é a unidade base de comprimento no Sistema Internacional de Unidades (SI), definido como a distância que a luz percorre no vácuo em 1/299.792.458 de segundo. Todas as outras unidades de comprimento no conversor são derivadas do metro usando fatores de conversão fixos, garantindo consistência e precisão.",
+    "q2": "O que o valor de saída em 'Milhas' representa?",
+    "a2": "A saída 'Milhas' mostra o comprimento equivalente em milhas terrestres, onde 1 milha equivale exatamente a 1609,344 metros. Por exemplo, 1 quilômetro converte para aproximadamente 0,621371 milhas. Esta unidade é comumente usada nos Estados Unidos e no Reino Unido para distâncias rodoviárias.",
+    "q3": "Este conversor de comprimento pode lidar com valores muito grandes ou muito pequenos?",
+    "a3": "Sim, o conversor aceita valores de 0 até 1.000.000.000.000.000 (10^15). No entanto, para valores extremamente grandes (por exemplo, distâncias astronômicas), unidades como anos-luz ou parsecs são mais apropriadas, que não estão incluídas nesta ferramenta. Para valores muito pequenos (por exemplo, escalas atômicas), nanômetros e micrômetros estão disponíveis.",
+    "q4": "O que a saída 'Pés' significa e como é calculada?",
+    "a4": "A saída 'Pés' exibe o comprimento em pés, onde 1 pé equivale exatamente a 0,3048 metros. Por exemplo, 1 metro converte para aproximadamente 3,28084 pés. Esta unidade é amplamente usada nos Estados Unidos para medir altura, distâncias curtas e na aviação.",
+    "q5": "Qual é o padrão oficial para os fatores de conversão usados nesta calculadora?",
+    "a5": "Os fatores de conversão são baseados no Sistema Internacional de Unidades (SI) e no acordo internacional da jarda e libra de 1959. Por exemplo, 1 polegada é definida como exatamente 25,4 mm, e 1 pé como 0,3048 m. Esses padrões são mantidos pelo Bureau Internacional de Pesos e Medidas (BIPM)."
+  },
+  "content": {
+    "whatIs": "Um conversor de comprimento é uma ferramenta que converte uma medida de uma unidade de comprimento para outra, como metros para pés ou quilômetros para milhas. Ele usa fatores de conversão baseados no Sistema Internacional de Unidades (SI) e outras definições padrão para fornecer resultados precisos em mais de 15 unidades.",
+    "formula": "A conversão é realizada multiplicando o valor de entrada pelo fator de conversão apropriado. Por exemplo, para converter de metros para pés, multiplique por 3,28084 (já que 1 m = 3,28084 pés). A fórmula geral é: resultado = valor * (fator_unidade_destino / fator_unidade_origem), onde cada unidade tem um fator predefinido em relação ao metro.",
+    "example": "Converta 5 quilômetros para milhas. Como 1 km = 0,621371 milhas, multiplique 5 por 0,621371 para obter 3,10686 milhas. O conversor também exibe o equivalente em metros (5000 m), centímetros (500.000 cm), pés (16404,2 pés) e polegadas (196850,4 pol).",
+    "howItWorks_1": "Insira o valor numérico que deseja converter no campo 'valor'. Em seguida, selecione a unidade desse valor no menu suspenso 'de' (por exemplo, 'km' para quilômetros).",
+    "howItWorks_2": "Após clicar no botão Calcular, a ferramenta aplica a fórmula de conversão usando a unidade de origem selecionada e fatores de conversão predefinidos para calcular os comprimentos equivalentes em todas as unidades de saída.",
+    "howItWorks_3": "Os resultados são exibidos em uma tabela mostrando cada unidade de saída (Metros, Quilômetros, Centímetros, Pés, Polegadas, Milhas) com o valor numérico convertido. Você pode usar esses valores diretamente para seus cálculos ou conversões adicionais."
+  }
+}

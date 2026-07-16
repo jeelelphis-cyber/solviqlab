@@ -1,0 +1,35 @@
+{
+  "title": "Przelicznik powierzchni — konwertuj m², ft², akry, hektary i więcej",
+  "description": "Błyskawicznie przeliczaj jednostki powierzchni: metry kwadratowe, stopy kwadratowe, akry, hektary, kilometry kwadratowe, mile kwadratowe. Darmowy przelicznik jednostek powierzchni.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_value": "Wartość",
+  "label_fromUnit": "Z",
+  "label_squareMeters": "Metry kwadratowe",
+  "label_squareFeet": "Stopy kwadratowe",
+  "label_squareKilometers": "Kilometry kwadratowe",
+  "label_acres": "Akry",
+  "label_hectares": "Hektary",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jak przeliczyć metry kwadratowe na akry?",
+    "a1": "Aby przeliczyć metry kwadratowe na akry, pomnóż powierzchnię w metrach kwadratowych przez 0,000247105. Na przykład 10 000 m² × 0,000247105 = 2,47105 akra.",
+    "q2": "Jaka jest różnica między akrem a hektarem?",
+    "a2": "Akr to jednostka powierzchni powszechnie używana w USA i Wielkiej Brytanii, równa 43 560 stóp kwadratowych. Hektar to jednostka metryczna równa 10 000 metrów kwadratowych. Jeden hektar to około 2,47105 akra.",
+    "q3": "Czy ten przelicznik obsługuje bardzo duże obszary, takie jak kraje?",
+    "a3": "Tak, przelicznik akceptuje wartości do 1 biliarda (10^15), co wystarcza do obszarów krajów (np. Rosja ~17 mln km²). Jednak dla bardzo dużych wartości precyzja może być ograniczona przez reprezentację zmiennoprzecinkową.",
+    "q4": "Co oznacza wynik w 'Kilometrach kwadratowych'?",
+    "a4": "Wynik w 'Kilometrach kwadratowych' pokazuje powierzchnię w kilometrach kwadratowych (km²), jednostce metrycznej równej 1 000 000 metrów kwadratowych. Jest powszechnie używana do pomiaru dużych obszarów, takich jak miasta, stany czy kraje.",
+    "q5": "Czy współczynniki konwersji oparte są na międzynarodowych standardach?",
+    "a5": "Tak, współczynniki konwersji oparte są na Międzynarodowym Układzie Jednostek Miar (SI) i międzynarodowych umowach. Na przykład 1 stopa jest zdefiniowana jako dokładnie 0,3048 metra, więc 1 stopa kwadratowa = 0,09290304 metra kwadratowego."
+  },
+  "content": {
+    "whatIs": "Przelicznik powierzchni to narzędzie, które konwertuje daną wartość powierzchni z jednej jednostki na wiele innych jednocześnie. Używa standardowych współczynników konwersji między jednostkami, takimi jak metry kwadratowe, stopy kwadratowe, akry, hektary, kilometry kwadratowe i mile kwadratowe.",
+    "formula": "Konwersja polega na pomnożeniu wartości wejściowej przez odpowiedni współczynnik konwersji. Na przykład, aby przeliczyć stopy kwadratowe na metry kwadratowe, pomnóż przez 0,09290304. Narzędzie stosuje współczynnik dla wybranej jednostki 'z' do konwersji na każdą jednostkę docelową.",
+    "example": "Jeśli wprowadzisz 1000 i wybierzesz 'ft²' jako jednostkę źródłową, przelicznik wyświetli: 92,90304 m², 1000 ft², 0,00009290304 km², 0,02295684 akra i 0,009290304 hektara.",
+    "howItWorks_1": "Wprowadź wartość liczbową w polu 'wartość' (musi być nieujemna).",
+    "howItWorks_2": "Wybierz jednostkę wprowadzonej wartości z listy rozwijanej 'z' (np. metry kwadratowe, akry).",
+    "howItWorks_3": "Wyniki natychmiast wyświetlają równoważną powierzchnię w metrach kwadratowych, stopach kwadratowych, kilometrach kwadratowych, akrach i hektarach."
+  }
+}

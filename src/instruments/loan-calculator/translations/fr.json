@@ -1,0 +1,34 @@
+{
+  "title": "Calculateur de prêt — Paiement mensuel et intérêts totaux",
+  "description": "Calculez votre paiement mensuel, le total des intérêts payés et le calendrier d'amortissement complet. Fonctionne pour les prêts personnels, les prêts automobiles, etc.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_principal": "Montant du prêt",
+  "label_annualRate": "Taux d'intérêt annuel",
+  "label_termMonths": "Durée du prêt",
+  "label_monthlyPayment": "Paiement mensuel",
+  "label_totalPayment": "Paiement total",
+  "label_totalInterest": "Intérêts totaux",
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "q1": "Comment le taux d'intérêt mensuel est-il dérivé du taux annuel ?",
+    "a1": "Le taux d'intérêt mensuel est le taux annuel divisé par 12. Par exemple, un taux annuel de 6 % devient 0,5 % par mois (0,06/12 = 0,005). Ce taux mensuel est utilisé dans la formule d'amortissement pour calculer les paiements.",
+    "q2": "Que représente le 'Total des intérêts' ?",
+    "a2": "Le total des intérêts est le montant total des intérêts que vous paierez sur toute la durée du prêt. Il est calculé comme le paiement total moins le principal. Pour un prêt de 10 000 $ à 5 % sur 36 mois, le total des intérêts est de 789,56 $.",
+    "q3": "Ce calculateur peut-il être utilisé pour les prêts hypothécaires ou les prêts étudiants ?",
+    "a3": "Ce calculateur est conçu pour les prêts à tempérament à taux fixe. Pour les prêts hypothécaires, les coûts supplémentaires comme les taxes foncières et l'assurance ne sont pas inclus. Pour les prêts étudiants, il fonctionne si le taux d'intérêt est fixe et les paiements sont constants. Les prêts à taux variable nécessitent une approche différente.",
+    "q4": "Que comprend le paiement mensuel affiché ?",
+    "a4": "Le paiement mensuel comprend à la fois le principal et les intérêts, amortis de sorte que le prêt soit entièrement remboursé à la fin de la durée. Il n'inclut pas les frais, taxes ou assurances.",
+    "q5": "Existe-t-il une formule standard utilisée par les banques pour l'amortissement des prêts ?",
+    "a5": "Oui, la formule utilisée est la formule d'amortissement standard reconnue par les institutions financières et les organismes de réglementation comme le Consumer Financial Protection Bureau (CFPB). Elle garantit des paiements mensuels égaux sur la durée du prêt."
+  },
+  "content": {
+    "whatIs": "Ce calculateur de prêt calcule votre paiement mensuel, le paiement total et le total des intérêts pour un prêt à taux fixe en utilisant la formule d'amortissement standard. Il est idéal pour les prêts personnels, les prêts automobiles et autres prêts à tempérament avec un taux d'intérêt et une durée fixes.",
+    "formula": "Le paiement mensuel est calculé à l'aide de la formule : M = P * [r(1+r)^n] / [(1+r)^n - 1], où M est le paiement mensuel, P est le montant principal du prêt, r est le taux d'intérêt mensuel (taux annuel divisé par 12), et n est le nombre de paiements mensuels (durée en mois). Le paiement total = M * n, et le total des intérêts = paiement total - P.",
+    "example": "Pour un prêt de 10 000 $ à 5 % d'intérêt annuel sur 36 mois : taux mensuel = 0,05/12 ≈ 0,004167, n = 36. Paiement mensuel = 10000 * [0,004167*(1,004167)^36] / [(1,004167)^36 - 1] ≈ 299,71 $. Paiement total = 299,71 $ * 36 ≈ 10 789,56 $, total des intérêts = 789,56 $.",
+    "howItWorks_1": "Entrez le montant du prêt (principal) en dollars, le taux d'intérêt annuel en pourcentage et la durée du prêt en mois. Assurez-vous que les valeurs se situent dans les plages autorisées.",
+    "howItWorks_2": "Cliquez sur le bouton Calculer. L'outil applique la formule d'amortissement pour calculer votre paiement mensuel, le paiement total et le total des intérêts en fonction des entrées.",
+    "howItWorks_3": "Consultez les résultats : le paiement mensuel est ce que vous payez chaque mois ; le paiement total est la somme de tous les paiements sur la durée ; le total des intérêts est le coût de l'emprunt. Utilisez ces informations pour comparer les offres de prêt ou planifier votre budget."
+  }
+}

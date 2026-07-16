@@ -1,0 +1,37 @@
+{
+  "title": "Calculadora de Hipoteca — Pagamento Mensal e Amortização",
+  "description": "Calcule seu pagamento mensal de hipoteca, juros totais e cronograma de amortização. Inclui estimativas de imposto predial e seguro.",
+  "calculate": "Calcular",
+  "reset": "Redefinir",
+  "result": "Resultado",
+  "label_homePrice": "Preço do Imóvel",
+  "label_downPayment": "Entrada",
+  "label_annualRate": "Taxa de Juros",
+  "label_termYears": "Prazo do Empréstimo",
+  "label_monthlyPayment": "Pagamento Mensal",
+  "label_principal": "Valor do Empréstimo",
+  "label_totalInterest": "Juros Totais",
+  "label_totalPayment": "Custo Total",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "Como é calculado o pagamento mensal de uma hipoteca de taxa fixa?",
+    "a1": "O pagamento mensal é derivado do valor do empréstimo, taxa de juros mensal e número de pagamentos usando a fórmula M = P * [r(1+r)^n] / [(1+r)^n - 1]. Por exemplo, um empréstimo de $240.000 a 6% ao ano (0,5% ao mês) em 360 meses resulta em um pagamento de $1.438,92.",
+    "q2": "O que significa juros totais e como são calculados?",
+    "a2": "Juros totais é a soma de todos os pagamentos de juros ao longo do prazo do empréstimo. É igual ao custo total menos o valor do empréstimo. Para um empréstimo de $240.000 a 6% em 30 anos, os juros totais são $278.011,20, significando que você paga mais em juros do que o principal.",
+    "q3": "Quando devo usar esta calculadora de hipoteca?",
+    "a3": "Use esta calculadora ao comparar ofertas de hipoteca de taxa fixa ou planejar a compra de um imóvel. Ela assume uma taxa de juros constante e pagamentos iguais; não considera taxas variáveis, impostos, seguros ou taxas de condomínio.",
+    "q4": "O que representa o valor do empréstimo na saída?",
+    "a4": "O valor do empréstimo (principal) é o preço do imóvel menos sua entrada. É o montante que você toma emprestado do credor. Por exemplo, um imóvel de $300.000 com entrada de $60.000 resulta em um empréstimo de $240.000.",
+    "q5": "Qual fórmula padrão esta calculadora usa?",
+    "a5": "Esta calculadora usa a fórmula de amortização padrão definida pelo Consumer Financial Protection Bureau (CFPB) e amplamente adotada no setor de hipotecas dos EUA. A fórmula garante pagamentos mensais iguais que amortizam totalmente o empréstimo ao longo do prazo escolhido."
+  },
+  "unit_years": "anos",
+  "content": {
+    "whatIs": "Esta calculadora de hipoteca estima seu pagamento mensal, juros totais e custo total para uma hipoteca de taxa fixa. Ela usa a fórmula de amortização padrão para calcular pagamentos mensais iguais ao longo do prazo do empréstimo.",
+    "formula": "O pagamento mensal M é calculado usando a fórmula M = P * [r(1+r)^n] / [(1+r)^n - 1], onde P é o valor do empréstimo (preço do imóvel menos entrada), r é a taxa de juros mensal (taxa anual dividida por 12), e n é o número total de pagamentos mensais (prazo em anos vezes 12). Os juros totais são a soma de todos os pagamentos de juros ao longo da vida do empréstimo.",
+    "example": "Para um imóvel de $300.000 com entrada de 20% ($60.000), taxa anual de 6% e prazo de 30 anos, o valor do empréstimo é $240.000. O pagamento mensal é $1.438,92, os juros totais são $278.011,20 e o custo total é $518.011,20.",
+    "howItWorks_1": "Insira o preço do imóvel, o valor da entrada, a taxa de juros anual e selecione o prazo do empréstimo em anos no menu suspenso.",
+    "howItWorks_2": "Clique no botão Calcular. A calculadora calcula o valor do empréstimo e aplica a fórmula de amortização para determinar o pagamento mensal, juros totais e custo total.",
+    "howItWorks_3": "Revise os resultados: Pagamento Mensal é o valor fixo mensal, Valor do Empréstimo é o principal tomado, Juros Totais é o total de juros pagos, e Custo Total é a soma do principal e juros ao longo do prazo total."
+  }
+}

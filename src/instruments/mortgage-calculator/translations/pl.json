@@ -1,0 +1,37 @@
+{
+  "title": "Kalkulator hipoteczny — miesięczna rata i amortyzacja",
+  "description": "Oblicz swoją miesięczną ratę kredytu hipotecznego, całkowite odsetki oraz harmonogram amortyzacji. Zawiera szacunki podatku od nieruchomości i ubezpieczenia.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_homePrice": "Cena nieruchomości",
+  "label_downPayment": "Wkład własny",
+  "label_annualRate": "Oprocentowanie",
+  "label_termYears": "Okres kredytu",
+  "label_monthlyPayment": "Miesięczna rata",
+  "label_principal": "Kwota kredytu",
+  "label_totalInterest": "Całkowite odsetki",
+  "label_totalPayment": "Całkowity koszt",
+  "faq": {
+    "title": "Najczęściej zadawane pytania",
+    "q1": "Jak obliczana jest miesięczna rata dla kredytu o stałym oprocentowaniu?",
+    "a1": "Miesięczna rata jest wyliczana na podstawie kwoty kredytu, miesięcznego oprocentowania i liczby rat za pomocą wzoru M = P * [r(1+r)^n] / [(1+r)^n - 1]. Na przykład dla kredytu w wysokości 240 000 $ przy oprocentowaniu 6% rocznie (0,5% miesięcznie) na 360 miesięcy rata wynosi 1 438,92 $.",
+    "q2": "Co oznaczają całkowite odsetki i jak są obliczane?",
+    "a2": "Całkowite odsetki to suma wszystkich płatności odsetkowych w okresie kredytu. Są równe całkowitemu kosztowi pomniejszonemu o kwotę kredytu. Dla kredytu 240 000 $ przy oprocentowaniu 6% na 30 lat całkowite odsetki wynoszą 278 011,20 $, co oznacza, że zapłacisz więcej odsetek niż kwoty głównej.",
+    "q3": "Kiedy powinienem skorzystać z tego kalkulatora hipotecznego?",
+    "a3": "Użyj tego kalkulatora przy porównywaniu ofert kredytów o stałym oprocentowaniu lub planując zakup domu. Zakłada on stałe oprocentowanie i równe raty; nie uwzględnia zmiennych stóp procentowych, podatków, ubezpieczenia ani opłat HOA.",
+    "q4": "Co oznacza wynik kwoty kredytu?",
+    "a4": "Kwota kredytu (kapitał) to cena nieruchomości pomniejszona o wkład własny. Jest to kwota, którą pożyczasz od kredytodawcy. Na przykład dom za 300 000 $ z wkładem własnym 60 000 $ daje kwotę kredytu 240 000 $.",
+    "q5": "Jakiego standardowego wzoru używa ten kalkulator?",
+    "a5": "Ten kalkulator używa standardowego wzoru amortyzacji zdefiniowanego przez Consumer Financial Protection Bureau (CFPB) i powszechnie przyjętego w amerykańskim przemyśle hipotecznym. Wzór zapewnia równe miesięczne raty, które całkowicie amortyzują kredyt w wybranym okresie."
+  },
+  "unit_years": "lat",
+  "content": {
+    "whatIs": "Ten kalkulator hipoteczny szacuje miesięczną ratę, całkowite odsetki i całkowity koszt kredytu o stałym oprocentowaniu. Używa standardowego wzoru amortyzacji do obliczenia równych miesięcznych rat w okresie kredytu.",
+    "formula": "Miesięczna rata M jest obliczana za pomocą wzoru M = P * [r(1+r)^n] / [(1+r)^n - 1], gdzie P to kwota kredytu (cena nieruchomości minus wkład własny), r to miesięczne oprocentowanie (roczne oprocentowanie podzielone przez 12), a n to całkowita liczba miesięcznych rat (okres kredytu w latach razy 12). Całkowite odsetki to suma wszystkich płatności odsetkowych w okresie kredytu.",
+    "example": "Dla domu o wartości 300 000 $ z 20% wkładem własnym (60 000 $), oprocentowaniem 6% rocznie i okresem 30 lat, kwota kredytu wynosi 240 000 $. Miesięczna rata to 1 438,92 $, całkowite odsetki to 278 011,20 $, a całkowity koszt to 518 011,20 $.",
+    "howItWorks_1": "Wprowadź cenę nieruchomości, kwotę wkładu własnego, roczne oprocentowanie i wybierz okres kredytu w latach z listy rozwijanej.",
+    "howItWorks_2": "Kliknij przycisk Oblicz. Kalkulator oblicza kwotę kredytu, a następnie stosuje wzór amortyzacji, aby określić miesięczną ratę, całkowite odsetki i całkowity koszt.",
+    "howItWorks_3": "Przejrzyj wyniki: Miesięczna rata to stała miesięczna kwota, Kwota kredytu to pożyczony kapitał, Całkowite odsetki to skumulowane odsetki, a Całkowity koszt to suma kapitału i odsetek w całym okresie."
+  }
+}

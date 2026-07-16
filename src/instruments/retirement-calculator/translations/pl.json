@@ -1,0 +1,39 @@
+{
+  "title": "Kalkulator emerytalny — prognoza oszczędności i szacunkowy miesięczny dochód",
+  "description": "Prognozuj swoje oszczędności emerytalne przy wzroście składanym i miesięcznych wpłatach. Oszacuj miesięczny dochód przy użyciu zasady 4% i zobacz realną wartość w dzisiejszych dolarach.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_currentAge": "Obecny wiek",
+  "label_retirementAge": "Wiek emerytalny",
+  "label_currentSavings": "Obecne oszczędności",
+  "label_monthlyContribution": "Miesięczna wpłata",
+  "label_annualReturn": "Oczekiwany roczny zwrot",
+  "label_inflationRate": "Oczekiwana stopa inflacji",
+  "label_projectedSavings": "Prognozowane oszczędności",
+  "label_totalContributions": "Łączne wpłaty",
+  "label_totalGrowth": "Wzrost inwestycji",
+  "label_monthlyIncomeEstimate": "Szac. miesięczny dochód",
+  "label_realValueToday": "Realna wartość (dzisiejsze $)",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Czym jest zasada 4% dla dochodu emerytalnego?",
+    "a1": "Zasada 4%, spopularyzowana przez badanie Trinity Study, sugeruje coroczne wypłacanie 4% portfela emerytalnego, aby wystarczył na co najmniej 30 lat. Szacunkowy miesięczny dochód w tym kalkulatorze to prognozowaneOszczędności × 0,04 / 12. Dla portfela o wartości 1 000 000 $ daje to 40 000 $ rocznie lub 3 333 $ miesięcznie. Zasada zakłada zdywersyfikowany portfel akcji/obligacji z historycznymi zwrotami rynkowymi.",
+    "q2": "Jaką stopę zwrotu powinienem przyjąć?",
+    "a2": "Powszechnie przyjmowanym założeniem dla zdywersyfikowanego portfela amerykańskich akcji/obligacji jest nominalny zwrot 6–8%. Historycznie S&P 500 osiągał średnio około 10% nominalnie i 7% realnie (po uwzględnieniu inflacji). Ten kalkulator domyślnie przyjmuje 7%, co jest konserwatywnym oszacowaniem dla mieszanego portfela. Dla portfeli z przewagą obligacji użyj 4–5%.",
+    "q3": "Co oznacza 'Realna wartość w dzisiejszych dolarach'?",
+    "a3": "Realna wartość koryguje prognozowane oszczędności o inflację, pokazując, ile twój kapitał będzie faktycznie wart w dzisiejszej sile nabywczej. Oblicza się ją jako prognozowaneOszczędności / (1 + stopaInflacji/100)^lata. Przy 3% inflacji przez 30 lat, 1 000 000 $ w przyszłych dolarach odpowiada około 412 000 $ dzisiaj.",
+    "q4": "Jak naliczane są odsetki od miesięcznych wpłat?",
+    "a4": "Miesięczne wpłaty są traktowane jako zwykła renta — każda wpłata zarabia odsetki od momentu jej dokonania. Wzór to FV = wpłata × ((1+r)^n − 1) / r, gdzie r to miesięczna stopa (rocznyZwrot/12/100), a n to łączna liczba miesięcy. Dokładnie modeluje to uśrednianie kosztu dolara na rachunku inwestycyjnym.",
+    "q5": "Czy to uwzględnia ubezpieczenie społeczne lub dochód z emerytury?",
+    "a5": "Nie. Ten kalkulator prognozuje jedynie wzrost oszczędności z twoich osobistych wpłat i istniejących oszczędności. Świadczenia z ubezpieczenia społecznego, dochód z emerytury lub inne źródła dochodu nie są uwzględniane. Aby uzyskać pełny obraz dochodu emerytalnego, dodaj oczekiwane wpłaty z ubezpieczenia społecznego do szacowanego miesięcznego dochodu pokazanego tutaj."
+  },
+  "content": {
+    "whatIs": "Ten kalkulator emerytalny prognozuje, jak bardzo twoje oszczędności wzrosną do emerytury, stosując procent składany do istniejących oszczędności oraz miesięcznych wpłat. Stosuje zasadę bezpiecznej wypłaty 4% do oszacowania miesięcznego dochodu emerytalnego i koryguje o inflację, aby pokazać realną wartość w dzisiejszych dolarach.",
+    "formula": "FV_kapitał = obecneOszczędności × (1 + r)^n\nFV_wpłaty = miesięcznaWpłata × ((1+r)^n − 1) / r\nPrognozowane oszczędności = FV_kapitał + FV_wpłaty\nMiesięczny dochód = Prognozowane oszczędności × 0,04 / 12\nRealna wartość = Prognozowane oszczędności / (1 + inflacja)^lata",
+    "example": "Wiek 30, emerytura w wieku 65, 50 000 $ oszczędności, 500 $ miesięcznej wpłaty, 7% zwrotu, 3% inflacji: 35 lat × 12 = 420 miesięcy. Miesięczna stopa = 0,5833%. Prognoza ≈ 1 298 635 $. Miesięczny dochód ≈ 4 329 $. Realna wartość dzisiaj ≈ 460 000 $.",
+    "howItWorks_1": "Wprowadź swój obecny wiek, docelowy wiek emerytalny, obecne oszczędności i miesięczną kwotę wpłaty.",
+    "howItWorks_2": "Dostosuj oczekiwany roczny zwrot (domyślnie 7%) i stopę inflacji (domyślnie 3%) według potrzeb.",
+    "howItWorks_3": "Kliknij Oblicz, aby zobaczyć prognozowane oszczędności emerytalne, całkowity wzrost, szacowany miesięczny dochód oraz realną wartość skorygowaną o inflację."
+  }
+}

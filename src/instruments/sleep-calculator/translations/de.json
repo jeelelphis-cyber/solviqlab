@@ -1,0 +1,40 @@
+{
+  "title": "Schlafrechner — Beste Schlafens- und Aufwachzeiten nach Schlafzyklen",
+  "description": "Finden Sie die ideale Schlafens- oder Aufwachzeit basierend auf 90-minütigen Schlafzyklen. Wachen Sie erfrischt auf, indem Sie Ihren Schlaf so timen, dass Sie volle REM-Zyklen abschließen.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ihr Schlafplan",
+  "label_mode": "Modus",
+  "label_targetTime": "Zeit",
+  "label_fallAsleepMinutes": "Minuten zum Einschlafen",
+  "opt_waketime": "Ich möchte aufwachen um...",
+  "opt_bedtime": "Ich gehe schlafen um...",
+  "label_cycle4": "4 Zyklen — 6 Stunden",
+  "label_cycle5": "5 Zyklen — 7,5 Stunden",
+  "label_cycle6": "6 Zyklen — 9 Stunden",
+  "label_cycle7": "7 Zyklen — 10,5 Stunden",
+  "tag_light": "Leicht",
+  "tag_optimal": "Optimal",
+  "tag_too_much": "Zu lang",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Was ist ein Schlafzyklus und warum dauert er 90 Minuten?",
+    "a1": "Ein Schlafzyklus besteht aus vier Phasen: N1 (leichter Schlaf), N2 (leichter Schlaf), N3 (Tiefschlaf/Langsamwellenschlaf) und REM (Rapid Eye Movement). Ein vollständiger Zyklus dauert durchschnittlich 90 Minuten, wobei die Zyklen zwischen 70 und 120 Minuten variieren können und der Anteil von Tief- und REM-Schlaf im Laufe der Nacht wechselt. Das Aufwachen am Ende eines vollständigen Zyklus – anstatt während des Tiefschlafs – wird mit einem wacheren und weniger benommenen Gefühl in Verbindung gebracht.",
+    "q2": "Warum werden 5 oder 6 Schlafzyklen empfohlen?",
+    "a2": "Die meisten Erwachsenen benötigen 7–9 Stunden Schlaf pro Nacht, was 5–6 vollständigen 90-Minuten-Zyklen entspricht. Fünf Zyklen entsprechen 7,5 Stunden und sechs Zyklen 9 Stunden. Vier Zyklen (6 Stunden) sind für die meisten Erwachsenen langfristig unzureichend. Sieben Zyklen (10,5 Stunden) können auf Überschlafen hindeuten, was in einigen Studien mit Gesundheitsrisiken verbunden ist.",
+    "q3": "Was sind ‚Minuten zum Einschlafen‘ und wie beeinflussen sie die Berechnung?",
+    "a3": "Die Einschlaflatenz (Zeit bis zum Einschlafen) ist die Verzögerung zwischen dem Hinlegen und dem tatsächlichen Einschlafen. Der Durchschnitt liegt bei gesunden Erwachsenen bei 15–20 Minuten. Dieser Rechner subtrahiert diese Zeit, sodass Ihre Wecker sie berücksichtigen. Wenn Sie unter Schlaflosigkeit leiden oder schnell einschlafen, passen Sie diesen Wert an. Für Modus ‚Aufwachzeit‘ gilt: Schlafenszeit = gewünschte Aufwachzeit − Einschlafzeit − (Zyklen × 90 Min).",
+    "q4": "Berücksichtigt dies Nickerchen?",
+    "a4": "Dieser Rechner ist für eine Hauptschlafperiode über Nacht ausgelegt. Für Nickerchen ist ein einzelner 90-Minuten-Zyklus ideal (oder sogar 20 Minuten, um Benommenheit zu vermeiden). Sie können diesen Rechner für Nickerchen verwenden, indem Sie Ihre Nickerchen-Startzeit im Modus ‚Schlafenszeit‘ eingeben und die Zyklus-4-Zeit als ideale Aufwachzeit für Ihr 90-minütiges Nickerchen ablesen.",
+    "q5": "Ist es besser, nach 5 oder 6 Zyklen aufzuwachen?",
+    "a5": "Beide liegen im empfohlenen Bereich von 7–9 Stunden für Erwachsene. Die meisten Menschen gedeihen mit 7,5 Stunden (5 Zyklen), insbesondere wenn sie einen konsistenten Schlafplan haben. Sechs Zyklen (9 Stunden) sind besser für Menschen, die sich von Schlafdefizit, Krankheit erholen oder von Natur aus einen höheren Schlafbedarf haben. Entscheidend ist das Aufwachen am Ende eines vollständigen Zyklus, was dieser Rechner korrekt zu timen hilft."
+  },
+  "content": {
+    "whatIs": "Dieser Schlafrechner hilft Ihnen, die beste Zeit zum Schlafengehen oder Aufwachen basierend auf 90-minütigen Schlafzyklen zu finden. Indem Sie Ihren Schlaf so timen, dass er am Ende eines vollständigen Zyklus endet, wachen Sie eher erfrischt als benommen auf.",
+    "formula": "Schlafenszeit (Aufwach-Modus) = Aufwachzeit − Einschlafminuten − (Zyklen × 90 Min)\nAufwachzeit (Schlaf-Modus) = Schlafenszeit + Einschlafminuten + (Zyklen × 90 Min)\nZeiten werden automatisch um Mitternacht herum gewickelt.",
+    "example": "Wenn Sie um 07:00 aufwachen müssen und 15 Minuten zum Einschlafen brauchen: 5 Zyklen = 07:00 − 15 Min − 450 Min = 23:05 Schlafenszeit. 6 Zyklen = 07:00 − 15 Min − 540 Min = 21:35 Schlafenszeit.",
+    "howItWorks_1": "Wählen Sie Ihren Modus: ‚Ich möchte aufwachen um‘, um Schlafenszeiten zu berechnen, oder ‚Ich gehe schlafen um‘, um Aufwachzeiten zu berechnen.",
+    "howItWorks_2": "Geben Sie Ihre Zielzeit im HH:MM-Format ein und passen Sie die Minuten zum Einschlafen bei Bedarf an (Standard 15).",
+    "howItWorks_3": "Klicken Sie auf Berechnen, um vier empfohlene Zeiten für 4, 5, 6 und 7 vollständige Schlafzyklen zu sehen."
+  }
+}

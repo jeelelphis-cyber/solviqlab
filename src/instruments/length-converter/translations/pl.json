@@ -1,0 +1,36 @@
+{
+  "title": "Konwerter długości — konwertuj dowolną jednostkę długości",
+  "description": "Konwertuj między metrami, stopami, calami, centymetrami, kilometrami, milami i innymi. Natychmiastowy konwerter jednostek długości z ponad 15 jednostkami.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_value": "Wartość",
+  "label_fromUnit": "Z",
+  "label_meters": "Metry",
+  "label_kilometers": "Kilometry",
+  "label_centimeters": "Centymetry",
+  "label_feet": "Stopy",
+  "label_inches": "Cale",
+  "label_miles": "Mile",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jak definiuje się metr i dlaczego jest jednostką bazową do konwersji długości?",
+    "a1": "Metr jest jednostką bazową długości w Międzynarodowym Układzie Jednostek (SI), zdefiniowaną jako odległość, jaką światło pokonuje w próżni w czasie 1/299 792 458 sekundy. Wszystkie inne jednostki długości w konwerterze są wyprowadzone z metra przy użyciu stałych współczynników konwersji, co zapewnia spójność i dokładność.",
+    "q2": "Co oznacza wartość wyjściowa w 'Milach'?",
+    "a2": "Wynik w 'Milach' pokazuje równoważną długość w milach statutowych, gdzie 1 mila równa się dokładnie 1609,344 metra. Na przykład 1 kilometr to około 0,621371 mili. Ta jednostka jest powszechnie używana w Stanach Zjednoczonych i Wielkiej Brytanii do określania odległości drogowych.",
+    "q3": "Czy ten konwerter długości może obsługiwać bardzo duże lub bardzo małe wartości?",
+    "a3": "Tak, konwerter akceptuje wartości od 0 do 1 000 000 000 000 000 (10^15). Jednak dla bardzo dużych wartości (np. odległości astronomicznych) bardziej odpowiednie są jednostki takie jak lata świetlne lub parseki, które nie są uwzględnione w tym narzędziu. Dla bardzo małych wartości (np. skala atomowa) dostępne są nanometry i mikrometry.",
+    "q4": "Co oznacza wynik w 'Stopach' i jak jest obliczany?",
+    "a4": "Wynik w 'Stopach' pokazuje długość w stopach, gdzie 1 stopa równa się dokładnie 0,3048 metra. Na przykład 1 metr to około 3,28084 stopy. Ta jednostka jest szeroko stosowana w Stanach Zjednoczonych do pomiaru wzrostu, krótkich odległości oraz w lotnictwie.",
+    "q5": "Jaki jest oficjalny standard współczynników konwersji używanych w tym kalkulatorze?",
+    "a5": "Współczynniki konwersji oparte są na Międzynarodowym Układzie Jednostek (SI) oraz międzynarodowym porozumieniu w sprawie jarda i funta z 1959 roku. Na przykład 1 cal jest zdefiniowany jako dokładnie 25,4 mm, a 1 stopa jako 0,3048 m. Standardy te są utrzymywane przez Międzynarodowe Biuro Miar i Wag (BIPM)."
+  },
+  "content": {
+    "whatIs": "Konwerter długości to narzędzie, które przekształca pomiar z jednej jednostki długości na inną, na przykład z metrów na stopy lub z kilometrów na mile. Wykorzystuje współczynniki konwersji oparte na Międzynarodowym Układzie Jednostek (SI) i innych standardowych definicjach, aby zapewnić dokładne wyniki dla ponad 15 jednostek.",
+    "formula": "Konwersja odbywa się poprzez pomnożenie wartości wejściowej przez odpowiedni współczynnik konwersji. Na przykład, aby przeliczyć metry na stopy, pomnóż przez 3,28084 (ponieważ 1 m = 3,28084 stopy). Ogólny wzór to: wynik = wartość * (współczynnik_jednostki_docelowej / współczynnik_jednostki_źródłowej), gdzie każda jednostka ma predefiniowany współczynnik względem metra.",
+    "example": "Przelicz 5 kilometrów na mile. Ponieważ 1 km = 0,621371 mili, pomnóż 5 przez 0,621371, aby otrzymać 3,10686 mili. Konwerter podaje również równoważniki w metrach (5000 m), centymetrach (500 000 cm), stopach (16404,2 stopy) i calach (196850,4 cala).",
+    "howItWorks_1": "Wprowadź wartość liczbową, którą chcesz przeliczyć, w polu 'Wartość'. Następnie wybierz jednostkę tej wartości z menu rozwijanego 'Z' (np. 'km' dla kilometrów).",
+    "howItWorks_2": "Po kliknięciu przycisku Oblicz narzędzie stosuje wzór konwersji, używając wybranej jednostki źródłowej i predefiniowanych współczynników konwersji, aby obliczyć równoważne długości we wszystkich jednostkach wyjściowych.",
+    "howItWorks_3": "Wyniki są wyświetlane w tabeli pokazującej każdą jednostkę wyjściową (Metry, Kilometry, Centymetry, Stopy, Cale, Mile) z przeliczoną wartością liczbową. Możesz użyć tych wartości bezpośrednio do swoich obliczeń lub dalszych konwersji."
+  }
+}

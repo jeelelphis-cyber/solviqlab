@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Calculadora de Porcentajes — 4 Modos, Gratis e Instantánea",
+    "description": "Cuatro calculadoras de porcentaje en una: encuentra el % de un número, calcula el cambio %, determina qué % es X de Y, o ajusta un valor por cualquier porcentaje. Gratis."
+  },
+  "form": {
+    "title": "Calculadora de Porcentajes",
+    "mode_label": "Tipo de cálculo",
+    "mode_percent_of": "¿Qué es X% de Y?",
+    "mode_is_what_percent": "X es ¿qué % de Y?",
+    "mode_percent_change": "¿% de cambio de X a Y?",
+    "mode_percent_adjust": "Aumentar / Disminuir X en Y%",
+    "field_a_label": "X (primer valor)",
+    "field_b_label": "Y (segundo valor)",
+    "direction_label": "Dirección",
+    "direction_increase": "Aumentar",
+    "direction_decrease": "Disminuir",
+    "field_a_placeholder": "ej. 25",
+    "field_b_placeholder": "ej. 200",
+    "calculate_button": "Calcular",
+    "reset_button": "Restablecer"
+  },
+  "validation": {
+    "mode_required": "Por favor seleccione un tipo de cálculo.",
+    "invalid_mode": "Tipo de cálculo desconocido.",
+    "a_required": "Por favor ingrese un valor para X.",
+    "b_required": "Por favor ingrese un valor para Y.",
+    "too_high": "El valor debe ser como máximo 1,000,000,000.",
+    "invalid_number": "Por favor ingrese un número válido (ej. 42 o 3.14).",
+    "unknown": "Entrada inválida."
+  },
+  "result": {
+    "title": "Resultado",
+    "percent_of_label": "es X% de Y",
+    "is_what_percent_label": "% de Y",
+    "percent_change_label": "cambio",
+    "percent_adjust_label": "después del ajuste"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cómo calculo un porcentaje de un número?",
+    "a1": "Use el modo 'porcentaje de'. Por ejemplo, para encontrar el 20% de 150, establezca a=20, b=150. La fórmula es (20/100)*150 = 30. El resultado es 30.",
+    "q2": "¿Qué significa la salida 'isIncrease' en el modo de cambio porcentual?",
+    "a2": "En el modo 'cambio porcentual', isIncrease es verdadero si el cambio porcentual es positivo (es decir, Y > X), lo que significa un aumento. Si es falso, el cambio es una disminución. Por ejemplo, de 100 a 120 da un aumento del 20% (isIncrease: true).",
+    "q3": "¿Cuándo debo usar el modo 'ajuste porcentual'?",
+    "a3": "Use 'ajuste porcentual' para aumentar o disminuir un número en un porcentaje dado. Por ejemplo, para aumentar 200 en un 10%, configure el modo en 'ajuste porcentual', a=10, b=200, dirección='aumentar'. El resultado es 220. Para una disminución del 10%, configure dirección='disminuir' para obtener 180.",
+    "q4": "¿Qué muestra el campo 'roundedResult'?",
+    "a4": "El 'roundedResult' es el resultado bruto redondeado a dos decimales. Por ejemplo, si el resultado bruto es 33.3333..., el resultado redondeado es 33.33. Esto es útil para informes o cálculos financieros donde dos decimales son estándar.",
+    "q5": "¿Existe un estándar oficial para los cálculos de porcentaje?",
+    "a5": "Los cálculos de porcentaje siguen reglas aritméticas básicas definidas en matemáticas, no un estándar regulatorio específico. Sin embargo, en finanzas, la SEC y el IRS proporcionan pautas para divulgaciones basadas en porcentajes y cálculos de impuestos. Las fórmulas utilizadas aquí son universalmente aceptadas."
+  },
+  "aria": {
+    "result_announcement": "Resultado: {value}. {summary}.",
+    "form_description": "Seleccione un modo de cálculo e ingrese valores para calcular un porcentaje.",
+    "loading": "Calculando..."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de porcentajes calcula cuatro escenarios comunes de porcentaje: qué es X% de Y, qué porcentaje es X de Y, cambio porcentual de X a Y, y aumento o disminución porcentual de Y en X%. El concepto subyacente es que un porcentaje representa una fracción de 100, permitiendo comparaciones proporcionales entre valores.",
+    "formula": "Para 'porcentaje de': resultado = (X/100) * Y. Para 'es qué porcentaje': resultado = (X/Y) * 100. Para 'cambio porcentual': resultado = ((Y - X) / X) * 100. Para 'ajuste porcentual': resultado = Y * (1 ± X/100), donde + es aumento y - es disminución.",
+    "example": "Para encontrar el 15% de 200, configure el modo en 'porcentaje de', a=15, b=200. El resultado es 30. Para encontrar qué porcentaje es 30 de 200, configure el modo en 'es qué porcentaje', a=30, b=200; el resultado es 15%.",
+    "howItWorks_1": "Seleccione el modo de cálculo del menú desplegable: 'porcentaje de', 'es qué porcentaje', 'cambio porcentual' o 'ajuste porcentual'. Luego ingrese el primer valor (X) y el segundo valor (Y) en los campos numéricos.",
+    "howItWorks_2": "Haga clic en el botón Calcular. La calculadora aplica la fórmula adecuada según el modo seleccionado y calcula el resultado, redondeándolo a dos decimales.",
+    "howItWorks_3": "La salida muestra el resultado bruto y el resultado redondeado. Para el modo 'cambio porcentual', también indica si el cambio es un aumento (positivo) o una disminución (negativo). Use el resultado redondeado para fines prácticos."
+  }
+}

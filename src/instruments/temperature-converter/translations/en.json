@@ -1,0 +1,33 @@
+{
+  "title": "Temperature Converter — Celsius, Fahrenheit, Kelvin",
+  "description": "Convert temperature between Celsius, Fahrenheit, Kelvin, and Rankine instantly. The most accurate free temperature converter online.",
+  "calculate": "Calculate",
+  "reset": "Reset",
+  "result": "Result",
+  "label_value": "Temperature",
+  "label_fromUnit": "From",
+  "label_celsius": "Celsius",
+  "label_fahrenheit": "Fahrenheit",
+  "label_kelvin": "Kelvin",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "What is the formula to convert Fahrenheit to Celsius?",
+    "a1": "The formula is: Celsius = (Fahrenheit - 32) × 5/9. For example, 98.6°F converts to (98.6 - 32) × 5/9 = 37°C.",
+    "q2": "Why does the Kelvin scale have no degree symbol?",
+    "a2": "Kelvin is an absolute thermodynamic temperature scale where 0 K is absolute zero. It is not measured in degrees but in kelvins (K), as it is a unit of measurement in the International System of Units (SI).",
+    "q3": "When should I use Rankine instead of Kelvin?",
+    "a3": "Rankine is primarily used in some engineering fields, especially in the United States, for thermodynamic calculations. It is the Fahrenheit equivalent of Kelvin: Rankine uses the same scale as Fahrenheit but starts at absolute zero.",
+    "q4": "What does the Celsius output represent?",
+    "a4": "The Celsius output shows the temperature on the Celsius scale, where 0°C is the freezing point of water and 100°C is the boiling point at standard atmospheric pressure. It is the most commonly used scale worldwide for everyday temperatures.",
+    "q5": "What is the reference standard for these temperature scales?",
+    "a5": "The Celsius and Kelvin scales are defined by the International System of Units (SI). The Kelvin scale is based on the triple point of water (273.16 K). Fahrenheit and Rankine are defined relative to Celsius and Kelvin, respectively, by the International Temperature Scale of 1990 (ITS-90)."
+  },
+  "content": {
+    "whatIs": "This temperature converter instantly converts between Celsius, Fahrenheit, Kelvin, and Rankine scales. It uses linear conversion formulas based on the freezing and boiling points of water and absolute zero.",
+    "formula": "The conversion formulas are: Celsius to Fahrenheit: F = C × 9/5 + 32; Fahrenheit to Celsius: C = (F - 32) × 5/9; Celsius to Kelvin: K = C + 273.15; Kelvin to Celsius: C = K - 273.15; Celsius to Rankine: R = (C + 273.15) × 9/5; Rankine to Celsius: C = (R - 491.67) × 5/9. Similar formulas apply between other pairs.",
+    "example": "Convert 100°C to Fahrenheit, Kelvin, and Rankine. Fahrenheit: 100 × 9/5 + 32 = 212°F. Kelvin: 100 + 273.15 = 373.15 K. Rankine: (100 + 273.15) × 9/5 = 671.67 °R.",
+    "howItWorks_1": "Enter the temperature value in the 'Value' field and select the unit you are converting from in the 'From Unit' dropdown (Celsius, Fahrenheit, Kelvin, or Rankine).",
+    "howItWorks_2": "The calculator automatically applies the appropriate conversion formulas to compute the equivalent temperatures in Celsius, Fahrenheit, and Kelvin. No button click is needed; results update instantly.",
+    "howItWorks_3": "The results are displayed in three fields: Celsius (°C), Fahrenheit (°F), and Kelvin (K). Use these values for scientific, cooking, or weather-related applications."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Kalkulator inwestycyjny — wzrost składany i zwrot z inwestycji",
+  "description": "Oblicz, jak rośnie Twoja inwestycja przy oprocentowaniu składanym i miesięcznych wpłatach. Zobacz końcową wartość, całkowite odsetki oraz czas podwojenia kapitału.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_initialAmount": "Inwestycja początkowa",
+  "label_monthlyContribution": "Miesięczna wpłata",
+  "label_annualReturn": "Roczna stopa zwrotu",
+  "label_years": "Okres inwestycji",
+  "label_finalValue": "Wartość końcowa",
+  "label_totalContributions": "Łącznie zainwestowano",
+  "label_totalInterest": "Łączny zysk",
+  "label_doublingTime": "Czas podwojenia",
+  "unit_years": "lat",
+  "faq": {
+    "title": "Najczęściej zadawane pytania",
+    "q1": "Jak obliczane jest oprocentowanie składane z miesięcznymi wpłatami?",
+    "a1": "Całkowita przyszła wartość łączy dwie części: (1) wzrost jednorazowej inwestycji początkowej — FV = P × (1+r)^n oraz (2) przyszłą wartość miesięcznych wpłat jako rentę — FV = C × ((1+r)^n − 1) / r. Tutaj r to miesięczna stopa (roczna stopa / 12), a n to liczba miesięcy (lata × 12). Obie wartości są sumowane, aby uzyskać końcową wartość portfela.",
+    "q2": "Czym jest Reguła 72?",
+    "a2": "Reguła 72 to skrót do oszacowania czasu podwojenia inwestycji: Czas podwojenia ≈ 72 / Roczna stopa zwrotu. Przy stopie 7% inwestycja podwaja się w około 72/7 ≈ 10,3 lat. Przy 10% podwaja się w 7,2 lat. Reguła działa, ponieważ ln(2) / ln(1+r) ≈ 0,693 / r ≈ 72 / (100r) dla typowych stóp procentowych.",
+    "q3": "Jaką roczną stopę zwrotu powinienem przyjąć?",
+    "a3": "Średnie historyczne dla typowych rodzajów inwestycji: fundusz indeksowy S&P 500 ≈ 10% nominalnie, 7% realnie (po uwzględnieniu inflacji); zrównoważony portfel akcji/obligacji ≈ 6–8%; fundusze obligacji ≈ 3–5%; konto oszczędnościowe ≈ 1–5%. Kalkulator domyślnie ustawia 7%, co jest konserwatywnym oszacowaniem dla zdywersyfikowanego portfela w długim okresie.",
+    "q4": "Czy kalkulator uwzględnia podatki lub inflację?",
+    "a4": "Nie. Kalkulator pokazuje nominalne zwroty przed opodatkowaniem i inflacją. Aby oszacować realne zwroty (skorygowane o inflację), odejmij stopę inflacji od rocznej stopy zwrotu przed jej wprowadzeniem. Na przykład, jeśli oczekujesz 7% nominalnie i 3% inflacji, wprowadź 4%, aby zobaczyć realny wzrost. Opodatkowanie zależy od rodzaju konta (opodatkowane vs. 401k vs. IRA).",
+    "q5": "Jaka jest różnica między całkowitymi wpłatami a całkowitym zyskiem?",
+    "a5": "Całkowite wpłaty to po prostu pieniądze, które faktycznie wpłaciłeś: inwestycja początkowa plus wszystkie miesięczne wpłaty. Całkowity zysk (odsetki) to wzrost wygenerowany przez kapitalizację — jest to różnica między wartością końcową a całkowitymi wpłatami. W długich okresach przy umiarkowanych stopach całkowity zysk zazwyczaj przewyższa całkowite wpłaty ze względu na wykładniczy charakter wzrostu składanego."
+  },
+  "content": {
+    "whatIs": "Ten kalkulator inwestycyjny pokazuje, jak Twój portfel rośnie w czasie dzięki oprocentowaniu składanemu od inwestycji początkowej oraz regularnym miesięcznym wpłatom. Wykorzystuje również Regułę 72 do oszacowania czasu podwojenia kapitału przy danej stopie zwrotu.",
+    "formula": "r = annualReturn / 100 / 12 (stopa miesięczna)\nn = years × 12 (liczba miesięcy)\nWartość końcowa = initialAmount × (1+r)^n + monthlyContribution × ((1+r)^n − 1) / r\nCałkowite wpłaty = initialAmount + monthlyContribution × n\nCałkowity zysk = Wartość końcowa − Całkowite wpłaty\nCzas podwojenia ≈ 72 / annualReturn",
+    "example": "10 000 $ początkowo, 200 $/miesiąc, 7% rocznie, 20 lat: r = 0,5833%/miesiąc, n = 240 miesięcy. Wartość końcowa ≈ 144 959 $. Łącznie wpłacono: 58 000 $. Całkowity zysk: 86 959 $. Czas podwojenia przy 7%: ≈ 10,3 lat.",
+    "howItWorks_1": "Wprowadź kwotę inwestycji początkowej oraz opcjonalną miesięczną wpłatę.",
+    "howItWorks_2": "Ustaw oczekiwaną roczną stopę zwrotu (domyślnie 7%) oraz okres inwestycji w latach (domyślnie 10).",
+    "howItWorks_3": "Kliknij Oblicz, aby zobaczyć końcową wartość portfela, łączną zainwestowaną kwotę, całkowity zysk oraz czas podwojenia inwestycji według Reguły 72."
+  }
+}

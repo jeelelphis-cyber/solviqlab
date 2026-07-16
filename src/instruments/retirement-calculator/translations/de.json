@@ -1,0 +1,39 @@
+{
+  "title": "Rentenrechner — Sparprognose & monatliche Einkommensschätzung",
+  "description": "Prognostizieren Sie Ihre Rentenersparnisse mit Zinseszins und monatlichen Beiträgen. Schätzen Sie das monatliche Einkommen mit der 4%-Regel und sehen Sie den realen Wert in heutigen Dollar.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_currentAge": "Aktuelles Alter",
+  "label_retirementAge": "Rentenalter",
+  "label_currentSavings": "Aktuelle Ersparnisse",
+  "label_monthlyContribution": "Monatlicher Beitrag",
+  "label_annualReturn": "Erwartete jährliche Rendite",
+  "label_inflationRate": "Erwartete Inflationsrate",
+  "label_projectedSavings": "Prognostizierte Ersparnisse",
+  "label_totalContributions": "Gesamteinzahlungen",
+  "label_totalGrowth": "Kapitalwachstum",
+  "label_monthlyIncomeEstimate": "Geschätztes monatliches Einkommen",
+  "label_realValueToday": "Realwert (heutige $)",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Was ist die 4%-Regel für das Renteneinkommen?",
+    "a1": "Die 4%-Regel, bekannt aus der Trinity-Studie, empfiehlt, jährlich 4% Ihres Rentenportfolios zu entnehmen, damit es mindestens 30 Jahre hält. Die monatliche Einkommensschätzung in diesem Rechner ist prognostizierteErsparnisse × 0,04 / 12. Bei einem Portfolio von 1.000.000 $ sind das 40.000 $ pro Jahr oder 3.333 $ pro Monat. Die Regel geht von einem diversifizierten Aktien-/Anleihenportfolio mit historischen Marktrenditen aus.",
+    "q2": "Welche jährliche Rendite sollte ich verwenden?",
+    "a2": "Eine häufig verwendete Annahme für ein diversifiziertes US-Aktien-/Anleihenportfolio ist eine nominale Rendite von 6–8 %. Der S&P 500 hat historisch durchschnittlich etwa 10 % nominal und 7 % real (inflationsbereinigt) erzielt. Dieser Rechner verwendet standardmäßig 7 %, eine konservative Schätzung für ein gemischtes Portfolio. Für anleihenlastige Portfolios verwenden Sie 4–5 %.",
+    "q3": "Was bedeutet 'Realwert in heutigen Dollar'?",
+    "a3": "Der Realwert passt die prognostizierten Ersparnisse an die Inflation an, um zu zeigen, was Ihr Vermögen in heutiger Kaufkraft tatsächlich wert ist. Er wird berechnet als prognostizierteErsparnisse / (1 + Inflationsrate/100)^Jahre. Bei 3 % Inflation über 30 Jahre entsprechen 1 Mio. $ in zukünftigen Dollar etwa 412.000 $ heute.",
+    "q4": "Wie werden monatliche Beiträge verzinst?",
+    "a4": "Monatliche Beiträge werden als gewöhnliche Annuität behandelt – jede Zahlung erhält Zinsen ab dem Zeitpunkt der Einzahlung. Die Formel lautet FV = Beitrag × ((1+r)^n − 1) / r, wobei r der monatliche Zinssatz (Jahresrendite/12/100) und n die Gesamtzahl der Monate ist. Dies modelliert den Cost-Average-Effekt bei Investitionen genau.",
+    "q5": "Enthält dies Sozialversicherungs- oder Renteneinkommen?",
+    "a5": "Nein. Dieser Rechner prognostiziert nur das Wachstum der Ersparnisse aus Ihren persönlichen Beiträgen und vorhandenen Ersparnissen. Sozialversicherungsleistungen, Renteneinkommen oder andere Einkommensquellen sind nicht enthalten. Für ein vollständiges Renteneinkommensbild addieren Sie die erwarteten Sozialversicherungszahlungen zu der hier angezeigten monatlichen Einkommensschätzung."
+  },
+  "content": {
+    "whatIs": "Dieser Rentenrechner prognostiziert, wie Ihre Ersparnisse bis zur Rente wachsen, unter Verwendung von Zinseszins auf vorhandene Ersparnisse plus monatliche Beiträge. Er wendet die 4%-Entnahmeregel an, um das monatliche Renteneinkommen zu schätzen, und passt die Inflation an, um den Realwert in heutigen Dollar zu zeigen.",
+    "formula": "FV_Kapital = aktuelleErsparnisse × (1 + r)^n\nFV_Beiträge = monatlicherBeitrag × ((1+r)^n − 1) / r\nPrognostizierte Ersparnisse = FV_Kapital + FV_Beiträge\nMonatliches Einkommen = Prognostizierte Ersparnisse × 0,04 / 12\nRealwert = Prognostizierte Ersparnisse / (1 + Inflation)^Jahre",
+    "example": "Alter 30, Rente mit 65, 50.000 $ Ersparnisse, 500 $ monatlicher Beitrag, 7 % Rendite, 3 % Inflation: 35 Jahre × 12 = 420 Monate. Monatlicher Zinssatz = 0,5833 %. Prognose ≈ 1.298.635 $. Monatliches Einkommen ≈ 4.329 $. Realwert heute ≈ 460.000 $.",
+    "howItWorks_1": "Geben Sie Ihr aktuelles Alter, das angestrebte Rentenalter, Ihre aktuellen Ersparnisse und den monatlichen Beitrag ein.",
+    "howItWorks_2": "Passen Sie die erwartete jährliche Rendite (Standard 7 %) und die Inflationsrate (Standard 3 %) nach Bedarf an.",
+    "howItWorks_3": "Klicken Sie auf Berechnen, um Ihre prognostizierten Rentenersparnisse, das gesamte Kapitalwachstum, das geschätzte monatliche Einkommen und den realen inflationsbereinigten Wert zu sehen."
+  }
+}

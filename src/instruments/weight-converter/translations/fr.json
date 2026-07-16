@@ -1,0 +1,35 @@
+{
+  "title": "Convertisseur de poids — kg, lb, oz, stones et plus",
+  "description": "Convertissez le poids entre kilogrammes, livres, onces, stones, grammes et tonnes. Convertisseur d'unités de poids instantané et précis.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_value": "Valeur",
+  "label_fromUnit": "De",
+  "label_kilograms": "Kilogrammes",
+  "label_grams": "Grammes",
+  "label_pounds": "Livres",
+  "label_ounces": "Onces",
+  "label_stones": "Stones",
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Comment convertir exactement des livres en kilogrammes ?",
+    "a1": "Pour convertir des livres en kilogrammes, multipliez la valeur en livres par 0,45359237. Par exemple, 150 lb × 0,45359237 = 68,0389 kg. Ce facteur est défini par la livre avoirdupois internationale.",
+    "q2": "Que signifie l'unité 'Stones' ?",
+    "a2": "Le stone (st) est une unité de poids impériale britannique équivalant à 14 livres (6,35029 kg). Il est couramment utilisé au Royaume-Uni et en Irlande pour mesurer le poids corporel. Le convertisseur affiche le poids équivalent en stones.",
+    "q3": "Puis-je utiliser ce convertisseur pour des poids très importants comme les tonnes ?",
+    "a3": "Oui, le convertisseur accepte des valeurs jusqu'à 1 000 000 000 000 (1 billion) et inclut une unité 'tonne' (tonne métrique = 1000 kg). Cependant, pour des poids extrêmement importants, envisagez d'utiliser la notation scientifique ou des outils spécialisés.",
+    "q4": "Quelle est la différence entre 'ton' et 'tonne' ?",
+    "a4": "Dans ce convertisseur, 'ton' fait référence à la tonne métrique, qui est exactement 1000 kg (2204,62 lb). La tonne courte américaine (2000 lb) et la tonne longue britannique (2240 lb) ne sont pas incluses ; utilisez la sortie en livres pour convertir manuellement si nécessaire.",
+    "q5": "Quelle norme définit les facteurs de conversion utilisés ?",
+    "a5": "Les facteurs de conversion sont basés sur le Système international d'unités (SI) et le système avoirdupois international. Le kilogramme est défini par la constante de Planck, et la livre est légalement définie comme 0,45359237 kg depuis 1959 par accord international."
+  },
+  "content": {
+    "whatIs": "Le Convertisseur de poids convertit instantanément une valeur de poids entre kilogrammes, grammes, milligrammes, livres, onces, stones et tonnes. Il utilise des facteurs de conversion standard pour fournir des résultats précis pour tout poids saisi.",
+    "formula": "Le convertisseur multiplie la valeur d'entrée par un facteur de conversion pour la convertir en une unité de base (kilogrammes), puis multiplie par le facteur réciproque pour obtenir chaque unité de sortie. Par exemple, pour convertir des livres en kilogrammes : kilogrammes = livres × 0,45359237. Pour convertir des kilogrammes en livres : livres = kilogrammes × 2,20462262.",
+    "example": "Si vous entrez 10 livres (lb) et sélectionnez 'lb' comme unité de départ, le convertisseur affiche : 4,5359 kg, 4535,9 g, 160 oz, 0,7143 st et 0,005 tonne. Cela montre comment 10 lb se rapporte à d'autres unités de poids courantes.",
+    "howItWorks_1": "Entrez une valeur numérique de poids dans le champ 'Valeur' (par exemple, 150). Sélectionnez ensuite l'unité de cette valeur dans le menu déroulant 'De' (par exemple, 'lb' pour les livres).",
+    "howItWorks_2": "Cliquez sur le bouton 'Calculer'. Le convertisseur applique les facteurs de conversion appropriés pour calculer le poids équivalent en kilogrammes, grammes, livres, onces et stones.",
+    "howItWorks_3": "Les résultats apparaissent dans les champs de sortie : Kilogrammes (kg), Grammes (g), Livres (lb), Onces (oz) et Stones (st). Utilisez ces valeurs directement pour la cuisine, l'expédition, le fitness ou toute tâche liée au poids."
+  }
+}

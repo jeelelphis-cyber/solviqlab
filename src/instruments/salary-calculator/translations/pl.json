@@ -1,0 +1,40 @@
+{
+  "title": "Kalkulator wynagrodzeń — konwerter stawki godzinowej na roczną",
+  "description": "Przelicz stawkę godzinową na wynagrodzenie roczne lub roczne na godzinowe. Oblicz zarobki tygodniowe, dwutygodniowe, miesięczne i roczne natychmiast.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_salaryType": "Rodzaj wynagrodzenia",
+  "label_amount": "Kwota",
+  "label_hoursPerWeek": "Godzin tygodniowo",
+  "label_weeksPerYear": "Tygodni w roku",
+  "label_hourly": "Stawka godzinowa",
+  "label_daily": "Stawka dzienna",
+  "label_weekly": "Wypłata tygodniowa",
+  "label_biweekly": "Wypłata dwutygodniowa",
+  "label_monthly": "Wypłata miesięczna",
+  "label_annual": "Wynagrodzenie roczne",
+  "opt_hourly": "Godzinowe",
+  "opt_annual": "Roczne",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jak przeliczyć stawkę godzinową na wynagrodzenie roczne?",
+    "a1": "Pomnóż stawkę godzinową przez liczbę godzin przepracowanych tygodniowo, a następnie przez liczbę tygodni przepracowanych w roku. Dla standardowego tygodnia 40-godzinnego i roku 52-tygodniowego: Roczne = Godzinowa × 40 × 52. Na przykład, 25 $/godz. × 40 × 52 = 52 000 $ rocznie.",
+    "q2": "Jak obliczana jest stawka dzienna?",
+    "a2": "Stawkę dzienną oblicza się, dzieląc wynagrodzenie roczne przez 261 — przybliżoną liczbę dni roboczych w roku (52 tygodnie × 5 dni). Dla wynagrodzenia 52 000 $: 52 000 $ / 261 ≈ 199,23 $ dziennie. Jest to standard stosowany przez działy HR i systemy płacowe w USA.",
+    "q3": "Jaka jest różnica między wypłatą dwutygodniową a półmiesięczną?",
+    "a3": "Wypłata dwutygodniowa jest dokonywana co dwa tygodnie — 26 okresów płatniczych w roku. Wypłata półmiesięczna jest dokonywana dwa razy w miesiącu — 24 okresy płatnicze w roku. Ten kalkulator używa standardu dwutygodniowego (26 okresów). Różnica ma znaczenie przy budżetowaniu: dwutygodniowe wypłaty powodują, że dwa miesiące w roku mają dodatkową wypłatę.",
+    "q4": "Czy ten kalkulator uwzględnia podatki lub potrącenia?",
+    "a4": "Nie. Ten kalkulator pokazuje tylko kwoty brutto, przed potrąceniem podatków federalnych, stanowych lub lokalnych, składek na Social Security, Medicare, ubezpieczenia zdrowotnego lub emerytalnego. Aby obliczyć wynagrodzenie netto po podatkach federalnych, użyj kalkulatora podatkowego.",
+    "q5": "Co jeśli pracuję w niepełnym wymiarze godzin lub sezonowo?",
+    "a5": "Dostosuj pola 'Godzin tygodniowo' i 'Tygodni w roku' do swojego rzeczywistego harmonogramu. Na przykład, pracownik na pół etatu pracujący 20 godzin tygodniowo przez 48 tygodni, zarabiający 18 $/godz.: 18 $ × 20 × 48 = 17 280 $ rocznego wynagrodzenia."
+  },
+  "content": {
+    "whatIs": "Ten kalkulator wynagrodzeń przelicza stawki godzinowe na roczne i pokazuje równoważne wynagrodzenie dla każdego typowego okresu płatniczego: dziennego, tygodniowego, dwutygodniowego, miesięcznego i rocznego.",
+    "formula": "Jeśli godzinowe: Roczne = Kwota × Godziny/Tydzień × Tygodnie/Rok\nJeśli roczne: Godzinowe = Kwota / (Godziny/Tydzień × Tygodnie/Rok)\nMiesięczne = Roczne / 12\nDwutygodniowe = Roczne / 26\nTygodniowe = Roczne / 52\nDzienne = Roczne / 261",
+    "example": "Pracownik zarabiający 25 $/godz. przy 40 godzinach tygodniowo przez 52 tygodnie zarabia 52 000 $/rok. To daje 1 000 $/tydzień, 2 000 $ co dwa tygodnie, 4 333,33 $/miesiąc i 199,23 $/dzień.",
+    "howItWorks_1": "Wybierz, czy znasz swoją stawkę godzinową, czy wynagrodzenie roczne, a następnie wprowadź kwotę.",
+    "howItWorks_2": "Dostosuj liczbę godzin tygodniowo (domyślnie 40) i tygodni w roku (domyślnie 52), jeśli Twój harmonogram się różni.",
+    "howItWorks_3": "Kliknij Oblicz, aby natychmiast zobaczyć równoważne kwoty godzinowe, dzienne, tygodniowe, dwutygodniowe, miesięczne i roczne."
+  }
+}

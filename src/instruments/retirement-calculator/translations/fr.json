@@ -1,0 +1,39 @@
+{
+  "title": "Calculateur de retraite — Projection d'épargne et estimation de revenu mensuel",
+  "description": "Projetez votre épargne retraite avec croissance composée et cotisations mensuelles. Estimez le revenu mensuel selon la règle des 4 % et voyez la valeur réelle en dollars d'aujourd'hui.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_currentAge": "Âge actuel",
+  "label_retirementAge": "Âge de la retraite",
+  "label_currentSavings": "Épargne actuelle",
+  "label_monthlyContribution": "Cotisation mensuelle",
+  "label_annualReturn": "Rendement annuel attendu",
+  "label_inflationRate": "Taux d'inflation attendu",
+  "label_projectedSavings": "Épargne projetée",
+  "label_totalContributions": "Cotisations totales",
+  "label_totalGrowth": "Croissance des investissements",
+  "label_monthlyIncomeEstimate": "Revenu mensuel estimé",
+  "label_realValueToday": "Valeur réelle (en dollars d'aujourd'hui)",
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Qu'est-ce que la règle des 4 % pour le revenu de retraite ?",
+    "a1": "La règle des 4 %, popularisée par l'étude Trinity, suggère de retirer 4 % de votre portefeuille de retraite par an pour qu'il dure au moins 30 ans. L'estimation du revenu mensuel dans ce calculateur est épargneProjetée × 0,04 / 12. Pour un portefeuille de 1 000 000 $, cela représente 40 000 $/an ou 3 333 $/mois. La règle suppose un portefeuille diversifié d'actions/obligations avec des rendements historiques du marché.",
+    "q2": "Quel taux de rendement annuel dois-je utiliser ?",
+    "a2": "Une hypothèse couramment utilisée pour un portefeuille diversifié d'actions/obligations américaines est un rendement nominal de 6 à 8 %. Le S&P 500 a en moyenne environ 10 % nominal et 7 % réel (ajusté à l'inflation) historiquement. Ce calculateur utilise par défaut 7 %, une estimation prudente pour un portefeuille mixte. Pour les portefeuilles à prédominance obligataire, utilisez 4 à 5 %.",
+    "q3": "Que signifie 'Valeur réelle en dollars d'aujourd'hui' ?",
+    "a3": "La valeur réelle ajuste l'épargne projetée pour l'inflation afin de montrer ce que votre pécule vaudra réellement en pouvoir d'achat actuel. Elle est calculée comme épargneProjetée / (1 + tauxInflation/100)^années. Avec une inflation de 3 % sur 30 ans, 1 M$ en dollars futurs équivaut à environ 412 000 $ aujourd'hui.",
+    "q4": "Comment les cotisations mensuelles sont-elles composées ?",
+    "a4": "Les cotisations mensuelles sont traitées comme une annuité ordinaire — chaque paiement génère des intérêts à partir du moment où il est effectué. La formule est VF = cotisation × ((1+r)^n − 1) / r, où r est le taux mensuel (rendementAnnuel/12/100) et n le nombre total de mois. Cela modélise avec précision l'investissement par moyenne d'achat périodique.",
+    "q5": "Ce calculateur inclut-il la Sécurité sociale ou les revenus de pension ?",
+    "a5": "Non. Ce calculateur projette uniquement la croissance de l'épargne à partir de vos cotisations personnelles et de votre épargne existante. Les prestations de la Sécurité sociale, les revenus de pension ou d'autres sources de revenus ne sont pas inclus. Pour une image complète du revenu de retraite, ajoutez les paiements attendus de la Sécurité sociale à l'estimation du revenu mensuel indiquée ici."
+  },
+  "content": {
+    "whatIs": "Ce calculateur de retraite projette combien votre épargne augmentera d'ici la retraite en utilisant les intérêts composés sur l'épargne existante plus les cotisations mensuelles. Il applique la règle de retrait sécuritaire de 4 % pour estimer le revenu mensuel de retraite et ajuste l'inflation pour montrer la valeur réelle en dollars d'aujourd'hui.",
+    "formula": "VF_principal = épargneActuelle × (1 + r)^n\nVF_cotisations = cotisationMensuelle × ((1+r)^n − 1) / r\nÉpargne projetée = VF_principal + VF_cotisations\nRevenu mensuel = Épargne projetée × 0,04 / 12\nValeur réelle = Épargne projetée / (1 + inflation)^années",
+    "example": "Âge 30, retraite à 65 ans, 50 000 $ d'épargne, cotisation de 500 $/mois, rendement 7 %, inflation 3 % : 35 ans × 12 = 420 mois. Taux mensuel = 0,5833 %. Projeté ≈ 1 298 635 $. Revenu mensuel ≈ 4 329 $. Valeur réelle aujourd'hui ≈ 460 000 $.",
+    "howItWorks_1": "Entrez votre âge actuel, l'âge cible de la retraite, l'épargne actuelle et le montant de la cotisation mensuelle.",
+    "howItWorks_2": "Ajustez le rendement annuel attendu (par défaut 7 %) et le taux d'inflation (par défaut 3 %) selon vos besoins.",
+    "howItWorks_3": "Cliquez sur Calculer pour voir votre épargne retraite projetée, la croissance totale, le revenu mensuel estimé et la valeur réelle ajustée à l'inflation."
+  }
+}

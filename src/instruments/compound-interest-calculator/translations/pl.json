@@ -1,0 +1,41 @@
+{
+  "title": "Kalkulator procentu składanego — obserwuj, jak rosną Twoje pieniądze",
+  "description": "Oblicz procent składany w czasie z miesięcznymi wpłatami. Zobacz, jak Twoja inwestycja rośnie z roku na rok dzięki sile procentu składanego.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_principal": "Inwestycja początkowa",
+  "label_annualRate": "Roczna stopa procentowa",
+  "label_years": "Okres inwestycji",
+  "label_monthlyContribution": "Miesięczna wpłata",
+  "label_compoundFrequency": "Częstotliwość kapitalizacji",
+  "label_finalAmount": "Kwota końcowa",
+  "label_totalContributions": "Łączne wpłaty",
+  "label_totalInterest": "Łączne odsetki",
+  "faq": {
+    "title": "Najczęściej zadawane pytania",
+    "q1": "Jaka jest różnica między procentem prostym a składanym?",
+    "a1": "Procent prosty jest naliczany tylko od kwoty głównej, podczas gdy procent składany jest naliczany od kwoty głównej plus skumulowane odsetki. Na przykład 10 000 $ przy 5% prostym procencie przez 10 lat daje 5 000 $ odsetek, ale przy kapitalizacji miesięcznej daje około 6 470 $ odsetek.",
+    "q2": "Jak częstotliwość kapitalizacji wpływa na kwotę końcową?",
+    "a2": "Częstsza kapitalizacja skutkuje wyższymi zwrotami, ponieważ odsetki są dodawane częściej. Dla 10 000 $ przy 5% przez 10 lat: rocznie daje 16 288,95 $, kwartalnie 16 453,09 $, miesięcznie 16 470,09 $, a dziennie 16 474,61 $.",
+    "q3": "Czy mogę używać tego kalkulatora zarówno do kredytów, jak i inwestycji?",
+    "a3": "Tak, ten sam wzór dotyczy kredytów z kapitalizacją odsetek. Jednak w przypadku kredytów wynik reprezentuje całkowitą kwotę do spłaty. Ten kalkulator nie uwzględnia spłat kredytu; zakłada brak wypłat.",
+    "q4": "Co oznacza 'Łączne wpłaty' w wynikach?",
+    "a4": "Łączne wpłaty to suma początkowej kwoty głównej i wszystkich miesięcznych wpłat dokonanych w okresie inwestycji. Na przykład, jeśli zaczynasz od 10 000 $ i dodajesz 100 $ miesięcznie przez 10 lat, łączne wpłaty = 10 000 $ + (100 $ × 120) = 22 000 $.",
+    "q5": "Czy istnieje standardowa instytucja dla obliczeń procentu składanego?",
+    "a5": "Wzór na procent składany jest powszechnie akceptowany w finansach i matematyce. Amerykańska Komisja Papierów Wartościowych i Giełd (SEC) udostępnia materiały edukacyjne na temat kapitalizacji, a wzór jest używany przez banki i instytucje finansowe na całym świecie."
+  },
+  "unit_years": "lat",
+  "freq_annually": "Rocznie",
+  "freq_quarterly": "Kwartalnie",
+  "freq_monthly": "Miesięcznie",
+  "freq_daily": "Codziennie",
+  "content": {
+    "whatIs": "Kalkulator procentu składanego szacuje przyszłą wartość inwestycji, naliczając odsetki zarówno od początkowej kwoty głównej, jak i od skumulowanych odsetek z poprzednich okresów. Używa wzoru A = P(1 + r/n)^(nt) do obliczenia wzrostu z opcjonalnymi regularnymi wpłatami.",
+    "formula": "Podstawowy wzór to A = P(1 + r/n)^(nt), gdzie A to kwota końcowa, P to kwota główna, r to roczna stopa procentowa (w postaci dziesiętnej), n to liczba okresów kapitalizacji w roku, a t to liczba lat. Dla miesięcznych wpłat dodawana jest formuła przyszłej wartości serii: FV = PMT × [((1 + r/n)^(nt) - 1) / (r/n)].",
+    "example": "Jeśli zainwestujesz 10 000 $ przy 5% rocznej stopie procentowej z kapitalizacją miesięczną na 10 lat bez dodatkowych wpłat, kwota końcowa wynosi 10 000 $ × (1 + 0,05/12)^(12×10) ≈ 16 470,09 $. Łączne odsetki wynoszą 6 470,09 $.",
+    "howItWorks_1": "Wprowadź początkową kwotę główną (np. 10 000 $), roczną stopę procentową (np. 5%), liczbę lat (np. 10) i wybierz częstotliwość kapitalizacji (rocznie, kwartalnie, miesięcznie lub codziennie). Opcjonalnie dodaj kwotę miesięcznej wpłaty.",
+    "howItWorks_2": "Po kliknięciu Oblicz narzędzie stosuje wzór na procent składany z wybraną częstotliwością kapitalizacji i ewentualnymi miesięcznymi wpłatami. Oblicza końcowe saldo, łączne wpłaty i łączne odsetki.",
+    "howItWorks_3": "Wyniki pokazują kwotę końcową (kwota główna + wpłaty + odsetki), łączne wpłaty (kwota główna plus wszelkie miesięczne depozyty) oraz łączne odsetki. Możesz porównać różne scenariusze, zmieniając dane wejściowe."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Eisprungrechner — Fruchtbarkeitsfenster & Zyklus-Tracker",
+  "description": "Finden Sie Ihren Eisprungtermin und Ihr Fruchtbarkeitsfenster basierend auf Ihrer letzten Periode und Zykluslänge. Planen oder verfolgen Sie die Empfängnis mit genauen Vorhersagen des Menstruationszyklus.",
+  "calculate": "Berechnen",
+  "reset": "Zurücksetzen",
+  "result": "Ergebnis",
+  "label_lastPeriodDate": "Erster Tag der letzten Periode",
+  "label_cycleLength": "Durchschnittliche Zykluslänge",
+  "label_ovulationDate": "Eisprungdatum",
+  "label_fertileWindowStart": "Beginn des Fruchtbarkeitsfensters",
+  "label_fertileWindowEnd": "Ende des Fruchtbarkeitsfensters",
+  "label_nextPeriodDate": "Nächstes Periodendatum",
+  "label_daysUntilOvulation": "Tage bis zum Eisprung",
+  "unit_days": "Tage",
+  "ymyl_disclaimer": "Dieser Rechner liefert Schätzungen basierend auf einem Standard-Ovulationsmodell. Individuelle Zyklen variieren. Dieses Tool ersetzt keine medizinische Beratung oder Verhütung. Konsultieren Sie einen Arzt für die Familienplanung.",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Wie wird der Eisprungtermin berechnet?",
+    "a1": "Der Eisprung wird auf 14 Tage vor Beginn der nächsten Periode geschätzt, unabhängig von der Zykluslänge. Dies liegt daran, dass die Lutealphase (nach dem Eisprung) konstant etwa 14 Tage beträgt. Die Formel lautet: Eisprungdatum = Datum der letzten Periode + (Zykluslänge − 14 Tage). Bei einem 28-Tage-Zyklus findet der Eisprung am Tag 14 statt. Bei einem 32-Tage-Zyklus fällt er auf Tag 18.",
+    "q2": "Was ist das Fruchtbarkeitsfenster?",
+    "a2": "Das Fruchtbarkeitsfenster ist der Zeitraum, in dem eine Empfängnis am wahrscheinlichsten ist. Spermien können bis zu 5 Tage in den Eileitern überleben, und die Eizelle ist nach dem Eisprung 12–24 Stunden befruchtungsfähig. Dies ergibt ein Fruchtbarkeitsfenster von etwa 5 Tagen vor dem Eisprung bis 1 Tag danach. Dieser Rechner setzt das Fenster von 5 Tagen vor bis 1 Tag nach dem geschätzten Eisprungdatum.",
+    "q3": "Wie genau ist dieser Eisprungrechner?",
+    "a3": "Dieser Rechner verwendet die Standard-Kalender-/Rhythmusmethode, die einen regelmäßigen Zyklus und eine feste Lutealphase voraussetzt. Er ist am genauesten für Frauen mit konsistenten Zykluslängen zwischen 21 und 45 Tagen. Faktoren wie Stress, Krankheit, Reisen, PCOS oder Stillen können den Eisprung verschieben. Für eine höhere Genauigkeit kombinieren Sie dies mit der Messung der Basaltemperatur (BBT) oder LH-Tests.",
+    "q4": "Was bedeutet eine negative Anzahl 'Tage bis zum Eisprung'?",
+    "a4": "Eine negative Zahl bedeutet, dass der geschätzte Eisprungtermin im aktuellen Zyklus bereits vergangen ist. Beispielsweise bedeutet −3, dass der Eisprung vor 3 Tagen stattgefunden haben soll. Dies ist normal, wenn Sie sich in der zweiten Hälfte Ihres Zyklus befinden. Das angezeigte Datum der nächsten Periode zeigt Ihnen, wann Ihr neuer Zyklus voraussichtlich beginnt.",
+    "q5": "Kann ich diesen Rechner zur Vermeidung einer Schwangerschaft verwenden?",
+    "a5": "Dieser Rechner ist nicht zur Empfängnisverhütung bestimmt oder zuverlässig. Die Kalendermethode hat eine typische Versagensrate von etwa 24% pro Jahr. Für Verhütung konsultieren Sie einen Arzt. Dieses Tool eignet sich am besten, um Ihren Zyklus zu verstehen und die Chancen auf eine Empfängnis zu erhöhen, wenn Sie versuchen, schwanger zu werden."
+  },
+  "content": {
+    "whatIs": "Dieser Eisprungrechner sagt Ihren Eisprungtermin, Ihr Fruchtbarkeitsfenster und das Datum Ihrer nächsten Periode basierend auf Ihrer letzten Menstruation und durchschnittlichen Zykluslänge voraus. Er verwendet die Standard-Kalendermethode, die in der Geburtshilfe und Gynäkologie weit verbreitet ist.",
+    "formula": "Eisprungtag = Zykluslänge − 14\nEisprungdatum = Datum der letzten Periode + Eisprungtag\nBeginn des Fruchtbarkeitsfensters = Eisprungdatum − 5 Tage\nEnde des Fruchtbarkeitsfensters = Eisprungdatum + 1 Tag\nNächstes Periodendatum = Datum der letzten Periode + Zykluslänge",
+    "example": "Letzte Periode am 1. Januar, Zykluslänge 28 Tage: Eisprungtag = 28 − 14 = 14. Eisprungdatum = 15. Januar. Fruchtbarkeitsfenster: 10.–16. Januar. Nächste Periode: 29. Januar.",
+    "howItWorks_1": "Geben Sie das Datum des ersten Tages Ihrer letzten Menstruation ein.",
+    "howItWorks_2": "Geben Sie Ihre durchschnittliche Zykluslänge in Tagen ein (typischer Bereich 21–45, Standard 28).",
+    "howItWorks_3": "Klicken Sie auf Berechnen, um Ihr geschätztes Eisprungdatum, Fruchtbarkeitsfenster, nächstes Periodendatum und die Anzahl der Tage bis zum Eisprung ab heute zu sehen."
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "title": "Kalkulator BMI — Wskaźnik masy ciała z interpretacją",
+    "description": "Oblicz swoje BMI natychmiast. Uzyskaj kategorię WHO, zakres prawidłowej wagi, BMI Prime i interpretację zdrowotną opartą na AI — za darmo, szybko i dokładnie."
+  },
+  "form": {
+    "title": "Kalkulator BMI",
+    "height_label": "Wzrost",
+    "height_placeholder_cm": "np. 175",
+    "height_placeholder_ft": "stopy",
+    "height_placeholder_in": "cale",
+    "weight_label": "Waga",
+    "weight_placeholder_kg": "np. 70",
+    "weight_placeholder_lb": "np. 154",
+    "age_label": "Wiek (opcjonalnie)",
+    "age_placeholder": "np. 30",
+    "sex_label": "Płeć (opcjonalnie)",
+    "sex_male": "Mężczyzna",
+    "sex_female": "Kobieta",
+    "sex_other": "Inna / Wolę nie podawać",
+    "unit_metric": "Metryczne (cm, kg)",
+    "unit_imperial": "Imperialne (stopy, funty)",
+    "calculate_button": "Oblicz BMI",
+    "reset_button": "Resetuj"
+  },
+  "validation": {
+    "height_required": "Proszę podać wzrost.",
+    "height_too_low": "Wzrost musi wynosić co najmniej {min} cm.",
+    "height_too_high": "Wzrost może wynosić maksymalnie {max} cm.",
+    "weight_required": "Proszę podać wagę.",
+    "weight_too_low": "Waga musi wynosić co najmniej {min} kg.",
+    "weight_too_high": "Waga może wynosić maksymalnie {max} kg.",
+    "invalid_number": "Proszę podać prawidłową liczbę (np. 70 lub 70.5).",
+    "unknown": "Nieprawidłowe dane wejściowe."
+  },
+  "result": {
+    "title": "Twój wynik BMI",
+    "bmi_label": "BMI",
+    "category_label": "Kategoria",
+    "bmi_prime_label": "BMI Prime",
+    "ponderal_index_label": "Indeks Ponderala",
+    "healthy_range_label": "Zakres prawidłowej wagi",
+    "body_fat_label": "Szacowany procent tkanki tłuszczowej",
+    "body_fat_unavailable": "Podaj wiek i płeć, aby oszacować procent tkanki tłuszczowej",
+    "categories": {
+      "underweight_severe": "Skrajna niedowaga",
+      "underweight": "Niedowaga",
+      "normal": "Prawidłowa waga",
+      "overweight": "Nadwaga",
+      "obese_1": "Otyłość (I stopień)",
+      "obese_2": "Otyłość (II stopień)",
+      "obese_3": "Otyłość (III stopień)"
+    }
+  },
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jak oblicza się BMI dla dzieci lub nastolatków?",
+    "a1": "Ten kalkulator jest przeznaczony dla dorosłych (wiek 18+). Dla dzieci i nastolatków BMI interpretuje się za pomocą percentyli dostosowanych do wieku i płci z wykresów wzrostu CDC, a nie stałych kategorii WHO.",
+    "q2": "Co oznacza BMI Prime?",
+    "a2": "BMI Prime to stosunek Twojego BMI do górnej granicy normy (BMI 25). Wartość 1.0 odpowiada BMI 25. Wartości poniżej 1.0 oznaczają prawidłową wagę, powyżej 1.0 wskazują na nadwagę lub otyłość.",
+    "q3": "Czy BMI może być niedokładne dla sportowców lub osób umięśnionych?",
+    "a3": "Tak, BMI nie rozróżnia mięśni od tłuszczu. Sportowcy z dużą masą mięśniową mogą mieć wysokie BMI, ale niski procent tkanki tłuszczowej. Dla takich osób bardziej informacyjny może być procent tkanki tłuszczowej lub obwód talii.",
+    "q4": "Jak obliczany jest szacowany procent tkanki tłuszczowej?",
+    "a4": "Szacowany procent tkanki tłuszczowej oblicza się za pomocą wzoru Deurenberga: % tkanki tłuszczowej = 1.20 × BMI + 0.23 × Wiek - 10.8 × Płeć - 5.4, gdzie Płeć = 1 dla mężczyzn, 0 dla kobiet. Wzór ten jest zweryfikowany dla dorosłych w wieku 18–80 lat.",
+    "q5": "Jakie są kategorie BMI według WHO?",
+    "a5": "Światowa Organizacja Zdrowia definiuje: niedowaga (<18.5), prawidłowa waga (18.5–24.9), nadwaga (25–29.9) oraz otyłość I stopnia (30–34.9), II stopnia (35–39.9), III stopnia (≥40). Opierają się one na ryzyku zdrowotnym populacji."
+  },
+  "aria": {
+    "result_announcement": "Wynik: BMI {bmi}. Kategoria: {category}. {summary}.",
+    "form_description": "Wprowadź swój wzrost i wagę, aby obliczyć wskaźnik masy ciała.",
+    "loading": "Obliczanie Twojego BMI..."
+  },
+  "content": {
+    "whatIs": "Kalkulator BMI oblicza Twój wskaźnik masy ciała (BMI) na podstawie wzrostu i wagi. BMI to prosta miara szacująca tkankę tłuszczową i pomagająca kategoryzować wagę według standardów Światowej Organizacji Zdrowia (WHO).",
+    "formula": "BMI oblicza się jako wagę w kilogramach podzieloną przez wzrost w metrach do kwadratu: BMI = waga_kg / (wzrost_cm / 100)^2. Dla jednostek imperialnych: BMI = (waga_funty / (wzrost_cale)^2) × 703. Kalkulator oblicza również BMI Prime (BMI/25) i Indeks Ponderala (waga_kg / (wzrost_m)^3).",
+    "example": "Dla osoby o wzroście 170 cm i wadze 70 kg: BMI = 70 / (1.70)^2 = 24.22 kg/m². Mieści się to w kategorii 'Prawidłowa waga' (18.5–24.9). Zakres prawidłowej wagi dla tego wzrostu to 53.5–72.3 kg.",
+    "howItWorks_1": "Wprowadź swój wzrost w centymetrach (lub stopach/calach, jeśli używasz jednostek imperialnych) oraz wagę w kilogramach (lub funtach). Opcjonalnie podaj wiek i płeć, aby uzyskać szacowany procent tkanki tłuszczowej.",
+    "howItWorks_2": "Kliknij Oblicz, aby obliczyć swoje BMI, BMI Prime, Indeks Ponderala i zakres prawidłowej wagi. Jeśli podano wiek i płeć, obliczany jest również szacowany procent tkanki tłuszczowej za pomocą wzoru Deurenberga.",
+    "howItWorks_3": "Twoja wartość BMI jest porównywana z kategoriami WHO: Niedowaga (<18.5), Prawidłowa waga (18.5–24.9), Nadwaga (25–29.9) i Otyłość (≥30). BMI Prime pokazuje, jak blisko jesteś górnej granicy normy (1.0 = BMI 25). Indeks Ponderala inaczej uwzględnia wzrost."
+  }
+}

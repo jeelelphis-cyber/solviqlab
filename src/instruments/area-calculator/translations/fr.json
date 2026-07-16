@@ -1,0 +1,39 @@
+{
+  "title": "Calculateur de surface — Rectangle, Cercle, Triangle et plus",
+  "description": "Calculez la surface de toute forme : rectangle, carré, cercle, triangle, trapèze et plus. Résultats instantanés avec explications des formules.",
+  "calculate": "Calculer",
+  "reset": "Réinitialiser",
+  "result": "Résultat",
+  "label_shape": "Forme",
+  "label_a": "Longueur / Rayon / Base",
+  "label_b": "Largeur / Hauteur / Deuxième base",
+  "label_area": "Surface",
+  "label_perimeter": "Périmètre",
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Comment calculer la surface d'un triangle si seuls la base et la hauteur sont données ?",
+    "a1": "La surface d'un triangle se calcule comme 0,5 × base × hauteur. Par exemple, un triangle avec une base de 6 unités et une hauteur de 4 unités a une surface = 0,5 × 6 × 4 = 12 unités².",
+    "q2": "Que représente la sortie du périmètre pour un cercle ?",
+    "a2": "Pour un cercle, le périmètre est appelé circonférence. Il se calcule comme 2π × rayon. Pour un cercle de rayon 5 unités, la circonférence est d'environ 31,42 unités.",
+    "q3": "Ce calculateur peut-il gérer des formes irrégulières ?",
+    "a3": "Non, ce calculateur ne prend en charge que les formes géométriques standard : rectangle, carré, cercle, triangle, trapèze et ellipse. Pour les formes irrégulières, vous devez les décomposer en ces formes de base ou utiliser des méthodes d'intégration numérique.",
+    "q4": "Que représente l'entrée 'b' pour un trapèze ?",
+    "a4": "Pour un trapèze, l'entrée 'b' représente la hauteur (la distance perpendiculaire entre les deux côtés parallèles). Les deux côtés parallèles sont saisis comme 'a' (base1) et 'b' (base2) dans les champs de saisie, mais notez que la hauteur est saisie dans le champ 'b' lorsque le trapèze est sélectionné.",
+    "q5": "Quelles formules standard ce calculateur utilise-t-il pour le périmètre d'une ellipse ?",
+    "a5": "Le périmètre de l'ellipse utilise l'approximation de Ramanujan : π[3(a+b) - √((3a+b)(a+3b))]. C'est une approximation largement acceptée ; le périmètre exact implique des intégrales elliptiques."
+  },
+  "opt_rectangle": "Rectangle",
+  "opt_square": "Carré",
+  "opt_circle": "Cercle",
+  "opt_triangle": "Triangle",
+  "opt_trapezoid": "Trapèze",
+  "opt_ellipse": "Ellipse",
+  "content": {
+    "whatIs": "Ce calculateur de surface calcule la surface et le périmètre de formes géométriques courantes : rectangle, carré, cercle, triangle, trapèze et ellipse. Il utilise des formules géométriques standard basées sur les dimensions de la forme, fournissant des résultats instantanés avec des explications des formules.",
+    "formula": "Pour un rectangle : Surface = a × b, Périmètre = 2(a + b). Carré : Surface = a², Périmètre = 4a. Cercle : Surface = π × a², Périmètre = 2πa. Triangle : Surface = 0,5 × a × b, Périmètre = a + b + c (c calculé par le théorème de Pythagore si triangle rectangle). Trapèze : Surface = 0,5 × (a + b) × hauteur, Périmètre = a + b + c + d. Ellipse : Surface = π × a × b, Périmètre ≈ π[3(a+b) - √((3a+b)(a+3b))].",
+    "example": "Pour un rectangle avec a=5 unités et b=3 unités, la surface est 5 × 3 = 15 unités², et le périmètre est 2(5+3) = 16 unités. Pour un cercle avec un rayon a=4 unités, surface = π × 4² ≈ 50,27 unités², périmètre = 2π × 4 ≈ 25,13 unités.",
+    "howItWorks_1": "Sélectionnez la forme dans le menu déroulant. Entrez ensuite les dimensions requises : pour un rectangle, entrez les longueurs des côtés a et b ; pour un carré, entrez le côté a ; pour un cercle, entrez le rayon a ; pour un triangle, entrez la base a et la hauteur b ; pour un trapèze, entrez la base a, la base b et la hauteur (saisie comme b) ; pour une ellipse, entrez le demi-grand axe a et le demi-petit axe b.",
+    "howItWorks_2": "Cliquez sur le bouton Calculer. Le calculateur applique la formule appropriée pour la forme sélectionnée en utilisant les valeurs saisies et calcule la surface et le périmètre.",
+    "howItWorks_3": "Les résultats affichent la surface en unités carrées et le périmètre en unités. Vous pouvez utiliser ces valeurs pour d'autres calculs, comme l'estimation de matériaux ou la comparaison avec d'autres formes."
+  }
+}

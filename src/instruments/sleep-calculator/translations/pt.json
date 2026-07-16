@@ -1,0 +1,40 @@
+{
+  "title": "Calculadora de Sono — Melhores Horários para Dormir e Acordar com Base nos Ciclos de Sono",
+  "description": "Encontre o horário ideal para dormir ou acordar com base em ciclos de sono de 90 minutos. Acorde revigorado ao programar o sono para completar ciclos REM completos.",
+  "calculate": "Calcular",
+  "reset": "Redefinir",
+  "result": "Seu Horário de Sono",
+  "label_mode": "Modo",
+  "label_targetTime": "Horário",
+  "label_fallAsleepMinutes": "Minutos para Adormecer",
+  "opt_waketime": "Quero acordar às...",
+  "opt_bedtime": "Vou dormir às...",
+  "label_cycle4": "4 Ciclos — 6 horas",
+  "label_cycle5": "5 Ciclos — 7,5 horas",
+  "label_cycle6": "6 Ciclos — 9 horas",
+  "label_cycle7": "7 Ciclos — 10,5 horas",
+  "tag_light": "Leve",
+  "tag_optimal": "Ideal",
+  "tag_too_much": "Muito Longo",
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": "O que é um ciclo de sono e por que dura 90 minutos?",
+    "a1": "Um ciclo de sono consiste em quatro estágios: N1 (sono leve), N2 (sono leve), N3 (sono profundo/ondas lentas) e REM (movimento rápido dos olhos). Um ciclo completo dura em média 90 minutos, embora os ciclos possam variar de 70 a 120 minutos e a proporção de sono profundo versus REM mude ao longo da noite. Acordar ao final de um ciclo completo — em vez de durante o sono profundo — está associado a sentir-se mais alerta e menos sonolento.",
+    "q2": "Por que são recomendados 5 ou 6 ciclos de sono?",
+    "a2": "A maioria dos adultos precisa de 7 a 9 horas de sono por noite, o que corresponde a 5 a 6 ciclos completos de 90 minutos. Cinco ciclos equivalem a 7,5 horas e seis ciclos a 9 horas. Quatro ciclos (6 horas) geralmente são insuficientes para a maioria dos adultos a longo prazo. Sete ciclos (10,5 horas) podem indicar sono excessivo, o que está associado a riscos à saúde em algumas pesquisas.",
+    "q3": "O que são 'minutos para adormecer' e como afetam o cálculo?",
+    "a3": "A latência do início do sono (tempo para adormecer) é o atraso entre deitar-se e realmente adormecer. A média é de 15 a 20 minutos para adultos saudáveis. Esta calculadora subtrai esse tempo para que seus alarmes o considerem. Se você tem insônia ou adormece rapidamente, ajuste esse valor. Para o modo 'hora de acordar', hora de dormir = hora alvo de acordar − tempo para adormecer − (ciclos × 90 min).",
+    "q4": "Isso considera cochilos?",
+    "a4": "Esta calculadora foi projetada para uma sessão principal de sono noturno. Para cochilos, um único ciclo de 90 minutos é ideal (ou mesmo 20 minutos para evitar sonolência). Você pode usar esta calculadora para cochilos inserindo a hora de início do cochilo no modo 'hora de dormir' e lendo o tempo do ciclo4 como a hora ideal para acordar do cochilo de 90 minutos.",
+    "q5": "É melhor acordar após 5 ou 6 ciclos?",
+    "a5": "Ambos estão dentro da faixa recomendada de 7 a 9 horas para adultos. A maioria das pessoas se beneficia de 7,5 horas (5 ciclos), especialmente se tiverem um horário de sono consistente. Seis ciclos (9 horas) são melhores para pessoas se recuperando de dívida de sono, doenças ou com necessidades naturalmente maiores de sono. O segredo é acordar ao final de um ciclo completo, o que esta calculadora ajuda a programar corretamente."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de sono ajuda você a encontrar o melhor horário para dormir ou acordar com base em ciclos de sono de 90 minutos. Ao programar seu sono para terminar ao final de um ciclo completo, você tem mais chances de acordar revigorado em vez de sonolento.",
+    "formula": "Hora de dormir (modo acordar) = Hora de acordar − Minutos para adormecer − (Ciclos × 90 min)\nHora de acordar (modo dormir) = Hora de dormir + Minutos para adormecer + (Ciclos × 90 min)\nOs horários são ajustados automaticamente para a meia-noite.",
+    "example": "Se você precisa acordar às 07:00 e leva 15 minutos para adormecer: 5 ciclos = 07:00 − 15 min − 450 min = 23:05 hora de dormir. 6 ciclos = 07:00 − 15 min − 540 min = 21:35 hora de dormir.",
+    "howItWorks_1": "Escolha seu modo: 'Quero acordar às' para calcular horários de dormir, ou 'Vou dormir às' para calcular horários de acordar.",
+    "howItWorks_2": "Insira seu horário alvo no formato HH:MM e ajuste os minutos para adormecer, se necessário (padrão 15).",
+    "howItWorks_3": "Clique em Calcular para ver quatro horários recomendados correspondentes a 4, 5, 6 e 7 ciclos completos de sono."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Kalkulator rabatu — cena końcowa po rabacie",
+  "description": "Oblicz cenę końcową po zastosowaniu dowolnego procentu rabatu. Oblicza również, ile oszczędzasz oraz efektywną stopę rabatu.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_originalPrice": "Cena pierwotna",
+  "label_discountPercent": "Rabat",
+  "label_discountAmount": "Oszczędzasz",
+  "label_finalPrice": "Cena końcowa",
+  "faq": {
+    "title": "Najczęściej zadawane pytania",
+    "q1": "Jak obliczyć kwotę rabatu, jeśli rabat jest podany jako stała kwota w złotych, a nie procent?",
+    "a1": "Ten kalkulator obsługuje tylko rabaty procentowe. W przypadku stałego rabatu kwotowego wystarczy odjąć stałą kwotę od ceny pierwotnej: Cena końcowa = Cena pierwotna - Rabat stały. Na przykład rabat 10 zł na cenę 50 zł daje cenę końcową 40 zł.",
+    "q2": "Co oznacza wartość 'Oszczędzasz'?",
+    "a2": "Wartość 'Oszczędzasz' to kwota rabatu, czyli różnica między ceną pierwotną a ceną końcową. Mówi, ile pieniędzy oszczędzasz, korzystając z rabatu.",
+    "q3": "Czy mogę użyć tego kalkulatora dla rabatów większych niż 100%?",
+    "a3": "Nie, rabaty powyżej 100% dałyby ujemną cenę końcową, co nie jest realistyczne w typowych scenariuszach handlowych. Ten kalkulator ogranicza procent rabatu do maksymalnie 100%, co oznacza, że cena końcowa może wynieść co najwyżej zero.",
+    "q4": "Co oznacza wynik 'Cena końcowa'?",
+    "a4": "'Cena końcowa' to kwota, którą faktycznie płacisz po zastosowaniu rabatu. Oblicza się ją, odejmując kwotę rabatu od ceny pierwotnej. Na przykład, jeśli cena pierwotna wynosi 100 zł, a rabat 20%, cena końcowa wynosi 80 zł.",
+    "q5": "Czy istnieje standardowa instytucja regulująca obliczenia rabatów?",
+    "a5": "Obliczenia rabatów opierają się na podstawowej arytmetyce i są powszechnie stosowane w handlu i finansach. Nie ma jednej instytucji nadzorującej, ale formuła opiera się na standardowych zasadach obliczania procentów, nauczanych w matematyce i stosowanych przez firmy na całym świecie."
+  },
+  "content": {
+    "whatIs": "Ten kalkulator rabatu oblicza cenę promocyjną i całkowite oszczędności po zastosowaniu procentowego rabatu do ceny pierwotnej. Wykorzystuje prostą koncepcję odejmowania procentu od ceny pierwotnej w celu uzyskania kosztu końcowego.",
+    "formula": "Kwota rabatu jest obliczana jako: Kwota rabatu = Cena pierwotna × (Procent rabatu / 100). Cena końcowa wynosi: Cena końcowa = Cena pierwotna - Kwota rabatu. Na przykład 20% rabatu na 100 zł daje rabat 20 zł i cenę końcową 80 zł.",
+    "example": "Załóżmy, że masz przedmiot pierwotnie wyceniony na 250 zł z 15% rabatem. Kwota rabatu wynosi 250 zł × 0,15 = 37,50 zł, więc cena końcowa to 250 zł - 37,50 zł = 212,50 zł. Oszczędzasz 37,50 zł.",
+    "howItWorks_1": "Wprowadź cenę pierwotną przedmiotu w złotych (np. 250) oraz procent rabatu (np. 15) w odpowiednie pola.",
+    "howItWorks_2": "Kliknij przycisk Oblicz. Narzędzie natychmiast stosuje formułę rabatu, aby obliczyć kwotę rabatu i cenę końcową.",
+    "howItWorks_3": "Wyniki pokazują 'Oszczędzasz' (kwotę rabatu w złotych) oraz 'Cenę końcową' (kwotę do zapłaty po rabacie). Użyj ich do porównania cen lub zaplanowania zakupu."
+  }
+}

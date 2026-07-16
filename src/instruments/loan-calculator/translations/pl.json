@@ -1,0 +1,34 @@
+{
+  "title": "Kalkulator kredytowy — miesięczna rata i całkowite odsetki",
+  "description": "Oblicz miesięczną ratę kredytu, całkowite odsetki oraz pełny harmonogram spłat. Działa dla kredytów osobistych, samochodowych i innych.",
+  "calculate": "Oblicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_principal": "Kwota kredytu",
+  "label_annualRate": "Roczne oprocentowanie",
+  "label_termMonths": "Okres kredytu",
+  "label_monthlyPayment": "Miesięczna rata",
+  "label_totalPayment": "Całkowita płatność",
+  "label_totalInterest": "Całkowite odsetki",
+  "faq": {
+    "title": "Najczęściej zadawane pytania",
+    "q1": "Jak obliczana jest miesięczna stopa procentowa z rocznej stopy?",
+    "a1": "Miesięczna stopa procentowa to roczna stopa podzielona przez 12. Na przykład 6% rocznie to 0,5% miesięcznie (0,06/12 = 0,005). Ta miesięczna stopa jest używana we wzorze amortyzacji do obliczania rat.",
+    "q2": "Co oznacza 'Całkowite odsetki'?",
+    "a2": "Całkowite odsetki to suma odsetek zapłaconych przez cały okres kredytu. Oblicza się je jako całkowitą płatność minus kwota kredytu. Dla kredytu 10 000 USD przy 5% na 36 miesięcy całkowite odsetki wynoszą 789,56 USD.",
+    "q3": "Czy ten kalkulator może być używany do kredytów hipotecznych lub studenckich?",
+    "a3": "Ten kalkulator jest przeznaczony dla kredytów o stałym oprocentowaniu i równych ratach. W przypadku kredytów hipotecznych nie uwzględnia dodatkowych kosztów, takich jak podatki od nieruchomości i ubezpieczenie. W przypadku kredytów studenckich działa, jeśli oprocentowanie jest stałe, a raty równe. Kredyty o zmiennym oprocentowaniu wymagają innego podejścia.",
+    "q4": "Co zawiera miesięczna rata?",
+    "a4": "Miesięczna rata obejmuje zarówno część kapitałową, jak i odsetkową, amortyzowane tak, aby kredyt został w pełni spłacony na koniec okresu. Nie obejmuje opłat, podatków ani ubezpieczenia.",
+    "q5": "Czy istnieje standardowy wzór używany przez banki do amortyzacji kredytu?",
+    "a5": "Tak, używany wzór to standardowy wzór amortyzacji uznawany przez instytucje finansowe i organy regulacyjne, takie jak Consumer Financial Protection Bureau (CFPB). Zapewnia on równe miesięczne raty przez cały okres kredytu."
+  },
+  "content": {
+    "whatIs": "Ten kalkulator kredytowy oblicza miesięczną ratę, całkowitą płatność i całkowite odsetki dla kredytu o stałym oprocentowaniu przy użyciu standardowego wzoru amortyzacji. Jest idealny dla kredytów osobistych, samochodowych i innych kredytów ratalnych o stałym oprocentowaniu i okresie.",
+    "formula": "Miesięczna rata obliczana jest według wzoru: M = P * [r(1+r)^n] / [(1+r)^n - 1], gdzie M to miesięczna rata, P to kwota kredytu, r to miesięczna stopa procentowa (roczna stopa podzielona przez 12), a n to liczba miesięcznych rat (okres w miesiącach). Całkowita płatność = M * n, a całkowite odsetki = całkowita płatność - P.",
+    "example": "Dla kredytu 10 000 USD przy 5% rocznie na 36 miesięcy: miesięczna stopa = 0,05/12 ≈ 0,004167, n = 36. Miesięczna rata = 10000 * [0,004167*(1,004167)^36] / [(1,004167)^36 - 1] ≈ 299,71 USD. Całkowita płatność = 299,71 * 36 ≈ 10 789,56 USD, całkowite odsetki = 789,56 USD.",
+    "howItWorks_1": "Wprowadź kwotę kredytu w dolarach, roczne oprocentowanie w procentach oraz okres kredytu w miesiącach. Upewnij się, że wartości mieszczą się w dozwolonych zakresach.",
+    "howItWorks_2": "Kliknij przycisk Oblicz. Narzędzie zastosuje wzór amortyzacji, aby obliczyć miesięczną ratę, całkowitą płatność i całkowite odsetki na podstawie wprowadzonych danych.",
+    "howItWorks_3": "Przejrzyj wyniki: Miesięczna rata to kwota, którą płacisz co miesiąc; Całkowita płatność to suma wszystkich płatności w okresie; Całkowite odsetki to koszt pożyczki. Użyj ich do porównania ofert kredytowych lub planowania budżetu."
+  }
+}

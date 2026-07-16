@@ -1,0 +1,34 @@
+{
+  "title": "Calculadora de Préstamos — Pago Mensual e Interés Total",
+  "description": "Calcule su pago mensual, interés total pagado y el cronograma de amortización completo. Funciona para préstamos personales, préstamos para automóviles y más.",
+  "calculate": "Calcular",
+  "reset": "Restablecer",
+  "result": "Resultado",
+  "label_principal": "Monto del Préstamo",
+  "label_annualRate": "Tasa de Interés Anual",
+  "label_termMonths": "Plazo del Préstamo",
+  "label_monthlyPayment": "Pago Mensual",
+  "label_totalPayment": "Pago Total",
+  "label_totalInterest": "Interés Total",
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Cómo se deriva la tasa de interés mensual de la tasa anual?",
+    "a1": "La tasa de interés mensual es la tasa anual dividida entre 12. Por ejemplo, una tasa anual del 6% se convierte en 0.5% mensual (0.06/12 = 0.005). Esta tasa mensual se utiliza en la fórmula de amortización para calcular los pagos.",
+    "q2": "¿Qué representa el 'Interés Total'?",
+    "a2": "El Interés Total es la cantidad total de intereses que pagará durante todo el plazo del préstamo. Se calcula como el Pago Total menos el Principal. Para un préstamo de $10,000 al 5% a 36 meses, el interés total es $789.56.",
+    "q3": "¿Se puede usar esta calculadora para hipotecas o préstamos estudiantiles?",
+    "a3": "Esta calculadora está diseñada para préstamos a tasa fija. Para hipotecas, no se incluyen costos adicionales como impuestos a la propiedad y seguros. Para préstamos estudiantiles, funciona si la tasa de interés es fija y los pagos son nivelados. Los préstamos de tasa variable requieren un enfoque diferente.",
+    "q4": "¿Qué incluye el Pago Mensual?",
+    "a4": "El Pago Mensual incluye tanto el capital como los intereses, amortizados para que el préstamo se pague por completo al final del plazo. No incluye comisiones, impuestos ni seguros.",
+    "q5": "¿Existe una fórmula estándar utilizada por los bancos para la amortización de préstamos?",
+    "a5": "Sí, la fórmula utilizada es la fórmula de amortización estándar reconocida por instituciones financieras y organismos reguladores como la Oficina de Protección Financiera del Consumidor (CFPB). Garantiza pagos mensuales iguales durante el plazo del préstamo."
+  },
+  "content": {
+    "whatIs": "Esta calculadora de préstamos calcula su pago mensual, pago total e interés total para un préstamo a tasa fija utilizando la fórmula de amortización estándar. Es ideal para préstamos personales, préstamos para automóviles y otros préstamos a plazos con tasa de interés y plazo fijos.",
+    "formula": "El pago mensual se calcula usando la fórmula: M = P * [r(1+r)^n] / [(1+r)^n - 1], donde M es el pago mensual, P es el monto principal del préstamo, r es la tasa de interés mensual (tasa anual dividida entre 12), y n es el número de pagos mensuales (plazo en meses). Pago total = M * n, e interés total = pago total - P.",
+    "example": "Para un préstamo de $10,000 al 5% de interés anual a 36 meses: tasa mensual = 0.05/12 ≈ 0.004167, n = 36. Pago mensual = 10000 * [0.004167*(1.004167)^36] / [(1.004167)^36 - 1] ≈ $299.71. Pago total = $299.71 * 36 ≈ $10,789.56, interés total = $789.56.",
+    "howItWorks_1": "Ingrese el monto del préstamo (principal) en dólares, la tasa de interés anual como porcentaje y el plazo del préstamo en meses. Asegúrese de que los valores estén dentro de los rangos permitidos.",
+    "howItWorks_2": "Haga clic en el botón Calcular. La herramienta aplica la fórmula de amortización para calcular su pago mensual, pago total e interés total según los datos ingresados.",
+    "howItWorks_3": "Revise los resultados: el Pago Mensual es lo que paga cada mes; el Pago Total es la suma de todos los pagos durante el plazo; el Interés Total es el costo del préstamo. Úselos para comparar ofertas de préstamos o planificar su presupuesto."
+  }
+}
