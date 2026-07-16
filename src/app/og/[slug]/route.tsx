@@ -1,7 +1,4 @@
 import { ImageResponse } from 'next/og'
-import { getInstrument } from '../../../lib/instruments'
-
-export const runtime = 'edge'
 
 const CATEGORY_CONFIG: Record<string, { icon: string; color: string; bg: string }> = {
   health:     { icon: '❤️', color: '#ef4444', bg: '#fef2f2' },
@@ -10,13 +7,46 @@ const CATEGORY_CONFIG: Record<string, { icon: string; color: string; bg: string 
   conversion: { icon: '🔄', color: '#8b5cf6', bg: '#f5f3ff' },
 }
 
+const SLUG_META: Record<string, { title: string; category: string }> = {
+  'bmi-calculator': { title: 'BMI Calculator — Body Mass Index, Category & Health Tips', category: 'health' },
+  'bmr-calculator': { title: 'BMR Calculator — Basal Metabolic Rate & Daily Calories', category: 'health' },
+  'body-fat-calculator': { title: 'Body Fat Calculator — Body Fat % via Navy & BMI Methods', category: 'health' },
+  'ideal-weight-calculator': { title: 'Ideal Weight Calculator — Find Your Healthy Weight Range', category: 'health' },
+  'tdee-calculator': { title: 'TDEE Calculator — Total Daily Energy & Calories by Activity', category: 'health' },
+  'calorie-deficit-calculator': { title: 'Calorie Deficit Calculator — Daily Calories to Lose Weight', category: 'health' },
+  'ovulation-calculator': { title: 'Ovulation Calculator — Fertile Window & Ovulation Date', category: 'health' },
+  'sleep-calculator': { title: 'Sleep Calculator — Best Bedtime & Wake-Up Time Finder', category: 'health' },
+  'mortgage-calculator': { title: 'Mortgage Calculator — Monthly Payment & Amortization', category: 'finance' },
+  'loan-calculator': { title: 'Loan Calculator — Monthly Payment & Total Interest', category: 'finance' },
+  'compound-interest-calculator': { title: 'Compound Interest Calculator — Investment Growth & Returns', category: 'finance' },
+  'investment-calculator': { title: 'Investment Calculator — ROI, Growth & Future Value', category: 'finance' },
+  'retirement-calculator': { title: 'Retirement Calculator — Savings Projection & Monthly Income', category: 'finance' },
+  'inflation-calculator': { title: 'Inflation Calculator — Purchasing Power & CPI Adjustment', category: 'finance' },
+  'tax-calculator': { title: 'Tax Calculator — US Federal & Effective Income Tax Rate', category: 'finance' },
+  'salary-calculator': { title: 'Salary Calculator — Hourly to Annual Salary Converter', category: 'finance' },
+  'vat-calculator': { title: 'VAT Calculator — Add or Remove VAT from Any Price Fast', category: 'finance' },
+  'discount-calculator': { title: 'Discount Calculator — Sale Price, Savings & % Off Amount', category: 'finance' },
+  'percentage-calculator': { title: 'Percentage Calculator — % Of, Change, Increase & Decrease', category: 'math' },
+  'fraction-calculator': { title: 'Fraction Calculator — Add, Subtract, Multiply, Divide', category: 'math' },
+  'ratio-calculator': { title: 'Ratio Calculator — Simplify, Scale & Solve Proportions', category: 'math' },
+  'average-calculator': { title: 'Average Calculator — Mean, Median, Mode, Range & More', category: 'math' },
+  'scientific-notation-calculator': { title: 'Scientific Notation Calculator — Convert & Calculate', category: 'math' },
+  'length-converter': { title: 'Length Converter — Meters, Feet, Inches, Miles & More', category: 'conversion' },
+  'weight-converter': { title: 'Weight Converter — kg, lbs, oz, Stones, Grams & More', category: 'conversion' },
+  'temperature-converter': { title: 'Temperature Converter — Celsius, Fahrenheit, Kelvin', category: 'conversion' },
+  'area-calculator': { title: 'Area Calculator — Rectangle, Circle, Triangle & More', category: 'conversion' },
+  'area-converter': { title: 'Area Converter — Convert m², ft², acres, hectares & more', category: 'conversion' },
+  'volume-calculator': { title: 'Volume Calculator — Cube, Sphere, Cylinder & Cone Fast', category: 'conversion' },
+  'volume-converter': { title: 'Volume Converter — Liters, Gallons, ml, Cups & more', category: 'conversion' },
+}
+
 export async function GET(
   _req: Request,
   { params }: { params: { slug: string } }
 ) {
-  const instrument = getInstrument(params.slug)
-  const title = instrument?.seoTitle ?? params.slug.replace(/-/g, ' ')
-  const category = instrument?.category ?? 'math'
+  const meta = SLUG_META[params.slug]
+  const title = meta?.title ?? params.slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+  const category = meta?.category ?? 'math'
   const cfg = CATEGORY_CONFIG[category] ?? CATEGORY_CONFIG['math']!
 
   return new ImageResponse(
