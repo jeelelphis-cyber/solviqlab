@@ -7,11 +7,14 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 export const metadata: Metadata = {
   metadataBase: new URL('https://solviqlab.com'),
   title: {
-    default: 'CALCO — Free Online Calculators',
-    template: '%s | CALCO',
+    default: 'SolviqLab — Free Professional Calculators',
+    template: '%s | SolviqLab',
   },
   description:
-    'Professional free calculators for health, finance, math and unit conversions.',
+    'Free professional calculators for health, finance, math and unit conversions. Trusted results based on WHO, CFPB, NIST standards.',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({

@@ -279,9 +279,8 @@ export function NavBar({ lang, slugToName = {} }: { lang: string; slugToName?: R
 
           {/* Logo */}
           <Link href={`/${lang}`} className="flex-shrink-0">
-            <span className="text-xl font-bold">
-              <span className="text-blue-600">C</span>
-              <span className="text-slate-900 dark:text-white">ALCO</span>
+            <span className="text-xl font-bold tracking-tight">
+              <span className="text-blue-600">Solviq</span><span className="text-slate-900 dark:text-white">Lab</span>
             </span>
           </Link>
 
