@@ -36,6 +36,7 @@ import { SleepCalculatorClient } from '../../../../components/instruments/SleepC
 import { InvestmentCalculatorClient } from '../../../../components/instruments/InvestmentCalculatorClient'
 import { CalorieCalculatorClient } from '../../../../components/instruments/CalorieCalculatorClient'
 import { SavingsCalculatorClient } from '../../../../components/instruments/SavingsCalculatorClient'
+import { TipCalculatorClient } from '../../../../components/instruments/TipCalculatorClient'
 
 interface PageProps {
   params: { lang: string; slug: string }
@@ -459,6 +460,7 @@ function InstrumentUI({
     case 'investment-calculator': return <InvestmentCalculatorClient translations={translations} lang={lang} />
     case 'calorie-calculator': return <CalorieCalculatorClient translations={translations} lang={lang} />
     case 'savings-calculator': return <SavingsCalculatorClient translations={translations} lang={lang} />
+    case 'tip-calculator': return <TipCalculatorClient translations={translations} lang={lang} />
     default:
       return (
         <div className="text-slate-500 dark:text-slate-400 text-sm py-4 text-center">
