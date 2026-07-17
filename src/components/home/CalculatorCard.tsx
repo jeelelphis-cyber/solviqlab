@@ -2,6 +2,14 @@ import Link from 'next/link'
 import { t } from '../../lib/ui-strings'
 import type { InstrumentMeta } from '../../lib/instruments'
 
+function getProductSegment(category: string): 'calculators' | 'converters' {
+  return category === 'conversion' ? 'converters' : 'calculators'
+}
+
+function getInstrumentPath(lang: string, slug: string, category: string): string {
+  return `/${lang}/${getProductSegment(category)}/${slug}`
+}
+
 const CATEGORY_ICONS: Record<string, string> = {
   health: '❤️', finance: '💰', math: '🧮', conversion: '🔄', utility: '⚙️',
 }
@@ -21,7 +29,7 @@ export function CalculatorCard({ instrument, lang }: { instrument: InstrumentMet
   const catLabel = s.categoryLabels[instrument.category] ?? instrument.category
 
   return (
-    <Link href={`/${lang}/${instrument.slug}`} className="group block">
+    <Link href={getInstrumentPath(lang, instrument.slug, instrument.category)} className="group block">
       <div className="h-full bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-sm hover:shadow-md hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-200">
         <div className="flex items-start justify-between mb-3">
           <span className="text-2xl">{icon}</span>

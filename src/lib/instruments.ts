@@ -103,6 +103,20 @@ export function getAllSlugs(): string[] {
     .map(d => d.name)
 }
 
+export const BASE_URL = 'https://solviqlab.com'
+
+export function getProductSegment(category: string): 'calculators' | 'converters' {
+  return category === 'conversion' ? 'converters' : 'calculators'
+}
+
+export function getInstrumentPath(lang: string, slug: string, category: string): string {
+  return `/${lang}/${getProductSegment(category)}/${slug}`
+}
+
+export function getInstrumentCanonical(lang: string, slug: string, category: string): string {
+  return `${BASE_URL}${getInstrumentPath(lang, slug, category)}`
+}
+
 // Returns instruments with name/seoTitle/seoDescription overridden from translations
 export function getAllInstrumentsLocalized(lang: string): InstrumentMeta[] {
   const instruments = getAllInstruments()

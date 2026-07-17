@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getAllInstrumentsLocalized, SUPPORTED_LANGS } from '../../../../lib/instruments'
+import { getAllInstrumentsLocalized, SUPPORTED_LANGS, getInstrumentPath } from '../../../../lib/instruments'
 import { getNavCategories } from '../../../../lib/navigation'
 import { t } from '../../../../lib/ui-strings'
 
@@ -118,7 +118,7 @@ export default function CategoryPage({ params }: PageProps) {
         {instruments.map(inst => (
           <Link
             key={inst.slug}
-            href={`/${lang}/${inst.slug}`}
+            href={getInstrumentPath(lang, inst.slug, inst.category)}
             className="group block bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-5 hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-md transition-all"
           >
             <h2 className="text-base font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">

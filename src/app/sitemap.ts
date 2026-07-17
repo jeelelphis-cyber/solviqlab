@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { getAllInstruments, SUPPORTED_LANGS } from '../lib/instruments'
+import { getAllInstruments, SUPPORTED_LANGS, getInstrumentCanonical } from '../lib/instruments'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const instruments = getAllInstruments()
@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const instrumentUrls = instruments.flatMap(inst =>
     SUPPORTED_LANGS.map(lang => ({
-      url: `${base}/${lang}/${inst.slug}`,
+      url: getInstrumentCanonical(lang, inst.slug, inst.category),
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: ['health', 'finance'].includes(inst.category) ? 0.9 : 0.8,
