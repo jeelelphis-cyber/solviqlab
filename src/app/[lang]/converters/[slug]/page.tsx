@@ -512,19 +512,26 @@ function ContentSection({ translations, primaryKeyword, lang }: { translations: 
     content['howItWorks_3'],
   ].filter(Boolean)
 
+  const tips = [
+    content['tips_1'],
+    content['tips_2'],
+    content['tips_3'],
+    content['tips_4'],
+  ].filter(Boolean)
+
   const kw = primaryKeyword.replace(/-/g, ' ')
   const kwCapitalized = kw.charAt(0).toUpperCase() + kw.slice(1)
 
   return (
     <div className="space-y-8 mt-10">
-      {/* What Is — H2 with keyword */}
+      {/* What Is */}
       <section>
         <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
           {s.contentWhatIs(kwCapitalized)}
         </h2>
-        <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-          {content['whatIs']}
-        </p>
+        <div className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed space-y-3">
+          {content['whatIs'].split('\n\n').map((p, i) => <p key={i}>{p}</p>)}
+        </div>
       </section>
 
       {/* Formula */}
@@ -547,9 +554,9 @@ function ContentSection({ translations, primaryKeyword, lang }: { translations: 
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
             {s.contentExample(kwCapitalized)}
           </h2>
-          <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-            {content['example']}
-          </p>
+          <div className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed space-y-3">
+            {content['example'].split('\n\n').map((p, i) => <p key={i}>{p}</p>)}
+          </div>
         </section>
       )}
 
@@ -569,6 +576,47 @@ function ContentSection({ translations, primaryKeyword, lang }: { translations: 
               </li>
             ))}
           </ol>
+        </section>
+      )}
+
+      {/* Why It Matters */}
+      {content['whyItMatters'] && (
+        <section>
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+            {s.contentWhyMatters(kwCapitalized)}
+          </h2>
+          <div className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed space-y-3">
+            {content['whyItMatters'].split('\n\n').map((p, i) => <p key={i}>{p}</p>)}
+          </div>
+        </section>
+      )}
+
+      {/* Limitations */}
+      {content['limitations'] && (
+        <section>
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+            {s.contentLimitations}
+          </h2>
+          <div className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed space-y-3">
+            {content['limitations'].split('\n\n').map((p, i) => <p key={i}>{p}</p>)}
+          </div>
+        </section>
+      )}
+
+      {/* Tips */}
+      {tips.length > 0 && (
+        <section>
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">
+            {s.contentTips}
+          </h2>
+          <ul className="space-y-3">
+            {tips.map((tip, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 text-xs font-bold flex items-center justify-center mt-0.5">✓</span>
+                <span className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">{tip}</span>
+              </li>
+            ))}
+          </ul>
         </section>
       )}
     </div>
