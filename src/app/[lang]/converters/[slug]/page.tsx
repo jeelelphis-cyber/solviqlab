@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { EmbedSection } from '../../../../components/EmbedSection'
 import { getInstrument, getTranslations, getAllSlugs, SUPPORTED_LANGS, getAllInstrumentsLocalized, getProductSegment, getInstrumentPath, getInstrumentCanonical, BASE_URL } from '../../../../lib/instruments'
 import { getJourneyNextSteps, getJourneysForSlug, NAV_CATEGORIES } from '../../../../lib/navigation'
 import { t, tr } from '../../../../lib/ui-strings'
@@ -361,9 +362,12 @@ export default async function InstrumentPage({ params }: PageProps) {
         </div>
 
         {/* Calculator Card */}
-        <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 mb-8 shadow-sm">
+        <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 mb-4 shadow-sm">
           <InstrumentUI slug={slug} lang={lang} translations={translations} liveRates={liveRates} />
         </div>
+
+        {/* Embed Widget */}
+        <EmbedSection slug={slug} title={pageTitle} />
 
         {/* SEO Content Blocks */}
         <ContentSection translations={translations} primaryKeyword={pageTitle.split(' — ')[0]!} lang={lang} />
