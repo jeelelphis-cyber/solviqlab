@@ -12,18 +12,18 @@ export function generateMetadata({ params }: { params: { lang: string } }): Meta
   const s = t(params.lang)
   const instruments = getAllInstrumentsLocalized(params.lang)
   const count = instruments.length
-  const title = `SolviqLab — ${count} Free Professional Calculators`
+  const titleText = `SolviqLab — ${count} Free Professional Calculators`
   const description = `Free online calculators for health, finance, math and unit conversions. ${count}+ tools trusted by millions. Based on WHO, CFPB, NIST standards. No sign-up required.`
   const langs = Object.fromEntries(SUPPORTED_LANGS.map(l => [l, `${BASE}/${l}`]))
   return {
-    title,
+    title: { absolute: titleText },
     description,
     alternates: {
       canonical: `${BASE}/${params.lang}`,
       languages: { ...langs, 'x-default': `${BASE}/en` },
     },
     openGraph: {
-      title,
+      title: titleText,
       description,
       url: `${BASE}/${params.lang}`,
       type: 'website',
@@ -31,7 +31,7 @@ export function generateMetadata({ params }: { params: { lang: string } }): Meta
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: titleText,
       description,
     },
   }
