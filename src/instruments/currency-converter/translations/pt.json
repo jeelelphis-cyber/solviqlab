@@ -1,0 +1,37 @@
+{
+  "title": "Conversor de Moedas — Converta USD, EUR, GBP e 50+ Moedas",
+  "description": "Converta entre 50+ moedas mundiais com taxas de refer\u00eancia atualizadas. USD para EUR, GBP para USD, EUR para UAH e mais. Conversor de moeda gratuito.",
+  "calculate": "Converter",
+  "reset": "Redefinir",
+  "result": "Resultado",
+  "label_amount": "Valor",
+  "label_fromCurrency": "Moeda de origem",
+  "label_toCurrency": "Moeda de destino",
+  "label_result": "Valor convertido",
+  "label_rate": "Taxa de c\u00e2mbio",
+  "label_inverseRate": "Taxa inversa",
+  "swap_button": "Inverter \u21c4",
+  "popular_pairs": "Pares populares",
+  "rate_disclaimer": "As taxas s\u00e3o valores de refer\u00eancia aproximados. Para transa\u00e7\u00f5es, use a taxa do seu banco.",
+  "faq": {
+    "title": "Perguntas frequentes",
+    "q1": "Como \u00e9 calculada a taxa de c\u00e2mbio?",
+    "a1": "As taxas de c\u00e2mbio nesta ferramenta s\u00e3o calculadas usando o d\u00f3lar americano (USD) como moeda base. Cada moeda tem uma taxa definida em rela\u00e7\u00e3o ao USD. A taxa cruzada entre duas moedas n\u00e3o USD \u00e9: taxa = taxaUSD(destino) / taxaUSD(origem). Por exemplo, EUR para GBP = 0,7870 / 0,9240 \u2248 0,8518.",
+    "q2": "Essas taxas s\u00e3o ao vivo ou fixas?",
+    "a2": "As taxas nesta ferramenta s\u00e3o de refer\u00eancia/indicativas e atualizadas periodicamente. Refletem taxas aproximadas de mercado m\u00e9dio e s\u00e3o adequadas para fins informativos e educacionais. Para transa\u00e7\u00f5es financeiras reais, sempre use a taxa atual do seu banco, corretora ou servi\u00e7o forex ao vivo.",
+    "q3": "O que \u00e9 o spread bid-ask?",
+    "a3": "O spread bid-ask \u00e9 a diferen\u00e7a entre a taxa na qual um banco compra (bid) e vende (ask) moeda. As institui\u00e7\u00f5es financeiras lucram com esse spread. Esta ferramenta mostra a taxa de mercado m\u00e9dio, o ponto m\u00e9dio entre bid e ask. A taxa real ao trocar dinheiro \u00e9 tipicamente menos favor\u00e1vel.",
+    "q4": "Por que EUR/USD difere de USD/EUR?",
+    "a4": "S\u00e3o taxas inversas. Se EUR/USD \u2248 1,0823, significa 1 EUR = 1,0823 USD. Inversamente, USD/EUR \u2248 0,9240, ou seja, 1 USD = 0,9240 EUR. A rela\u00e7\u00e3o \u00e9: taxaInversa = 1 / taxa. Esta ferramenta mostra ambas as taxas para sua conveni\u00eancia.",
+    "q5": "Quais moedas s\u00e3o suportadas?",
+    "a5": "Esta ferramenta suporta 50+ moedas principais e menores de todo o mundo, incluindo USD, EUR, GBP, UAH, JPY, CNY, INR, BRL, CAD, AUD, CHF e muitas mais da \u00c1sia, \u00c1frica, Am\u00e9rica Latina e Europa Oriental."
+  },
+  "content": {
+    "whatIs": "Um conversor de moedas \u00e9 uma ferramenta que calcula o valor equivalente de uma moeda em outra usando taxas de c\u00e2mbio. Este conversor usa o d\u00f3lar americano (USD) como moeda base e calcula taxas cruzadas entre qualquer uma das 50+ moedas suportadas. \u00c9 projetado para convers\u00f5es de refer\u00eancia r\u00e1pidas para planejamento de viagens, compras internacionais e compara\u00e7\u00e3o de pre\u00e7os.",
+    "formula": "taxa = taxaUSD(destino) / taxaUSD(origem)\nresultado = valor \u00d7 taxa\ntaxaInversa = 1 / taxa\n\nTodas as moedas s\u00e3o primeiro normalizadas para USD, depois convertidas para a moeda de destino.",
+    "example": "Converter 500 USD para EUR.\nTaxa USD = 1,0 (base), taxa EUR = 0,9240.\nTaxa cruzada = 0,9240 / 1,0 = 0,9240.\nResultado = 500 \u00d7 0,9240 = \u20ac462,00.\nInverso: 1 EUR = 1 / 0,9240 \u2248 1,0823 USD.",
+    "howItWorks_1": "Digite o valor a converter no campo 'Valor'. Voc\u00ea pode digitar qualquer n\u00famero positivo, incluindo decimais. O padr\u00e3o \u00e9 1 para consulta r\u00e1pida de taxa.",
+    "howItWorks_2": "Selecione a moeda de origem no menu 'Moeda de origem' e a moeda de destino em 'Moeda de destino'. Use o bot\u00e3o Inverter (\u21c4) para alternar rapidamente a dire\u00e7\u00e3o da convers\u00e3o.",
+    "howItWorks_3": "O resultado \u00e9 atualizado automaticamente conforme voc\u00ea digita. Voc\u00ea ver\u00e1 o valor convertido em destaque, junto com a taxa de c\u00e2mbio (1 origem = X destino) e a taxa inversa. Use os bot\u00f5es de pares populares para acesso r\u00e1pido."
+  }
+}

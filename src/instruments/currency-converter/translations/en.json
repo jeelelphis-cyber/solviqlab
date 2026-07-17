@@ -1,0 +1,37 @@
+{
+  "title": "Currency Converter — Convert USD, EUR, GBP & 50+ Currencies",
+  "description": "Convert between 50+ world currencies with up-to-date reference rates. USD to EUR, GBP to USD, EUR to UAH and more. Free currency conversion tool.",
+  "calculate": "Convert",
+  "reset": "Reset",
+  "result": "Result",
+  "label_amount": "Amount",
+  "label_fromCurrency": "From Currency",
+  "label_toCurrency": "To Currency",
+  "label_result": "Converted Amount",
+  "label_rate": "Exchange Rate",
+  "label_inverseRate": "Inverse Rate",
+  "swap_button": "Swap \u21c4",
+  "popular_pairs": "Popular pairs",
+  "rate_disclaimer": "Rates are approximate reference values. For transactions, use your bank's rate.",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How is the exchange rate calculated?",
+    "a1": "Exchange rates in this tool are calculated using the US Dollar (USD) as the base currency. Each currency has a defined rate relative to USD. The cross rate between any two non-USD currencies is calculated as: rate = toCurrencyUSDRate / fromCurrencyUSDRate. For example, EUR to GBP = 0.7870 / 0.9240 \u2248 0.8518, meaning 1 EUR \u2248 0.8518 GBP.",
+    "q2": "Are these rates live or fixed?",
+    "a2": "The rates in this tool are reference/indicative rates updated periodically. They reflect approximate mid-market rates and are suitable for informational and educational purposes. For actual financial transactions such as wire transfers, forex trading, or international purchases, always use the current rate provided by your bank, broker, or a live forex service.",
+    "q3": "What is the bid-ask spread?",
+    "a3": "The bid-ask spread is the difference between the rate at which a bank or broker buys currency (bid) and the rate at which they sell it (ask). Financial institutions profit from this spread. This tool shows the mid-market rate, which is the midpoint between bid and ask. The actual rate you receive when exchanging money will typically be less favorable than the mid-market rate.",
+    "q4": "Why does EUR/USD differ from USD/EUR?",
+    "a4": "These are inverse rates. If EUR/USD \u2248 1.0823, it means 1 EUR = 1.0823 USD. Conversely, USD/EUR \u2248 0.9240, meaning 1 USD = 0.9240 EUR. The relationship is: inverseRate = 1 / rate. This tool shows both the direct rate and the inverse rate for your convenience.",
+    "q5": "What currencies are supported?",
+    "a5": "This tool supports 50+ major and minor currencies from around the world, including USD (US Dollar), EUR (Euro), GBP (British Pound), UAH (Ukrainian Hryvnia), JPY (Japanese Yen), CNY (Chinese Yuan), INR (Indian Rupee), BRL (Brazilian Real), CAD (Canadian Dollar), AUD (Australian Dollar), CHF (Swiss Franc), and many more from Asia, Africa, Latin America, and Eastern Europe."
+  },
+  "content": {
+    "whatIs": "A currency converter is a tool that calculates the equivalent value of one currency in another using exchange rates. This converter uses the US Dollar (USD) as the base currency and calculates cross rates between any two of the supported 50+ currencies. It is designed for quick reference conversions for travel planning, international shopping, price comparisons, and financial education.",
+    "formula": "rate = USD_rate(toCurrency) / USD_rate(fromCurrency)\nresult = amount \u00d7 rate\ninverseRate = 1 / rate\n\nAll currencies are first normalized to USD, then converted to the target currency.",
+    "example": "Convert $500 USD to EUR.\nUSD rate = 1.0 (base), EUR rate = 0.9240.\nCross rate = 0.9240 / 1.0 = 0.9240.\nResult = 500 \u00d7 0.9240 = \u20ac462.00.\nInverse: 1 EUR = 1 / 0.9240 \u2248 1.0823 USD.",
+    "howItWorks_1": "Enter the amount you want to convert in the 'Amount' field. You can type any positive number, including decimals. The default is set to 1 for quick rate lookup.",
+    "howItWorks_2": "Select the source currency from the 'From Currency' dropdown and the target currency from the 'To Currency' dropdown. You can use the Swap button (\u21c4) to quickly reverse the conversion direction.",
+    "howItWorks_3": "The result updates automatically as you type. You will see the converted amount prominently displayed, along with the exchange rate (1 from = X to) and the inverse rate (1 to = X from). Use popular pair buttons for quick access to common conversions."
+  }
+}

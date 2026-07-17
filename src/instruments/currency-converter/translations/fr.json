@@ -1,0 +1,37 @@
+{
+  "title": "Convertisseur de Devises — Convertir USD, EUR, GBP et 50+ Devises",
+  "description": "Convertissez entre 50+ devises mondiales avec des taux de r\u00e9f\u00e9rence actualis\u00e9s. USD en EUR, GBP en USD, EUR en UAH et plus. Outil de conversion de devise gratuit.",
+  "calculate": "Convertir",
+  "reset": "R\u00e9initialiser",
+  "result": "R\u00e9sultat",
+  "label_amount": "Montant",
+  "label_fromCurrency": "Devise source",
+  "label_toCurrency": "Devise cible",
+  "label_result": "Montant converti",
+  "label_rate": "Taux de change",
+  "label_inverseRate": "Taux inverse",
+  "swap_button": "\u00c9changer \u21c4",
+  "popular_pairs": "Paires populaires",
+  "rate_disclaimer": "Les taux sont des valeurs de r\u00e9f\u00e9rence approximatives. Pour les transactions, utilisez le taux de votre banque.",
+  "faq": {
+    "title": "Questions fr\u00e9quentes",
+    "q1": "Comment le taux de change est-il calcul\u00e9 ?",
+    "a1": "Les taux de change dans cet outil sont calcul\u00e9s en utilisant le dollar am\u00e9ricain (USD) comme devise de base. Chaque devise a un taux d\u00e9fini par rapport au USD. Le taux crois\u00e9 entre deux devises non-USD est : taux = tauxUSD(cible) / tauxUSD(source). Par exemple, EUR vers GBP = 0,7870 / 0,9240 \u2248 0,8518.",
+    "q2": "Ces taux sont-ils en temps r\u00e9el ou fixes ?",
+    "a2": "Les taux de cet outil sont des taux de r\u00e9f\u00e9rence/indicatifs mis \u00e0 jour p\u00e9riodiquement. Ils refl\u00e8tent des taux de march\u00e9 moyens approximatifs, adapt\u00e9s \u00e0 des fins informatives et \u00e9ducatives. Pour des transactions financi\u00e8res r\u00e9elles, utilisez toujours le taux actuel de votre banque, courtier ou service forex en direct.",
+    "q3": "Qu'est-ce que le spread bid-ask ?",
+    "a3": "Le spread bid-ask est la diff\u00e9rence entre le taux d'achat (bid) et le taux de vente (ask) d'une banque ou d'un courtier. Les institutions financi\u00e8res tirent profit de ce spread. Cet outil affiche le taux de march\u00e9 moyen, point m\u00e9dian entre bid et ask. Le taux r\u00e9el lors d'un \u00e9change est g\u00e9n\u00e9ralement moins avantageux.",
+    "q4": "Pourquoi EUR/USD diff\u00e8re-t-il de USD/EUR ?",
+    "a4": "Ce sont des taux inverses. Si EUR/USD \u2248 1,0823, cela signifie 1 EUR = 1,0823 USD. Inversement, USD/EUR \u2248 0,9240, soit 1 USD = 0,9240 EUR. La relation est : tauxInverse = 1 / taux. Cet outil affiche les deux taux pour votre commodit\u00e9.",
+    "q5": "Quelles devises sont support\u00e9es ?",
+    "a5": "Cet outil supporte 50+ devises principales et mineures du monde entier, dont USD, EUR, GBP, UAH, JPY, CNY, INR, BRL, CAD, AUD, CHF et bien d'autres d'Asie, d'Afrique, d'Am\u00e9rique latine et d'Europe de l'Est."
+  },
+  "content": {
+    "whatIs": "Un convertisseur de devises est un outil qui calcule la valeur \u00e9quivalente d'une devise dans une autre en utilisant des taux de change. Ce convertisseur utilise le dollar am\u00e9ricain (USD) comme devise de base et calcule des taux crois\u00e9s entre n'importe laquelle des 50+ devises support\u00e9es. Il est con\u00e7u pour des conversions de r\u00e9f\u00e9rence rapides pour la planification de voyages, les achats internationaux et la comparaison de prix.",
+    "formula": "taux = tauxUSD(cible) / tauxUSD(source)\nr\u00e9sultat = montant \u00d7 taux\ntauxInverse = 1 / taux\n\nToutes les devises sont d'abord normalis\u00e9es en USD, puis converties vers la devise cible.",
+    "example": "Convertir 500 USD en EUR.\nTaux USD = 1,0 (base), taux EUR = 0,9240.\nTaux crois\u00e9 = 0,9240 / 1,0 = 0,9240.\nR\u00e9sultat = 500 \u00d7 0,9240 = \u20ac462,00.\nInverse : 1 EUR = 1 / 0,9240 \u2248 1,0823 USD.",
+    "howItWorks_1": "Saisissez le montant \u00e0 convertir dans le champ 'Montant'. Vous pouvez entrer n'importe quel nombre positif, y compris les d\u00e9cimales. La valeur par d\u00e9faut est 1 pour une consultation rapide du taux.",
+    "howItWorks_2": "S\u00e9lectionnez la devise source dans le menu d\u00e9roulant 'Devise source' et la devise cible dans 'Devise cible'. Utilisez le bouton \u00c9changer (\u21c4) pour inverser rapidement la direction de conversion.",
+    "howItWorks_3": "Le r\u00e9sultat se met \u00e0 jour automatiquement pendant la saisie. Vous verrez le montant converti affich\u00e9 en \u00e9vidence, avec le taux de change (1 source = X cible) et le taux inverse. Utilisez les boutons de paires populaires pour un acc\u00e8s rapide."
+  }
+}

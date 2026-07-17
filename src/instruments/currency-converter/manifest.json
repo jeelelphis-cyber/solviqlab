@@ -1,0 +1,29 @@
+{
+  "slug": "currency-converter",
+  "name": "Currency Converter",
+  "seoTitle": "Currency Converter — Convert USD, EUR, GBP & 50+ Currencies",
+  "seoDescription": "Convert between 50+ world currencies with up-to-date reference rates. USD to EUR, GBP to USD, EUR to UAH and more. Free currency conversion tool.",
+  "primaryKeyword": "currency converter",
+  "type": "converter",
+  "category": "conversion",
+  "isYMYL": false,
+  "version": "1.0.0",
+  "status": "certified",
+  "capabilities": ["formula", "validation", "seo", "localization"],
+  "inputs": [
+    { "name": "amount", "type": "number", "required": true, "min": 0 },
+    { "name": "fromCurrency", "type": "select", "required": true },
+    { "name": "toCurrency", "type": "select", "required": true }
+  ],
+  "outputs": [
+    { "name": "result", "label": "Converted Amount", "unit": "currency" },
+    { "name": "rate", "label": "Exchange Rate" },
+    { "name": "inverseRate", "label": "Inverse Rate" }
+  ],
+  "keywords": ["currency converter", "exchange rate calculator", "USD to EUR", "currency exchange"],
+  "related": ["vat-calculator", "tip-calculator", "salary-calculator", "inflation-calculator"],
+  "supportedLanguages": ["en", "uk", "es", "pt", "fr", "de", "pl"],
+  "releaseHistory": [
+    { "status": "certified", "at": "2026-07-17T00:00:00.000Z", "notes": "Gold Standard — Wave 2 Priority A" }
+  ]
+}

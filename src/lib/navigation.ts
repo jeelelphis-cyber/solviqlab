@@ -49,6 +49,7 @@ const LABELS: Record<string, {
       'advanced':       'Advanced',
       'physical':       'Physical',
       'area-volume':    'Area & Volume',
+      'currency':       'Currency',
     },
     journeys: {
       'weight-loss':  { label: 'Weight Loss Journey',    description: 'Understand your body, set targets, and track progress.' },
@@ -63,7 +64,7 @@ const LABELS: Record<string, {
       'body-weight': 'Тіло та вага', 'metabolism': 'Метаболізм та калорії', 'reproductive': "Репродуктивне здоров'я",
       'loans': 'Кредити та іпотека', 'investments': 'Інвестиції та заощадження',
       'taxes-salary': 'Податки та зарплата', 'taxes-shopping': 'Податки та покупки',
-      'arithmetic': 'Арифметика', 'advanced': 'Розширені', 'physical': 'Фізичні величини', 'area-volume': "Площа та об'єм",
+      'arithmetic': 'Арифметика', 'advanced': 'Розширені', 'physical': 'Фізичні величини', 'area-volume': "Площа та об'єм", 'currency': 'Валюта',
     },
     journeys: {
       'weight-loss': { label: 'Схуднення', description: 'Зрозумійте своє тіло, встановіть цілі і відстежуйте прогрес.' },
@@ -78,7 +79,7 @@ const LABELS: Record<string, {
       'body-weight': 'Cuerpo y Peso', 'metabolism': 'Metabolismo y Calorías', 'reproductive': 'Salud Reproductiva',
       'loans': 'Préstamos e Hipoteca', 'investments': 'Inversiones y Ahorros',
       'taxes-salary': 'Impuestos y Salario', 'taxes-shopping': 'Impuestos y Compras',
-      'arithmetic': 'Aritmética', 'advanced': 'Avanzado', 'physical': 'Físicas', 'area-volume': 'Área y Volumen',
+      'arithmetic': 'Aritmética', 'advanced': 'Avanzado', 'physical': 'Físicas', 'area-volume': 'Área y Volumen', 'currency': 'Divisas',
     },
     journeys: {
       'weight-loss': { label: 'Viaje de Pérdida de Peso', description: 'Entiende tu cuerpo, fija metas y sigue tu progreso.' },
@@ -93,7 +94,7 @@ const LABELS: Record<string, {
       'body-weight': 'Corpo e Peso', 'metabolism': 'Metabolismo e Calorias', 'reproductive': 'Saúde Reprodutiva',
       'loans': 'Empréstimos e Hipoteca', 'investments': 'Investimentos e Poupança',
       'taxes-salary': 'Impostos e Salário', 'taxes-shopping': 'Impostos e Compras',
-      'arithmetic': 'Aritmética', 'advanced': 'Avançado', 'physical': 'Físicas', 'area-volume': 'Área e Volume',
+      'arithmetic': 'Aritmética', 'advanced': 'Avançado', 'physical': 'Físicas', 'area-volume': 'Área e Volume', 'currency': 'Moedas',
     },
     journeys: {
       'weight-loss': { label: 'Jornada de Emagrecimento', description: 'Entenda seu corpo, defina metas e acompanhe o progresso.' },
@@ -108,7 +109,7 @@ const LABELS: Record<string, {
       'body-weight': 'Corps et Poids', 'metabolism': 'Métabolisme et Calories', 'reproductive': 'Santé Reproductive',
       'loans': 'Prêts et Hypothèque', 'investments': 'Investissements et Épargne',
       'taxes-salary': 'Taxes et Salaire', 'taxes-shopping': 'Taxes et Achats',
-      'arithmetic': 'Arithmétique', 'advanced': 'Avancé', 'physical': 'Physiques', 'area-volume': 'Aire et Volume',
+      'arithmetic': 'Arithmétique', 'advanced': 'Avancé', 'physical': 'Physiques', 'area-volume': 'Aire et Volume', 'currency': 'Devises',
     },
     journeys: {
       'weight-loss': { label: 'Parcours Perte de Poids', description: 'Comprenez votre corps, fixez des objectifs et suivez vos progrès.' },
@@ -123,7 +124,7 @@ const LABELS: Record<string, {
       'body-weight': 'Körper & Gewicht', 'metabolism': 'Stoffwechsel & Kalorien', 'reproductive': 'Reproduktive Gesundheit',
       'loans': 'Kredite & Hypotheken', 'investments': 'Investitionen & Ersparnisse',
       'taxes-salary': 'Steuern & Gehalt', 'taxes-shopping': 'Steuern & Einkaufen',
-      'arithmetic': 'Arithmetik', 'advanced': 'Erweitert', 'physical': 'Physikalisch', 'area-volume': 'Fläche & Volumen',
+      'arithmetic': 'Arithmetik', 'advanced': 'Erweitert', 'physical': 'Physikalisch', 'area-volume': 'Fläche & Volumen', 'currency': 'Währungen',
     },
     journeys: {
       'weight-loss': { label: 'Gewichtsabnahme-Reise', description: 'Verstehen Sie Ihren Körper, setzen Sie Ziele und verfolgen Sie Fortschritte.' },
@@ -138,7 +139,7 @@ const LABELS: Record<string, {
       'body-weight': 'Ciało i Waga', 'metabolism': 'Metabolizm i Kalorie', 'reproductive': 'Zdrowie Reprodukcyjne',
       'loans': 'Kredyty i Hipoteka', 'investments': 'Inwestycje i Oszczędności',
       'taxes-salary': 'Podatki i Wynagrodzenie', 'taxes-shopping': 'Podatki i Zakupy',
-      'arithmetic': 'Arytmetyka', 'advanced': 'Zaawansowane', 'physical': 'Fizyczne', 'area-volume': 'Powierzchnia i Objętość',
+      'arithmetic': 'Arytmetyka', 'advanced': 'Zaawansowane', 'physical': 'Fizyczne', 'area-volume': 'Powierzchnia i Objętość', 'currency': 'Waluty',
     },
     journeys: {
       'weight-loss': { label: 'Podróż Odchudzania', description: 'Poznaj swoje ciało, wyznacz cele i śledź postępy.' },
@@ -184,6 +185,7 @@ const CATEGORY_TREE = [
     subcategories: [
       { id: 'physical',    instruments: ['length-converter', 'weight-converter', 'temperature-converter'] },
       { id: 'area-volume', instruments: ['area-calculator', 'area-converter', 'volume-calculator', 'volume-converter'] },
+      { id: 'currency',    instruments: ['currency-converter'] },
     ],
   },
 ]

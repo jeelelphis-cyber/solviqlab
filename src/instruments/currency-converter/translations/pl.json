@@ -1,0 +1,37 @@
+{
+  "title": "Kalkulator Walutowy — Przelicz USD, EUR, GBP i 50+ Walut",
+  "description": "Przeliczaj między 50+ walutami światowymi z aktualnymi kursami referencyjnymi. USD na EUR, GBP na USD, EUR na UAH i więcej. Darmowy przelicznik walut.",
+  "calculate": "Przelicz",
+  "reset": "Resetuj",
+  "result": "Wynik",
+  "label_amount": "Kwota",
+  "label_fromCurrency": "Z waluty",
+  "label_toCurrency": "Na walutę",
+  "label_result": "Przeliczona kwota",
+  "label_rate": "Kurs wymiany",
+  "label_inverseRate": "Kurs odwrotny",
+  "swap_button": "Zamień \u21c4",
+  "popular_pairs": "Popularne pary",
+  "rate_disclaimer": "Kursy są przybliżonymi wartościami referencyjnymi. Do transakcji używaj kursu swojego banku.",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "q1": "Jak obliczany jest kurs wymiany?",
+    "a1": "Kursy w tym narzędziu są obliczane z użyciem dolara amerykańskiego (USD) jako waluty bazowej. Każda waluta ma zdefiniowany kurs względem USD. Kurs krzyżowy między dwiema walutami innymi niż USD wynosi: kurs = kursUSD(docelowa) / kursUSD(źródłowa). Na przykład EUR do GBP = 0,7870 / 0,9240 \u2248 0,8518.",
+    "q2": "Czy te kursy są aktualne czy stałe?",
+    "a2": "Kursy w tym narzędziu są referencyjne/orientacyjne i aktualizowane okresowo. Odzwierciedlają przybliżone kursy rynkowe i są odpowiednie do celów informacyjnych i edukacyjnych. Do rzeczywistych transakcji finansowych zawsze używaj aktualnego kursu swojego banku, brokera lub usługi forex na żywo.",
+    "q3": "Co to jest spread bid-ask?",
+    "a3": "Spread bid-ask to różnica między kursem kupna (bid) a kursem sprzedaży (ask) banku lub brokera. Instytucje finansowe zarabiają na tym spreadzie. Narzędzie pokazuje kurs środkowy rynku, który jest punktem pośrednim między bid a ask. Rzeczywisty kurs przy wymianie pieniędzy jest zazwyczaj mniej korzystny.",
+    "q4": "Dlaczego EUR/USD różni się od USD/EUR?",
+    "a4": "To są kursy odwrotne. Jeśli EUR/USD \u2248 1,0823, oznacza to 1 EUR = 1,0823 USD. Odwrotnie, USD/EUR \u2248 0,9240, czyli 1 USD = 0,9240 EUR. Zależność: kursOdwrotny = 1 / kurs. Narzędzie pokazuje oba kursy dla wygody.",
+    "q5": "Jakie waluty są obsługiwane?",
+    "a5": "Narzędzie obsługuje ponad 50 głównych i mniejszych walut z całego świata, w tym USD, EUR, GBP, UAH, JPY, CNY, INR, BRL, CAD, AUD, CHF i wiele innych z Azji, Afryki, Ameryki Łacińskiej i Europy Wschodniej."
+  },
+  "content": {
+    "whatIs": "Kalkulator walutowy to narzędzie, które oblicza równowartość jednej waluty w innej za pomocą kursów wymiany. Ten przelicznik używa dolara amerykańskiego (USD) jako waluty bazowej i oblicza kursy krzyżowe między dowolnymi dwiema z obsługiwanych 50+ walut. Przeznaczony jest do szybkich przeliczeń referencyjnych przy planowaniu podróży, zakupach międzynarodowych i porównywaniu cen.",
+    "formula": "kurs = kursUSD(docelowa) / kursUSD(źródłowa)\nwynik = kwota \u00d7 kurs\nkursOdwrotny = 1 / kurs\n\nWszystkie waluty są najpierw normalizowane do USD, a następnie przeliczane na walutę docelową.",
+    "example": "Przelicz 500 USD na EUR.\nKurs USD = 1,0 (baza), kurs EUR = 0,9240.\nKurs krzyżowy = 0,9240 / 1,0 = 0,9240.\nWynik = 500 \u00d7 0,9240 = \u20ac462,00.\nOdwrotny: 1 EUR = 1 / 0,9240 \u2248 1,0823 USD.",
+    "howItWorks_1": "Wpisz kwotę do przeliczenia w polu 'Kwota'. Możesz wpisać dowolną dodatnią liczbę, w tym ułamki dziesiętne. Wartość domyślna to 1 dla szybkiego sprawdzenia kursu.",
+    "howItWorks_2": "Wybierz walutę źródłową z listy 'Z waluty' i walutę docelową z 'Na walutę'. Użyj przycisku Zamień (\u21c4), aby szybko odwrócić kierunek przeliczania.",
+    "howItWorks_3": "Wynik aktualizuje się automatycznie podczas wpisywania. Zobaczysz przeliczoną kwotę wyraźnie wyświetloną wraz z kursem wymiany (1 źródłowa = X docelowa) i kursem odwrotnym. Używaj przycisków popularnych par dla szybkiego dostępu."
+  }
+}

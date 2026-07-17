@@ -1,0 +1,37 @@
+{
+  "title": "Conversor de Divisas — Convierte USD, EUR, GBP y 50+ Monedas",
+  "description": "Convierte entre 50+ monedas mundiales con tasas de referencia actualizadas. USD a EUR, GBP a USD, EUR a UAH y más. Conversor de moneda gratuito.",
+  "calculate": "Convertir",
+  "reset": "Restablecer",
+  "result": "Resultado",
+  "label_amount": "Cantidad",
+  "label_fromCurrency": "Moneda origen",
+  "label_toCurrency": "Moneda destino",
+  "label_result": "Cantidad convertida",
+  "label_rate": "Tipo de cambio",
+  "label_inverseRate": "Tipo inverso",
+  "swap_button": "Intercambiar \u21c4",
+  "popular_pairs": "Pares populares",
+  "rate_disclaimer": "Las tasas son valores de referencia aproximados. Para transacciones, use la tasa de su banco.",
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "\u00bfC\u00f3mo se calcula el tipo de cambio?",
+    "a1": "Los tipos de cambio en esta herramienta se calculan usando el d\u00f3lar estadounidense (USD) como moneda base. Cada moneda tiene una tasa definida respecto al USD. La tasa cruzada entre dos monedas no USD se calcula como: tasa = tasaUSD(destino) / tasaUSD(origen). Por ejemplo, EUR a GBP = 0,7870 / 0,9240 \u2248 0,8518.",
+    "q2": "\u00bfEstas tasas son en tiempo real o fijas?",
+    "a2": "Las tasas de esta herramienta son de referencia/indicativas y se actualizan peri\u00f3dicamente. Reflejan tasas aproximadas de mercado medio y son adecuadas para prop\u00f3sitos informativos y educativos. Para transacciones financieras reales, utilice siempre la tasa actual de su banco, corredor o servicio forex en vivo.",
+    "q3": "\u00bfQu\u00e9 es el spread bid-ask?",
+    "a3": "El spread bid-ask es la diferencia entre la tasa a la que un banco compra (bid) y vende (ask) la moneda. Las instituciones financieras se benefician de este diferencial. Esta herramienta muestra la tasa de mercado medio, que es el punto intermedio entre bid y ask. La tasa real que obtendr\u00e1 al cambiar dinero suele ser menos favorable.",
+    "q4": "\u00bfPor qu\u00e9 EUR/USD es diferente de USD/EUR?",
+    "a4": "Son tasas inversas. Si EUR/USD \u2248 1,0823, significa 1 EUR = 1,0823 USD. A la inversa, USD/EUR \u2248 0,9240, es decir, 1 USD = 0,9240 EUR. La relaci\u00f3n es: tasaInversa = 1 / tasa. Esta herramienta muestra ambas tasas para su comodidad.",
+    "q5": "\u00bfQu\u00e9 monedas est\u00e1n disponibles?",
+    "a5": "Esta herramienta soporta m\u00e1s de 50 monedas principales y menores de todo el mundo, incluyendo USD, EUR, GBP, UAH, JPY, CNY, INR, BRL, CAD, AUD, CHF y muchas m\u00e1s de Asia, \u00c1frica, Am\u00e9rica Latina y Europa del Este."
+  },
+  "content": {
+    "whatIs": "Un conversor de divisas es una herramienta que calcula el valor equivalente de una moneda en otra usando tipos de cambio. Este conversor utiliza el d\u00f3lar estadounidense (USD) como moneda base y calcula tipos cruzados entre cualquiera de las 50+ monedas soportadas. Est\u00e1 dise\u00f1ado para conversiones de referencia r\u00e1pidas para planificaci\u00f3n de viajes, compras internacionales y comparaci\u00f3n de precios.",
+    "formula": "tasa = tasaUSD(destino) / tasaUSD(origen)\nresultado = cantidad \u00d7 tasa\ntasaInversa = 1 / tasa\n\nTodas las monedas se normalizan primero a USD, luego se convierten a la moneda destino.",
+    "example": "Convertir 500 USD a EUR.\nTasa USD = 1,0 (base), tasa EUR = 0,9240.\nTasa cruzada = 0,9240 / 1,0 = 0,9240.\nResultado = 500 \u00d7 0,9240 = \u20ac462,00.\nInverso: 1 EUR = 1 / 0,9240 \u2248 1,0823 USD.",
+    "howItWorks_1": "Introduzca la cantidad a convertir en el campo 'Cantidad'. Puede escribir cualquier n\u00famero positivo, incluyendo decimales. El valor predeterminado es 1 para una consulta r\u00e1pida de tasas.",
+    "howItWorks_2": "Seleccione la moneda origen en el desplegable 'Moneda origen' y la moneda destino en 'Moneda destino'. Use el bot\u00f3n Intercambiar (\u21c4) para invertir r\u00e1pidamente la direcci\u00f3n de conversi\u00f3n.",
+    "howItWorks_3": "El resultado se actualiza autom\u00e1ticamente mientras escribe. Ver\u00e1 la cantidad convertida de forma destacada, junto con el tipo de cambio (1 origen = X destino) y el tipo inverso. Use los botones de pares populares para acceso r\u00e1pido."
+  }
+}
