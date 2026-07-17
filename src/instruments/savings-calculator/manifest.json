@@ -1,0 +1,33 @@
+{
+  "slug": "savings-calculator",
+  "name": "Savings Calculator",
+  "seoTitle": "Savings Calculator — How Much Will I Save? Growth & Interest Calculator",
+  "seoDescription": "Calculate how your savings grow with compound interest and monthly deposits. See your final balance, total interest earned, and when you'll reach your goal.",
+  "primaryKeyword": "savings calculator",
+  "type": "calculator",
+  "category": "finance",
+  "isYMYL": true,
+  "version": "1.0.0",
+  "status": "certified",
+  "capabilities": ["formula", "validation", "ai-interpretation", "seo", "localization"],
+  "inputs": [
+    { "name": "initialDeposit", "type": "number", "required": true, "unit": "currency", "min": 0, "max": 10000000 },
+    { "name": "monthlyDeposit", "type": "number", "required": false, "unit": "currency", "min": 0, "max": 100000 },
+    { "name": "annualRate", "type": "number", "required": true, "unit": "%", "min": 0, "max": 50 },
+    { "name": "years", "type": "number", "required": true, "unit": "years", "min": 1, "max": 50 },
+    { "name": "compoundFrequency", "type": "select", "required": false, "enumValues": ["monthly", "quarterly", "annually"] },
+    { "name": "goalAmount", "type": "number", "required": false, "unit": "currency", "min": 0 }
+  ],
+  "outputs": [
+    { "name": "finalBalance", "label": "Final Balance", "unit": "currency" },
+    { "name": "totalDeposited", "label": "Total Deposited", "unit": "currency" },
+    { "name": "totalInterest", "label": "Total Interest Earned", "unit": "currency" },
+    { "name": "monthsToGoal", "label": "Months to Reach Goal", "unit": "months" }
+  ],
+  "keywords": ["savings calculator", "savings account calculator", "how much will I save"],
+  "related": ["compound-interest-calculator", "investment-calculator", "retirement-calculator", "budget-calculator"],
+  "supportedLanguages": ["en", "uk", "es", "pt", "fr", "de", "pl"],
+  "releaseHistory": [
+    { "status": "certified", "at": "2026-07-17T00:00:00.000Z", "notes": "Gold Standard — Wave 2 Priority A" }
+  ]
+}

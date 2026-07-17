@@ -167,7 +167,7 @@ const CATEGORY_TREE = [
     id: 'finance', icon: '💰', color: 'text-emerald-600',
     subcategories: [
       { id: 'loans',          instruments: ['mortgage-calculator', 'loan-calculator'] },
-      { id: 'investments',    instruments: ['compound-interest-calculator', 'investment-calculator', 'retirement-calculator', 'inflation-calculator'] },
+      { id: 'investments',    instruments: ['savings-calculator', 'compound-interest-calculator', 'investment-calculator', 'retirement-calculator', 'inflation-calculator'] },
       { id: 'taxes-salary',   instruments: ['tax-calculator', 'salary-calculator'] },
       { id: 'taxes-shopping', instruments: ['vat-calculator', 'discount-calculator'] },
     ],
