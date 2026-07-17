@@ -333,7 +333,7 @@ export default function InstrumentPage({ params }: PageProps) {
         </div>
 
         {/* SEO Content Blocks */}
-        <ContentSection translations={translations} primaryKeyword={instrument.primaryKeyword ?? slug} lang={lang} />
+        <ContentSection translations={translations} primaryKeyword={pageTitle.split(' — ')[0]!} lang={lang} />
 
         {/* FAQ Section */}
         {faqItems.length > 0 && (
