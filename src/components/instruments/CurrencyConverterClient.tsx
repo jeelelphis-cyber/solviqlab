@@ -7,6 +7,9 @@ import { CURRENCIES } from '../../lib/currencies.js'
 interface Props {
   translations: Record<string, unknown>
   lang: string
+  rates: Record<string, number>
+  ratesUpdatedAt: string
+  ratesIsLive: boolean
 }
 
 const POPULAR_PAIRS: { from: string; to: string; label: string }[] = [
@@ -30,7 +33,7 @@ function formatResultAmount(amount: number, code: string): string {
     : `${formatted} ${currency.symbol}`
 }
 
-export function CurrencyConverterClient({ translations }: Props) {
+export function CurrencyConverterClient({ translations, rates, ratesUpdatedAt, ratesIsLive }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [amount, setAmount] = useState('1')
@@ -38,7 +41,7 @@ export function CurrencyConverterClient({ translations }: Props) {
   const [toCurrency, setToCurrency] = useState('EUR')
   const [result, setResult] = useState<CurrencyConverterOutput | null>(() => {
     try {
-      return convertCurrency({ amount: 1, fromCurrency: 'USD', toCurrency: 'EUR' })
+      return convertCurrency({ amount: 1, fromCurrency: 'USD', toCurrency: 'EUR' }, rates)
     } catch {
       return null
     }
@@ -54,13 +57,13 @@ export function CurrencyConverterClient({ translations }: Props) {
       return
     }
     try {
-      setResult(convertCurrency({ amount: parsed, fromCurrency: from, toCurrency: to }))
+      setResult(convertCurrency({ amount: parsed, fromCurrency: from, toCurrency: to }, rates))
       setError(null)
     } catch (err) {
       setError((err as Error).message)
       setResult(null)
     }
-  }, [])
+  }, [rates])
 
   function handleAmountChange(val: string) {
     setAmount(val)
@@ -101,7 +104,7 @@ export function CurrencyConverterClient({ translations }: Props) {
     setToCurrency('EUR')
     setError(null)
     try {
-      setResult(convertCurrency({ amount: 1, fromCurrency: 'USD', toCurrency: 'EUR' }))
+      setResult(convertCurrency({ amount: 1, fromCurrency: 'USD', toCurrency: 'EUR' }, rates))
     } catch {
       setResult(null)
     }
@@ -286,10 +289,17 @@ export function CurrencyConverterClient({ translations }: Props) {
         </div>
       )}
 
-      {/* Rate Disclaimer */}
-      <p className="text-xs text-content-tertiary leading-relaxed">
-        {t('rate_disclaimer') ?? 'Rates are approximate reference values. For transactions, use your bank\'s rate.'}
-      </p>
+      {/* Rate source + disclaimer */}
+      <div className="text-xs text-content-tertiary leading-relaxed space-y-1">
+        <p>
+          {ratesIsLive ? '🟢 Live rates' : '🟡 Reference rates (static fallback)'}
+          {' — '}
+          {t('rate_disclaimer') ?? "Rates updated daily. For transactions, use your bank's rate."}
+        </p>
+        <p className="opacity-60">
+          Last updated: {new Date(ratesUpdatedAt).toLocaleString()}
+        </p>
+      </div>
     </div>
   )
 }

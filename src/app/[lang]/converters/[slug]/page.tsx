@@ -35,6 +35,7 @@ import { OvulationCalculatorClient } from '../../../../components/instruments/Ov
 import { SleepCalculatorClient } from '../../../../components/instruments/SleepCalculatorClient'
 import { InvestmentCalculatorClient } from '../../../../components/instruments/InvestmentCalculatorClient'
 import { CurrencyConverterClient } from '../../../../components/instruments/CurrencyConverterClient'
+import { fetchLiveRates } from '../../../../instruments/currency-converter/lib/fetchRates'
 
 interface PageProps {
   params: { lang: string; slug: string }
@@ -176,13 +177,16 @@ function ApiSection({ slug, lang }: { slug: string; lang: string }) {
 }
 
 // ── Page ───────────────────────────────────────────────────────────────────────
-export default function InstrumentPage({ params }: PageProps) {
+export default async function InstrumentPage({ params }: PageProps) {
   const { lang, slug } = params
   const instrument = getInstrument(slug)
   if (!instrument) notFound()
 
   const translations = getTranslations(slug, lang)
   const s = t(lang)
+
+  // Fetch live exchange rates for currency-converter (cached 24h by Next.js)
+  const liveRates = slug === 'currency-converter' ? await fetchLiveRates() : null
 
   // Support both {meta:{title}} and flat {title} translation structures
   const pageTitle = tr(translations, 'meta.title') || tr(translations, 'title') || instrument.seoTitle
@@ -333,7 +337,7 @@ export default function InstrumentPage({ params }: PageProps) {
 
         {/* Calculator Card */}
         <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 mb-8 shadow-sm">
-          <InstrumentUI slug={slug} lang={lang} translations={translations} />
+          <InstrumentUI slug={slug} lang={lang} translations={translations} liveRates={liveRates} />
         </div>
 
         {/* SEO Content Blocks */}
@@ -419,11 +423,12 @@ function SourcesSection({ category, lang }: { category: string; lang: string }) 
 
 // ── Instrument UI Router ───────────────────────────────────────────────────────
 function InstrumentUI({
-  slug, lang, translations,
+  slug, lang, translations, liveRates,
 }: {
   slug: string
   lang: string
   translations: Record<string, unknown>
+  liveRates?: import('@/instruments/currency-converter/lib/fetchRates').LiveRatesResult | null
 }) {
   switch (slug) {
     case 'bmi-calculator': return <BMICalculatorClient translations={translations} lang={lang} />
@@ -456,7 +461,7 @@ function InstrumentUI({
     case 'ovulation-calculator': return <OvulationCalculatorClient translations={translations} lang={lang} />
     case 'sleep-calculator': return <SleepCalculatorClient translations={translations} lang={lang} />
     case 'investment-calculator': return <InvestmentCalculatorClient translations={translations} lang={lang} />
-    case 'currency-converter': return <CurrencyConverterClient translations={translations} lang={lang} />
+    case 'currency-converter': return <CurrencyConverterClient translations={translations} lang={lang} rates={liveRates?.rates ?? {}} ratesUpdatedAt={liveRates?.updatedAt ?? new Date().toISOString()} ratesIsLive={liveRates?.isLive ?? false} />
     default:
       return (
         <div className="text-slate-500 dark:text-slate-400 text-sm py-4 text-center">
