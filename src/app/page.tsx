@@ -1,4 +1,4 @@
-import { redirect } from 'next/navigation'
+import { permanentRedirect } from 'next/navigation'
 import { headers } from 'next/headers'
 
 const SUPPORTED = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl']
@@ -9,5 +9,5 @@ export default function RootPage() {
     .split(',')
     .map(s => s.split(';')[0]!.trim().slice(0, 2).toLowerCase())
     .find(code => SUPPORTED.includes(code))
-  redirect(`/${preferred ?? 'en'}`)
+  permanentRedirect(`/${preferred ?? 'en'}`)
 }

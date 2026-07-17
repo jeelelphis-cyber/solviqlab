@@ -78,7 +78,7 @@ function LanguageSwitcher({ lang, slug }: { lang: string; slug?: string }) {
   function select(code: string) {
     setOpen(false)
     setQuery('')
-    router.push(slug !== undefined ? `/${code}/${slug}` : `/${code}`)
+    router.replace(slug !== undefined ? `/${code}/${slug}` : `/${code}`)
   }
 
   return (
