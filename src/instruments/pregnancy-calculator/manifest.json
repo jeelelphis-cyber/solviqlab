@@ -1,0 +1,32 @@
+{
+  "slug": "pregnancy-calculator",
+  "name": "Pregnancy Calculator",
+  "seoTitle": "Pregnancy Calculator — Due Date, Weeks Pregnant & Trimester",
+  "seoDescription": "Calculate your due date, current week of pregnancy, trimester, and key milestones. Based on last menstrual period or conception date. Free pregnancy tracker.",
+  "primaryKeyword": "pregnancy calculator",
+  "type": "calculator",
+  "category": "health",
+  "isYMYL": true,
+  "version": "1.0.0",
+  "status": "certified",
+  "capabilities": ["formula", "validation", "seo", "localization"],
+  "inputs": [
+    { "name": "lmpDate", "type": "date", "required": false, "label": "Last Menstrual Period" },
+    { "name": "conceptionDate", "type": "date", "required": false, "label": "Conception Date" },
+    { "name": "dueDate", "type": "date", "required": false, "label": "Known Due Date" }
+  ],
+  "outputs": [
+    { "name": "dueDate", "label": "Due Date" },
+    { "name": "weeksPregnant", "label": "Weeks Pregnant" },
+    { "name": "daysPregnant", "label": "Days Pregnant" },
+    { "name": "trimester", "label": "Trimester" },
+    { "name": "conceptionDate", "label": "Conception Date" },
+    { "name": "milestones", "label": "Key Milestones" }
+  ],
+  "keywords": ["pregnancy calculator", "due date calculator", "how many weeks pregnant", "pregnancy week calculator"],
+  "related": ["due-date-calculator", "ovulation-calculator", "bmr-calculator"],
+  "supportedLanguages": ["en", "uk", "es", "pt", "fr", "de", "pl"],
+  "releaseHistory": [
+    { "status": "certified", "at": "2026-07-17T00:00:00.000Z", "notes": "Gold Standard — Wave 2 Priority A" }
+  ]
+}
