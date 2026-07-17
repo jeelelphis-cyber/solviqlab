@@ -60,9 +60,12 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: PageProps): Metadata {
   const instrument = getInstrument(params.slug)
   if (!instrument) return { title: 'Not Found' }
+  const translations = getTranslations(params.slug, params.lang)
+  const localTitle = tr(translations, 'meta.title') || tr(translations, 'title') || instrument.seoTitle
+  const localDesc = tr(translations, 'meta.description') || tr(translations, 'description') || instrument.seoDescription
   return {
-    title: instrument.seoTitle,
-    description: instrument.seoDescription,
+    title: { absolute: localTitle },
+    description: localDesc,
     alternates: {
       canonical: getInstrumentCanonical(params.lang, params.slug, instrument.category),
       languages: {
@@ -77,16 +80,16 @@ export function generateMetadata({ params }: PageProps): Metadata {
       },
     },
     openGraph: {
-      title: instrument.seoTitle,
-      description: instrument.seoDescription,
+      title: localTitle,
+      description: localDesc,
       url: getInstrumentCanonical(params.lang, params.slug, instrument.category),
-      images: [{ url: `https://solviqlab.com/og/${params.slug}`, width: 1200, height: 630, alt: instrument.seoTitle }],
+      images: [{ url: `https://solviqlab.com/og/${params.slug}`, width: 1200, height: 630, alt: localTitle }],
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: instrument.seoTitle,
-      description: instrument.seoDescription,
+      title: localTitle,
+      description: localDesc,
       images: [`https://solviqlab.com/og/${params.slug}`],
     },
   }
