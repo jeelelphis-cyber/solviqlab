@@ -143,7 +143,12 @@ function LanguageSwitcher({ lang, slug }: { lang: string; slug?: string }) {
 }
 
 // ── Mega Menu Dropdown ────────────────────────────────────────────────────────
+function getProductSegment(categoryId: string): 'calculators' | 'converters' {
+  return categoryId === 'conversion' ? 'converters' : 'calculators'
+}
+
 function MegaMenu({ category, lang, onClose, slugToName }: { category: NavCategory; lang: string; onClose: () => void; slugToName: Record<string, string> }) {
+  const product = getProductSegment(category.id)
   return (
     <div className="absolute top-full left-0 mt-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-2xl p-6 min-w-[320px] z-50 max-h-[80vh] overflow-y-auto">
       <div className="flex items-center gap-2 mb-4 pb-3 border-b border-slate-100 dark:border-slate-800">
@@ -160,7 +165,7 @@ function MegaMenu({ category, lang, onClose, slugToName }: { category: NavCatego
               {sub.instruments.map(slug => (
                 <Link
                   key={slug}
-                  href={`/${lang}/${slug}`}
+                  href={`/${lang}/${product}/${slug}`}
                   onClick={onClose}
                   className="block px-2 py-1.5 text-sm text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors"
                 >
@@ -224,7 +229,9 @@ function MobileMenu({ lang, onClose, slugToName }: { lang: string; onClose: () =
   const categories = getNavCategories(lang)
   return (
     <div className="md:hidden border-t border-slate-100 dark:border-slate-800 pb-4">
-      {categories.map(cat => (
+      {categories.map(cat => {
+        const product = getProductSegment(cat.id)
+        return (
         <div key={cat.id}>
           <button
             onClick={() => setOpenCat(o => o === cat.id ? null : cat.id)}
@@ -241,7 +248,7 @@ function MobileMenu({ lang, onClose, slugToName }: { lang: string; onClose: () =
                   {sub.instruments.map(slug => (
                     <Link
                       key={slug}
-                      href={`/${lang}/${slug}`}
+                      href={`/${lang}/${product}/${slug}`}
                       onClick={onClose}
                       className="block py-1.5 text-sm text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400"
                     >
@@ -260,7 +267,8 @@ function MobileMenu({ lang, onClose, slugToName }: { lang: string; onClose: () =
             </div>
           )}
         </div>
-      ))}
+        )
+      })}
     </div>
   )
 }
