@@ -1,0 +1,30 @@
+{
+  "slug": "due-date-calculator",
+  "name": "Due Date Calculator",
+  "seoTitle": "Due Date Calculator — Calculate Your Baby's Due Date by LMP or Conception",
+  "seoDescription": "Calculate your pregnancy due date using last menstrual period, conception date, or IVF transfer date. Get trimester dates and key milestones. Free & accurate.",
+  "primaryKeyword": "due date calculator",
+  "type": "calculator",
+  "category": "health",
+  "isYMYL": true,
+  "version": "1.0.0",
+  "status": "certified",
+  "capabilities": ["formula", "validation", "seo", "localization"],
+  "inputs": [
+    { "name": "method", "type": "select", "required": true, "enumValues": ["lmp", "conception", "ivf3", "ivf5"] },
+    { "name": "date", "type": "date", "required": true }
+  ],
+  "outputs": [
+    { "name": "dueDate", "label": "Due Date" },
+    { "name": "weeksPregnant", "label": "Weeks Pregnant" },
+    { "name": "trimester", "label": "Trimester" },
+    { "name": "conceptionDate", "label": "Estimated Conception" },
+    { "name": "milestones", "label": "Key Dates" }
+  ],
+  "keywords": ["due date calculator", "pregnancy due date", "when is my due date", "due date by LMP"],
+  "related": ["pregnancy-calculator", "ovulation-calculator", "bmr-calculator"],
+  "supportedLanguages": ["en", "uk", "es", "pt", "fr", "de", "pl"],
+  "releaseHistory": [
+    { "status": "certified", "at": "2026-07-17T00:00:00.000Z", "notes": "Gold Standard — Wave 2 Priority A" }
+  ]
+}

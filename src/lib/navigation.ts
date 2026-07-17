@@ -160,7 +160,7 @@ const CATEGORY_TREE = [
     subcategories: [
       { id: 'body-weight',  instruments: ['bmi-calculator', 'body-fat-calculator', 'ideal-weight-calculator'] },
       { id: 'metabolism',   instruments: ['calorie-calculator', 'bmr-calculator', 'tdee-calculator', 'calorie-deficit-calculator', 'sleep-calculator'] },
-      { id: 'reproductive', instruments: ['ovulation-calculator', 'pregnancy-calculator'] },
+      { id: 'reproductive', instruments: ['ovulation-calculator', 'pregnancy-calculator', 'due-date-calculator'] },
     ],
   },
   {

@@ -38,6 +38,7 @@ import { CalorieCalculatorClient } from '../../../../components/instruments/Calo
 import { SavingsCalculatorClient } from '../../../../components/instruments/SavingsCalculatorClient'
 import { TipCalculatorClient } from '../../../../components/instruments/TipCalculatorClient'
 import { PregnancyCalculatorClient } from '../../../../components/instruments/PregnancyCalculatorClient'
+import { DueDateCalculatorClient } from '../../../../components/instruments/DueDateCalculatorClient'
 
 interface PageProps {
   params: { lang: string; slug: string }
@@ -463,6 +464,7 @@ function InstrumentUI({
     case 'savings-calculator': return <SavingsCalculatorClient translations={translations} lang={lang} />
     case 'tip-calculator': return <TipCalculatorClient translations={translations} lang={lang} />
     case 'pregnancy-calculator': return <PregnancyCalculatorClient translations={translations} lang={lang} />
+    case 'due-date-calculator': return <DueDateCalculatorClient translations={translations} lang={lang} />
     default:
       return (
         <div className="text-slate-500 dark:text-slate-400 text-sm py-4 text-center">
