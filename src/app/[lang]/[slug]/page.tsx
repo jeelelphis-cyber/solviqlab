@@ -74,6 +74,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
     openGraph: {
       title: instrument.seoTitle,
       description: instrument.seoDescription,
+      url: `https://solviqlab.com/${params.lang}/${params.slug}`,
       images: [{ url: `https://solviqlab.com/og/${params.slug}`, width: 1200, height: 630, alt: instrument.seoTitle }],
       type: 'website',
     },

@@ -54,6 +54,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
     openGraph: {
       title: `${cat.label} Calculators | SolviqLab`,
       description: desc,
+      url: `https://solviqlab.com/${lang}/category/${category}`,
       images: [{ url: `https://solviqlab.com/og/${category}-category`, width: 1200, height: 630 }],
     },
   }
