@@ -38,6 +38,13 @@ const SLUG_META: Record<string, { title: string; category: string }> = {
   'area-converter': { title: 'Area Converter — Convert m², ft², acres, hectares & more', category: 'conversion' },
   'volume-calculator': { title: 'Volume Calculator — Cube, Sphere, Cylinder & Cone Fast', category: 'conversion' },
   'volume-converter': { title: 'Volume Converter — Liters, Gallons, ml, Cups & more', category: 'conversion' },
+  // Wave 2 — Priority A
+  'calorie-calculator': { title: 'Calorie Calculator — Daily Calorie Needs for Weight Loss & Gain', category: 'health' },
+  'savings-calculator': { title: 'Savings Calculator — How Much Will I Save? Growth & Interest', category: 'finance' },
+  'tip-calculator': { title: 'Tip Calculator — How Much to Tip? Split Bill & Tip Per Person', category: 'finance' },
+  'pregnancy-calculator': { title: 'Pregnancy Calculator — Due Date, Weeks Pregnant & Trimester', category: 'health' },
+  'due-date-calculator': { title: 'Due Date Calculator — Calculate Your Baby\'s Due Date', category: 'health' },
+  'currency-converter': { title: 'Currency Converter — Convert USD, EUR, GBP & 50+ Currencies', category: 'conversion' },
 }
 
 export async function GET(
