@@ -63,11 +63,10 @@ export async function GET(
           overflow: 'hidden',
         }}
       >
-        {/* Background grid pattern */}
+        {/* subtle overlay */}
         <div style={{
           position: 'absolute', inset: 0,
-          backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0)',
-          backgroundSize: '40px 40px',
+          background: 'rgba(255,255,255,0.02)',
         }} />
 
         {/* Top accent bar */}
