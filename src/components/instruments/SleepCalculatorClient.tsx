@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { calculateSleepCalculator } from '../../instruments/sleep-calculator/lib/calculate.js'
 import type { SleepCalculatorOutput } from '../../instruments/sleep-calculator/lib/types.js'
-
+import { ShareButtons } from '../ShareButtons.js'
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -238,6 +238,7 @@ export function SleepCalculatorClient({ translations }: Props) {
               ⎙ Print
             </button>
           </div>
+          <ShareButtons text={`My optimal sleep time: ${result.cycle5Time} (5 cycles) — calculated free at SolviqLab`} className="mt-2" />
 
           {/* Sources */}
           <div className="border border-border-default rounded-xl overflow-hidden">

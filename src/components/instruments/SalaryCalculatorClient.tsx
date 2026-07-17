@@ -4,6 +4,7 @@ import { calculateSalaryCalculator } from '../../instruments/salary-calculator/l
 import type { SalaryCalculatorOutput } from '../../instruments/salary-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -321,6 +322,7 @@ export function SalaryCalculatorClient({ translations, lang }: Props) {
               ⎙ Print
             </button>
           </div>
+          <ShareButtons text={`My annual salary: ${formatAmount(result.annual, currency, lang)} — calculated free at SolviqLab`} className="mt-2" />
 
           {/* Sources */}
           <div className="border border-border-default rounded-xl overflow-hidden">

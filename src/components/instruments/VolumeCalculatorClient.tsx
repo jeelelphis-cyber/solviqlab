@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { calculateVolumeCalculator } from '../../instruments/volume-calculator/lib/calculate.js'
 import type { VolumeCalculatorOutput } from '../../instruments/volume-calculator/lib/types.js'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -136,6 +137,7 @@ export function VolumeCalculatorClient({ translations }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`Volume: ${result.volume.toLocaleString()} — calculated free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

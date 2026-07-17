@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { calculateFractionCalculator } from '../../instruments/fraction-calculator/lib/calculate.js'
 import type { FractionCalculatorOutput } from '../../instruments/fraction-calculator/lib/types.js'
-
+import { ShareButtons } from '../ShareButtons.js'
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -161,6 +161,7 @@ export function FractionCalculatorClient({ translations }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`My fraction result: ${result.resultNumerator}/${result.resultDenominator} = ${result.decimal} — calculated free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { calculateVolumeConverter } from '../../instruments/volume-converter/lib/calculate.js'
 import type { VolumeConverterOutput } from '../../instruments/volume-converter/lib/types.js'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -135,6 +136,7 @@ export function VolumeConverterClient({ translations }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`${result.liters} L = ${result.gallons} gal = ${result.milliliters} ml — converted free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

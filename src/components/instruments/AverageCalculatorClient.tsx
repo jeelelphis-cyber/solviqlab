@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { calculateAverageCalculator } from '../../instruments/average-calculator/lib/calculate.js'
 import type { AverageCalculatorOutput } from '../../instruments/average-calculator/lib/types.js'
-
+import { ShareButtons } from '../ShareButtons.js'
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -118,6 +118,7 @@ export function AverageCalculatorClient({ translations }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`Mean: ${result.mean}, Median: ${result.median}, Mode: ${result.mode} — SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

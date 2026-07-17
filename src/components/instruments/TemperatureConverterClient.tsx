@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { calculateTemperatureConverter } from '../../instruments/temperature-converter/lib/calculate.js'
 import type { TemperatureConverterOutput } from '../../instruments/temperature-converter/lib/types.js'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -113,6 +114,7 @@ export function TemperatureConverterClient({ translations }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`${result.celsius}°C = ${result.fahrenheit}°F = ${result.kelvin}K — converted free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

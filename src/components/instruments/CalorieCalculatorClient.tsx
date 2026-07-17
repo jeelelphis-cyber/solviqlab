@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { calculateCalories, convertLbToKg, convertFtInchesToCm } from '../../instruments/calorie-calculator/lib/calculate.js'
 import type { CalorieCalculatorOutput, ActivityLevel, Goal } from '../../instruments/calorie-calculator/lib/types.js'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -324,6 +325,7 @@ export function CalorieCalculatorClient({ translations }: Props) {
               ⎙ Print
             </button>
           </div>
+          <ShareButtons text={`My daily calorie target: ${result.goalCalories} kcal/day — calculated free at SolviqLab`} className="mt-2" />
         </div>
       )}
     </div>

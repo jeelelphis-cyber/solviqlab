@@ -5,7 +5,7 @@ import { calculatePercentageCalculator } from '../../instruments/percentage-calc
 import { PercentageCalculatorInputSchema } from '../../instruments/percentage-calculator/validate.js'
 import { getInterpretation } from '../../instruments/percentage-calculator/interpret.js'
 import type { PercentageMode, PercentageDirection, PercentageCalculatorInput, PercentageCalculatorOutput } from '../../instruments/percentage-calculator/types.js'
-
+import { ShareButtons } from '../ShareButtons.js'
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -164,6 +164,7 @@ export function PercentageCalculatorClient({ translations, lang }: Props) {
               {interpretation.primary}
             </p>
           )}
+          <ShareButtons text={`Result: ${result.roundedResult}${mode === 'is-what-percent' || mode === 'percent-change' ? '%' : ''} — calculated free at SolviqLab`} className="mt-3" />
         </div>
       )}
     </div>

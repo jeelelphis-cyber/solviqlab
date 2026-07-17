@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { calculateWeightConverter } from '../../instruments/weight-converter/lib/calculate.js'
 import type { WeightConverterOutput } from '../../instruments/weight-converter/lib/types.js'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -129,6 +130,7 @@ export function WeightConverterClient({ translations }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`${result.kilograms} kg = ${result.pounds} lbs = ${result.grams} g — converted free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

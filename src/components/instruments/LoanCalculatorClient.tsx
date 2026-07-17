@@ -5,6 +5,7 @@ import { calculateLoanCalculator } from '../../instruments/loan-calculator/lib/c
 import type { LoanCalculatorOutput } from '../../instruments/loan-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -134,6 +135,7 @@ export function LoanCalculatorClient({ translations, lang }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`My monthly loan payment: ${formatAmount(result.monthlyPayment as number, currency, lang)} — calculated free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { calculateScientificNotationCalculator } from '../../instruments/scientific-notation-calculator/lib/calculate.js'
 import type { ScientificNotationCalculatorOutput } from '../../instruments/scientific-notation-calculator/lib/types.js'
-
+import { ShareButtons } from '../ShareButtons.js'
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -102,6 +102,7 @@ export function ScientificNotationCalculatorClient({ translations }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`Scientific notation: ${result.coefficient} × 10^${result.exponent} — SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

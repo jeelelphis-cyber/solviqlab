@@ -5,6 +5,7 @@ import { calculateCompoundInterestCalculator } from '../../instruments/compound-
 import type { CompoundInterestCalculatorOutput } from '../../instruments/compound-interest-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -168,6 +169,7 @@ export function CompoundInterestCalculatorClient({ translations, lang }: Props) 
               </div>
             </div>
           </div>
+          <ShareButtons text={`My investment could grow to ${formatAmount(result.finalAmount as number, currency, lang)} — calculated free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { calculateLengthConverter } from '../../instruments/length-converter/lib/calculate.js'
 import type { LengthConverterOutput } from '../../instruments/length-converter/lib/types.js'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -137,6 +138,7 @@ export function LengthConverterClient({ translations }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`${result.meters} m = ${result.feet} ft = ${result.kilometers} km — converted free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

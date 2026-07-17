@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { calculateRatioCalculator } from '../../instruments/ratio-calculator/lib/calculate.js'
 import type { RatioCalculatorOutput } from '../../instruments/ratio-calculator/lib/types.js'
-
+import { ShareButtons } from '../ShareButtons.js'
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -135,6 +135,7 @@ export function RatioCalculatorClient({ translations }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`My simplified ratio: ${result.simplifiedA}:${result.simplifiedB} — calculated free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

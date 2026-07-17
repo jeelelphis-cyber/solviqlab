@@ -5,6 +5,7 @@ import { calculateMortgageCalculator } from '../../instruments/mortgage-calculat
 import type { MortgageCalculatorOutput } from '../../instruments/mortgage-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -163,6 +164,7 @@ export function MortgageCalculatorClient({ translations, lang }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`My monthly mortgage payment: ${formatAmount(result.monthlyPayment as number, currency, lang)} — calculated free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

@@ -4,7 +4,7 @@ import { calculateInflationCalculator } from '../../instruments/inflation-calcul
 import type { InflationCalculatorOutput } from '../../instruments/inflation-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
-
+import { ShareButtons } from '../ShareButtons.js'
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -275,6 +275,7 @@ export function InflationCalculatorClient({ translations, lang }: Props) {
               ⎙ Print
             </button>
           </div>
+          <ShareButtons text={`Inflation-adjusted value: ${formatAmount(result.adjustedAmount, currency, lang)} — calculated free at SolviqLab`} className="mt-2" />
 
           {/* Sources */}
           <div className="border border-border-default rounded-xl overflow-hidden">

@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { calculateAreaCalculator } from '../../instruments/area-calculator/lib/calculate.js'
 import type { AreaCalculatorOutput } from '../../instruments/area-calculator/lib/types.js'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -134,6 +135,7 @@ export function AreaCalculatorClient({ translations }: Props) {
               </div>
             )}
           </div>
+          <ShareButtons text={`Area: ${result.area.toLocaleString()} — calculated free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

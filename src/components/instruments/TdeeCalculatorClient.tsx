@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { calculateTdeeCalculator } from '../../instruments/tdee-calculator/lib/calculate.js'
 import type { TdeeCalculatorOutput } from '../../instruments/tdee-calculator/lib/types.js'
-
+import { ShareButtons } from '../ShareButtons.js'
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -167,6 +167,7 @@ export function TdeeCalculatorClient({ translations }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`My TDEE: ${typeof result.tdee === 'number' ? result.tdee.toLocaleString() : result.tdee} kcal/day — calculated free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

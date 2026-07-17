@@ -4,6 +4,7 @@ import { calculateTaxCalculator } from '../../instruments/tax-calculator/lib/cal
 import type { TaxCalculatorOutput } from '../../instruments/tax-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -301,6 +302,7 @@ export function TaxCalculatorClient({ translations, lang }: Props) {
               ⎙ Print
             </button>
           </div>
+          <ShareButtons text={`My effective tax rate: ${result.effectiveRate}% — calculated free at SolviqLab`} className="mt-2" />
 
           {/* Sources */}
           <div className="border border-border-default rounded-xl overflow-hidden">

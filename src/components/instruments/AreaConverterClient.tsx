@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { calculateAreaConverter } from '../../instruments/area-converter/lib/calculate.js'
 import type { AreaConverterOutput } from '../../instruments/area-converter/lib/types.js'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -131,6 +132,7 @@ export function AreaConverterClient({ translations }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`${result.squareMeters} m² = ${result.squareFeet} ft² = ${result.acres} acres — converted free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

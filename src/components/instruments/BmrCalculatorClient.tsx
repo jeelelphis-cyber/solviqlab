@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { calculateBmrCalculator } from '../../instruments/bmr-calculator/lib/calculate.js'
 import type { BmrCalculatorOutput } from '../../instruments/bmr-calculator/lib/types.js'
-
+import { ShareButtons } from '../ShareButtons.js'
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -131,6 +131,7 @@ export function BmrCalculatorClient({ translations }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`My BMR: ${typeof result.bmr === 'number' ? result.bmr.toLocaleString() : result.bmr} kcal/day — calculated free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

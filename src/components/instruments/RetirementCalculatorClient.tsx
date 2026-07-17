@@ -4,6 +4,7 @@ import { calculateRetirementCalculator } from '../../instruments/retirement-calc
 import type { RetirementCalculatorOutput } from '../../instruments/retirement-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -313,6 +314,7 @@ export function RetirementCalculatorClient({ translations, lang }: Props) {
               ⎙ Print
             </button>
           </div>
+          <ShareButtons text={`My retirement savings projection: ${formatAmount(result.projectedSavings, currency, lang)} — calculated free at SolviqLab`} className="mt-2" />
 
           {/* Sources */}
           <div className="border border-border-default rounded-xl overflow-hidden">

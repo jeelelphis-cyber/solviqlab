@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { calculateCalorieDeficitCalculator } from '../../instruments/calorie-deficit-calculator/lib/calculate.js'
 import type { CalorieDeficitCalculatorOutput } from '../../instruments/calorie-deficit-calculator/lib/types.js'
-
+import { ShareButtons } from '../ShareButtons.js'
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -151,6 +151,7 @@ export function CalorieDeficitCalculatorClient({ translations }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`My daily calorie deficit: ${typeof result.dailyDeficit === 'number' ? result.dailyDeficit.toLocaleString() : result.dailyDeficit} kcal — calculated free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

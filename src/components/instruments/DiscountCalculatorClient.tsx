@@ -5,7 +5,7 @@ import { calculateDiscountCalculator } from '../../instruments/discount-calculat
 import type { DiscountCalculatorOutput } from '../../instruments/discount-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
-
+import { ShareButtons } from '../ShareButtons.js'
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -112,6 +112,7 @@ export function DiscountCalculatorClient({ translations, lang }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`Sale price: ${formatAmount(result.finalPrice as number, currency, lang)} (saving ${formatAmount(result.discountAmount as number, currency, lang)}) — calculated free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

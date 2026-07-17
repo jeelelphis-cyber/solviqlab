@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { calculateOvulationCalculator } from '../../instruments/ovulation-calculator/lib/calculate.js'
 import type { OvulationCalculatorOutput } from '../../instruments/ovulation-calculator/lib/types.js'
-
+import { ShareButtons } from '../ShareButtons.js'
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -216,6 +216,7 @@ export function OvulationCalculatorClient({ translations }: Props) {
               ⎙ Print
             </button>
           </div>
+          <ShareButtons text={`My ovulation date: ${result.ovulationDate} | Fertile: ${result.fertileWindowStart}–${result.fertileWindowEnd} — calculated free at SolviqLab`} className="mt-2" />
 
           {/* Sources */}
           <div className="border border-border-default rounded-xl overflow-hidden">

@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { calculatePregnancy } from '../../instruments/pregnancy-calculator/lib/calculate.js'
 import type { PregnancyCalculatorOutput, InputMethod } from '../../instruments/pregnancy-calculator/lib/types.js'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -316,6 +317,7 @@ export function PregnancyCalculatorClient({ translations }: Props) {
               ⎙ Print
             </button>
           </div>
+          <ShareButtons text={`I'm ${result.weeksPregnant} weeks pregnant! Due: ${result.dueDate} — calculated free at SolviqLab`} className="mt-2" />
 
           {/* YMYL Bottom Disclaimer */}
           <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-3 text-xs text-amber-700 dark:text-amber-300">

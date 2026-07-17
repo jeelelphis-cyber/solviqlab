@@ -4,6 +4,7 @@ import { calculateInvestmentCalculator } from '../../instruments/investment-calc
 import type { InvestmentCalculatorOutput } from '../../instruments/investment-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -285,6 +286,7 @@ export function InvestmentCalculatorClient({ translations, lang }: Props) {
               ⎙ Print
             </button>
           </div>
+          <ShareButtons text={`My investment final value: ${formatAmount(result.finalValue, currency, lang)} — calculated free at SolviqLab`} className="mt-2" />
 
           {/* Sources */}
           <div className="border border-border-default rounded-xl overflow-hidden">

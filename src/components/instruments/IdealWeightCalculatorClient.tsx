@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { calculateIdealWeightCalculator } from '../../instruments/ideal-weight-calculator/lib/calculate.js'
 import type { IdealWeightCalculatorOutput } from '../../instruments/ideal-weight-calculator/lib/types.js'
-
+import { ShareButtons } from '../ShareButtons.js'
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -117,6 +117,7 @@ export function IdealWeightCalculatorClient({ translations }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`My ideal weight: ${typeof result.average === 'number' ? result.average.toLocaleString() : result.average} kg — calculated free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

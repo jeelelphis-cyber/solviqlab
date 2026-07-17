@@ -5,7 +5,7 @@ import { calculateVatCalculator } from '../../instruments/vat-calculator/lib/cal
 import type { VatCalculatorOutput } from '../../instruments/vat-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
-
+import { ShareButtons } from '../ShareButtons.js'
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -133,6 +133,7 @@ export function VatCalculatorClient({ translations, lang }: Props) {
               </div>
             </div>
           </div>
+          <ShareButtons text={`VAT amount: ${formatAmount(result.vatAmount as number, currency, lang)} (gross: ${formatAmount(result.grossAmount as number, currency, lang)}) — calculated free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

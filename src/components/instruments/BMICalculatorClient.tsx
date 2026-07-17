@@ -8,6 +8,7 @@ import { getInterpretation } from '../../instruments/bmi-calculator/interpret.js
 import { getBMIBucket } from '../../instruments/bmi-calculator/types.js'
 import type { BMIInput, BMIOutput, BMICategory } from '../../instruments/bmi-calculator/types.js'
 import { t as uiT } from '../../lib/ui-strings'
+import { ShareButtons } from '../ShareButtons.js'
 
 // ─── Analytics ───────────────────────────────────────────────────────────────
 function track(event: string, params: Record<string, string>) {
@@ -664,6 +665,7 @@ export function BMICalculatorClient({ translations, lang }: Props) {
               {s.print}
             </button>
           </div>
+          <ShareButtons text={`My BMI is ${result.bmi} (${result.category.replace(/_/g, ' ')}) — calculated free at SolviqLab`} className="mt-2" />
 
           {/* ── Additional Metrics ───────────────────────────────────────────── */}
           <div className="grid grid-cols-3 gap-3 mt-4">

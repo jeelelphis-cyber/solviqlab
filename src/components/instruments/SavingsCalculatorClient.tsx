@@ -4,6 +4,7 @@ import { calculateSavings } from '../../instruments/savings-calculator/lib/calcu
 import type { SavingsCalculatorOutput } from '../../instruments/savings-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -382,6 +383,7 @@ export function SavingsCalculatorClient({ translations, lang }: Props) {
               ⎙ Print
             </button>
           </div>
+          <ShareButtons text={`My savings will grow to ${result.finalBalance} — calculated free at SolviqLab`} className="mt-2" />
         </div>
       )}
     </div>

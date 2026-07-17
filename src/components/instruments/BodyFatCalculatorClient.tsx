@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { calculateBodyFatCalculator } from '../../instruments/body-fat-calculator/lib/calculate.js'
 import type { BodyFatCalculatorOutput } from '../../instruments/body-fat-calculator/lib/types.js'
-
+import { ShareButtons } from '../ShareButtons.js'
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -149,6 +149,7 @@ export function BodyFatCalculatorClient({ translations }: Props) {
               </div>
             )}
           </div>
+          <ShareButtons text={`My body fat: ${result.bodyFat}% (${result.category}) — calculated free at SolviqLab`} className="mt-4" />
         </div>
       )}
     </div>

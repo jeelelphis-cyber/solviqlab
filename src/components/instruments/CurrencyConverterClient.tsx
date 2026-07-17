@@ -3,6 +3,7 @@ import { useState, useCallback } from 'react'
 import { convertCurrency } from '../../instruments/currency-converter/lib/calculate.js'
 import type { CurrencyConverterOutput } from '../../instruments/currency-converter/lib/types.js'
 import { CURRENCIES } from '../../lib/currencies.js'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -277,14 +278,15 @@ export function CurrencyConverterClient({ translations, rates, ratesUpdatedAt, r
             </div>
           </div>
 
-          {/* Copy button */}
-          <div className="flex gap-2 pt-1">
+          {/* Copy + Share buttons */}
+          <div className="flex gap-2 pt-1 flex-wrap">
             <button
               onClick={handleCopy}
               className="flex items-center gap-1.5 px-3 py-1.5 text-xs border border-border-default rounded-lg text-content-secondary hover:text-content-primary hover:border-border-hover transition-colors"
             >
               {copied ? '✓ Copied' : '⎘ Copy'}
             </button>
+            <ShareButtons text={`${amount} ${result.fromCode} = ${result.result} ${result.toCode} — converted free at SolviqLab`} />
           </div>
         </div>
       )}

@@ -4,6 +4,7 @@ import { calculateTip } from '../../instruments/tip-calculator/lib/calculate.js'
 import type { TipCalculatorOutput } from '../../instruments/tip-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
+import { ShareButtons } from '../ShareButtons.js'
 
 interface Props {
   translations: Record<string, unknown>
@@ -346,6 +347,7 @@ export function TipCalculatorClient({ translations, lang }: Props) {
               ⎙ Print
             </button>
           </div>
+          <ShareButtons text={`Tip per person: ${formatAmount(result.tipPerPerson, currency, lang)} (total: ${formatAmount(result.totalBill, currency, lang)}) — calculated free at SolviqLab`} className="mt-2" />
         </div>
       )}
     </div>
