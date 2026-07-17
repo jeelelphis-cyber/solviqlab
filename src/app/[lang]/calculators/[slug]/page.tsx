@@ -155,17 +155,18 @@ function JourneySection({ slug, lang }: { slug: string; lang: string }) {
 }
 
 // ── API Section ────────────────────────────────────────────────────────────────
-function ApiSection({ slug }: { slug: string }) {
+function ApiSection({ slug, lang }: { slug: string; lang: string }) {
+  const s = t(lang)
   return (
     <section className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800">
       <div className="flex items-center gap-2 mb-3">
-        <h2 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">API Access</h2>
-        <span className="text-xs px-2 py-0.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full border border-blue-200 dark:border-blue-700 font-medium">Coming Soon</span>
+        <h2 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{s.apiAccess}</h2>
+        <span className="text-xs px-2 py-0.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full border border-blue-200 dark:border-blue-700 font-medium">{s.apiComingSoon}</span>
       </div>
       <div className="bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 px-4 py-3">
         <code className="text-sm font-mono text-slate-600 dark:text-slate-300">https://api.solviqlab.com/v1/{slug}</code>
       </div>
-      <p className="text-xs text-slate-400 dark:text-slate-500 mt-2">REST API for developers. Integrate this calculator into your app.</p>
+      <p className="text-xs text-slate-400 dark:text-slate-500 mt-2">{s.apiDeveloper}</p>
     </section>
   )
 }
@@ -332,21 +333,21 @@ export default function InstrumentPage({ params }: PageProps) {
         </div>
 
         {/* SEO Content Blocks */}
-        <ContentSection translations={translations} primaryKeyword={instrument.primaryKeyword ?? slug} />
+        <ContentSection translations={translations} primaryKeyword={instrument.primaryKeyword ?? slug} lang={lang} />
 
         {/* FAQ Section */}
         {faqItems.length > 0 && (
-          <FAQSection title={faqTranslations?.['title'] ?? 'Frequently Asked Questions'} items={faqItems} />
+          <FAQSection title={faqTranslations?.['title'] ?? s.faqTitle} items={faqItems} />
         )}
 
         {/* Continue Your Journey */}
         <JourneySection slug={slug} lang={lang} />
 
         {/* E-E-A-T Sources */}
-        <SourcesSection category={instrument.category} />
+        <SourcesSection category={instrument.category} lang={lang} />
 
         {/* API Section */}
-        <ApiSection slug={slug} />
+        <ApiSection slug={slug} lang={lang} />
 
         {/* Category Cross-link */}
         <div className="mt-10 pt-6 border-t border-slate-100 dark:border-slate-800">
@@ -387,13 +388,14 @@ const SOURCES: Record<string, { name: string; url: string; description: string }
   ],
 }
 
-function SourcesSection({ category }: { category: string }) {
+function SourcesSection({ category, lang }: { category: string; lang: string }) {
   const sources = SOURCES[category]
+  const s = t(lang)
   if (!sources) return null
   return (
     <section className="mt-10 pt-6 border-t border-slate-100 dark:border-slate-800">
       <h2 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">
-        Trusted Sources & Methodology
+        {s.trustedSources}
       </h2>
       <div className="space-y-2">
         {sources.map(src => (
@@ -460,9 +462,10 @@ function InstrumentUI({
 }
 
 // ── SEO Content Blocks ────────────────────────────────────────────────────────
-function ContentSection({ translations, primaryKeyword }: { translations: Record<string, unknown>; primaryKeyword: string }) {
+function ContentSection({ translations, primaryKeyword, lang }: { translations: Record<string, unknown>; primaryKeyword: string; lang: string }) {
   const content = translations['content'] as Record<string, string> | undefined
   if (!content?.['whatIs']) return null
+  const s = t(lang)
 
   const steps = [
     content['howItWorks_1'],
@@ -478,7 +481,7 @@ function ContentSection({ translations, primaryKeyword }: { translations: Record
       {/* What Is — H2 with keyword */}
       <section>
         <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-          What is the {kwCapitalized}?
+          {s.contentWhatIs(kwCapitalized)}
         </h2>
         <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
           {content['whatIs']}
@@ -489,7 +492,7 @@ function ContentSection({ translations, primaryKeyword }: { translations: Record
       {content['formula'] && (
         <section>
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-            {kwCapitalized} Formula
+            {s.contentFormula(kwCapitalized)}
           </h2>
           <div className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-5 py-4">
             <p className="text-slate-700 dark:text-slate-200 text-sm leading-relaxed font-mono whitespace-pre-wrap">
@@ -503,7 +506,7 @@ function ContentSection({ translations, primaryKeyword }: { translations: Record
       {content['example'] && (
         <section>
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-            {kwCapitalized} Example
+            {s.contentExample(kwCapitalized)}
           </h2>
           <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
             {content['example']}
@@ -515,7 +518,7 @@ function ContentSection({ translations, primaryKeyword }: { translations: Record
       {steps.length > 0 && (
         <section>
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">
-            How to Use the {kwCapitalized}
+            {s.contentHowTo(kwCapitalized)}
           </h2>
           <ol className="space-y-2">
             {steps.map((step, i) => (
