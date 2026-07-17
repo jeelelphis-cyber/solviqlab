@@ -1,4 +1,4 @@
-import { redirect } from 'next/navigation'
+import { permanentRedirect } from 'next/navigation'
 import { getInstrument, getProductSegment, getAllSlugs, SUPPORTED_LANGS } from '../../../lib/instruments'
 
 export function generateStaticParams() {
@@ -10,7 +10,7 @@ export function generateStaticParams() {
 
 export default function OldSlugRedirect({ params }: { params: { lang: string; slug: string } }) {
   const instrument = getInstrument(params.slug)
-  if (!instrument) redirect(`/${params.lang}`)
+  if (!instrument) permanentRedirect(`/${params.lang}`)
   const product = getProductSegment(instrument.category)
-  redirect(`/${params.lang}/${product}/${params.slug}`)
+  permanentRedirect(`/${params.lang}/${product}/${params.slug}`)
 }
