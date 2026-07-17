@@ -248,11 +248,36 @@ export default async function InstrumentPage({ params }: PageProps) {
       }
     : null
 
+  const speakableSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: instrument.seoTitle,
+    url: getInstrumentCanonical(lang, slug, instrument.category),
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '.instrument-description', '.faq-answer'],
+    },
+    description: instrument.seoDescription,
+  }
+
+  const datasetSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: instrument.seoTitle,
+    description: instrument.seoDescription,
+    url: getInstrumentCanonical(lang, slug, instrument.category),
+    creator: { '@type': 'Organization', name: 'SolviqLab', url: 'https://solviqlab.com' },
+    license: 'https://creativecommons.org/licenses/by/4.0/',
+    isAccessibleForFree: true,
+  }
+
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900">
       {/* JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetSchema) }} />
       {faqSchema && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
@@ -329,7 +354,7 @@ export default async function InstrumentPage({ params }: PageProps) {
             {pageTitle}
           </h1>
           {pageDescription && (
-            <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+            <p className="instrument-description text-slate-600 dark:text-slate-300 leading-relaxed">
               {pageDescription}
             </p>
           )}
@@ -563,7 +588,7 @@ function FAQSection({ title, items }: { title: string; items: { q: string; a: st
                 ⌄
               </span>
             </summary>
-            <div className="px-5 pb-4 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+            <div className="faq-answer px-5 pb-4 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
               {a}
             </div>
           </details>
