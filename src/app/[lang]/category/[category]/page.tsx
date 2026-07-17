@@ -43,7 +43,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   if (!cat) return { title: 'Not Found' }
   const desc = CATEGORY_DESCRIPTIONS[lang]?.[category] ?? CATEGORY_DESCRIPTIONS['en']![category] ?? ''
   return {
-    title: `${cat.label} Calculators — Free Online Tools | SolviqLab`,
+    title: { absolute: `${cat.label} Calculators — Free Online Tools | SolviqLab` },
     description: desc,
     alternates: {
       canonical: `https://solviqlab.com/${lang}/category/${category}`,
