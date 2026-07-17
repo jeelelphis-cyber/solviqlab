@@ -159,7 +159,7 @@ const CATEGORY_TREE = [
     id: 'health', icon: '❤️', color: 'text-red-600',
     subcategories: [
       { id: 'body-weight',  instruments: ['bmi-calculator', 'body-fat-calculator', 'ideal-weight-calculator'] },
-      { id: 'metabolism',   instruments: ['bmr-calculator', 'tdee-calculator', 'calorie-deficit-calculator', 'sleep-calculator'] },
+      { id: 'metabolism',   instruments: ['calorie-calculator', 'bmr-calculator', 'tdee-calculator', 'calorie-deficit-calculator', 'sleep-calculator'] },
       { id: 'reproductive', instruments: ['ovulation-calculator'] },
     ],
   },
@@ -189,8 +189,8 @@ const CATEGORY_TREE = [
 ]
 
 const JOURNEY_TREE = [
-  { id: 'weight-loss', instruments: ['bmi-calculator', 'tdee-calculator', 'calorie-deficit-calculator', 'ideal-weight-calculator', 'body-fat-calculator'] },
-  { id: 'fitness',     instruments: ['bmr-calculator', 'tdee-calculator', 'body-fat-calculator', 'bmi-calculator'] },
+  { id: 'weight-loss', instruments: ['calorie-calculator', 'bmi-calculator', 'tdee-calculator', 'calorie-deficit-calculator', 'ideal-weight-calculator', 'body-fat-calculator'] },
+  { id: 'fitness',     instruments: ['calorie-calculator', 'bmr-calculator', 'tdee-calculator', 'body-fat-calculator', 'bmi-calculator'] },
   { id: 'home-buying', instruments: ['mortgage-calculator', 'loan-calculator', 'compound-interest-calculator'] },
   { id: 'investing',   instruments: ['compound-interest-calculator', 'loan-calculator'] },
 ]

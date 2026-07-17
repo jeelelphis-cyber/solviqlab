@@ -34,6 +34,7 @@ import { RetirementCalculatorClient } from '../../../../components/instruments/R
 import { OvulationCalculatorClient } from '../../../../components/instruments/OvulationCalculatorClient'
 import { SleepCalculatorClient } from '../../../../components/instruments/SleepCalculatorClient'
 import { InvestmentCalculatorClient } from '../../../../components/instruments/InvestmentCalculatorClient'
+import { CalorieCalculatorClient } from '../../../../components/instruments/CalorieCalculatorClient'
 
 interface PageProps {
   params: { lang: string; slug: string }
@@ -455,6 +456,7 @@ function InstrumentUI({
     case 'ovulation-calculator': return <OvulationCalculatorClient translations={translations} lang={lang} />
     case 'sleep-calculator': return <SleepCalculatorClient translations={translations} lang={lang} />
     case 'investment-calculator': return <InvestmentCalculatorClient translations={translations} lang={lang} />
+    case 'calorie-calculator': return <CalorieCalculatorClient translations={translations} lang={lang} />
     default:
       return (
         <div className="text-slate-500 dark:text-slate-400 text-sm py-4 text-center">

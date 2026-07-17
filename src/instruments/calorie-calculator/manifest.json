@@ -1,0 +1,39 @@
+{
+  "slug": "calorie-calculator",
+  "name": "Calorie Calculator",
+  "seoTitle": "Calorie Calculator — Daily Calorie Needs for Weight Loss & Gain",
+  "seoDescription": "Calculate your daily calorie needs using the Mifflin-St Jeor equation. Get personalized targets for weight loss, maintenance, and muscle gain. Free, no sign-up.",
+  "primaryKeyword": "calorie calculator",
+  "type": "calculator",
+  "category": "health",
+  "isYMYL": true,
+  "version": "1.0.0",
+  "status": "certified",
+  "capabilities": ["formula", "validation", "ai-interpretation", "seo", "localization"],
+  "inputs": [
+    { "name": "weight", "type": "number", "required": true, "unit": "kg", "min": 20, "max": 300 },
+    { "name": "height", "type": "number", "required": true, "unit": "cm", "min": 100, "max": 250 },
+    { "name": "age", "type": "number", "required": true, "unit": "years", "min": 15, "max": 100 },
+    { "name": "sex", "type": "select", "required": true, "enumValues": ["male", "female"] },
+    { "name": "activityLevel", "type": "select", "required": true, "enumValues": ["sedentary", "light", "moderate", "active", "very_active"] },
+    { "name": "goal", "type": "select", "required": false, "enumValues": ["lose", "maintain", "gain"] }
+  ],
+  "outputs": [
+    { "name": "bmr", "label": "BMR", "unit": "kcal/day" },
+    { "name": "maintenance", "label": "Maintenance Calories", "unit": "kcal/day" },
+    { "name": "mildLoss", "label": "Mild Weight Loss", "unit": "kcal/day" },
+    { "name": "weightLoss", "label": "Weight Loss", "unit": "kcal/day" },
+    { "name": "extremeLoss", "label": "Extreme Weight Loss", "unit": "kcal/day" },
+    { "name": "mildGain", "label": "Mild Weight Gain", "unit": "kcal/day" },
+    { "name": "weightGain", "label": "Weight Gain", "unit": "kcal/day" },
+    { "name": "protein", "label": "Protein", "unit": "g/day" },
+    { "name": "carbs", "label": "Carbohydrates", "unit": "g/day" },
+    { "name": "fat", "label": "Fat", "unit": "g/day" }
+  ],
+  "keywords": ["calorie calculator", "daily calorie needs", "calorie intake calculator"],
+  "related": ["tdee-calculator", "bmi-calculator", "bmr-calculator", "macro-calculator", "calorie-deficit-calculator"],
+  "supportedLanguages": ["en", "uk", "es", "pt", "fr", "de", "pl"],
+  "releaseHistory": [
+    { "status": "certified", "at": "2026-07-17T00:00:00.000Z", "notes": "Gold Standard — Wave 2 Priority A" }
+  ]
+}
