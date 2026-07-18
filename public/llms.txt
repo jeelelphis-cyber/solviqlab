@@ -1,0 +1,70 @@
+# SolviqLab
+
+> SolviqLab provides 36 free professional calculators for health, finance, math, and unit conversions. All formulas are backed by WHO, CFPB, NIST, and ISO standards. No registration required. Available in 7 languages: English, Ukrainian, Spanish, Portuguese, French, German, and Polish.
+
+## About
+
+SolviqLab is a calculator platform built on verified scientific and regulatory formulas. Each tool includes the exact formula used, worked examples, clinical context, and expert tips. Sources cited include the World Health Organization (WHO), Consumer Financial Protection Bureau (CFPB), National Institute of Standards and Technology (NIST), and International Organization for Standardization (ISO).
+
+## Health Calculators
+
+- [BMI Calculator](https://solviqlab.com/en/calculators/bmi-calculator): Body Mass Index using WHO classifications. Supports metric and imperial units.
+- [TDEE Calculator](https://solviqlab.com/en/calculators/tdee-calculator): Total Daily Energy Expenditure using Mifflin-St Jeor equation with activity multipliers.
+- [BMR Calculator](https://solviqlab.com/en/calculators/bmr-calculator): Basal Metabolic Rate. Supports Mifflin-St Jeor and Harris-Benedict formulas.
+- [Calorie Calculator](https://solviqlab.com/en/calculators/calorie-calculator): Daily calorie needs with macro breakdown (protein, carbs, fat).
+- [Body Fat Calculator](https://solviqlab.com/en/calculators/body-fat-calculator): Body fat percentage using US Navy method and BMI method.
+- [Ideal Weight Calculator](https://solviqlab.com/en/calculators/ideal-weight-calculator): Ideal body weight using Devine, Robinson, Miller, and Hamwi formulas.
+- [Pregnancy Calculator](https://solviqlab.com/en/calculators/pregnancy-calculator): Pregnancy week, trimester, and 12 key milestones from LMP, conception, or IVF date.
+- [Due Date Calculator](https://solviqlab.com/en/calculators/due-date-calculator): Estimated due date using 4 methods with 14 pregnancy milestones.
+- [Ovulation Calculator](https://solviqlab.com/en/calculators/ovulation-calculator): Fertile window and ovulation date from cycle length.
+- [Sleep Calculator](https://solviqlab.com/en/calculators/sleep-calculator): Optimal wake-up times based on 90-minute sleep cycles.
+- [Calorie Deficit Calculator](https://solviqlab.com/en/calculators/calorie-deficit-calculator): Daily calorie deficit needed to reach a weight loss goal.
+
+## Finance Calculators
+
+- [Mortgage Calculator](https://solviqlab.com/en/calculators/mortgage-calculator): Monthly payment, total interest, and total cost using CFPB standard amortization formula.
+- [Loan Calculator](https://solviqlab.com/en/calculators/loan-calculator): Monthly payment and amortization for any fixed-rate loan.
+- [Compound Interest Calculator](https://solviqlab.com/en/calculators/compound-interest-calculator): Future value with optional monthly contributions. Supports annual, quarterly, monthly, and daily compounding.
+- [Savings Calculator](https://solviqlab.com/en/calculators/savings-calculator): Savings growth with regular deposits and compound interest.
+- [Investment Calculator](https://solviqlab.com/en/calculators/investment-calculator): Long-term investment projections with contributions.
+- [Retirement Calculator](https://solviqlab.com/en/calculators/retirement-calculator): Retirement savings projection with withdrawal planning.
+- [Salary Calculator](https://solviqlab.com/en/calculators/salary-calculator): Gross-to-net pay conversion: hourly, daily, weekly, monthly, annual.
+- [Tax Calculator](https://solviqlab.com/en/calculators/tax-calculator): US federal income tax estimate using current IRS brackets.
+- [VAT Calculator](https://solviqlab.com/en/calculators/vat-calculator): Add or remove VAT/sales tax from any price.
+- [Discount Calculator](https://solviqlab.com/en/calculators/discount-calculator): Final price after percentage discount.
+- [Tip Calculator](https://solviqlab.com/en/calculators/tip-calculator): Tip amount and total bill split per person.
+- [Inflation Calculator](https://solviqlab.com/en/calculators/inflation-calculator): Purchasing power over time using CPI data.
+
+## Math Calculators
+
+- [Percentage Calculator](https://solviqlab.com/en/calculators/percentage-calculator): Four modes — percent of, what percent is, percent change, percent adjust.
+- [Average Calculator](https://solviqlab.com/en/calculators/average-calculator): Mean, median, mode, and range for any data set.
+- [Fraction Calculator](https://solviqlab.com/en/calculators/fraction-calculator): Add, subtract, multiply, and divide fractions with step-by-step solutions.
+- [Ratio Calculator](https://solviqlab.com/en/calculators/ratio-calculator): Simplify ratios and solve proportions.
+- [Scientific Notation Calculator](https://solviqlab.com/en/calculators/scientific-notation-calculator): Convert between standard and scientific notation.
+- [Area Calculator](https://solviqlab.com/en/calculators/area-calculator): Area of 6 shapes: rectangle, circle, triangle, trapezoid, ellipse, parallelogram.
+- [Volume Calculator](https://solviqlab.com/en/calculators/volume-calculator): Volume of 6 shapes: cube, rectangular prism, sphere, cylinder, cone, pyramid.
+
+## Unit Converters
+
+- [Currency Converter](https://solviqlab.com/en/converters/currency-converter): Live exchange rates for 50+ currencies via open.er-api.com (updated daily).
+- [Length Converter](https://solviqlab.com/en/converters/length-converter): Meters, feet, inches, miles, kilometers, nautical miles, and more.
+- [Weight Converter](https://solviqlab.com/en/converters/weight-converter): Kilograms, pounds, ounces, stones, troy ounces, and more.
+- [Temperature Converter](https://solviqlab.com/en/converters/temperature-converter): Celsius, Fahrenheit, Kelvin, and Rankine.
+- [Area Converter](https://solviqlab.com/en/converters/area-converter): Square meters, square feet, acres, hectares, and more.
+- [Volume Converter](https://solviqlab.com/en/converters/volume-converter): Liters, gallons (US and UK), fluid ounces, cups, pints, and more.
+
+## Languages
+
+All 36 calculators are available in 7 languages:
+- English: https://solviqlab.com/en
+- Ukrainian: https://solviqlab.com/uk
+- Spanish: https://solviqlab.com/es
+- Portuguese: https://solviqlab.com/pt
+- French: https://solviqlab.com/fr
+- German: https://solviqlab.com/de
+- Polish: https://solviqlab.com/pl
+
+## Sitemap
+
+Full sitemap with all 260 URLs: https://solviqlab.com/sitemap.xml
