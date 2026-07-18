@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "title": "BMI Calculator — Body Mass Index with Interpretation",
+    "description": "Calculate your BMI instantly. Get WHO category, healthy weight range, BMI Prime, and AI-powered health interpretation — free, fast, and accurate."
+  },
+  "form": {
+    "title": "BMI Calculator",
+    "height_label": "Height",
+    "height_placeholder_cm": "e.g. 175",
+    "height_placeholder_ft": "ft",
+    "height_placeholder_in": "in",
+    "weight_label": "Weight",
+    "weight_placeholder_kg": "e.g. 70",
+    "weight_placeholder_lb": "e.g. 154",
+    "age_label": "Age (optional)",
+    "age_placeholder": "e.g. 30",
+    "sex_label": "Sex (optional)",
+    "sex_male": "Male",
+    "sex_female": "Female",
+    "sex_other": "Other / Prefer not to say",
+    "unit_metric": "Metric (cm, kg)",
+    "unit_imperial": "Imperial (ft, lb)",
+    "calculate_button": "Calculate BMI",
+    "reset_button": "Reset"
+  },
+  "validation": {
+    "height_required": "Please enter your height.",
+    "height_too_low": "Height must be at least {min} cm.",
+    "height_too_high": "Height must be at most {max} cm.",
+    "weight_required": "Please enter your weight.",
+    "weight_too_low": "Weight must be at least {min} kg.",
+    "weight_too_high": "Weight must be at most {max} kg.",
+    "invalid_number": "Please enter a valid number (e.g. 70 or 70.5).",
+    "unknown": "Invalid input."
+  },
+  "result": {
+    "title": "Your BMI Result",
+    "bmi_label": "BMI",
+    "category_label": "Category",
+    "bmi_prime_label": "BMI Prime",
+    "ponderal_index_label": "Ponderal Index",
+    "healthy_range_label": "Healthy weight range",
+    "body_fat_label": "Estimated body fat",
+    "body_fat_unavailable": "Enter age and sex for body fat estimate",
+    "categories": {
+      "underweight_severe": "Severely Underweight",
+      "underweight": "Underweight",
+      "normal": "Normal Weight",
+      "overweight": "Overweight",
+      "obese_1": "Obese (Class I)",
+      "obese_2": "Obese (Class II)",
+      "obese_3": "Obese (Class III)"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How is BMI calculated for children or teenagers?",
+    "a1": "This calculator is designed for adults (age 18+). For children and teens, BMI is interpreted using age- and sex-specific percentiles from CDC growth charts, not fixed WHO categories. A BMI at the 85th–94th percentile is considered overweight for children; at the 95th percentile or above is obese.",
+    "q2": "What does BMI Prime mean?",
+    "a2": "BMI Prime is the ratio of your BMI to the upper limit of the normal range (BMI 25). A value of 1.0 corresponds to BMI 25. Values below 1.0 indicate normal or underweight, above 1.0 indicate overweight or obesity. For example, a BMI of 30 gives a BMI Prime of 1.20 — 20% above the upper normal limit.",
+    "q3": "Can BMI be inaccurate for athletes or muscular individuals?",
+    "a3": "Yes. BMI does not distinguish between muscle and fat. Athletes with high muscle mass may have a BMI in the overweight range despite very low body fat — because muscle is denser than fat. For highly active individuals, body fat percentage (measured via DEXA, hydrostatic weighing, or skinfold calipers) is a more accurate health indicator.",
+    "q4": "How is the body fat estimate calculated?",
+    "a4": "The body fat estimate uses the Deurenberg formula: Body Fat % = 1.20 × BMI + 0.23 × Age − 10.8 × Sex − 5.4, where Sex = 1 for male, 0 for female. This formula is validated for adults aged 18–80 and has a standard error of approximately 3.9 percentage points.",
+    "q5": "What are the WHO BMI categories?",
+    "a5": "The World Health Organization defines: Severely Underweight (<16.0), Moderately Underweight (16.0–16.9), Mildly Underweight (17.0–18.4), Normal Weight (18.5–24.9), Overweight (25.0–29.9), Obese Class I (30.0–34.9), Obese Class II (35.0–39.9), and Obese Class III / Morbid Obesity (≥40.0). These categories are based on population-level disease risk data from studies across multiple countries.",
+    "q6": "Is the BMI range the same for men and women?",
+    "a6": "The WHO BMI ranges (18.5–24.9 for normal) apply equally to men and women. However, at the same BMI, women naturally carry 8–10% more body fat than men due to hormonal and reproductive differences. This is why some researchers argue for sex-specific BMI thresholds, though WHO has not adopted them. For a more sex-sensitive assessment, use body fat percentage alongside BMI.",
+    "q7": "How often should I check my BMI?",
+    "a7": "For most adults, calculating BMI every 3–6 months is sufficient to monitor long-term trends. Weight fluctuates 1–3 kg daily due to hydration, food, and hormonal cycles, so avoid interpreting single measurements. If you are actively managing weight, monthly tracking is reasonable. What matters most is the direction of the trend over time, not any individual reading.",
+    "q8": "Can a normal BMI mean I am still unhealthy?",
+    "a8": "Yes. A condition called 'normal weight obesity' or 'skinny fat' occurs when someone has a normal BMI but a high percentage of body fat and low muscle mass. This carries similar metabolic risks to being overweight. Conversely, some people with BMI in the overweight range (25–27.9) are metabolically healthy. This is why BMI should always be interpreted alongside other markers: waist circumference, blood pressure, blood glucose, and cholesterol."
+  },
+  "aria": {
+    "result_announcement": "Result: BMI {bmi}. Category: {category}. {summary}.",
+    "form_description": "Enter your height and weight to calculate your Body Mass Index.",
+    "loading": "Calculating your BMI..."
+  },
+  "content": {
+    "whatIs": "VKİ Hesaplayıcı, Vücut Kitle İndeksinizi (VKİ) hesaplar — Belçikalı matematikçi Adolphe Quetelet tarafından 1830'larda geliştirilen ve Dünya Sağlık Örgütü (DSÖ) tarafından küresel sağlık standardı olarak benimsenen, yaygın olarak kullanılan bir sağlık tarama aracı. VKİ, vücut yağını tahmin etmek ve kilo durumunuzu klinik olarak anlamlı aralıklara kategorize etmek için yalnızca boy ve ağırlığınızı kullanır. 190'dan fazla ülkede doktorlar, diyetisyenler ve halk sağlığı araştırmacıları tarafından birinci basamak sağlık değerlendirmesi olarak kullanılmaktadır.\n\nVKİ tanısal bir ölçüm değildir — nüfus düzeyinde bir tarama indeksidir. Bel çevresi, kan basıncı ve kolesterol seviyeleri gibi diğer değerlendirmelerle birlikte kullanıldığında, tip 2 diyabet, kardiyovasküler hastalık, hipertansiyon ve belirli kanserler dahil ağırlıkla ilgili durumlar için daha yüksek risk altındaki bireyleri belirlemeye yardımcı olur. DSÖ, normal VKİ'yi 18,5 ile 24,9 kg/m² olarak tanımlar; bu aralık çoğu popülasyonda kronik hastalık riskinin en düşük olduğu aralıkla ilişkilidir.\n\nBu hesaplayıcı aynı zamanda VKİ Prime'ı (25'lik normal üst sınıra oranınız), Ponderal İndeks'i (standart VKİ'ye boy küpü alternatifi), boyunuza özel sağlıklı kilo aralığını ve — yaş ve cinsiyet girildiğinde — doğrulanmış Deurenberg formülü kullanılarak tahmini vücut yağ yüzdesini de hesaplar.",
+    "formula": "Metrik:    VKİ = ağırlık (kg) ÷ boy (m)²\nİmparatorluk: VKİ = [ağırlık (lb) ÷ boy (inç)²] × 703\n\nVKİ Prime = VKİ ÷ 25  (1,0 = normal üst sınır)\nPonderal İndeks = ağırlık (kg) ÷ boy (m)³\n\nDSÖ VKİ Kategorileri:\n< 16,0    Ciddi Şekilde Düşük Kilolu\n16,0–16,9 Orta Derecede Düşük Kilolu\n17,0–18,4 Hafif Düşük Kilolu\n18,5–24,9 Normal Kilolu ✓\n25,0–29,9 Fazla Kilolu\n30,0–34,9 Obez (Sınıf I)\n35,0–39,9 Obez (Sınıf II)\n≥ 40,0    Obez (Sınıf III / Morbid Obezite)",
+    "example": "Örnek 1 — Normal kilolu:\n35 yaşında kadın, 165 cm, 62 kg.\nVKİ = 62 ÷ (1,65)² = 62 ÷ 2,7225 = 22,8 kg/m²\nKategori: Normal Kilolu. 165 cm için sağlıklı aralık: 50,4–67,9 kg.\n\nÖrnek 2 — Fazla kilolu:\n45 yaşında erkek, 180 cm, 95 kg.\nVKİ = 95 ÷ (1,80)² = 95 ÷ 3,24 = 29,3 kg/m²\nKategori: Fazla Kilolu. Normal VKİ'ye ulaşmak için hedef kilo: 60,0–81,0 kg.\n\nÖrnek 3 — Düşük kilolu:\n22 yaşında kadın, 158 cm, 44 kg.\nVKİ = 44 ÷ (1,58)² = 44 ÷ 2,4964 = 17,6 kg/m²\nKategori: Hafif Düşük Kilolu. Sağlıklı aralık: 46,2–62,3 kg.",
+    "howItWorks_1": "Boyunuzu santimetre cinsinden (veya İngiliz birimi kullanıyorsanız fit/inç) ve ağırlığınızı kilogram cinsinden (veya pound) girin. Deurenberg formülünü kullanarak tahmini vücut yağ yüzdesi almak için isteğe bağlı olarak yaşınızı ve cinsiyetinizi ekleyin.",
+    "howItWorks_2": "VKİ Hesapla'ya tıklayın. Hesaplayıcı anında VKİ'nizi, VKİ Prime'ınızı, Ponderal İndeksinizi ve boyunuz için sağlıklı kilo aralığını hesaplar. Yaş ve cinsiyet girilmişse vücut yağ yüzdesi de hesaplanır.",
+    "howItWorks_3": "Sonucunuzu inceleyin: VKİ değeri ve DSÖ kategorisi nerede durduğunuzu gösterir. VKİ Prime, normal üst sınırdan ne kadar uzakta olduğunuzu gösterir (1,0). Sağlıklı kilo aralığı, boyunuz için hedef kilo penceresini gösterir. Bu sayıları doktorunuzla yapacağınız bir görüşmenin başlangıç noktası olarak kullanın.",
+    "whyItMatters": "BMI is one of the most extensively studied health metrics in medical literature. Research consistently links higher BMI to significantly increased risks of serious conditions. According to WHO and CDC data, a BMI of 30 or above is associated with a 2–3× higher risk of type 2 diabetes, 50% higher risk of hypertension, elevated risks of coronary heart disease, stroke, sleep apnea, osteoarthritis, and certain cancers — including breast, colon, endometrial, and kidney cancer.\n\nFor underweight individuals (BMI below 18.5), the risks are equally serious: malnutrition, bone density loss (osteoporosis), weakened immune function, hormonal disruption, anemia, and in women, menstrual irregularities and infertility. The WHO estimates that globally, over 1.9 billion adults are overweight or obese, while 462 million are underweight — making BMI tracking a critical public health tool at every level from individual to national policy.\n\nEven modest improvements make a measurable clinical difference. Losing just 5–10% of body weight in overweight or obese individuals has been shown in multiple randomized trials to lower blood pressure by 5–10 mmHg, improve insulin sensitivity, reduce LDL cholesterol, decrease joint pain, and cut cardiovascular disease risk by 10–15%. You do not need to reach a 'perfect' BMI to significantly improve your health outcomes.\n\nAt the population level, BMI trends track closely with healthcare expenditure. The CDC estimates that obesity-related medical care costs in the United States total approximately $173 billion per year — an enormous economic burden driven largely by the conditions that elevated BMI promotes. Countries with the highest obesity rates consistently show higher rates of type 2 diabetes, cardiovascular hospitalizations, and orthopedic procedures. Public health programs that successfully shift population BMI distributions by even 1 unit — through nutrition policy, urban design, or workplace wellness programs — generate measurable reductions in downstream healthcare costs.",
+    "limitations": "BMI has several well-documented limitations that are essential to understand before acting on your result. First, it cannot distinguish between muscle and fat. A muscular athlete with 8% body fat may have a BMI of 27 — technically 'overweight' — while a sedentary person with 35% body fat may have a BMI of 23 — technically 'normal.' For athletic individuals, DEXA scan or hydrostatic weighing provides a more accurate assessment.\n\nSecond, BMI ignores fat distribution. Visceral fat — the dangerous fat stored around internal organs — is a much stronger predictor of metabolic risk than total body fat. Two people with the same BMI can have very different waist circumferences and very different cardiovascular risk profiles. The WHO recommends using waist circumference alongside BMI: risk increases substantially above 88 cm (35 inches) for women and 102 cm (40 inches) for men.\n\nThird, standard WHO BMI thresholds were developed primarily from studies of White European populations. Extensive research has shown that people of South Asian, East Asian, and some other ethnic backgrounds develop type 2 diabetes, hypertension, and metabolic syndrome at lower BMI values — often around 23 instead of 25 for overweight. Some health organizations now recommend lower cut-off points for Asian populations. Always discuss your results with a healthcare provider familiar with your individual background and medical history.",
+    "tips_0": "When using BMI to set a weight goal, target the middle of the healthy range (approximately BMI 21–22) rather than the borderline. A target BMI of 24.5 leaves almost no margin before crossing into overweight territory, and normal weight fluctuations of 1–2 kg can push you back over 25. Aiming for the middle of the healthy range provides a buffer, is more sustainable to maintain, and corresponds to the lowest mortality risk point in most population studies.",
+    "tips_1": "Use BMI as a starting point, not a final verdict. For a complete metabolic picture, combine your BMI with waist circumference, blood pressure, fasting blood glucose, and cholesterol levels — these together give your doctor a far more actionable health profile.",
+    "tips_2": "Track your BMI trend over time, not individual snapshots. A single reading has limited value. What matters is the direction over weeks and months — whether you are moving toward or away from the healthy range. Monthly tracking during active lifestyle changes is ideal.",
+    "tips_3": "If your BMI is 25–27.9 (low overweight), focus on sustainable lifestyle changes before considering medical interventions: a Mediterranean-style diet, 150+ minutes of moderate cardio per week, strength training 2× per week, and 7–9 hours of sleep. These four habits alone can reduce BMI by 1–3 units in 3–6 months.",
+    "tips_4": "If your BMI indicates obesity (30+) or severe underweight (below 16), consult a healthcare professional before starting any intensive diet or exercise program. These ranges carry elevated clinical risks — including cardiac stress during exercise and refeeding syndrome in severe underweight — that require professional guidance."
+  }
+}
