@@ -23,7 +23,13 @@
     "q4": "Como a inflação total difere da taxa de inflação?",
     "a4": "A taxa de inflação é a variação percentual anual nos preços. A inflação total é a variação cumulativa composta ao longo de todo o período. A uma taxa anual de 3% ao longo de 24 anos, a inflação total é (1,03^24 − 1) × 100 ≈ 103,3%, significando que os preços mais que dobraram nesse período.",
     "q5": "Posso usar isso para projeções futuras?",
-    "a5": "Sim. Defina 'Ano Inicial' para o ano atual e 'Ano Final' para um ano futuro. A calculadora usa a fórmula valorAjustado = valor × (1 + taxa/100)^anos, que é válida tanto para consultas históricas quanto para projeções futuras — entendendo que as taxas futuras são estimativas."
+    "a5": "Sim. Defina 'Ano Inicial' para o ano atual e 'Ano Final' para um ano futuro. A calculadora usa a fórmula valorAjustado = valor × (1 + taxa/100)^anos, que é válida tanto para consultas históricas quanto para projeções futuras — entendendo que as taxas futuras são estimativas.",
+    "q6": "O que é o IPCA e como ele é calculado no Brasil?",
+    "a6": "O IPCA (Índice Nacional de Preços ao Consumidor Amplo) é o índice oficial de inflação do Brasil, calculado mensalmente pelo IBGE (Instituto Brasileiro de Geografia e Estatística). Ele mede a variação de preços de uma cesta de produtos e serviços consumidos por famílias com renda entre 1 e 40 salários mínimos em regiões metropolitanas. A cesta inclui 9 grupos: alimentação e bebidas (33,1%), habitação (14,1%), artigos de residência (4,2%), vestuário (5,7%), transportes (20,5%), saúde e cuidados pessoais (12,6%), despesas pessoais (4,5%), educação (3,9%) e comunicação (2,0%). O Banco Central usa o IPCA como referência para o regime de metas de inflação — atualmente a meta é de 3% ao ano, com tolerância de 1,5 pontos percentuais para cima ou para baixo.",
+    "q7": "Qual é a diferença entre IPCA, IGP-M e INPC no contexto brasileiro?",
+    "a7": "O Brasil tem vários índices de inflação com propósitos distintos. O IPCA é o índice oficial da inflação ao consumidor e referência das metas do Banco Central — mede o custo de vida de famílias de média renda em cidades. O INPC (Índice Nacional de Preços ao Consumidor) mede a inflação para famílias com renda de 1 a 5 salários mínimos — mais sensível a variações em alimentos e habitação, costuma subir mais que o IPCA em períodos de alta de commodities. O IGP-M (Índice Geral de Preços do Mercado), calculado pela FGV, inclui preços no atacado, na construção e ao consumidor — é amplamente usado em contratos de aluguel e tarifas de energia. Em períodos de câmbio desvalorizado, o IGP-M tende a subir muito mais que o IPCA, gerando distorções nos reajustes de aluguel.",
+    "q8": "Como a inflação afeta os investimentos e o poder de compra dos brasileiros?",
+    "a8": "A inflação corrói o poder de compra do dinheiro parado — R$ 1.000 hoje valem menos do que R$ 1.000 há 10 anos. No Brasil, com um histórico de alta inflação (a hiperinflação dos anos 1980–1994 chegou a 80% ao mês), os brasileiros têm cultura de proteção contra a inflação. A poupança, com rendimento de 70% da Selic ou 0,5% ao mês + TR (quando Selic ≤ 8,5%), frequentemente perde para a inflação. O Tesouro IPCA+ é um investimento direto que garante rentabilidade acima da inflação. Ações e FIIs historicamente superam a inflação no longo prazo. Imóveis também tendem a se valorizar acima do IPCA em ciclos longos. O reajuste anual do salário mínimo, das aposentadorias e dos planos de saúde é historicamente vinculado ao IPCA ou a índices similares."
   },
   "content": {
     "whatIs": "Esta calculadora de inflação mostra quanto vale uma quantia em dinheiro de um ano em outro ano, usando uma taxa de inflação anual definida pelo usuário. Ela também revela a inflação cumulativa total e a erosão do poder de compra ao longo do período.",
@@ -31,6 +37,13 @@
     "example": "Um valor de $10.000 de 2000 ajustado para 2024 com inflação anual de 3%: $10.000 × (1,03)^24 ≈ $20.327,94. A inflação total é de 103,3% e a perda de poder de compra é de 50,8% — os $10.000 originais agora têm o poder de compra de cerca de $4.919.",
     "howItWorks_1": "Insira o valor original do dinheiro e o ano inicial.",
     "howItWorks_2": "Defina o ano-alvo e ajuste a taxa de inflação anual (padrão 3%).",
-    "howItWorks_3": "Clique em Calcular para ver o valor ajustado pela inflação, a inflação cumulativa total e quanto poder de compra foi perdido."
+    "howItWorks_3": "Clique em Calcular para ver o valor ajustado pela inflação, a inflação cumulativa total e quanto poder de compra foi perdido.",
+    "whyItMatters": "Com o histórico inflacionário do Brasil, entender como a inflação corrói o poder de compra é fundamental para planejamento financeiro. Calcular o valor real do dinheiro ao longo do tempo ajuda a tomar decisões melhores sobre investimentos, reajustes salariais e contratos.",
+    "limitations": "A calculadora usa uma taxa de inflação fixa inserida pelo usuário. A inflação real varia mensalmente — o IPCA acumulado em 12 meses pode diferir do valor anualizado pontual. Para projeções de longo prazo, considere usar uma média histórica do IPCA (em torno de 5–7% ao ano na última década).",
+    "tips_0": "Nunca deixe dinheiro parado na conta corrente — a inflação consome o poder de compra silenciosamente.",
+    "tips_1": "Invista pelo menos no Tesouro Selic para garantir que seu dinheiro renda acima da inflação.",
+    "tips_2": "Ao negociar reajuste salarial, use o IPCA acumulado do período como base mínima de referência.",
+    "tips_3": "Contracts de aluguel em IGP-M podem ser renegociados — em alguns anos, o IGP-M superou o IPCA em 3x.",
+    "tips_4": "Para calcular poder de compra histórico, use o IBGE Calculadora do Cidadão online."
   }
 }

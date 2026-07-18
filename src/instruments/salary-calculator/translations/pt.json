@@ -27,7 +27,13 @@
     "q4": "Esta calculadora considera impostos ou deduções?",
     "a4": "Não. Esta calculadora mostra apenas valores brutos de salário, antes de quaisquer impostos federais, estaduais ou locais, Previdência Social, Medicare, seguro saúde ou contribuições para aposentadoria. Para o salário líquido após impostos federais, use a Calculadora de Impostos.",
     "q5": "E se eu trabalhar meio período ou horas sazonais?",
-    "a5": "Ajuste os campos 'Horas por Semana' e 'Semanas por Ano' para corresponder à sua agenda real. Por exemplo, um trabalhador de meio período com 20 horas/semana durante 48 semanas ganhando $18/hora: $18 × 20 × 48 = $17.280 de salário anual."
+    "a5": "Ajuste os campos 'Horas por Semana' e 'Semanas por Ano' para corresponder à sua agenda real. Por exemplo, um trabalhador de meio período com 20 horas/semana durante 48 semanas ganhando $18/hora: $18 × 20 × 48 = $17.280 de salário anual.",
+    "q6": "Como calcular o salário líquido (salário na mão) no Brasil?",
+    "a6": "O salário líquido brasileiro resulta do salário bruto menos os descontos obrigatórios. Os principais descontos são: INSS (contribuição previdenciária) com alíquotas progressivas de 7,5% a 14% sobre o salário bruto, conforme faixas. IRRF (Imposto de Renda Retido na Fonte) com alíquota progressiva: isento até R$ 2.259,20; 7,5% de R$ 2.259,21 a R$ 2.826,65; 15% de R$ 2.826,66 a R$ 3.751,05; 22,5% de R$ 3.751,06 a R$ 4.664,68; 27,5% acima de R$ 4.664,68. Da base de cálculo do IR, desconta-se a contribuição ao INSS e R$ 189,59 por dependente. Exemplo: salário bruto de R$ 5.000 → INSS ≈ R$ 468,36 → base IR = R$ 4.531,64 → IR ≈ R$ 564,63 → Salário líquido ≈ R$ 3.967.",
+    "q7": "Quais benefícios trabalhistas os empregadores devem oferecer no Brasil?",
+    "a7": "A CLT (Consolidação das Leis do Trabalho) estabelece benefícios mínimos obrigatórios para trabalhadores formais. Obrigatórios por lei: 13º salário (gratificação natalina, pago em duas parcelas até 30/11 e 20/12), Férias anuais remuneradas com adicional de 1/3, FGTS (depósito mensal de 8% do salário), INSS, vale-transporte (quando o empregado solicita e o trajeto excede 6% do salário), licença-maternidade (120 dias) e paternidade (5 dias, ou 20 dias para empresas aderentes ao Programa Empresa Cidadã). Benefícios comuns mas não obrigatórios por lei: vale-refeição ou vale-alimentação (obrigatório para empresas participantes do PAT — Programa de Alimentação do Trabalhador), plano de saúde, seguro de vida, previdência privada, participação nos lucros (PLR). O vale-alimentação e o vale-refeição do PAT têm isenção de IR e INSS para o trabalhador.",
+    "q8": "Como funciona o pró-labore e a remuneração de sócios no Brasil?",
+    "a8": "O pró-labore é a remuneração paga aos sócios que trabalham na empresa, distinto da distribuição de lucros. Sobre o pró-labore incidem: INSS a 11% (limitado ao teto previdenciário) e IRPF conforme a tabela progressiva. A distribuição de lucros e dividendos é isenta de IRPF para o sócio recebedor no Brasil — uma das maiores vantagens tributárias do empreendedorismo brasileiro, atualmente em discussão sobre reforma. Para MEIs (Microempreendedores Individuais): a contribuição previdenciária é de 5% do salário mínimo por mês, garantindo acesso a benefícios do INSS. Para empresas no Simples Nacional, a distribuição de lucros acima de determinado percentual pode ser questionada pela Receita Federal. O planejamento entre pró-labore e distribuição de lucros é uma das principais estratégias de otimização tributária legal no Brasil."
   },
   "content": {
     "whatIs": "Esta calculadora de salário converte entre salários horários e anuais e mostra seu pagamento equivalente em cada período comum: diário, semanal, quinzenal, mensal e anual.",
@@ -35,6 +41,13 @@
     "example": "Um trabalhador que ganha $25/hora com 40 horas/semana durante 52 semanas ganha $52.000/ano. Isso equivale a $1.000/semana, $2.000 quinzenal, $4.333,33/mês e $199,23/dia.",
     "howItWorks_1": "Selecione se você conhece sua taxa horária ou seu salário anual e insira o valor.",
     "howItWorks_2": "Ajuste as horas por semana (padrão 40) e semanas por ano (padrão 52) se sua agenda for diferente.",
-    "howItWorks_3": "Clique em Calcular para ver seus valores equivalentes horário, diário, semanal, quinzenal, mensal e anual instantaneamente."
+    "howItWorks_3": "Clique em Calcular para ver seus valores equivalentes horário, diário, semanal, quinzenal, mensal e anual instantaneamente.",
+    "whyItMatters": "Entender os descontos sobre o salário bruto no Brasil é fundamental para planejar o orçamento familiar e avaliar propostas de emprego. A diferença entre salário bruto e líquido pode ser de 25 a 35% dependendo da faixa salarial.",
+    "limitations": "Os cálculos de INSS e IR são baseados nas tabelas vigentes e podem ser alterados por legislação. A calculadora fornece estimativa — o valor exato depende de deduções específicas como dependentes, despesas médicas e pensão alimentícia. Consulte um contador para cálculo preciso.",
+    "tips_0": "Ao negociar salário, sempre peça a proposta em termos de salário bruto para comparação justa.",
+    "tips_1": "Calcule o valor real do benefício: vale-refeição + plano de saúde podem valer R$ 1.000+ por mês.",
+    "tips_2": "Declare dependentes no IR para reduzir a base de cálculo e aumentar o salário líquido.",
+    "tips_3": "Verifique se os benefícios como VR e VA são fornecidos pelo PAT — isso garante isenção de IR e INSS.",
+    "tips_4": "A PLR (Participação nos Lucros) é tributada de forma mais favorável que o salário — considere na negociação."
   }
 }

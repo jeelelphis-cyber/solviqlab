@@ -20,7 +20,13 @@
     "q4": "O que a saída 'volume' representa?",
     "a4": "A saída de volume é o espaço total delimitado pela forma 3D, expresso em unidades cúbicas. Para um cubo com lado 2 unidades, volume = 8 unidades³, significando que ele pode conter 8 cubos unitários.",
     "q5": "Essas fórmulas de volume são baseadas em definições matemáticas padrão?",
-    "a5": "Sim, as fórmulas são derivadas da geometria euclidiana e são universalmente aceitas em matemática e engenharia. Elas são definidas pelo Sistema Internacional de Unidades (SI) para medição de volume (metros cúbicos)."
+    "a5": "Sim, as fórmulas são derivadas da geometria euclidiana e são universalmente aceitas em matemática e engenharia. Elas são definidas pelo Sistema Internacional de Unidades (SI) para medição de volume (metros cúbicos).",
+    "q6": "Como calcular o volume de água para encher uma piscina no Brasil?",
+    "a6": "O cálculo do volume de água para piscinas é muito relevante no Brasil, que tem um dos maiores parques de piscinas residenciais do mundo. Para piscinas retangulares: Volume (m³) = comprimento × largura × profundidade média. Uma piscina típica brasileira de 8m × 4m × 1,4m tem volume de 44,8 m³ = 44.800 litros. Para piscinas redondas: Volume = π × raio² × profundidade. Piscina de 5m de diâmetro e 1,4m de profundidade: 3,14 × 2,5² × 1,4 ≈ 27,5 m³ = 27.500 litros. Para piscinas com formato irregular, use a média das profundidades em vários pontos. O cálculo é importante para: determinar a potência correta do filtro, calcular a quantidade de cloro e outros produtos químicos para o tratamento, e calcular os custos de enchimento (preço da água + custo do aquecimento se aquecida). O SABESP em SP cobra por m³ consumido — 44.800 litros = 44,8 m³ para uma piscina pequena.",
+    "q7": "Quais unidades de volume são usadas na construção civil brasileira?",
+    "a7": "Na construção civil brasileira, diferentes unidades de volume são usadas conforme o contexto. Metro cúbico (m³): é a unidade mais importante — usado para volumes de concreto, terra escavada, areia e brita. Um metro cúbico de concreto pesa aproximadamente 2,4 toneladas. Litro (L): para água, tintas, vernizes, solventes e aderentes. Um litro de tinta cobre em média 10–12 m² de parede lisa. Quilograma (kg): para argamassas, cimentos, cal — vendem-se em sacos de 5 kg, 20 kg e 50 kg. O traço 1:3 de argamassa usa 1 saco de 20 kg de cimento para 3 vezes esse volume de areia. Tonelada (t): para volumes maiores de solo, pedra e agregados. A produtividade de terraplanagem é medida em m³ por hora. Galão: já não é padrão no Brasil, mas aparece em produtos importados (tintas americanas) — 1 galão americano = 3,785 litros.",
+    "q8": "Como calcular a capacidade de reservatórios e caixas d'água no Brasil?",
+    "a8": "O dimensionamento correto de caixas d'água e reservatórios é obrigatório nas edificações brasileiras. A ABNT NBR 5626 recomenda capacidade mínima de 200 litros por pessoa por dia. Para uma família de 4 pessoas: reservatório mínimo de 800 litros, mas o padrão construtivo brasileiro é de 500 litros a 1000 litros por residência familiar, além do reservatório inferior (cisterna). Caixas d'água cilíndricas: Volume = π × raio² × altura. Caixa de 500L da Fortlev tem diâmetro de 0,88m e altura de 0,82m: π × 0,44² × 0,82 ≈ 0,5 m³ = 500 litros. As caixas são vendidas em 250, 310, 500, 750, 1000, 2000 e 5000 litros. A limpeza semestral obrigatória (Portaria de Consolidação MS 5/2017) exige o esvaziamento total — conhecer o volume facilita o tempo e a quantidade de produtos desinfetantes necessários."
   },
   "opt_cube": "Cubo",
   "opt_sphere": "Esfera",
@@ -33,6 +39,13 @@
     "example": "Para um cilindro com raio 5 unidades e altura 10 unidades, volume = π × 5² × 10 = 250π ≈ 785,4 unidades³. Selecione a forma 'cilindro', a=5, h=10, e o resultado mostra 785,4 unidades³.",
     "howItWorks_1": "Selecione a forma no menu suspenso. Em seguida, insira as dimensões necessárias: para cubo, insira o comprimento do lado 'a'; para esfera, insira o raio 'a'; para cilindro, insira o raio 'a' e a altura 'h'; para cone, insira o raio 'a' e a altura 'h'; para prisma retangular, insira o comprimento 'a', largura 'b' e altura 'h'.",
     "howItWorks_2": "Clique no botão Calcular. A calculadora aplica a fórmula de volume apropriada usando suas entradas e calcula o resultado.",
-    "howItWorks_3": "O resultado exibe o volume em unidades cúbicas (unidades³). Use este valor para aplicações como encher um recipiente, estimativa de material ou projeto de engenharia."
+    "howItWorks_3": "O resultado exibe o volume em unidades cúbicas (unidades³). Use este valor para aplicações como encher um recipiente, estimativa de material ou projeto de engenharia.",
+    "whyItMatters": "O cálculo de volume é essencial em construção civil, irrigação, dimensionamento de reservatórios e tratamento de piscinas — todas aplicações muito comuns no Brasil. Calcular corretamente evita desperdícios e garante o dimensionamento adequado de estruturas.",
+    "limitations": "A calculadora fornece resultados baseados em fórmulas geométricas padrão para formas regulares. Estruturas com geometria irregular ou curva requerem métodos de medição específicos. Adicione sempre uma margem de segurança de 5–10% em projetos de construção.",
+    "tips_0": "Para piscinas: Volume em litros = comprimento × largura × profundidade média × 1.000.",
+    "tips_1": "Lembre: 1 m³ = 1.000 litros — essa conversão é fundamental em construção civil.",
+    "tips_2": "Para calcular tinta necessária: área a pintar ÷ rendimento da tinta (m² por litro, indicado na embalagem).",
+    "tips_3": "Em caixas d'água cilíndricas: Volume (litros) = π × raio² × altura × 1.000 (com medidas em metros).",
+    "tips_4": "Sempre adicione 10% ao volume calculado de concreto para compensar perdas na concretagem."
   }
 }

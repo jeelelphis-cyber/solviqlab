@@ -23,7 +23,13 @@
     "q4": "O que acontece se eu inserir um denominador igual a zero?",
     "a4": "Um denominador igual a zero é indefinido em matemática. A calculadora provavelmente retornará um erro ou não calculará. Sempre certifique-se de que os denominadores sejam diferentes de zero.",
     "q5": "Existe uma referência padrão para aritmética de frações?",
-    "a5": "A aritmética de frações segue as regras padrão da aritmética definidas pela matemática. Não há uma autoridade única, mas os métodos são universalmente ensinados e usados em contextos educacionais e profissionais."
+    "a5": "A aritmética de frações segue as regras padrão da aritmética definidas pela matemática. Não há uma autoridade única, mas os métodos são universalmente ensinados e usados em contextos educacionais e profissionais.",
+    "q6": "Como as frações são ensinadas no currículo escolar brasileiro?",
+    "a6": "No currículo brasileiro, seguindo a Base Nacional Comum Curricular (BNCC), as frações são introduzidas no 4º ano do Ensino Fundamental (aproximadamente 9–10 anos). A progressão é gradual: no 4º e 5º anos, trabalha-se com frações simples, representação visual (partes de um todo) e comparação. No 6º e 7º anos, operações com frações (adição, subtração, multiplicação e divisão), números mistos e a relação entre frações e números decimais. No 8º e 9º anos, frações em contextos algébricos e aplicações em problemas. O ENEM frequentemente inclui questões de frações em contextos práticos — receitas culinárias, divisão de terrenos, escalas. A calculadora de frações é uma ferramenta útil para verificar cálculos e entender os procedimentos.",
+    "q7": "Como as frações aparecem no cotidiano brasileiro?",
+    "a7": "As frações estão presentes em muitas situações do dia a dia brasileiro. Em receitas culinárias: \"½ xícara de farinha\", \"¾ de copo de leite\" — a culinária brasileira usa muito medidas fracionárias. Em divisão de propriedades: herança e partilha de bens no Brasil frequentemente são descritas em frações da totalidade do imóvel no registro de imóveis. No mercado financeiro: as cotas de fundos de investimento representam frações do patrimônio total do fundo. Em esportes: tempo de jogo restante (\"a equipe marcou a ¾ do jogo\"), percentuais de aproveitamento. Em construção civil: frações de tijolos, meias-plantas, partes de estruturas. No sistema eleitoral: maioria absoluta (mais da metade + 1), maioria qualificada (2/3 ou 3/5 para aprovação de emendas constitucionais). As frações são fundamentais na matemática financeira — juros, divisão de lucros, participações societárias.",
+    "q8": "Qual é a relação entre frações e porcentagem no contexto brasileiro?",
+    "a8": "Fração e porcentagem são representações equivalentes da mesma ideia: partes de um todo. A porcentagem é simplesmente uma fração com denominador 100. No contexto brasileiro, essa relação aparece constantemente: a taxa de juros SELIC de 10,5% ao ano significa 10,5/100 ao ano — ou seja, 21/200. O IPCA de 4,8% significa que os preços subiram 4,8/100 em relação ao ano anterior. A alíquota de ICMS de 12% em determinados estados significa 12/100 do valor do produto. Na campanha eleitoral, o candidato com \"mais de metade dos votos válidos\" vence em primeiro turno — isso é a fração ½ + 1 voto. O desconto de 1/3 nas férias trabalhistas brasileiras é literalmente uma fração: acréscimo de 33,33% (1/3) sobre o salário de férias. Converter entre frações e porcentagens é uma habilidade fundamental do letramento financeiro."
   },
   "opt_add": "Adicionar",
   "opt_subtract": "Subtrair",
@@ -35,6 +41,13 @@
     "example": "Para somar 1/3 e 1/4, insira numerador1=1, denominador1=3, operação='adicionar', numerador2=1, denominador2=4. A calculadora calcula (1*4 + 1*3)/(3*4) = 7/12, que já está simplificado, e mostra o decimal 0,58333.",
     "howItWorks_1": "Insira o numerador e o denominador da primeira fração nos campos 'numerador1' e 'denominador1'. Em seguida, selecione a operação (adicionar, subtrair, multiplicar ou dividir) no menu suspenso.",
     "howItWorks_2": "Insira o numerador e o denominador da segunda fração nos campos 'numerador2' e 'denominador2'. Clique no botão Calcular para realizar a operação.",
-    "howItWorks_3": "O resultado é exibido como uma fração simplificada (Numerador do Resultado e Denominador do Resultado) e como decimal. Por exemplo, se o resultado for 2/4, será simplificado para 1/2."
+    "howItWorks_3": "O resultado é exibido como uma fração simplificada (Numerador do Resultado e Denominador do Resultado) e como decimal. Por exemplo, se o resultado for 2/4, será simplificado para 1/2.",
+    "whyItMatters": "Frações são a base da matemática prática — aparecem em receitas, obras, finanças e na escola. No Brasil, dominar frações é essencial para o ENEM e para o letramento financeiro cotidiano.",
+    "limitations": "A calculadora opera com números racionais e apresenta resultados exatos em forma de fração simplificada. Para frações com numeradores ou denominadores muito grandes, o resultado pode ser apresentado em notação simplificada.",
+    "tips_0": "Para simplificar uma fração, divida numerador e denominador pelo MDC (Máximo Divisor Comum).",
+    "tips_1": "Converta frações para decimais dividindo o numerador pelo denominador — facilita comparações.",
+    "tips_2": "Para frações mistas, converta para fração imprópria antes de multiplicar ou dividir.",
+    "tips_3": "Verifique seu resultado convertendo para decimal — facilita identificar erros de cálculo.",
+    "tips_4": "Pratique com situações do dia a dia: dividir uma pizza, medir ingredientes, calcular descontos."
   }
 }

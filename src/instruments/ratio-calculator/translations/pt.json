@@ -22,7 +22,13 @@
     "q4": "O que a saída decimal representa?",
     "a4": "O decimal é o valor de a dividido por b. Para uma razão 3:4, o decimal é 0,75, significando que a é 75% de b. É útil para comparar quantidades.",
     "q5": "Existe um padrão oficial para simplificar razões?",
-    "a5": "A simplificação de razões segue o princípio matemático de dividir pelo máximo divisor comum (MDC), que é um método aritmético padrão. Não há autoridade regulatória específica para simplificação de razões."
+    "a5": "A simplificação de razões segue o princípio matemático de dividir pelo máximo divisor comum (MDC), que é um método aritmético padrão. Não há autoridade regulatória específica para simplificação de razões.",
+    "q6": "Como as proporções são usadas na culinária brasileira?",
+    "a6": "As proporções são fundamentais em receitas brasileiras tradicionais. O pão de queijo mineiro clássico usa proporção de 2:1 entre polvilho e queijo curado, com líquido na proporção de aproximadamente 1:3 do polvilho. A caipirinha perfeita tem proporção clássica de 1 dose de cachaça para meio limão e açúcar a gosto. Para o arroz brasileiro, a proporção é geralmente 1:2 (1 xícara de arroz para 2 xícaras de água, depois de refogado). O feijão cozido usa proporção de 1:3 a 1:4 (feijão para água). A brigadeirooriginal leva 1 lata de leite condensado para 1 colher de manteiga e 3 colheres de chocolate em pó — proporções precisas garantem o ponto correto. Para escalar receitas, basta manter as proporções: se a receita é para 4 pessoas e você quer para 10, multiplique tudo por 2,5.",
+    "q7": "Como as proporções são usadas no mercado imobiliário e de construção brasileiro?",
+    "a7": "No mercado de construção civil brasileiro, as proporções são críticas para a qualidade das obras. No traço do concreto: a proporção básica é 1:2:3 (cimento:areia:brita em volume), com relação água/cimento determinando a resistência — concreto estrutural usa 1:1,5:2,5 ou traços mais ricos. Na argamassa de revestimento (reboco): 1 parte de cimento para 3–4 de areia. Na argamassa de assentamento de tijolos: 1:6 ou 1:8 (cimento:areia). Para o contrapiso: 1:3 (cimento:areia) com espessura de 3–5 cm. No mercado imobiliário, o índice de aproveitamento do lote (IAT ou coeficiente de aproveitamento) é a proporção entre a área total construída permitida e a área do terreno — varia por zoneamento municipal. A taxa de ocupação (proporção da área do terreno que pode ser coberta) geralmente varia de 50% a 70% em zonas residenciais.",
+    "q8": "Como as proporções aparecem nos índices econômicos e sociais do Brasil?",
+    "a8": "Proporções e índices são fundamentais para entender a realidade socioeconômica brasileira. O índice de Gini (desigualdade de renda): o Brasil tem um dos mais altos do mundo, historicamente acima de 0,5 — onde 0 seria igualdade perfeita e 1 seria máxima desigualdade. A proporção dívida pública/PIB: indicador de sustentabilidade fiscal, atualmente acima de 80% no Brasil. A taxa de desemprego: proporção de desempregados em relação à população economicamente ativa (PEA). A proporção de beneficiários do Bolsa Família em relação à população total. O índice de cobertura vacinal: proporção da população imunizada necessária para imunidade de rebanho (geralmente 90–95% para doenças como sarampo). A proporção renda 10% mais ricos / renda 10% mais pobres: no Brasil, os mais ricos ganham cerca de 40 vezes mais que os mais pobres — um indicador estrutural de desigualdade."
   },
   "content": {
     "whatIs": "A Calculadora de Razão simplifica razões para seus termos mais baixos, resolve um valor ausente em uma proporção (a:b = c:d) e calcula o equivalente decimal de uma razão. Ela usa o conceito de razões equivalentes e multiplicação cruzada.",
@@ -30,6 +36,13 @@
     "example": "Para entradas a=8, b=12, c=6, a calculadora simplifica 8:12 para 2:3, encontra d = (12*6)/8 = 9, e mostra decimal 8/12 = 0,6667.",
     "howItWorks_1": "Insira os valores para a e b (obrigatório). Opcionalmente, insira um valor para c para resolver d na proporção a:b = c:d.",
     "howItWorks_2": "Clique em Calcular. A ferramenta calcula o MDC de a e b para simplificar a razão, realiza multiplicação cruzada se c for fornecido, e divide a por b para o decimal.",
-    "howItWorks_3": "Os resultados mostram a razão simplificada (A simplificado : B simplificado), o valor ausente D (se c foi inserido) e a representação decimal de a/b."
+    "howItWorks_3": "Os resultados mostram a razão simplificada (A simplificado : B simplificado), o valor ausente D (se c foi inserido) e a representação decimal de a/b.",
+    "whyItMatters": "Proporções são usadas diariamente em cozinha, construção civil, finanças e análise de dados. No Brasil, dominar proporções é essencial em contextos como preparo de receitas tradicionais, traço de concreto e análise de indicadores econômicos.",
+    "limitations": "A calculadora realiza operações matemáticas precisas com proporções. Em aplicações práticas como culinária e construção, fatores como temperatura, umidade e qualidade dos materiais podem exigir ajustes nas proporções ideais.",
+    "tips_0": "Para escalar receitas, sempre mantenha as proporções originais — dobre ou reduza tudo na mesma razão.",
+    "tips_1": "Em construção civil, use sempre o traço correto de concreto — proporções erradas comprometem a segurança.",
+    "tips_2": "Para verificar uma proporção: A:B = C:D é verdade se A×D = B×C (produto cruzado).",
+    "tips_3": "Na culinária, use balanças para ingredientes secos — medidas volumétricas são menos precisas.",
+    "tips_4": "Proporções podem ser expressas como fração, razão (2:3) ou porcentagem — todas são equivalentes."
   }
 }

@@ -22,7 +22,13 @@
     "q4": "O que representa a saída 'Quilômetros Quadrados'?",
     "a4": "A saída 'Quilômetros Quadrados' mostra a área em quilômetros quadrados (km²), uma unidade métrica igual a 1.000.000 de metros quadrados. É comumente usada para medir grandes áreas de terra, como cidades, estados ou países.",
     "q5": "Os fatores de conversão são baseados em padrões internacionais?",
-    "a5": "Sim, os fatores de conversão são baseados no Sistema Internacional de Unidades (SI) e em acordos internacionais. Por exemplo, 1 pé é definido como exatamente 0,3048 metros, então 1 pé quadrado = 0,09290304 metros quadrados."
+    "a5": "Sim, os fatores de conversão são baseados no Sistema Internacional de Unidades (SI) e em acordos internacionais. Por exemplo, 1 pé é definido como exatamente 0,3048 metros, então 1 pé quadrado = 0,09290304 metros quadrados.",
+    "q6": "O que é um alqueire e como ele se compara ao hectare?",
+    "a6": "O alqueire é uma unidade de medida agrária tradicional brasileira, mas seu valor varia conforme o estado. O alqueire paulista equivale a 24.200 m² (2,42 hectares), o alqueire mineiro equivale a 48.400 m² (4,84 hectares) e o alqueire goiano equivale a 48.400 m² (mesmo que o mineiro). Essa variação regional cria confusões nas transações de terras, especialmente em negócios entre estados. O hectare (ha), equivalente a 10.000 m² ou 100 × 100 metros, é a unidade oficial no Sistema Internacional e é usada em documentos legais e registros rurais. Para transações formais de terras no Brasil, sempre prefira o hectare para evitar ambiguidades.",
+    "q7": "Como converter acres para metros quadrados no contexto brasileiro?",
+    "a7": "O acre é uma unidade de área do sistema imperial, equivalente a 4.046,86 m² ou aproximadamente 0,4047 hectares. Embora o Brasil use o sistema métrico, o acre aparece em documentos históricos de terras, especialmente na Amazônia (onde há influência da colonização e de tratados com países vizinhos), e em conteúdos internacionais. Para converter: 1 acre = 4.047 m² (aproximado) ou multiplique por 4.046,86 para maior precisão. No sentido inverso: 1 m² = 0,000247 acres. Um campo de futebol padrão tem aproximadamente 0,7 a 0,8 hectares, o que equivale a cerca de 1,7 a 2 acres. Propriedades rurais nos EUA são frequentemente anunciadas em acres.",
+    "q8": "Qual é a unidade de área mais utilizada na construção civil brasileira?",
+    "a8": "Na construção civil brasileira, o metro quadrado (m²) é a unidade dominante para quase todas as finalidades: área de apartamentos, casas, salas comerciais, projetos arquitetônicos e contratos de aluguel. Para grandes empreendimentos imobiliários e loteamentos, o hectare é frequentemente utilizado para descrever a área total do projeto. Em projetos de topografia e infraestrutura, o quilômetro quadrado (km²) pode aparecer para extensões regionais. No setor agrícola, o hectare é padrão obrigatório em documentos do INCRA (Instituto Nacional de Colonização e Reforma Agrária). O centímetro quadrado (cm²) é usado em projetos de design de produto, arquitetura de interiores e marcenaria para detalhes construtivos."
   },
   "content": {
     "whatIs": "O Conversor de Área é uma ferramenta que converte um valor de área de uma unidade para várias outras unidades simultaneamente. Ele usa fatores de conversão padrão entre unidades como metros quadrados, pés quadrados, acres, hectares, quilômetros quadrados e milhas quadradas.",
@@ -30,6 +36,13 @@
     "example": "Se você inserir 1000 e selecionar 'ft²' como unidade de origem, o conversor exibe: 92,90304 m², 1000 ft², 0,00009290304 km², 0,02295684 acres e 0,009290304 hectares.",
     "howItWorks_1": "Insira um valor numérico no campo 'valor' (deve ser não negativo).",
     "howItWorks_2": "Selecione a unidade do valor inserido no menu suspenso 'de' (por exemplo, metros quadrados, acres).",
-    "howItWorks_3": "Os resultados exibem a área equivalente em metros quadrados, pés quadrados, quilômetros quadrados, acres e hectares instantaneamente."
+    "howItWorks_3": "Os resultados exibem a área equivalente em metros quadrados, pés quadrados, quilômetros quadrados, acres e hectares instantaneamente.",
+    "whyItMatters": "A conversão de unidades de área é essencial em transações imobiliárias, projetos agrícolas e na interpretação de documentos técnicos internacionais. Conhecer as equivalências evita erros custosos em contratos e planejamentos.",
+    "limitations": "O conversor utiliza fatores de conversão padronizados internacionalmente. Unidades regionais como o alqueire possuem variações locais — sempre confirme a definição local antes de usar em documentos legais.",
+    "tips_0": "Ao negociar terras rurais, sempre peça a área em hectares no contrato — é a unidade legal no Brasil.",
+    "tips_1": "Para viagens ao exterior, lembre que 1 acre ≈ 0,4 hectare e 1 hectare ≈ 2,47 acres.",
+    "tips_2": "No setor imobiliário urbano, toda documentação deve indicar a área em metros quadrados.",
+    "tips_3": "Imóveis rurais registrados no INCRA sempre usam hectares — desconfie de contratos em outras unidades.",
+    "tips_4": "Para conversões rápidas: 1 km² = 100 hectares = 1.000.000 m²."
   }
 }

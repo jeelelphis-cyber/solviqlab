@@ -23,7 +23,13 @@
     "q4": "O que representa o valor do empréstimo na saída?",
     "a4": "O valor do empréstimo (principal) é o preço do imóvel menos sua entrada. É o montante que você toma emprestado do credor. Por exemplo, um imóvel de $300.000 com entrada de $60.000 resulta em um empréstimo de $240.000.",
     "q5": "Qual fórmula padrão esta calculadora usa?",
-    "a5": "Esta calculadora usa a fórmula de amortização padrão definida pelo Consumer Financial Protection Bureau (CFPB) e amplamente adotada no setor de hipotecas dos EUA. A fórmula garante pagamentos mensais iguais que amortizam totalmente o empréstimo ao longo do prazo escolhido."
+    "a5": "Esta calculadora usa a fórmula de amortização padrão definida pelo Consumer Financial Protection Bureau (CFPB) e amplamente adotada no setor de hipotecas dos EUA. A fórmula garante pagamentos mensais iguais que amortizam totalmente o empréstimo ao longo do prazo escolhido.",
+    "q6": "Como funciona o financiamento imobiliário no Brasil?",
+    "a6": "O financiamento imobiliário no Brasil tem características próprias. Os principais sistemas de amortização são o SAC (Sistema de Amortização Constante), onde a parcela diminui ao longo do tempo pois a amortização é fixa e os juros recaem sobre o saldo devedor decrescente; e a Tabela Price (anuidade francesa), onde a parcela é constante mas inicialmente a maior parte é juros. No SAC, você paga menos juros no total; na Tabela Price, as parcelas iniciais são menores. A principal fonte de crédito imobiliário no Brasil são os bancos públicos (Caixa Econômica Federal, Banco do Brasil) via FGTS e SBPE. As taxas variam: linha pró-cotista FGTS (1,16% a.a. + TR para renda até R$ 8.000), SBPE (7–12% a.a. + TR ou IPCA), e linhas corrigidas pelo IPCA (taxa de juros menor + variação da inflação).",
+    "q7": "O que é o FGTS e como usá-lo no financiamento imobiliário?",
+    "a7": "O FGTS (Fundo de Garantia do Tempo de Serviço) é um fundo criado pelo governo com depósitos mensais de 8% do salário dos trabalhadores com carteira assinada, corrigido por TR + 3% ao ano. Para uso no financiamento imobiliário, é possível utilizar o FGTS como entrada (reduzindo o valor financiado e as parcelas), para amortização do saldo devedor (reduzindo prazo ou valor das parcelas) e para pagamento de prestações em atraso. Requisitos básicos: ter no mínimo 3 anos de trabalho com carteira assinada (acumulado), o imóvel deve ser residencial urbano no município onde o comprador trabalha ou reside, e o comprador não pode ter outro imóvel no mesmo município. O valor máximo do imóvel para uso do FGTS varia por estado. O programa Minha Casa Minha Vida usa amplamente o FGTS como subsídio para famílias de baixa renda.",
+    "q8": "Quais são os custos adicionais na compra de imóvel no Brasil?",
+    "a8": "Além do valor do imóvel e do financiamento, a compra de imóvel no Brasil envolve custos adicionais significativos. ITBI (Imposto de Transmissão de Bens Imóveis): cobrado pelo município, geralmente de 2 a 3% do valor de avaliação. Escritura pública: obrigatória para imóveis quitados, custo varia por estado (tabela de tabelionatos). Registro de imóvel no Cartório: 1–2% do valor do imóvel, dependendo do estado. Avaliação do imóvel: cobrada pelo banco financiador, R$ 800–2.000. Taxa de análise de crédito/contrato: geralmente cobrada pelo banco, R$ 500–2.000. Para imóvel de R$ 500.000, os custos cartoriais e tributários podem somar R$ 20.000–35.000 (4–7% do valor). Esses custos devem ser pagos à vista e não entram no financiamento. Sempre provisione esses valores ao planejar a compra do imóvel."
   },
   "unit_years": "anos",
   "content": {
@@ -32,6 +38,13 @@
     "example": "Para um imóvel de $300.000 com entrada de 20% ($60.000), taxa anual de 6% e prazo de 30 anos, o valor do empréstimo é $240.000. O pagamento mensal é $1.438,92, os juros totais são $278.011,20 e o custo total é $518.011,20.",
     "howItWorks_1": "Insira o preço do imóvel, o valor da entrada, a taxa de juros anual e selecione o prazo do empréstimo em anos no menu suspenso.",
     "howItWorks_2": "Clique no botão Calcular. A calculadora calcula o valor do empréstimo e aplica a fórmula de amortização para determinar o pagamento mensal, juros totais e custo total.",
-    "howItWorks_3": "Revise os resultados: Pagamento Mensal é o valor fixo mensal, Valor do Empréstimo é o principal tomado, Juros Totais é o total de juros pagos, e Custo Total é a soma do principal e juros ao longo do prazo total."
+    "howItWorks_3": "Revise os resultados: Pagamento Mensal é o valor fixo mensal, Valor do Empréstimo é o principal tomado, Juros Totais é o total de juros pagos, e Custo Total é a soma do principal e juros ao longo do prazo total.",
+    "whyItMatters": "O financiamento imobiliário é o maior compromisso financeiro da maioria dos brasileiros. Entender as parcelas, o total pago e a comparação entre diferentes condições pode significar dezenas de milhares de reais de economia ao longo de 20 a 30 anos de contrato.",
+    "limitations": "A calculadora fornece uma estimativa básica sem incluir seguros obrigatórios (MIP e DFI), taxas cartoriais, ITBI, taxa de administração do contrato e possíveis reajustes por TR ou IPCA. O valor real das parcelas pode ser 15–25% maior que o calculado.",
+    "tips_0": "Compare o SAC com a Tabela Price — no SAC você paga menos juros no total, mas as primeiras parcelas são maiores.",
+    "tips_1": "Use o FGTS como entrada para reduzir o valor financiado e consequentemente as parcelas.",
+    "tips_2": "Provisione 4–7% do valor do imóvel para custos cartoriais e tributários além do preço de compra.",
+    "tips_3": "Avalie o financiamento corrigido pelo IPCA com cautela — pode ser vantajoso, mas traz risco inflacionário.",
+    "tips_4": "Mantenha as parcelas abaixo de 30% da renda familiar — é o limite recomendado pelo Banco Central."
   }
 }

@@ -47,7 +47,13 @@
     "q4": "O que mostra o campo 'roundedResult'?",
     "a4": "O 'roundedResult' é o resultado bruto arredondado para duas casas decimais. Por exemplo, se o resultado bruto for 33,3333..., o resultado arredondado é 33,33. Isso é útil para relatórios ou cálculos financeiros onde duas casas decimais são padrão.",
     "q5": "Existe um padrão oficial para cálculos de porcentagem?",
-    "a5": "Os cálculos de porcentagem seguem regras aritméticas básicas definidas na matemática, não um padrão regulatório específico. No entanto, em finanças, a SEC e o IRS fornecem diretrizes para divulgações baseadas em porcentagem e cálculos de impostos. As fórmulas usadas aqui são universalmente aceitas."
+    "a5": "Os cálculos de porcentagem seguem regras aritméticas básicas definidas na matemática, não um padrão regulatório específico. No entanto, em finanças, a SEC e o IRS fornecem diretrizes para divulgações baseadas em porcentagem e cálculos de impostos. As fórmulas usadas aqui são universalmente aceitas.",
+    "q6": "Como calcular porcentagem rapidamente no cotidiano brasileiro?",
+    "a6": "Calcular porcentagens mentalmente é uma habilidade prática no dia a dia brasileiro. Para 10%: mova a vírgula um lugar à esquerda (10% de R$ 250 = R$ 25). Para 5%: calcule 10% e divida por 2 (5% de R$ 250 = R$ 12,50). Para 1%: mova a vírgula dois lugares à esquerda (1% de R$ 250 = R$ 2,50). Para 20%: calcule 10% e multiplique por 2. Para 15%: some 10% + 5%. Para gorjeta de 10% em restaurante: R$ 87,50 ÷ 10 = R$ 8,75. Para calcular o preço com desconto: preço × (1 - desconto/100). Para calcular quanto é o desconto em reais: preço × desconto/100. Para calcular a porcentagem de variação: ((novo - antigo) / antigo) × 100. Essas técnicas ajudam a verificar rapidamente preços, descontos e aumentos sem precisar de calculadora.",
+    "q7": "Como as porcentagens são usadas no sistema tributário brasileiro?",
+    "a7": "O sistema tributário brasileiro usa porcentagens extensivamente. O IRPF (Imposto de Renda Pessoa Física) tem alíquotas progressivas: isento (até R$ 2.259,20), 7,5% (R$ 2.259,21–R$ 2.826,65), 15% (R$ 2.826,66–R$ 3.751,05), 22,5% (R$ 3.751,06–R$ 4.664,68) e 27,5% acima disso — mas apenas sobre a faixa correspondente, com deduções. O ICMS varia por estado e produto: geralmente 12% para alimentos básicos, 17–18% para produtos em geral, 25% para bebidas e fumo. O ISS (serviços municipais) é de 2–5% dependendo do serviço. A contribuição previdenciária (INSS) tem alíquotas progressivas de 7,5% a 14%. O Simples Nacional para MEIs cobra alíquota unificada de 5% do salário mínimo por mês. Entender essas porcentagens é fundamental para planejamento financeiro e tributário.",
+    "q8": "Como calcular o rendimento real de um investimento descontando inflação e impostos no Brasil?",
+    "a8": "Para calcular o rendimento real líquido de um investimento no Brasil, é preciso descontar dois fatores: imposto de renda e inflação. Passo 1 — calcule o rendimento bruto anual (exemplo: CDB a 12% ao ano). Passo 2 — aplique o IR sobre o rendimento conforme a tabela regressiva. Para 2 anos (720+ dias): IR de 15%, então rendimento líquido = 12% × (1 - 0,15) = 10,2% ao ano. Passo 3 — desconte a inflação usando a fórmula de Fisher: retorno real = (1 + taxa nominal) / (1 + inflação) - 1. Se inflação = 5%: retorno real = (1 + 0,102) / (1 + 0,05) - 1 = 5,0% ao ano. Para LCI/LCA isentas de IR: 10% ao ano; retorno real = (1,10) / (1,05) - 1 ≈ 4,8% ao ano. Comparando, o CDB a 12% bruto tem retorno real líquido similar ao LCI a 10% — a isenção de IR compensa a taxa menor."
   },
   "aria": {
     "result_announcement": "Resultado: {value}. {summary}.",
@@ -60,6 +66,13 @@
     "example": "Para encontrar 15% de 200, defina o modo como 'percent-of', a=15, b=200. O resultado é 30. Para descobrir que porcentagem 30 representa de 200, defina o modo como 'is-what-percent', a=30, b=200; o resultado é 15%.",
     "howItWorks_1": "Selecione o modo de cálculo no menu suspenso: 'percent-of', 'is-what-percent', 'percent-change' ou 'percent-adjust'. Em seguida, insira o primeiro valor (X) e o segundo valor (Y) nos campos numéricos.",
     "howItWorks_2": "Clique no botão Calcular. A calculadora aplica a fórmula apropriada com base no modo selecionado e calcula o resultado, arredondando-o para duas casas decimais.",
-    "howItWorks_3": "A saída mostra o resultado bruto e o resultado arredondado. Para o modo 'percent-change', também indica se a variação é um aumento (positivo) ou diminuição (negativo). Use o resultado arredondado para fins práticos."
+    "howItWorks_3": "A saída mostra o resultado bruto e o resultado arredondado. Para o modo 'percent-change', também indica se a variação é um aumento (positivo) ou diminuição (negativo). Use o resultado arredondado para fins práticos.",
+    "whyItMatters": "Porcentagens estão em todo o cotidiano brasileiro: no IPCA, nas taxas de juros do Banco Central, nos descontos do comércio, nas alíquotas de impostos e nos rendimentos de investimentos. Dominar cálculos percentuais é base do letramento financeiro.",
+    "limitations": "A calculadora fornece resultados matematicamente precisos. Em contextos financeiros como cálculo de juros compostos, a porcentagem em um período não se soma linearmente a outros períodos — use a fórmula de juros compostos para cálculos multiperiódicos.",
+    "tips_0": "Para calcular 10% mentalmente, apenas mova a vírgula um dígito para a esquerda.",
+    "tips_1": "Para aumento e depois desconto do mesmo percentual, o resultado é MENOR que o original (25% × 25% ≠ 0).",
+    "tips_2": "Ao comparar rendimentos de investimentos, calcule sempre o retorno real (descontando IPCA).",
+    "tips_3": "Para calcular o preço original de um item que passou por desconto: preço atual ÷ (1 - desconto).",
+    "tips_4": "Diferença entre ponto percentual e porcentagem: Selic subiu de 10% para 13% = alta de 3 pontos percentuais (não 3%)."
   }
 }

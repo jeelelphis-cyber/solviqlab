@@ -20,7 +20,13 @@
     "q4": "O que significa 'kcal/dia' no resultado?",
     "a4": "kcal/dia significa quilocalorias por dia, a unidade padrão para energia alimentar. Uma quilocaloria equivale a 1.000 calorias (c minúsculo). Representa a energia que seu corpo queima em um dia em repouso.",
     "q5": "A equação de Mifflin-St Jeor é recomendada por autoridades de saúde?",
-    "a5": "Sim, a Academia de Nutrição e Dietética recomenda a equação de Mifflin-St Jeor como a mais precisa para estimar a TMB em indivíduos não obesos e obesos. É amplamente utilizada em ambientes clínicos."
+    "a5": "Sim, a Academia de Nutrição e Dietética recomenda a equação de Mifflin-St Jeor como a mais precisa para estimar a TMB em indivíduos não obesos e obesos. É amplamente utilizada em ambientes clínicos.",
+    "q6": "Como o clima tropical brasileiro afeta o metabolismo basal?",
+    "a6": "O clima tropical e subtropical do Brasil tem influência relevante no metabolismo basal. Em ambientes quentes, o corpo gasta menos energia para manutenção da temperatura corporal (termogênese), pois a diferença entre a temperatura corporal (~37°C) e o ambiente é menor. Isso significa que, em teoria, pessoas que vivem em regiões mais quentes como Norte e Centro-Oeste teriam um TMB ligeiramente menor do que pessoas em regiões mais frias, como o Sul durante o inverno. Por outro lado, o calor intenso aumenta a frequência cardíaca basal e pode elevar levemente a taxa metabólica. Na prática, a diferença é pequena comparada a fatores como massa muscular, idade e composição corporal, mas é relevante para atletas e em estudos nutricionais populacionais.",
+    "q7": "Quais doenças podem alterar significativamente o TMB?",
+    "a7": "Diversas condições de saúde alteram o metabolismo basal de forma significativa. O hipotireoidismo é uma das causas mais comuns de TMB reduzido — a deficiência de hormônios tireoidianos diminui todos os processos metabólicos, causando ganho de peso mesmo sem aumento calórico. O hipertireoidismo, ao contrário, acelera o metabolismo, causando perda de peso involuntária e taquicardia. O diabetes tipo 2 afeta o metabolismo da glicose e pode alterar o TMB. A insuficiência adrenal (doença de Addison) e o excesso de cortisol (síndrome de Cushing) também interferem no metabolismo. Febre aumenta o TMB em aproximadamente 10% para cada grau Celsius de elevação da temperatura. Câncer e infecções graves aumentam o TMB devido ao estado inflamatório sistêmico.",
+    "q8": "Como usar o TMB no planejamento nutricional esportivo no Brasil?",
+    "a8": "No contexto do esporte brasileiro, o TMB é o ponto de partida para o planejamento nutricional de atletas e praticantes de atividade física. A partir do TMB, calcula-se o GET (Gasto Energético Total) multiplicando pelo fator de atividade física. Para modalidades muito populares no Brasil como futebol, vôlei, jiu-jitsu e crossfit, o nível de atividade varia de intenso a muito intenso. Nutricionistas esportivos usam o GET para calcular tanto a ingestão calórica necessária quanto a distribuição de macronutrientes (proteínas, carboidratos e gorduras). Em períodos de competição, o GET aumenta; na pré-temporada ou recuperação, pode ser reduzido. A hidratação, especialmente em clima tropical, também é calculada com base no gasto energético e nas perdas pelo suor."
   },
   "opt_male": "Masculino",
   "opt_female": "Feminino",
@@ -30,6 +36,13 @@
     "example": "Um homem de 30 anos pesando 80 kg e 180 cm de altura: TMB = 10×80 + 6,25×180 - 5×30 + 5 = 800 + 1125 - 150 + 5 = 1780 kcal/dia. Isso significa que seu corpo queima cerca de 1780 calorias diariamente em repouso.",
     "howItWorks_1": "Insira seu peso em quilogramas, altura em centímetros, idade em anos e selecione seu sexo (masculino ou feminino).",
     "howItWorks_2": "Clique no botão Calcular. A calculadora aplica a equação de Mifflin-St Jeor para calcular sua TMB com base nas entradas.",
-    "howItWorks_3": "O resultado mostra sua TMB em kcal/dia. Use este número como base para as necessidades calóricas diárias; adicione calorias de atividade para estimar o gasto energético total."
+    "howItWorks_3": "O resultado mostra sua TMB em kcal/dia. Use este número como base para as necessidades calóricas diárias; adicione calorias de atividade para estimar o gasto energético total.",
+    "whyItMatters": "O Taxa Metabólica Basal representa a energia mínima que seu corpo necessita para funcionar em repouso. Conhecer seu TMB é o primeiro passo para qualquer planejamento nutricional, seja para emagrecimento, ganho de massa ou manutenção da saúde.",
+    "limitations": "As fórmulas de TMB (Harris-Benedict, Mifflin-St Jeor) foram desenvolvidas em populações específicas e têm margem de erro de 10–15%. Para atletas, idosos e pessoas com condições médicas específicas, os valores podem diferir significativamente. Consulte um nutricionista para avaliação individualizada.",
+    "tips_0": "Use o TMB como base, mas lembre que o Gasto Energético Total (GET) inclui também as atividades físicas.",
+    "tips_1": "Não coma abaixo do seu TMB — isso pode prejudicar o metabolismo e a saúde a longo prazo.",
+    "tips_2": "O TMB diminui com a idade — ajuste sua ingestão calórica progressivamente.",
+    "tips_3": "Aumentar a massa muscular é a forma mais eficaz de elevar o TMB permanentemente.",
+    "tips_4": "Reavalie seu TMB a cada 3–6 meses se estiver em processo de emagrecimento ou ganho de massa."
   }
 }

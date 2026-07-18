@@ -63,7 +63,13 @@
     "q4": "Como é calculada a estimativa de gordura corporal?",
     "a4": "A estimativa de gordura corporal usa a fórmula de Deurenberg: % Gordura = 1,20 × IMC + 0,23 × Idade - 10,8 × Sexo - 5,4, onde Sexo = 1 para masculino, 0 para feminino. Esta fórmula é validada para adultos de 18 a 80 anos.",
     "q5": "Quais são as categorias de IMC da OMS?",
-    "a5": "A Organização Mundial da Saúde define: Abaixo do peso (<18,5), Peso normal (18,5–24,9), Sobrepeso (25–29,9) e Obesidade classe I (30–34,9), classe II (35–39,9), classe III (≥40). Essas categorias são baseadas em riscos à saúde da população."
+    "a5": "A Organização Mundial da Saúde define: Abaixo do peso (<18,5), Peso normal (18,5–24,9), Sobrepeso (25–29,9) e Obesidade classe I (30–34,9), classe II (35–39,9), classe III (≥40). Essas categorias são baseadas em riscos à saúde da população.",
+    "q6": "Quais são as limitações do IMC para a população brasileira?",
+    "a6": "O IMC tem limitações importantes no contexto brasileiro. A população brasileira é extremamente diversa geneticamente — descendentes de europeus, africanos e povos indígenas têm composições corporais distintas, e o IMC não captura essas diferenças. Estudos mostram que brasileiros de origem asiática apresentam maior risco cardiometabólico em IMC considerados normais pela tabela padrão. Além disso, o Brasil tem alta prevalência de baixa estatura (especialmente no Norte e Nordeste), o que distorce o IMC. O Ministério da Saúde usa os pontos de corte internacionais da OMS, mas pesquisadores brasileiros têm defendido ajustes para a população local. Para pessoas com musculatura desenvolvida — comum dado o perfil ativo de parte da população — o IMC superestima o risco.",
+    "q7": "Como o IMC é usado pelo Sistema Único de Saúde (SUS)?",
+    "a7": "O SUS utiliza o IMC como uma das principais ferramentas de triagem nas Unidades Básicas de Saúde (UBS). A aferição do IMC faz parte do protocolo de acompanhamento de doenças crônicas não transmissíveis (DCNT), como diabetes tipo 2, hipertensão e doenças cardiovasculares. O Programa Nacional de Alimentação Escolar (PNAE) monitora o IMC de crianças para avaliar o estado nutricional e combater tanto a desnutrição quanto a obesidade infantil. No SISVAN (Sistema de Vigilância Alimentar e Nutricional), o IMC é registrado sistematicamente. Para cirurgia bariátrica pelo SUS, um dos critérios é IMC ≥ 40 kg/m², ou ≥ 35 kg/m² com comorbidades graves.",
+    "q8": "Quais outros indicadores complementam o IMC na avaliação do risco à saúde?",
+    "a8": "Vários indicadores complementam o IMC para uma avaliação mais completa. A circunferência abdominal (CA) é poderosa para avaliar gordura visceral — risco aumentado acima de 88 cm para mulheres e 102 cm para homens segundo a OMS, com pontos de corte mais baixos recomendados para brasileiros. A relação cintura-quadril (RCQ) identifica o padrão de distribuição de gordura (androide vs. ginoide). A bioimpedância elétrica estima a composição corporal (% de gordura, massa magra). O DEXA (Absorciometria de Raios-X de Dupla Energia) é o padrão-ouro para composição corporal. Exames laboratoriais como glicemia em jejum, perfil lipídico e pressão arterial complementam a avaliação de risco cardiometabólico de forma muito mais precisa que o IMC isolado."
   },
   "aria": {
     "result_announcement": "Resultado: IMC {bmi}. Categoria: {category}. {summary}.",
@@ -76,6 +82,13 @@
     "example": "Para uma pessoa com altura 170 cm e peso 70 kg: IMC = 70 / (1,70)^2 = 24,22 kg/m². Isso se enquadra na categoria 'Peso normal' (18,5–24,9). A faixa de peso saudável para esta altura é de 53,5 a 72,3 kg.",
     "howItWorks_1": "Informe sua altura em centímetros (ou pés/polegadas se usar imperial) e seu peso em quilogramas (ou libras). Opcionalmente, forneça sua idade e sexo para uma estimativa de gordura corporal.",
     "howItWorks_2": "Clique em Calcular para obter seu IMC, IMC Prime, Índice Ponderal e faixa de peso saudável. Se idade e sexo forem fornecidos, um percentual de gordura corporal estimado também é calculado usando a fórmula de Deurenberg.",
-    "howItWorks_3": "Seu valor de IMC é comparado com as categorias da OMS: Abaixo do peso (<18,5), Normal (18,5–24,9), Sobrepeso (25–29,9) e Obeso (≥30). O IMC Prime mostra o quão próximo você está do limite superior normal (1,0 = IMC 25). O Índice Ponderal ajusta para a altura de forma diferente."
+    "howItWorks_3": "Seu valor de IMC é comparado com as categorias da OMS: Abaixo do peso (<18,5), Normal (18,5–24,9), Sobrepeso (25–29,9) e Obeso (≥30). O IMC Prime mostra o quão próximo você está do limite superior normal (1,0 = IMC 25). O Índice Ponderal ajusta para a altura de forma diferente.",
+    "whyItMatters": "O IMC é o índice mais usado mundialmente para triagem rápida do estado nutricional e do risco associado ao peso corporal. No Brasil, onde a obesidade afeta cerca de 26% da população adulta, o monitoramento regular do IMC é uma ferramenta importante de saúde pública.",
+    "limitations": "O IMC não distingue massa muscular de gordura, não considera a distribuição da gordura corporal e pode não ser preciso para idosos, atletas, gestantes e pessoas de diferentes etnias. Deve ser interpretado sempre em conjunto com outros indicadores clínicos.",
+    "tips_0": "Meça sua circunferência abdominal além do IMC — a gordura visceral é o maior fator de risco.",
+    "tips_1": "Realize exames de sangue regulares — pressão arterial, glicemia e colesterol complementam a avaliação.",
+    "tips_2": "Considere consultar um nutricionista para uma avaliação nutricional individualizada.",
+    "tips_3": "Lembre-se: o peso ideal é aquele em que você tem saúde e bem-estar, não apenas um número na tabela.",
+    "tips_4": "Acompanhe a evolução do seu IMC ao longo do tempo — a tendência importa mais que um valor isolado."
   }
 }

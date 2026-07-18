@@ -22,7 +22,13 @@
     "q4": "O que a amplitude me diz sobre meus dados?",
     "a4": "Amplitude = máximo - mínimo. Ela mede a dispersão total dos dados. Uma amplitude grande indica alta variabilidade, enquanto uma amplitude pequena sugere que os pontos de dados estão próximos. No entanto, a amplitude é sensível a valores atípicos.",
     "q5": "Existe uma referência padrão para calcular média e mediana?",
-    "a5": "Sim, as fórmulas seguem definições estatísticas padrão conforme a ISO 3534-1 e a American Statistical Association. Média e mediana são estatísticas descritivas fundamentais usadas universalmente na análise de dados."
+    "a5": "Sim, as fórmulas seguem definições estatísticas padrão conforme a ISO 3534-1 e a American Statistical Association. Média e mediana são estatísticas descritivas fundamentais usadas universalmente na análise de dados.",
+    "q6": "Quando usar média ponderada em vez de média simples?",
+    "a6": "A média ponderada deve ser usada quando os valores têm importâncias diferentes ou representam grupos de tamanhos distintos. Na educação brasileira, é amplamente usada: as notas de provas têm pesos maiores que as de trabalhos. Em finanças, o custo médio ponderado de capital (WACC) considera os pesos relativos de cada fonte de financiamento. No ENEM, as cinco áreas têm pesos iguais, mas ao calcular médias de diferentes ENEM para admissão em universidades, os cursos atribuem pesos distintos a cada área. Na economia, o IPCA (índice de inflação oficial) é uma média ponderada dos preços de uma cesta de produtos, onde cada categoria recebe peso conforme sua participação nos gastos das famílias.",
+    "q7": "O que é mediana e quando ela é mais útil que a média?",
+    "a7": "A mediana é o valor central de um conjunto ordenado de dados — metade dos valores estão acima e metade abaixo. Ela é mais útil que a média quando há valores extremos (outliers) que distorcem a representatividade. O exemplo clássico é a renda: a renda média brasileira é elevada por uma minoria de altíssima renda, enquanto a renda mediana reflete melhor o que a maioria das pessoas ganha. Outro exemplo: preços de imóveis em uma cidade. Se 9 imóveis custam R$ 300.000 e um custa R$ 3.000.000, a média é R$ 570.000, mas a mediana é R$ 300.000, que representa melhor o mercado típico. Em estatísticas de saúde, tempo de sobrevivência e salários, a mediana é frequentemente a medida mais honesta.",
+    "q8": "Como a média é usada no ENEM e no vestibular brasileiro?",
+    "a8": "No ENEM, cada participante recebe cinco notas (uma por área de conhecimento e outra para a redação), calculadas pela Teoria de Resposta ao Item (TRI), que considera não apenas acertos, mas o padrão de respostas. A média do ENEM para o SISU é calculada considerando os pesos definidos por cada curso universitário — por exemplo, um curso de Engenharia pode dar peso 2 para Matemática e peso 1 para as demais áreas, gerando uma média ponderada. No ProUni e FIES, há uma nota de corte mínima para candidatura. Nos vestibulares tradicionais como FUVEST e UNICAMP, a média ponderada das fases é usada para seleção, com pesos distintos para a primeira e segunda fases."
   },
   "content": {
     "whatIs": "A calculadora de média calcula a média, mediana, moda, amplitude, contagem e soma de uma lista de números. A média é a média aritmética, calculada somando todos os números e dividindo pela contagem. Ela fornece uma visão rápida da tendência central e dispersão.",
@@ -30,6 +36,13 @@
     "example": "Para os números 2, 4, 4, 6, 8: soma = 24, contagem = 5, média = 24/5 = 4,8. Ordenados: 2,4,4,6,8, mediana = 4 (terceiro valor). Moda = 4 (aparece duas vezes). Amplitude = 8-2 = 6.",
     "howItWorks_1": "Insira sua lista de números no campo de entrada, separados por vírgulas ou espaços. Cada número pode ser positivo, negativo ou decimal.",
     "howItWorks_2": "Clique no botão Calcular. A ferramenta processa seus números: conta-os, soma-os, ordena-os para mediana e moda, e calcula amplitude e desvio padrão.",
-    "howItWorks_3": "Revise os resultados: Média, Mediana (valor do meio), Moda (mais frequente), Amplitude (dispersão), Contagem (número de entradas) e Soma (total). Use-os para entender a tendência central e a variabilidade dos seus dados."
+    "howItWorks_3": "Revise os resultados: Média, Mediana (valor do meio), Moda (mais frequente), Amplitude (dispersão), Contagem (número de entradas) e Soma (total). Use-os para entender a tendência central e a variabilidade dos seus dados.",
+    "whyItMatters": "A média é uma das ferramentas estatísticas mais usadas no cotidiano, presente em notas escolares, pesquisas de preço, indicadores econômicos e análises científicas. Compreender quando usar cada tipo de média garante interpretações mais precisas dos dados.",
+    "limitations": "A média aritmética pode ser distorcida por valores extremos. Para distribuições assimétricas ou com outliers, considere também a mediana e a moda. Sempre analise o contexto dos dados antes de escolher a medida de tendência central mais adequada.",
+    "tips_0": "Antes de calcular a média, verifique se há valores discrepantes que possam distorcer o resultado.",
+    "tips_1": "Em situações com pesos diferentes, use sempre a média ponderada — a simples pode induzir a erro.",
+    "tips_2": "Compare média e mediana: se forem muito diferentes, os dados provavelmente têm distribuição assimétrica.",
+    "tips_3": "Para médias de porcentagens ou taxas, considere usar a média geométrica em vez da aritmética.",
+    "tips_4": "Em notas escolares, confira o regulamento — muitas instituições usam médias ponderadas com arredondamentos específicos."
   }
 }

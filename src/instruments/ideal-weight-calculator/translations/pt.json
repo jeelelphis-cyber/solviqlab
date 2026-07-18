@@ -21,7 +21,13 @@
     "q4": "O que significa o resultado da fórmula Devine?",
     "a4": "A fórmula Devine foi originalmente desenvolvida para calcular o peso corporal ideal para dosagem de medicamentos. Para um homem de 170 cm, ela dá 65,9 kg. É amplamente usada em ambientes clínicos, mas pode subestimar o peso ideal para indivíduos mais altos.",
     "q5": "Essas fórmulas são baseadas nos padrões da OMS?",
-    "a5": "Não, essas fórmulas são anteriores às diretrizes de IMC da OMS. Elas foram desenvolvidas por clínicos (Robinson, Miller, Devine, Hamwi) para estimar o peso ideal. A OMS usa categorias de IMC (18,5-24,9) para peso saudável, que é uma abordagem diferente."
+    "a5": "Não, essas fórmulas são anteriores às diretrizes de IMC da OMS. Elas foram desenvolvidas por clínicos (Robinson, Miller, Devine, Hamwi) para estimar o peso ideal. A OMS usa categorias de IMC (18,5-24,9) para peso saudável, que é uma abordagem diferente.",
+    "q6": "O peso ideal muda com a idade para brasileiros?",
+    "a6": "Sim, o peso saudável varia com a idade de forma significativa. Para crianças e adolescentes brasileiros, o Ministério da Saúde usa curvas de crescimento da OMS adaptadas, avaliando o IMC por idade e sexo em percentis. Para adultos (20–59 anos), as fórmulas de peso ideal são as mais amplamente usadas. Para idosos acima de 60 anos, as diretrizes brasileiras de geriatria reconhecem que um IMC ligeiramente maior (22–27 kg/m²) pode ser protetor contra sarcopenia e fragilidade — magros demais têm maior risco de complicações em doenças agudas. O fenômeno do \"paradoxo da obesidade\" em idosos — no qual sobrepeso leve está associado a melhor sobrevida — é reconhecido na literatura médica brasileira e internacional, embora ainda controverso.",
+    "q7": "Como calcular o peso ideal para atletas brasileiros de alto rendimento?",
+    "a7": "Para atletas de alto rendimento, as fórmulas padrão de peso ideal são inadequadas, pois não distinguem massa muscular de gordura. Modalidades esportivas típicas brasileiras têm exigências específicas: jogadores de futebol geralmente têm IMC de 22–25 kg/m² com percentual de gordura de 8–12%; lutadores de jiu-jitsu e MMA são avaliados por categoria de peso, com foco em massa magra e percentual de gordura por faixa; atletas de vôlei de praia e natação têm perfis de composição corporal bem específicos; corredores de maratonas geralmente têm IMC de 19–21 kg/m² com gordura corporal muito baixa. Para atletas, a composição corporal (percentual de gordura, massa magra, densidade mineral óssea) avaliada por DEXA é muito mais relevante que qualquer fórmula de peso ideal.",
+    "q8": "Quais são as metas de peso recomendadas pelo Ministério da Saúde do Brasil?",
+    "a8": "O Ministério da Saúde brasileiro não estabelece metas de peso individual, mas define faixas de IMC saudáveis segundo os critérios da OMS. Para adultos: abaixo de 18,5 kg/m² é baixo peso; 18,5–24,9 é peso adequado; 25–29,9 é sobrepeso; acima de 30 é obesidade (graus I, II e III). O programa \"Saúde não tem preço\" e as ações de promoção à saúde no âmbito da Atenção Básica focam em promover hábitos saudáveis em vez de metas de peso isoladas. O Guia Alimentar para a População Brasileira (2014) reforça que saúde não é sinônimo de peso específico, mas de bem-estar físico, mental e social. A meta mais recomendada para quem está com sobrepeso é a perda de 5–10% do peso atual, que já traz benefícios metabólicos significativos."
   },
   "opt_male": "Masculino",
   "opt_female": "Feminino",
@@ -31,6 +37,13 @@
     "example": "Um homem de 170 cm (66,9 polegadas): Robinson = 52 + 1,9*(66,9-60) = 65,1 kg; Miller = 56,2 + 1,41*(66,9-60) = 65,9 kg; Devine = 50 + 2,3*(66,9-60) = 65,9 kg; Hamwi = 48 + 2,7*(66,9-60) = 66,6 kg; Média = (65,1+65,9+65,9+66,6)/4 = 65,9 kg.",
     "howItWorks_1": "Insira sua altura em centímetros (entre 100 e 250) e selecione seu sexo (masculino ou feminino) no menu suspenso.",
     "howItWorks_2": "Clique no botão Calcular. A ferramenta aplica cada fórmula para calcular seu peso ideal em quilogramas para Robinson, Miller, Devine e Hamwi, e então calcula a média.",
-    "howItWorks_3": "Revise os resultados: cada fórmula fornece um valor ligeiramente diferente. A média fornece uma estimativa única. Compare esses números com seu peso atual para avaliar se você está dentro de uma faixa saudável."
+    "howItWorks_3": "Revise os resultados: cada fórmula fornece um valor ligeiramente diferente. A média fornece uma estimativa única. Compare esses números com seu peso atual para avaliar se você está dentro de uma faixa saudável.",
+    "whyItMatters": "Conhecer uma referência de peso saudável ajuda no planejamento de objetivos realistas para a saúde. No contexto brasileiro, onde a obesidade e o sobrepeso afetam mais de 55% dos adultos, ter metas claras é o primeiro passo para mudanças positivas.",
+    "limitations": "As fórmulas de peso ideal são baseadas em médias populacionais e não consideram composição corporal, etnia, idade ou nível de atividade física. Use como referência orientativa, não como meta absoluta. Consulte um profissional de saúde para avaliação individualizada.",
+    "tips_0": "Foque em hábitos saudáveis, não em um número na balança — o peso é consequência, não objetivo.",
+    "tips_1": "Meça sua circunferência abdominal regularmente — é mais preditivo de risco do que o peso total.",
+    "tips_2": "Uma perda de 5–10% do peso atual já traz benefícios significativos para quem está com sobrepeso.",
+    "tips_3": "Consulte um nutricionista para definir metas realistas baseadas no seu histórico e estilo de vida.",
+    "tips_4": "Lembre-se: saúde não tem um tamanho único — o importante é a qualidade de vida global."
   }
 }
