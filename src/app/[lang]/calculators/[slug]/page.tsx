@@ -368,6 +368,7 @@ export default function InstrumentPage({ params }: PageProps) {
 
         {/* Calculator Card */}
         <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 mb-4 shadow-sm">
+          <h2 className="sr-only">{pageTitle.split(' — ')[0]}</h2>
           <InstrumentUI slug={slug} lang={lang} translations={translations} />
         </div>
 

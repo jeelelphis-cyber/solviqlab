@@ -78,8 +78,8 @@ export function HomeClient({
             {s.heroTitle1}
             <span className="text-blue-400">{s.heroTitle2}</span>
           </h1>
-          <p className="text-slate-400 text-base mb-8">
-            {s.heroSources} <span className="text-slate-300">WHO · CFPB · NIST · ISO</span>
+          <p className="text-slate-300 text-base mb-8">
+            {s.heroSources} <span className="text-slate-200">WHO · CFPB · NIST · ISO</span>
           </p>
 
           {/* Search bar */}
@@ -120,6 +120,7 @@ export function HomeClient({
 
       {/* ── Grid ──────────────────────────────────────────── */}
       <div ref={gridRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <h2 className="sr-only">{s.featuredTitle}</h2>
 
         {/* Result count + active filter */}
         <div className="flex items-center justify-between mb-6">
