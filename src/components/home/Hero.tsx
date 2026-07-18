@@ -15,11 +15,11 @@ export function Hero({ lang, totalCount }: HeroProps) {
           {s.heroTitle1}
           <span className="text-blue-400">{s.heroTitle2}</span>
         </h1>
-        <p className="text-xl text-slate-300 mb-4 max-w-2xl mx-auto">
+        <p className="text-xl text-slate-200 mb-4 max-w-2xl mx-auto">
           {s.heroSubtitle(totalCount)}
         </p>
-        <p className="text-sm text-slate-400 mb-10">
-          {s.heroSources} <span className="text-slate-300">WHO · CFPB · NIST · ISO</span>
+        <p className="text-sm text-slate-300 mb-10">
+          {s.heroSources} <span className="text-slate-200">WHO · CFPB · NIST · ISO</span>
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
