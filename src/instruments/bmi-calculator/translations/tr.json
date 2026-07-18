@@ -90,5 +90,7 @@
     "tips_2": "Track your BMI trend over time, not individual snapshots. A single reading has limited value. What matters is the direction over weeks and months — whether you are moving toward or away from the healthy range. Monthly tracking during active lifestyle changes is ideal.",
     "tips_3": "If your BMI is 25–27.9 (low overweight), focus on sustainable lifestyle changes before considering medical interventions: a Mediterranean-style diet, 150+ minutes of moderate cardio per week, strength training 2× per week, and 7–9 hours of sleep. These four habits alone can reduce BMI by 1–3 units in 3–6 months.",
     "tips_4": "If your BMI indicates obesity (30+) or severe underweight (below 16), consult a healthcare professional before starting any intensive diet or exercise program. These ranges carry elevated clinical risks — including cardiac stress during exercise and refeeding syndrome in severe underweight — that require professional guidance."
-  }
+  },
+  "title": "VKİ Hesaplayıcısı — Vücut Kitle İndeksi (Boy ve Kilodan)",
+  "description": "Boy ve kilonuza göre Vücut Kitle İndeksinizi (VKİ) hesaplayın. WHO standartlarına göre kategoriler: zayıf, normal, fazla kilolu, obez."
 }

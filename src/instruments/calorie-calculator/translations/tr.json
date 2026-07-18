@@ -1,6 +1,6 @@
 {
-  "title": "Calorie Calculator — Daily Calorie Needs for Weight Loss & Gain",
-  "description": "Calculate your daily calorie needs using the Mifflin-St Jeor equation. Get personalized targets for weight loss, maintenance, and muscle gain. Free, no sign-up.",
+  "title": "Kalori Hesaplayıcısı — Günlük Kalori İhtiyacı",
+  "description": "Yaş, cinsiyet, boy, kilo ve aktivite seviyenize göre günlük kalori ihtiyacınızı hesaplayın. Kilo verme veya alma hedefleri.",
   "calculate": "Calculate",
   "reset": "Reset",
   "result": "Your Daily Calorie Needs",

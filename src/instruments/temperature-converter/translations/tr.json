@@ -1,6 +1,6 @@
 {
-  "title": "Temperature Converter — Celsius, Fahrenheit & Kelvin",
-  "description": "Convert temperatures between Celsius, Fahrenheit, and Kelvin instantly. Includes body temperature, boiling/freezing points, and cooking temperature reference.",
+  "title": "Sıcaklık Dönüştürücüsü — Celsius, Fahrenheit ve Kelvin",
+  "description": "Sıcaklık birimlerini anında dönüştürün: Celsius, Fahrenheit ve Kelvin. Vücut ısısı, kaynama noktası referansları.",
   "calculate": "Convert",
   "reset": "Reset",
   "result": "Result",

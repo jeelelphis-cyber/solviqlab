@@ -1,6 +1,6 @@
 {
-  "title": "Currency Converter — Convert USD, EUR, GBP & 50+ Currencies",
-  "description": "Convert between 50+ world currencies with up-to-date reference rates. USD to EUR, GBP to USD, EUR to UAH and more. Free currency conversion tool.",
+  "title": "Döviz Kur Dönüştürücüsü — Anlık Kur Dönüşümü",
+  "description": "170+ para birimi arasında anlık döviz kuru dönüşümü. TL, USD, EUR, GBP ve diğer para birimleri. Güncel kurlar.",
   "calculate": "Convert",
   "reset": "Reset",
   "result": "Result",

@@ -1,6 +1,6 @@
 {
-  "title": "BMR Calculator — Basal Metabolic Rate",
-  "description": "Calculate your Basal Metabolic Rate (BMR) using the Mifflin-St Jeor equation. Find how many calories your body burns at complete rest.",
+  "title": "BMR Hesaplayıcısı — Bazal Metabolizma Hızı",
+  "description": "Mifflin-St Jeor ve Harris-Benedict denklemiyle Bazal Metabolizma Hızınızı (BMR) hesaplayın. Günlük kalori ihtiyacınızı öğrenin.",
   "calculate": "Calculate",
   "reset": "Reset",
   "result": "Result",

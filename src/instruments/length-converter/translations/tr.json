@@ -1,6 +1,6 @@
 {
-  "title": "Length Converter — Convert Between All Units of Length",
-  "description": "Convert between meters, feet, inches, miles, kilometers, centimeters, yards, and more. Instant results with precise conversion factors.",
+  "title": "Uzunluk Dönüştürücüsü — metre, feet, inç, mil, km",
+  "description": "Uzunluk birimlerini anında dönüştürün: metre, feet, inç, santimetre, kilometre, mil, yarda ve daha fazlası.",
   "calculate": "Convert",
   "reset": "Reset",
   "result": "Result",

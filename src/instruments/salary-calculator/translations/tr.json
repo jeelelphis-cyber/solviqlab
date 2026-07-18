@@ -1,6 +1,6 @@
 {
-  "title": "Salary Calculator — Hourly to Annual Salary Converter",
-  "description": "Convert hourly wage to annual salary or annual to hourly. Calculate weekly, biweekly, monthly, and yearly earnings instantly.",
+  "title": "Maaş Hesaplayıcısı — Saatlik, Haftalık, Yıllık Maaş",
+  "description": "Maaşınızı farklı dönemler arasında dönüştürün: saatlik, günlük, haftalık, aylık, yıllık ücret hesabı.",
   "calculate": "Calculate",
   "reset": "Reset",
   "result": "Result",

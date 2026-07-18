@@ -1,6 +1,6 @@
 {
-  "title": "Loan Calculator — Monthly Payment & Total Interest",
-  "description": "Calculate your monthly loan payment, total interest paid, and full cost of any fixed-rate loan. Works for personal loans, auto loans, and more.",
+  "title": "Kredi Hesaplayıcısı — Aylık Taksit ve Toplam Maliyet",
+  "description": "Aylık taksitinizi, toplam ödeme tutarını ve toplam faiz maliyetini hesaplayın. Kredi miktarı, faiz oranı ve vade.",
   "calculate": "Calculate",
   "reset": "Reset",
   "result": "Result",

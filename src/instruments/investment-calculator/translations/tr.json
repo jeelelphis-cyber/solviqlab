@@ -1,6 +1,6 @@
 {
-  "title": "Investment Calculator — Compound Growth & Return on Investment",
-  "description": "Calculate how your investment grows with compound interest and monthly contributions. See your final value, total returns, and how long to double your money.",
+  "title": "Yatırım Hesaplayıcısı — Portföy Büyümesi ve Getiri",
+  "description": "Başlangıç yatırımı, aylık katkı ve yıllık getiriyle yatırımınızın büyümesini hesaplayın. Portföy tahmini ve bileşik büyüme.",
   "calculate": "Calculate",
   "reset": "Reset",
   "result": "Result",

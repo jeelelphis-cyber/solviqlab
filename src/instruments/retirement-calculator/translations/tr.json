@@ -1,6 +1,6 @@
 {
-  "title": "Retirement Calculator — Savings Projection & Monthly Income Estimate",
-  "description": "Project your retirement savings with compound growth and monthly contributions. Estimate monthly income using the 4% rule and see real value in today's dollars.",
+  "title": "Emeklilik Hesaplayıcısı — Emeklilik Tasarrufu Tahmini",
+  "description": "Emeklilikte ihtiyaç duyacağınız tasarrufu, aylık katkı paylarını ve emeklilik yaşını hesaplayın.",
   "calculate": "Calculate",
   "reset": "Reset",
   "result": "Result",

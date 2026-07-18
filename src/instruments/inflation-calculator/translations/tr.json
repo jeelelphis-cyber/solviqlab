@@ -1,6 +1,6 @@
 {
-  "title": "Inflation Calculator — Purchasing Power & CPI Adjustment",
-  "description": "Calculate the adjusted value of money over time using a custom inflation rate. See how inflation erodes purchasing power between any two years.",
+  "title": "Enflasyon Hesaplayıcısı — Paranın Satın Alma Gücü",
+  "description": "Enflasyon hesaplayıcısı ile paranın zamanla satın alma gücünü hesaplayın. Geçmişten bugüne fiyat karşılaştırması.",
   "calculate": "Calculate",
   "reset": "Reset",
   "result": "Result",

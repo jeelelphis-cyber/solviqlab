@@ -1,6 +1,6 @@
 {
-  "title": "Body Fat Calculator — Estimate Your Body Fat %",
-  "description": "Calculate body fat percentage using the US Navy method. Enter neck, waist, and hip measurements for an accurate body composition estimate.",
+  "title": "Vücut Yağı Hesaplayıcısı — Yüzde Vücut Yağı",
+  "description": "ABD Ordusu formülüyle vücut yağı yüzdenizi hesaplayın. Boy, bel, kalça ve boyun ölçülerini girin. Erkek ve kadın için ayrı formüller.",
   "calculate": "Calculate",
   "reset": "Reset",
   "result": "Result",

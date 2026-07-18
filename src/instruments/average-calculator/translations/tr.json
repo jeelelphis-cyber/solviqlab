@@ -1,6 +1,6 @@
 {
-  "title": "Average Calculator — Mean, Median, Mode & Range",
-  "description": "Calculate the mean, median, mode, and range of any set of numbers instantly. Supports datasets of any size with step-by-step results.",
+  "title": "Ortalama Hesaplayıcısı — Aritmetik, Geometrik, Harmonik",
+  "description": "Sayı listesinin ortalamasını, medyanını, modunu ve standart sapmasını hesaplayın. Aritmetik, geometrik ve harmonik ortalama.",
   "calculate": "Calculate",
   "reset": "Reset",
   "result": "Result",

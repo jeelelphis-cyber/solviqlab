@@ -1,6 +1,6 @@
 {
-  "title": "TDEE Calculator — Total Daily Energy Expenditure",
-  "description": "Calculate your Total Daily Energy Expenditure (TDEE) based on your BMR and activity level. Know exactly how many calories you need per day.",
+  "title": "TDEE Hesaplayıcısı — Toplam Günlük Enerji Harcaması",
+  "description": "BMR ve aktivite seviyenize göre Toplam Günlük Enerji Harcamanızı (TDEE) hesaplayın. Günlük kalori ihtiyacınızı öğrenin.",
   "calculate": "Calculate",
   "reset": "Reset",
   "result": "Result",

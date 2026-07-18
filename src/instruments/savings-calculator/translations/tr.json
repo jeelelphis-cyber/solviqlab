@@ -1,6 +1,6 @@
 {
-  "title": "Savings Calculator — How Much Will I Save? Growth & Interest Calculator",
-  "description": "Calculate how your savings grow with compound interest and monthly deposits. See your final balance, total interest earned, and when you'll reach your goal.",
+  "title": "Tasarruf Hesaplayıcısı — Birikim ve Faiz Büyümesi",
+  "description": "Tasarruf hesaplayıcısı ile birikim hedefinize ne zaman ulaşacağınızı hesaplayın. Bileşik faiz ve aylık katkı.",
   "calculate": "Calculate",
   "reset": "Reset",
   "result": "Your Savings Results",

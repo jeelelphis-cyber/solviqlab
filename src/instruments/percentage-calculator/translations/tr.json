@@ -73,5 +73,7 @@
     "tips_2": "For percentage-of calculations in budgeting or resource allocation, cross-check your result: Mode 1 and Mode 2 are inverse operations. If 15% of 200 is 30 (Mode 1), then 30 is what % of 200 should return 15% (Mode 2). Using both modes to cross-check each other takes five seconds and eliminates calculation errors entirely — especially useful before presenting budget numbers in a meeting or report.",
     "tips_3": "For business margin calculations, be precise about 'margin' vs 'markup.' Gross margin is profit as a percentage of revenue: (Revenue − COGS) / Revenue × 100. Markup is profit as a percentage of cost: (Revenue − COGS) / COGS × 100. A product that costs $60 and sells for $100 has a 40% gross margin but a 66.7% markup. Confusing these in pricing decisions is a common business error — always specify which measure you are using.",
     "tips_4": "When interpreting percentage data from news, research, or marketing, always ask: percentage of what? 'Crime rose 15%' is meaningless without knowing the base. Is it 15% of last year's numbers? 15% of the 5-year average? 15% of a single-month spike? Similarly, '30% more effective' in advertising requires a control group baseline to be meaningful. Asking 'percentage of what?' is the most powerful critical thinking tool for evaluating percentage-based claims."
-  }
+  },
+  "title": "Yüzde Hesaplayıcısı — Yüzde Artış, Azalış ve Fark",
+  "description": "Yüzde hesaplama: sayının yüzdesi, yüzde artış/azalış, yüzde farkı. Tüm yüzde hesapları tek yerden."
 }

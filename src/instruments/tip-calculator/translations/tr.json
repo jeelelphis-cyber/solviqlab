@@ -1,6 +1,6 @@
 {
-  "title": "Tip Calculator — How Much to Tip? Split Bill & Tip Per Person",
-  "description": "Calculate the tip amount, total bill, and split between people. Supports custom tip %, pre-tax tipping, and bill splitting for any group size. Free.",
+  "title": "Bahşiş Hesaplayıcısı — Kişi Başı Bahşiş ve Hesap Bölme",
+  "description": "Bahşiş miktarını, toplam hesabı ve kişi başı payı hesaplayın. Özel bahşiş yüzdesi ve hesap bölme desteği.",
   "calculate": "Calculate",
   "reset": "Reset",
   "result": "Your Tip Results",

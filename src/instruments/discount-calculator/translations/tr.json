@@ -1,6 +1,6 @@
 {
-  "title": "Discount Calculator — Final Price After Discount",
-  "description": "Calculate the final price after applying any discount percentage. Also calculates how much you save and the effective discount rate.",
+  "title": "İndirim Hesaplayıcısı — Tasarruf ve İndirimli Fiyat",
+  "description": "İndirim yüzdesini, tasarruf miktarını ve indirimli fiyatı anında hesaplayın. Alışverişte ne kadar tasarruf ettiğinizi öğrenin.",
   "calculate": "Calculate",
   "reset": "Reset",
   "result": "Result",

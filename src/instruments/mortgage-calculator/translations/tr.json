@@ -1,6 +1,6 @@
 {
-  "title": "Mortgage Calculator — Monthly Payment & Amortization",
-  "description": "Calculate your monthly mortgage payment, total interest, and amortization schedule. Includes property tax and insurance estimates.",
+  "title": "Mortgage Hesaplayıcısı — Aylık Konut Kredisi Ödemesi",
+  "description": "Mortgage aylık ödemenizi, toplam faiz maliyetini ve amortisman planını hesaplayın. Konut kredisi simülatörü.",
   "calculate": "Calculate",
   "reset": "Reset",
   "result": "Result",

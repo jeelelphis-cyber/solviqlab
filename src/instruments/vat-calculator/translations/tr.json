@@ -1,6 +1,6 @@
 {
-  "title": "VAT Calculator — Add or Remove VAT Instantly",
-  "description": "Add or remove VAT from any price. Supports all VAT rates (5%, 10%, 15%, 20%, 21%, 25%). Instant calculation for businesses and consumers.",
+  "title": "KDV Hesaplayıcısı — KDV Ekle veya Çıkar",
+  "description": "Herhangi bir fiyata KDV ekleyin veya çıkarın. %8, %18, %20 ve tüm KDV oranları desteklenir. Anında hesaplama.",
   "calculate": "Calculate",
   "reset": "Reset",
   "result": "Result",
