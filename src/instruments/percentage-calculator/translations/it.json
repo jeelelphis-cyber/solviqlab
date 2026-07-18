@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "title": "Percentage Calculator — 4 Modes, Free & Instant",
+    "description": "Four percentage calculators in one: find % of a number, calculate % change, determine what % X is of Y, or adjust a value by any percentage. Free."
+  },
+  "form": {
+    "title": "Percentage Calculator",
+    "mode_label": "Calculation type",
+    "mode_percent_of": "What is X% of Y?",
+    "mode_is_what_percent": "X is what % of Y?",
+    "mode_percent_change": "% change from X to Y?",
+    "mode_percent_adjust": "Increase / Decrease X by Y%",
+    "field_a_label": "X (first value)",
+    "field_b_label": "Y (second value)",
+    "direction_label": "Direction",
+    "direction_increase": "Increase",
+    "direction_decrease": "Decrease",
+    "field_a_placeholder": "e.g. 25",
+    "field_b_placeholder": "e.g. 200",
+    "calculate_button": "Calculate",
+    "reset_button": "Reset"
+  },
+  "validation": {
+    "mode_required": "Please select a calculation type.",
+    "invalid_mode": "Unknown calculation type.",
+    "a_required": "Please enter a value for X.",
+    "b_required": "Please enter a value for Y.",
+    "too_high": "Value must be at most 1,000,000,000.",
+    "invalid_number": "Please enter a valid number (e.g. 42 or 3.14).",
+    "unknown": "Invalid input."
+  },
+  "result": {
+    "title": "Result",
+    "percent_of_label": "is X% of Y",
+    "is_what_percent_label": "% of Y",
+    "percent_change_label": "change",
+    "percent_adjust_label": "after adjustment"
+  },
+  "faq": {
+    "title": "Domande Frequenti",
+    "q1": "Come calcolo che percentuale un numero è di un altro?",
+    "a1": "Percentuale = (Parte / Totale) × 100. Esempio: 45 su 60 = (45/60) × 100 = 75%. Verifica: il 75% di 60 = 60 × 0,75 = 45 ✓. Questo calcolo è usato per valutare risultati di test, quote di mercato, tassi di completamento e molte altre applicazioni quotidiane.",
+    "q2": "Come calcolo il X% di un numero?",
+    "a2": "X% di N = N × (X/100) = N × 0,X. Esempio: il 15% di €80 = 80 × 0,15 = €12. Per il 17,5%: 80 × 0,175 = €14. Trucco mentale per il 10%: sposta la virgola di una posizione a sinistra (10% di 80 = 8). Per il 5%: dividi il 10% per 2 (5% di 80 = 4).",
+    "q3": "Come calcolo la variazione percentuale?",
+    "a3": "Variazione % = ((Nuovo valore − Valore originale) / Valore originale) × 100. Aumento: nuovo > originale → percentuale positiva. Diminuzione: nuovo < originale → percentuale negativa. Esempio: prezzo da €50 a €65: variazione = ((65−50)/50) × 100 = 30% di aumento.",
+    "q4": "Qual è la differenza tra punti percentuali e percentuale?",
+    "a4": "I punti percentuali sono la differenza aritmetica tra due percentuali. Se il tasso di disoccupazione passa dal 6% al 8%, è aumentato di 2 punti percentuali, ma del 33% in termini percentuali. Confondere i due è un errore comune nei media. Questa distinzione è importante in economia, statistica e reporting finanziario.",
+    "q5": "Come si calcolano percentuali su percentuali?",
+    "a5": "Le percentuali non si sommano direttamente se si applicano in sequenza. Un aumento del 20% seguito da una riduzione del 20% non riporta al valore originale: 100 × 1,20 × 0,80 = 96 (−4%). Per applicazioni sequenziali, moltiplica sempre per i fattori decimali: un aumento del 10% poi del 15% = × 1,10 × 1,15 = × 1,265 = aumento del 26,5%.",
+    "q6": "Come uso le percentuali per confrontare prezzi?",
+    "a6": "Per confrontare il risparmio reale tra prodotti: calcola il prezzo per unità (es. €/100g, €/litro). Poi calcola la percentuale di differenza: ((Prezzo A − Prezzo B) / Prezzo A) × 100. Un prodotto da €2,40/100g vs €2,00/100g: risparmio = ((2,40−2,00)/2,40) × 100 = 16,7% più economico.",
+    "q7": "Come si usa la regola delle percentuali inverse?",
+    "a7": "Se conosci il valore dopo una variazione percentuale e vuoi l'originale: Valore originale = Valore attuale / (1 + percentuale/100). Esempio: prezzo attuale €117 dopo un aumento del 17%: originale = 117 / 1,17 = €100. O dopo uno sconto del 20%: se il prezzo scontato è €80 → originale = 80 / 0,80 = €100.",
+    "q8": "Come calcolo la percentuale di completamento di un progetto?",
+    "a8": "% completamento = (Unità completate / Unità totali) × 100. Per un progetto con 8 di 25 milestone completate: 8/25 × 100 = 32%. Puoi usare ore, task, punti storia o qualsiasi unità di lavoro misurabile. Per il monitoraggio dei progressi, aggiorna regolarmente e visualizza con grafici a barre o indicatori di progresso."
+  },
+  "aria": {
+    "result_announcement": "Result: {value}. {summary}.",
+    "form_description": "Select a calculation mode and enter values to compute a percentage.",
+    "loading": "Calculating..."
+  },
+  "content": {
+    "whatIs": "A percentage calculator solves four fundamental types of percentage problems in a single interface: what is X% of Y (finding a percentage of a quantity), X is what percent of Y (expressing a ratio as a percentage), percentage change from X to Y (measuring growth or decline between two values), and increase or decrease X by Y% (applying a percentage adjustment to a base value). These four operations cover virtually every percentage calculation encountered in daily life, school, work, and finance.\n\nPercentages are one of the most universally used mathematical concepts — and one of the most commonly miscalculated. Research in quantitative literacy shows that percentage calculation errors are among the most frequent arithmetic mistakes made by adults, including college-educated professionals. The confusion typically arises from two sources: uncertainty about which number is the 'base' (denominator) in a calculation, and conflating percentage points with percentage change — a distinction that matters enormously in financial, scientific, and statistical contexts.\n\nThis calculator eliminates ambiguity by presenting each scenario as a clearly labeled mode with specific input slots. Whether you are calculating a sales commission, determining a test score, measuring investment returns, analyzing budget utilization, computing a tip, or converting a grade to a letter, one of the four modes applies directly — and the formula behind each is transparent and verifiable.",
+    "formula": "Mode 1 — What is X% of Y:\nResult = (X ÷ 100) × Y\nExample: What is 15% of 200? = (15/100) × 200 = 30\n\nMode 2 — X is what % of Y:\nResult = (X ÷ Y) × 100\nExample: 30 is what % of 200? = (30/200) × 100 = 15%\n\nMode 3 — % change from X to Y:\nResult = ((Y − X) ÷ X) × 100\nPositive = increase, Negative = decrease\nExample: from 80 to 96 → ((96−80)/80)×100 = +20%\n\nMode 4 — Increase / Decrease X by Y%:\nIncrease: Result = X × (1 + Y/100)\nDecrease: Result = X × (1 − Y/100)\nExample: 200 increased by 15% = 200 × 1.15 = 230",
+    "example": "Example 1 — Grade percentage:\nYou scored 47 out of 60 on an exam.\nMode: 'X is what % of Y'. X=47, Y=60.\nResult: (47/60) × 100 = 78.3% — a C+ grade.\n\nExample 2 — Sales commission:\nYou earned 8% commission on a $12,500 sale.\nMode: 'What is X% of Y'. X=8, Y=12500.\nResult: (8/100) × 12,500 = $1,000 commission.\n\nExample 3 — Revenue growth:\nRevenue was $340,000 last year, $408,000 this year.\nMode: '% change from X to Y'. X=340000, Y=408000.\nResult: ((408,000 − 340,000) / 340,000) × 100 = +20% growth.\n\nExample 4 — Salary after raise:\nCurrent salary $52,000. Received 6.5% raise.\nMode: 'Increase X by Y%'. X=52000, Y=6.5.\nResult: $52,000 × 1.065 = $55,380 new salary.\nRaise amount: $55,380 − $52,000 = $3,380.",
+    "howItWorks_1": "Select the calculation mode that matches your question from the dropdown: 'What is X% of Y' (finding a percentage of a number), 'X is what % of Y' (expressing a ratio as a percentage), '% change from X to Y' (measuring growth or decline), or 'Increase/Decrease X by Y%' (applying a percentage adjustment). Each mode solves a distinct mathematical question.",
+    "howItWorks_2": "Enter the two values in the X and Y fields. The labels update based on your selected mode to clarify which number goes where — eliminating the most common source of percentage calculation errors. For the adjust mode, select Increase or Decrease from the direction toggle.",
+    "howItWorks_3": "Click Calculate. The result appears instantly with the numerical answer rounded to two decimal places. The result label confirms what the number represents — percentage, dollar amount, final value — so there is no ambiguity about what the output means in the context of your specific question.",
+    "whyItMatters": "Percentage calculations appear in virtually every domain of daily decision-making — from reading a nutrition label (20% daily value of sodium) to evaluating a salary offer (5% annual raise), from understanding election poll margins (3% point lead) to calculating whether a sale is worth making a trip to the store (30% off a $40 item saves $12, not always worth driving 20 minutes). The ability to perform these calculations quickly and correctly is a foundational component of mathematical literacy that has real financial consequences.\n\nIn finance specifically, the four percentage modes map directly to routine tasks. Mode 1 (percent of a number) calculates taxes owed, tip amounts, investment allocations, and interest on a balance. Mode 2 (what percent is X of Y) calculates profit margins, passing rates, budget utilization, and market share. Mode 3 (percentage change) calculates year-over-year revenue growth, inflation rates, portfolio returns, and price changes. Mode 4 (percentage adjustment) calculates prices after raises, costs after markups, values after depreciation, and returns after fees.\n\nThe distinction between percentage points and percentage change — which this calculator's % change mode handles correctly — is particularly important for financial and statistical literacy. When interest rates rise from 2% to 3%, they rise by 1 percentage point but by 50% in relative terms. When a politician claims a policy 'reduced unemployment by 2%,' that could mean unemployment fell from 10% to 8% (a 2 percentage point drop) or from 10% to 9.8% (a 2% relative reduction). These are wildly different outcomes. Understanding which interpretation is intended requires percentage literacy — a skill this calculator reinforces through consistent, transparent formula application.",
+    "limitations": "This calculator handles four standard percentage scenarios using conventional mathematical definitions. It does not handle compound percentage changes — a 10% increase followed by a 10% decrease does NOT return to the original value (it leaves you at 99%). If you apply a 10% increase to $100, you get $110. Then 10% off $110 gives $99, not $100. For sequences of percentage changes, each must be calculated separately, using the output of each step as the input to the next.\n\nThe percentage change mode uses the original (starting) value as the denominator, which is the mathematically standard definition. However, some contexts — particularly in finance — use different denominators. For example, simple interest rate of return uses initial investment as the base, while some other measures use average of start and end values. Always verify which definition is expected in your specific context before using the output in a formal report or analysis.\n\nThis calculator rounds results to two decimal places. For calculations where precision beyond two decimal places matters — scientific research, actuarial calculations, engineering tolerances — the rounding may introduce small errors when the rounded output is used as an input for subsequent calculations. For these high-precision use cases, retain more decimal places at each intermediate step.",
+    "tips_1": "When calculating percentage change, always identify which value is the starting point (X) and which is the ending point (Y) before entering numbers. The most common error in percentage change calculations is reversing X and Y, which inverts the result. A stock that fell from $50 to $40 shows a −20% change when entered correctly (X=50, Y=40), but incorrectly entered (X=40, Y=50) gives +25% — the wrong direction and magnitude.",
+    "tips_2": "For percentage-of calculations in budgeting or resource allocation, cross-check your result: Mode 1 and Mode 2 are inverse operations. If 15% of 200 is 30 (Mode 1), then 30 is what % of 200 should return 15% (Mode 2). Using both modes to cross-check each other takes five seconds and eliminates calculation errors entirely — especially useful before presenting budget numbers in a meeting or report.",
+    "tips_3": "For business margin calculations, be precise about 'margin' vs 'markup.' Gross margin is profit as a percentage of revenue: (Revenue − COGS) / Revenue × 100. Markup is profit as a percentage of cost: (Revenue − COGS) / COGS × 100. A product that costs $60 and sells for $100 has a 40% gross margin but a 66.7% markup. Confusing these in pricing decisions is a common business error — always specify which measure you are using.",
+    "tips_4": "When interpreting percentage data from news, research, or marketing, always ask: percentage of what? 'Crime rose 15%' is meaningless without knowing the base. Is it 15% of last year's numbers? 15% of the 5-year average? 15% of a single-month spike? Similarly, '30% more effective' in advertising requires a control group baseline to be meaningful. Asking 'percentage of what?' is the most powerful critical thinking tool for evaluating percentage-based claims."
+  },
+  "title": "Calcolatore di Percentuale",
+  "description": "Calcola percentuali, aumenti percentuali, sconti, variazioni e proporzioni. Semplice calcolatore di percentuale per tutti gli usi.",
+  "calculate": "Calcola",
+  "reset": "Azzera"
+}

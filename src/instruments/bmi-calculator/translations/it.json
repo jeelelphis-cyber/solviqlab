@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "BMI Calculator — Body Mass Index with Interpretation",
+    "description": "Calculate your BMI instantly. Get WHO category, healthy weight range, BMI Prime, and AI-powered health interpretation — free, fast, and accurate."
+  },
+  "form": {
+    "title": "BMI Calculator",
+    "height_label": "Height",
+    "height_placeholder_cm": "e.g. 175",
+    "height_placeholder_ft": "ft",
+    "height_placeholder_in": "in",
+    "weight_label": "Weight",
+    "weight_placeholder_kg": "e.g. 70",
+    "weight_placeholder_lb": "e.g. 154",
+    "age_label": "Age (optional)",
+    "age_placeholder": "e.g. 30",
+    "sex_label": "Sex (optional)",
+    "sex_male": "Male",
+    "sex_female": "Female",
+    "sex_other": "Other / Prefer not to say",
+    "unit_metric": "Metric (cm, kg)",
+    "unit_imperial": "Imperial (ft, lb)",
+    "calculate_button": "Calculate BMI",
+    "reset_button": "Reset"
+  },
+  "validation": {
+    "height_required": "Please enter your height.",
+    "height_too_low": "Height must be at least {min} cm.",
+    "height_too_high": "Height must be at most {max} cm.",
+    "weight_required": "Please enter your weight.",
+    "weight_too_low": "Weight must be at least {min} kg.",
+    "weight_too_high": "Weight must be at most {max} kg.",
+    "invalid_number": "Please enter a valid number (e.g. 70 or 70.5).",
+    "unknown": "Invalid input."
+  },
+  "result": "Il tuo IMC",
+  "faq": {
+    "title": "Domande Frequenti",
+    "q1": "Come viene calcolato l'IMC per bambini o adolescenti?",
+    "a1": "Questo calcolatore è progettato per adulti (18+ anni). Per bambini e adolescenti, l'IMC viene interpretato usando percentili specifici per età e sesso — non le categorie fisse degli adulti. Un bambino al 75° percentile di IMC non è sovrappeso; solo quelli sopra il 95° percentile sono considerati obesi secondo le linee guida CDC. Per bambini e adolescenti, consulta un pediatra o usa un calcolatore IMC pediatrico con le curve di crescita CDC/OMS appropriate.",
+    "q2": "Cosa significa IMC Prime?",
+    "a2": "IMC Prime è il rapporto tra il tuo IMC e il limite superiore del range normale (IMC 25). Un valore di 1,0 corrisponde all'IMC 25 — il limite superiore del range normale OMS. Valori sotto 1,0 indicano peso normale o sottopeso; valori sopra 1,0 indicano sovrappeso o obesità. IMC Prime di 1,3 significa che il tuo IMC è il 30% sopra il limite normale. È una misura relativa più intuitiva dell'IMC grezzo.",
+    "q3": "L'IMC può essere impreciso per atleti o persone muscolose?",
+    "a3": "Sì. L'IMC non distingue tra muscolo e grasso. Gli atleti con alta massa muscolare possono avere un IMC nella categoria sovrappeso pur avendo pochissimo grasso corporeo. I bodybuilder hanno spesso IMC di 28–35 con percentuale di grasso corporeo del 8–12%. Al contrario, le persone anziane sedentarie possono avere un IMC normale con alta percentuale di grasso. Per queste popolazioni, la percentuale di grasso corporeo è un indicatore più accurato della composizione corporea.",
+    "q4": "Come viene calcolata la stima del grasso corporeo?",
+    "a4": "La stima del grasso corporeo usa la formula di Deurenberg: Grasso Corporeo % = 1,20 × IMC + 0,23 × Età − 10,8 × Sesso − 5,4, dove Sesso = 1 per uomini e 0 per donne. Questa formula fornisce una stima approssimativa — l'errore standard è di circa il 4%. Per misurazioni precise, usa metodi come DEXA, pesata idrostatica o pletismografia a spostamento d'aria.",
+    "q5": "Quali sono le categorie IMC dell'OMS?",
+    "a5": "L'OMS definisce: Gravemente sottopeso (<16,0), Moderatamente sottopeso (16,0–16,9), Lievemente sottopeso (17,0–18,4), Normale (18,5–24,9), Sovrappeso (25,0–29,9), Obeso classe I (30,0–34,9), Obeso classe II (35,0–39,9), Obeso classe III (≥40,0). Le categorie si applicano ugualmente a uomini e donne adulti di tutte le origini etniche, sebbene alcune linee guida asiatiche usino soglie più basse.",
+    "q6": "Il range IMC è uguale per uomini e donne?",
+    "a6": "I range IMC dell'OMS (18,5–24,9 per il normale) si applicano ugualmente a uomini e donne. Tuttavia, allo stesso IMC, le donne portano naturalmente più grasso corporeo degli uomini a causa di differenze ormonali e riproduttive. Una donna con IMC 22 ha tipicamente il 5–8% di grasso in più rispetto a un uomo con lo stesso IMC.",
+    "q7": "Con quale frequenza dovrei controllare il mio IMC?",
+    "a7": "Per la maggior parte degli adulti, calcolare l'IMC ogni 3–6 mesi è sufficiente per monitorare le tendenze a lungo termine. Il peso fluttua di 1–3 kg durante la giornata a causa di idratazione, pasti e variazioni naturali. Le misurazioni giornaliere o settimanali non aggiungono informazioni clinicamente utili e possono aumentare inutilmente l'ansia.",
+    "q8": "Un IMC normale può significare che sono comunque in cattiva salute?",
+    "a8": "Sì. Una condizione chiamata 'obesità normopeso' o 'skinny fat' si verifica quando qualcuno ha un IMC normale ma un'alta percentuale di grasso (specialmente viscerale). Questo profilo — alto grasso, bassa massa muscolare, IMC normale — è associato a rischio metabolico simile a quello dell'obesità. Viceversa, gli atleti con IMC elevato ma bassa percentuale di grasso hanno ottimi marcatori metabolici. L'IMC è uno strumento di screening della popolazione, non una diagnosi individuale."
+  },
+  "aria": {
+    "result_announcement": "Result: BMI {bmi}. Category: {category}. {summary}.",
+    "form_description": "Enter your height and weight to calculate your Body Mass Index.",
+    "loading": "Calculating your BMI..."
+  },
+  "content": {
+    "whatIs": "Il calcolatore IMC calcola l'Indice di Massa Corporea, una stima standardizzata del peso corporeo relativo all'altezza. L'IMC viene calcolato dividendo il peso in chilogrammi per il quadrato dell'altezza in metri (kg/m²).\n\nL'IMC è lo strumento di screening più diffuso al mondo per classificare lo stato ponderale nelle popolazioni adulte. Sviluppato da Adolphe Quetelet nel 1832, è stato adottato dall'OMS come standard internazionale per la sorveglianza nutrizionale.",
+    "formula": "IMC = peso (kg) / altezza² (m)\n\nOppure con unità imperiali:\nIMC = 703 × peso (lb) / altezza² (in)\n\nCategorie OMS:\n  < 18,5    → Sottopeso\n  18,5–24,9 → Normale\n  25,0–29,9 → Sovrappeso\n  30,0–34,9 → Obeso (Classe I)\n  35,0–39,9 → Obeso (Classe II)\n  ≥ 40,0    → Obeso (Classe III)",
+    "example": "Esempio: donna di 30 anni, 165 cm (1,65 m), 70 kg\nIMC = 70 / 1,65² = 70 / 2,7225 ≈ 25,7\nCategoria: Sovrappeso\nIMC Prime = 25,7 / 25 = 1,03\nStima grasso corporeo = 1,20 × 25,7 + 0,23 × 30 − 0 − 5,4 = 30,84 + 6,9 − 5,4 = 32,3%",
+    "howItWorks_1": "Inserisci il tuo peso e la tua altezza nei rispettivi campi. Puoi usare il sistema metrico (kg, cm) o imperiale (lb, ft/in). Seleziona il tuo sesso e inserisci l'età per ottenere la stima del grasso corporeo usando la formula di Deurenberg.",
+    "howItWorks_2": "Il calcolatore divide il peso per il quadrato dell'altezza per ottenere l'IMC, quindi lo confronta con le categorie OMS. Calcola anche l'IMC Prime (rapporto con il limite superiore del range normale) e l'Indice Ponderale di Corpulenza.",
+    "howItWorks_3": "I risultati mostrano: IMC grezzo, categoria OMS, IMC Prime, Indice Ponderale, stima del grasso corporeo e range di peso sano per la tua altezza. Usa questi valori come punto di partenza per una conversazione con il tuo medico, non come diagnosi.",
+    "whyItMatters": "L'IMC è utilizzato a livello globale come strumento di screening economico e non invasivo per identificare popolazioni a rischio di problemi di salute legati al peso. Nonostante i suoi limiti, l'IMC è correlato statisticamente con il rischio di diabete tipo 2, malattie cardiovascolari, ipertensione e alcune forme di cancro.\n\nA livello di politica sanitaria pubblica, l'IMC è insostituibile: è misurabile su scala di popolazione, non richiede attrezzature costose ed è comparabile tra paesi e decenni diversi.",
+    "limitations": "L'IMC non misura direttamente il grasso corporeo e non distingue tra massa muscolare e massa grassa. Atleti muscolosi possono essere classificati come sovrappeso; anziani con poco muscolo possono avere un IMC normale pur essendo obesi in termini di grasso.\n\nL'IMC non considera la distribuzione del grasso — il grasso viscerale (addominale) è molto più pericoloso del grasso sottocutaneo allo stesso IMC. La circonferenza della vita è un indicatore complementare importante.",
+    "tips_1": "Usa l'IMC come punto di partenza, non come giudizio finale. Se il tuo IMC è ai limiti di una categoria (es. 24,5 o 25,5), considera di completare la valutazione con la misurazione della circonferenza della vita e una consulenza medica.",
+    "tips_2": "Per monitorare i progressi nel tempo, misura l'IMC sempre nelle stesse condizioni: al mattino, a stomaco vuoto, dopo aver usato il bagno. Questo elimina le variazioni quotidiane di idratazione e pasti.",
+    "tips_3": "Se sei di origini asiatiche, considera che alcune autorità sanitarie usano soglie IMC più basse: sovrappeso >23, obesità >27,5. Il rischio metabolico può aumentare a IMC più bassi rispetto alle soglie OMS standard.",
+    "tips_4": "Combina l'IMC con la misurazione della vita per una valutazione più completa. Circonferenza vita >94 cm negli uomini e >80 cm nelle donne indica rischio metabolico elevato, indipendentemente dall'IMC."
+  },
+  "title": "Calcolatore IMC (Indice di Massa Corporea)",
+  "description": "Calcola il tuo IMC (Indice di Massa Corporea) con le categorie OMS. Ottieni stima del grasso corporeo, IMC Prime e analisi personalizzata.",
+  "calculate": "Calcola",
+  "reset": "Azzera"
+}
