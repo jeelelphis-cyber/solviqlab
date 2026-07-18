@@ -23,11 +23,11 @@
     "a5": "Die Celsius- und Kelvin-Skalen werden durch das Internationale Einheitensystem (SI) definiert. Die Kelvin-Skala basiert auf dem Tripelpunkt von Wasser (273,16 K). Fahrenheit und Rankine werden relativ zu Celsius bzw. Kelvin durch die Internationale Temperaturskala von 1990 (ITS-90) definiert."
   },
   "content": {
-    "whatIs": "Dieser Temperaturumrechner konvertiert sofort zwischen Celsius, Fahrenheit, Kelvin und Rankine. Er verwendet lineare Umrechnungsformeln basierend auf dem Gefrier- und Siedepunkt von Wasser sowie dem absoluten Nullpunkt.",
-    "formula": "Die Umrechnungsformeln lauten: Celsius in Fahrenheit: F = C × 9/5 + 32; Fahrenheit in Celsius: C = (F - 32) × 5/9; Celsius in Kelvin: K = C + 273,15; Kelvin in Celsius: C = K - 273,15; Celsius in Rankine: R = (C + 273,15) × 9/5; Rankine in Celsius: C = (R - 491,67) × 5/9. Ähnliche Formeln gelten für andere Paare.",
-    "example": "Konvertieren Sie 100°C in Fahrenheit, Kelvin und Rankine. Fahrenheit: 100 × 9/5 + 32 = 212°F. Kelvin: 100 + 273,15 = 373,15 K. Rankine: (100 + 273,15) × 9/5 = 671,67 °R.",
-    "howItWorks_1": "Geben Sie den Temperaturwert in das Feld 'Wert' ein und wählen Sie die Einheit, von der Sie umrechnen möchten, im Dropdown-Menü 'Von Einheit' (Celsius, Fahrenheit, Kelvin oder Rankine).",
-    "howItWorks_2": "Der Rechner wendet automatisch die entsprechenden Umrechnungsformeln an, um die äquivalenten Temperaturen in Celsius, Fahrenheit und Kelvin zu berechnen. Es ist kein Klick auf eine Schaltfläche erforderlich; die Ergebnisse werden sofort aktualisiert.",
-    "howItWorks_3": "Die Ergebnisse werden in drei Feldern angezeigt: Celsius (°C), Fahrenheit (°F) und Kelvin (K). Verwenden Sie diese Werte für wissenschaftliche, kulinarische oder wetterbezogene Anwendungen."
+    "whatIs": "Ein Temperaturkonverter übersetzt zwischen den drei primären Temperaturskalen — Celsius (°C), Fahrenheit (°F) und Kelvin (K) — mithilfe exakter mathematischer Formeln. Er wird in Meteorologie, Kochen, Wissenschaft, Medizin und internationalen Temperaturumrechnungen eingesetzt.",
+    "formula": "Celsius zu Fahrenheit:\n°F = (°C × 9/5) + 32\n°F = (°C × 1,8) + 32\n\nFahrenheit zu Celsius:\n°C = (°F − 32) × 5/9\n°C = (°F − 32) / 1,8\n\nCelsius zu Kelvin:\nK = °C + 273,15\n\nKelvin zu Celsius:\n°C = K − 273,15\n\nFahrenheit zu Kelvin:\nK = (°F − 32) × 5/9 + 273,15",
+    "example": "Beispiel 1 — Wettertemperaturumrechnung:\n20°C (angenehmer Frühlingstag) = (20 × 1,8) + 32 = 68°F\n-10°C (kalter Wintertag) = (-10 × 1,8) + 32 = 14°F\n\nBeispiel 2 — Kochen:\nOfen auf 350°F für amerikanische Rezepte.\n°C = (350 − 32) / 1,8 = 176,7°C ≈ 175°C (typische Ofeneinstellung)\n\nBeispiel 3 — Wissenschaft:\nSiedepunkt von Wasser: 100°C = 212°F = 373,15 K",
+    "howItWorks_1": "Geben Sie den Temperaturwert ein und wählen Sie die Ausgangsskala (Celsius, Fahrenheit oder Kelvin). Der Konverter akzeptiert beliebige numerische Werte einschließlich negativer Zahlen und Dezimalwerte.",
+    "howItWorks_2": "Wählen Sie die Zielskala im Dropdown 'Nach'. Der Konverter wendet die exakte Umrechnungsformel für das spezifische Skalenpaar an. Alle Formeln sind mathematisch präzise ohne Zwischenrundungen.",
+    "howItWorks_3": "Die umgerechnete Temperatur erscheint sofort. Das Ergebnisfeld zeigt zur Referenz auch dieselbe Temperatur in allen drei Skalen gleichzeitig an, damit Sie alle Darstellungen auf einmal vergleichen können."
   }
 }

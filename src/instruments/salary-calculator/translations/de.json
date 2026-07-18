@@ -30,11 +30,11 @@
     "a5": "Passen Sie die Felder 'Stunden pro Woche' und 'Wochen pro Jahr' an Ihren tatsächlichen Zeitplan an. Beispiel: Ein Teilzeitbeschäftigter mit 20 Stunden/Woche für 48 Wochen bei einem Stundenlohn von 18 $: 18 $ × 20 × 48 = 17.280 $ Jahresgehalt."
   },
   "content": {
-    "whatIs": "Dieser Gehaltsrechner rechnet zwischen Stundenlohn und Jahresgehalt um und zeigt Ihnen Ihr entsprechendes Gehalt für jeden gängigen Zahlungszeitraum: täglich, wöchentlich, zweiwöchentlich, monatlich und jährlich.",
-    "formula": "Wenn Stundenlohn: Jahresgehalt = Betrag × Stunden/Woche × Wochen/Jahr\nWenn Jahresgehalt: Stundenlohn = Betrag / (Stunden/Woche × Wochen/Jahr)\nMonatslohn = Jahresgehalt / 12\nZweiwöchentlich = Jahresgehalt / 26\nWöchentlich = Jahresgehalt / 52\nTäglich = Jahresgehalt / 261",
-    "example": "Ein Arbeitnehmer, der 25 $/Stunde bei 40 Stunden/Woche für 52 Wochen verdient, erhält 52.000 $/Jahr. Das entspricht 1.000 $/Woche, 2.000 $ zweiwöchentlich, 4.333,33 $/Monat und 199,23 $/Tag.",
-    "howItWorks_1": "Wählen Sie, ob Sie Ihren Stundenlohn oder Ihr Jahresgehalt kennen, und geben Sie dann den Betrag ein.",
-    "howItWorks_2": "Passen Sie die Stunden pro Woche (Standard 40) und Wochen pro Jahr (Standard 52) an, falls Ihr Zeitplan abweicht.",
-    "howItWorks_3": "Klicken Sie auf Berechnen, um sofort Ihre entsprechenden Stunden-, Tages-, Wochen-, Zweiwochen-, Monats- und Jahresbeträge zu sehen."
+    "whatIs": "Ein Gehaltsrechner konvertiert die Vergütung zwischen gängigen Lohnzeitraumformaten — von Stundenlohn zu Jahreslohn und umgekehrt — und berechnet sofort monatliche, zweiwöchentliche und wöchentliche Äquivalente. Er ist unverzichtbar für den Vergleich von Jobangeboten und die Haushaltsplanung.",
+    "formula": "Standard-Umrechnungsformeln:\n\nJahresgehalt = Stundenlohn × Stunden/Woche × Wochen/Jahr\nStundenlohn = Jahresgehalt ÷ (Stunden/Woche × Wochen/Jahr)\n\nVom Jahresgehalt:\n  Monatlich    = Jahresgehalt ÷ 12\n  Zweiwöchentlich = Jahresgehalt ÷ 26\n  Wöchentlich  = Jahresgehalt ÷ 52\n  Täglich      = Jahresgehalt ÷ (Wochen/Jahr × Tage/Woche)",
+    "example": "Beispiel 1 — Standard-Vollzeitbeschäftigter:\n28 €/Stunde, 40 Stunden/Woche, 52 Wochen/Jahr.\nJährlich: 28 € × 40 × 52 = 58.240 €\nMonatlich: 58.240 € ÷ 12 = 4.853 €\nZweiwöchentlich: 58.240 € ÷ 26 = 2.240 €\nWöchentlich: 58.240 € ÷ 52 = 1.120 €\n\nBeispiel 2 — Jahresgehalt in Stundenlohn umrechnen:\n72.000 € p.a., 40 Std./Woche.\nStundenlohn: 72.000 ÷ (40 × 52) = 34,62 €/Stunde",
+    "howItWorks_1": "Wählen Sie Ihren Gehaltstyp — Stunden- oder Jahresvergütung. Geben Sie Ihren Satz ein: bei Stundenlohn Ihren Stundensatz; bei Jahresgehalt Ihr gesamtes Bruttojahresgehalt. Passen Sie Stunden pro Woche und Wochen pro Jahr nach Bedarf an.",
+    "howItWorks_2": "Klicken Sie auf Berechnen. Alle äquivalenten Lohnzeitraumbeträge werden gleichzeitig mit den Standard-Umrechnungsformeln berechnet. Die Ergebnisse stellen Bruttoverdienste vor Steuern und Abzügen dar.",
+    "howItWorks_3": "Vergleichen Sie alle Zahlen, um Jobangebote zu bewerten, Ihre Finanzen zu planen oder Freelance-Honorare festzulegen. Das stündliche Äquivalent eines Jahresgehalts ist besonders nützlich beim Vergleich von Festanstellungen mit freiberuflichen Aufträgen."
   }
 }

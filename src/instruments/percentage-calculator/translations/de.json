@@ -55,11 +55,11 @@
     "loading": "Berechne..."
   },
   "content": {
-    "whatIs": "Dieser Prozentrechner berechnet vier häufige Prozentszenarien: Was ist X% von Y, wie viel Prozent ist X von Y, prozentuale Änderung von X zu Y und prozentuale Erhöhung oder Verringerung von Y um X%. Das zugrundeliegende Konzept ist, dass ein Prozentsatz einen Bruchteil von 100 darstellt, was proportionale Vergleiche zwischen Werten ermöglicht.",
-    "formula": "Für 'Prozentsatz von': Ergebnis = (X/100) * Y. Für 'ist wie viel Prozent': Ergebnis = (X/Y) * 100. Für 'Prozentänderung': Ergebnis = ((Y - X) / X) * 100. Für 'Prozentanpassung': Ergebnis = Y * (1 ± X/100), wobei + für Erhöhung und - für Verringerung steht.",
-    "example": "Um 15% von 200 zu finden, setzen Sie Modus auf 'Prozentsatz von', a=15, b=200. Das Ergebnis ist 30. Um zu finden, wie viel Prozent 30 von 200 ist, setzen Sie Modus auf 'ist wie viel Prozent', a=30, b=200; Ergebnis ist 15%.",
-    "howItWorks_1": "Wählen Sie den Berechnungsmodus aus dem Dropdown: 'Prozentsatz von', 'ist wie viel Prozent', 'Prozentänderung' oder 'Prozentanpassung'. Geben Sie dann den ersten Wert (X) und den zweiten Wert (Y) in die Zahlenfelder ein.",
-    "howItWorks_2": "Klicken Sie auf die Schaltfläche Berechnen. Der Rechner wendet die entsprechende Formel basierend auf dem ausgewählten Modus an und berechnet das Ergebnis, gerundet auf zwei Dezimalstellen.",
-    "howItWorks_3": "Die Ausgabe zeigt das rohe Ergebnis und das gerundete Ergebnis. Im Modus 'Prozentänderung' wird auch angezeigt, ob die Änderung eine Erhöhung (positiv) oder Verringerung (negativ) ist. Verwenden Sie das gerundete Ergebnis für praktische Zwecke."
+    "whatIs": "Ein Prozentrechner löst vier grundlegende Arten von Prozentrechnungsaufgaben in einer einzigen Benutzeroberfläche: Was ist X% von Y (Prozentsatz einer Menge), X ist wie viel % von Y (Prozentsatz berechnen), wie ist die prozentuale Veränderung von X zu Y, und einen Prozentsatz zu einem Wert addieren/subtrahieren.",
+    "formula": "Modus 1 — Was ist X% von Y:\nErgebnis = (X ÷ 100) × Y\nBeispiel: Was ist 15% von 200? = (15/100) × 200 = 30\n\nModus 2 — X ist wie viel % von Y:\nErgebnis = (X ÷ Y) × 100\nBeispiel: 30 ist wie viel % von 200? = (30/200) × 100 = 15%\n\nModus 3 — Prozentuale Veränderung:\nErgebnis = [(Y − X) / |X|] × 100\nPositiv = Zunahme; Negativ = Abnahme\n\nModus 4 — Prozentsatz addieren/subtrahieren:\nAddieren: Ergebnis = X × (1 + Y/100)\nSubtrahieren: Ergebnis = X × (1 − Y/100)",
+    "example": "Beispiel 1 — Testergebnis:\nSie haben 47 von 60 Punkten in einer Prüfung erreicht.\nModus: 'X ist wie viel % von Y'. X=47, Y=60.\nErgebnis: (47/60) × 100 = 78,3% — Note gut.\n\nBeispiel 2 — Preissenkung:\nProdukt fiel von 120 € auf 96 €.\nProzentuale Veränderung: [(96−120)/120] × 100 = −20% (20% Preissenkung)",
+    "howItWorks_1": "Wählen Sie den Berechnungsmodus, der Ihrer Frage entspricht, aus dem Dropdown: 'Was ist X% von Y', 'X ist wie viel % von Y', 'Prozentuale Veränderung' oder 'Prozentsatz addieren/subtrahieren'.",
+    "howItWorks_2": "Geben Sie die zwei Werte in die X- und Y-Felder ein. Die Beschriftungen werden basierend auf dem gewählten Modus aktualisiert, um zu verdeutlichen, welche Zahl wohin gehört — eliminiert die häufigste Verwirrung bei Prozentberechnungen.",
+    "howItWorks_3": "Klicken Sie auf Berechnen. Das Ergebnis erscheint sofort als numerische Antwort, auf zwei Dezimalstellen gerundet. Die Ergebnisbezeichnung bestätigt, was die Zahl im Kontext des gewählten Modus darstellt."
   }
 }

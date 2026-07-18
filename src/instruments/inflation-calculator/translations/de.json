@@ -26,11 +26,11 @@
     "a5": "Ja. Setzen Sie 'Von Jahr' auf das aktuelle Jahr und 'Bis Jahr' auf ein zukünftiges Jahr. Der Rechner verwendet die Formel angepassterBetrag = Betrag × (1 + Rate/100)^Jahre, die sowohl für historische Rückblicke als auch für Vorwärtsprognosen gültig ist – wobei zu beachten ist, dass zukünftige Raten Schätzungen sind."
   },
   "content": {
-    "whatIs": "Dieser Inflationsrechner zeigt Ihnen, wie viel eine Geldsumme aus einem Jahr in einem anderen Jahr wert ist, unter Verwendung einer benutzerdefinierten jährlichen Inflationsrate. Er zeigt auch die kumulierte Gesamtinflation und den Kaufkraftverlust über den Zeitraum an.",
-    "formula": "Angepasster Betrag = Betrag × (1 + Rate/100)^(BisJahr − VonJahr)\nGesamtinflation = ((Angepasst / Ursprünglich) − 1) × 100\nKaufkraftverlust = 100 − (Ursprünglich / Angepasst × 100)",
-    "example": "Ein Betrag von 10.000 $ aus dem Jahr 2000, angepasst auf 2024 bei 3 % jährlicher Inflation: 10.000 $ × (1,03)^24 ≈ 20.327,94 $. Die Gesamtinflation beträgt 103,3 % und der Kaufkraftverlust 50,8 % – die ursprünglichen 10.000 $ haben jetzt die Kaufkraft von etwa 4.919 $.",
-    "howItWorks_1": "Geben Sie den ursprünglichen Geldbetrag und das Startjahr ein.",
-    "howItWorks_2": "Legen Sie das Zieljahr fest und passen Sie die jährliche Inflationsrate an (Standard 3 %).",
-    "howItWorks_3": "Klicken Sie auf Berechnen, um den inflationsbereinigten Wert, die kumulierte Gesamtinflation und den Verlust an Kaufkraft zu sehen."
+    "whatIs": "Ein Inflationsrechner passt den Wert von Geld im Zeitverlauf an und zeigt, wie steigende Preise die Kaufkraft verringern und wie viel mehr — oder weniger — ein bestimmter Betrag in verschiedenen Jahren wert ist. Er ist unverzichtbar für Finanzplanung, Anlageanalyse und historische Wirtschaftsvergleiche.",
+    "formula": "Angepasster Betrag = Original × (1 + Rate/100)^Jahre\nDabei gilt: Jahre = Endjahr − Ausgangsjahr\nRate = jährliche Inflationsrate in Prozent\n\nGesamtinflation % = [(Angepasster Betrag − Original) / Original] × 100\n\nUmgekehrte Kaufkraft = Original / (1 + Rate/100)^Jahre",
+    "example": "Beispiel 1 — Kaufkraft eines Sparkontos:\n10.000 € im Jahr 2000, angepasst auf 2024 bei 3% durchschnittlicher Inflation.\nJahre = 24. Angepasst = 10.000 × (1,03)^24 = 20.328 €.\nDas bedeutet: Sie benötigen heute 20.328 €, um das zu kaufen, was 2000 für 10.000 € erhältlich war.\n\nBeispiel 2 — Gehaltsprojektion:\nAktuelles Gehalt 3.500 €/Monat. Bei 2% Inflation jährlich, was wäre das Äquivalent in 10 Jahren?\n3.500 × (1,02)^10 = 4.268 € zur Erhaltung der gleichen Kaufkraft.",
+    "howItWorks_1": "Geben Sie den ursprünglichen Betrag in Euro ein — die Summe, die Sie für die Inflation anpassen möchten. Legen Sie das Ausgangsjahr (wann der ursprüngliche Betrag gemessen wird) und das Zieljahr fest.",
+    "howItWorks_2": "Legen Sie die jährliche Inflationsrate fest. Der Standardwert von 3% spiegelt den langfristigen deutschen VPI-Durchschnitt wider. Für kurzfristige Projektionen verwenden Sie die aktuellste 12-Monats-Rate.",
+    "howItWorks_3": "Klicken Sie auf Berechnen. Die Ergebnisse zeigen den Angepassten Betrag (das Äquivalent im Zieljahr), die Gesamtinflation in Prozent und die relative Kaufkraft (wie viel des Originalbetrags Sie heute kaufen könnten)."
   }
 }

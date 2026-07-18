@@ -25,11 +25,11 @@
   "opt_male": "Männlich",
   "opt_female": "Weiblich",
   "content": {
-    "whatIs": "Dieser BMR-Rechner schätzt Ihren Grundumsatz (BMR) mit der Mifflin-St-Jeor-Formel. Der BMR ist die Anzahl der Kalorien, die Ihr Körper im völligen Ruhezustand verbrennt, um lebenswichtige Funktionen wie Atmung und Kreislauf aufrechtzuerhalten.",
-    "formula": "Für Männer: BMR = 10 × Gewicht(kg) + 6,25 × Größe(cm) - 5 × Alter(J) + 5. Für Frauen: BMR = 10 × Gewicht(kg) + 6,25 × Größe(cm) - 5 × Alter(J) - 161. Das Ergebnis ist in kcal/Tag.",
-    "example": "Ein 30-jähriger Mann mit 80 kg und 180 cm Größe: BMR = 10×80 + 6,25×180 - 5×30 + 5 = 800 + 1125 - 150 + 5 = 1780 kcal/Tag. Das bedeutet, sein Körper verbrennt im Ruhezustand etwa 1780 Kalorien pro Tag.",
-    "howItWorks_1": "Geben Sie Ihr Gewicht in Kilogramm, Ihre Größe in Zentimetern, Ihr Alter in Jahren ein und wählen Sie Ihr Geschlecht (männlich oder weiblich).",
-    "howItWorks_2": "Klicken Sie auf die Schaltfläche Berechnen. Der Rechner wendet die Mifflin-St-Jeor-Formel an, um Ihren BMR basierend auf den Eingaben zu berechnen.",
-    "howItWorks_3": "Das Ergebnis zeigt Ihren BMR in kcal/Tag. Verwenden Sie diese Zahl als Basis für den täglichen Kalorienbedarf; addieren Sie Aktivitätskalorien, um den Gesamtenergieverbrauch zu schätzen."
+    "whatIs": "Ihr Grundumsatz (BMR — Basal Metabolic Rate) ist die Anzahl der Kalorien, die Ihr Körper in vollständiger Ruhe verbrennt, um lebenswichtige biologische Funktionen aufrechtzuerhalten — Atmung, Kreislauf, Temperaturregulation und Zellfunktionen. Er bildet die Grundlage für alle Berechnungen des täglichen Energiebedarfs.",
+    "formula": "Mifflin-St-Jeor-Gleichung (empfohlen von der Akademie für Ernährung und Diätetik):\n\nMänner: BMR = (10 × Gewicht in kg) + (6,25 × Größe in cm) − (5 × Alter) + 5\nFrauen: BMR = (10 × Gewicht in kg) + (6,25 × Größe in cm) − (5 × Alter) − 161\n\nRevidierte Harris-Benedict-Formel (1984):\nMänner: BMR = 88,362 + (13,397 × Gewicht) + (4,799 × Größe) − (5,677 × Alter)\nFrauen: BMR = 447,593 + (9,247 × Gewicht) + (3,098 × Größe) − (4,330 × Alter)",
+    "example": "Beispiel 1 — Frau, 28 Jahre, 65 kg, 168 cm:\nBMR = (10×65) + (6,25×168) − (5×28) − 161\n    = 650 + 1.050 − 140 − 161\n    = 1.399 kcal/Tag\n\nBeispiel 2 — Mann, 40 Jahre, 82 kg, 180 cm:\nBMR = (10×82) + (6,25×180) − (5×40) + 5\n    = 820 + 1.125 − 200 + 5\n    = 1.750 kcal/Tag",
+    "howItWorks_1": "Geben Sie Ihr Gewicht in Kilogramm, Ihre Größe in Zentimetern, Ihr Alter in Jahren ein und wählen Sie Ihr biologisches Geschlecht (männlich oder weiblich). Wählen Sie die Berechnungsgleichung (Mifflin-St Jeor wird für die meisten Personen empfohlen).",
+    "howItWorks_2": "Klicken Sie auf Berechnen. Der Rechner wendet die Mifflin-St-Jeor-Gleichung an, um Ihren BMR in kcal/Tag zu berechnen — die Kalorien, die Ihr Körper in 24-stündiger vollständiger Ruhe verbrennen würde.",
+    "howItWorks_3": "Nutzen Sie Ihren BMR als Ausgangspunkt zur Berechnung Ihres TDEE (Total Daily Energy Expenditure), indem Sie ihn mit Ihrem Aktivitätsfaktor multiplizieren. BMR × 1,2 für sitzende Tätigkeit; × 1,55 für mäßig aktiv; × 1,9 für sehr aktiv."
   }
 }

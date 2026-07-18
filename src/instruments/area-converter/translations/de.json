@@ -25,11 +25,11 @@
     "a5": "Ja, die Umrechnungsfaktoren basieren auf dem Internationalen Einheitensystem (SI) und internationalen Vereinbarungen. Beispielsweise ist 1 Fuß genau als 0,3048 Meter definiert, also ist 1 Quadratfuß = 0,09290304 Quadratmeter."
   },
   "content": {
-    "whatIs": "Der Flächenumrechner ist ein Werkzeug, das einen gegebenen Flächenwert von einer Einheit gleichzeitig in mehrere andere Einheiten umrechnet. Es verwendet standardisierte Umrechnungsfaktoren zwischen Einheiten wie Quadratmeter, Quadratfuß, Acres, Hektar, Quadratkilometer und Quadratmeilen.",
-    "formula": "Die Umrechnung basiert auf der Multiplikation des Eingabewerts mit dem entsprechenden Umrechnungsfaktor. Um beispielsweise von Quadratfuß in Quadratmeter umzurechnen, multiplizieren Sie mit 0,09290304. Das Werkzeug wendet den Faktor für die ausgewählte 'Von'-Einheit an, um in jede Zieleinheit umzurechnen.",
-    "example": "Wenn Sie 1000 eingeben und 'ft²' als Ausgangseinheit wählen, gibt der Umrechner aus: 92,90304 m², 1000 ft², 0,00009290304 km², 0,02295684 Acres und 0,009290304 Hektar.",
-    "howItWorks_1": "Geben Sie einen numerischen Wert in das Feld 'Wert' ein (muss nicht-negativ sein).",
-    "howItWorks_2": "Wählen Sie die Einheit des eingegebenen Werts aus dem Dropdown 'Von' (z. B. Quadratmeter, Acres).",
-    "howItWorks_3": "Die Ergebnisse zeigen sofort die entsprechende Fläche in Quadratmetern, Quadratfuß, Quadratkilometern, Acres und Hektar an."
+    "whatIs": "Ein Flächenkonverter übersetzt Messungen zweidimensionaler Oberflächen zwischen allen weltweit verwendeten Einheiten — metrischen, imperialen und traditionellen Einheiten. Er ist unverzichtbar für internationale Immobilientransaktionen, Bauprojekte und Landnutzungsberechnungen.",
+    "formula": "Metrische SI-Flächeneinheiten:\n1 km² = 1.000.000 m²\n1 m² = 10.000 cm² = 1.000.000 mm²\n1 Hektar = 10.000 m² (100m × 100m)\n\nImperiale/US-amerikanische Einheiten:\n1 Quadratmeile = 640 Acres = 2,590 km²\n1 Acre = 43.560 Quadratfuß = 4.047 m²\n1 Quadratyard = 9 Quadratfuß = 0,8361 m²\n1 Quadratfuß = 144 Quadratzoll = 0,0929 m²\n\nWichtige Umrechnungen:\n1 m² = 10,7639 sq ft\n1 sq ft = 0,0929 m²\n1 Acre = 0,4047 Hektar\n1 Hektar = 2,4711 Acres",
+    "example": "Beispiel 1 — Immobilien: Wohnung in Europa vs. USA\nEine 85 m² große Wohnung in Berlin.\n85 × 10,7639 = 914,9 sq ft\nEntspricht einer 915 sq ft Wohnung in New York.\n\nBeispiel 2 — Landwirtschaftliche Fläche:\nFarm mit 50 Hektar.\n50 × 2,4711 = 123,6 Acres\nIm imperialen System entspricht das 123,6 Acres.",
+    "howItWorks_1": "Geben Sie den numerischen Flächenwert in das Feld 'Wert' ein. Der Wert muss nicht negativ sein (Fläche kann nicht negativ sein). Dezimalwerte werden unterstützt.",
+    "howItWorks_2": "Wählen Sie die Ausgangseinheit im Dropdown 'Von'. Der Konverter unterstützt Quadratmeter, Quadratfuß, Quadratkilometer, Acres, Hektar, Quadratmeilen und weitere Einheiten.",
+    "howItWorks_3": "Ergebnisse erscheinen sofort in allen unterstützten Einheiten. Für Immobilienvergleiche konzentrieren Sie sich auf sq ft vs. m² für Innenräume und Acres vs. Hektar für Grundstücke."
   }
 }

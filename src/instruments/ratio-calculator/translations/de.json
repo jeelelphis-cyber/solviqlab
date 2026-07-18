@@ -25,11 +25,11 @@
     "a5": "Die Vereinfachung von Verhältnissen folgt dem mathematischen Prinzip der Division durch den größten gemeinsamen Teiler (ggT), einer standardmäßigen arithmetischen Methode. Es gibt keine spezifische Regulierungsbehörde für die Vereinfachung von Verhältnissen."
   },
   "content": {
-    "whatIs": "Der Verhältnis-Rechner vereinfacht Verhältnisse auf ihre niedrigsten Terme, löst nach einem fehlenden Wert in einer Proportion (a:b = c:d) und berechnet das Dezimaläquivalent eines Verhältnisses. Er verwendet das Konzept äquivalenter Verhältnisse und Kreuzmultiplikation.",
-    "formula": "Um ein Verhältnis a:b zu vereinfachen, teilen Sie beide Terme durch ihren größten gemeinsamen Teiler (ggT). Um d in a:b = c:d zu finden, verwenden Sie Kreuzmultiplikation: d = (b * c) / a. Die Dezimalzahl ist a / b.",
-    "example": "Für Eingaben a=8, b=12, c=6 vereinfacht der Rechner 8:12 zu 2:3, findet d = (12*6)/8 = 9 und zeigt Dezimalzahl 8/12 = 0,6667.",
-    "howItWorks_1": "Geben Sie die Werte für a und b ein (erforderlich). Optional können Sie einen Wert für c eingeben, um nach d in der Proportion a:b = c:d zu lösen.",
-    "howItWorks_2": "Klicken Sie auf Berechnen. Das Werkzeug berechnet den ggT von a und b, um das Verhältnis zu vereinfachen, führt Kreuzmultiplikation durch, falls c angegeben ist, und teilt a durch b für die Dezimalzahl.",
-    "howItWorks_3": "Die Ergebnisse zeigen das vereinfachte Verhältnis (Vereinfachtes A : Vereinfachtes B), den fehlenden Wert D (falls c eingegeben wurde) und die Dezimaldarstellung von a/b."
+    "whatIs": "Ein Verhältnisrechner kürzt ein Verhältnis A:B auf seine kleinsten Terme, löst einen fehlenden vierten Wert D in einer Proportion A:B = C:D mittels Kreuzrechnung und zeigt die Dezimaldarstellung an. Er wird in der Küche, Architektur, Finanzen, Fotografie und Wissenschaften verwendet.",
+    "formula": "Verhältniskürzung:\n  ggT(A, B) nach dem Euklidischen Algorithmus\n  Gekürzt: (A÷ggT) : (B÷ggT)\n\nProportionslösung (gegeben A, B, C, finde D):\n  A/B = C/D → D = (B × C) / A\n\nDezimaldarstellung:\n  A/B als Dezimalzahl = A ÷ B",
+    "example": "Beispiel 1 — Rezeptskalierung:\nOriginalverhältnis: 2 Tassen Mehl : 3 Tassen Zucker (für 4 Portionen)\nMöchte 6 Portionen: Skalierungsfaktor = 6/4 = 1,5\nNeues Mehl: 2×1,5 = 3 Tassen; Neuer Zucker: 3×1,5 = 4,5 Tassen\nGekürztes Verhältnis: 2:3 (unverändert — nur die Mengen ändern sich)\n\nBeispiel 2 — Kartenskalierung:\nKartenmaßstab: 1:50.000. 3 cm auf der Karte = ?\nD = (50.000 × 3) / 1 = 150.000 cm = 1,5 km in der Realität",
+    "howItWorks_1": "Geben Sie die zwei Werte Ihres Verhältnisses in die Felder A und B ein. Diese können beliebige positive Zahlen sein — ganze Zahlen, Dezimalzahlen oder große Mengen. Der Rechner findet automatisch den ggT und kürzt auf die einfachste Form.",
+    "howItWorks_2": "Um eine Proportion zu lösen (D in A:B = C:D zu finden), geben Sie den bekannten C-Wert in das optionale C-Feld ein. Der Rechner wendet die Kreuzrechnung an: D = (B × C) / A.",
+    "howItWorks_3": "Klicken Sie auf Berechnen. Die Ergebnisse zeigen das gekürzte A:B-Verhältnis in kleinsten Termen, den fehlenden Wert D (falls C angegeben wurde) und die Dezimaldarstellung des Verhältnisses."
   }
 }

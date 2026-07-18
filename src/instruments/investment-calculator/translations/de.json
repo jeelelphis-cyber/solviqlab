@@ -27,11 +27,11 @@
     "a5": "Das investierte Kapital ist einfach das Geld, das Sie tatsächlich eingezahlt haben: Anfangsinvestition plus alle monatlichen Einzahlungen. Der Gesamtertrag (Zinsen) ist das durch Zinseszins erzielte Wachstum — die Differenz zwischen Endwert und investiertem Kapital. Bei langen Laufzeiten und moderaten Zinssätzen übersteigt der Gesamtertrag aufgrund des exponentiellen Charakters des Zinseszinses typischerweise das investierte Kapital."
   },
   "content": {
-    "whatIs": "Dieser Investitionsrechner zeigt, wie Ihr Portfolio im Laufe der Zeit durch Zinseszins auf eine Anfangsinvestition plus regelmäßige monatliche Einzahlungen wächst. Er verwendet auch die 72er-Regel, um zu schätzen, wie lange es dauert, Ihr Geld bei der gegebenen Rendite zu verdoppeln.",
-    "formula": "r = annualReturn / 100 / 12 (monatlicher Zinssatz)\nn = years × 12 (Gesamtmonate)\nEndwert = initialAmount × (1+r)^n + monthlyContribution × ((1+r)^n − 1) / r\nInvestiertes Kapital = initialAmount + monthlyContribution × n\nGesamtertrag = Endwert − Investiertes Kapital\nVerdopplungszeit ≈ 72 / annualReturn",
-    "example": "10.000 $ Anfangsinvestition, 200 $/Monat, 7% jährliche Rendite, 20 Jahre: r = 0,5833%/Monat, n = 240 Monate. Endwert ≈ 144.959 $. Investiertes Kapital: 58.000 $. Gesamtertrag: 86.959 $. Verdopplungszeit bei 7%: ≈ 10,3 Jahre.",
-    "howItWorks_1": "Geben Sie Ihre Anfangsinvestition und optional den monatlichen Beitrag ein.",
-    "howItWorks_2": "Legen Sie die erwartete jährliche Rendite (Standard 7%) und die Anlagedauer in Jahren (Standard 10) fest.",
-    "howItWorks_3": "Klicken Sie auf Berechnen, um Ihren endgültigen Portfoliowert, den investierten Gesamtbetrag, den erzielten Gesamtertrag und die Verdopplungszeit Ihrer Investition gemäß der 72er-Regel zu sehen."
+    "whatIs": "Der Investitionsrechner projiziert den zukünftigen Wert eines Anlageportfolios mit Zinseszinswachstum auf einen Anfangsbetrag plus regelmäßige monatliche Beiträge. Er wird häufig für Altersvorsorgeplanung, Notfallrücklagen und langfristige Finanzziele verwendet.",
+    "formula": "Monatliche Rate: r = Jahresrendite ÷ 100 ÷ 12\nGesamtmonate:   n = Jahre × 12\n\nEndwert = [Anfangsbetrag × (1+r)^n]\n        + [monatlicher Beitrag × ((1+r)^n − 1) / r]\n\nGesamteinzahlungen = Anfangsbetrag + (monatlicher Beitrag × n)\nGesamtrenditen = Endwert − Gesamteinzahlungen\nVerdopplungszeit ≈ 72 / Jahresrendite (Regel der 72)",
+    "example": "Beispiel 1 — Indexfonds, 20 Jahre:\n10.000 € Erstanlage + 300 €/Monat bei 7% jährlicher Rendite.\nEndwert: ~191.000 €. Eingezahlt: 82.000 €. Rendite: 109.000 €.\n\nBeispiel 2 — Altersvorsorge, 30 Jahre:\n50.000 € Erstanlage + 500 €/Monat bei 8% Rendite.\nEndwert: ~770.000 €. Eingezahlt: 230.000 €. Rendite: 540.000 €.",
+    "howItWorks_1": "Geben Sie Ihren Anfangsinvestitionsbetrag (kann 0 € sein, wenn Sie neu beginnen) und optionale monatliche Beiträge ein. Legen Sie die erwartete jährliche Rendite fest — 7% für langfristige Aktienindizes als historische Referenz.",
+    "howItWorks_2": "Legen Sie den Anlagezeitraum in Jahren fest. Längere Zeiträume verstärken den Zinseszinseffekt drastisch — der Unterschied zwischen 20 und 30 Jahren ist oft größer als der Anfangsinvestitionsbetrag.",
+    "howItWorks_3": "Überprüfen Sie Endwert, Gesamteinzahlungen (tatsächlich eingezahltes Geld), Gesamtrenditen (Zinseszinsbeitrag) und Verdopplungszeit. Vergleichen Sie den Unterschied zwischen Gesamteinzahlungen und Endwert, um den Zinseszinseffekt zu visualisieren."
   }
 }

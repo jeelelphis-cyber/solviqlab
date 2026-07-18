@@ -45,11 +45,11 @@
     "a5": "Das erste Trimester umfasst die Schwangerschaftswochen 1–13 und beinhaltet die Embryonalperiode und die Organentwicklung. Das zweite Trimester umfasst die Wochen 14–27 und ist oft die angenehmste Phase, mit dem Organscreening um die 20. SSW. Das dritte Trimester reicht von Woche 28 bis zur Geburt (Woche 40 oder länger)."
   },
   "content": {
-    "whatIs": "Dieser Geburtsterminrechner schätzt das erwartete Geburtsdatum anhand von vier Methoden: letzte Periode (LMP), Empfängnisdatum, IVF-Embryotransfer an Tag 3 oder Blastozystentransfer an Tag 5. Er zeigt außerdem das aktuelle Gestationsalter, das Trimester, die Trimesterende-Daten und wichtige Schwangerschaftsmeilensteine.",
-    "formula": "Nach LMP: Geburtstermin = LMP + 280 Tage; Empfängnis = LMP + 14 Tage\nNach Empfängnis: Geburtstermin = Empfängnis + 266 Tage; LMP = Empfängnis − 14 Tage\nIVF Tag 3: Geburtstermin = Transfer + 263 Tage; LMP = Transfer − 17 Tage\nIVF Tag 5: Geburtstermin = Transfer + 261 Tage; LMP = Transfer − 19 Tage",
-    "example": "LMP 1. Januar 2025: Geburtstermin = 8. Oktober 2025 (280 Tage). Empfängnis = 15. Januar 2025.\n\nIVF-Blastozystentransfer am 15. Januar 2025: Geburtstermin = 3. Oktober 2025 (261 Tage).",
-    "howItWorks_1": "Wählen Sie die Berechnungsmethode: LMP (am häufigsten), Empfängnisdatum, IVF Tag 3 oder IVF Tag 5.",
-    "howItWorks_2": "Geben Sie das entsprechende Datum über die Datumsauswahl ein. Alle Ergebnisse werden relativ zum heutigen Datum berechnet.",
-    "howItWorks_3": "Klicken Sie auf Berechnen, um den geschätzten Geburtstermin, das Gestationsalter, das Trimester, die Trimesterende-Daten und wichtige Schwangerschaftsmeilensteine zu sehen."
+    "whatIs": "Ein Geburtsterminrechner schätzt das voraussichtliche Geburtsdatum Ihres Babys mithilfe einer von vier Methoden: letzter Menstruationsperiode (LMP), bekanntem Konzeptionsdatum, IVF-Tag 3 oder IVF-Tag 5. Er zeigt auch das aktuelle Schwangerschaftsalter, das Trimester und den vollständigen Schwangerschaftskalender.",
+    "formula": "Ab der letzten Menstruationsperiode (LMP):\n  Geburtstermin = LMP + 280 Tage (40 Wochen)\n  Geschätzte Konzeption = LMP + 14 Tage\n\nAb bekanntem Konzeptionsdatum:\n  Geburtstermin = Konzeptionsdatum + 266 Tage (38 Wochen)\n\nAb IVF (Tag 3):\n  Geburtstermin = Transferdatum + 263 Tage\n\nAb IVF (Tag 5 — Blastozyste):\n  Geburtstermin = Transferdatum + 261 Tage",
+    "example": "Beispiel 1 — LMP-Methode:\nLMP: 10. Januar 2025\nGeburtstermin: 17. Oktober 2025 (280 Tage später)\nGeschätzte Konzeption: 24. Januar 2025\nIn Woche 20 (23. Mai): Feinultraschall empfohlen\n\nBeispiel 2 — Blastozysten-Transfer (Tag 5):\nTransferdatum: 15. März 2025\nGeburtstermin: 31. Dezember 2025 (261 Tage später)",
+    "howItWorks_1": "Wählen Sie die Berechnungsmethode aus dem Dropdown. Letzte Menstruationsperiode (LMP) ist am häufigsten bei natürlicher Empfängnis — Sie benötigen das genaue Startdatum Ihrer letzten Periode.",
+    "howItWorks_2": "Geben Sie das relevante Datum über den Datumwähler ein. Bei der LMP-Methode geben Sie den ersten Tag Ihrer letzten Periode ein — nicht den letzten Tag oder einen mittleren Tag. Klicken Sie auf Berechnen.",
+    "howItWorks_3": "Überprüfen Sie Ihre vollständige Schwangerschaftszusammenfassung: Geburtstermin, aktuelles Schwangerschaftsalter in Wochen und Tagen, aktuelles Trimester, verbleibende Tage bis zum Termin und wichtige Meilensteine der Schwangerschaft."
   }
 }

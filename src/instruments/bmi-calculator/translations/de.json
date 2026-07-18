@@ -71,11 +71,11 @@
     "loading": "Berechne Ihren BMI..."
   },
   "content": {
-    "whatIs": "Der BMI-Rechner berechnet Ihren Body-Mass-Index (BMI) anhand Ihrer Größe und Ihres Gewichts. Der BMI ist ein einfaches Maß zur Schätzung des Körperfetts und hilft, den Gewichtsstatus gemäß den Standards der Weltgesundheitsorganisation (WHO) zu kategorisieren.",
-    "formula": "Der BMI wird berechnet als Gewicht in Kilogramm geteilt durch Körpergröße in Metern zum Quadrat: BMI = Gewicht_kg / (Größe_cm / 100)^2. Für imperiale Einheiten: BMI = (Gewicht_lb / (Größe_in)^2) × 703. Der Rechner berechnet auch BMI Prime (BMI/25) und den Ponderal-Index (Gewicht_kg / (Größe_m)^3).",
-    "example": "Für eine Person mit einer Größe von 170 cm und einem Gewicht von 70 kg: BMI = 70 / (1,70)^2 = 24,22 kg/m². Dies liegt in der Kategorie 'Normalgewicht' (18,5–24,9). Der gesunde Gewichtsbereich für diese Größe liegt zwischen 53,5 und 72,3 kg.",
-    "howItWorks_1": "Geben Sie Ihre Größe in Zentimetern (oder Fuß/Zoll bei imperialen Einheiten) und Ihr Gewicht in Kilogramm (oder Pfund) ein. Optional können Sie Alter und Geschlecht für eine Körperfettschätzung angeben.",
-    "howItWorks_2": "Klicken Sie auf 'BMI berechnen', um Ihren BMI, BMI Prime, Ponderal-Index und den gesunden Gewichtsbereich zu erhalten. Wenn Alter und Geschlecht angegeben wurden, wird auch ein geschätzter Körperfettanteil nach der Deurenberg-Formel berechnet.",
-    "howItWorks_3": "Ihr BMI-Wert wird mit den WHO-Kategorien verglichen: Untergewicht (<18,5), Normalgewicht (18,5–24,9), Übergewicht (25–29,9) und Adipositas (≥30). BMI Prime zeigt, wie nah Sie an der oberen Normalgrenze sind (1,0 = BMI 25). Der Ponderal-Index passt die Größe anders an."
+    "whatIs": "Der BMI-Rechner berechnet Ihren Body-Mass-Index (BMI) — ein weit verbreitetes Gesundheitsscreening-Tool, das im 19. Jahrhundert vom belgischen Mathematiker Adolphe Quetelet entwickelt wurde. Der BMI setzt Gewicht und Größe ins Verhältnis und gibt einen Hinweis auf ein gesundes Körpergewicht gemäß WHO-Richtlinien.",
+    "formula": "Metrisch:    BMI = Gewicht (kg) ÷ Größe (m)²\nImperial:  BMI = [Gewicht (lbs) ÷ Größe (Zoll)²] × 703\n\nBMI-Prime = BMI ÷ 25  (1,0 = obere Grenze des Normalgewichts)\n\nPonderal-Index = Gewicht (kg) ÷ Größe (m)³\n\nWHO-Kategorien:\n  < 18,5   → Untergewicht\n  18,5–24,9 → Normalgewicht\n  25,0–29,9 → Übergewicht\n  30,0–34,9 → Adipositas Grad I\n  35,0–39,9 → Adipositas Grad II\n  ≥ 40,0   → Adipositas Grad III",
+    "example": "Beispiel 1 — Normalgewicht:\n35-jährige Frau, 165 cm, 62 kg.\nBMI = 62 ÷ (1,65)² = 62 ÷ 2,7225 = 22,8 kg/m²\nKategorie: Normalgewicht\nBMI-Prime = 22,8 ÷ 25 = 0,91\n\nBeispiel 2 — Übergewicht:\n45-jähriger Mann, 178 cm, 95 kg.\nBMI = 95 ÷ (1,78)² = 95 ÷ 3,1684 = 30,0 kg/m²\nKategorie: Grenze zwischen Übergewicht und Adipositas I",
+    "howItWorks_1": "Geben Sie Ihre Körpergröße in Zentimetern (oder Fuß/Zoll im imperialen Modus) und Ihr Körpergewicht in Kilogramm (oder Pfund) ein. Optional können Sie Alter und Geschlecht für altersgruppenangepasste Kategorien hinzufügen.",
+    "howItWorks_2": "Klicken Sie auf BMI berechnen. Der Rechner berechnet sofort Ihren BMI, BMI-Prime, Ponderal-Index und den gesunden Gewichtsbereich für Ihre Körpergröße.",
+    "howItWorks_3": "Überprüfen Sie Ihr Ergebnis: BMI-Wert und WHO-Kategorie zeigen Ihre Position. Der BMI-Prime zeigt, wie weit Sie vom oberen Normalgewichtsbereich entfernt sind (1,0). Nutzen Sie den gesunden Gewichtsbereich für realistische Ziele."
   }
 }

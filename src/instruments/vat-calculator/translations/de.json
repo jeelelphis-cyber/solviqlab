@@ -26,11 +26,11 @@
   "opt_add": "MwSt. hinzufügen",
   "opt_remove": "MwSt. entfernen",
   "content": {
-    "whatIs": "Der MwSt.-Rechner fügt die Mehrwertsteuer (MwSt.) sofort zu jedem Preis hinzu oder entfernt sie. Er berechnet den Nettobetrag, den MwSt.-Betrag und den Bruttobetrag basierend auf dem eingegebenen Preis und MwSt.-Satz unter Verwendung der Standard-MwSt.-Formeln.",
-    "formula": "Beim Hinzufügen von MwSt.: Bruttobetrag = Nettobetrag × (1 + MwSt.-Satz/100) und MwSt.-Betrag = Bruttobetrag - Nettobetrag. Beim Entfernen von MwSt.: Nettobetrag = Bruttobetrag / (1 + MwSt.-Satz/100) und MwSt.-Betrag = Bruttobetrag - Nettobetrag. Der MwSt.-Satz wird als Prozentsatz angegeben.",
-    "example": "Für einen Nettopreis von 100 $ mit einem MwSt.-Satz von 20 % im Modus 'Hinzufügen': Bruttobetrag = 100 $ × (1 + 20/100) = 120 $, MwSt.-Betrag = 20 $. Für einen Bruttopreis von 120 $ im Modus 'Entfernen': Nettobetrag = 120 $ / (1 + 20/100) = 100 $, MwSt.-Betrag = 20 $.",
-    "howItWorks_1": "Geben Sie den Preisbetrag in das Feld 'Betrag' (in Dollar) und den MwSt.-Satz als Prozentsatz in das Feld 'MwSt.-Satz' ein. Wählen Sie den Modus: 'MwSt. hinzufügen', um den Bruttobetrag inklusive MwSt. zu berechnen, oder 'MwSt. entfernen', um den Nettobetrag aus einem Bruttopreis zu extrahieren.",
-    "howItWorks_2": "Klicken Sie auf die Schaltfläche 'Berechnen'. Der Rechner wendet die entsprechende Formel basierend auf dem ausgewählten Modus an und berechnet sofort den Nettobetrag, den MwSt.-Betrag und den Bruttobetrag.",
-    "howItWorks_3": "Überprüfen Sie die drei Ausgabefelder: Nettobetrag (Preis vor MwSt.), MwSt.-Betrag (der Steueranteil) und Bruttobetrag (Gesamtpreis inklusive MwSt.). Verwenden Sie diese Werte für Rechnungsstellung, Preisgestaltung oder Steuerberichterstattung."
+    "whatIs": "Ein Mehrwertsteuerrechner addiert oder entfernt Mehrwertsteuer (MwSt./USt.) von jedem Preis und berechnet sofort den Nettobetrag (ohne MwSt.), den MwSt.-Betrag und den Bruttobetrag (mit MwSt.). Er unterstützt beliebige Steuersätze und wird von Unternehmen und Verbrauchern weltweit genutzt.",
+    "formula": "MwSt. hinzufügen (netto → brutto):\n  MwSt.-Betrag = Netto × (Satz ÷ 100)\n  Brutto        = Netto × (1 + Satz ÷ 100)\n  Brutto        = Netto + MwSt.-Betrag\n\nMwSt. entfernen (brutto → netto):\n  Netto         = Brutto ÷ (1 + Satz ÷ 100)\n  MwSt.-Betrag  = Brutto − Netto\n  MwSt.-Betrag  = Brutto × (Satz ÷ (100 + Satz))",
+    "example": "Beispiel 1 — 19% MwSt. zu Dienstleistungsrechnung hinzufügen:\nNettopreis (mit Kunden vereinbart): 850 €\nMwSt.-Betrag: 850 € × 0,19 = 161,50 €\nBruttorechnungsbetrag: 850 € + 161,50 € = 1.011,50 €\n\nBeispiel 2 — 19% MwSt. aus ausgewiesenem Preis entfernen:\nBruttopreis mit MwSt.: 1.190 €\nNetto = 1.190 € ÷ 1,19 = 1.000 €\nMwSt. = 1.190 € − 1.000 € = 190 €",
+    "howItWorks_1": "Wählen Sie den Modus: 'MwSt. hinzufügen' wenn Sie den Nettopreis kennen und den Bruttobetrag berechnen möchten; 'MwSt. entfernen' wenn Sie einen Bruttopreis (MwSt. inklusive) haben und den Nettopreis vor Steuer wissen möchten.",
+    "howItWorks_2": "Geben Sie den auf Ihr Produkt, Ihre Dienstleistung und Ihren Standort anwendbaren MwSt.-Satz ein. Gängige Voreinstellungen: Deutschland 19% (Standard) und 7% (ermäßigt), EU-Standard 20–25% (je nach Land).",
+    "howItWorks_3": "Klicken Sie auf Berechnen. Die Ergebnisse zeigen alle drei Werte gleichzeitig: Nettobetrag (Preis ohne MwSt.), MwSt.-Betrag (die Steuerkomponente) und Bruttobetrag (Gesamtpreis inklusive MwSt.)."
   }
 }

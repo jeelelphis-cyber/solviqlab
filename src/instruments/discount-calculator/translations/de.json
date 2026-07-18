@@ -22,11 +22,11 @@
     "a5": "Rabattberechnungen basieren auf grundlegender Arithmetik und werden im Einzelhandel und Finanzwesen universell angewendet. Es gibt keine einzelne Aufsichtsbehörde, aber die Formel folgt den Standardprinzipien der Prozentrechnung, wie sie in der Mathematik gelehrt und von Unternehmen weltweit verwendet werden."
   },
   "content": {
-    "whatIs": "Dieser Rabattrechner berechnet den Verkaufspreis und die Gesamtersparnis, wenn ein prozentualer Rabatt auf einen ursprünglichen Preis angewendet wird. Er nutzt das einfache Konzept, einen Prozentsatz des ursprünglichen Preises abzuziehen, um die endgültigen Kosten zu ermitteln.",
-    "formula": "Der Rabattbetrag wird wie folgt berechnet: Rabattbetrag = Ursprünglicher Preis × (Rabattprozentsatz / 100). Der Endpreis ergibt sich dann aus: Endpreis = Ursprünglicher Preis - Rabattbetrag. Beispiel: Ein Rabatt von 20 % auf 100 $ ergibt einen Rabatt von 20 $ und einen Endpreis von 80 $.",
-    "example": "Angenommen, Sie haben einen Artikel mit einem ursprünglichen Preis von 250 $ und einem Rabatt von 15 %. Der Rabattbetrag beträgt 250 $ × 0,15 = 37,50 $, also beträgt der Endpreis 250 $ - 37,50 $ = 212,50 $. Sie sparen 37,50 $.",
-    "howItWorks_1": "Geben Sie den ursprünglichen Preis des Artikels in Dollar (z. B. 250) und den Rabattprozentsatz (z. B. 15) in die entsprechenden Felder ein.",
-    "howItWorks_2": "Klicken Sie auf die Schaltfläche Berechnen. Das Tool wendet sofort die Rabattformel an, um den Rabattbetrag und den Endpreis zu berechnen.",
-    "howItWorks_3": "Die Ergebnisse zeigen 'Sie sparen' (den Rabattbetrag in Dollar) und 'Endpreis' (den Betrag, den Sie nach dem Rabatt zahlen). Verwenden Sie diese, um Preise zu vergleichen oder Ihren Einkauf zu budgetieren."
+    "whatIs": "Ein Rabattrechner ermittelt den Endpreis nach Anwendung eines prozentualen Rabatts sowie den genauen gesparten Betrag. Geben Sie den Originalpreis und den Rabattprozentsatz ein, um sofort zu berechnen, wie viel Sie zahlen und wie viel Sie sparen.",
+    "formula": "Rabattbetrag = Originalpreis × (Rabattprozent ÷ 100)\nEndpreis = Originalpreis − Rabattbetrag\nEndpreis (alternativ) = Originalpreis × (1 − Rabatt/100)\nGespartes Prozent = (Rabattbetrag / Originalpreis) × 100",
+    "example": "Beispiel 1 — Standardrabatt im Einzelhandel:\nJacke für 150 € mit 30% Rabatt.\nRabattbetrag: 150 € × 0,30 = 45 €.\nEndpreis: 150 € − 45 € = 105 €. Sie sparen 45 €.\n\nBeispiel 2 — Aufeinander folgende Rabatte:\nComputer für 1.200 €, erst 20% Rabatt, dann 10% Gutschein.\nNach 20%: 960 €. Nach 10%: 864 €.\nGesamtersparnis: 336 € (28%, nicht 30%).",
+    "howItWorks_1": "Geben Sie den Originalpreis des Artikels ein (Preis vor jedem Rabatt — der Listenpreis oder UVP). Geben Sie den Rabattprozentsatz als ganze Zahl oder Dezimalzahl ein (z. B. 25 für 25%, 12,5 für 12,5%).",
+    "howItWorks_2": "Klicken Sie auf Berechnen. Der Rechner wendet die Rabattformel in zwei Schritten an: Zuerst berechnet er den Rabattbetrag, dann subtrahiert er ihn vom Originalpreis.",
+    "howItWorks_3": "Überprüfen Sie die Ergebnisse: 'Sie sparen' zeigt den durch den Rabatt entfernten Betrag. 'Endpreis' zeigt, was Sie tatsächlich zahlen werden. Um weitere Rabatte (z. B. Gutscheine) anzuwenden, rechnen Sie mit dem neuen Preis als Ausgangsbasis."
   }
 }

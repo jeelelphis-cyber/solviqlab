@@ -27,11 +27,11 @@
     "a5": "Dieser Rechner ist nicht zur Empfängnisverhütung bestimmt oder zuverlässig. Die Kalendermethode hat eine typische Versagensrate von etwa 24% pro Jahr. Für Verhütung konsultieren Sie einen Arzt. Dieses Tool eignet sich am besten, um Ihren Zyklus zu verstehen und die Chancen auf eine Empfängnis zu erhöhen, wenn Sie versuchen, schwanger zu werden."
   },
   "content": {
-    "whatIs": "Dieser Eisprungrechner sagt Ihren Eisprungtermin, Ihr Fruchtbarkeitsfenster und das Datum Ihrer nächsten Periode basierend auf Ihrer letzten Menstruation und durchschnittlichen Zykluslänge voraus. Er verwendet die Standard-Kalendermethode, die in der Geburtshilfe und Gynäkologie weit verbreitet ist.",
-    "formula": "Eisprungtag = Zykluslänge − 14\nEisprungdatum = Datum der letzten Periode + Eisprungtag\nBeginn des Fruchtbarkeitsfensters = Eisprungdatum − 5 Tage\nEnde des Fruchtbarkeitsfensters = Eisprungdatum + 1 Tag\nNächstes Periodendatum = Datum der letzten Periode + Zykluslänge",
-    "example": "Letzte Periode am 1. Januar, Zykluslänge 28 Tage: Eisprungtag = 28 − 14 = 14. Eisprungdatum = 15. Januar. Fruchtbarkeitsfenster: 10.–16. Januar. Nächste Periode: 29. Januar.",
-    "howItWorks_1": "Geben Sie das Datum des ersten Tages Ihrer letzten Menstruation ein.",
-    "howItWorks_2": "Geben Sie Ihre durchschnittliche Zykluslänge in Tagen ein (typischer Bereich 21–45, Standard 28).",
-    "howItWorks_3": "Klicken Sie auf Berechnen, um Ihr geschätztes Eisprungdatum, Fruchtbarkeitsfenster, nächstes Periodendatum und die Anzahl der Tage bis zum Eisprung ab heute zu sehen."
+    "whatIs": "Der Ovulationsrechner sagt Ihren Eisprungtermin, das fruchtbare Fenster und das nächste Periodendatum basierend auf dem ersten Tag Ihrer letzten Menstruation und der durchschnittlichen Zykluslänge voraus. Er ist das wichtigste Tool für Familienplanung und Empfängnisversuche.",
+    "formula": "Eisprung-Tag im Zyklus = Zykluslänge − 14\nEissprungdatum = Datum der letzten Periode + Eisprung-Tag\n\nFruchtbares Fenster:\n  Beginn = Eissprungdatum − 5 Tage  (Spermienüberleben)\n  Ende = Eissprungdatum + 1 Tag     (Eizellenüberleben)\n\nNächstes Periodendatum = Datum der letzten Periode + Zykluslänge",
+    "example": "Beispiel 1 — Standard-28-Tage-Zyklus:\nLetzte Periode: 1. Januar 2025\nEisprung-Tag: 28 − 14 = Tag 14 → 15. Januar 2025\nFruchtbares Fenster: 10.–16. Januar 2025\nNächste Periode: 29. Januar 2025\n\nBeispiel 2 — 32-Tage-Zyklus:\nLetzte Periode: 1. Februar\nEisprung: 32 − 14 = Tag 18 → 19. Februar\nFruchtbares Fenster: 14.–20. Februar",
+    "howItWorks_1": "Geben Sie das Datum des ersten Tages Ihrer letzten Menstruation ein — den ersten Tag des tatsächlichen Blutflusses, nicht Schmierblutungen. Dieses Datum ist der Ankerpunkt für alle Berechnungen.",
+    "howItWorks_2": "Geben Sie Ihre durchschnittliche Zykluslänge in Tagen ein. Ein Menstruationszyklus wird vom ersten Tag einer Periode bis zum Tag vor dem Beginn der nächsten Periode gezählt. Typische Zyklen dauern 21 bis 35 Tage; 28 Tage ist der Durchschnitt.",
+    "howItWorks_3": "Klicken Sie auf Berechnen, um Ihren geschätzten Eissprungtermin, das vollständige fruchtbare Fenster (Start- und Enddaten), das nächste erwartete Periodendatum und die verbleibenden Tage bis zu jedem Ereignis zu sehen."
   }
 }

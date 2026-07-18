@@ -25,11 +25,11 @@
     "a5": "Die Umrechnungsfaktoren basieren auf dem US-üblichen System, wie vom National Institute of Standards and Technology (NIST) definiert. Beispiel: 1 US-Gallone = 3,785411784 L genau, und 1 US-Tasse = 236,5882365 ml."
   },
   "content": {
-    "whatIs": "Der Volumenumrechner ist ein Werkzeug, das ein gegebenes Volumen von einer Einheit gleichzeitig in mehrere andere Einheiten umrechnet. Es verwendet Umrechnungsfaktoren zwischen Einheiten wie Liter, Gallonen, Tassen und Flüssigunzen, basierend auf dem metrischen und US-üblichen System.",
-    "formula": "Die Umrechnung verwendet die Basiseinheit Liter. Für jede Einheit wird ein Umrechnungsfaktor angewendet: 1 L = 1000 ml = 0,264172 gal = 4,22675 Tassen = 33,814 fl oz. Die Formel lautet: Ergebnis = Wert * (Umrechnungsfaktor von fromUnit zu L) * (Umrechnungsfaktor von L zu targetUnit).",
-    "example": "Beispiel: Umrechnung von 2 Gallonen in andere Einheiten: 2 gal × 3,78541 L/gal = 7,57082 L, dann 7,57082 L × 1000 = 7570,82 ml, × 4,22675 = 32 Tassen, × 33,814 = 256 fl oz.",
-    "howItWorks_1": "Geben Sie den numerischen Volumenwert in das Feld 'Wert' ein (z. B. 5).",
-    "howItWorks_2": "Wählen Sie die Einheit des eingegebenen Werts aus dem Dropdown 'Von' (z. B. 'gal' für Gallonen). Der Rechner wendet dann die Umrechnungsfaktoren an, um äquivalente Volumina in Litern, Millilitern, Gallonen, Tassen und Flüssigunzen zu berechnen.",
-    "howItWorks_3": "Die Ergebnisse werden in den Ausgabefeldern angezeigt: Liter, Milliliter, US-Gallonen, Tassen und Flüssigunzen. Jedes zeigt den umgerechneten Wert mit seiner Einheitenbezeichnung."
+    "whatIs": "Ein Volumenkonverter übersetzt zwischen der gesamten Bandbreite von Flüssigkeits- und Kapazitätsmaßeinheiten — von Millilitern und Teelöffeln, die in Küche und Medizin verwendet werden, bis zu Gallonen und Barrel in Handel und Industrie. Er unterstützt metrische, amerikanische und britische Einheiten.",
+    "formula": "Metrisch (SI) — exakt:\n1 m³ = 1.000 Liter (L) = 1.000.000 mL\n1 Liter = 1.000 mL = 1 dm³\n1 mL = 1 cm³\n\nUS-amerikanisch — exakt nach Definition:\n1 US-Gallon = 4 Quarts = 8 Pints = 128 fl oz = 3.785,41 mL\n1 US-Cup = 8 fl oz = 236,588 mL\n1 US-fl oz = 29,5735 mL\n\nBritisch (Imperial):\n1 Imp. Gallon = 4,54609 L (≠ US-Gallon)\n1 Imp. fl oz = 28,4131 mL",
+    "example": "Beispiel 1 — Rezeptumrechnung (US nach Europa):\nRezept: 2 Cups Milch + 1/4 Cup Butter + 1 TL Vanille\n2 Cups = 2 × 236,6 = 473,2 mL ≈ 475 mL\n1/4 Cup = 59,1 mL ≈ 60 mL\n1 TL = 4,93 mL ≈ 5 mL\n\nBeispiel 2 — Kraftstoff:\n50 Liter = 50 / 3,78541 = 13,2 Gallonen (US)",
+    "howItWorks_1": "Geben Sie den numerischen Volumenwert in das Feld 'Wert' ein. Der Wert muss nicht negativ sein. Dezimalwerte werden für präzise Umrechnungen akzeptiert (z. B. 1,75 Liter).",
+    "howItWorks_2": "Wählen Sie die Ausgangseinheit im Dropdown 'Von'. Der Konverter unterstützt Milliliter, Liter, US-Gallonen, US-Flüssigunzen, US-Cups, britische Gallonen, britische Flüssigunzen, Esslöffel, Teelöffel und Kubikmeter.",
+    "howItWorks_3": "Alle Umrechnungen werden gleichzeitig berechnet und sofort angezeigt. Beim Kochen: vergleichen Sie mL, Cups und Esslöffel. Für Kraftstoff: vergleichen Sie Liter und Gallonen. Für Medikamente: arbeiten Sie immer in mL oder cm³."
   }
 }

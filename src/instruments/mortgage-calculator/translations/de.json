@@ -27,11 +27,11 @@
   },
   "unit_years": "Jahre",
   "content": {
-    "whatIs": "Dieser Hypothekenrechner schätzt Ihre monatliche Zahlung, Gesamtzinsen und Gesamtkosten für eine Festhypothek. Er verwendet die Standard-Tilgungsformel, um gleiche monatliche Zahlungen über die Darlehenslaufzeit zu berechnen.",
-    "formula": "Die monatliche Zahlung M wird mit der Formel M = P * [r(1+r)^n] / [(1+r)^n - 1] berechnet, wobei P der Darlehensbetrag (Kaufpreis minus Anzahlung), r der monatliche Zinssatz (Jahreszins geteilt durch 12) und n die Gesamtzahl der monatlichen Zahlungen (Laufzeit in Jahren mal 12) ist. Die Gesamtzinsen sind die Summe aller Zinszahlungen über die Darlehenslaufzeit.",
-    "example": "Bei einem Haus für 300.000 $ mit einer Anzahlung von 20 % (60.000 $), einem jährlichen Zinssatz von 6 % und einer Laufzeit von 30 Jahren beträgt der Darlehensbetrag 240.000 $. Die monatliche Zahlung beträgt 1.438,92 $, die Gesamtzinsen 278.011,20 $ und die Gesamtkosten 518.011,20 $.",
-    "howItWorks_1": "Geben Sie den Kaufpreis, den Anzahlungsbetrag, den jährlichen Zinssatz ein und wählen Sie die Darlehenslaufzeit in Jahren aus dem Dropdown-Menü.",
-    "howItWorks_2": "Klicken Sie auf die Schaltfläche Berechnen. Der Rechner berechnet den Darlehensbetrag und wendet dann die Tilgungsformel an, um die monatliche Zahlung, die Gesamtzinsen und die Gesamtkosten zu ermitteln.",
-    "howItWorks_3": "Überprüfen Sie die Ergebnisse: Monatliche Zahlung ist Ihr fester monatlicher Betrag, Darlehensbetrag ist das geliehene Kapital, Gesamtzinsen sind die kumulierten Zinszahlungen und Gesamtkosten sind die Summe aus Kapital und Zinsen über die gesamte Laufzeit."
+    "whatIs": "Ein Hypothekenrechner hilft Ihnen, Ihre monatliche Rate, die Gesamtzinsen und die Gesamtkosten eines Immobilienkredits zu schätzen, bevor Sie einen Vertrag unterzeichnen. Er verwendet die Standard-Tilgungsformel der Finanzbranche für Festzinsberechnungen.",
+    "formula": "Monatliche Ratenformel (Standard-Tilgung):\nM = P × [r(1+r)^n] ÷ [(1+r)^n − 1]\n\nDabei gilt:\n  M = monatliche Rate\n  P = Kapital (Immobilienpreis − Anzahlung)\n  r = monatlicher Zinssatz = Jahreszins ÷ 12 ÷ 100\n  n = Gesamtzahl der Raten = Jahre × 12\n\nGesamtzinsen = (M × n) − P\nGesamtkosten = M × n",
+    "example": "Beispiel 1 — Erstkäufer, 30 Jahre:\nImmobilie 400.000 €, Anzahlung 10% (40.000 €), 4% Zinssatz, 30 Jahre.\nDarlehen: 360.000 €. Monatliche Rate: 1.719 €.\nGesamtzinsen: 259.000 €. Gesamtkosten: 659.000 €.\n\nBeispiel 2 — Kürzere Laufzeit spart enorm:\nGleiches Darlehen, 15 Jahre:\nMonatliche Rate: 2.664 €. Gesamtzinsen: 119.520 €.\nErsparnis vs. 30 Jahre: 139.480 € an Zinsen.",
+    "howItWorks_1": "Geben Sie den Immobilienpreis, den Anzahlungsbetrag, den jährlichen Zinssatz ein und wählen Sie die Kreditlaufzeit in Jahren. Der Darlehensbetrag (Kapital) wird automatisch als Immobilienpreis minus Anzahlung berechnet.",
+    "howItWorks_2": "Klicken Sie auf Berechnen. Die Tilgungsformel ermittelt sofort Ihre feste monatliche Rate, die Gesamtzinsen über die Kreditlaufzeit und die Gesamtkosten der Immobilie (Anzahlung + alle Raten).",
+    "howItWorks_3": "Überprüfen Sie Ihre Ergebnisse: Monatliche Rate ist der feste monatlich fällige Betrag. Gesamtzinsen zeigen die Gesamtkosten des Kredits über den Kapitalbetrag hinaus. Vergleichen Sie verschiedene Laufzeiten und Anzahlungen für das optimale Gleichgewicht."
   }
 }

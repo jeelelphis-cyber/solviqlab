@@ -28,11 +28,11 @@
   "opt_cone": "Kegel",
   "opt_rect_prism": "Quader",
   "content": {
-    "whatIs": "Dieser Volumenrechner berechnet das Volumen gängiger 3D-Formen: Würfel, Kugel, Zylinder, Kegel und Quader. Das Volumen misst den Raum, den ein Objekt einnimmt, und wird mit spezifischen geometrischen Formeln für jede Form berechnet.",
-    "formula": "Für einen Würfel: V = a³ (a = Seitenlänge). Kugel: V = (4/3)πr³ (r = Radius). Zylinder: V = πr²h (r = Radius, h = Höhe). Kegel: V = (1/3)πr²h. Quader: V = lwh (l = Länge, w = Breite, h = Höhe). Der Rechner verwendet diese Formeln basierend auf der ausgewählten Form.",
-    "example": "Für einen Zylinder mit Radius 5 Einheiten und Höhe 10 Einheiten beträgt das Volumen π × 5² × 10 = 250π ≈ 785,4 Einheiten³. Wählen Sie die Form 'Zylinder', geben Sie a=5, h=10 ein, und das Ergebnis zeigt 785,4 Einheiten³.",
-    "howItWorks_1": "Wählen Sie die Form aus dem Dropdown-Menü. Geben Sie dann die erforderlichen Maße ein: für Würfel die Seitenlänge 'a'; für Kugel den Radius 'a'; für Zylinder den Radius 'a' und die Höhe 'h'; für Kegel den Radius 'a' und die Höhe 'h'; für Quader die Länge 'a', Breite 'b' und Höhe 'h'.",
-    "howItWorks_2": "Klicken Sie auf die Schaltfläche Berechnen. Der Rechner wendet die entsprechende Volumenformel mit Ihren Eingaben an und berechnet das Ergebnis.",
-    "howItWorks_3": "Das Ergebnis zeigt das Volumen in Kubikeinheiten (Einheiten³). Verwenden Sie diesen Wert für Anwendungen wie das Befüllen eines Behälters, Materialschätzung oder technisches Design."
+    "whatIs": "Ein Volumenrechner bestimmt den dreidimensionalen Raum, der von einer geometrischen Form eingeschlossen wird — die Gesamtmenge des Materials, die benötigt wird, um ihn zu füllen, oder den Raum, den er einnimmt. Er unterstützt Würfel, Quader, Kugel, Zylinder, Kegel und Pyramide.",
+    "formula": "Würfel:\nV = a³ (a = Kantenlänge)\n\nQuader (Kasten):\nV = l × b × h (Länge × Breite × Höhe)\n\nKugel:\nV = (4/3) × π × r³ ≈ 4,18879 × r³\n\nZylinder:\nV = π × r² × h\n\nKegel:\nV = (1/3) × π × r² × h\n\nPyramide (rechteckige Basis):\nV = (1/3) × l × b × h",
+    "example": "Beispiel 1 — Schwimmbadvolumen:\nRechteckiges Becken: 12 m × 6 m × 1,5 m Tiefe\nV = 12 × 6 × 1,5 = 108 m³ = 108.000 Liter\nBei 85% Füllstand: 85% × 108.000 = 91.800 Liter\n\nBeispiel 2 — Kugelförmiger Tank:\nRadius = 2 m\nV = (4/3) × π × 8 = 33,51 m³ = 33.510 Liter",
+    "howItWorks_1": "Wählen Sie die Form des Objekts aus dem Dropdown. Verschiedene Formen erfordern verschiedene Maße: Würfel nur Kantenlänge; Quader Länge, Breite und Höhe; Kugel Radius; Zylinder und Kegel Radius und Höhe.",
+    "howItWorks_2": "Geben Sie die benötigten Maße in einheitlichen Einheiten ein. Wenn Ihre Maße in Zentimetern sind, ist das Ergebnis in Kubikzentimetern. Wenn in Metern, in Kubikmetern.",
+    "howItWorks_3": "Das Ergebnis zeigt das Volumen in der Kubikeinheit entsprechend Ihrer Eingabe. Für praktische Anwendungen konvertieren Sie in die relevante Kapazitätseinheit (Liter für Wasservolumen: 1 m³ = 1.000 Liter; 1 cm³ = 1 mL)."
   }
 }

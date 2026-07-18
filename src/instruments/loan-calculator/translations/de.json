@@ -24,11 +24,11 @@
     "a5": "Ja, die verwendete Formel ist die Standardtilgungsformel, die von Finanzinstituten und Aufsichtsbehörden wie dem Consumer Financial Protection Bureau (CFPB) anerkannt wird. Sie gewährleistet gleichbleibende monatliche Raten über die Darlehenslaufzeit."
   },
   "content": {
-    "whatIs": "Dieser Darlehensrechner berechnet Ihre monatliche Rate, Gesamtzahlung und Gesamtzinsen für ein Festzinsdarlehen unter Verwendung der Standardtilgungsformel. Er ist ideal für Privatkredite, Autokredite und andere Ratenkredite mit festem Zinssatz und fester Laufzeit.",
-    "formula": "Die monatliche Rate wird mit der Formel berechnet: M = P * [r(1+r)^n] / [(1+r)^n - 1], wobei M die monatliche Rate, P der Darlehensbetrag, r der monatliche Zinssatz (Jahreszins geteilt durch 12) und n die Anzahl der monatlichen Raten (Laufzeit in Monaten) ist. Gesamtzahlung = M * n, Gesamtzinsen = Gesamtzahlung - P.",
-    "example": "Bei einem Darlehen von 10.000 $ zu 5 % Jahreszins über 36 Monate: monatlicher Zinssatz = 0,05/12 ≈ 0,004167, n = 36. Monatliche Rate = 10000 * [0,004167*(1,004167)^36] / [(1,004167)^36 - 1] ≈ 299,71 $. Gesamtzahlung = 299,71 $ * 36 ≈ 10.789,56 $, Gesamtzinsen = 789,56 $.",
-    "howItWorks_1": "Geben Sie den Darlehensbetrag in Dollar, den jährlichen Zinssatz in Prozent und die Laufzeit in Monaten ein. Stellen Sie sicher, dass die Werte innerhalb der zulässigen Bereiche liegen.",
-    "howItWorks_2": "Klicken Sie auf die Schaltfläche Berechnen. Das Tool wendet die Tilgungsformel an, um Ihre monatliche Rate, Gesamtzahlung und Gesamtzinsen basierend auf den Eingaben zu berechnen.",
-    "howItWorks_3": "Überprüfen Sie die Ergebnisse: Die monatliche Rate ist das, was Sie jeden Monat zahlen; die Gesamtzahlung ist die Summe aller Zahlungen über die Laufzeit; die Gesamtzinsen sind die Kosten der Kreditaufnahme. Nutzen Sie diese, um Kreditangebote zu vergleichen oder Ihr Budget zu planen."
+    "whatIs": "Ein Kreditrechner berechnet Ihre monatliche Rate, die Gesamtzinsen und die Gesamtkosten für jeden Ratenkredit mit festem Zinssatz — einschließlich Privatkredite, Autokredite und andere Ratenkredite. Er verwendet die Standard-Tilgungsformel der Finanzbranche.",
+    "formula": "Standard-Tilgungsformel:\nM = P × [r(1+r)^n] ÷ [(1+r)^n − 1]\n\nDabei gilt:\n  M = monatliche Rate\n  P = Kapital (Darlehensbetrag)\n  r = monatlicher Zinssatz = Jahreszins ÷ 12 ÷ 100\n  n = Anzahl der Raten (Monate)\n\nGesamtzahlung = M × n\nGesamtzinsen = Gesamtzahlung − P",
+    "example": "Beispiel 1 — Privatkredit:\n10.000 € bei 9% p.a. über 36 Monate.\nr = 0,09/12 = 0,0075, n = 36\nM = 10.000 × [0,0075 × (1,0075)^36] / [(1,0075)^36 − 1] = 318 €/Monat\nGesamtzahlung = 11.448 €. Gesamtzinsen = 1.448 €.\n\nBeispiel 2 — Autokredit:\n20.000 € bei 6% p.a. über 60 Monate.\nM ≈ 387 €/Monat. Gesamtzinsen ≈ 3.194 €.",
+    "howItWorks_1": "Geben Sie den Kreditbetrag (Kapital), den jährlichen Zinssatz in Prozent und die Laufzeit in Monaten ein. Für einen 5-Jahres-Autokredit geben Sie 60 Monate ein; für einen 3-Jahres-Kredit 36 Monate.",
+    "howItWorks_2": "Klicken Sie auf Berechnen. Die Tilgungsformel berechnet sofort Ihre feste monatliche Rate, die Gesamtzahlung über die gesamte Laufzeit und die Gesamtzinsen.",
+    "howItWorks_3": "Vergleichen Sie Kreditangebote, indem Sie mehrere Szenarien durchrechnen: Passen Sie Zinssatz, Laufzeit oder Betrag an und beobachten Sie, wie sich jeder Faktor auf die Gesamtkosten auswirkt. Eine niedrigere Rate mit längerer Laufzeit führt oft zu viel höheren Gesamtzinsen."
   }
 }
