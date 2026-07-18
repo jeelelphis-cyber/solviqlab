@@ -3,7 +3,7 @@ import { NavBar } from '../../components/layout/NavBar'
 import { Footer } from '../../components/layout/Footer'
 import { getAllInstrumentsLocalized } from '../../lib/instruments'
 
-const SUPPORTED_LANGS = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl']
+const SUPPORTED_LANGS = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl', 'tr']
 
 export function generateStaticParams() {
   return SUPPORTED_LANGS.map(lang => ({ lang }))

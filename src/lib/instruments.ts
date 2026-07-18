@@ -29,7 +29,7 @@ interface ManifestRaw {
 
 const INSTRUMENTS_DIR = join(process.cwd(), 'src', 'instruments')
 
-export const SUPPORTED_LANGS = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl'] as const
+export const SUPPORTED_LANGS = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl', 'tr'] as const
 
 export const CATEGORIES = [
   { id: 'all', label: 'All', icon: '🔢' },

@@ -48,7 +48,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
     alternates: {
       canonical: `https://solviqlab.com/${lang}/category/${category}`,
       languages: Object.fromEntries(
-        ['en','uk','es','pt','fr','de','pl'].map(l => [l, `https://solviqlab.com/${l}/category/${category}`])
+        ['en','uk','es','pt','fr','de','pl','tr'].map(l => [l, `https://solviqlab.com/${l}/category/${category}`])
       ),
     },
     openGraph: {

@@ -14,6 +14,7 @@ export const LANGUAGES = [
   { code: 'fr', label: 'Français',   flag: '🇫🇷', native: 'FR' },
   { code: 'de', label: 'Deutsch',    flag: '🇩🇪', native: 'DE' },
   { code: 'pl', label: 'Polski',     flag: '🇵🇱', native: 'PL' },
+  { code: 'tr', label: 'Türkçe',    flag: '🇹🇷', native: 'TR' },
 ]
 
 // ── Theme Toggle ──────────────────────────────────────────────────────────────
