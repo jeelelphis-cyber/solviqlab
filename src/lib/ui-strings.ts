@@ -334,6 +334,7 @@ const strings = {
     apiDeveloper: 'Geliştiriciler için REST API. Bu aracı uygulamanıza entegre edin.',
     trustedSources: 'Güvenilir Kaynaklar ve Metodoloji',
     faqTitle: 'Sıkça Sorulan Sorular',
+  },
   it: {
     heroTitle1: 'Calcola Tutto.', heroTitle2: ' Istantaneamente.',
     heroSubtitle: (n: number) => `${n}+ calcolatori professionali gratuiti per salute, finanza, matematica e conversioni. Nessuna registrazione. Nessuna pubblicità. Solo risposte.`,
