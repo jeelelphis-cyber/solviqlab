@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'SolviqLab — Free Professional Calculators',
 }
 
-const SUPPORTED = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl', 'tr', 'it']
+const SUPPORTED = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl', 'tr', 'it', 'nl']
 
 export default function RootPage() {
   const acceptLanguage = headers().get('accept-language') ?? 'en'

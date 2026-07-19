@@ -38,7 +38,7 @@ import { TipCalculatorClient } from '../../../components/instruments/TipCalculat
 import { PregnancyCalculatorClient } from '../../../components/instruments/PregnancyCalculatorClient'
 import { DueDateCalculatorClient } from '../../../components/instruments/DueDateCalculatorClient'
 
-const SUPPORTED_LANGS = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl', 'tr', 'it']
+const SUPPORTED_LANGS = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl', 'tr', 'it', 'nl']
 
 export function generateStaticParams() {
   return getAllSlugs().flatMap(slug =>
