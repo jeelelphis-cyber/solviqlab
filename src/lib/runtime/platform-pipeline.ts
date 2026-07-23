@@ -34,7 +34,7 @@ export interface PlatformEngines {
 }
 
 // Assessment slugs that signal completion of an assessment (trigger Strategy + Planner)
-const ASSESSMENT_SLUGS = new Set(['weight-assessment', 'sleep-assessment'])
+import { ASSESSMENT_SLUGS } from '../domain/intent-state'
 
 export function createPlatformPipeline(engines: PlatformEngines): PipelineDefinition {
   const { userEngine, profileEngine, recommendationEngine, assessmentEngine } = engines
@@ -163,6 +163,12 @@ export function createPlatformPipeline(engines: PlatformEngines): PipelineDefini
           // Determine cluster from assessment slug
           const cluster = event.slug.replace('-assessment', '') as import('../assessment/types').IntentCluster
 
+          // H-3: Persist full AssessmentResult (metadata carries the object from AssessmentClient)
+          const assessmentResult = event.metadata as unknown as import('../assessment/types').AssessmentResult | null
+          if (assessmentResult?.overall_score !== undefined) {
+            userEngine.setAssessmentResult(cluster, assessmentResult)
+          }
+
           const decision = strategyEngine.evaluate({
             userId,
             cluster,
@@ -235,6 +241,95 @@ export function createPlatformPipeline(engines: PlatformEngines): PipelineDefini
             clusterId: cluster,
             changedFields: ['activePlan'],
             timestamp: Date.now(),
+          })
+        },
+      },
+
+      // ── P46: PlannerEngine.setGoal ──────────────────────────────────────────
+      // Fires when UI dispatches slug 'planner:goal_set' (replaces direct engine call).
+      // H-2: UI never imports PlannerEngine — it dispatches an event.
+      {
+        name:        'PlannerEngine.setGoal',
+        priority:    46,
+        description: 'Builds or rebuilds AdaptivePlan with the user-provided goal value.',
+        build: () => (event: ResultEvent, ctx: HandlerContext) => {
+          if (event.slug !== 'planner:goal_set') return
+
+          const userId = userEngine.getUserId()
+          if (!userId) return
+
+          const strategyDecision = userEngine.getStrategyDecision()
+          if (!strategyDecision) return
+
+          const user         = userEngine.getUser()!
+          const cluster      = strategyDecision.cluster
+          const goalValue    = (event.metadata.goalValue as number) ?? event.value ?? 0
+          const currentValue = extractCurrentMetric(user, cluster)
+
+          const plan = plannerEngine.build({
+            userId,
+            cluster,
+            assessmentId:  strategyDecision.assessment_id,
+            strategyId:    strategyDecision.selected_strategy_id,
+            strategyName:  strategyDecision.selected_strategy_name,
+            currentValue,
+            goalValue,
+            unit:          clusterUnit(cluster),
+            startedAt:     new Date().toISOString(),
+          })
+
+          userEngine.setActivePlan(plan)
+
+          ctx.emit({
+            type:          'platform:intent_state_updated',
+            eventId:       `${event.eventId}:goal_set`,
+            userId,
+            clusterId:     cluster,
+            changedFields: ['activePlan'],
+            timestamp:     Date.now(),
+          })
+        },
+      },
+
+      // ── P47: PlannerEngine.checkIn ──────────────────────────────────────────
+      // Fires when UI dispatches slug 'planner:check_in' (replaces direct engine call).
+      // H-2: UI never imports PlannerEngine — it dispatches an event.
+      {
+        name:        'PlannerEngine.checkIn',
+        priority:    47,
+        description: 'Adapts the active plan from a check-in. Replaces plan in UserEngine.',
+        build: () => (event: ResultEvent, ctx: HandlerContext) => {
+          if (event.slug !== 'planner:check_in') return
+
+          const userId = userEngine.getUserId()
+          if (!userId) return
+
+          const plan = userEngine.getActivePlan()
+          if (!plan) return
+
+          const meta = event.metadata as {
+            week: number
+            actual_value: number
+            subjective_score: number
+            notes: string | null
+          }
+
+          const { plan: adapted } = plannerEngine.adapt(plan, {
+            week:             meta.week,
+            actual_value:     meta.actual_value,
+            subjective_score: meta.subjective_score,
+            notes:            meta.notes,
+          })
+
+          userEngine.setActivePlan(adapted)
+
+          ctx.emit({
+            type:          'platform:intent_state_updated',
+            eventId:       `${event.eventId}:check_in`,
+            userId,
+            clusterId:     plan.cluster,
+            changedFields: ['activePlan'],
+            timestamp:     Date.now(),
           })
         },
       },

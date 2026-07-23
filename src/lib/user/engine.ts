@@ -404,6 +404,37 @@ export class UserEngine {
     return this.storage.get(this.ACTIVE_PLAN_KEY)
   }
 
+  // ── Assessment Result ─────────────────────────────────────────────────────
+  // Stored by EventBus P40 after assessment completion.
+  // Carries full AssessmentResult (score + insights + dimension_scores + narrative).
+  // AI Coach and StrategyEngine use this — not just event.value.
+
+  setAssessmentResult(clusterId: string, result: import('../assessment/types').AssessmentResult): void {
+    this.storage.set(`assessment_result_${clusterId}`, result)
+  }
+
+  getAssessmentResult(clusterId: string): import('../assessment/types').AssessmentResult | null {
+    return this.storage.get(`assessment_result_${clusterId}`)
+  }
+
+  // ── IntentState Aggregate Read Model ──────────────────────────────────────
+  // P-16: single read point for all consumers.
+  // UI calls this — never the individual get* methods.
+
+  getIntentState(clusterId: import('../assessment/types').IntentCluster): import('../domain/intent-state').IntentState | null {
+    const user = this.getUser()
+    if (!user) return null
+    const { buildIntentState } = require('../domain/intent-state') as typeof import('../domain/intent-state')
+    return buildIntentState(
+      clusterId,
+      user,
+      this.getAssessmentResult(clusterId),
+      this.getStrategyDecision(),
+      this.getActivePlan(),
+      this.getRecommendationDecision(),
+    )
+  }
+
   // ── Destroy ───────────────────────────────────────────────────────────────
 
   clearUser(): void {

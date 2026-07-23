@@ -1,8 +1,8 @@
-import type { IntentCluster } from '../assessment/types'
-import type { AssessmentResult } from '../assessment/types'
-import type { ResultRecord } from '../user/types'
+import type { IntentCluster, AssessmentResult } from '../assessment/types'
+import type { ResultRecord, SolviqUser } from '../user/types'
 import type { StrategyDecision } from './strategy-decision'
 import type { ActivePlan } from './active-plan'
+import type { RecommendationDecision } from '../recommendation/decision'
 
 // The phase a user is in for a given Intent Cluster
 export type IntentPhase =
@@ -72,3 +72,61 @@ export type IntentStateCommand =
   | SetStrategyCommand
   | SetPlanCommand
   | SetGoalCommand
+
+// ── Assessment slugs (canonical list for phase computation) ───────────────────
+export const ASSESSMENT_SLUGS = new Set([
+  'weight-assessment',
+  'sleep-assessment',
+  'finance-assessment',
+])
+
+// ── Phase computation ─────────────────────────────────────────────────────────
+// Derives the user's current intent phase from observable state.
+// Deterministic — no side effects.
+export function computePhase(
+  completedSlugs: readonly string[],
+  latestAssessment: AssessmentResult | null,
+  latestStrategy: StrategyDecision | null,
+  activePlan: ActivePlan | null,
+): IntentPhase {
+  if (activePlan?.status === 'completed') return 'habit'
+  if (activePlan && activePlan.check_ins.length > 0) return 'execution'
+  if (activePlan) return 'planning'
+  if (latestStrategy) return 'planning'
+  if (latestAssessment) return 'assessment'
+  if (completedSlugs.some(s => ASSESSMENT_SLUGS.has(s))) return 'assessment'
+  return 'discovery'
+}
+
+// ── Aggregate Read Model builder ──────────────────────────────────────────────
+// Assembles IntentState from scattered storage keys.
+// This is a pure projection — no storage writes.
+export function buildIntentState(
+  clusterId: IntentCluster,
+  user: SolviqUser,
+  latestAssessment: AssessmentResult | null,
+  latestStrategy: StrategyDecision | null,
+  activePlan: ActivePlan | null,
+  recommendationDecision: RecommendationDecision | null,
+): IntentState {
+  const currentPhase = computePhase(
+    user.completed_slugs,
+    latestAssessment,
+    latestStrategy,
+    activePlan,
+  )
+  return {
+    userId:               user.id,
+    clusterId,
+    createdAt:            user.created_at,
+    updatedAt:            user.last_active_at,
+    completedInstruments: user.result_history,
+    latestAssessment,
+    latestStrategy,
+    activePlan,
+    primaryGoal:          activePlan?.goal ?? null,
+    currentPhase,
+    lastActiveAt:         user.last_active_at,
+    recommendationDecision,
+  }
+}
