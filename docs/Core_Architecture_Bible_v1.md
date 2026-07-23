@@ -829,6 +829,44 @@ ADR создаётся ПЕРЕД кодом. Не после. Формат — 
 
 ---
 
+### P-13: One Product Rule (CEO Directive)
+
+> Добавление нового продукта затрагивает только папку его Capability/Cluster.  
+> Максимум допустимая стоимость: 1 новый файл (Manifest) + 1 строка экспорта в cluster/index.ts.  
+> Если нужно менять engine-файл — архитектура неуниверсальна. Спринт не принят.
+
+**KPI платформы.** Тест: добавить новый Planner, убедиться что ни один существующий engine-файл не изменился. Если изменился — Phase 3 не завершена.
+
+**Сигнал нарушения:** PR с новым продуктом касается файлов за пределами `capabilities/[cap]/[cluster]/`.
+
+---
+
+### P-14: Self Describing Products (CEO Directive)
+
+> Каждый продукт полностью описывает себя через Manifest.  
+> Движки не знают о конкретных продуктах — они читают Manifest.  
+> CapabilityCatalog строится из манифестов автоматически.
+
+Manifest определяет: что продукт умеет (`provides`), что требует (`requires`), какие события генерирует (`emits`), какие данные потребляет (`consumes`).
+
+```typescript
+// Каждый продукт:
+export default defineInstrument({
+  slug: 'bmi-calculator',
+  cluster: 'weight',
+  capability: 'health',
+  requires: { profile_confidence_min: 0 },
+  provides: { profile_signals: ['bmi', 'bmi_fitness_proxy'], journey_step: true },
+  emits: ['solviqlab:result'],
+  consumes: ['user_input'],
+  // ... остальные поля манифеста
+})
+```
+
+**Сигнал нарушения:** добавление продукта требует изменения хардкода в `INSTRUMENT_PROFILE_MAP`, `NEXT_STEP_DATA`, `CLUSTER_INSTRUMENTS` — это значит продукт не является self-describing.
+
+---
+
 # ЧАСТЬ V. ANTI-PATTERNS
 
 ---
@@ -943,6 +981,37 @@ ADR создаётся ПЕРЕД кодом. Не после. Формат — 
 ```
 
 **Почему запрещено:** Plan = будущее состояние. Profile = текущее состояние. Смешивание нарушает смысловую целостность ProfileEngine.
+
+---
+
+### AP-11: Instrument Without Manifest
+
+```
+❌ // новый калькулятор без defineInstrument()
+   export const MacroCalculatorClient = () => { ... }
+   // где-то в domains.ts: добавили INSTRUMENT_PROFILE_MAP entry вручную
+   // где-то в config.ts: добавили NEXT_STEP_DATA entry вручную
+```
+
+**Почему запрещено:** нарушает P-13 и P-14. Продукт обязан описывать себя через Manifest в своём кластере. CapabilityCatalog строится из манифестов автоматически. Если продукт не имеет манифеста — платформа его не видит.
+
+---
+
+### AP-12: Cluster as Top-Level Owner (вместо Capability)
+
+```
+❌ src/clusters/weight/  ← cluster владеет всем
+❌ src/clusters/sleep/
+❌ src/clusters/finance/
+```
+
+**Почему запрещено (в долгосрочной перспективе):** Longevity, Women's Health, Metabolic Health охватывают несколько кластеров одновременно. Если кластер — вершина дерева, нельзя выразить cross-cluster продукты без дублирования. Правильная вершина — Capability.
+
+```
+✅ src/capabilities/health/weight/
+✅ src/capabilities/health/sleep/
+✅ src/capabilities/finance/budget/
+```
 
 ---
 
@@ -1072,11 +1141,267 @@ ADR создаётся ПЕРЕД кодом. Не после. Формат — 
 
 ---
 
-# ЧАСТЬ VIII. GLOSSARY
+# ЧАСТЬ VIII. CAPABILITY LAYER И PLATFORM CATALOG
 
 ---
 
-## 19. Ключевые термины
+## 19. Capability Layer
+
+### Проблема Cluster-as-Top-Level
+
+Если Intent Cluster — вершина дерева, появляется проблема cross-cluster продуктов:
+
+- **Longevity** использует Weight + Sleep + Nutrition + Stress + Activity одновременно
+- **Women's Health** пересекается с Pregnancy + Nutrition + Mental Wellness
+- **Metabolic Health** = Weight + Nutrition + Activity + Sleep
+
+Если кластер — вершина, эти продукты невозможно разместить без дублирования.
+
+### Решение: Capability как верхний уровень
+
+```
+Capability (широкая область)
+  └── Cluster (конкретный Intent)
+        └── Products (инструменты кластера)
+```
+
+```
+capabilities/
+  health/                    ← Capability
+    weight/                  ← Cluster
+      instruments/
+        bmi-calculator.ts    ← Product Manifest
+        calorie-calculator.ts
+        weight-assessment.ts
+        weight-planner-balanced.ts
+      strategies/
+        balanced.ts
+        fast-track.ts
+      cluster.ts
+
+    sleep/
+      instruments/
+        sleep-calculator.ts
+        sleep-assessment.ts
+      cluster.ts
+
+    longevity/               ← Cross-cluster (uses weight + sleep + nutrition)
+      instruments/
+        longevity-assessment.ts
+      cluster.ts
+      cross_clusters: ['weight', 'sleep', 'nutrition']  ← новый тип связи
+
+  finance/
+    budget/
+    mortgage/
+    retirement/
+
+  education/
+    language/
+    career/
+```
+
+### Зачем это нужно сейчас?
+
+Не чтобы сразу строить Longevity. А чтобы **не закрыть эту возможность** неправильной структурой папок сегодня.
+
+Стоимость: переименовать `clusters/` в `capabilities/health/` + `capabilities/finance/`.  
+Ценность: через 2 года не нужен болезненный рефакторинг.
+
+---
+
+## 20. Product Manifest и CapabilityCatalog
+
+### Product Manifest — контракт
+
+Каждый продукт = один файл с `defineInstrument()`. Движки читают только Manifest.
+
+```typescript
+// capabilities/health/weight/instruments/bmi-calculator.ts
+
+export default defineInstrument({
+  // Идентификация
+  slug: 'bmi-calculator',
+  name: 'BMI Calculator',
+  type: 'calculator',
+  capability: 'health',
+  cluster: 'weight',
+  version: 1,
+
+  // Что требует перед запуском
+  requires: {
+    profile_confidence_min: 0,    // может запуститься без данных
+    assessment: null,             // не требует Assessment
+    strategy: false,              // не требует стратегии
+    plan: false,                  // не требует плана
+  },
+
+  // Что производит для платформы
+  provides: {
+    profile_signals: ['bmi', 'bmi_fitness_proxy'],  // обновляет эти домены
+    journey_step: true,                              // является шагом Journey
+    assessment_gate_contribution: ['weight'],        // открывает этот Assessment
+  },
+
+  // События, которые генерирует
+  emits: ['solviqlab:result'],
+
+  // Данные, которые потребляет
+  consumes: ['user_input'],
+
+  // Journey конфигурация (читается JourneyEngine)
+  journey: {
+    journey_id: 'weight-management',
+    position: 0,
+    next_slug: 'calorie-calculator',
+    reason: 'Your BMI reveals where you stand. Now discover your calorie needs.',
+    estimated_minutes: 2,
+    profile_contribution: 20,
+    benefits: [
+      'Know your exact daily calorie target',
+      'Personalize your nutrition plan',
+    ],
+  },
+
+  // Profile contribution (читается ProfileEngine)
+  profile_domains: [
+    {
+      domain: 'weight',
+      metric: 'bmi',
+      confidence_contribution: 30,
+      status_map: {
+        'Underweight': 'warning',
+        'Normal Weight': 'optimal',
+        'Overweight': 'warning',
+        'Obese': 'critical',
+      },
+    },
+    {
+      domain: 'fitness',
+      metric: 'bmi_fitness_proxy',
+      confidence_contribution: 15,
+    },
+  ],
+
+  // SEO
+  seo_indexed: true,
+  url_path: '/calculators/bmi-calculator',
+})
+```
+
+### Для Assessment:
+
+```typescript
+// capabilities/health/weight/instruments/weight-assessment.ts
+
+export default defineInstrument({
+  slug: 'weight-assessment',
+  name: 'Weight Assessment',
+  type: 'assessment',
+  capability: 'health',
+  cluster: 'weight',
+
+  requires: {
+    profile_confidence_min: 30,       // нужны данные
+    assessment: null,
+    strategy: false,
+  },
+
+  provides: {
+    profile_signals: ['weight_assessment_score'],
+    journey_step: true,
+    unlocks: ['weight-strategy'],     // разблокирует выбор стратегии
+  },
+
+  emits: ['solviqlab:result', 'assessment:completed'],
+  consumes: ['profile', 'intent_state'],
+
+  journey: {
+    journey_id: 'weight-management',
+    position: 5,
+    next_slug: 'weight-loss-planner',
+    reason: 'Your profile is built. Get your personalized Weight Assessment.',
+    estimated_minutes: 3,
+    profile_contribution: 30,
+    benefits: ['Personalized insights', 'Strategy recommendations'],
+  },
+
+  seo_indexed: false,
+  url_path: '/assessment/weight',
+})
+```
+
+### CapabilityCatalog
+
+`buildRegistry()` → `CapabilityCatalog` (новое название, более точное):
+
+```typescript
+// src/lib/catalog/index.ts
+
+import { healthCapability } from '@/capabilities/health'
+import { financeCapability } from '@/capabilities/finance'
+
+export const CapabilityCatalog = buildCatalog([
+  healthCapability,
+  financeCapability,
+])
+
+// API:
+CapabilityCatalog.getBySlug('bmi-calculator')
+CapabilityCatalog.getCluster('health', 'weight')
+CapabilityCatalog.getCapability('health')
+CapabilityCatalog.getJourneyInstruments('weight-management')
+CapabilityCatalog.getAssessmentGate('weight')     // что нужно для weight-assessment
+CapabilityCatalog.getProfileDomains('bmi-calculator')
+CapabilityCatalog.getCandidates(intentState)      // для RecommendationEngine
+```
+
+### Как движки перестают знать о конкретных продуктах
+
+```
+БЫЛО:
+ProfileEngine: читает INSTRUMENT_PROFILE_MAP (hardcoded в domains.ts)
+JourneyEngine: читает NEXT_STEP_DATA (hardcoded в config.ts)
+AssessmentEngine: читает CLUSTER_INSTRUMENTS (hardcoded в profile-reader.ts)
+
+СТАНЕТ:
+ProfileEngine: CapabilityCatalog.getProfileDomains(slug)
+JourneyEngine: CapabilityCatalog.getJourneyInstruments(journeyId)
+AssessmentEngine: CapabilityCatalog.getAssessmentGate(cluster)
+RecommendationEngine: CapabilityCatalog.getCandidates(intentState)
+```
+
+Движки — неизменны. Каталог — читает манифесты.
+
+---
+
+## 21. One Product Rule — Acceptance Test
+
+Это KPI платформы (P-13). Тест выполняется после V3-10C Phase 4.
+
+```
+Добавить: capabilities/health/weight/instruments/weight-planner-keto.ts
+
+Запустить:
+  git diff --name-only HEAD~1 HEAD
+
+Ожидаемый результат (список изменённых файлов):
+  capabilities/health/weight/instruments/weight-planner-keto.ts   ← новый манифест
+  capabilities/health/weight/index.ts                              ← 1 строка экспорта
+
+Недопустимый результат (спринт НЕ принят):
+  src/lib/profile/domains.ts          ← нарушение P-13
+  src/lib/journey/config.ts           ← нарушение P-13
+  src/lib/assessment/profile-reader.ts ← нарушение P-13
+```
+
+---
+
+# ЧАСТЬ IX. GLOSSARY
+
+---
+
+## 22. Ключевые термины
 
 **Intent** — намерение пользователя, выраженное в поисковом запросе или действии. Например: "lose weight", "sleep better", "save money".
 
@@ -1160,6 +1485,9 @@ ADR-006  Config-as-Data (нет функций в конфигурациях)
 ADR-007  Один активный план на Intent Cluster
 ADR-008  Converters изолированы от Profile (утилиты без медицинского смысла)
 ADR-009  medical-referral стратегия блокирует Planner creation (approved=false)
+ADR-010  Capability Layer над Cluster (не Cluster как вершина) — масштабируемость cross-cluster
+ADR-011  Product Manifest + CapabilityCatalog (не INSTRUMENT_REGISTRY hardcoded)
+ADR-012  buildRegistry() → CapabilityCatalog (название отражает бизнес-смысл, не техническую деталь)
 ```
 
 ---
