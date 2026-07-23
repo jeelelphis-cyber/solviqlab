@@ -6,10 +6,10 @@ import { getInstrument, getTranslations, getAllSlugs, SUPPORTED_LANGS, getAllIns
 import { getJourneyNextSteps, getJourneysForSlug, NAV_CATEGORIES } from '../../../../lib/navigation'
 import { t, tr } from '../../../../lib/ui-strings'
 import { InstrumentUI } from '../../../../components/instruments/InstrumentUI'
-import { NextStepCard, RewardBanner, StickyCTA, JourneyAnalyticsObserver } from '../../../../components/journey'
-import { UserJourneySection } from '../../../../components/user'
+import { JourneyExperience, StickyCTA, JourneyAnalyticsObserver } from '../../../../components/journey'
 import { getNextStep, getJourneyPosition } from '../../../../lib/journey/config'
 import { buildCTA } from '../../../../lib/journey/cta'
+import { getClusterForSlug } from '../../../../lib/catalog/slug-cluster'
 
 interface PageProps {
   params: { lang: string; slug: string }
@@ -342,11 +342,12 @@ export default function InstrumentPage({ params }: PageProps) {
           <InstrumentUI slug={slug} lang={lang} translations={translations} />
         </div>
 
-        {/* Journey Engine — V3 Experience Layer */}
-        <RewardBanner slug={slug} lang={lang} />
-        <NextStepCard slug={slug} lang={lang} />
-        {/* UserJourneySection: client-enhanced progress, real user state */}
-        <UserJourneySection slug={slug} lang={lang} />
+        {/* V4-1 First Journey Experience — reads live IntentState, animates in after result */}
+        <JourneyExperience
+          cluster={getClusterForSlug(slug)}
+          lang={lang}
+          currentSlug={slug}
+        />
 
         {/* Sticky CTA + Analytics (client components) */}
         {(() => {

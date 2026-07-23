@@ -1,3 +1,4 @@
+export { JourneyExperience }         from './JourneyExperience'
 export { NextStepCard }              from './NextStepCard'
 export { JourneyProgressCard }       from './JourneyProgressCard'
 export { UnlockCard }                from './UnlockCard'
