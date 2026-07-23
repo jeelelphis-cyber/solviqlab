@@ -200,6 +200,9 @@ export function createPlatformRuntime(options: PlatformRuntimeOptions = {}): Pla
 
       const result = recommendationEngine.recommend(recCtx, 'en')
 
+      // P-16: store in IntentState so all consumers read from here
+      userEngine.setNextRecommendation(result.primary)
+
       ctx.emit({
         type:      'platform:recommendation_updated',
         eventId:   `${event.eventId}:recommendation`,

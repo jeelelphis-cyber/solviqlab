@@ -59,9 +59,15 @@ export function UserJourneySection({ slug, lang }: Props) {
     const trigger = engine.checkRegistrationTrigger()
     setRegTrigger(trigger)
 
-    const ctx = buildContextFromEngine(engine, slug)
-    const result = getRecommendationEngine().recommend(ctx, lang)
-    setPrimaryRec(result.primary)
+    // P-16: read stored recommendation first (EventBus P60 already computed it)
+    const storedRec = engine.getNextRecommendation()
+    if (storedRec) {
+      setPrimaryRec(storedRec)
+    } else {
+      const ctx = buildContextFromEngine(engine, slug)
+      const result = getRecommendationEngine().recommend(ctx, lang)
+      setPrimaryRec(result.primary)
+    }
   }, [journey, slug, lang])
 
   useEffect(() => {

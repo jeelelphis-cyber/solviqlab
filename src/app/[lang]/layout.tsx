@@ -7,6 +7,7 @@ import { getAllInstrumentsLocalized } from '../../lib/instruments'
 import { PlatformProvider } from '../../components/platform/PlatformProvider'
 import { AssessmentUnlockedBanner } from '../../components/platform/AssessmentUnlockedBanner'
 import { PipelineEventLog } from '../../components/platform/PipelineEventLog'
+import { DevStateInspector } from '../../components/platform/DevStateInspector'
 
 const SUPPORTED_LANGS = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl', 'tr', 'it', 'nl']
 
@@ -38,6 +39,7 @@ export default function LangLayout({
         {/* Platform-level overlays — respond to EventBus platform events */}
         <AssessmentUnlockedBanner lang={params.lang} />
         <PipelineEventLog />
+        <DevStateInspector />
       </div>
     </PlatformProvider>
   )

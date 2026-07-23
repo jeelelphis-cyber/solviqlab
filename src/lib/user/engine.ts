@@ -357,6 +357,20 @@ export class UserEngine {
     return authUser
   }
 
+  // ── Next Recommendation (P-16: IntentState owns next action) ─────────────
+  // Stored by EventBus P60 after RecommendationEngine computes.
+  // All consumers read from here — no recomputation needed.
+
+  private readonly NEXT_REC_KEY = 'next_recommendation'
+
+  setNextRecommendation(rec: import('../recommendation/types').Recommendation): void {
+    this.storage.set(this.NEXT_REC_KEY, rec)
+  }
+
+  getNextRecommendation(): import('../recommendation/types').Recommendation | null {
+    return this.storage.get(this.NEXT_REC_KEY)
+  }
+
   // ── Destroy ───────────────────────────────────────────────────────────────
 
   clearUser(): void {

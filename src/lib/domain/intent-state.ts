@@ -35,6 +35,9 @@ export interface IntentState {
   readonly primaryGoal: string | null     // user-stated goal
   readonly currentPhase: IntentPhase
   readonly lastActiveAt: string           // ISO timestamp
+
+  // P-16: stored by EventBus P60 after RecommendationEngine computes
+  readonly nextRecommendation: import('../recommendation/types').Recommendation | null
 }
 
 // Commands — the only way to create a new IntentState (UserEngine applies these)
