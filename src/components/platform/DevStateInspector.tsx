@@ -58,15 +58,18 @@ export function DevStateInspector() {
 
   const refresh = useCallback(() => {
     const runtime = getBrowserRuntime()
-    const user = runtime.userEngine.getUser()
-    const userId = runtime.userEngine.getUserId()
+    // Use getIntentState() as single read point (P-16) for all intent-scoped data.
+    // Profile and journeyStates are cross-cluster diagnostics kept as direct reads here
+    // since DevStateInspector is a debugging tool that intentionally surfaces raw internals.
+    const intent  = runtime.userEngine.getIntentState('weight')
+    const user    = runtime.userEngine.getUser()
+    const userId  = runtime.userEngine.getUserId()
     const profile = userId ? runtime.profileEngine.getOrCreateProfile(userId) : null
-    const decision = runtime.userEngine.getRecommendationDecision()
 
     setState(prev => ({
       user,
       profile: profile as Record<string, unknown> | null,
-      decision,
+      decision: intent?.recommendationDecision ?? null,
       journeyStates: runtime.userEngine.getAllJourneyStates() as unknown[],
       eventCount: prev.eventCount,
     }))
