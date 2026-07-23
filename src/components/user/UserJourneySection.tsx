@@ -1,22 +1,22 @@
 'use client'
 
 // ─────────────────────────────────────────────────────────────────────────────
-// UserJourneySection — Live journey UI with real user state + recommendations
+// UserJourneySection — Live journey UI driven by platform events
 //
-// This client component:
-//   1. Gets/creates the anonymous user on mount
-//   2. Marks the current instrument as visited
-//   3. Listens for 'solviqlab:result' CustomEvents from calculators
-//   4. Stores results and updates journey state
-//   5. Computes the best next-step recommendation via RecommendationEngine
-//   6. Renders journey components with REAL progress data
-//   7. Shows RegistrationPrompt when trigger fires
+// V3-10E: Migrated to Event-Driven architecture (P-15).
+//
+// Old model: calculator → solviqlab:result → storeResult() (direct) → refresh
+// New model: calculator → solviqlab:result → EventBus → P10..P60 handlers
+//            → platform:intent_state_updated / platform:recommendation_updated
+//            → refreshState() (reads engines, re-renders)
+//
+// This component no longer calls storeResult() directly.
+// The EventBus (initialized by PlatformProvider) owns that responsibility.
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useEffect, useState, useCallback } from 'react'
-import { getEngine, RESULT_CAPTURE_EVENT } from '@/lib/user'
+import { getEngine } from '@/lib/user'
 import type { JourneyState, RegistrationTriggerResult } from '@/lib/user'
-import type { ResultCaptureDetail } from '@/lib/user/events'
 import { getJourneyForSlug } from '@/lib/journey/config'
 import { getRecommendationEngine, buildContextFromEngine } from '@/lib/recommendation'
 import type { Recommendation } from '@/lib/recommendation'
@@ -33,12 +33,18 @@ interface Props {
 
 type HydrationState = 'loading' | 'ready'
 
+// Platform events that signal a state change worth re-rendering for
+const REFRESH_EVENTS = [
+  'platform:intent_state_updated',
+  'platform:recommendation_updated',
+] as const
+
 export function UserJourneySection({ slug, lang }: Props) {
-  const [hydration, setHydration] = useState<HydrationState>('loading')
+  const [hydration, setHydration]     = useState<HydrationState>('loading')
   const [journeyState, setJourneyState] = useState<JourneyState | null>(null)
-  const [regTrigger, setRegTrigger] = useState<RegistrationTriggerResult | null>(null)
+  const [regTrigger, setRegTrigger]   = useState<RegistrationTriggerResult | null>(null)
   const [regDismissed, setRegDismissed] = useState(false)
-  const [primaryRec, setPrimaryRec] = useState<Recommendation | null>(null)
+  const [primaryRec, setPrimaryRec]   = useState<Recommendation | null>(null)
 
   const journey = getJourneyForSlug(slug)
 
@@ -46,13 +52,13 @@ export function UserJourneySection({ slug, lang }: Props) {
     const engine = getEngine()
     if (!engine) return
 
+    // Read updated state from engines (EventBus P10 already wrote to localStorage)
     const js = journey ? engine.getJourneyState(journey.id) : null
     setJourneyState(js)
 
     const trigger = engine.checkRegistrationTrigger()
     setRegTrigger(trigger)
 
-    // Compute recommendation
     const ctx = buildContextFromEngine(engine, slug)
     const result = getRecommendationEngine().recommend(ctx, lang)
     setPrimaryRec(result.primary)
@@ -70,18 +76,19 @@ export function UserJourneySection({ slug, lang }: Props) {
     refreshState()
     setHydration('ready')
 
-    const handleResult = (e: Event) => {
-      const detail = (e as CustomEvent<ResultCaptureDetail>).detail
-      if (!detail?.slug) return
-      engine.storeResult(detail)
-      refreshState()
-    }
+    // Listen to platform events (emitted by EventBus after full handler chain runs).
+    // P-15: this component does NOT call storeResult() — EventBus P10 owns that.
+    const handlePlatformEvent = () => refreshState()
 
-    window.addEventListener(RESULT_CAPTURE_EVENT, handleResult)
-    return () => window.removeEventListener(RESULT_CAPTURE_EVENT, handleResult)
+    const cleanups = REFRESH_EVENTS.map(eventType => {
+      window.addEventListener(eventType, handlePlatformEvent)
+      return () => window.removeEventListener(eventType, handlePlatformEvent)
+    })
+
+    return () => cleanups.forEach(fn => fn())
   }, [slug, refreshState])
 
-  // ── Skeleton (SSR + initial hydration) ────────────────────────────────────
+  // ── Skeleton ──────────────────────────────────────────────────────────────
   if (hydration === 'loading') {
     return (
       <div className="space-y-4 mt-4 animate-pulse">
@@ -99,12 +106,12 @@ export function UserJourneySection({ slug, lang }: Props) {
 
   return (
     <div className="space-y-4 mt-4">
-      {/* Primary Recommendation — the engine's best next step */}
+      {/* Primary Recommendation — updates automatically via platform:recommendation_updated */}
       {primaryRec && (
         <PrimaryRecommendationCard recommendation={primaryRec} lang={lang} />
       )}
 
-      {/* Journey progress + unlock/AI cards */}
+      {/* Journey progress */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <JourneyProgressCard slug={slug} lang={lang} liveState={journeyState} />
         <div className="flex flex-col gap-4">
@@ -113,7 +120,7 @@ export function UserJourneySection({ slug, lang }: Props) {
         </div>
       </div>
 
-      {/* Registration prompt — appears when trigger fires */}
+      {/* Registration prompt */}
       {regTrigger?.shouldSuggest && !regDismissed && (
         <RegistrationPrompt
           lang={lang}
