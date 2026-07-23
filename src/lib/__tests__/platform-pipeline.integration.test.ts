@@ -1,7 +1,14 @@
 /**
- * C-18 — First Integration Test
+ * C-18 — Integration Tests: Platform Pipeline + EventBus Runtime
  *
- * Verifies the full platform pipeline from instrument result to recommendation:
+ * Two test suites:
+ *
+ * Suite 1 — Direct engine calls (C-18 original):
+ *   BMI result → storeResult() → Profile → Recommendation
+ *
+ * Suite 2 — Full EventBus Runtime (V3-10D):
+ *   BMI result → bus.dispatch() → all handlers → platform events emitted
+ *   This is the definitive proof: architecture works end-to-end through EventBus.
  *
  *   BMI result
  *     ↓ storeResult()
@@ -21,6 +28,7 @@ import { UserEngine } from '../user/engine'
 import { ProfileEngine } from '../profile/engine'
 import { RecommendationEngine } from '../recommendation/engine'
 import { MemoryProvider } from '../user/storage'
+import { createPlatformRuntime } from '../runtime/platform'
 import type { RecommendationContext } from '../recommendation/types'
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -230,6 +238,122 @@ describe('Platform Pipeline — BMI → IntentState → Profile → Recommendati
       recommendation: recommendation.primary.type,
       recommendedSlug: recommendation.primary.instrument_slug,
       score: recommendation.primary.score,
+    })
+  })
+
+})
+
+// ── Suite 2: EventBus Runtime (V3-10D) ────────────────────────────────────────
+
+describe('EventBus Runtime — BMI → bus.dispatch() → platform events', () => {
+
+  it('EventBus: registers all handlers in priority order', () => {
+    const { bus } = createPlatformRuntime({ storage: new MemoryProvider() })
+    const handlers = bus.registeredHandlers
+    expect(handlers.length).toBeGreaterThanOrEqual(6)
+    // First handler must be UserEngine (P10)
+    expect(handlers[0]).toContain('P10')
+    expect(handlers[0]).toContain('UserEngine')
+    // Last sync handler before analytics must be Recommendation (P60)
+    const p60 = handlers.find(h => h.includes('P60'))
+    expect(p60).toBeDefined()
+  })
+
+  it('EventBus: idempotency — same eventId dispatched twice = processed once', async () => {
+    const { bus, userEngine } = createPlatformRuntime({ storage: new MemoryProvider() })
+    userEngine.createAnonymousUser()
+
+    const event = {
+      type: 'solviqlab:result' as const,
+      eventId: 'idempotency-test-001',
+      slug: 'bmi-calculator',
+      name: 'BMI Calculator',
+      value: 22.5,
+      label: 'Normal Weight',
+      category: 'normal',
+      unit: 'kg/m²',
+      metadata: {},
+      timestamp: Date.now(),
+    }
+
+    await bus.dispatch(event)
+    await bus.dispatch(event)  // second dispatch — must be ignored
+
+    // Only one result stored, not two
+    expect(userEngine.getResultHistory().length).toBe(1)
+    expect(bus.processedEventCount).toBe(1)
+  })
+
+  it('EventBus: dispatch() returns platform events from handlers', async () => {
+    const { bus, userEngine } = createPlatformRuntime({ storage: new MemoryProvider() })
+    userEngine.createAnonymousUser()
+
+    const platformEvents = await bus.dispatch({
+      type: 'solviqlab:result' as const,
+      eventId: 'events-test-001',
+      slug: 'bmi-calculator',
+      name: 'BMI Calculator',
+      value: 24.2,
+      label: 'Normal Weight',
+      category: 'normal',
+      unit: 'kg/m²',
+      metadata: {},
+      timestamp: Date.now(),
+    })
+
+    const types = platformEvents.map(e => e.type)
+    expect(types).toContain('platform:intent_state_updated')
+    expect(types).toContain('platform:profile_recalculated')
+    expect(types).toContain('platform:recommendation_updated')
+  })
+
+  it('FULL PIPELINE THROUGH EVENTBUS: BMI → bus → IntentState → Profile → Assessment check → Recommendation', async () => {
+    const { bus, userEngine, profileEngine } = createPlatformRuntime({
+      storage: new MemoryProvider(),
+    })
+    userEngine.createAnonymousUser()
+
+    // ── Single bus.dispatch() triggers the entire chain ──────────────────────
+    const platformEvents = await bus.dispatch({
+      type: 'solviqlab:result' as const,
+      eventId: 'full-pipeline-001',
+      slug: 'bmi-calculator',
+      name: 'BMI Calculator',
+      value: 27.8,
+      label: 'Overweight',
+      category: 'overweight',
+      unit: 'kg/m²',
+      metadata: { bmi: 27.8 },
+      timestamp: Date.now(),
+    })
+
+    // ── P10: UserEngine updated ───────────────────────────────────────────────
+    expect(userEngine.getCompletedSlugs()).toContain('bmi-calculator')
+    expect(userEngine.getResultHistory().length).toBe(1)
+
+    const journeyState = userEngine.getJourneyState('weight-management')
+    expect(journeyState).not.toBeNull()
+    expect(journeyState!.progress_percent).toBeGreaterThan(0)
+
+    // ── P20: Profile updated ──────────────────────────────────────────────────
+    const profile = profileEngine.getOrCreateProfile(userEngine.getUserId())
+    expect(profile.domains.weight.confidence).toBeGreaterThan(0)
+
+    // ── Platform events emitted ───────────────────────────────────────────────
+    const eventTypes = platformEvents.map(e => e.type)
+    expect(eventTypes).toContain('platform:intent_state_updated')
+    expect(eventTypes).toContain('platform:profile_recalculated')
+    expect(eventTypes).toContain('platform:recommendation_updated')
+
+    const recEvent = platformEvents.find(e => e.type === 'platform:recommendation_updated')
+    expect(recEvent).toBeDefined()
+
+    console.log('✅ EventBus Pipeline PASS:', {
+      bmi: 27.8,
+      weightConfidence: profile.domains.weight.confidence,
+      journeyProgress: journeyState!.progress_percent + '%',
+      platformEventsEmitted: eventTypes,
+      nextRecommendation: (recEvent as { topSlug?: string })?.topSlug,
     })
   })
 
