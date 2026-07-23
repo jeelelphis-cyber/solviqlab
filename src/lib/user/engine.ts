@@ -377,6 +377,33 @@ export class UserEngine {
     return null  // use getRecommendationDecision() instead
   }
 
+  // ── Strategy Decision ─────────────────────────────────────────────────────
+  // Stored by EventBus P40 (StrategyEngine) after assessment completion.
+
+  private readonly STRATEGY_KEY = 'strategy_decision'
+
+  setStrategyDecision(decision: import('../domain/strategy-decision').StrategyDecision): void {
+    this.storage.set(this.STRATEGY_KEY, decision)
+  }
+
+  getStrategyDecision(): import('../domain/strategy-decision').StrategyDecision | null {
+    return this.storage.get(this.STRATEGY_KEY)
+  }
+
+  // ── Active Plan ───────────────────────────────────────────────────────────
+  // Stored by EventBus P45 (PlannerEngine) after strategy is decided.
+  // Updated by PlannerEngine.adapt() on each check-in.
+
+  private readonly ACTIVE_PLAN_KEY = 'active_plan'
+
+  setActivePlan(plan: import('../domain/active-plan').ActivePlan): void {
+    this.storage.set(this.ACTIVE_PLAN_KEY, plan)
+  }
+
+  getActivePlan(): import('../domain/active-plan').ActivePlan | null {
+    return this.storage.get(this.ACTIVE_PLAN_KEY)
+  }
+
   // ── Destroy ───────────────────────────────────────────────────────────────
 
   clearUser(): void {

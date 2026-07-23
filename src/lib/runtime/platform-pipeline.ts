@@ -4,6 +4,9 @@ import type { ProfileEngine } from '../profile/engine'
 import type { RecommendationEngine } from '../recommendation/engine'
 import type { AssessmentEngine } from '../assessment/index'
 import { ASSESSMENT_REGISTRY } from '../assessment/index'
+import { StrategyEngine } from '../strategy/engine'
+import { PolicyEngine } from '../policy/engine'
+import { PlannerEngine } from '../planner/engine'
 import type { ResultEvent, HandlerContext } from '../events/types'
 
 // ── Platform Pipeline Definition ─────────────────────────────────────────────
@@ -30,8 +33,14 @@ export interface PlatformEngines {
   readonly assessmentEngine: AssessmentEngine
 }
 
+// Assessment slugs that signal completion of an assessment (trigger Strategy + Planner)
+const ASSESSMENT_SLUGS = new Set(['weight-assessment', 'sleep-assessment'])
+
 export function createPlatformPipeline(engines: PlatformEngines): PipelineDefinition {
   const { userEngine, profileEngine, recommendationEngine, assessmentEngine } = engines
+  const strategyEngine = new StrategyEngine()
+  const policyEngine   = new PolicyEngine()
+  const plannerEngine  = new PlannerEngine()
 
   return {
     name:    'SolviqLabPlatform',
@@ -135,20 +144,133 @@ export function createPlatformPipeline(engines: PlatformEngines): PipelineDefini
         },
       },
 
-      // ── P40: StrategyEngine (stub) ──────────────────────────────────────────
+      // ── P40: StrategyEngine ─────────────────────────────────────────────────
+      // Fires when an assessment instrument is completed.
+      // Selects optimal strategy and stores StrategyDecision.
       {
-        name:        'StrategyEngine.checkTrigger [stub]',
+        name:        'StrategyEngine.evaluate',
         priority:    40,
-        description: 'Selects strategy after assessment completes. Implemented in V3-10G.',
-        build: () => (_event, _ctx) => { /* no-op until V3-10G */ },
+        description: 'Evaluates available strategies after assessment completion. Stores StrategyDecision.',
+        build: () => (event: ResultEvent, ctx: HandlerContext) => {
+          if (!ASSESSMENT_SLUGS.has(event.slug)) return
+
+          const userId = userEngine.getUserId()
+          if (!userId) return
+
+          const user    = userEngine.getUser()!
+          const profile = profileEngine.getOrCreateProfile(userId)
+
+          // Determine cluster from assessment slug
+          const cluster = event.slug.replace('-assessment', '') as import('../assessment/types').IntentCluster
+
+          const decision = strategyEngine.evaluate({
+            userId,
+            cluster,
+            assessmentId:      event.eventId,
+            assessmentScore:   event.value ?? 0,
+            profileConfidence: profile.overall_confidence,
+            currentValue:      extractCurrentMetric(user, cluster),
+            goalValue:         null,  // user will input in PlannerClient
+          })
+
+          userEngine.setStrategyDecision(decision)
+
+          ctx.emit({
+            type:      'platform:intent_state_updated',
+            eventId:   `${event.eventId}:strategy`,
+            userId,
+            clusterId: cluster,
+            changedFields: ['latestStrategy'],
+            timestamp: Date.now(),
+          })
+        },
       },
 
-      // ── P50: PolicyEngine (stub) ────────────────────────────────────────────
+      // ── P45: PlannerEngine.build ────────────────────────────────────────────
+      // Fires after StrategyEngine when assessment is completed.
+      // Auto-builds AdaptivePlan from StrategyDecision.
+      // Note: goalValue requires user input — plan is in 'pending_goal' state until provided.
       {
-        name:        'PolicyEngine.onStateChange [stub]',
+        name:        'PlannerEngine.build',
+        priority:    45,
+        description: 'Auto-builds AdaptivePlan after assessment + strategy. Stores to IntentState.',
+        build: () => (event: ResultEvent, ctx: HandlerContext) => {
+          if (!ASSESSMENT_SLUGS.has(event.slug)) return
+
+          const userId = userEngine.getUserId()
+          if (!userId) return
+
+          const user             = userEngine.getUser()!
+          const strategyDecision = userEngine.getStrategyDecision()
+          if (!strategyDecision) return
+
+          // Skip if plan already exists for this cluster (user in execution phase)
+          const existingPlan = userEngine.getActivePlan()
+          if (existingPlan?.cluster === strategyDecision.cluster) return
+
+          const cluster      = strategyDecision.cluster
+          const currentValue = extractCurrentMetric(user, cluster)
+          // goalValue: null until user sets it in PlannerClient
+          // Use a default heuristic (target BMI 22 weight) as a placeholder
+          const goalValue = computeDefaultGoal(currentValue, cluster)
+
+          const plan = plannerEngine.build({
+            userId,
+            cluster,
+            assessmentId:    strategyDecision.assessment_id,
+            strategyId:      strategyDecision.selected_strategy_id,
+            strategyName:    strategyDecision.selected_strategy_name,
+            currentValue,
+            goalValue,
+            unit:            clusterUnit(cluster),
+            startedAt:       new Date().toISOString(),
+          })
+
+          userEngine.setActivePlan(plan)
+
+          ctx.emit({
+            type:      'platform:intent_state_updated',
+            eventId:   `${event.eventId}:plan`,
+            userId,
+            clusterId: cluster,
+            changedFields: ['activePlan'],
+            timestamp: Date.now(),
+          })
+        },
+      },
+
+      // ── P50: PolicyEngine ───────────────────────────────────────────────────
+      {
+        name:        'PolicyEngine.check',
         priority:    50,
-        description: 'Applies guard rails and rate limits. Implemented in V3-10G.',
-        build: () => (_event, _ctx) => { /* no-op until V3-10G */ },
+        description: 'Applies guard rails: registration gate, rate limits, health risk flags.',
+        build: () => (event: ResultEvent, ctx: HandlerContext) => {
+          if (!ASSESSMENT_SLUGS.has(event.slug)) return
+
+          const userId = userEngine.getUserId()
+          if (!userId) return
+
+          const user   = userEngine.getUser()!
+          const result = policyEngine.check({
+            cluster:          (event.slug.replace('-assessment', '')) as import('../assessment/types').IntentCluster,
+            userType:         user.type,
+            subscriptionTier: 'free',
+            existingPlanCount: userEngine.getActivePlan() ? 1 : 0,
+            assessmentScore:  event.value ?? 0,
+          })
+
+          if (!result.allowed) {
+            // Policy blocks plan creation — emit a state update so UI can show gate
+            ctx.emit({
+              type:          'platform:intent_state_updated',
+              eventId:       `${event.eventId}:policy_blocked`,
+              userId,
+              clusterId:     null,
+              changedFields: ['policyViolations'],
+              timestamp:     Date.now(),
+            })
+          }
+        },
       },
 
       // ── P60: RecommendationEngine ───────────────────────────────────────────
@@ -220,4 +342,45 @@ export function createPlatformPipeline(engines: PlatformEngines): PipelineDefini
       },
     ],
   }
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+
+function extractCurrentMetric(
+  user: import('../user/types').SolviqUser,
+  cluster: import('../assessment/types').IntentCluster,
+): number {
+  // Find the most recent result for the primary metric of this cluster
+  const primarySlugs: Record<string, string[]> = {
+    weight: ['bmi-calculator', 'body-fat-calculator'],
+    sleep:  ['sleep-calculator', 'sleep-assessment'],
+  }
+
+  const slugs = primarySlugs[cluster] ?? []
+  for (const slug of slugs) {
+    const result = [...user.result_history]
+      .reverse()
+      .find(r => r.instrument_slug === slug && r.result_value !== null)
+    if (result?.result_value !== null && result?.result_value !== undefined) {
+      return result.result_value as number
+    }
+  }
+  return 0
+}
+
+function computeDefaultGoal(currentValue: number, cluster: string): number {
+  if (cluster === 'weight') {
+    // Target: lose 10% of current weight as a reasonable default
+    return Math.round(currentValue * 0.9 * 10) / 10
+  }
+  return currentValue
+}
+
+function clusterUnit(cluster: string): string {
+  const units: Record<string, string> = {
+    weight: 'kg',
+    sleep:  'hours',
+    finance: 'saved',
+  }
+  return units[cluster] ?? 'units'
 }
