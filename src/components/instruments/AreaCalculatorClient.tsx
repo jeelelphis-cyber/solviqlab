@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { calculateAreaCalculator } from '../../instruments/area-calculator/lib/calculate.js'
 import type { AreaCalculatorOutput } from '../../instruments/area-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
@@ -18,6 +18,13 @@ export function AreaCalculatorClient({ translations }: Props) {
   const [h, setH] = useState('')
   const [result, setResult] = useState<AreaCalculatorOutput | null>(null)
   const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (!result) return
+    window.dispatchEvent(new CustomEvent('solviqlab:result', {
+      detail: { slug: 'area-calculator', name: 'Area Calculator', value: result.area, label: 'Area', unit: 'm²', metadata: result }
+    }))
+  }, [result])
 
   const needsB = ['rectangle', 'triangle', 'trapezoid', 'ellipse'].includes(shape)
   const needsH = shape === 'trapezoid'

@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { calculateInflationCalculator } from '../../instruments/inflation-calculator/lib/calculate.js'
 import type { InflationCalculatorOutput } from '../../instruments/inflation-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
@@ -108,6 +108,13 @@ export function InflationCalculatorClient({ translations, lang }: Props) {
   const [currency, setCurrency] = useCurrency(lang)
   const [copied, setCopied] = useState(false)
   const [sourcesOpen, setSourcesOpen] = useState(false)
+
+  useEffect(() => {
+    if (!result) return
+    window.dispatchEvent(new CustomEvent('solviqlab:result', {
+      detail: { slug: 'inflation-calculator', name: 'Inflation Calculator', value: result.adjustedAmount, label: 'Adjusted Amount', unit: 'USD', metadata: result }
+    }))
+  }, [result])
 
   function calculate() {
     try {

@@ -44,6 +44,13 @@ export function PercentageCalculatorClient({ translations, lang }: Props) {
     else setResult(null)
   }, [a, b, mode, direction, calculate])
 
+  useEffect(() => {
+    if (!result) return
+    window.dispatchEvent(new CustomEvent('solviqlab:result', {
+      detail: { slug: 'percentage-calculator', name: 'Percentage Calculator', value: result.result, label: 'Result', unit: '%', metadata: result }
+    }))
+  }, [result])
+
   const reset = () => { setA(''); setB(''); setResult(null) }
 
   const formatResult = (r: PercentageCalculatorOutput): string => {

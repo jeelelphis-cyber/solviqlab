@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { calculateSavings } from '../../instruments/savings-calculator/lib/calculate.js'
 import type { SavingsCalculatorOutput } from '../../instruments/savings-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
@@ -25,6 +25,13 @@ export function SavingsCalculatorClient({ translations, lang }: Props) {
   const [currency, setCurrency] = useCurrency(lang)
   const [copied, setCopied] = useState(false)
   const [showAllYears, setShowAllYears] = useState(false)
+
+  useEffect(() => {
+    if (!result) return
+    window.dispatchEvent(new CustomEvent('solviqlab:result', {
+      detail: { slug: 'savings-calculator', name: 'Savings Calculator', value: result.finalBalance, label: 'Savings Goal', unit: 'USD', metadata: result }
+    }))
+  }, [result])
 
   function calculate() {
     try {

@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { calculateOvulationCalculator } from '../../instruments/ovulation-calculator/lib/calculate.js'
 import type { OvulationCalculatorOutput } from '../../instruments/ovulation-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
@@ -67,6 +67,13 @@ export function OvulationCalculatorClient({ translations }: Props) {
   const [error, setError] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
   const [sourcesOpen, setSourcesOpen] = useState(false)
+
+  useEffect(() => {
+    if (!result) return
+    window.dispatchEvent(new CustomEvent('solviqlab:result', {
+      detail: { slug: 'ovulation-calculator', name: 'Ovulation Calculator', value: result.daysUntilOvulation, label: 'Ovulation', unit: 'days', metadata: result }
+    }))
+  }, [result])
 
   function calculate() {
     try {

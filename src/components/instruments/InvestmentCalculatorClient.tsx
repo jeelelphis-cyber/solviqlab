@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { calculateInvestmentCalculator } from '../../instruments/investment-calculator/lib/calculate.js'
 import type { InvestmentCalculatorOutput } from '../../instruments/investment-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
@@ -119,6 +119,13 @@ export function InvestmentCalculatorClient({ translations, lang }: Props) {
   const [currency, setCurrency] = useCurrency(lang)
   const [copied, setCopied] = useState(false)
   const [sourcesOpen, setSourcesOpen] = useState(false)
+
+  useEffect(() => {
+    if (!result) return
+    window.dispatchEvent(new CustomEvent('solviqlab:result', {
+      detail: { slug: 'investment-calculator', name: 'Investment Calculator', value: result.finalValue, label: 'Investment Return', unit: 'USD', metadata: result }
+    }))
+  }, [result])
 
   function calculate() {
     try {

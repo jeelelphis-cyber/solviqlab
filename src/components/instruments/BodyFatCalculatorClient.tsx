@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { calculateBodyFatCalculator } from '../../instruments/body-fat-calculator/lib/calculate.js'
 import type { BodyFatCalculatorOutput } from '../../instruments/body-fat-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
@@ -19,6 +19,13 @@ export function BodyFatCalculatorClient({ translations }: Props) {
   const [sex, setSex] = useState('male')
   const [result, setResult] = useState<BodyFatCalculatorOutput | null>(null)
   const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (!result) return
+    window.dispatchEvent(new CustomEvent('solviqlab:result', {
+      detail: { slug: 'body-fat-calculator', name: 'Body Fat Calculator', value: result.bodyFat, label: result.category, unit: '%', metadata: result }
+    }))
+  }, [result])
 
   function calculate() {
     try {

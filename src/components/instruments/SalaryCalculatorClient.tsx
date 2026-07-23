@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { calculateSalaryCalculator } from '../../instruments/salary-calculator/lib/calculate.js'
 import type { SalaryCalculatorOutput } from '../../instruments/salary-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
@@ -128,6 +128,13 @@ export function SalaryCalculatorClient({ translations, lang }: Props) {
   const [currency, setCurrency] = useCurrency(lang)
   const [copied, setCopied] = useState(false)
   const [sourcesOpen, setSourcesOpen] = useState(false)
+
+  useEffect(() => {
+    if (!result) return
+    window.dispatchEvent(new CustomEvent('solviqlab:result', {
+      detail: { slug: 'salary-calculator', name: 'Salary Calculator', value: result.annual, label: 'Annual Salary', unit: 'USD', metadata: result }
+    }))
+  }, [result])
 
   function calculate() {
     try {

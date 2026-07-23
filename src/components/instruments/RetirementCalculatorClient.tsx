@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { calculateRetirementCalculator } from '../../instruments/retirement-calculator/lib/calculate.js'
 import type { RetirementCalculatorOutput } from '../../instruments/retirement-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
@@ -122,6 +122,13 @@ export function RetirementCalculatorClient({ translations, lang }: Props) {
   const [currency, setCurrency] = useCurrency(lang)
   const [copied, setCopied] = useState(false)
   const [sourcesOpen, setSourcesOpen] = useState(false)
+
+  useEffect(() => {
+    if (!result) return
+    window.dispatchEvent(new CustomEvent('solviqlab:result', {
+      detail: { slug: 'retirement-calculator', name: 'Retirement Calculator', value: result.projectedSavings, label: 'Projected Savings', unit: 'USD', metadata: result }
+    }))
+  }, [result])
 
   function calculate() {
     try {

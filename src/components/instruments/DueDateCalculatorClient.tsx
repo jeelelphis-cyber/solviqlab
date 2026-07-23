@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { calculateDueDate } from '../../instruments/due-date-calculator/lib/calculate.js'
 import type { DueDateCalculatorOutput, DueDateMethod } from '../../instruments/due-date-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
@@ -64,6 +64,13 @@ export function DueDateCalculatorClient({ translations, lang: _lang }: Props) {
   const [error, setError] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
   const [showAllMilestones, setShowAllMilestones] = useState(false)
+
+  useEffect(() => {
+    if (!result) return
+    window.dispatchEvent(new CustomEvent('solviqlab:result', {
+      detail: { slug: 'due-date-calculator', name: 'Due Date Calculator', value: result.daysRemaining, label: `Trimester ${result.trimester}`, unit: 'days', metadata: result }
+    }))
+  }, [result])
 
   function calculate() {
     try {

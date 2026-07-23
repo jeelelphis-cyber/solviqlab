@@ -366,6 +366,17 @@ export function AssessmentClient({ cluster, lang }: { cluster: string; lang: str
       confidence: assessmentResult.confidence,
     })
 
+    window.dispatchEvent(new CustomEvent('solviqlab:result', {
+      detail: {
+        slug: `${config.cluster}-assessment`,
+        name: `${config.cluster.charAt(0).toUpperCase() + config.cluster.slice(1)} Assessment`,
+        value: assessmentResult.overall_score,
+        label: assessmentResult.confidence,
+        unit: 'score',
+        metadata: assessmentResult,
+      }
+    }))
+
     setResult(assessmentResult)
     setRunning(false)
   }, [cluster, lang])

@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { calculateTaxCalculator } from '../../instruments/tax-calculator/lib/calculate.js'
 import type { TaxCalculatorOutput } from '../../instruments/tax-calculator/lib/types.js'
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
@@ -132,6 +132,13 @@ export function TaxCalculatorClient({ translations, lang }: Props) {
   const [currency, setCurrency] = useCurrency(lang)
   const [copied, setCopied] = useState(false)
   const [sourcesOpen, setSourcesOpen] = useState(false)
+
+  useEffect(() => {
+    if (!result) return
+    window.dispatchEvent(new CustomEvent('solviqlab:result', {
+      detail: { slug: 'tax-calculator', name: 'Tax Calculator', value: result.takeHomePay, label: 'Take Home Pay', unit: 'USD', metadata: result }
+    }))
+  }, [result])
 
   function calculate() {
     try {

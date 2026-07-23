@@ -71,6 +71,7 @@ export const JOURNEY_DEFINITIONS: readonly JourneyDefinition[] = [
       { slug: 'tdee-calculator',             shortName: 'TDEE' },
       { slug: 'ideal-weight-calculator',     shortName: 'Goal' },
       { slug: 'body-fat-calculator',         shortName: 'Body Fat' },
+      { slug: 'weight-assessment',           shortName: 'Assessment' },
     ],
   },
   {
@@ -85,6 +86,7 @@ export const JOURNEY_DEFINITIONS: readonly JourneyDefinition[] = [
       { slug: 'sleep-calculator',    shortName: 'Sleep' },
       { slug: 'bmi-calculator',      shortName: 'BMI' },
       { slug: 'calorie-calculator',  shortName: 'Calories' },
+      { slug: 'sleep-assessment',    shortName: 'Assessment' },
     ],
   },
   {
@@ -390,6 +392,36 @@ const NEXT_STEP_DATA: Readonly<Record<string, NextStepData>> = {
     ],
     profileLabel: 'Family Profile',
     profileContribution: 30,
+  },
+
+  'weight-assessment': {
+    journeyId: 'weight-management',
+    nextSlug: 'weight-loss-planner',
+    nextName: 'Weight Loss Planner',
+    reason: 'Your Weight Assessment is complete. Build your personalized week-by-week plan based on your profile data.',
+    estimatedMinutes: 5,
+    benefits: [
+      'Week-by-week calorie and meal targets',
+      'Personalized milestone timeline',
+      'Adjustable plan based on your progress',
+    ],
+    profileLabel: 'Weight Profile',
+    profileContribution: 30,
+  },
+
+  'sleep-assessment': {
+    journeyId: 'sleep-wellness',
+    nextSlug: 'calorie-calculator',
+    nextName: 'Calorie Calculator',
+    reason: 'Your sleep profile is built. Now connect it to your nutrition — sleep quality and caloric balance are deeply linked.',
+    estimatedMinutes: 2,
+    benefits: [
+      'See the sleep-metabolism connection',
+      'Build a complete Wellness Profile',
+      'Get cross-domain health insights',
+    ],
+    profileLabel: 'Wellness Profile',
+    profileContribution: 40,
   },
 }
 

@@ -26,6 +26,13 @@ export function TipCalculatorClient({ translations, lang }: Props) {
   const [currency, setCurrency] = useCurrency(lang)
   const [copied, setCopied] = useState(false)
 
+  useEffect(() => {
+    if (!result) return
+    window.dispatchEvent(new CustomEvent('solviqlab:result', {
+      detail: { slug: 'tip-calculator', name: 'Tip Calculator', value: result.totalBill, label: 'Total Bill', unit: '', metadata: result }
+    }))
+  }, [result])
+
   // Auto-calculate on any input change
   useEffect(() => {
     const bill = parseFloat(billAmount)

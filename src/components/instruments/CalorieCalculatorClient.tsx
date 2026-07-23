@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { calculateCalories, convertLbToKg, convertFtInchesToCm } from '../../instruments/calorie-calculator/lib/calculate.js'
 import type { CalorieCalculatorOutput, ActivityLevel, Goal } from '../../instruments/calorie-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
@@ -82,6 +82,13 @@ export function CalorieCalculatorClient({ translations }: Props) {
   const [result, setResult] = useState<CalorieCalculatorOutput | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
+
+  useEffect(() => {
+    if (!result) return
+    window.dispatchEvent(new CustomEvent('solviqlab:result', {
+      detail: { slug: 'calorie-calculator', name: 'Calorie Calculator', value: result.maintenance, label: 'Maintenance Calories', unit: 'kcal/day', metadata: result }
+    }))
+  }, [result])
 
   function calculate() {
     try {

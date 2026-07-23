@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { calculatePregnancy } from '../../instruments/pregnancy-calculator/lib/calculate.js'
 import type { PregnancyCalculatorOutput, InputMethod } from '../../instruments/pregnancy-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
@@ -36,6 +36,13 @@ export function PregnancyCalculatorClient({ translations }: Props) {
   const [error, setError] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
   const [showAllMilestones, setShowAllMilestones] = useState(false)
+
+  useEffect(() => {
+    if (!result) return
+    window.dispatchEvent(new CustomEvent('solviqlab:result', {
+      detail: { slug: 'pregnancy-calculator', name: 'Pregnancy Calculator', value: result.weeksPregnant, label: result.trimesterLabel, unit: 'weeks', metadata: result }
+    }))
+  }, [result])
 
   function calculate() {
     try {

@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { calculateSleepCalculator } from '../../instruments/sleep-calculator/lib/calculate.js'
 import type { SleepCalculatorOutput } from '../../instruments/sleep-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
@@ -72,6 +72,13 @@ export function SleepCalculatorClient({ translations }: Props) {
   const [error, setError] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
   const [sourcesOpen, setSourcesOpen] = useState(false)
+
+  useEffect(() => {
+    if (!result) return
+    window.dispatchEvent(new CustomEvent('solviqlab:result', {
+      detail: { slug: 'sleep-calculator', name: 'Sleep Calculator', value: 0, label: result.recommendation, unit: '', metadata: result }
+    }))
+  }, [result])
 
   function calculate() {
     try {
