@@ -2,6 +2,8 @@
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useState, useEffect, useRef } from 'react'
+import { getEngine } from '@/lib/user'
+import type { SolviqUser } from '@/lib/user'
 import { getNavCategories } from '../../lib/navigation'
 import type { NavCategory } from '../../lib/navigation'
 
@@ -276,6 +278,108 @@ function MobileMenu({ lang, onClose, slugToName }: { lang: string; onClose: () =
   )
 }
 
+// ── User Menu ─────────────────────────────────────────────────────────────────
+
+function UserMenu({ lang }: { lang: string }) {
+  const [user, setUser]     = useState<SolviqUser | null>(null)
+  const [open, setOpen]     = useState(false)
+  const [ready, setReady]   = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const engine = getEngine()
+    if (!engine) { setReady(true); return }
+    const u = engine.getUser()
+    setUser(u)
+    setReady(true)
+  }, [])
+
+  useEffect(() => {
+    function handler(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [])
+
+  function handleSignOut() {
+    const engine = getEngine()
+    engine?.clearUser()
+    setUser(null)
+    setOpen(false)
+  }
+
+  if (!ready) return null
+
+  // Anonymous user — show "Sign In" shortcut
+  if (!user || user.type === 'anonymous') {
+    return (
+      <Link
+        href={`/${lang}/register`}
+        className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-600 dark:text-slate-300 hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+      >
+        <span>👤</span>
+        <span>Sign In</span>
+      </Link>
+    )
+  }
+
+  // Authenticated user — avatar + dropdown
+  const initial = ((user as { display_name?: string | null }).display_name?.[0] ?? user.email?.[0] ?? '?').toUpperCase()
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen(o => !o)}
+        aria-label="User menu"
+        className={`flex items-center justify-center w-9 h-9 rounded-full text-sm font-bold transition-colors ${
+          open
+            ? 'bg-blue-600 text-white'
+            : 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800'
+        }`}
+      >
+        {initial}
+      </button>
+
+      {open && (
+        <div className="absolute top-full right-0 mt-2 w-52 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-xl z-50 overflow-hidden py-1">
+          <div className="px-4 py-3 border-b border-slate-100 dark:border-slate-800">
+            <p className="text-xs font-semibold text-slate-900 dark:text-white truncate">
+              {(user as { display_name?: string | null }).display_name ?? 'My Account'}
+            </p>
+            <p className="text-xs text-slate-400 truncate">
+              {(user as { email?: string }).email ?? ''}
+            </p>
+          </div>
+
+          <Link
+            href={`/${lang}/dashboard`}
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-2.5 w-full px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+          >
+            <span>📊</span> Dashboard
+          </Link>
+          <Link
+            href={`/${lang}/calculators/bmi-calculator`}
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-2.5 w-full px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+          >
+            <span>🧮</span> Calculators
+          </Link>
+
+          <div className="border-t border-slate-100 dark:border-slate-800 my-1" />
+          <button
+            onClick={handleSignOut}
+            className="flex items-center gap-2.5 w-full px-4 py-2.5 text-sm text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+          >
+            <span>↩</span> Sign Out
+          </button>
+        </div>
+      )}
+    </div>
+  )
+}
+
 // ── NavBar ────────────────────────────────────────────────────────────────────
 export function NavBar({ lang, slugToName = {} }: { lang: string; slugToName?: Record<string, string> }) {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -304,6 +408,7 @@ export function NavBar({ lang, slugToName = {} }: { lang: string; slugToName?: R
 
           {/* Right controls */}
           <div className="flex items-center gap-2">
+            <UserMenu lang={lang} />
             <LanguageSwitcher lang={lang} {...(slug ? { slug } : {})} />
             <ThemeToggle />
             <button

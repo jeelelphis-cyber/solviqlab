@@ -36,7 +36,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
 
 const STATS = [
   { value: '36+', label: 'Free Calculators' },
-  { value: '7', label: 'Languages' },
+  { value: '10', label: 'Languages' },
   { value: '252+', label: 'Tool Pages' },
   { value: '100%', label: 'Free, No Sign-up' },
 ]
@@ -47,21 +47,21 @@ const STANDARDS = [
     title: 'World Health Organization',
     description:
       'Health calculators (BMI, BMR, body fat, ideal weight) follow WHO clinical guidelines and reference ranges.',
-    color: 'blue',
+    badgeColor: 'bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300',
   },
   {
     badge: 'CFPB',
     title: 'Consumer Financial Protection Bureau',
     description:
       'Financial calculators (mortgage, loan, compound interest) comply with CFPB disclosure standards.',
-    color: 'green',
+    badgeColor: 'bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300',
   },
   {
     badge: 'NIST',
     title: 'National Institute of Standards & Technology',
     description:
       'Unit converters use NIST and ISO measurement standards for maximum accuracy.',
-    color: 'purple',
+    badgeColor: 'bg-violet-100 dark:bg-violet-950 text-violet-700 dark:text-violet-300',
   },
 ]
 
@@ -80,13 +80,13 @@ export default function AboutPage({ params }: PageProps) {
 
       {/* Hero */}
       <section className="text-center space-y-4">
-        <div className="inline-flex items-center gap-2 bg-accent-primary/10 text-accent-primary text-sm font-semibold px-4 py-1.5 rounded-full">
+        <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 text-sm font-semibold px-4 py-1.5 rounded-full">
           <span>🧮</span> About SolviqLab
         </div>
-        <h1 className="text-4xl font-extrabold text-content-primary tracking-tight">
+        <h1 className="text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
           Solving Real Problems,<br />Completely Free
         </h1>
-        <p className="text-lg text-content-secondary max-w-xl mx-auto leading-relaxed">
+        <p className="text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto leading-relaxed">
           SolviqLab is a platform of free, professional-grade calculators built on
           WHO, CFPB, and NIST standards. No ads cluttering your results. No sign-up required.
           Just accurate answers.
@@ -98,23 +98,23 @@ export default function AboutPage({ params }: PageProps) {
         {STATS.map(stat => (
           <div
             key={stat.label}
-            className="bg-surface-card border border-border-default rounded-xl p-5 text-center"
+            className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-5 text-center"
           >
-            <div className="text-3xl font-extrabold text-accent-primary">{stat.value}</div>
-            <div className="text-sm text-content-secondary mt-1">{stat.label}</div>
+            <div className="text-3xl font-extrabold text-blue-600 dark:text-blue-400">{stat.value}</div>
+            <div className="text-sm text-slate-500 dark:text-slate-400 mt-1">{stat.label}</div>
           </div>
         ))}
       </section>
 
       {/* Mission */}
-      <section className="bg-surface-card border border-border-default rounded-2xl p-8 space-y-4">
-        <h2 className="text-2xl font-bold text-content-primary">Our Mission</h2>
-        <p className="text-content-secondary leading-relaxed">
+      <section className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-8 space-y-4">
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Our Mission</h2>
+        <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
           Every person deserves access to the same tools that professionals use — without
           paywalls, subscriptions, or confusing interfaces. We build calculators that give
           clear, accurate answers and explain the math behind them.
         </p>
-        <p className="text-content-secondary leading-relaxed">
+        <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
           Whether you&apos;re planning your retirement, tracking your health, converting units
           for a recipe, or splitting a restaurant bill — SolviqLab has the right tool,
           available instantly, in your language.
@@ -123,16 +123,16 @@ export default function AboutPage({ params }: PageProps) {
 
       {/* Standards */}
       <section className="space-y-5">
-        <h2 className="text-2xl font-bold text-content-primary">Built on Trusted Standards</h2>
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Built on Trusted Standards</h2>
         <div className="space-y-4">
           {STANDARDS.map(s => (
-            <div key={s.badge} className="flex gap-4 bg-surface-card border border-border-default rounded-xl p-5">
-              <div className="shrink-0 w-14 h-14 rounded-lg bg-accent-primary/10 flex items-center justify-center text-accent-primary font-extrabold text-sm">
+            <div key={s.badge} className="flex gap-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-5">
+              <div className={`shrink-0 w-14 h-14 rounded-lg flex items-center justify-center font-extrabold text-sm ${s.badgeColor}`}>
                 {s.badge}
               </div>
               <div>
-                <div className="font-semibold text-content-primary">{s.title}</div>
-                <div className="text-sm text-content-secondary mt-1">{s.description}</div>
+                <div className="font-semibold text-slate-900 dark:text-white">{s.title}</div>
+                <div className="text-sm text-slate-500 dark:text-slate-400 mt-1">{s.description}</div>
               </div>
             </div>
           ))}
@@ -141,13 +141,13 @@ export default function AboutPage({ params }: PageProps) {
 
       {/* Categories */}
       <section className="space-y-5">
-        <h2 className="text-2xl font-bold text-content-primary">What We Cover</h2>
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-white">What We Cover</h2>
         <div className="grid sm:grid-cols-2 gap-4">
           {CATEGORIES.map(cat => (
-            <div key={cat.name} className="bg-surface-card border border-border-default rounded-xl p-5">
+            <div key={cat.name} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-5">
               <div className="text-2xl mb-2">{cat.icon}</div>
-              <div className="font-semibold text-content-primary mb-1">{cat.name}</div>
-              <div className="text-sm text-content-secondary">{cat.description}</div>
+              <div className="font-semibold text-slate-900 dark:text-white mb-1">{cat.name}</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400">{cat.description}</div>
             </div>
           ))}
         </div>
@@ -155,30 +155,30 @@ export default function AboutPage({ params }: PageProps) {
 
       {/* Principles */}
       <section className="space-y-5">
-        <h2 className="text-2xl font-bold text-content-primary">Our Principles</h2>
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Our Principles</h2>
         <ul className="space-y-3">
           {[
             { icon: '🆓', text: 'Always free — no subscriptions, no paywalls, no hidden fees' },
             { icon: '🔒', text: 'No data collection — all calculations happen in your browser' },
-            { icon: '🌍', text: 'Available in 7 languages — English, Ukrainian, Spanish, Portuguese, French, German, Polish' },
+            { icon: '🌍', text: 'Available in 10 languages — English, Ukrainian, Spanish, Portuguese, French, German, Polish, Turkish, Italian, Dutch' },
             { icon: '📐', text: 'Formula transparency — every result shows the math behind it' },
             { icon: '⚡', text: 'Instant results — no loading spinners, no waiting' },
           ].map(item => (
-            <li key={item.icon} className="flex items-start gap-3 bg-surface-card border border-border-default rounded-xl p-4">
+            <li key={item.icon} className="flex items-start gap-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-4">
               <span className="text-xl shrink-0">{item.icon}</span>
-              <span className="text-content-secondary">{item.text}</span>
+              <span className="text-slate-600 dark:text-slate-300">{item.text}</span>
             </li>
           ))}
         </ul>
       </section>
 
       {/* CTA */}
-      <section className="text-center space-y-4 bg-accent-primary/5 border border-accent-primary/20 rounded-2xl p-10">
-        <h2 className="text-2xl font-bold text-content-primary">Ready to calculate?</h2>
-        <p className="text-content-secondary">Browse 36+ free tools across health, finance, math, and conversions.</p>
+      <section className="text-center space-y-4 bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-2xl p-10">
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Ready to calculate?</h2>
+        <p className="text-slate-600 dark:text-slate-300">Browse 36+ free tools across health, finance, math, and conversions.</p>
         <Link
           href={`/${lang}`}
-          className="inline-block bg-accent-primary hover:bg-accent-primary-hover text-white font-semibold px-8 py-3 rounded-xl transition-colors"
+          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
         >
           Browse All Calculators
         </Link>

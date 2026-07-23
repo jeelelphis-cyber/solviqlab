@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { getNavCategories } from '../../lib/navigation'
 import { getAllInstrumentsLocalized } from '../../lib/instruments'
 import { t } from '../../lib/ui-strings'
+import { CookieSettingsButton } from '../consent/CookieSettingsButton'
 
 export function Footer({ lang }: { lang: string }) {
   const year = new Date().getFullYear()
@@ -67,9 +68,12 @@ export function Footer({ lang }: { lang: string }) {
           <p className="text-xs text-slate-500">
             {s.footerCopyright(year)}
           </p>
-          <p className="text-xs text-slate-500">
-            {s.footerSources}
-          </p>
+          <div className="flex items-center gap-4">
+            <p className="text-xs text-slate-500">
+              {s.footerSources}
+            </p>
+            <CookieSettingsButton lang={lang} />
+          </div>
         </div>
       </div>
     </footer>

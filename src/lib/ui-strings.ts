@@ -437,3 +437,29 @@ export function tr(translations: Record<string, unknown>, path: string, fallback
   }
   return typeof cur === 'string' ? cur : fallback
 }
+
+// ── Registration Prompt strings ───────────────────────────────────────────────
+
+export interface RegistrationPromptStrings {
+  title: string
+  cta: string
+  sub: string
+  dismiss: string
+}
+
+const REGISTRATION_PROMPT_STRINGS: Record<string, RegistrationPromptStrings> = {
+  en: { title: 'Save Your Progress',           cta: 'Create Free Account',          sub: 'No credit card · Takes 10 seconds', dismiss: 'Not now'        },
+  uk: { title: 'Зберегти прогрес',             cta: 'Створити безкоштовний акаунт', sub: 'Без картки · 10 секунд',           dismiss: 'Пізніше'        },
+  es: { title: 'Guardar tu progreso',           cta: 'Crear cuenta gratis',           sub: 'Sin tarjeta · 10 segundos',        dismiss: 'Ahora no'       },
+  pt: { title: 'Salvar seu progresso',          cta: 'Criar conta grátis',            sub: 'Sem cartão · 10 segundos',         dismiss: 'Agora não'      },
+  fr: { title: 'Sauvegarder votre progression', cta: 'Créer un compte gratuit',       sub: 'Sans carte · 10 secondes',         dismiss: 'Pas maintenant' },
+  de: { title: 'Fortschritt speichern',         cta: 'Kostenloses Konto erstellen',   sub: 'Keine Karte · 10 Sekunden',        dismiss: 'Jetzt nicht'    },
+  pl: { title: 'Zapisz postęp',                 cta: 'Utwórz darmowe konto',          sub: 'Bez karty · 10 sekund',            dismiss: 'Nie teraz'      },
+  tr: { title: 'İlerlemeyi Kaydet',             cta: 'Ücretsiz Hesap Oluştur',        sub: 'Kart yok · 10 saniye',             dismiss: 'Şimdi değil'    },
+  it: { title: 'Salva i tuoi progressi',        cta: 'Crea un account gratuito',      sub: 'Senza carta · 10 secondi',         dismiss: 'Non ora'        },
+  nl: { title: 'Bewaar je voortgang',           cta: 'Maak gratis account',           sub: 'Geen kaart · 10 seconden',         dismiss: 'Niet nu'        },
+}
+
+export function getRegistrationPromptStrings(lang: string): RegistrationPromptStrings {
+  return REGISTRATION_PROMPT_STRINGS[lang] ?? REGISTRATION_PROMPT_STRINGS['en']!
+}

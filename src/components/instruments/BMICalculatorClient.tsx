@@ -307,6 +307,7 @@ export function BMICalculatorClient({ translations, lang }: Props) {
     const output = calculateBMI(input)
     setResult(output)
     track('result_shown', { slug: 'bmi-calculator', category: 'health', result_bucket: getBMIBucket(output.bmi) })
+    window.dispatchEvent(new CustomEvent('solviqlab:result', { detail: { slug: 'bmi-calculator', name: 'BMI Calculator', value: output.bmi, label: output.category, category: output.category, unit: 'kg/m²', metadata: output } }))
     setTimeout(() => resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 60)
   }, [validate, lang])
 

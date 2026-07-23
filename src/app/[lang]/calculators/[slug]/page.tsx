@@ -5,41 +5,11 @@ import { EmbedSection } from '../../../../components/EmbedSection'
 import { getInstrument, getTranslations, getAllSlugs, SUPPORTED_LANGS, getAllInstrumentsLocalized, getProductSegment, getInstrumentPath, getInstrumentCanonical, BASE_URL } from '../../../../lib/instruments'
 import { getJourneyNextSteps, getJourneysForSlug, NAV_CATEGORIES } from '../../../../lib/navigation'
 import { t, tr } from '../../../../lib/ui-strings'
-import { BMICalculatorClient } from '../../../../components/instruments/BMICalculatorClient'
-import { PercentageCalculatorClient } from '../../../../components/instruments/PercentageCalculatorClient'
-import { BmrCalculatorClient } from '../../../../components/instruments/BmrCalculatorClient'
-import { IdealWeightCalculatorClient } from '../../../../components/instruments/IdealWeightCalculatorClient'
-import { TdeeCalculatorClient } from '../../../../components/instruments/TdeeCalculatorClient'
-import { BodyFatCalculatorClient } from '../../../../components/instruments/BodyFatCalculatorClient'
-import { LoanCalculatorClient } from '../../../../components/instruments/LoanCalculatorClient'
-import { MortgageCalculatorClient } from '../../../../components/instruments/MortgageCalculatorClient'
-import { VatCalculatorClient } from '../../../../components/instruments/VatCalculatorClient'
-import { CompoundInterestCalculatorClient } from '../../../../components/instruments/CompoundInterestCalculatorClient'
-import { DiscountCalculatorClient } from '../../../../components/instruments/DiscountCalculatorClient'
-import { FractionCalculatorClient } from '../../../../components/instruments/FractionCalculatorClient'
-import { RatioCalculatorClient } from '../../../../components/instruments/RatioCalculatorClient'
-import { AverageCalculatorClient } from '../../../../components/instruments/AverageCalculatorClient'
-import { ScientificNotationCalculatorClient } from '../../../../components/instruments/ScientificNotationCalculatorClient'
-import { LengthConverterClient } from '../../../../components/instruments/LengthConverterClient'
-import { WeightConverterClient } from '../../../../components/instruments/WeightConverterClient'
-import { TemperatureConverterClient } from '../../../../components/instruments/TemperatureConverterClient'
-import { AreaCalculatorClient } from '../../../../components/instruments/AreaCalculatorClient'
-import { VolumeCalculatorClient } from '../../../../components/instruments/VolumeCalculatorClient'
-import { AreaConverterClient } from '../../../../components/instruments/AreaConverterClient'
-import { VolumeConverterClient } from '../../../../components/instruments/VolumeConverterClient'
-import { CalorieDeficitCalculatorClient } from '../../../../components/instruments/CalorieDeficitCalculatorClient'
-import { SalaryCalculatorClient } from '../../../../components/instruments/SalaryCalculatorClient'
-import { InflationCalculatorClient } from '../../../../components/instruments/InflationCalculatorClient'
-import { TaxCalculatorClient } from '../../../../components/instruments/TaxCalculatorClient'
-import { RetirementCalculatorClient } from '../../../../components/instruments/RetirementCalculatorClient'
-import { OvulationCalculatorClient } from '../../../../components/instruments/OvulationCalculatorClient'
-import { SleepCalculatorClient } from '../../../../components/instruments/SleepCalculatorClient'
-import { InvestmentCalculatorClient } from '../../../../components/instruments/InvestmentCalculatorClient'
-import { CalorieCalculatorClient } from '../../../../components/instruments/CalorieCalculatorClient'
-import { SavingsCalculatorClient } from '../../../../components/instruments/SavingsCalculatorClient'
-import { TipCalculatorClient } from '../../../../components/instruments/TipCalculatorClient'
-import { PregnancyCalculatorClient } from '../../../../components/instruments/PregnancyCalculatorClient'
-import { DueDateCalculatorClient } from '../../../../components/instruments/DueDateCalculatorClient'
+import { InstrumentUI } from '../../../../components/instruments/InstrumentUI'
+import { NextStepCard, RewardBanner, StickyCTA, JourneyAnalyticsObserver } from '../../../../components/journey'
+import { UserJourneySection } from '../../../../components/user'
+import { getNextStep, getJourneyPosition } from '../../../../lib/journey/config'
+import { buildCTA } from '../../../../lib/journey/cta'
 
 interface PageProps {
   params: { lang: string; slug: string }
@@ -372,6 +342,37 @@ export default function InstrumentPage({ params }: PageProps) {
           <InstrumentUI slug={slug} lang={lang} translations={translations} />
         </div>
 
+        {/* Journey Engine — V3 Experience Layer */}
+        <RewardBanner slug={slug} lang={lang} />
+        <NextStepCard slug={slug} lang={lang} />
+        {/* UserJourneySection: client-enhanced progress, real user state */}
+        <UserJourneySection slug={slug} lang={lang} />
+
+        {/* Sticky CTA + Analytics (client components) */}
+        {(() => {
+          const ns = getNextStep(slug)
+          const pos = ns ? getJourneyPosition(slug) : null
+          const cta = pos && ns ? buildCTA(pos, ns.nextName, ns.estimatedMinutes, lang) : null
+          return ns && cta ? (
+            <>
+              <StickyCTA
+                href={`/${lang}/calculators/${ns.nextSlug}`}
+                text={cta.text}
+                subtext={cta.subtext}
+                urgency={cta.urgency}
+                trackingLabel={cta.trackingLabel}
+                nextName={ns.nextName}
+              />
+              <JourneyAnalyticsObserver
+                slug={slug}
+                journeyId={pos?.journey.id ?? null}
+                trackingLabel={cta.trackingLabel}
+                nextSlug={ns.nextSlug}
+              />
+            </>
+          ) : null
+        })()}
+
         {/* Embed Widget */}
         <EmbedSection slug={slug} title={pageTitle} />
 
@@ -454,59 +455,6 @@ function SourcesSection({ category, lang }: { category: string; lang: string }) 
       </div>
     </section>
   )
-}
-
-// ── Instrument UI Router ───────────────────────────────────────────────────────
-function InstrumentUI({
-  slug, lang, translations,
-}: {
-  slug: string
-  lang: string
-  translations: Record<string, unknown>
-}) {
-  switch (slug) {
-    case 'bmi-calculator': return <BMICalculatorClient translations={translations} lang={lang} />
-    case 'percentage-calculator': return <PercentageCalculatorClient translations={translations} lang={lang} />
-    case 'bmr-calculator': return <BmrCalculatorClient translations={translations} lang={lang} />
-    case 'ideal-weight-calculator': return <IdealWeightCalculatorClient translations={translations} lang={lang} />
-    case 'tdee-calculator': return <TdeeCalculatorClient translations={translations} lang={lang} />
-    case 'body-fat-calculator': return <BodyFatCalculatorClient translations={translations} lang={lang} />
-    case 'calorie-deficit-calculator': return <CalorieDeficitCalculatorClient translations={translations} lang={lang} />
-    case 'loan-calculator': return <LoanCalculatorClient translations={translations} lang={lang} />
-    case 'mortgage-calculator': return <MortgageCalculatorClient translations={translations} lang={lang} />
-    case 'vat-calculator': return <VatCalculatorClient translations={translations} lang={lang} />
-    case 'compound-interest-calculator': return <CompoundInterestCalculatorClient translations={translations} lang={lang} />
-    case 'discount-calculator': return <DiscountCalculatorClient translations={translations} lang={lang} />
-    case 'fraction-calculator': return <FractionCalculatorClient translations={translations} lang={lang} />
-    case 'ratio-calculator': return <RatioCalculatorClient translations={translations} lang={lang} />
-    case 'average-calculator': return <AverageCalculatorClient translations={translations} lang={lang} />
-    case 'scientific-notation-calculator': return <ScientificNotationCalculatorClient translations={translations} lang={lang} />
-    case 'length-converter': return <LengthConverterClient translations={translations} lang={lang} />
-    case 'weight-converter': return <WeightConverterClient translations={translations} lang={lang} />
-    case 'temperature-converter': return <TemperatureConverterClient translations={translations} lang={lang} />
-    case 'area-calculator': return <AreaCalculatorClient translations={translations} lang={lang} />
-    case 'volume-calculator': return <VolumeCalculatorClient translations={translations} lang={lang} />
-    case 'area-converter': return <AreaConverterClient translations={translations} lang={lang} />
-    case 'volume-converter': return <VolumeConverterClient translations={translations} lang={lang} />
-    case 'salary-calculator': return <SalaryCalculatorClient translations={translations} lang={lang} />
-    case 'inflation-calculator': return <InflationCalculatorClient translations={translations} lang={lang} />
-    case 'tax-calculator': return <TaxCalculatorClient translations={translations} lang={lang} />
-    case 'retirement-calculator': return <RetirementCalculatorClient translations={translations} lang={lang} />
-    case 'ovulation-calculator': return <OvulationCalculatorClient translations={translations} lang={lang} />
-    case 'sleep-calculator': return <SleepCalculatorClient translations={translations} lang={lang} />
-    case 'investment-calculator': return <InvestmentCalculatorClient translations={translations} lang={lang} />
-    case 'calorie-calculator': return <CalorieCalculatorClient translations={translations} lang={lang} />
-    case 'savings-calculator': return <SavingsCalculatorClient translations={translations} lang={lang} />
-    case 'tip-calculator': return <TipCalculatorClient translations={translations} lang={lang} />
-    case 'pregnancy-calculator': return <PregnancyCalculatorClient translations={translations} lang={lang} />
-    case 'due-date-calculator': return <DueDateCalculatorClient translations={translations} lang={lang} />
-    default:
-      return (
-        <div className="text-slate-500 dark:text-slate-400 text-sm py-4 text-center">
-          UI for <code className="font-mono bg-slate-100 dark:bg-slate-700 px-1 rounded">{slug}</code> coming soon.
-        </div>
-      )
-  }
 }
 
 // ── SEO Content Blocks ────────────────────────────────────────────────────────
