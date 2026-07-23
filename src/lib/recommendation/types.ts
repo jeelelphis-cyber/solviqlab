@@ -85,6 +85,7 @@ export interface RecommendationResult {
   readonly context_summary: string       // "Health Journey 33% · 2 of 6 steps · AI 40%"
   readonly total_candidates_evaluated: number
   readonly engine_version: string        // '1.0.0'
+  readonly decision: import('./decision').RecommendationDecision  // P-17: durable audit record
 }
 
 // ── Context ───────────────────────────────────────────────────────────────────

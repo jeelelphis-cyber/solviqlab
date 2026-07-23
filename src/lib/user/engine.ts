@@ -357,18 +357,24 @@ export class UserEngine {
     return authUser
   }
 
-  // ── Next Recommendation (P-16: IntentState owns next action) ─────────────
-  // Stored by EventBus P60 after RecommendationEngine computes.
+  // ── Recommendation Decision (P-16 + P-17) ────────────────────────────────
+  // P-16: IntentState owns next action — stored by EventBus P60.
+  // P-17: RecommendationDecision captures full provenance (slug, score, reasons, alternatives).
   // All consumers read from here — no recomputation needed.
 
-  private readonly NEXT_REC_KEY = 'next_recommendation'
+  private readonly REC_DECISION_KEY = 'recommendation_decision'
 
-  setNextRecommendation(rec: import('../recommendation/types').Recommendation): void {
-    this.storage.set(this.NEXT_REC_KEY, rec)
+  setRecommendationDecision(decision: import('../recommendation/decision').RecommendationDecision): void {
+    this.storage.set(this.REC_DECISION_KEY, decision)
   }
 
+  getRecommendationDecision(): import('../recommendation/decision').RecommendationDecision | null {
+    return this.storage.get(this.REC_DECISION_KEY)
+  }
+
+  // Compatibility shim — returns just the slug from the stored decision
   getNextRecommendation(): import('../recommendation/types').Recommendation | null {
-    return this.storage.get(this.NEXT_REC_KEY)
+    return null  // use getRecommendationDecision() instead
   }
 
   // ── Destroy ───────────────────────────────────────────────────────────────

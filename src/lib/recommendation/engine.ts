@@ -34,11 +34,53 @@ import type {
   RecommendationResult,
   ScoringBreakdown,
 } from './types'
+import type { RecommendationDecision, AlternativeDecision } from './decision'
 import { generateCandidates } from './candidates'
 import { scoreCandidate, computeComposite } from './scoring'
 import { emitRecommendationEvent } from './events'
 
 const ENGINE_VERSION = '1.0.0'
+
+// ── Decision ID ───────────────────────────────────────────────────────────────
+
+function decisionId(): string {
+  if (typeof crypto !== 'undefined' && crypto.randomUUID) return crypto.randomUUID()
+  return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`
+}
+
+// ── Build RecommendationDecision ──────────────────────────────────────────────
+
+function buildDecision(
+  triggeredBy: string,
+  scored: Array<{ candidate: Candidate; scoring: ScoringBreakdown }>,
+  contextSummary: string,
+  ctx: RecommendationContext,
+): RecommendationDecision {
+  const primary = scored[0]
+  const alternatives: AlternativeDecision[] = scored.slice(1).map(({ candidate, scoring }) => ({
+    slug:                candidate.instrument_slug,
+    name:                candidate.instrument_name,
+    type:                candidate.type,
+    score:               scoring.composite,
+    reasons:             scoring.factors,
+    disqualified:        false,
+    disqualified_reason: null,
+  }))
+
+  return {
+    decision_id:     decisionId(),
+    triggered_by:    triggeredBy,
+    slug:            primary?.candidate.instrument_slug ?? null,
+    name:            primary?.candidate.instrument_name ?? null,
+    type:            primary?.candidate.type ?? 'next_calculator',
+    score:           primary?.scoring.composite ?? 0,
+    reasons:         primary?.scoring.factors ?? [],
+    alternatives,
+    context_summary: contextSummary,
+    generated_at:    ctx.current_timestamp,
+    engine_version:  ENGINE_VERSION,
+  }
+}
 
 // ── Deterministic ID ───────────────────────────────────────────────────────────
 
@@ -143,6 +185,11 @@ export class RecommendationEngine {
       ? buildRecommendation(third.candidate, third.scoring, 'tertiary', lang, ctx)
       : null
 
+    const contextSummary = buildContextSummary(ctx)
+
+    // P-17: build durable decision record with full provenance
+    const decision = buildDecision(ctx.current_slug, scored, contextSummary, ctx)
+
     // Emit analytics
     emitRecommendationEvent({
       type:                 'RecommendationGenerated',
@@ -158,9 +205,10 @@ export class RecommendationEngine {
       primary,
       secondary,
       tertiary,
-      context_summary:             buildContextSummary(ctx),
+      context_summary:             contextSummary,
       total_candidates_evaluated:  candidates.length,
       engine_version:              ENGINE_VERSION,
+      decision,
     }
   }
 
@@ -193,6 +241,20 @@ export class RecommendationEngine {
       cta_href:      `/${lang}/calculators/bmi-calculator`,
     }
 
+    const fallbackDecision: RecommendationDecision = {
+      decision_id:     decisionId(),
+      triggered_by:    ctx.current_slug,
+      slug:            'bmi-calculator',
+      name:            'BMI Calculator',
+      type:            'next_calculator',
+      score:           55,
+      reasons:         ['popular starting point', 'broad health relevance'],
+      alternatives:    [],
+      context_summary: 'new user · no active journey',
+      generated_at:    ctx.current_timestamp,
+      engine_version:  ENGINE_VERSION,
+    }
+
     return {
       primary,
       secondary:                   null,
@@ -200,6 +262,7 @@ export class RecommendationEngine {
       context_summary:             'new user · no active journey',
       total_candidates_evaluated:  0,
       engine_version:              ENGINE_VERSION,
+      decision:                    fallbackDecision,
     }
   }
 }

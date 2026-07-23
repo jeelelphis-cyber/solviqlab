@@ -59,10 +59,32 @@ export function UserJourneySection({ slug, lang }: Props) {
     const trigger = engine.checkRegistrationTrigger()
     setRegTrigger(trigger)
 
-    // P-16: read stored recommendation first (EventBus P60 already computed it)
-    const storedRec = engine.getNextRecommendation()
-    if (storedRec) {
-      setPrimaryRec(storedRec)
+    // P-16+P-17: read stored decision first (EventBus P60 already computed it)
+    const decision = engine.getRecommendationDecision()
+    if (decision) {
+      // Reconstruct a minimal Recommendation from the stored decision for display
+      setPrimaryRec({
+        id:               decision.decision_id,
+        type:             decision.type,
+        priority:         'primary',
+        instrument_slug:  decision.slug,
+        instrument_name:  decision.name,
+        title:            decision.name ?? 'Next Step',
+        reason:           decision.reasons[0] ?? '',
+        detail:           decision.reasons.join(' · '),
+        estimated_minutes: null,
+        expected_value:   decision.score >= 70 ? 'very_high' : decision.score >= 50 ? 'high' : 'medium',
+        score:            decision.score,
+        scoring: {
+          need: 0, confidence: 0, journey_importance: 0, completion_probability: 0,
+          composite: decision.score,
+          factors: [...decision.reasons],
+        },
+        generated_at: decision.generated_at,
+        expires_at:   null,
+        cta_label:    'Continue',
+        cta_href:     decision.slug ? `/${lang}/calculators/${decision.slug}` : null,
+      })
     } else {
       const ctx = buildContextFromEngine(engine, slug)
       const result = getRecommendationEngine().recommend(ctx, lang)

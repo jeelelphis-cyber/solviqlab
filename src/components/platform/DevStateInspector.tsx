@@ -6,10 +6,12 @@ import { useEffect, useState, useCallback } from 'react'
 import { getBrowserRuntime } from '@/lib/runtime/platform'
 import type { SolviqUser } from '@/lib/user'
 
+import type { RecommendationDecision } from '@/lib/recommendation/decision'
+
 interface InspectorState {
   user: SolviqUser | null
   profile: Record<string, unknown> | null
-  nextRec: Record<string, unknown> | null
+  decision: RecommendationDecision | null
   journeyStates: unknown[]
   eventCount: number
 }
@@ -49,7 +51,7 @@ export function DevStateInspector() {
   const [state, setState] = useState<InspectorState>({
     user: null,
     profile: null,
-    nextRec: null,
+    decision: null,
     journeyStates: [],
     eventCount: 0,
   })
@@ -59,12 +61,12 @@ export function DevStateInspector() {
     const user = runtime.userEngine.getUser()
     const userId = runtime.userEngine.getUserId()
     const profile = userId ? runtime.profileEngine.getOrCreateProfile(userId) : null
-    const nextRec = runtime.userEngine.getNextRecommendation()
+    const decision = runtime.userEngine.getRecommendationDecision()
 
     setState(prev => ({
       user,
       profile: profile as Record<string, unknown> | null,
-      nextRec: nextRec as Record<string, unknown> | null,
+      decision,
       journeyStates: runtime.userEngine.getAllJourneyStates() as unknown[],
       eventCount: prev.eventCount,
     }))
@@ -107,7 +109,7 @@ export function DevStateInspector() {
 
   if (!enabled) return null
 
-  const { user, profile, nextRec, journeyStates, eventCount } = state
+  const { user, profile, decision, journeyStates, eventCount } = state
   const domains = profile ? (profile as { domains?: Record<string, { confidence: number; signals: unknown[] }> }).domains ?? {} : {}
 
   return (
@@ -150,12 +152,27 @@ export function DevStateInspector() {
               ))}
             </Section>
 
-            <Section title="Next Recommendation (P-16)">
-              {nextRec ? (
+            <Section title="Recommendation Decision (P-17)">
+              {decision ? (
                 <>
-                  <KV label="slug" value={(nextRec as { instrument_slug?: string }).instrument_slug} />
-                  <KV label="reason" value={(nextRec as { reason?: string }).reason} />
-                  <KV label="priority" value={(nextRec as { priority?: string }).priority} />
+                  <KV label="slug" value={decision.slug} />
+                  <KV label="score" value={`${decision.score}/100`} />
+                  <KV label="triggered_by" value={decision.triggered_by} />
+                  <div className="text-slate-500 text-[10px] uppercase tracking-widest mt-1 mb-0.5">reasons</div>
+                  {decision.reasons.map((r, i) => (
+                    <div key={i} className="text-[11px] text-slate-300 pl-2 truncate">· {r}</div>
+                  ))}
+                  {decision.alternatives.length > 0 && (
+                    <>
+                      <div className="text-slate-500 text-[10px] uppercase tracking-widest mt-1 mb-0.5">alternatives</div>
+                      {decision.alternatives.slice(0, 3).map((alt, i) => (
+                        <div key={i} className="flex gap-2 text-[11px]">
+                          <span className="text-slate-500 w-28 shrink-0 truncate">{alt.slug ?? alt.type}</span>
+                          <span className="text-slate-400">{alt.score}</span>
+                        </div>
+                      ))}
+                    </>
+                  )}
                 </>
               ) : (
                 <div className="text-slate-600">none stored yet</div>
