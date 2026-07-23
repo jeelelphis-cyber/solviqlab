@@ -91,12 +91,28 @@ export class EventBus {
     if (typeof window === 'undefined') return () => {}
 
     const handler = (e: Event) => {
-      const detail = (e as CustomEvent).detail as ResultEvent
-      if (detail?.type === 'solviqlab:result') {
-        this.dispatch(detail).catch(err =>
-          console.error('[EventBus] dispatch error:', err)
-        )
+      const raw = (e as CustomEvent).detail as Record<string, unknown>
+      if (!raw?.slug) return
+
+      // Calculators dispatch { slug, name, value, label, ... } without type/eventId.
+      // Normalize here so dispatch() gets a valid ResultEvent.
+      const ts = Date.now()
+      const detail: ResultEvent = {
+        type:      'solviqlab:result',
+        eventId:   (raw.eventId as string) ?? `browser:${String(raw.slug)}:${ts}`,
+        slug:      raw.slug as string,
+        name:      (raw.name as string) ?? String(raw.slug),
+        value:     (raw.value as number | null) ?? null,
+        label:     (raw.label as string | null) ?? null,
+        category:  (raw.category as string | null) ?? null,
+        unit:      (raw.unit as string | null) ?? null,
+        metadata:  (raw.metadata as Record<string, unknown>) ?? {},
+        timestamp: (raw.timestamp as number) ?? ts,
       }
+
+      this.dispatch(detail).catch(err =>
+        console.error('[EventBus] dispatch error:', err)
+      )
     }
 
     window.addEventListener('solviqlab:result', handler)

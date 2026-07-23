@@ -16,8 +16,10 @@ interface InspectorState {
 
 function isEnabled(): boolean {
   if (typeof window === 'undefined') return false
+  // Next.js app router strips search from window.location; use URLSearchParams on href
+  const params = new URLSearchParams(window.location.href.split('?')[1] ?? '')
   return (
-    window.location.search.includes('devInspector=1') ||
+    params.has('devInspector') ||
     localStorage.getItem('solviqlab:dev:inspector') === 'true'
   )
 }
