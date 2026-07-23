@@ -2,6 +2,19 @@ import type { IntentCluster } from '../assessment/types'
 
 export type PlanStatus = 'active' | 'paused' | 'completed' | 'abandoned'
 
+// Milestone: a checkpoint in the plan at a specific week
+// Built by PlannerEngine.build(), revised by PlannerEngine.adapt()
+export interface Milestone {
+  readonly milestone_id: string           // UUID
+  readonly plan_id: string
+  readonly week: number                   // target week (1-based)
+  readonly target_value: number           // e.g. 82.5 kg
+  readonly description: string           // "Week 4: Reduce by 0.5 kg/week"
+  readonly is_completed: boolean
+  readonly completed_at: string | null
+  readonly actual_value: number | null   // filled when completed
+}
+
 // CheckIn is a Value Object — immutable after creation, append-only to the plan
 export interface CheckIn {
   readonly check_in_id: string            // UUID
@@ -27,7 +40,9 @@ export interface ActivePlan {
   readonly target_date: string            // ISO date (projected)
   readonly duration_weeks: number
   readonly status: PlanStatus
-  readonly check_ins: readonly CheckIn[]  // append-only, never mutated
+  readonly milestones: readonly Milestone[]  // checkpoints — rebuilt on adapt()
+  readonly check_ins: readonly CheckIn[]    // append-only, never mutated
   readonly last_adapted_at: string | null
   readonly created_at: string
+  readonly adaptation_count: number          // how many times adapt() was called
 }
