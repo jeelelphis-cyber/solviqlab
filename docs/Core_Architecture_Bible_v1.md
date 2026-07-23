@@ -867,6 +867,32 @@ export default defineInstrument({
 
 ---
 
+### P-15: Event Driven Platform (CEO Directive)
+
+> Любой продукт знает только: **input → execute() → result → emit()**.  
+> Всё остальное — ответственность платформы.
+
+Продукт не знает о Dashboard, Journey, Strategy, Policy, Recommendation, и о том, на какой платформе он запущен.
+
+```typescript
+// Весь контракт инструмента:
+execute(input: InstrumentInput): InstrumentResult
+emit(result: InstrumentResult): void  // единственная точка выхода
+
+// Реализация emit():
+window.dispatchEvent(new CustomEvent('solviqlab:result', { detail: result }))
+```
+
+EventBus обеспечивает fan-out ко всем платформенным handlers в правильном порядке.  
+При смене платформы (Mobile / Server / AI Agent) меняется только транспорт EventBus.  
+Продукты и контракты событий не меняются.
+
+**Сигнал нарушения:** компонент инструмента импортирует что-либо из `@/lib/profile`, `@/lib/recommendation`, `@/lib/journey` или любого другого платформенного модуля.
+
+Подробно: `docs/Runtime_Event_Architecture_v1.md`
+
+---
+
 # ЧАСТЬ V. ANTI-PATTERNS
 
 ---
@@ -1580,38 +1606,51 @@ V3-09D  First Configs
         planner/configs/weight-balanced.ts
         planner/configs/weight-fast.ts
 
-V3-09E  Strategy Engine Runtime
-        strategy/engine.ts
-        strategy/evaluator.ts (StrategyCondition DSL)
-        strategy/index.ts
+V3-10C  Domain Types + Product Manifest Contract
+        src/lib/domain/ids.ts
+        src/lib/domain/intent-state.ts
+        src/lib/domain/instrument-result.ts
+        src/lib/domain/assessment-result.ts
+        src/lib/domain/strategy-decision.ts
+        src/lib/domain/active-plan.ts
+        src/lib/domain/personal-profile.ts
+        src/lib/catalog/types.ts (defineInstrument, InstrumentManifest, CapabilityCatalog)
 
-V3-09F  Policy Engine Runtime
-        policy/engine.ts
-        policy/policies/user_first.ts
-        policy/policies/retention.ts
-        policy/index.ts
+V3-10D  Runtime Event Architecture
+        src/lib/events/types.ts    — все Event Contracts
+        src/lib/events/bus.ts      — EventBus implementation
+        src/lib/events/handlers.ts — handler registry + ordering
+        src/lib/events/index.ts
+        Ref: docs/Runtime_Event_Architecture_v1.md
 
-V3-09G  Planner Engine Runtime
-        planner/engine.ts
-        planner/scoring.ts (milestone calculation)
-        planner/adaptation.ts (AdjustmentRule evaluator)
-        planner/index.ts
+V3-10E  Capability Manifests + Engine Refactor
+        src/capabilities/health/weight/instruments/ — 36 манифестов
+        Refactor ProfileEngine → читает из CapabilityCatalog
+        Refactor JourneyEngine → читает из CapabilityCatalog
+        Refactor AssessmentEngine → читает из CapabilityCatalog
+        One Product Rule Test: добавить weight-planner-balanced, verify git diff
 
-V3-09H  First Products
+V3-10F  First Planner (Planner Engine Runtime)
+        src/lib/planner/engine.ts
+        src/lib/planner/scoring.ts
+        src/lib/planner/adaptation.ts
+        src/lib/planner/configs/weight-balanced.ts
+        src/lib/planner/configs/weight-fast.ts
+        src/lib/strategy/engine.ts
+        src/lib/strategy/configs/weight.ts
         app/[lang]/strategy/[cluster]/page.tsx
         app/[lang]/planner/[cluster]/page.tsx
         components/strategy/StrategyClient.tsx
         components/planner/PlannerClient.tsx
 
-V3-09I  Dashboard Integration
+V3-10G  Dashboard Integration
         DashboardClient: StrategyCard + ActivePlansSection
-        UserEngine: strategy_results + active_plans
 
-V3-10   AI Coach
+V3-11   AI Coach
         Claude API integration
         PlannerAIContext + AssessmentAIContext + StrategyAIContext
 
-V3-11   Premium + Stripe
+V3-12   Premium + Stripe
         Policy Engine: ROI policy activation
 ```
 
