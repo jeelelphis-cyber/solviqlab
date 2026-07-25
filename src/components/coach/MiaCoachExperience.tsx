@@ -116,7 +116,7 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
 
   // ── Onboarding — name + goal ───────────────────────────────────────────────
   if (state === 'onboarding') {
-    return <MiaOnboarding userId={userId} onDone={handleOnboardingDone} />
+    return <MiaOnboarding userId={userId} lang={lang} onDone={handleOnboardingDone} />
   }
 
   // ── Generating — Mia is working ────────────────────────────────────────────

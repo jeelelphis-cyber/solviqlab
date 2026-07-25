@@ -8,10 +8,11 @@ import { LocalStorageProvider } from '@/lib/user/storage'
 
 interface Props {
   userId:  string
+  lang?:   string
   onDone:  (name: string, graph: UserGraph) => void
 }
 
-const GOALS = [
+const GOALS_EN = [
   { value: 'lose_weight',   label: 'Lose weight' },
   { value: 'build_muscle',  label: 'Build muscle' },
   { value: 'sleep_better',  label: 'Sleep better' },
@@ -19,11 +20,42 @@ const GOALS = [
   { value: 'reduce_stress', label: 'Reduce stress' },
 ]
 
-export function MiaOnboarding({ userId, onDone }: Props) {
+const GOALS_UK = [
+  { value: 'lose_weight',   label: 'Схуднути' },
+  { value: 'build_muscle',  label: 'Набрати м\'язи' },
+  { value: 'sleep_better',  label: 'Покращити сон' },
+  { value: 'boost_energy',  label: 'Підвищити енергію' },
+  { value: 'reduce_stress', label: 'Знизити стрес' },
+]
+
+const COPY = {
+  en: {
+    badge:        'Mia — your health coach',
+    nameTitle:    'What should I call you?',
+    nameSubtitle: "I'll use your first name when we talk.",
+    placeholder:  'First name',
+    nameBtn:      'That\'s me →',
+    goalTitle:    (name: string) => `${name}, what's your main focus right now?`,
+    goalSubtitle: "One thing. I'll build everything around it.",
+  },
+  uk: {
+    badge:        'Міа — ваш особистий коуч',
+    nameTitle:    'Як мені тебе називати?',
+    nameSubtitle: 'Я буду використовувати твоє ім\'я в нашій розмові.',
+    placeholder:  'Ім\'я',
+    nameBtn:      'Це я →',
+    goalTitle:    (name: string) => `${name}, на чому ти зосереджений зараз?`,
+    goalSubtitle: 'Одне. Я побудую все навколо цього.',
+  },
+}
+
+export function MiaOnboarding({ userId, lang = 'en', onDone }: Props) {
   const [step, setStep]       = useState<'name' | 'goal'>('name')
   const [name, setName]       = useState('')
-  const [goal, setGoal]       = useState('')
   const [loading, setLoading] = useState(false)
+
+  const c     = COPY[lang as keyof typeof COPY] ?? COPY.en
+  const goals = lang === 'uk' ? GOALS_UK : GOALS_EN
 
   const nameValid = name.trim().length >= 2
 
@@ -32,8 +64,7 @@ export function MiaOnboarding({ userId, onDone }: Props) {
     setStep('goal')
   }
 
-  async function handleGoalSelect(selectedGoal: string) {
-    setGoal(selectedGoal)
+  async function handleGoalSelect(selectedGoal: string, selectedLabel: string) {
     setLoading(true)
 
     const repo    = new GraphRepository(new LocalStorageProvider())
@@ -42,7 +73,7 @@ export function MiaOnboarding({ userId, onDone }: Props) {
     updater.setName(userId, name.trim())
     updater.upsertGoal(userId, {
       id:       `goal-${selectedGoal}`,
-      text:     GOALS.find(g => g.value === selectedGoal)?.label ?? selectedGoal,
+      text:     selectedLabel,
       status:   'active',
       priority: 'high',
       addedAt:  new Date().toISOString(),
@@ -60,7 +91,7 @@ export function MiaOnboarding({ userId, onDone }: Props) {
           M
         </div>
         <p className="text-xs font-semibold text-violet-500 uppercase tracking-widest">
-          Mia — your health coach
+          {c.badge}
         </p>
       </div>
 
@@ -68,10 +99,10 @@ export function MiaOnboarding({ userId, onDone }: Props) {
         <div className="w-full space-y-5">
           <div className="text-center">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
-              What should I call you?
+              {c.nameTitle}
             </h2>
             <p className="text-sm text-gray-400 mt-1">
-              I'll use your first name when we talk.
+              {c.nameSubtitle}
             </p>
           </div>
 
@@ -80,7 +111,7 @@ export function MiaOnboarding({ userId, onDone }: Props) {
             value={name}
             onChange={e => setName(e.target.value)}
             onKeyDown={e => e.key === 'Enter' && handleNameNext()}
-            placeholder="First name"
+            placeholder={c.placeholder}
             autoFocus
             className="w-full rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-5 py-4 text-center text-lg text-gray-900 dark:text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-violet-500"
           />
@@ -90,7 +121,7 @@ export function MiaOnboarding({ userId, onDone }: Props) {
             disabled={!nameValid}
             className="w-full rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-medium py-3.5 disabled:opacity-30 hover:opacity-90 transition-opacity"
           >
-            That's me →
+            {c.nameBtn}
           </button>
         </div>
       )}
@@ -99,18 +130,18 @@ export function MiaOnboarding({ userId, onDone }: Props) {
         <div className="w-full space-y-5">
           <div className="text-center">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
-              {name}, what's your main focus right now?
+              {c.goalTitle(name)}
             </h2>
             <p className="text-sm text-gray-400 mt-1">
-              One thing. I'll build everything around it.
+              {c.goalSubtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-2.5">
-            {GOALS.map(g => (
+            {goals.map(g => (
               <button
                 key={g.value}
-                onClick={() => handleGoalSelect(g.value)}
+                onClick={() => handleGoalSelect(g.value, g.label)}
                 disabled={loading}
                 className="rounded-xl border border-gray-200 dark:border-gray-700 px-5 py-3.5 text-sm text-left text-gray-700 dark:text-gray-300 font-medium hover:border-violet-400 hover:bg-violet-50 dark:hover:bg-violet-900/20 hover:text-violet-700 dark:hover:text-violet-300 transition-all disabled:opacity-50"
               >

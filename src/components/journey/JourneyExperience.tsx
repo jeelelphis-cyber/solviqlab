@@ -123,7 +123,8 @@ export function JourneyExperience({ cluster, lang, currentSlug, suggestedSlug, s
   const rawDecisionSlug = decision?.slug ?? null
   const crossCluster    = isCrossClusterSlug(rawDecisionSlug, cluster)
   const nextSlug        = crossCluster ? (suggestedSlug ?? null) : rawDecisionSlug
-  const rawName         = crossCluster ? (suggestedName ?? null) : (decision?.name ?? null)
+  const useSuggested    = crossCluster || nextSlug === suggestedSlug
+  const rawName         = useSuggested ? (suggestedName ?? null) : (decision?.name ?? null)
   const localName       = rawName ? localizeJourneyName(rawName, lang) : null
   const nextName        = buildNextName(nextSlug, phase, localName, cluster, s.nextStepBadge, copy.clusterAssessmentName[cluster])
   const nextHref        = buildNextHref(nextSlug, cluster, phase, lang)

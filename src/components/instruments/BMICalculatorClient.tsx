@@ -383,7 +383,7 @@ export function BMICalculatorClient({ translations, lang }: Props) {
         aria-describedby="bmi-form-desc"
       >
         <p id="bmi-form-desc" className="sr-only">
-          Enter your height and weight to calculate your Body Mass Index.
+          {t('form_description')}
         </p>
 
         {/* Height */}
