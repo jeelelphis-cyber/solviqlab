@@ -45,7 +45,10 @@ const GOAL_CONFIG: Record<GoalTier, {
   },
 }
 
-function MacroBar({ protein, carbs, fat }: { protein: number; carbs: number; fat: number }) {
+function MacroBar({ protein, carbs, fat, labelProtein, labelCarbs, labelFat }: {
+  protein: number; carbs: number; fat: number
+  labelProtein: string; labelCarbs: string; labelFat: string
+}) {
   const total = protein * 4 + carbs * 4 + fat * 9
   const pPct = total > 0 ? (protein * 4 / total) * 100 : 33
   const cPct = total > 0 ? (carbs * 4 / total) * 100 : 34
@@ -53,14 +56,14 @@ function MacroBar({ protein, carbs, fat }: { protein: number; carbs: number; fat
   return (
     <div className="mt-2">
       <div className="flex h-2.5 rounded-full overflow-hidden">
-        <div style={{ width: `${pPct}%`, backgroundColor: '#3B82F6' }} title={`Protein ${Math.round(pPct)}%`} />
-        <div style={{ width: `${cPct}%`, backgroundColor: '#F59E0B' }} title={`Carbs ${Math.round(cPct)}%`} />
-        <div style={{ width: `${fPct}%`, backgroundColor: '#EF4444' }} title={`Fat ${Math.round(fPct)}%`} />
+        <div style={{ width: `${pPct}%`, backgroundColor: '#3B82F6' }} title={`${labelProtein} ${Math.round(pPct)}%`} />
+        <div style={{ width: `${cPct}%`, backgroundColor: '#F59E0B' }} title={`${labelCarbs} ${Math.round(cPct)}%`} />
+        <div style={{ width: `${fPct}%`, backgroundColor: '#EF4444' }} title={`${labelFat} ${Math.round(fPct)}%`} />
       </div>
       <div className="flex justify-between text-xs text-content-tertiary mt-1">
-        <span className="text-blue-600 dark:text-blue-400">Protein {Math.round(pPct)}%</span>
-        <span className="text-yellow-600 dark:text-yellow-400">Carbs {Math.round(cPct)}%</span>
-        <span className="text-red-500 dark:text-red-400">Fat {Math.round(fPct)}%</span>
+        <span className="text-blue-600 dark:text-blue-400">{labelProtein} {Math.round(pPct)}%</span>
+        <span className="text-yellow-600 dark:text-yellow-400">{labelCarbs} {Math.round(cPct)}%</span>
+        <span className="text-red-500 dark:text-red-400">{labelFat} {Math.round(fPct)}%</span>
       </div>
     </div>
   )
@@ -294,7 +297,7 @@ export function CalorieCalculatorClient({ translations }: Props) {
           {/* Macros */}
           <div className="bg-surface-card border border-border-default rounded-xl p-5">
             <h3 className="text-sm font-medium text-content-secondary mb-3">{t('label_macros')}</h3>
-            <MacroBar protein={result.protein_g} carbs={result.carbs_g} fat={result.fat_g} />
+            <MacroBar protein={result.protein_g} carbs={result.carbs_g} fat={result.fat_g} labelProtein={t('label_protein')} labelCarbs={t('label_carbs')} labelFat={t('label_fat')} />
             <div className="grid grid-cols-3 gap-3 mt-4">
               <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg p-3 text-center">
                 <div className="text-xs text-blue-600 dark:text-blue-400 mb-1">{t('label_protein')}</div>
