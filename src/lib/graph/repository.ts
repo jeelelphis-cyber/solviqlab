@@ -108,6 +108,11 @@ function buildDefault(userId: string, overrides: Partial<UserGraph>): UserGraph 
       updatedAt:      ts,
       confidence:     'inferred',
     },
+    dailyHistory: {
+      entries:    [],
+      updatedAt:  ts,
+      confidence: 'inferred',
+    },
   }
 
   return { ...base, ...overrides }

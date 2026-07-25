@@ -9,7 +9,7 @@
 import type { GraphRepository } from './repository'
 import type {
   UserGraph, GoalEntry, HabitEntry, AssessmentEntry,
-  MemoryFact, CommunicationStyle, ResponseLength,
+  MemoryFact, CommunicationStyle, ResponseLength, DailyHistoryEntry,
 } from './types'
 
 function now(): string { return new Date().toISOString() }
@@ -172,5 +172,27 @@ export class GraphUpdater {
     patch(this.repo, userId, 'premium', cur => ({
       ...cur, ...data, updatedAt: now(), confidence: 'confirmed',
     }))
+  }
+
+  // ── Daily History ─────────────────────────────────────────────────────────
+  // Architecture Bible v2.1 §05 (C3): DailyHistoryNode is the single source
+  // of truth for mood, energy, and task completion. Max 90 entries kept.
+
+  addDailyHistoryEntry(userId: string, entry: DailyHistoryEntry): void {
+    patch(this.repo, userId, 'dailyHistory', cur => {
+      const MAX_ENTRIES = 90
+      // Replace entry for same date if it exists, otherwise append
+      const filtered = cur.entries.filter(e => e.date !== entry.date)
+      const sorted = [...filtered, entry].sort((a, b) => a.date.localeCompare(b.date))
+      // Prune oldest entries beyond 90-day window
+      const pruned = sorted.length > MAX_ENTRIES ? sorted.slice(-MAX_ENTRIES) : sorted
+      return { ...cur, entries: pruned, updatedAt: now() }
+    })
+  }
+
+  getLastNDayHistory(userId: string, n: number): readonly DailyHistoryEntry[] {
+    const graph = this.repo.getOrCreate(userId)
+    const entries = graph.dailyHistory.entries
+    return entries.slice(-n)
   }
 }

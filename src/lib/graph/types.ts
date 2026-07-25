@@ -128,6 +128,30 @@ export interface PremiumNode extends GraphNode {
   readonly quotaLimit:     number
 }
 
+// ── Daily History ─────────────────────────────────────────────────────────────
+// Stores rolling DailyHistory entries (up to 90 days).
+// Added in Sprint C-1.1 per Architecture Bible v2.1 §05 (C3).
+// MoodEnergyNode is abolished — this is the single source of truth for mood/energy.
+
+export interface DailyHistoryEntry {
+  readonly date:                string   // 'YYYY-MM-DD'
+  readonly morningVideoWatched: boolean
+  readonly eveningCheckinDone:  boolean
+  readonly tasksAssigned:       readonly string[]
+  readonly tasksCompleted:      readonly string[]
+  readonly moodValue:           number | null   // 1–5
+  readonly moodContext:         'morning' | 'evening' | null
+  readonly energyValue:         number | null   // 1–5
+  readonly energyContext:       'morning' | 'evening' | null
+  readonly notes:               string | null
+  readonly videoWatchDuration:  number | null   // seconds
+}
+
+export interface DailyHistoryNode extends GraphNode {
+  /** Entries sorted by date ascending; max 90 entries (oldest pruned automatically). */
+  readonly entries: readonly DailyHistoryEntry[]
+}
+
 // ── Root Graph ────────────────────────────────────────────────────────────────
 
 export interface UserGraph {
@@ -136,13 +160,14 @@ export interface UserGraph {
   updatedAt:          string
   version:            number
 
-  identity:    IdentityNode
-  goals:       GoalsNode
-  habits:      HabitsNode
-  assessments: AssessmentsNode
-  journey:     JourneyNode
-  coachMemory: CoachMemoryNode
-  preferences: PreferencesNode
-  retention:   RetentionNode
-  premium:     PremiumNode
+  identity:     IdentityNode
+  goals:        GoalsNode
+  habits:       HabitsNode
+  assessments:  AssessmentsNode
+  journey:      JourneyNode
+  coachMemory:  CoachMemoryNode
+  preferences:  PreferencesNode
+  retention:    RetentionNode
+  premium:      PremiumNode
+  dailyHistory: DailyHistoryNode
 }
