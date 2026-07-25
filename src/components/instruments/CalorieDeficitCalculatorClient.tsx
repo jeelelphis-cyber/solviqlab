@@ -4,12 +4,20 @@ import { useState, useEffect } from 'react'
 import { calculateCalorieDeficitCalculator } from '../../instruments/calorie-deficit-calculator/lib/calculate.js'
 import type { CalorieDeficitCalculatorOutput } from '../../instruments/calorie-deficit-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
+
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
 }
 
-export function CalorieDeficitCalculatorClient({ translations }: Props) {
+export function CalorieDeficitCalculatorClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [currentWeight, setCurrentWeight] = useState('')
@@ -27,6 +35,7 @@ export function CalorieDeficitCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'calorie-deficit-calculator', category: 'health', lang })
     try {
       const input = {
     currentWeight: parseFloat(currentWeight),
@@ -35,6 +44,7 @@ export function CalorieDeficitCalculatorClient({ translations }: Props) {
     weeklyLossGoal: weeklyLossGoal as '0.25' | '0.5' | '0.75' | '1.0',
       }
       setResult(calculateCalorieDeficitCalculator(input as Parameters<typeof calculateCalorieDeficitCalculator>[0]))
+      track('result_shown', { slug: 'calorie-deficit-calculator', category: 'health' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

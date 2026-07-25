@@ -5,12 +5,19 @@ import { calculateLengthConverter } from '../../instruments/length-converter/lib
 import type { LengthConverterOutput } from '../../instruments/length-converter/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
 
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
 }
 
-export function LengthConverterClient({ translations }: Props) {
+export function LengthConverterClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [value, setValue] = useState('')
@@ -19,12 +26,14 @@ export function LengthConverterClient({ translations }: Props) {
   const [error, setError] = useState<string | null>(null)
 
   function calculate() {
+    track('calculate_click', { slug: 'length-converter', category: 'conversion', lang })
     try {
       const input = {
     value: parseFloat(value),
     fromUnit: fromUnit as 'm' | 'km' | 'cm' | 'mm' | 'ft' | 'in' | 'yd' | 'mi' | 'nm' | 'μm',
       }
       setResult(calculateLengthConverter(input as Parameters<typeof calculateLengthConverter>[0]))
+      track('result_shown', { slug: 'length-converter', category: 'conversion' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

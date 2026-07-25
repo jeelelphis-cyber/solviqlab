@@ -3,12 +3,20 @@ import { useState, useEffect } from 'react'
 import { calculateBodyFatCalculator } from '../../instruments/body-fat-calculator/lib/calculate.js'
 import type { BodyFatCalculatorOutput } from '../../instruments/body-fat-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
+
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
 }
 
-export function BodyFatCalculatorClient({ translations }: Props) {
+export function BodyFatCalculatorClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [height, setHeight] = useState('')
@@ -28,6 +36,7 @@ export function BodyFatCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'body-fat-calculator', category: 'health', lang })
     try {
       const input = {
         height: parseFloat(height),
@@ -38,6 +47,7 @@ export function BodyFatCalculatorClient({ translations }: Props) {
         ...(weight ? { weight: parseFloat(weight) } : {}),
       }
       setResult(calculateBodyFatCalculator(input))
+      track('result_shown', { slug: 'body-fat-calculator', category: 'health' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

@@ -6,6 +6,14 @@ import { PercentageCalculatorInputSchema } from '../../instruments/percentage-ca
 import { getInterpretation } from '../../instruments/percentage-calculator/interpret.js'
 import type { PercentageMode, PercentageDirection, PercentageCalculatorInput, PercentageCalculatorOutput } from '../../instruments/percentage-calculator/types.js'
 import { ShareButtons } from '../ShareButtons.js'
+
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -46,10 +54,12 @@ export function PercentageCalculatorClient({ translations, lang }: Props) {
 
   useEffect(() => {
     if (!result) return
+    track('calculate_click', { slug: 'percentage-calculator', category: 'math', lang })
+    track('result_shown', { slug: 'percentage-calculator', category: 'math' })
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
       detail: { slug: 'percentage-calculator', name: 'Percentage Calculator', value: result.result, label: 'Result', unit: '%', metadata: result }
     }))
-  }, [result])
+  }, [result, lang])
 
   const reset = () => { setA(''); setB(''); setResult(null) }
 

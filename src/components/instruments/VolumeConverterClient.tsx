@@ -5,12 +5,19 @@ import { calculateVolumeConverter } from '../../instruments/volume-converter/lib
 import type { VolumeConverterOutput } from '../../instruments/volume-converter/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
 
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
 }
 
-export function VolumeConverterClient({ translations }: Props) {
+export function VolumeConverterClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [value, setValue] = useState('')
@@ -19,12 +26,14 @@ export function VolumeConverterClient({ translations }: Props) {
   const [error, setError] = useState<string | null>(null)
 
   function calculate() {
+    track('calculate_click', { slug: 'volume-converter', category: 'conversion', lang })
     try {
       const input = {
     value: parseFloat(value),
     fromUnit: fromUnit as 'l' | 'ml' | 'cl' | 'm3' | 'cm3' | 'gal' | 'qt' | 'pt' | 'cup' | 'floz' | 'tbsp' | 'tsp' | 'ft3' | 'in3',
       }
       setResult(calculateVolumeConverter(input as Parameters<typeof calculateVolumeConverter>[0]))
+      track('result_shown', { slug: 'volume-converter', category: 'conversion' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

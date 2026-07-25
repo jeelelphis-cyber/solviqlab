@@ -4,12 +4,20 @@ import { useState, useEffect } from 'react'
 import { calculateIdealWeightCalculator } from '../../instruments/ideal-weight-calculator/lib/calculate.js'
 import type { IdealWeightCalculatorOutput } from '../../instruments/ideal-weight-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
+
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
 }
 
-export function IdealWeightCalculatorClient({ translations }: Props) {
+export function IdealWeightCalculatorClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [height, setHeight] = useState('')
@@ -25,12 +33,14 @@ export function IdealWeightCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'ideal-weight-calculator', category: 'health', lang })
     try {
       const input = {
     height: parseFloat(height),
     sex: sex as 'male' | 'female',
       }
       setResult(calculateIdealWeightCalculator(input as Parameters<typeof calculateIdealWeightCalculator>[0]))
+      track('result_shown', { slug: 'ideal-weight-calculator', category: 'health' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

@@ -3,6 +3,14 @@ import { useState, useEffect } from 'react'
 import { calculateSleepCalculator } from '../../instruments/sleep-calculator/lib/calculate.js'
 import type { SleepCalculatorOutput } from '../../instruments/sleep-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
+
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -62,7 +70,7 @@ function SleepCycleBar({ mode }: { mode: 'waketime' | 'bedtime' }) {
   )
 }
 
-export function SleepCalculatorClient({ translations }: Props) {
+export function SleepCalculatorClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [mode, setMode] = useState<'waketime' | 'bedtime'>('waketime')
@@ -81,8 +89,10 @@ export function SleepCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'sleep-calculator', category: 'health', lang })
     try {
       setResult(calculateSleepCalculator({ mode, targetTime, fallAsleepMinutes: parseInt(fallAsleepMinutes, 10) }))
+      track('result_shown', { slug: 'sleep-calculator', category: 'health' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

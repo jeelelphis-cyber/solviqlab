@@ -7,6 +7,13 @@ import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
 import { ShareButtons } from '../ShareButtons.js'
 
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -30,6 +37,7 @@ export function LoanCalculatorClient({ translations, lang }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'loan-calculator', category: 'finance', lang })
     try {
       const input = {
     principal: parseFloat(principal),
@@ -37,6 +45,7 @@ export function LoanCalculatorClient({ translations, lang }: Props) {
     termMonths: parseFloat(termMonths),
       }
       setResult(calculateLoanCalculator(input as Parameters<typeof calculateLoanCalculator>[0]))
+      track('result_shown', { slug: 'loan-calculator', category: 'finance' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

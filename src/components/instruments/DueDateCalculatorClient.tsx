@@ -4,6 +4,13 @@ import { calculateDueDate } from '../../instruments/due-date-calculator/lib/calc
 import type { DueDateCalculatorOutput, DueDateMethod } from '../../instruments/due-date-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
 
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -55,7 +62,7 @@ const TRIMESTER_COLORS: Record<number, { bg: string; text: string; border: strin
   },
 }
 
-export function DueDateCalculatorClient({ translations, lang: _lang }: Props) {
+export function DueDateCalculatorClient({ translations, lang }: Props) {
   const tr = (key: string) => t(key, translations)
 
   const [method, setMethod] = useState<DueDateMethod>('lmp')
@@ -73,9 +80,11 @@ export function DueDateCalculatorClient({ translations, lang: _lang }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'due-date-calculator', category: 'health', lang })
     try {
       const r = calculateDueDate({ method, date })
       setResult(r)
+      track('result_shown', { slug: 'due-date-calculator', category: 'health' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

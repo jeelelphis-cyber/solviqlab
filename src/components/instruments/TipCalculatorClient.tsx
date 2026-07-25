@@ -6,6 +6,13 @@ import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
 import { ShareButtons } from '../ShareButtons.js'
 
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -57,6 +64,7 @@ export function TipCalculatorClient({ translations, lang }: Props) {
   }, [billAmount, tipPercent, numPeople, taxPercent, showTax])
 
   function calculate() {
+    track('calculate_click', { slug: 'tip-calculator', category: 'finance', lang })
     const bill = parseFloat(billAmount)
     if (!billAmount || isNaN(bill)) {
       setError('Please enter a bill amount.')
@@ -70,6 +78,7 @@ export function TipCalculatorClient({ translations, lang }: Props) {
         numPeople,
         taxPercent: isNaN(tax) ? 0 : tax,
       }))
+      track('result_shown', { slug: 'tip-calculator', category: 'finance' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

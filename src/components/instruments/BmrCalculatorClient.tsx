@@ -4,12 +4,20 @@ import { useState, useEffect } from 'react'
 import { calculateBmrCalculator } from '../../instruments/bmr-calculator/lib/calculate.js'
 import type { BmrCalculatorOutput } from '../../instruments/bmr-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
+
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
 }
 
-export function BmrCalculatorClient({ translations }: Props) {
+export function BmrCalculatorClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [weight, setWeight] = useState('')
@@ -27,6 +35,7 @@ export function BmrCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'bmr-calculator', category: 'health', lang })
     try {
       const input = {
     weight: parseFloat(weight),
@@ -35,6 +44,7 @@ export function BmrCalculatorClient({ translations }: Props) {
     sex: sex as 'male' | 'female',
       }
       setResult(calculateBmrCalculator(input as Parameters<typeof calculateBmrCalculator>[0]))
+      track('result_shown', { slug: 'bmr-calculator', category: 'health' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

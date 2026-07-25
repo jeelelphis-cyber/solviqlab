@@ -4,6 +4,14 @@ import { useState, useEffect } from 'react'
 import { calculateRatioCalculator } from '../../instruments/ratio-calculator/lib/calculate.js'
 import type { RatioCalculatorOutput } from '../../instruments/ratio-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
+
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -26,6 +34,7 @@ export function RatioCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'ratio-calculator', category: 'math', lang: 'en' })
     try {
       const input = {
     a: parseFloat(a),
@@ -34,6 +43,7 @@ export function RatioCalculatorClient({ translations }: Props) {
     ...(c ? { c: parseFloat(c) } : {}),
       }
       setResult(calculateRatioCalculator(input as Parameters<typeof calculateRatioCalculator>[0]))
+      track('result_shown', { slug: 'ratio-calculator', category: 'math' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

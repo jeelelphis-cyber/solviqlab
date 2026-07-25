@@ -4,6 +4,13 @@ import { calculateCalories, convertLbToKg, convertFtInchesToCm } from '../../ins
 import type { CalorieCalculatorOutput, ActivityLevel, Goal } from '../../instruments/calorie-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
 
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -69,7 +76,7 @@ function MacroBar({ protein, carbs, fat, labelProtein, labelCarbs, labelFat }: {
   )
 }
 
-export function CalorieCalculatorClient({ translations }: Props) {
+export function CalorieCalculatorClient({ translations, lang }: Props) {
   const t = (key: string): string => (translations[key] as string | undefined) ?? key
 
   const [unitSystem, setUnitSystem] = useState<'metric' | 'imperial'>('metric')
@@ -94,6 +101,7 @@ export function CalorieCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'calorie-calculator', category: 'health', lang })
     try {
       const w = unitSystem === 'metric'
         ? parseFloat(weight)
@@ -106,6 +114,7 @@ export function CalorieCalculatorClient({ translations }: Props) {
       if (!w || !h || !a) { setError('Please fill in all required fields.'); return }
 
       setResult(calculateCalories({ weight_kg: w, height_cm: h, age: a, sex, activityLevel, goal }))
+      track('result_shown', { slug: 'calorie-calculator', category: 'health' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

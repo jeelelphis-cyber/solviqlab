@@ -3,6 +3,14 @@ import { useState, useEffect } from 'react'
 import { calculateOvulationCalculator } from '../../instruments/ovulation-calculator/lib/calculate.js'
 import type { OvulationCalculatorOutput } from '../../instruments/ovulation-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
+
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -58,7 +66,7 @@ function CycleTimeline({ result, cycleLength }: { result: OvulationCalculatorOut
   )
 }
 
-export function OvulationCalculatorClient({ translations }: Props) {
+export function OvulationCalculatorClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [lastPeriodDate, setLastPeriodDate] = useState('')
@@ -76,8 +84,10 @@ export function OvulationCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'ovulation-calculator', category: 'health', lang })
     try {
       setResult(calculateOvulationCalculator({ lastPeriodDate, cycleLength: parseInt(cycleLength, 10) }))
+      track('result_shown', { slug: 'ovulation-calculator', category: 'health' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

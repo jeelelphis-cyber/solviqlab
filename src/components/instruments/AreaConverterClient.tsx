@@ -5,12 +5,19 @@ import { calculateAreaConverter } from '../../instruments/area-converter/lib/cal
 import type { AreaConverterOutput } from '../../instruments/area-converter/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
 
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
 }
 
-export function AreaConverterClient({ translations }: Props) {
+export function AreaConverterClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [value, setValue] = useState('')
@@ -19,12 +26,14 @@ export function AreaConverterClient({ translations }: Props) {
   const [error, setError] = useState<string | null>(null)
 
   function calculate() {
+    track('calculate_click', { slug: 'area-converter', category: 'conversion', lang })
     try {
       const input = {
     value: parseFloat(value),
     fromUnit: fromUnit as 'm2' | 'km2' | 'cm2' | 'mm2' | 'ft2' | 'in2' | 'yd2' | 'mi2' | 'acre' | 'ha',
       }
       setResult(calculateAreaConverter(input as Parameters<typeof calculateAreaConverter>[0]))
+      track('result_shown', { slug: 'area-converter', category: 'conversion' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

@@ -4,12 +4,20 @@ import { useState, useEffect } from 'react'
 import { calculateTdeeCalculator } from '../../instruments/tdee-calculator/lib/calculate.js'
 import type { TdeeCalculatorOutput } from '../../instruments/tdee-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
+
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
 }
 
-export function TdeeCalculatorClient({ translations }: Props) {
+export function TdeeCalculatorClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [weight, setWeight] = useState('')
@@ -28,6 +36,7 @@ export function TdeeCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'tdee-calculator', category: 'health', lang })
     try {
       const input = {
     weight: parseFloat(weight),
@@ -37,6 +46,7 @@ export function TdeeCalculatorClient({ translations }: Props) {
     activityLevel: activityLevel as 'sedentary' | 'light' | 'moderate' | 'active' | 'very_active',
       }
       setResult(calculateTdeeCalculator(input as Parameters<typeof calculateTdeeCalculator>[0]))
+      track('result_shown', { slug: 'tdee-calculator', category: 'health' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

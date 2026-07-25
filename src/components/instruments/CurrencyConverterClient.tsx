@@ -5,6 +5,13 @@ import type { CurrencyConverterOutput } from '../../instruments/currency-convert
 import { CURRENCIES } from '../../lib/currencies.js'
 import { ShareButtons } from '../ShareButtons.js'
 
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -34,7 +41,7 @@ function formatResultAmount(amount: number, code: string): string {
     : `${formatted} ${currency.symbol}`
 }
 
-export function CurrencyConverterClient({ translations, rates, ratesUpdatedAt, ratesIsLive }: Props) {
+export function CurrencyConverterClient({ translations, lang, rates, ratesUpdatedAt, ratesIsLive }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [amount, setAmount] = useState('1')
@@ -96,7 +103,11 @@ export function CurrencyConverterClient({ translations, rates, ratesUpdatedAt, r
   }
 
   function handleCalculate() {
+    track('calculate_click', { slug: 'currency-converter', category: 'finance', lang })
     doConvert(amount, fromCurrency, toCurrency)
+    if (amount && !isNaN(parseFloat(amount))) {
+      track('result_shown', { slug: 'currency-converter', category: 'finance' })
+    }
   }
 
   function handleReset() {

@@ -4,6 +4,14 @@ import { useState, useEffect } from 'react'
 import { calculateAverageCalculator } from '../../instruments/average-calculator/lib/calculate.js'
 import type { AverageCalculatorOutput } from '../../instruments/average-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
+
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -24,6 +32,7 @@ export function AverageCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'average-calculator', category: 'math', lang: 'en' })
     try {
       const parsed = numbers.split(/[,;\s]+/).map(s => parseFloat(s.trim())).filter(n => !isNaN(n))
       if (parsed.length === 0) {
@@ -32,6 +41,7 @@ export function AverageCalculatorClient({ translations }: Props) {
         return
       }
       setResult(calculateAverageCalculator({ numbers: parsed }))
+      track('result_shown', { slug: 'average-calculator', category: 'math' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

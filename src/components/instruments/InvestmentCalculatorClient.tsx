@@ -6,6 +6,13 @@ import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
 import { ShareButtons } from '../ShareButtons.js'
 
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -128,6 +135,7 @@ export function InvestmentCalculatorClient({ translations, lang }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'investment-calculator', category: 'finance', lang })
     try {
       setResult(calculateInvestmentCalculator({
         initialAmount: parseFloat(initialAmount),
@@ -135,6 +143,7 @@ export function InvestmentCalculatorClient({ translations, lang }: Props) {
         annualReturn: parseFloat(annualReturn),
         years: parseFloat(years),
       }))
+      track('result_shown', { slug: 'investment-calculator', category: 'finance' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

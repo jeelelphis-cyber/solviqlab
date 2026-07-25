@@ -7,6 +7,13 @@ import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
 import { ShareButtons } from '../ShareButtons.js'
 
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -31,6 +38,7 @@ export function MortgageCalculatorClient({ translations, lang }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'mortgage-calculator', category: 'finance', lang })
     try {
       const input = {
     homePrice: parseFloat(homePrice),
@@ -39,6 +47,7 @@ export function MortgageCalculatorClient({ translations, lang }: Props) {
     termYears: termYears as '1' | '2' | '3' | '5' | '7' | '10' | '15' | '20' | '25' | '30',
       }
       setResult(calculateMortgageCalculator(input as Parameters<typeof calculateMortgageCalculator>[0]))
+      track('result_shown', { slug: 'mortgage-calculator', category: 'finance' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

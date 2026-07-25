@@ -4,12 +4,19 @@ import { calculateAreaCalculator } from '../../instruments/area-calculator/lib/c
 import type { AreaCalculatorOutput } from '../../instruments/area-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
 
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
 }
 
-export function AreaCalculatorClient({ translations }: Props) {
+export function AreaCalculatorClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [shape, setShape] = useState('rectangle')
@@ -30,6 +37,7 @@ export function AreaCalculatorClient({ translations }: Props) {
   const needsH = shape === 'trapezoid'
 
   function calculate() {
+    track('calculate_click', { slug: 'area-calculator', category: 'conversion', lang })
     try {
       const input = {
         shape: shape as 'rectangle' | 'square' | 'circle' | 'triangle' | 'trapezoid' | 'ellipse',
@@ -38,6 +46,7 @@ export function AreaCalculatorClient({ translations }: Props) {
         ...(h ? { h: parseFloat(h) } : {}),
       }
       setResult(calculateAreaCalculator(input))
+      track('result_shown', { slug: 'area-calculator', category: 'conversion' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

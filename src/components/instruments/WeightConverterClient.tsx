@@ -5,12 +5,19 @@ import { calculateWeightConverter } from '../../instruments/weight-converter/lib
 import type { WeightConverterOutput } from '../../instruments/weight-converter/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
 
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
 }
 
-export function WeightConverterClient({ translations }: Props) {
+export function WeightConverterClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [value, setValue] = useState('')
@@ -19,12 +26,14 @@ export function WeightConverterClient({ translations }: Props) {
   const [error, setError] = useState<string | null>(null)
 
   function calculate() {
+    track('calculate_click', { slug: 'weight-converter', category: 'conversion', lang })
     try {
       const input = {
     value: parseFloat(value),
     fromUnit: fromUnit as 'kg' | 'g' | 'mg' | 'lb' | 'oz' | 'st' | 't' | 'ton',
       }
       setResult(calculateWeightConverter(input as Parameters<typeof calculateWeightConverter>[0]))
+      track('result_shown', { slug: 'weight-converter', category: 'conversion' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

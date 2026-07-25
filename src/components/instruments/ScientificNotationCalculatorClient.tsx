@@ -4,6 +4,14 @@ import { useState, useEffect } from 'react'
 import { calculateScientificNotationCalculator } from '../../instruments/scientific-notation-calculator/lib/calculate.js'
 import type { ScientificNotationCalculatorOutput } from '../../instruments/scientific-notation-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
+
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -24,11 +32,13 @@ export function ScientificNotationCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'scientific-notation-calculator', category: 'math', lang: 'en' })
     try {
       const input = {
     value: parseFloat(value),
       }
       setResult(calculateScientificNotationCalculator(input as Parameters<typeof calculateScientificNotationCalculator>[0]))
+      track('result_shown', { slug: 'scientific-notation-calculator', category: 'math' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

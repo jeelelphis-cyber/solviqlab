@@ -6,6 +6,14 @@ import type { DiscountCalculatorOutput } from '../../instruments/discount-calcul
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
 import { ShareButtons } from '../ShareButtons.js'
+
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -28,12 +36,14 @@ export function DiscountCalculatorClient({ translations, lang }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'discount-calculator', category: 'finance', lang })
     try {
       const input = {
     originalPrice: parseFloat(originalPrice),
     discountPercent: parseFloat(discountPercent),
       }
       setResult(calculateDiscountCalculator(input as Parameters<typeof calculateDiscountCalculator>[0]))
+      track('result_shown', { slug: 'discount-calculator', category: 'finance' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

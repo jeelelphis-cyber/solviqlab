@@ -6,6 +6,14 @@ import type { VatCalculatorOutput } from '../../instruments/vat-calculator/lib/t
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
 import { ShareButtons } from '../ShareButtons.js'
+
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -29,6 +37,7 @@ export function VatCalculatorClient({ translations, lang }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'vat-calculator', category: 'finance', lang })
     try {
       const input = {
     amount: parseFloat(amount),
@@ -36,6 +45,7 @@ export function VatCalculatorClient({ translations, lang }: Props) {
     mode: mode as 'add' | 'remove',
       }
       setResult(calculateVatCalculator(input as Parameters<typeof calculateVatCalculator>[0]))
+      track('result_shown', { slug: 'vat-calculator', category: 'finance' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

@@ -5,12 +5,19 @@ import { calculateVolumeCalculator } from '../../instruments/volume-calculator/l
 import type { VolumeCalculatorOutput } from '../../instruments/volume-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
 
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
 }
 
-export function VolumeCalculatorClient({ translations }: Props) {
+export function VolumeCalculatorClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [shape, setShape] = useState('cube')
@@ -28,6 +35,7 @@ export function VolumeCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'volume-calculator', category: 'conversion', lang })
     try {
       const input = {
     shape: shape as 'cube' | 'sphere' | 'cylinder' | 'cone' | 'rectangular_prism',
@@ -38,6 +46,7 @@ export function VolumeCalculatorClient({ translations }: Props) {
     ...(h ? { h: parseFloat(h) } : {}),
       }
       setResult(calculateVolumeCalculator(input as Parameters<typeof calculateVolumeCalculator>[0]))
+      track('result_shown', { slug: 'volume-calculator', category: 'conversion' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

@@ -4,6 +4,14 @@ import { useState, useEffect } from 'react'
 import { calculateFractionCalculator } from '../../instruments/fraction-calculator/lib/calculate.js'
 import type { FractionCalculatorOutput } from '../../instruments/fraction-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
+
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -28,6 +36,7 @@ export function FractionCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'fraction-calculator', category: 'math', lang: 'en' })
     try {
       const input = {
     numerator1: parseFloat(numerator1),
@@ -37,6 +46,7 @@ export function FractionCalculatorClient({ translations }: Props) {
     denominator2: parseFloat(denominator2),
       }
       setResult(calculateFractionCalculator(input as Parameters<typeof calculateFractionCalculator>[0]))
+      track('result_shown', { slug: 'fraction-calculator', category: 'math' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)

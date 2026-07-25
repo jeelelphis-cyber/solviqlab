@@ -4,6 +4,13 @@ import { calculatePregnancy } from '../../instruments/pregnancy-calculator/lib/c
 import type { PregnancyCalculatorOutput, InputMethod } from '../../instruments/pregnancy-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
 
+// ─── Analytics ───────────────────────────────────────────────────────────────
+function track(event: string, params: Record<string, string>) {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    ;(window as { gtag: (cmd: string, event: string, params: Record<string, string>) => void }).gtag('event', event, params)
+  }
+}
+
 interface Props {
   translations: Record<string, unknown>
   lang: string
@@ -27,7 +34,7 @@ const TRIMESTER_COLORS: Record<number, { bg: string; text: string; border: strin
   3: { bg: 'bg-purple-50 dark:bg-purple-950/40', text: 'text-purple-700 dark:text-purple-300', border: 'border-purple-300 dark:border-purple-700', badge: 'bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300' },
 }
 
-export function PregnancyCalculatorClient({ translations }: Props) {
+export function PregnancyCalculatorClient({ translations, lang }: Props) {
   const t = (key: string): string => (translations[key] as string | undefined) ?? key
 
   const [method, setMethod] = useState<InputMethod>('lmp')
@@ -45,9 +52,11 @@ export function PregnancyCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
+    track('calculate_click', { slug: 'pregnancy-calculator', category: 'health', lang })
     try {
       const r = calculatePregnancy({ method, date })
       setResult(r)
+      track('result_shown', { slug: 'pregnancy-calculator', category: 'health' })
       setError(null)
     } catch (err) {
       setError((err as Error).message)
