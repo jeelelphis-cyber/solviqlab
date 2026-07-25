@@ -23,7 +23,7 @@ export function TdeeCalculatorClient({ translations }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'tdee-calculator', name: 'TDEE Calculator', value: result.tdee, label: 'TDEE', unit: 'kcal/day', metadata: result }
+      detail: { slug: 'tdee-calculator', name: 'TDEE Calculator', value: result.tdee, label: 'TDEE', unit: 'kcal/day', miaFact: `TDEE: ${Math.round(result.tdee)} kcal/day — BMR: ${Math.round(result.bmr)} kcal`, metadata: result }
     }))
   }, [result])
 

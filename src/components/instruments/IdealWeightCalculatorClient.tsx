@@ -20,7 +20,7 @@ export function IdealWeightCalculatorClient({ translations }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'ideal-weight-calculator', name: 'Ideal Weight Calculator', value: result.average, label: 'Ideal Weight', unit: 'kg', metadata: result }
+      detail: { slug: 'ideal-weight-calculator', name: 'Ideal Weight Calculator', value: result.average, label: 'Ideal Weight', unit: 'kg', miaFact: `Ideal weight: ${result.average.toFixed(1)} kg`, metadata: result }
     }))
   }, [result])
 

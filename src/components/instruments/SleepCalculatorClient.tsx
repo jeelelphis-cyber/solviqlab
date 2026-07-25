@@ -76,7 +76,7 @@ export function SleepCalculatorClient({ translations }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'sleep-calculator', name: 'Sleep Calculator', value: 0, label: result.recommendation, unit: '', metadata: result }
+      detail: { slug: 'sleep-calculator', name: 'Sleep Calculator', value: 0, label: result.recommendation, unit: '', miaFact: `Optimal sleep: wake at ${result.cycle5Time} (5 cycles)`, metadata: result }
     }))
   }, [result])
 
