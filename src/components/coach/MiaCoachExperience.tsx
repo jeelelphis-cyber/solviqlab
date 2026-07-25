@@ -68,7 +68,7 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
 
   function handleVideoCompleted() {
     actions.track('video_completed')
-    actions.advance()  // video → first_action
+    // Don't auto-advance — let user rewatch and click CTA manually
   }
 
   function handleUpgrade() {

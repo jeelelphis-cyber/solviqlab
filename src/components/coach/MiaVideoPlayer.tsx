@@ -193,16 +193,20 @@ export function MiaVideoPlayer({ videoId, name, score = null, cluster = 'weight'
       {played && (
         <div className="rounded-2xl border border-violet-200 dark:border-violet-800 bg-violet-50 dark:bg-violet-900/20 p-6 space-y-4">
           <p className="font-medium text-gray-900 dark:text-white">
-            Mia is already preparing your first weekly plan, {name}.
+            {lang === 'uk'
+              ? `Міа вже готує твій перший тижневий план, ${name}.`
+              : `Mia is already preparing your first weekly plan, ${name}.`}
           </p>
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            7 days free. No card needed. Start when you're ready.
+            {lang === 'uk'
+              ? '7 днів безкоштовно. Картка не потрібна.'
+              : '7 days free. No card needed. Start when you\'re ready.'}
           </p>
           <button
             onClick={onUpgrade}
             className="w-full rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-medium py-3.5 hover:opacity-90 transition-opacity"
           >
-            Continue with Mia
+            {lang === 'uk' ? 'Продовжити з Міа →' : 'Continue with Mia →'}
           </button>
         </div>
       )}
