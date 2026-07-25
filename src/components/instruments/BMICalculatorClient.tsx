@@ -357,9 +357,6 @@ export function BMICalculatorClient({ translations, lang }: Props) {
     : null
   const cfg = result ? CATEGORY_CONFIG[result.category] : null
   const form = t.form ?? {}
-  const resultT = t.result as Record<string, unknown> | undefined
-  const cats = resultT?.['categories'] as Record<string, string> | undefined
-  const categoryLabel = (cat: string) => cats?.[cat] ?? cfg?.verdict ?? cat
   const s = uiT(lang)
 
   return (

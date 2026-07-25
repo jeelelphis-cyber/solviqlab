@@ -142,7 +142,7 @@ export function createPlatformPipeline(engines: PlatformEngines): PipelineDefini
           updater.addMemoryFact(userId, {
             id:         `fact-${event.slug}`,
             text:       event.miaFact,
-            category:   'health_metric',
+            category:   'fact',
             importance: 'high',
             addedAt:    new Date().toISOString(),
           })

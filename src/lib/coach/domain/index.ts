@@ -1,0 +1,27 @@
+// Coach Platform — Domain barrel export
+
+export type {
+  CoachPersonaId,
+  CoachSessionId,
+  CoachPlanId,
+  CoachGoalId,
+  CoachTaskId,
+  CoachInterventionId,
+  DailyReviewId,
+  CoachNotificationId,
+  CoachPhase,
+  ScriptType,
+  MotivationState,
+  CoachPersona,
+  CoachGoal,
+  CoachTask,
+  CoachPlan,
+  CoachSession,
+  CoachDecision,
+  DailyReview,
+  DailyHistory,
+  DailyMoodEnergyRecord,
+  CoachIntervention,
+  CoachRoutine,
+  CoachNotification,
+} from './types'
