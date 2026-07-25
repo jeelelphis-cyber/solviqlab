@@ -12,6 +12,7 @@ import { useSessionFlow }  from '@/lib/session/use-session-flow'
 import type { UserGraph }  from '@/lib/graph/types'
 import { MiaOnboarding }   from './MiaOnboarding'
 import { MiaVideoPlayer }  from './MiaVideoPlayer'
+import { TodaysPlan }      from './TodaysPlan'
 
 interface Props {
   userId:        string
@@ -67,8 +68,13 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
   }
 
   function handleVideoCompleted() {
+    // Transition to today_plan after video finishes
+    handleVideoWatched()
+  }
+
+  function handleVideoWatched() {
     actions.track('video_completed')
-    // Don't auto-advance — let user rewatch and click CTA manually
+    actions.goto('today_plan')
   }
 
   function handleUpgrade() {
@@ -162,6 +168,37 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
           <p className="text-sm text-gray-400 mt-1">{genSub}</p>
         </div>
       </div>
+    )
+  }
+
+  // ── Today's Plan — shown after video ─────────────────────────────────────
+  if (state === 'today_plan') {
+    const emptyGraph: UserGraph = {
+      userId:    'anon',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      version:   1,
+      identity:     { name: data.name ?? null, userType: 'anonymous', language: lang, timezone: null, age: null, updatedAt: new Date().toISOString(), confidence: 'inferred' },
+      goals:        { items: [], updatedAt: new Date().toISOString(), confidence: 'stated' },
+      habits:       { items: [], updatedAt: new Date().toISOString(), confidence: 'stated' },
+      assessments:  { items: [], updatedAt: new Date().toISOString(), confidence: 'inferred' },
+      journey:      { activeCluster: data.cluster ?? null, currentPhase: null, progress: null, completedSteps: [], updatedAt: new Date().toISOString(), confidence: 'inferred' },
+      coachMemory:  { facts: [], communicationStyle: null, preferredTopics: [], updatedAt: new Date().toISOString(), confidence: 'inferred' },
+      preferences:  { language: lang, responseLength: null, notificationsEnabled: true, updatedAt: new Date().toISOString(), confidence: 'inferred' },
+      retention:    { daysSinceActive: 0, dormancyLevel: 'none', lastReminderFiredAt: null, updatedAt: new Date().toISOString(), confidence: 'inferred' },
+      premium:      { tier: 'free', quotaUsedToday: 0, quotaLimit: 5, updatedAt: new Date().toISOString(), confidence: 'inferred' },
+      dailyHistory: { entries: [], updatedAt: new Date().toISOString(), confidence: 'inferred' },
+      quizResults:  { items: [], updatedAt: new Date().toISOString(), confidence: 'inferred' },
+    }
+
+    const planGraph = prefillGraph ?? emptyGraph
+
+    return (
+      <TodaysPlan
+        graph={planGraph}
+        lang={lang === 'uk' ? 'uk' : 'en'}
+        onRegister={handleUpgrade}
+      />
     )
   }
 

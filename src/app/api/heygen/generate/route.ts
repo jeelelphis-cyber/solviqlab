@@ -11,9 +11,10 @@ import { MiaScriptBuilder } from '@/lib/heygen/script-builder'
 import type { UserGraph }   from '@/lib/graph/types'
 
 interface GenerateRequest {
-  name:  string
-  graph: UserGraph
-  lang?: string
+  name:    string
+  graph:   UserGraph
+  lang?:   string
+  userId?: string
 }
 
 function getService(): HeyGenService {
@@ -30,12 +31,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
   }
 
-  const { name, graph, lang = 'en' } = body
+  const { name, graph, lang = 'en', userId } = body
   if (!name || !graph) {
     return NextResponse.json({ error: 'name and graph required' }, { status: 400 })
   }
 
-  const script = new MiaScriptBuilder().build(graph, name, lang)
+  const script = new MiaScriptBuilder().build(graph, name, lang, userId)
 
   let service: HeyGenService
   try {
@@ -57,6 +58,7 @@ export async function POST(req: NextRequest) {
         text:       script.text,
         wordCount:  script.wordCount,
         estSeconds: script.estSeconds,
+        variantIds: script.variantIds,
       },
     })
   } catch (err) {

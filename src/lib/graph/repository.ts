@@ -113,6 +113,11 @@ function buildDefault(userId: string, overrides: Partial<UserGraph>): UserGraph 
       updatedAt:  ts,
       confidence: 'inferred',
     },
+    quizResults: {
+      items:      [],
+      updatedAt:  ts,
+      confidence: 'inferred',
+    },
   }
 
   return { ...base, ...overrides }

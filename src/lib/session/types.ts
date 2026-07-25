@@ -15,6 +15,7 @@ export const SESSION_FLOW = [
   'generating',
   'video',
   'first_action',
+  'today_plan',
   'premium',
   'return_tomorrow',
 ] as const

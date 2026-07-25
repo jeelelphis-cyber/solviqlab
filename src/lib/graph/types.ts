@@ -152,6 +152,22 @@ export interface DailyHistoryNode extends GraphNode {
   readonly entries: readonly DailyHistoryEntry[]
 }
 
+// ── Quiz Results ──────────────────────────────────────────────────────────────
+// Added in Sprint M-1. Each completed quiz stores its result here.
+
+export interface QuizResultEntry {
+  readonly slug:        string
+  readonly score:       number
+  readonly bucket:      string
+  readonly description: string
+  readonly miaHook:     string
+  readonly answeredAt:  string  // ISO-8601
+}
+
+export interface QuizResultsNode extends GraphNode {
+  readonly items: readonly QuizResultEntry[]
+}
+
 // ── Root Graph ────────────────────────────────────────────────────────────────
 
 export interface UserGraph {
@@ -169,5 +185,6 @@ export interface UserGraph {
   preferences:  PreferencesNode
   retention:    RetentionNode
   premium:      PremiumNode
-  dailyHistory: DailyHistoryNode
+  dailyHistory:  DailyHistoryNode
+  quizResults?:  QuizResultsNode   // Sprint M-1; optional for back-compat with existing graphs
 }

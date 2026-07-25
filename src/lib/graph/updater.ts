@@ -10,6 +10,7 @@ import type { GraphRepository } from './repository'
 import type {
   UserGraph, GoalEntry, HabitEntry, AssessmentEntry,
   MemoryFact, CommunicationStyle, ResponseLength, DailyHistoryEntry,
+  QuizResultEntry,
 } from './types'
 
 function now(): string { return new Date().toISOString() }
@@ -195,4 +196,47 @@ export class GraphUpdater {
     const entries = graph.dailyHistory.entries
     return entries.slice(-n)
   }
+
+  // ── Quiz Results ──────────────────────────────────────────────────────────
+  // Sprint M-1: persist completed quiz results into the graph.
+
+  saveQuizResult(userId: string, result: QuizResultEntry): void {
+    patch(this.repo, userId, 'quizResults', cur => {
+      // Replace existing result for same slug if any
+      const filtered = (cur?.items ?? []).filter(r => r.slug !== result.slug)
+      return {
+        ...(cur ?? {}),
+        items:      [...filtered, result],
+        updatedAt:  now(),
+        confidence: 'stated' as const,
+      }
+    })
+  }
+
+  getQuizResult(userId: string, slug: string): QuizResultEntry | null {
+    const graph = this.repo.getOrCreate(userId)
+    return graph.quizResults?.items.find(r => r.slug === slug) ?? null
+  }
+}
+
+// ── Standalone pure helpers (for use in client components without a repo) ─────
+
+/** Save a QuizResult into a UserGraph value object (does NOT persist — use GraphUpdater for persistence). */
+export function saveQuizResult(graph: UserGraph, result: QuizResultEntry): UserGraph {
+  const existing = graph.quizResults?.items ?? []
+  const filtered = existing.filter(r => r.slug !== result.slug)
+  return {
+    ...graph,
+    quizResults: {
+      items:      [...filtered, result],
+      updatedAt:  new Date().toISOString(),
+      confidence: 'stated',
+    },
+    updatedAt: new Date().toISOString(),
+  }
+}
+
+/** Read the latest QuizResult for a slug from a UserGraph value object. */
+export function getQuizResult(graph: UserGraph, slug: string): QuizResultEntry | null {
+  return graph.quizResults?.items.find(r => r.slug === slug) ?? null
 }
