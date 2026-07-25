@@ -231,6 +231,7 @@ export function BMICalculatorClient({ translations, lang }: Props) {
     form: Record<string, string>
     result: Record<string, unknown>
     validation: Record<string, string>
+    aria: Record<string, string>
   }
 
   const [unit, setUnit] = useState<UnitSystem>('metric')
@@ -383,7 +384,7 @@ export function BMICalculatorClient({ translations, lang }: Props) {
         aria-describedby="bmi-form-desc"
       >
         <p id="bmi-form-desc" className="sr-only">
-          {t('form_description')}
+          {t.aria?.['form_description'] ?? 'Enter your height and weight to calculate your Body Mass Index.'}
         </p>
 
         {/* Height */}
