@@ -26,6 +26,7 @@ import type { IntentCluster }               from '@/lib/assessment/types'
 import { JourneyProgress }        from '@/components/journey/JourneyProgress'
 import { getJourneyCopy }         from '@/components/journey/journey-copy'
 import { getJourneyStrings }      from '@/lib/journey/strings'
+import { localizeJourneyName }    from '@/lib/journey/localize'
 import { DashboardHero }          from './DashboardHero'
 import { DashboardNextAction }    from './DashboardNextAction'
 import { DashboardActivePlan }    from './DashboardActivePlan'
@@ -159,7 +160,7 @@ export function JourneyDashboard({ lang }: Props) {
         cluster={primaryCluster}
         lang={lang}
         nextSlug={decision?.slug ?? null}
-        nextName={decision?.name ?? null}
+        nextName={decision?.name ? localizeJourneyName(decision.name, lang) : null}
       />
 
       {/* 3. Active Plan — conditional */}

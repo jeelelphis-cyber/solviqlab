@@ -231,13 +231,24 @@ type JourneyOverride = Pick<JourneyDefinition, 'name' | 'profileLabel' | 'unlock
 
 const JOURNEY_OVERRIDES: Partial<Record<Lang, Partial<Record<string, JourneyOverride>>>> = {
   uk: {
-    health:       { name: 'Health Journey',        profileLabel: 'Профіль здоров\'я',    unlockReward: 'Особистий звіт про здоров\'я' },
+    health:       { name: 'Шлях здоров\'я',         profileLabel: 'Профіль здоров\'я',    unlockReward: 'Особистий звіт про здоров\'я' },
     weight:       { name: 'Управління вагою',      profileLabel: 'Профіль ваги',         unlockReward: 'Особистий план ваги' },
     sleep:        { name: 'Сон та оздоровлення',   profileLabel: 'Профіль оздоровлення', unlockReward: 'Аналіз самопочуття' },
     finance:      { name: 'Фінансовий шлях',       profileLabel: 'Фінансовий профіль',   unlockReward: 'Особистий фінансовий звіт' },
     homebuying:   { name: 'Купівля житла',          profileLabel: 'Профіль покупця',      unlockReward: 'Звіт про доступність' },
     family:       { name: 'Планування сім\'ї',     profileLabel: 'Сімейний профіль',     unlockReward: 'Персоналізований план' },
   },
+}
+
+// ── English journey name → journey ID (for reverse lookup) ───────────────────
+
+const JOURNEY_ID_BY_ENGLISH_NAME: Record<string, string> = {
+  'Health Journey': 'health',
+  'Weight Journey': 'weight',
+  'Sleep & Wellness': 'sleep',
+  'Financial Journey': 'finance',
+  'Home Buying': 'homebuying',
+  'Family Planning': 'family',
 }
 
 // ── Public API ────────────────────────────────────────────────────────────────
@@ -253,6 +264,12 @@ export function localizeNextStep(step: NextStepData, lang: string): NextStepData
     ?? NEXT_STEP_OVERRIDES[lang]?.[step.nextSlug]
   if (!override) return step
   return { ...step, ...override }
+}
+
+export function localizeJourneyName(name: string, lang: string): string {
+  const journeyId = JOURNEY_ID_BY_ENGLISH_NAME[name]
+  if (!journeyId) return name
+  return JOURNEY_OVERRIDES[lang]?.[journeyId]?.name ?? name
 }
 
 export function localizeReward(slug: string, reward: StepReward, lang: string): StepReward {

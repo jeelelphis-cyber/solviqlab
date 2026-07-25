@@ -29,7 +29,8 @@ import { JourneyCard }     from './JourneyCard'
 import { JourneyCTA }      from './JourneyCTA'
 import { JourneyProgress } from './JourneyProgress'
 import { JourneyUnlock }   from './JourneyUnlock'
-import { getJourneyStrings } from '@/lib/journey/strings'
+import { getJourneyStrings }   from '@/lib/journey/strings'
+import { localizeJourneyName } from '@/lib/journey/localize'
 
 import {
   TIME_ESTIMATE,
@@ -111,8 +112,10 @@ export function JourneyExperience({ cluster, lang, currentSlug }: Props) {
   const decision = intent.recommendationDecision
   const count    = intent.completedInstruments.length
 
-  const nextSlug = decision?.slug ?? null
-  const nextName = buildNextName(nextSlug, phase, decision?.name ?? null, cluster, s.nextStepBadge, copy.clusterAssessmentName[cluster])
+  const nextSlug     = decision?.slug ?? null
+  const rawName      = decision?.name ?? null
+  const localName    = rawName ? localizeJourneyName(rawName, lang) : null
+  const nextName     = buildNextName(nextSlug, phase, localName, cluster, s.nextStepBadge, copy.clusterAssessmentName[cluster])
   const nextHref = buildNextHref(nextSlug, cluster, phase, lang)
   const nextTime = TIME_ESTIMATE[nextSlug ?? ''] ?? TIME_ESTIMATE[`${cluster}-assessment`] ?? '3 min'
 

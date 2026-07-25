@@ -26,6 +26,8 @@
   "opt_lose": "Схуднути",
   "opt_maintain": "Підтримати вагу",
   "opt_gain": "Набрати м'язи",
+  "section_weight_loss": "Схуднення",
+  "section_weight_gain": "Набір ваги",
   "label_bmr": "Базальний метаболізм (BMR)",
   "label_maintenance": "Калорії для підтримки ваги",
   "label_mild_loss": "Легке схуднення (−0,25 кг/тиждень)",

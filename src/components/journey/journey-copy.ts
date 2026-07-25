@@ -282,9 +282,8 @@ function buildHeroSubUk(intent: IntentState): string {
 }
 
 function buildWhyThisUk(intent: IntentState): string {
-  const { currentPhase, completedInstruments, latestAssessment, activePlan, recommendationDecision, clusterId } = intent
+  const { currentPhase, completedInstruments, latestAssessment, activePlan, clusterId } = intent
   const count = completedInstruments.length
-  if (recommendationDecision?.reasons[0]) return recommendationDecision.reasons[0]
   if (currentPhase === 'assessment') {
     if (latestAssessment) return `Ваша оцінка (${latestAssessment.overall_score}/100) відкриває стратегію, яка підходить саме вам.`
     return `Без цієї оцінки ми не зможемо побудувати план ${clusterId}, який враховує ваш спосіб життя.`

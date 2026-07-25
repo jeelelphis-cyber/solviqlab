@@ -53,6 +53,7 @@ export interface JourneyStrings {
   readonly regBenefit4: string
   readonly profileSavedTitle: string
   readonly profileSavedSubtitle: string
+  readonly miaIsReady: string
 }
 
 type Lang = 'en' | 'uk' | 'es' | 'pt' | 'fr' | 'de' | 'pl' | 'tr' | 'it' | 'nl'
@@ -98,6 +99,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     regBenefit4: '✓ AI consultation unlocked at 80% readiness',
     profileSavedTitle: 'Profile saved!',
     profileSavedSubtitle: 'Your results are synced. Check your email to verify.',
+    miaIsReady: 'Mia is ready',
   },
 
   uk: {
@@ -140,6 +142,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     regBenefit4: '✓ AI консультація розблокована при 80% готовності',
     profileSavedTitle: 'Профіль збережено!',
     profileSavedSubtitle: 'Ваші результати синхронізовані. Перевірте email для підтвердження.',
+    miaIsReady: 'Міа готова',
   },
 
   es: {
@@ -182,6 +185,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     regBenefit4: '✓ AI consultation unlocked at 80% readiness',
     profileSavedTitle: 'Profile saved!',
     profileSavedSubtitle: 'Your results are synced. Check your email to verify.',
+    miaIsReady: 'Mia is ready',
   },
 
   pt: {
@@ -224,6 +228,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     regBenefit4: '✓ AI consultation unlocked at 80% readiness',
     profileSavedTitle: 'Profile saved!',
     profileSavedSubtitle: 'Your results are synced. Check your email to verify.',
+    miaIsReady: 'Mia is ready',
   },
 
   fr: {
@@ -266,6 +271,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     regBenefit4: '✓ AI consultation unlocked at 80% readiness',
     profileSavedTitle: 'Profile saved!',
     profileSavedSubtitle: 'Your results are synced. Check your email to verify.',
+    miaIsReady: 'Mia is ready',
   },
 
   de: {
@@ -308,6 +314,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     regBenefit4: '✓ AI consultation unlocked at 80% readiness',
     profileSavedTitle: 'Profile saved!',
     profileSavedSubtitle: 'Your results are synced. Check your email to verify.',
+    miaIsReady: 'Mia is ready',
   },
 
   pl: {
@@ -350,6 +357,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     regBenefit4: '✓ AI consultation unlocked at 80% readiness',
     profileSavedTitle: 'Profile saved!',
     profileSavedSubtitle: 'Your results are synced. Check your email to verify.',
+    miaIsReady: 'Mia is ready',
   },
 
   tr: {
@@ -392,6 +400,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     regBenefit4: '✓ AI consultation unlocked at 80% readiness',
     profileSavedTitle: 'Profile saved!',
     profileSavedSubtitle: 'Your results are synced. Check your email to verify.',
+    miaIsReady: 'Mia is ready',
   },
 
   it: {
@@ -434,6 +443,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     regBenefit4: '✓ AI consultation unlocked at 80% readiness',
     profileSavedTitle: 'Profile saved!',
     profileSavedSubtitle: 'Your results are synced. Check your email to verify.',
+    miaIsReady: 'Mia is ready',
   },
 
   nl: {
@@ -476,6 +486,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     regBenefit4: '✓ AI consultation unlocked at 80% readiness',
     profileSavedTitle: 'Profile saved!',
     profileSavedSubtitle: 'Your results are synced. Check your email to verify.',
+    miaIsReady: 'Mia is ready',
   },
 }
 

@@ -346,7 +346,7 @@ export default function InstrumentPage({ params }: PageProps) {
         </div>
 
         {/* Mia AI Coach — appears after health calculator result */}
-        <MiaCoachBlock />
+        <MiaCoachBlock lang={lang} />
 
         {/* V4-1 First Journey Experience — reads live IntentState, animates in after result */}
         <JourneyExperience

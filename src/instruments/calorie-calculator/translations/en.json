@@ -26,6 +26,8 @@
   "opt_lose": "Lose weight",
   "opt_maintain": "Maintain weight",
   "opt_gain": "Gain muscle",
+  "section_weight_loss": "Weight Loss",
+  "section_weight_gain": "Weight Gain",
   "label_bmr": "Basal Metabolic Rate (BMR)",
   "label_maintenance": "Maintenance Calories",
   "label_mild_loss": "Mild Weight Loss (−0.25 kg/week)",

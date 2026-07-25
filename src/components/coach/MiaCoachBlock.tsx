@@ -12,6 +12,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { MiaCoachExperience }           from './MiaCoachExperience'
 import { getBrowserRuntime }            from '@/lib/runtime'
+import { getJourneyStrings }            from '@/lib/journey/strings'
 import type { InstrumentResult }        from '@/lib/products/types'
 
 const HEALTH_CLUSTERS = new Set(['weight', 'sleep', 'pregnancy'])
@@ -25,7 +26,12 @@ function detectCluster(slug: string, metadata: Record<string, unknown>): string 
   return ''
 }
 
-export function MiaCoachBlock() {
+interface MiaCoachBlockProps {
+  readonly lang?: string
+}
+
+export function MiaCoachBlock({ lang = 'en' }: MiaCoachBlockProps) {
+  const s = getJourneyStrings(lang)
   const [visible, setVisible] = useState(false)
   const [result,  setResult]  = useState<InstrumentResult | null>(null)
   const [userId,  setUserId]  = useState<string>('demo')
@@ -67,7 +73,7 @@ export function MiaCoachBlock() {
       <div className="flex items-center gap-2 px-5 pt-4 pb-0">
         <div className="w-2 h-2 rounded-full bg-emerald-400" />
         <span className="text-xs font-semibold text-violet-600 dark:text-violet-400 tracking-wide uppercase">
-          Mia is ready
+          {s.miaIsReady}
         </span>
       </div>
 

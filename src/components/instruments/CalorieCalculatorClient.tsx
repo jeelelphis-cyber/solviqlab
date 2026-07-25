@@ -260,7 +260,7 @@ export function CalorieCalculatorClient({ translations }: Props) {
                 <span className="text-content-primary">{result.maintenance.toLocaleString()} kcal</span>
               </div>
               <div className="pt-1 pb-1">
-                <div className="text-xs text-content-tertiary mb-2 uppercase tracking-wide">Weight Loss</div>
+                <div className="text-xs text-content-tertiary mb-2 uppercase tracking-wide">{t('section_weight_loss') ?? 'Weight Loss'}</div>
                 <div className="space-y-1.5">
                   {[
                     { label: t('label_mild_loss'), val: result.mildLoss, color: 'text-orange-500' },
@@ -275,7 +275,7 @@ export function CalorieCalculatorClient({ translations }: Props) {
                 </div>
               </div>
               <div className="pt-1 pb-1">
-                <div className="text-xs text-content-tertiary mb-2 uppercase tracking-wide">Weight Gain</div>
+                <div className="text-xs text-content-tertiary mb-2 uppercase tracking-wide">{t('section_weight_gain') ?? 'Weight Gain'}</div>
                 <div className="space-y-1.5">
                   {[
                     { label: t('label_mild_gain'), val: result.mildGain, color: 'text-blue-500' },
