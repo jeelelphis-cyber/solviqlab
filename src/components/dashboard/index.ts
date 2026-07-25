@@ -1,0 +1,6 @@
+export { JourneyDashboard }      from './JourneyDashboard'
+export { DashboardHero }         from './DashboardHero'
+export { DashboardNextAction }   from './DashboardNextAction'
+export { DashboardActivePlan }   from './DashboardActivePlan'
+export { DashboardAchievements } from './DashboardAchievements'
+export { DashboardCoachInsight } from './DashboardCoachInsight'
