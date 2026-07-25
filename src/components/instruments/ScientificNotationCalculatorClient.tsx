@@ -17,7 +17,7 @@ interface Props {
   lang: string
 }
 
-export function ScientificNotationCalculatorClient({ translations }: Props) {
+export function ScientificNotationCalculatorClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [value, setValue] = useState('')

@@ -17,7 +17,7 @@ interface Props {
   lang: string
 }
 
-export function AverageCalculatorClient({ translations }: Props) {
+export function AverageCalculatorClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [numbers, setNumbers] = useState('')

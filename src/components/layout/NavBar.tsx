@@ -58,6 +58,7 @@ function LanguageSwitcher({ lang, slug }: { lang: string; slug?: string }) {
   const ref = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
   const router = useRouter()
+  const pathname = usePathname()
 
   const current = LANGUAGES.find(l => l.code === lang) ?? LANGUAGES[0]!
   const filtered = LANGUAGES.filter(l =>
@@ -84,7 +85,9 @@ function LanguageSwitcher({ lang, slug }: { lang: string; slug?: string }) {
   function select(code: string) {
     setOpen(false)
     setQuery('')
-    router.replace(slug !== undefined ? `/${code}/${slug}` : `/${code}`)
+    // Replace lang prefix in current pathname: /de/calculators/sleep-calculator → /en/calculators/sleep-calculator
+    const newPath = pathname.replace(/^\/[a-z]{2}(\/|$)/, `/${code}$1`)
+    router.replace(newPath)
   }
 
   return (

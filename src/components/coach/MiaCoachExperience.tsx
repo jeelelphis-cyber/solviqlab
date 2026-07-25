@@ -259,7 +259,7 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
         </div>
 
         <button
-          onClick={() => actions.goto('mia_intro')}
+          onClick={() => actions.goto('video')}
           className="text-xs text-violet-400 hover:text-violet-600 transition-colors underline underline-offset-2"
         >
           {rewatch}

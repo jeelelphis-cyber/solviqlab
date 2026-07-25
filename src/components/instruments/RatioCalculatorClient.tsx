@@ -17,7 +17,7 @@ interface Props {
   lang: string
 }
 
-export function RatioCalculatorClient({ translations }: Props) {
+export function RatioCalculatorClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [a, setA] = useState('')

@@ -17,7 +17,7 @@ interface Props {
   lang: string
 }
 
-export function FractionCalculatorClient({ translations }: Props) {
+export function FractionCalculatorClient({ translations, lang }: Props) {
   const t = (key: string) => translations[key] as string | undefined
 
   const [numerator1, setNumerator1] = useState('')
