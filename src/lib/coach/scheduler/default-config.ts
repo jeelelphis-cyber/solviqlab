@@ -1,11 +1,12 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Coach Scheduler — Public API
-//
-// Sprint C-1.5: timezone-aware Vercel Cron scheduler for morning/evening
-// video delivery. Zero coupling to CoachBrain or CoachPlanner.
+// Coach Scheduler — Default Configuration
 // ─────────────────────────────────────────────────────────────────────────────
 
-export * from './types'
-export * from './time-utils'
-export * from './scheduler-engine'
-export * from './default-config'
+import type { SchedulerConfig } from './types'
+
+export const DEFAULT_SCHEDULER_CONFIG: SchedulerConfig = {
+  /** ±7 minutes tolerance around the user's preferred time. */
+  windowMinutes: 7,
+  /** Vercel Cron fires every 15 minutes. */
+  cronIntervalMinutes: 15,
+}
