@@ -1,0 +1,5 @@
+export type { ScriptVariant, SelectedScript, ScriptContext } from './types'
+export { OPENING_VARIANTS }                                   from './opening'
+export { INSIGHT_VARIANTS, INSIGHT_FALLBACK }                 from './insight'
+export { HOOK_VARIANTS }                                      from './hook'
+export { selectVariants }                                     from './selector'
