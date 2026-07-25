@@ -22,6 +22,7 @@ import type {
 import type { CoachDecisionMadeEvent } from '../events/types'
 import type { DecisionEngineImpl }     from './decision-engine'
 import type { CoachPersonaConfigWithEvaluableRules } from './decision-engine'
+import { CoachMemoryService }          from '../memory/coach-memory-service'
 
 // ── DailyCheckIn ─────────────────────────────────────────────────────────────
 
@@ -55,10 +56,16 @@ function dispatchCoachEvent(event: CoachDecisionMadeEvent): void {
 // ── CoachBrain ────────────────────────────────────────────────────────────────
 
 export class CoachBrain {
+  private readonly memoryService: CoachMemoryService
+
   constructor(
     private readonly memory:         CoachMemoryInterface,
     private readonly decisionEngine: DecisionEngineImpl,
-  ) {}
+  ) {
+    // CoachMemoryService wraps the memory interface to expose high-level analytics.
+    // Sprint C-1.3: Brain delegates intervention logic to the memory service layer.
+    this.memoryService = new CoachMemoryService(memory)
+  }
 
   // ── analyze() ─────────────────────────────────────────────────────────────
 
@@ -147,50 +154,42 @@ export class CoachBrain {
   /**
    * Determine whether the user needs an intervention based on their recent history.
    *
-   * Rules:
-   *   - 3+ consecutive days with no tasks completed → missed_days (L1)
-   *   - Mood or energy declining over last 7 days   → regression  (L2)
-   *   - No activity at all                          → null
+   * Delegates to CoachMemoryService.needsIntervention() (Sprint C-1.3).
+   * Maps the returned InterventionReason to a CoachIntervention value object.
+   *
+   * Thresholds are derived from persona.domainConfig.interventionThresholds:
+   *   - missedDays: max(skipDaysL1, 3) — never below 3 to avoid over-intervention
+   *   - lowMoodThreshold: 2.5 (platform default)
+   *   - lowMoodDays: 2 (platform default)
    */
   async checkIntervention(
     userId:  string,
     persona: CoachPersonaConfig | CoachPersonaConfigWithEvaluableRules,
   ): Promise<CoachIntervention | null> {
-    const days       = await this.memory.getDailyHistory(userId, 7)
     const personaId  = persona.coachId as unknown as CoachPersonaId
     const thresholds = persona.domainConfig.interventionThresholds
 
-    if (days.length === 0) return null
+    const reason = await this.memoryService.needsIntervention(userId, {
+      missedDays:       Math.max(thresholds.skipDaysL1, 3),
+      lowMoodThreshold: 2.5,
+      lowMoodDays:      2,
+    })
 
-    // ── Check missed days ─────────────────────────────────────────────────
+    if (reason === null) return null
 
-    const missedDayThreshold = thresholds.skipDaysL1   // default from persona config
-    let consecutiveMissed = 0
-    const sorted = [...days].sort((a, b) => b.date.localeCompare(a.date))
-    for (const day of sorted) {
-      if (day.tasksCompleted.length === 0) {
-        consecutiveMissed++
-      } else {
-        break
-      }
+    // Map reason to intervention type and level
+    switch (reason) {
+      case 'missed_3_days':
+        return buildIntervention(userId, personaId, 'missed_days', 1, Math.max(thresholds.skipDaysL1, 3))
+      case 'low_mood_sustained':
+        return buildIntervention(userId, personaId, 'regression', 2, 2.5)
+      case 'mood_declining':
+        return buildIntervention(userId, personaId, 'regression', 2, 0)
+      case 'no_tasks_completed':
+        return buildIntervention(userId, personaId, 'missed_days', 1, 0)
+      default:
+        return null
     }
-
-    if (consecutiveMissed >= Math.max(missedDayThreshold, 3)) {
-      return buildIntervention(userId, personaId, 'missed_days', 1, consecutiveMissed)
-    }
-
-    // ── Check regression (declining mood/energy trend) ────────────────────
-
-    const withMood = days.filter(d => d.moodRating.value !== null)
-    if (withMood.length >= 3) {
-      const recent = withMood.slice(-3).map(d => d.moodRating.value as number)
-      const isRegressing = recent[0] > recent[1] && recent[1] > recent[2]
-      if (isRegressing) {
-        return buildIntervention(userId, personaId, 'regression', 2, recent[2])
-      }
-    }
-
-    return null
   }
 }
 
