@@ -67,6 +67,15 @@ export function MiaOnboarding({ userId, lang = 'en', onDone }: Props) {
   async function handleGoalSelect(selectedGoal: string, selectedLabel: string) {
     setLoading(true)
 
+    const GOAL_TO_CLUSTER: Record<string, string> = {
+      lose_weight:   'weight',
+      build_muscle:  'weight',
+      sleep_better:  'sleep',
+      boost_energy:  'weight',
+      reduce_stress: 'sleep',
+    }
+    const cluster = GOAL_TO_CLUSTER[selectedGoal] ?? 'weight'
+
     const repo    = new GraphRepository(new LocalStorageProvider())
     const updater = new GraphUpdater(repo)
 
@@ -77,6 +86,10 @@ export function MiaOnboarding({ userId, lang = 'en', onDone }: Props) {
       status:   'active',
       priority: 'high',
       addedAt:  new Date().toISOString(),
+    })
+    updater.updateJourney(userId, {
+      activeCluster: cluster,
+      currentPhase:  'awareness',
     })
 
     const graph = repo.get(userId)!

@@ -29,7 +29,7 @@ export class MiaScriptBuilder {
     const highFact = graph.coachMemory.facts.find(f => f.importance === 'high')
 
     const text = [
-      this.openingLine(name, score, lang),
+      this.openingLine(name, score, lang, graph),
       this.insightLine(highFact?.text ?? null, cluster, phase, lang),
       this.actionLine(cluster, phase, lang),
       this.hookLine(name, score, lang),
@@ -41,15 +41,24 @@ export class MiaScriptBuilder {
     return { text, wordCount, estSeconds }
   }
 
-  private openingLine(name: string, score: number | null, lang: string): string {
+  private openingLine(name: string, score: number | null, lang: string, graph: UserGraph): string {
+    const bmiFact = graph.coachMemory.facts.find(f => f.id === 'bmi-result')
+    const bmiText = bmiFact?.text ?? null
+
     if (lang === 'uk') {
       if (score !== null) {
         return `Привіт, ${name}. Я щойно переглянула твою оцінку — ти набрав ${score} зі 100.`
+      }
+      if (bmiText) {
+        return `Привіт, ${name}. Я переглянула твої дані. Твій ${bmiText.replace('BMI', 'ІМТ').replace('normal', 'норма').replace('overweight', 'надмірна вага').replace('underweight', 'недостатня вага')}.`
       }
       return `Привіт, ${name}. Я щойно проаналізувала твої дані про здоров'я.`
     }
     if (score !== null) {
       return `Hey ${name}. I just reviewed your assessment — you scored ${score} out of 100.`
+    }
+    if (bmiText) {
+      return `Hey ${name}. I just looked at your data. Your ${bmiText}.`
     }
     return `Hey ${name}. I just finished looking at your health data.`
   }

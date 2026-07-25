@@ -9,6 +9,9 @@ import { PolicyEngine } from '../policy/engine'
 import { PlannerEngine } from '../planner/engine'
 import type { ResultEvent, HandlerContext } from '../events/types'
 import type { AssessmentGraphSync } from '../graph/sync-service'
+import { GraphRepository } from '../graph/repository'
+import { GraphUpdater } from '../graph/updater'
+import { LocalStorageProvider } from '../user/storage'
 
 // ── Platform Pipeline Definition ─────────────────────────────────────────────
 // The authoritative declaration of what the platform does after a result arrives.
@@ -116,6 +119,59 @@ export function createPlatformPipeline(engines: PlatformEngines): PipelineDefini
             overallConfidenceDelta:  profileAfter.overall_confidence - confidenceBefore,
             timestamp:               Date.now(),
           })
+        },
+      },
+
+      // ── P25: CalculatorGraphSync ────────────────────────────────────────────
+      // Writes raw calculator results (BMI, calories, etc.) into UserGraph
+      // coachMemory.facts + identity so Mia can reference real user numbers.
+      {
+        name:        'CalculatorGraphSync.storeMetrics',
+        priority:    25,
+        description: 'Persists calculator result metrics into UserGraph for Mia personalization.',
+        build: () => (event: ResultEvent) => {
+          if (typeof window === 'undefined') return
+          const userId = userEngine.getUserId()
+          if (!userId) return
+
+          const repo    = new GraphRepository(new LocalStorageProvider())
+          const updater = new GraphUpdater(repo)
+          const meta    = (event.metadata ?? {}) as Record<string, unknown>
+
+          if (event.slug === 'bmi-calculator') {
+            const bmi      = typeof meta['bmi']      === 'number' ? (meta['bmi'] as number).toFixed(1)  : null
+            const category = typeof meta['category'] === 'string' ? meta['category'] as string          : null
+            const age      = typeof meta['age']      === 'number' ? meta['age'] as number               : null
+            const sex      = (meta['sex'] === 'male' || meta['sex'] === 'female') ? meta['sex'] as string : null
+
+            if (bmi && category) {
+              updater.addMemoryFact(userId, {
+                id:         'bmi-result',
+                text:       `BMI ${bmi} — ${category.replace(/_/g, ' ')}`,
+                category:   'health_metric',
+                importance: 'high',
+                addedAt:    new Date().toISOString(),
+              })
+            }
+            if (age || sex) {
+              updater.updateIdentity(userId, {
+                ...(age ? { age } : {}),
+              })
+            }
+          }
+
+          if (event.slug === 'calorie-calculator' || event.slug === 'tdee-calculator') {
+            const calories = typeof event.value === 'number' ? Math.round(event.value) : null
+            if (calories) {
+              updater.addMemoryFact(userId, {
+                id:         'tdee-result',
+                text:       `Daily calorie need: ${calories} kcal`,
+                category:   'health_metric',
+                importance: 'high',
+                addedAt:    new Date().toISOString(),
+              })
+            }
+          }
         },
       },
 
