@@ -87,8 +87,24 @@ export function MiaOnboarding({ userId, lang = 'en', onDone }: Props) {
     <div className="flex flex-col items-center gap-8 py-10 px-4 max-w-md mx-auto">
       {/* Mia avatar */}
       <div className="flex flex-col items-center gap-3">
-        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-          M
+        <div className="relative">
+          <img
+            src="https://files2.heygen.ai/avatar/v3/Abigail_expressive_2024112501/full/2.2/preview_target.webp"
+            alt="Mia"
+            className="w-16 h-16 rounded-full object-cover object-top border-2 border-violet-300 shadow-lg"
+            onError={e => {
+              const el = e.currentTarget as HTMLImageElement
+              el.style.display = 'none'
+              const fb = el.nextElementSibling as HTMLElement | null
+              if (fb) fb.style.display = 'flex'
+            }}
+          />
+          <div
+            style={{ display: 'none' }}
+            className="w-16 h-16 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 items-center justify-center text-white text-2xl font-bold shadow-lg"
+          >
+            M
+          </div>
         </div>
         <p className="text-xs font-semibold text-violet-500 uppercase tracking-widest">
           {c.badge}

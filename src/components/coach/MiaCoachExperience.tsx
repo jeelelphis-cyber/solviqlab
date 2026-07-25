@@ -79,37 +79,55 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
 
   // ── Intro — emotional bridge from assessment ───────────────────────────────
   if (state === 'mia_intro') {
+    const introTitle = lang === 'uk'
+      ? 'Міа переглянула твої результати.'
+      : 'Mia has reviewed your results.'
+    const introSub = lang === 'uk'
+      ? (score !== null
+          ? `Вона вже аналізує що означає твій результат ${score} балів саме для тебе.`
+          : 'Вона вже аналізує що означають твої результати саме для тебе.')
+      : (score !== null
+          ? `She's already looking at what your ${score}-point score means for you specifically.`
+          : "She's already looking at what your results mean for you specifically.")
+    const introBtn  = lang === 'uk' ? 'Познайомитись з Міа →' : 'Meet Mia →'
+    const introFree = lang === 'uk' ? 'Безкоштовно · Без реєстрації' : 'Free · No account needed'
+
     return (
       <div className="flex flex-col items-center gap-5 py-8 px-4 text-center">
         <div className="relative">
-          <div className="w-14 h-14 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center text-white text-xl font-bold shadow-lg">
+          <img
+            src="https://files2.heygen.ai/avatar/v3/Abigail_expressive_2024112501/full/2.2/preview_target.webp"
+            alt="Mia"
+            className="w-16 h-16 rounded-full object-cover object-top border-2 border-violet-300 shadow-lg"
+            onError={e => {
+              const el = e.currentTarget as HTMLImageElement
+              el.style.display = 'none'
+              const fb = el.nextElementSibling as HTMLElement | null
+              if (fb) fb.style.display = 'flex'
+            }}
+          />
+          <div
+            style={{ display: 'none' }}
+            className="w-16 h-16 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 items-center justify-center text-white text-xl font-bold shadow-lg"
+          >
             M
           </div>
           <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-400 border-2 border-white dark:border-gray-900" />
         </div>
 
         <div>
-          <p className="text-sm font-semibold text-gray-900 dark:text-white">
-            Mia has reviewed your results.
-          </p>
-          <p className="text-sm text-gray-400 mt-1 leading-relaxed">
-            {score !== null
-              ? `She's already looking at what your ${score}-point score means for you specifically.`
-              : "She's already looking at what your results mean for you specifically."
-            }
-          </p>
+          <p className="text-sm font-semibold text-gray-900 dark:text-white">{introTitle}</p>
+          <p className="text-sm text-gray-400 mt-1 leading-relaxed">{introSub}</p>
         </div>
 
         <button
           onClick={() => actions.advance()}
           className="rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white text-sm font-medium px-6 py-3 hover:opacity-90 transition-opacity"
         >
-          Meet Mia →
+          {introBtn}
         </button>
 
-        <p className="text-xs text-gray-300 dark:text-gray-600">
-          Free · No account needed
-        </p>
+        <p className="text-xs text-gray-300 dark:text-gray-600">{introFree}</p>
       </div>
     )
   }
