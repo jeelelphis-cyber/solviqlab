@@ -4,14 +4,15 @@
 
 interface Props {
   readonly steps: readonly string[]
+  readonly afterThisLabel: string
 }
 
-export function JourneyUnlock({ steps }: Props) {
+export function JourneyUnlock({ steps, afterThisLabel }: Props) {
   if (steps.length === 0) return null
   return (
     <div className="flex items-center gap-1.5 flex-wrap">
       <span className="text-[10px] text-slate-400 dark:text-slate-500 font-semibold uppercase tracking-wider shrink-0">
-        After this:
+        {afterThisLabel}
       </span>
       {steps.map((step, i) => (
         <span key={step} className="flex items-center gap-1.5">

@@ -1,5 +1,3 @@
-import { progressText } from './journey-copy'
-
 // Per UX Bible Part III — The Progress Bias:
 // "You're 33% closer to your personal plan." — not "Step 2 of 6"
 // Segment bar fills with staggered animation (80ms per segment, starts after 500ms delay)
@@ -7,9 +5,10 @@ import { progressText } from './journey-copy'
 interface Props {
   readonly step: number
   readonly total: number
+  readonly progressLabel: string
 }
 
-export function JourneyProgress({ step, total }: Props) {
+export function JourneyProgress({ step, total, progressLabel }: Props) {
   return (
     <div className="space-y-2">
       <div className="flex gap-1">
@@ -26,7 +25,7 @@ export function JourneyProgress({ step, total }: Props) {
         ))}
       </div>
       <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
-        {progressText(step, total)}
+        {progressLabel}
       </p>
     </div>
   )

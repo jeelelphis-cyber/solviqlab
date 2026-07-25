@@ -1,5 +1,5 @@
 import type { IntentPhase } from '@/lib/domain/intent-state'
-import { PHASE_ICON, PHASE_LABEL } from './journey-copy'
+import { PHASE_ICON } from './journey-copy'
 
 // ── Phase color system — per UX Bible Part V ──────────────────────────────────
 // Blue=progress/discovery, Amber=attention/assessment, Violet=momentum/planning,
@@ -34,19 +34,20 @@ const BADGE_STYLES: Record<IntentPhase, { bg: string; text: string; dot: string 
 
 interface Props {
   readonly phase: IntentPhase
-  readonly stepsCompleted: number
+  readonly label: string
+  readonly stepsLabel: string
 }
 
-export function JourneyBadge({ phase, stepsCompleted }: Props) {
+export function JourneyBadge({ phase, label, stepsLabel }: Props) {
   const { bg, text, dot } = BADGE_STYLES[phase]
   return (
     <div className="flex items-center justify-between gap-3">
       <span className={`inline-flex items-center gap-2 text-[11px] font-semibold px-3 py-1.5 rounded-full border ${bg} ${text}`}>
         <span className={`w-1.5 h-1.5 rounded-full ${dot} animate-pulse`} />
-        {PHASE_ICON[phase]} {PHASE_LABEL[phase]}
+        {PHASE_ICON[phase]} {label}
       </span>
       <span className="text-[11px] text-slate-400 dark:text-slate-500 shrink-0">
-        {stepsCompleted} {stepsCompleted === 1 ? 'step' : 'steps'} completed
+        {stepsLabel}
       </span>
     </div>
   )

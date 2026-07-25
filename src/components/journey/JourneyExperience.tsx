@@ -32,14 +32,8 @@ import { JourneyUnlock }   from './JourneyUnlock'
 import { getJourneyStrings } from '@/lib/journey/strings'
 
 import {
-  PHASE_HERO,
-  CLUSTER_ASSESSMENT_NAME,
-  CTA_PRIMARY,
-  WHY_NOW,
-  PHASE_UNLOCK,
   TIME_ESTIMATE,
-  buildHeroSub,
-  buildWhyThis,
+  getJourneyCopy,
 } from './journey-copy'
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -81,9 +75,10 @@ function buildNextName(
   name: string | null,
   cluster: IntentCluster,
   fallback: string,
+  clusterName: string,
 ): string {
   if (phase === 'planning')   return 'Set Your Goal'
-  if (phase === 'assessment') return CLUSTER_ASSESSMENT_NAME[cluster]
+  if (phase === 'assessment') return clusterName
   if (!slug) return fallback
   return name ?? slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 }
@@ -91,7 +86,8 @@ function buildNextName(
 // ── JourneyExperience ─────────────────────────────────────────────────────────
 
 export function JourneyExperience({ cluster, lang, currentSlug }: Props) {
-  const s = getJourneyStrings(lang)
+  const s    = getJourneyStrings(lang)
+  const copy = getJourneyCopy(lang)
   const [intent,  setIntent]  = useState<IntentState | null>(null)
   const [visible, setVisible] = useState(false)
 
@@ -116,7 +112,7 @@ export function JourneyExperience({ cluster, lang, currentSlug }: Props) {
   const count    = intent.completedInstruments.length
 
   const nextSlug = decision?.slug ?? null
-  const nextName = buildNextName(nextSlug, phase, decision?.name ?? null, cluster, s.nextStepBadge)
+  const nextName = buildNextName(nextSlug, phase, decision?.name ?? null, cluster, s.nextStepBadge, copy.clusterAssessmentName[cluster])
   const nextHref = buildNextHref(nextSlug, cluster, phase, lang)
   const nextTime = TIME_ESTIMATE[nextSlug ?? ''] ?? TIME_ESTIMATE[`${cluster}-assessment`] ?? '3 min'
 
@@ -128,7 +124,11 @@ export function JourneyExperience({ cluster, lang, currentSlug }: Props) {
     >
       {/* ── Phase Badge ─────────────────────────────────────────────────────── */}
       <div className="px-5 py-4 border-b border-slate-100 dark:border-slate-800">
-        <JourneyBadge phase={phase} stepsCompleted={count} />
+        <JourneyBadge
+          phase={phase}
+          label={copy.phaseLabel[phase]}
+          stepsLabel={copy.stepsCompleted(count)}
+        />
       </div>
 
       <div className="p-5 space-y-5">
@@ -136,8 +136,8 @@ export function JourneyExperience({ cluster, lang, currentSlug }: Props) {
         {/* ── Hero Statement ───────────────────────────────────────────────── */}
         {/* Per UX Bible Part II — Emotional Arc: warm acknowledgment → momentum */}
         <JourneyHero
-          hero={PHASE_HERO[phase]}
-          sub={buildHeroSub(intent)}
+          hero={copy.phaseHero[phase]}
+          sub={copy.buildHeroSub(intent)}
         />
 
         {/* ── Next Step Card ───────────────────────────────────────────────── */}
@@ -165,13 +165,13 @@ export function JourneyExperience({ cluster, lang, currentSlug }: Props) {
           {/* Formula: "Without [X], we can't build [Y] that accounts for [Z]." */}
           <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed
                         border-l-2 border-slate-300 dark:border-slate-600 pl-3">
-            {buildWhyThis(intent)}
+            {copy.buildWhyThis(intent)}
           </p>
 
           {/* CTA — why-now hook + action button */}
           <JourneyCTA
-            whyNow={WHY_NOW[phase]}
-            ctaLabel={CTA_PRIMARY[phase]}
+            whyNow={copy.whyNow[phase]}
+            ctaLabel={copy.ctaPrimary[phase]}
             href={nextHref}
           />
 
@@ -179,11 +179,15 @@ export function JourneyExperience({ cluster, lang, currentSlug }: Props) {
 
         {/* ── Progress ─────────────────────────────────────────────────────── */}
         {/* Per UX Bible: "You're 33% closer" not "Step 2 of 6" */}
-        <JourneyProgress step={Math.min(count, 6)} total={6} />
+        <JourneyProgress
+          step={Math.min(count, 6)}
+          total={6}
+          progressLabel={copy.progressText(Math.min(count, 6), 6)}
+        />
 
         {/* ── Unlock Preview ───────────────────────────────────────────────── */}
         {/* Per UX Bible Part III — Unlock Mechanic: preview what's earned */}
-        <JourneyUnlock steps={PHASE_UNLOCK[phase]} />
+        <JourneyUnlock steps={copy.phaseUnlock[phase]} afterThisLabel={copy.afterThis} />
 
       </div>
     </div>
