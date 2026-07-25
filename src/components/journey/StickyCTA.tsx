@@ -36,6 +36,16 @@ export function StickyCTA({ href, text, subtext, urgency, trackingLabel, nextNam
     return () => window.removeEventListener('scroll', handleScroll)
   }, [handleScroll])
 
+  // Hide when JourneyExperience activates — they both provide "next step" and compete
+  useEffect(() => {
+    const hideOnJourney = () => {
+      setDismissed(true)
+      setVisible(false)
+    }
+    window.addEventListener('platform:intent_state_updated', hideOnJourney)
+    return () => window.removeEventListener('platform:intent_state_updated', hideOnJourney)
+  }, [])
+
   const dismiss = () => {
     setDismissed(true)
     setVisible(false)

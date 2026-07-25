@@ -126,10 +126,10 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', p
         </div>
         <div>
           <p className="text-gray-900 dark:text-white font-medium">
-            Mia is reviewing your results{name ? `, ${name}` : ''}…
+            Mia is preparing your personal video{name ? `, ${name}` : ''}…
           </p>
           <p className="text-sm text-gray-400 mt-1">
-            She wants to get this right.
+            This usually takes 1–2 minutes. Stay on this page.
           </p>
         </div>
       </div>

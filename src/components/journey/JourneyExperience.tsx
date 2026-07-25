@@ -43,6 +43,8 @@ interface Props {
   readonly cluster: IntentCluster
   readonly lang: string
   readonly currentSlug: string
+  readonly suggestedSlug?: string | null
+  readonly suggestedName?: string | null
 }
 
 // ── Platform events that trigger a state refresh ──────────────────────────────
@@ -52,6 +54,12 @@ const PLATFORM_EVENTS = [
   'platform:recommendation_updated',
   'solviqlab:result',
 ] as const
+
+// Cross-cluster: slug is an assessment for a DIFFERENT cluster (e.g. 'finance-assessment' on a weight page)
+function isCrossClusterSlug(slug: string | null, currentCluster: IntentCluster): boolean {
+  if (!slug) return false
+  return ASSESSMENT_SLUGS.has(slug) && !slug.startsWith(currentCluster)
+}
 
 // ── Routing helpers ───────────────────────────────────────────────────────────
 
@@ -86,7 +94,7 @@ function buildNextName(
 
 // ── JourneyExperience ─────────────────────────────────────────────────────────
 
-export function JourneyExperience({ cluster, lang, currentSlug }: Props) {
+export function JourneyExperience({ cluster, lang, currentSlug, suggestedSlug, suggestedName }: Props) {
   const s    = getJourneyStrings(lang)
   const copy = getJourneyCopy(lang)
   const [intent,  setIntent]  = useState<IntentState | null>(null)
@@ -112,12 +120,14 @@ export function JourneyExperience({ cluster, lang, currentSlug }: Props) {
   const decision = intent.recommendationDecision
   const count    = intent.completedInstruments.length
 
-  const nextSlug     = decision?.slug ?? null
-  const rawName      = decision?.name ?? null
-  const localName    = rawName ? localizeJourneyName(rawName, lang) : null
-  const nextName     = buildNextName(nextSlug, phase, localName, cluster, s.nextStepBadge, copy.clusterAssessmentName[cluster])
-  const nextHref = buildNextHref(nextSlug, cluster, phase, lang)
-  const nextTime = TIME_ESTIMATE[nextSlug ?? ''] ?? TIME_ESTIMATE[`${cluster}-assessment`] ?? '3 min'
+  const rawDecisionSlug = decision?.slug ?? null
+  const crossCluster    = isCrossClusterSlug(rawDecisionSlug, cluster)
+  const nextSlug        = crossCluster ? (suggestedSlug ?? null) : rawDecisionSlug
+  const rawName         = crossCluster ? (suggestedName ?? null) : (decision?.name ?? null)
+  const localName       = rawName ? localizeJourneyName(rawName, lang) : null
+  const nextName        = buildNextName(nextSlug, phase, localName, cluster, s.nextStepBadge, copy.clusterAssessmentName[cluster])
+  const nextHref        = buildNextHref(nextSlug, cluster, phase, lang)
+  const nextTime        = TIME_ESTIMATE[nextSlug ?? ''] ?? TIME_ESTIMATE[`${cluster}-assessment`] ?? '3 min'
 
   return (
     <div

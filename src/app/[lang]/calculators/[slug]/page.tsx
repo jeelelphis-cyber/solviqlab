@@ -349,38 +349,42 @@ export default function InstrumentPage({ params }: PageProps) {
         <MiaCoachBlock lang={lang} />
 
         {/* V4-1 First Journey Experience — reads live IntentState, animates in after result */}
-        <JourneyExperience
-          cluster={getClusterForSlug(slug)}
-          lang={lang}
-          currentSlug={slug}
-        />
-
-        {/* Sticky CTA + Analytics (client components) */}
         {(() => {
-          const ns = getNextStep(slug, lang)
+          const ns  = getNextStep(slug, lang)
           const pos = ns ? getJourneyPosition(slug) : null
           const localizedPos = pos ? { ...pos, journey: localizeJourney(pos.journey, lang) } : null
           const cta = localizedPos && ns ? buildCTA(localizedPos, ns.nextName, ns.estimatedMinutes, lang) : null
-          const sj = getJourneyStrings(lang)
-          return ns && cta ? (
+          const sj  = getJourneyStrings(lang)
+          return (
             <>
-              <StickyCTA
-                href={`/${lang}/calculators/${ns.nextSlug}`}
-                text={cta.text}
-                subtext={cta.subtext}
-                urgency={cta.urgency}
-                trackingLabel={cta.trackingLabel}
-                nextName={ns.nextName}
-                recommendedLabel={sj.recommendedNextStep}
+              <JourneyExperience
+                cluster={getClusterForSlug(slug)}
+                lang={lang}
+                currentSlug={slug}
+                suggestedSlug={ns?.nextSlug ?? null}
+                suggestedName={ns?.nextName ?? null}
               />
-              <JourneyAnalyticsObserver
-                slug={slug}
-                journeyId={pos?.journey.id ?? null}
-                trackingLabel={cta.trackingLabel}
-                nextSlug={ns.nextSlug}
-              />
+              {ns && cta && (
+                <>
+                  <StickyCTA
+                    href={`/${lang}/calculators/${ns.nextSlug}`}
+                    text={cta.text}
+                    subtext={cta.subtext}
+                    urgency={cta.urgency}
+                    trackingLabel={cta.trackingLabel}
+                    nextName={ns.nextName}
+                    recommendedLabel={sj.recommendedNextStep}
+                  />
+                  <JourneyAnalyticsObserver
+                    slug={slug}
+                    journeyId={pos?.journey.id ?? null}
+                    trackingLabel={cta.trackingLabel}
+                    nextSlug={ns.nextSlug}
+                  />
+                </>
+              )}
             </>
-          ) : null
+          )
         })()}
 
         {/* Embed Widget */}
