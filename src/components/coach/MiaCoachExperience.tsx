@@ -17,11 +17,12 @@ interface Props {
   userId:        string
   score?:        number | null
   cluster?:      string
+  lang?:         string
   prefillGraph?: UserGraph
   onUpgrade?:    () => void
 }
 
-export function MiaCoachExperience({ userId, score = null, cluster = 'weight', prefillGraph, onUpgrade }: Props) {
+export function MiaCoachExperience({ userId, score = null, cluster = 'weight', lang = 'en', prefillGraph, onUpgrade }: Props) {
   const { state, data, actions } = useSessionFlow(userId)
 
   // Jump to mia_intro if we're arriving from assessment
@@ -40,6 +41,7 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', p
         body: JSON.stringify({
           name:  resolvedName,
           graph: prefillGraph ?? graph,
+          lang,
         }),
       })
 

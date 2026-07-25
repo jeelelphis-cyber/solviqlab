@@ -81,6 +81,7 @@ export function MiaCoachBlock({ lang = 'en' }: MiaCoachBlockProps) {
         userId={userId}
         score={score}
         cluster={cluster}
+        lang={lang}
       />
     </div>
   )
