@@ -73,7 +73,7 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
 
   function handleUpgrade() {
     actions.track('premium_clicked')
-    actions.advance()  // first_action → premium
+    actions.goto('return_tomorrow')
     onUpgrade?.()
   }
 
@@ -197,52 +197,72 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
     )
   }
 
-  // ── Premium ────────────────────────────────────────────────────────────────
-  if (state === 'premium') {
-    return (
-      <div className="rounded-2xl border border-violet-200 dark:border-violet-800 bg-violet-50 dark:bg-violet-900/20 p-6 space-y-4 text-center">
-        <p className="font-medium text-gray-900 dark:text-white">
-          Mia is already preparing your first weekly plan{data.name ? `, ${data.name}` : ''}.
-        </p>
-        <p className="text-sm text-gray-500 dark:text-gray-400">
-          7 days free. No card needed. Start when you're ready.
-        </p>
-        <button
-          onClick={() => actions.advance()}
-          className="w-full rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-medium py-3.5 hover:opacity-90 transition-opacity"
-        >
-          Continue with Mia
-        </button>
-      </div>
-    )
-  }
+  // ── Return Tomorrow — emotional landing ───────────────────────────────────
+  if (state === 'premium' || state === 'return_tomorrow') {
+    const name    = data.name ?? ''
+    const cluster = data.cluster ?? 'weight'
 
-  // ── Return Tomorrow ────────────────────────────────────────────────────────
-  if (state === 'return_tomorrow') {
-    const rtTitle = lang === 'uk'
-      ? `Ти вже тут${data.name ? `, ${data.name}` : ''}.`
-      : `You're in${data.name ? `, ${data.name}` : ''}.`
-    const rtSub = lang === 'uk'
-      ? 'Міа буде готова для тебе завтра. Не змушуй її чекати.'
-      : "Mia will be ready for you tomorrow. Don't keep her waiting."
-    const rtRetry = lang === 'uk' ? 'Спробувати відео знову' : 'Try video again'
+    const clusterLabel = lang === 'uk'
+      ? (cluster === 'sleep' ? 'якість сну' : 'схуднення')
+      : (cluster === 'sleep' ? 'sleep quality' : 'weight loss')
+
+    const title = lang === 'uk'
+      ? `Твій план вже в роботі${name ? `, ${name}` : ''}.`
+      : `Your plan is in motion${name ? `, ${name}` : ''}.`
+
+    const items = lang === 'uk'
+      ? [
+          `7-денний протокол для ${clusterLabel} — готовий завтра`,
+          'Персональні цілі на основі твоїх даних',
+          'Щоденний чекін з Міа',
+        ]
+      : [
+          `Your 7-day ${clusterLabel} protocol — ready tomorrow`,
+          'Personalized targets based on your data',
+          'Daily check-in with Mia',
+        ]
+
+    const footer = lang === 'uk'
+      ? 'Міа вже має твої дані. Вона не забуває.'
+      : "Mia already has your data. She doesn't forget."
+
+    const rewatch = lang === 'uk' ? 'Переглянути відео ще раз' : "Rewatch Mia's message"
+
     return (
-      <div className="flex flex-col items-center gap-5 py-12 px-4 text-center">
-        <img
-          src="https://files2.heygen.ai/avatar/v3/1ad51ab9fee24ae88af067206e14a1d8_44250/preview_target.webp"
-          alt="Mia"
-          className="w-14 h-14 rounded-full object-cover object-top border-2 border-violet-200 shadow-lg"
-          onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
-        />
-        <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{rtTitle}</h3>
-          <p className="text-sm text-gray-400 mt-1">{rtSub}</p>
+      <div className="flex flex-col items-center gap-6 py-8 px-4 text-center">
+        <div className="relative">
+          <img
+            src="https://files2.heygen.ai/avatar/v3/1ad51ab9fee24ae88af067206e14a1d8_44250/preview_target.webp"
+            alt="Mia"
+            className="w-20 h-20 rounded-full object-cover object-top border-2 border-violet-300 shadow-xl"
+            onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
+          />
+          <span className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-emerald-400 border-2 border-white dark:border-gray-900" />
         </div>
+
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
+          <p className="text-sm text-gray-400 mt-1">{footer}</p>
+        </div>
+
+        <div className="w-full rounded-2xl border border-violet-100 dark:border-violet-900 bg-violet-50 dark:bg-violet-900/20 p-5 space-y-3 text-left">
+          {items.map((item, i) => (
+            <div key={i} className="flex items-start gap-3">
+              <span className="mt-0.5 w-5 h-5 rounded-full bg-violet-100 dark:bg-violet-800 flex items-center justify-center shrink-0">
+                <svg className="w-3 h-3 text-violet-600 dark:text-violet-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span className="text-sm text-gray-700 dark:text-gray-300">{item}</span>
+            </div>
+          ))}
+        </div>
+
         <button
           onClick={() => actions.goto('mia_intro')}
-          className="text-xs text-violet-500 underline"
+          className="text-xs text-violet-400 hover:text-violet-600 transition-colors underline underline-offset-2"
         >
-          {rtRetry}
+          {rewatch}
         </button>
       </div>
     )
