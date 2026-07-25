@@ -22,7 +22,7 @@ export function BmrCalculatorClient({ translations }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'bmr-calculator', name: 'BMR Calculator', value: result.bmr, label: 'BMR', unit: 'kcal/day', metadata: result }
+      detail: { slug: 'bmr-calculator', name: 'BMR Calculator', value: result.bmr, label: 'BMR', unit: 'kcal/day', miaFact: `BMR: ${Math.round(result.bmr)} kcal/day`, metadata: result }
     }))
   }, [result])
 

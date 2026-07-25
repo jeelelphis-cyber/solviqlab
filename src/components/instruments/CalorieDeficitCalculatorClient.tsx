@@ -22,7 +22,7 @@ export function CalorieDeficitCalculatorClient({ translations }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'calorie-deficit-calculator', name: 'Calorie Deficit Calculator', value: result.dailyTarget, label: 'Daily Target', unit: 'kcal', metadata: result }
+      detail: { slug: 'calorie-deficit-calculator', name: 'Calorie Deficit Calculator', value: result.dailyTarget, label: 'Daily Target', unit: 'kcal', miaFact: `Daily target: ${Math.round(result.dailyTarget)} kcal — goal in ${result.weeksToGoal} weeks`, metadata: result }
     }))
   }, [result])
 
