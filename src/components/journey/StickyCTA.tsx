@@ -10,6 +10,7 @@ interface Props {
   readonly urgency: 'low' | 'medium' | 'high' | 'critical'
   readonly trackingLabel: string
   readonly nextName: string
+  readonly recommendedLabel: string
 }
 
 const URGENCY_BTN = {
@@ -21,7 +22,7 @@ const URGENCY_BTN = {
 
 const SCROLL_THRESHOLD = 380   // px — appears after user scrolls past the calculator
 
-export function StickyCTA({ href, text, subtext, urgency, trackingLabel, nextName }: Props) {
+export function StickyCTA({ href, text, subtext, urgency, trackingLabel, nextName, recommendedLabel }: Props) {
   const [visible, setVisible] = useState(false)
   const [dismissed, setDismissed] = useState(false)
 
@@ -68,7 +69,7 @@ export function StickyCTA({ href, text, subtext, urgency, trackingLabel, nextNam
           {/* Text */}
           <div className="flex-1 min-w-0">
             <p className="text-xs text-slate-500 dark:text-slate-400 leading-none mb-0.5">
-              Recommended next step
+              {recommendedLabel}
             </p>
             <p className="text-sm font-semibold text-slate-900 dark:text-white truncate">
               {nextName}

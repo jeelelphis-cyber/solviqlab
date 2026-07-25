@@ -8,7 +8,7 @@
 // This file overrides for other languages.
 // ─────────────────────────────────────────────────────────────────────────────
 
-import type { NextStepData } from './config'
+import type { NextStepData, JourneyDefinition } from './config'
 import type { StepReward }   from './rewards'
 
 type Lang = string
@@ -225,7 +225,28 @@ const REWARD_OVERRIDES: Partial<Record<Lang, Partial<Record<string, RewardOverri
 
 }
 
+// ── Journey definition overrides ──────────────────────────────────────────────
+
+type JourneyOverride = Pick<JourneyDefinition, 'name' | 'profileLabel' | 'unlockReward'>
+
+const JOURNEY_OVERRIDES: Partial<Record<Lang, Partial<Record<string, JourneyOverride>>>> = {
+  uk: {
+    health:       { name: 'Health Journey',        profileLabel: 'Профіль здоров\'я',    unlockReward: 'Особистий звіт про здоров\'я' },
+    weight:       { name: 'Управління вагою',      profileLabel: 'Профіль ваги',         unlockReward: 'Особистий план ваги' },
+    sleep:        { name: 'Сон та оздоровлення',   profileLabel: 'Профіль оздоровлення', unlockReward: 'Аналіз самопочуття' },
+    finance:      { name: 'Фінансовий шлях',       profileLabel: 'Фінансовий профіль',   unlockReward: 'Особистий фінансовий звіт' },
+    homebuying:   { name: 'Купівля житла',          profileLabel: 'Профіль покупця',      unlockReward: 'Звіт про доступність' },
+    family:       { name: 'Планування сім\'ї',     profileLabel: 'Сімейний профіль',     unlockReward: 'Персоналізований план' },
+  },
+}
+
 // ── Public API ────────────────────────────────────────────────────────────────
+
+export function localizeJourney(journey: JourneyDefinition, lang: string): JourneyDefinition {
+  const override = JOURNEY_OVERRIDES[lang]?.[journey.id]
+  if (!override) return journey
+  return { ...journey, ...override }
+}
 
 export function localizeNextStep(step: NextStepData, lang: string): NextStepData {
   const override = NEXT_STEP_OVERRIDES[lang]?.[step.journeyId ? step.nextSlug : '']

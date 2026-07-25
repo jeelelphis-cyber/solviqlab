@@ -10,6 +10,9 @@ import { JourneyExperience, StickyCTA, JourneyAnalyticsObserver } from '../../..
 import { getNextStep, getJourneyPosition } from '../../../../lib/journey/config'
 import { buildCTA } from '../../../../lib/journey/cta'
 import { getClusterForSlug } from '../../../../lib/catalog/slug-cluster'
+import { localizeJourney } from '../../../../lib/journey/localize'
+import { getJourneyStrings } from '../../../../lib/journey/strings'
+import { MiaCoachBlock }    from '../../../../components/coach/MiaCoachBlock'
 
 interface PageProps {
   params: { lang: string; slug: string }
@@ -342,6 +345,9 @@ export default function InstrumentPage({ params }: PageProps) {
           <InstrumentUI slug={slug} lang={lang} translations={translations} />
         </div>
 
+        {/* Mia AI Coach — appears after health calculator result */}
+        <MiaCoachBlock />
+
         {/* V4-1 First Journey Experience — reads live IntentState, animates in after result */}
         <JourneyExperience
           cluster={getClusterForSlug(slug)}
@@ -351,9 +357,11 @@ export default function InstrumentPage({ params }: PageProps) {
 
         {/* Sticky CTA + Analytics (client components) */}
         {(() => {
-          const ns = getNextStep(slug)
+          const ns = getNextStep(slug, lang)
           const pos = ns ? getJourneyPosition(slug) : null
-          const cta = pos && ns ? buildCTA(pos, ns.nextName, ns.estimatedMinutes, lang) : null
+          const localizedPos = pos ? { ...pos, journey: localizeJourney(pos.journey, lang) } : null
+          const cta = localizedPos && ns ? buildCTA(localizedPos, ns.nextName, ns.estimatedMinutes, lang) : null
+          const sj = getJourneyStrings(lang)
           return ns && cta ? (
             <>
               <StickyCTA
@@ -363,6 +371,7 @@ export default function InstrumentPage({ params }: PageProps) {
                 urgency={cta.urgency}
                 trackingLabel={cta.trackingLabel}
                 nextName={ns.nextName}
+                recommendedLabel={sj.recommendedNextStep}
               />
               <JourneyAnalyticsObserver
                 slug={slug}
