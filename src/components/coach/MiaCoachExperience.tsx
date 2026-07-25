@@ -46,8 +46,9 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', p
       const payload = await res.json() as { videoId?: string; error?: string }
 
       if (!res.ok || !payload.videoId) {
-        // Stay on generating with error — MiaVideoPlayer handles error display
+        // Advance to video state so MiaVideoPlayer can show the error UI
         actions.setData({ videoId: null })
+        actions.advance()
         return
       }
 
