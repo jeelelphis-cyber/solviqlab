@@ -201,19 +201,31 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
 
   // ── Return Tomorrow ────────────────────────────────────────────────────────
   if (state === 'return_tomorrow') {
+    const rtTitle = lang === 'uk'
+      ? `Ти вже тут${data.name ? `, ${data.name}` : ''}.`
+      : `You're in${data.name ? `, ${data.name}` : ''}.`
+    const rtSub = lang === 'uk'
+      ? 'Міа буде готова для тебе завтра. Не змушуй її чекати.'
+      : "Mia will be ready for you tomorrow. Don't keep her waiting."
+    const rtRetry = lang === 'uk' ? 'Спробувати відео знову' : 'Try video again'
     return (
       <div className="flex flex-col items-center gap-5 py-12 px-4 text-center">
-        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center text-white text-xl font-bold shadow-lg">
-          M
-        </div>
+        <img
+          src="https://files2.heygen.ai/avatar/v3/Abigail_expressive_2024112501/full/2.2/preview_target.webp"
+          alt="Mia"
+          className="w-14 h-14 rounded-full object-cover object-top border-2 border-violet-200 shadow-lg"
+          onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
+        />
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-            You're in{data.name ? `, ${data.name}` : ''}.
-          </h3>
-          <p className="text-sm text-gray-400 mt-1">
-            Mia will be ready for you tomorrow. Don't keep her waiting.
-          </p>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{rtTitle}</h3>
+          <p className="text-sm text-gray-400 mt-1">{rtSub}</p>
         </div>
+        <button
+          onClick={() => actions.goto('mia_intro')}
+          className="text-xs text-violet-500 underline"
+        >
+          {rtRetry}
+        </button>
       </div>
     )
   }
