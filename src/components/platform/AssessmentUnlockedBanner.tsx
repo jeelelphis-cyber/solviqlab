@@ -15,10 +15,16 @@ interface Props {
   readonly lang: string
 }
 
-const CLUSTER_LABELS: Record<string, string> = {
-  weight: 'Weight',
-  sleep:  'Sleep',
-  finance: 'Finance',
+const CLUSTER_LABELS: Record<string, Record<string, string>> = {
+  en: { weight: 'Weight',  sleep: 'Sleep',  finance: 'Finance' },
+  uk: { weight: 'Здоров\'я', sleep: 'Сон',  finance: 'Фінанси' },
+  es: { weight: 'Peso',    sleep: 'Sueño',  finance: 'Finanzas' },
+}
+
+const BANNER_COPY: Record<string, { title: (l: string) => string; sub: string; btn: string }> = {
+  en: { title: l => `${l} Assessment unlocked`,           sub: 'You have enough data for a personalised assessment.', btn: 'Start →' },
+  uk: { title: l => `${l} — оцінка розблокована`,         sub: 'У тебе достатньо даних для персональної оцінки.',     btn: 'Почати →' },
+  es: { title: l => `Evaluación de ${l} desbloqueada`,    sub: 'Tienes suficientes datos para una evaluación personal.', btn: 'Empezar →' },
 }
 
 // Shows a dismissible banner when the Assessment becomes available.
@@ -42,8 +48,10 @@ export function AssessmentUnlockedBanner({ lang }: Props) {
 
   if (!cluster || dismissed) return null
 
-  const label = CLUSTER_LABELS[cluster] ?? cluster
-  const href  = `/${lang}/assessment/${cluster}`
+  const labels = CLUSTER_LABELS[lang] ?? CLUSTER_LABELS.en!
+  const copy   = BANNER_COPY[lang]   ?? BANNER_COPY.en!
+  const label  = labels[cluster] ?? cluster
+  const href   = `/${lang}/assessment/${cluster}`
 
   return (
     <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-md px-4">
@@ -51,10 +59,10 @@ export function AssessmentUnlockedBanner({ lang }: Props) {
         <span className="text-2xl mt-0.5">🎯</span>
         <div className="flex-1 min-w-0">
           <p className="font-semibold text-sm leading-tight">
-            {label} Assessment unlocked
+            {copy.title(label)}
           </p>
           <p className="text-emerald-100 text-xs mt-0.5">
-            You have enough data for a personalised assessment.
+            {copy.sub}
           </p>
         </div>
         <div className="flex items-center gap-2 shrink-0">
@@ -62,7 +70,7 @@ export function AssessmentUnlockedBanner({ lang }: Props) {
             href={href}
             className="bg-white text-emerald-700 text-xs font-semibold px-3 py-1.5 rounded-lg hover:bg-emerald-50 transition-colors"
           >
-            Start →
+            {copy.btn}
           </Link>
           <button
             onClick={() => setDismissed(true)}

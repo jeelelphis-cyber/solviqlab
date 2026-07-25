@@ -96,7 +96,7 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
       <div className="flex flex-col items-center gap-5 py-8 px-4 text-center">
         <div className="relative">
           <img
-            src="https://files2.heygen.ai/avatar/v3/Abigail_expressive_2024112501/full/2.2/preview_target.webp"
+            src="https://files2.heygen.ai/avatar/v3/1ad51ab9fee24ae88af067206e14a1d8_44250/preview_target.webp"
             alt="Mia"
             className="w-16 h-16 rounded-full object-cover object-top border-2 border-violet-300 shadow-lg"
             onError={e => {
@@ -151,7 +151,7 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
         <div className="relative w-20 h-20 shrink-0">
           <div className="absolute inset-0 rounded-full bg-violet-400 opacity-20 animate-ping" />
           <img
-            src="https://files2.heygen.ai/avatar/v3/Abigail_expressive_2024112501/full/2.2/preview_target.webp"
+            src="https://files2.heygen.ai/avatar/v3/1ad51ab9fee24ae88af067206e14a1d8_44250/preview_target.webp"
             alt="Mia"
             className="relative w-20 h-20 rounded-full object-cover object-top border-2 border-violet-300 shadow-lg"
             onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
@@ -229,7 +229,7 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
     return (
       <div className="flex flex-col items-center gap-5 py-12 px-4 text-center">
         <img
-          src="https://files2.heygen.ai/avatar/v3/Abigail_expressive_2024112501/full/2.2/preview_target.webp"
+          src="https://files2.heygen.ai/avatar/v3/1ad51ab9fee24ae88af067206e14a1d8_44250/preview_target.webp"
           alt="Mia"
           className="w-14 h-14 rounded-full object-cover object-top border-2 border-violet-200 shadow-lg"
           onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}

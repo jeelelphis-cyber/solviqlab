@@ -110,7 +110,7 @@ export function MiaVideoPlayer({ videoId, name, score = null, cluster = 'weight'
         <div className="relative w-24 h-24 shrink-0">
           <div className="absolute inset-0 rounded-full bg-violet-400 opacity-20 animate-ping" />
           <img
-            src="https://files2.heygen.ai/avatar/v3/Abigail_expressive_2024112501/full/2.2/preview_target.webp"
+            src="https://files2.heygen.ai/avatar/v3/1ad51ab9fee24ae88af067206e14a1d8_44250/preview_target.webp"
             alt="Mia"
             className="relative w-24 h-24 rounded-full object-cover object-top border-2 border-violet-300 shadow-lg"
             onError={e => {
@@ -155,7 +155,7 @@ export function MiaVideoPlayer({ videoId, name, score = null, cluster = 'weight'
     return (
       <div className="flex flex-col items-center gap-5 py-10 px-4 text-center">
         <img
-          src="https://files2.heygen.ai/avatar/v3/Abigail_expressive_2024112501/full/2.2/preview_target.webp"
+          src="https://files2.heygen.ai/avatar/v3/1ad51ab9fee24ae88af067206e14a1d8_44250/preview_target.webp"
           alt="Mia"
           className="w-20 h-20 rounded-full object-cover object-top border-2 border-violet-200 opacity-80"
           onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
