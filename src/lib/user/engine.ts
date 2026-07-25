@@ -435,6 +435,20 @@ export class UserEngine {
     )
   }
 
+  // ── Coach Memory ──────────────────────────────────────────────────────────
+
+  getCoachMemory(clusterId: import('../assessment/types').IntentCluster): import('../coach/types').CoachMemory {
+    const key    = `coach_memory:${clusterId}`
+    const stored = this.storage.get<import('../coach/types').CoachMemory>(key)
+    if (stored) return stored
+    const { emptyCoachMemory } = require('../coach/types') as typeof import('../coach/types')
+    return emptyCoachMemory(clusterId)
+  }
+
+  setCoachMemory(clusterId: import('../assessment/types').IntentCluster, memory: import('../coach/types').CoachMemory): void {
+    this.storage.set(`coach_memory:${clusterId}`, memory)
+  }
+
   // ── Destroy ───────────────────────────────────────────────────────────────
 
   clearUser(): void {

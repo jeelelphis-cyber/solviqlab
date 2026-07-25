@@ -67,6 +67,18 @@ export interface JourneyStepCompletedEvent {
   readonly timestamp: number
 }
 
+export interface AssessmentCompletedEvent {
+  readonly type: 'platform:assessment_completed'
+  readonly eventId: string
+  readonly userId: string
+  readonly cluster: import('../assessment/types').IntentCluster
+  readonly score: number
+  readonly confidence: string
+  readonly phase: string              // 'awareness' | 'planning' | 'action' | 'maintenance'
+  readonly graphUpdatedFields: readonly string[]
+  readonly timestamp: number
+}
+
 // Union of all platform events
 export type PlatformEvent =
   | IntentStateUpdatedEvent
@@ -74,6 +86,7 @@ export type PlatformEvent =
   | AssessmentTriggeredEvent
   | RecommendationUpdatedEvent
   | JourneyStepCompletedEvent
+  | AssessmentCompletedEvent
 
 // ── Handler ───────────────────────────────────────────────────────────────────
 

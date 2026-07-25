@@ -16,6 +16,15 @@ import {
 } from '@/lib/assessment'
 import { getEngine, getProfileEngineFromUser } from '@/lib/user'
 import { emitAssessmentEvent } from '@/lib/assessment/events'
+import { coachService } from '@/lib/coach'
+import type { CoachMessage } from '@/lib/coach'
+import { getBrowserRuntime } from '@/lib/runtime/platform'
+import { CoachMessageCard } from '@/components/coach/CoachMessageCard'
+import { MiaCoachExperience } from '@/components/coach/MiaCoachExperience'
+import { AssessmentGraphSync } from '@/lib/graph/sync-service'
+import { GraphRepository }    from '@/lib/graph/repository'
+import { GraphUpdater }       from '@/lib/graph/updater'
+import { LocalStorageProvider } from '@/lib/user/storage'
 
 // ── Sub-components ────────────────────────────────────────────────────────────
 
@@ -82,27 +91,43 @@ function ScoreBadge({ score }: { score: number }) {
 // ── Gate Screen ───────────────────────────────────────────────────────────────
 
 function GateScreen({ gate, lang }: { gate: GateResult; lang: string }) {
+  const remaining = gate.missing_instruments.length
+
   return (
-    <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-8 text-center">
-      <div className="text-4xl mb-4">🔒</div>
-      <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
-        Assessment not ready yet
-      </h2>
-      <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
-        Complete a few more calculators to build enough data for your assessment.
-      </p>
+    <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-8">
+      <div className="mb-5">
+        <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-widest mb-3">
+          Building Your Profile
+        </p>
+        <h2 className="text-xl font-bold text-slate-900 dark:text-white leading-snug mb-2">
+          {remaining === 1
+            ? 'One more data point and your assessment is ready.'
+            : `We need ${remaining} more data points to build something personal for you.`}
+        </h2>
+        <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+          The more we know about your starting point, the more accurate your personalized strategy will be.
+        </p>
+      </div>
+
       {gate.missing_instruments.length > 0 && (
         <div className="space-y-2">
-          <p className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">
-            Recommended next:
+          <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-widest mb-3">
+            Add this to unlock your assessment:
           </p>
           {gate.missing_instruments.slice(0, 3).map(slug => (
             <a
               key={slug}
               href={`/${lang}/calculators/${slug}`}
-              className="block w-full px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 text-sm text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
+              className="group flex items-center justify-between w-full px-4 py-3 min-h-[44px]
+                         rounded-xl border border-slate-200 dark:border-slate-700
+                         text-sm font-medium text-slate-700 dark:text-slate-300
+                         hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20
+                         transition-colors"
             >
-              {slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
+              <span>Add {slug.replace(/-calculator$/, '').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())} Data</span>
+              <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-500 transition-colors" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M6 12l4-4-4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </a>
           ))}
         </div>
@@ -183,9 +208,31 @@ function GapQuestionsForm({
   )
 }
 
+// ── Coach Message Card ────────────────────────────────────────────────────────
+
 // ── Result Screen ─────────────────────────────────────────────────────────────
 
-function ResultScreen({ result, lang }: { result: AssessmentResult; lang: string }) {
+function ResultScreen({ result, lang, cluster, userId }: { result: AssessmentResult; lang: string; cluster: string; userId: string }) {
+  const [coachMessage, setCoachMessage] = useState<CoachMessage | null>(null)
+
+  // Load coach message after mount — no side effects during render
+  useEffect(() => {
+    try {
+      const runtime = getBrowserRuntime()
+      const msg = coachService.getMessage(result.cluster, 'assessment:completed', lang, runtime)
+      setCoachMessage(msg)
+    } catch { /* non-critical */ }
+  }, [result.assessment_id, lang, result.cluster])
+
+  // Write memory + fire analytics once after message is available
+  useEffect(() => {
+    if (!coachMessage) return
+    try {
+      const runtime = getBrowserRuntime()
+      coachService.markShown(coachMessage, result.cluster, runtime, lang)
+    } catch { /* non-critical */ }
+  }, [coachMessage?.message_id, result.cluster])
+
   const confidenceLabel = {
     insufficient: 'Preliminary',
     preliminary: 'Preliminary',
@@ -264,24 +311,38 @@ function ResultScreen({ result, lang }: { result: AssessmentResult; lang: string
         </div>
       )}
 
-      {/* CTA */}
-      <div className="rounded-2xl border border-blue-100 dark:border-blue-900/30 bg-blue-50 dark:bg-blue-950/30 p-6">
-        <p className="text-sm text-blue-700 dark:text-blue-300 font-medium mb-3">
-          Next recommended step
-        </p>
-        <a
-          href={`/${lang}/calculators/${result.narrative.cta_product_id}`}
-          className="block w-full text-center py-3 px-6 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-colors"
-        >
-          {result.narrative.cta_label}
-        </a>
-        <a
-          href={`/${lang}/dashboard`}
-          className="block w-full text-center py-2 mt-2 text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors"
-        >
-          View my dashboard →
-        </a>
+      {/* Coach Message (replaces hardcoded CTA when available) */}
+      {coachMessage ? (
+        <CoachMessageCard message={coachMessage} lang={lang} />
+      ) : (
+        <div className="rounded-2xl border border-blue-100 dark:border-blue-900/30 bg-blue-50 dark:bg-blue-950/30 p-6">
+          <p className="text-sm text-blue-700 dark:text-blue-300 font-medium mb-3">
+            Next recommended step
+          </p>
+          <a
+            href={`/${lang}/calculators/${result.narrative.cta_product_id}`}
+            className="block w-full text-center py-3 px-6 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-colors"
+          >
+            {result.narrative.cta_label}
+          </a>
+        </div>
+      )}
+
+      {/* Mia Video Coach — emotional bridge after results */}
+      <div className="pt-2 border-t border-slate-200 dark:border-slate-700">
+        <MiaCoachExperience
+          userId={userId}
+          score={result.overall_score}
+          cluster={result.cluster}
+        />
       </div>
+
+      <a
+        href={`/${lang}/dashboard`}
+        className="block w-full text-center py-2 text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors"
+      >
+        View my dashboard →
+      </a>
     </div>
   )
 }
@@ -293,6 +354,7 @@ export function AssessmentClient({ cluster, lang }: { cluster: string; lang: str
   const [questions, setQuestions] = useState<readonly AssessmentQuestion[]>([])
   const [result, setResult]     = useState<AssessmentResult | null>(null)
   const [running, setRunning]   = useState(false)
+  const [userId, setUserId]     = useState('demo')
 
   useEffect(() => {
     const config = getAssessmentConfig(cluster)
@@ -303,6 +365,8 @@ export function AssessmentClient({ cluster, lang }: { cluster: string; lang: str
 
     const userEngine = getEngine()
     const user = userEngine?.getUser()
+    const resolvedId = user?.id ?? 'demo'
+    setUserId(resolvedId)
     const profile = profileEngine.getProfile(user?.id ?? null)
 
     const engine = getAssessmentEngine()
@@ -377,6 +441,14 @@ export function AssessmentClient({ cluster, lang }: { cluster: string; lang: str
       }
     }))
 
+    // Sync assessment result into UserGraph so Mia has the data
+    try {
+      const repo    = new GraphRepository(new LocalStorageProvider())
+      const updater = new GraphUpdater(repo)
+      const sync    = new AssessmentGraphSync(updater)
+      sync.sync(user?.id ?? 'demo', assessmentResult)
+    } catch { /* non-critical — Mia still works with defaults */ }
+
     setResult(assessmentResult)
     setRunning(false)
   }, [cluster, lang])
@@ -394,14 +466,29 @@ export function AssessmentClient({ cluster, lang }: { cluster: string; lang: str
   }
 
   if (result) {
-    return <ResultScreen result={result} lang={lang} />
+    return <ResultScreen result={result} lang={lang} cluster={cluster} userId={userId} />
   }
 
   if (running) {
     return (
-      <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-8 text-center">
-        <div className="animate-spin text-4xl mb-4">⚙️</div>
-        <p className="text-slate-500 dark:text-slate-400 text-sm">Computing your assessment...</p>
+      <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-8">
+        <div className="space-y-4">
+          <div className="flex items-center gap-3">
+            <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" aria-hidden="true" />
+            <p className="text-sm font-medium text-slate-700 dark:text-slate-300">
+              Building your personal assessment...
+            </p>
+          </div>
+          <div className="space-y-2">
+            {[90, 70, 50].map((w, i) => (
+              <div
+                key={i}
+                className="h-2 rounded-full bg-slate-100 dark:bg-slate-800 animate-pulse"
+                style={{ width: `${w}%`, animationDelay: `${i * 150}ms` }}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     )
   }

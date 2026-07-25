@@ -7,6 +7,7 @@ interface Props {
   readonly cluster: string
   readonly strategy: StrategyDecision
   readonly lang: string
+  readonly suggestedGoal: number | null
   readonly onGoalSet: (goalValue: number) => void
 }
 
@@ -36,9 +37,9 @@ const CLUSTER_CONFIG: Record<string, {
   },
 }
 
-export function GoalInputForm({ cluster, strategy, lang, onGoalSet }: Props) {
+export function GoalInputForm({ cluster, strategy, lang, suggestedGoal, onGoalSet }: Props) {
   const config  = CLUSTER_CONFIG[cluster] ?? CLUSTER_CONFIG['weight']!
-  const [value, setValue] = useState('')
+  const [value, setValue] = useState(suggestedGoal !== null ? String(suggestedGoal) : '')
   const [error, setError] = useState<string | null>(null)
 
   function handleSubmit(e: React.FormEvent) {
@@ -74,10 +75,12 @@ export function GoalInputForm({ cluster, strategy, lang, onGoalSet }: Props) {
       <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 space-y-5">
         <div>
           <h2 className="text-xl font-bold text-slate-900 dark:text-white">
-            Set Your Goal
+            Make the plan yours.
           </h2>
-          <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">
-            {config.hint}
+          <p className="text-slate-500 dark:text-slate-400 text-sm mt-1 leading-relaxed">
+            {suggestedGoal !== null
+              ? `Based on your profile, ${suggestedGoal} ${config.unit} is a realistic first milestone. You can change it anytime.`
+              : config.hint}
           </p>
         </div>
 

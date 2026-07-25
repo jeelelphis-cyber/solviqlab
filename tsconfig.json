@@ -47,6 +47,17 @@
     "src/instruments/area-calculator/interpret.ts",
     "src/instruments/volume-calculator/interpret.ts",
     "src/instruments/area-converter/interpret.ts",
-    "src/instruments/volume-converter/interpret.ts"
+    "src/instruments/volume-converter/interpret.ts",
+    "src/lib/coach/__tests__",
+    "src/lib/identity/__tests__",
+    "src/lib/sync/__tests__",
+    "src/lib/sync/__tests__/queue.test.ts",
+    "src/lib/sync/__tests__/conflict.test.ts",
+    "src/lib/sync/__tests__/engine.test.ts",
+    "src/lib/retention/__tests__",
+    "src/lib/premium/__tests__",
+    "src/lib/llm/__tests__",
+    "src/lib/graph/__tests__",
+    "src/lib/assessment/__tests__"
   ]
 }

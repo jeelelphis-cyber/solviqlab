@@ -8,6 +8,7 @@ import { StrategyEngine } from '../strategy/engine'
 import { PolicyEngine } from '../policy/engine'
 import { PlannerEngine } from '../planner/engine'
 import type { ResultEvent, HandlerContext } from '../events/types'
+import type { AssessmentGraphSync } from '../graph/sync-service'
 
 // ── Platform Pipeline Definition ─────────────────────────────────────────────
 // The authoritative declaration of what the platform does after a result arrives.
@@ -31,13 +32,14 @@ export interface PlatformEngines {
   readonly profileEngine: ProfileEngine
   readonly recommendationEngine: RecommendationEngine
   readonly assessmentEngine: AssessmentEngine
+  readonly graphSync: AssessmentGraphSync
 }
 
 // Assessment slugs that signal completion of an assessment (trigger Strategy + Planner)
 import { ASSESSMENT_SLUGS } from '../domain/intent-state'
 
 export function createPlatformPipeline(engines: PlatformEngines): PipelineDefinition {
-  const { userEngine, profileEngine, recommendationEngine, assessmentEngine } = engines
+  const { userEngine, profileEngine, recommendationEngine, assessmentEngine, graphSync } = engines
   const strategyEngine = new StrategyEngine()
   const policyEngine   = new PolicyEngine()
   const plannerEngine  = new PlannerEngine()
@@ -140,6 +142,45 @@ export function createPlatformPipeline(engines: PlatformEngines): PipelineDefini
                 timestamp: Date.now(),
               })
             }
+          }
+        },
+      },
+
+      // ── P35: GraphSync.onAssessment ─────────────────────────────────────────
+      // Fires when an assessment result arrives in event.metadata.
+      // Updates UserGraph before Strategy + Planner see the new state.
+      {
+        name:        'GraphSync.onAssessment',
+        priority:    35,
+        description: 'Syncs AssessmentResult into UserGraph: assessment, journey, goals, coach memory.',
+        build: () => (event: ResultEvent, ctx: HandlerContext) => {
+          if (!ASSESSMENT_SLUGS.has(event.slug)) return
+
+          const userId = userEngine.getUserId()
+          if (!userId) return
+
+          const assessmentResult = event.metadata as unknown as import('../assessment/types').AssessmentResult | null
+          if (!assessmentResult?.overall_score === undefined) return
+
+          const syncResult = graphSync.sync(userId, assessmentResult!)
+
+          if (syncResult.updated) {
+            ctx.emit({
+              type:               'platform:assessment_completed',
+              eventId:            `${event.eventId}:graph`,
+              userId,
+              cluster:            assessmentResult!.cluster,
+              score:              assessmentResult!.overall_score,
+              confidence:         assessmentResult!.confidence,
+              phase:              syncResult.changedFields.includes('journey')
+                                    ? (assessmentResult!.overall_score >= 80 ? 'maintenance'
+                                      : assessmentResult!.overall_score >= 60 ? 'action'
+                                      : assessmentResult!.overall_score >= 40 ? 'planning'
+                                      : 'awareness')
+                                    : 'awareness',
+              graphUpdatedFields: syncResult.changedFields,
+              timestamp:          Date.now(),
+            })
           }
         },
       },
