@@ -99,7 +99,7 @@ export function NextStepCard({ slug, lang }: Props) {
             </svg>
             {s.profileContribution(nextStep.profileLabel, nextStep.profileContribution)}
           </span>
-          <span className="text-xs text-slate-400 dark:text-slate-500">free · no signup</span>
+          <span className="text-xs text-slate-400 dark:text-slate-500">{s.freeNoSignup}</span>
         </div>
 
         {/* Primary CTA */}

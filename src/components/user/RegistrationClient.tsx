@@ -14,6 +14,7 @@ import { getEngine } from '@/lib/user'
 import { getProfileEngineFromUser } from '@/lib/user'
 import type { PersonalHealthProfile } from '@/lib/profile'
 import { HEALTH_DOMAINS, DOMAIN_META_MAP } from '@/lib/profile'
+import { getJourneyStrings } from '@/lib/journey/strings'
 
 interface Props {
   readonly lang: string
@@ -23,6 +24,7 @@ interface Props {
 type Step = 'loading' | 'form' | 'success'
 
 export function RegistrationClient({ lang, redirectTo }: Props) {
+  const s = getJourneyStrings(lang)
   const [step, setStep]         = useState<Step>('loading')
   const [profile, setProfile]   = useState<PersonalHealthProfile | null>(null)
   const [name, setName]         = useState('')
@@ -95,10 +97,10 @@ export function RegistrationClient({ lang, redirectTo }: Props) {
       <div className="text-center py-10 space-y-3">
         <div className="text-5xl">✅</div>
         <h2 className="text-xl font-bold text-slate-900 dark:text-white">
-          Your profile is saved!
+          {s.profileSavedTitle}
         </h2>
         <p className="text-slate-500 dark:text-slate-400 text-sm">
-          Redirecting to your dashboard…
+          {s.profileSavedSubtitle}
         </p>
       </div>
     )
@@ -113,7 +115,7 @@ export function RegistrationClient({ lang, redirectTo }: Props) {
         <div className="rounded-2xl border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/30 p-4 space-y-3">
           <div className="flex items-center gap-2">
             <span className="text-blue-600 dark:text-blue-400 font-bold text-sm">
-              Your Health Profile — {profile.overall_confidence}% complete
+              {s.profileCompletePercent(profile.overall_confidence)}
             </span>
             <div className="flex-1 h-1.5 rounded-full bg-blue-100 dark:bg-blue-900 overflow-hidden">
               <div
@@ -141,7 +143,7 @@ export function RegistrationClient({ lang, redirectTo }: Props) {
           )}
 
           <p className="text-xs text-blue-600/80 dark:text-blue-400/70">
-            {profile.total_signals} signal{profile.total_signals !== 1 ? 's' : ''} collected across {activeDomains.length} domain{activeDomains.length !== 1 ? 's' : ''} — don&apos;t lose this.
+            {s.signalsCollected(profile.total_signals, activeDomains.length)}
           </p>
         </div>
       )}
@@ -150,7 +152,7 @@ export function RegistrationClient({ lang, redirectTo }: Props) {
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="reg-name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
-            Name <span className="text-slate-400 font-normal">(optional)</span>
+            {s.nameOptional}
           </label>
           <input
             id="reg-name"
@@ -165,7 +167,7 @@ export function RegistrationClient({ lang, redirectTo }: Props) {
 
         <div>
           <label htmlFor="reg-email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
-            Email <span className="text-red-500">*</span>
+            {s.emailRequired} <span className="text-red-500">*</span>
           </label>
           <input
             id="reg-email"
@@ -185,13 +187,13 @@ export function RegistrationClient({ lang, redirectTo }: Props) {
           disabled={submitting}
           className="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white font-semibold text-sm transition-colors"
         >
-          {submitting ? 'Saving…' : 'Save My Health Profile →'}
+          {submitting ? s.savingBtn : s.saveProfileBtn}
         </button>
       </form>
 
       {/* Fine print */}
       <p className="text-xs text-center text-slate-400 dark:text-slate-500 leading-relaxed">
-        Free forever. No credit card. All your data stays local until you choose to sync.
+        {s.freeForever}
       </p>
     </div>
   )

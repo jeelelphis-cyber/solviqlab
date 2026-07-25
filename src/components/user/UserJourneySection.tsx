@@ -25,6 +25,7 @@ import { UnlockCard } from '../journey/UnlockCard'
 import { AIConsultCard } from '../journey/AIConsultCard'
 import { RegistrationPrompt } from './RegistrationPrompt'
 import { PrimaryRecommendationCard } from './PrimaryRecommendationCard'
+import { getJourneyStrings } from '@/lib/journey/strings'
 
 interface Props {
   readonly slug: string
@@ -40,6 +41,7 @@ const REFRESH_EVENTS = [
 ] as const
 
 export function UserJourneySection({ slug, lang }: Props) {
+  const s = getJourneyStrings(lang)
   const [hydration, setHydration]     = useState<HydrationState>('loading')
   const [journeyState, setJourneyState] = useState<JourneyState | null>(null)
   const [regTrigger, setRegTrigger]   = useState<RegistrationTriggerResult | null>(null)
@@ -69,7 +71,7 @@ export function UserJourneySection({ slug, lang }: Props) {
         priority:         'primary',
         instrument_slug:  decision.slug,
         instrument_name:  decision.name,
-        title:            decision.name ?? 'Next Step',
+        title:            decision.name ?? s.nextStepBadge,
         reason:           decision.reasons[0] ?? '',
         detail:           decision.reasons.join(' · '),
         estimated_minutes: null,
@@ -82,7 +84,7 @@ export function UserJourneySection({ slug, lang }: Props) {
         },
         generated_at: decision.generated_at,
         expires_at:   null,
-        cta_label:    'Continue',
+        cta_label:    s.continueJourney,
         cta_href:     decision.slug ? `/${lang}/calculators/${decision.slug}` : null,
       })
     } else {

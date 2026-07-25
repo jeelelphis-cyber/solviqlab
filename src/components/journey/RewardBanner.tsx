@@ -1,13 +1,15 @@
 import { getStepReward } from '@/lib/journey/rewards'
 import { getJourneyPosition } from '@/lib/journey/config'
+import { getJourneyStrings } from '@/lib/journey/strings'
 
 interface Props {
   readonly slug: string
   readonly lang: string
 }
 
-export function RewardBanner({ slug }: Props) {
-  const reward = getStepReward(slug)
+export function RewardBanner({ slug, lang }: Props) {
+  const reward = getStepReward(slug, lang)
+  const s = getJourneyStrings(lang)
   const pos = getJourneyPosition(slug)
   if (!reward || !pos) return null
 
@@ -42,7 +44,7 @@ export function RewardBanner({ slug }: Props) {
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between mb-1">
-            <p className="text-xs font-semibold text-violet-800 dark:text-violet-300">AI Consultation</p>
+            <p className="text-xs font-semibold text-violet-800 dark:text-violet-300">{s.aiConsultationLabel}</p>
             <span className="text-xs font-bold text-violet-600 dark:text-violet-400">{aiPct}%</span>
           </div>
           <div className="h-1.5 rounded-full bg-violet-100 dark:bg-violet-900/50 overflow-hidden">

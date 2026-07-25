@@ -427,8 +427,17 @@ const NEXT_STEP_DATA: Readonly<Record<string, NextStepData>> = {
 
 // ── Public API ────────────────────────────────────────────────────────────────
 
-export function getNextStep(slug: string): NextStepData | null {
-  return NEXT_STEP_DATA[slug] ?? null
+export function getNextStep(slug: string, lang = 'en'): NextStepData | null {
+  const step = NEXT_STEP_DATA[slug] ?? null
+  if (!step || lang === 'en') return step
+  // Lazy import to avoid circular deps — localize.ts imports from this file's types only
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const { localizeNextStep } = require('./localize') as { localizeNextStep: (s: NextStepData, l: string) => NextStepData }
+    return localizeNextStep(step, lang)
+  } catch {
+    return step
+  }
 }
 
 export function getJourneyForSlug(slug: string): JourneyDefinition | null {

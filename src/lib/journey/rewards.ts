@@ -120,6 +120,14 @@ const STEP_REWARDS: Readonly<Record<string, StepReward>> = {
   },
 }
 
-export function getStepReward(slug: string): StepReward | null {
-  return STEP_REWARDS[slug] ?? null
+export function getStepReward(slug: string, lang = 'en'): StepReward | null {
+  const reward = STEP_REWARDS[slug] ?? null
+  if (!reward || lang === 'en') return reward
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const { localizeReward } = require('./localize') as { localizeReward: (slug: string, r: StepReward, l: string) => StepReward }
+    return localizeReward(slug, reward, lang)
+  } catch {
+    return reward
+  }
 }

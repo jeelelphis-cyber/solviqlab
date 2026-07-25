@@ -8,6 +8,7 @@
 
 import Link from 'next/link'
 import type { Recommendation } from '@/lib/recommendation'
+import { getJourneyStrings } from '@/lib/journey/strings'
 
 interface Props {
   readonly recommendation: Recommendation
@@ -22,15 +23,16 @@ const TYPE_STYLES: Record<string, { border: string; badge: string; icon: string 
   return_tomorrow:  { border: 'border-slate-300 dark:border-slate-600',  badge: 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400',  icon: '◷' },
 }
 
-const EXPECTED_VALUE_LABEL: Record<string, string> = {
-  very_high: 'Very High Impact',
-  high:      'High Impact',
-  medium:    'Medium Impact',
-  low:       'Low Impact',
-}
-
-export function PrimaryRecommendationCard({ recommendation: rec }: Props) {
+export function PrimaryRecommendationCard({ recommendation: rec, lang }: Props) {
+  const s = getJourneyStrings(lang)
   const style = TYPE_STYLES[rec.type] ?? TYPE_STYLES['next_calculator']!
+
+  const EXPECTED_VALUE_LABEL: Record<string, string> = {
+    very_high: s.veryHighImpact,
+    high:      s.highImpact,
+    medium:    s.mediumImpact,
+    low:       s.lowImpact,
+  }
 
   const ctaContent = (
     <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold transition-colors">
@@ -49,7 +51,7 @@ export function PrimaryRecommendationCard({ recommendation: rec }: Props) {
         <div className="flex items-center gap-2">
           <span className="text-lg leading-none">{style.icon}</span>
           <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${style.badge}`}>
-            Next Step
+            {s.nextStepBadge}
           </span>
           <span className="text-xs text-slate-400 dark:text-slate-500">
             {EXPECTED_VALUE_LABEL[rec.expected_value] ?? ''}

@@ -6,6 +6,7 @@ import { getEngine } from '@/lib/user'
 import type { SolviqUser } from '@/lib/user'
 import { getNavCategories } from '../../lib/navigation'
 import type { NavCategory } from '../../lib/navigation'
+import { getJourneyStrings } from '@/lib/journey/strings'
 
 // ── All supported languages (single source of truth) ─────────────────────────
 export const LANGUAGES = [
@@ -281,6 +282,7 @@ function MobileMenu({ lang, onClose, slugToName }: { lang: string; onClose: () =
 // ── User Menu ─────────────────────────────────────────────────────────────────
 
 function UserMenu({ lang }: { lang: string }) {
+  const s = getJourneyStrings(lang)
   const [user, setUser]     = useState<SolviqUser | null>(null)
   const [open, setOpen]     = useState(false)
   const [ready, setReady]   = useState(false)
@@ -319,7 +321,7 @@ function UserMenu({ lang }: { lang: string }) {
         className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-600 dark:text-slate-300 hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
       >
         <span>👤</span>
-        <span>Sign In</span>
+        <span>{s.signIn}</span>
       </Link>
     )
   }

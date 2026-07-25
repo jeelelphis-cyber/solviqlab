@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { SUPPORTED_LANGS } from '../../../lib/instruments'
 import { RegistrationClient } from '../../../components/user/RegistrationClient'
+import { getJourneyStrings } from '../../../lib/journey/strings'
 
 const BASE = 'https://solviqlab.com'
 
@@ -30,6 +31,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
 export default function RegisterPage({ params, searchParams }: PageProps) {
   const { lang } = params
   const redirectTo = searchParams?.from
+  const s = getJourneyStrings(lang)
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center px-4 py-16">
@@ -41,11 +43,10 @@ export default function RegisterPage({ params, searchParams }: PageProps) {
             🧬
           </div>
           <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
-            Save Your Health Profile
+            {s.saveHealthProfile}
           </h1>
           <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-            Your results are building a personal health picture.
-            Save it for free — no credit card required.
+            {s.regDescription}
           </p>
         </div>
 
@@ -56,12 +57,7 @@ export default function RegisterPage({ params, searchParams }: PageProps) {
 
         {/* Value props */}
         <ul className="space-y-2">
-          {[
-            '✓ All your calculator results in one place',
-            '✓ Personalized next-step recommendations',
-            '✓ Track your health journey over time',
-            '✓ AI consultation unlocked at 80% readiness',
-          ].map(item => (
+          {[s.regBenefit1, s.regBenefit2, s.regBenefit3, s.regBenefit4].map(item => (
             <li key={item} className="text-sm text-slate-500 dark:text-slate-400 flex items-start gap-2">
               <span>{item}</span>
             </li>
