@@ -24,8 +24,8 @@ const COUNTRY_LANG: Record<string, string> = {
 }
 
 function detectLang(req: NextRequest): string {
-  // 1. Vercel geo — most reliable for VDS/proxy users
-  const country = req.geo?.country ?? ''
+  // 1. Vercel geo header (x-vercel-ip-country) — most reliable, works for VDS/proxy
+  const country = req.headers.get('x-vercel-ip-country') ?? req.geo?.country ?? ''
   if (country && COUNTRY_LANG[country]) return COUNTRY_LANG[country]!
 
   // 2. Accept-Language header — browser preference
