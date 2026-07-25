@@ -27,6 +27,9 @@ export interface JourneyStrings {
   readonly aiConsultLocked: string
   readonly aiUnlockHint: (nextSlug: string) => string
 
+  // Planning phase next step name
+  readonly planningNextName: string
+
   // UI labels
   readonly freeNoSignup: string
   readonly signIn: string
@@ -76,6 +79,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     aiConsultDescription: 'Get a personalized analysis based on your complete profile, with actionable insights tailored to your results.',
     aiConsultLocked: 'Locked',
     aiUnlockHint: () => 'Complete your next step to unlock',
+    planningNextName: 'Set Your Goal',
     freeNoSignup: 'free · no signup',
     signIn: 'Sign In',
     nextStepBadge: 'Next Step',
@@ -119,6 +123,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     aiConsultDescription: 'Отримайте персоналізований аналіз на основі вашого повного профілю з практичними рекомендаціями.',
     aiConsultLocked: 'Заблоковано',
     aiUnlockHint: () => 'Завершіть наступний крок для розблокування',
+    planningNextName: 'Встановити ціль',
     freeNoSignup: 'безкоштовно · без реєстрації',
     signIn: 'Увійти',
     nextStepBadge: 'Наступний крок',
@@ -162,6 +167,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     aiConsultDescription: 'Obtén un análisis personalizado basado en tu perfil completo con perspectivas prácticas.',
     aiConsultLocked: 'Bloqueado',
     aiUnlockHint: () => 'Completa tu próximo paso para desbloquear',
+    planningNextName: 'Establece tu objetivo',
     freeNoSignup: 'free · no signup',
     signIn: 'Sign In',
     nextStepBadge: 'Next Step',
@@ -205,6 +211,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     aiConsultDescription: 'Obtenha uma análise personalizada baseada no seu perfil completo com insights práticos.',
     aiConsultLocked: 'Bloqueado',
     aiUnlockHint: () => 'Complete o próximo passo para desbloquear',
+    planningNextName: 'Defina seu objetivo',
     freeNoSignup: 'free · no signup',
     signIn: 'Sign In',
     nextStepBadge: 'Next Step',
@@ -248,6 +255,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     aiConsultDescription: 'Obtenez une analyse personnalisée basée sur votre profil complet avec des insights concrets.',
     aiConsultLocked: 'Verrouillé',
     aiUnlockHint: () => 'Complétez votre prochaine étape pour débloquer',
+    planningNextName: 'Fixez votre objectif',
     freeNoSignup: 'free · no signup',
     signIn: 'Sign In',
     nextStepBadge: 'Next Step',
@@ -291,6 +299,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     aiConsultDescription: 'Erhalte eine personalisierte Analyse basierend auf deinem vollständigen Profil mit umsetzbaren Erkenntnissen.',
     aiConsultLocked: 'Gesperrt',
     aiUnlockHint: () => 'Schließe den nächsten Schritt ab, um freizuschalten',
+    planningNextName: 'Ziel festlegen',
     freeNoSignup: 'free · no signup',
     signIn: 'Sign In',
     nextStepBadge: 'Next Step',
@@ -334,6 +343,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     aiConsultDescription: 'Uzyskaj spersonalizowaną analizę opartą na pełnym profilu z praktycznymi wskazówkami.',
     aiConsultLocked: 'Zablokowano',
     aiUnlockHint: () => 'Ukończ następny krok, aby odblokować',
+    planningNextName: 'Ustaw swój cel',
     freeNoSignup: 'free · no signup',
     signIn: 'Sign In',
     nextStepBadge: 'Next Step',
@@ -377,6 +387,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     aiConsultDescription: 'Tüm profiline dayalı kişiselleştirilmiş analiz ve uygulanabilir öneriler al.',
     aiConsultLocked: 'Kilitli',
     aiUnlockHint: () => 'Kilidini açmak için sonraki adımı tamamla',
+    planningNextName: 'Hedefinizi belirleyin',
     freeNoSignup: 'free · no signup',
     signIn: 'Sign In',
     nextStepBadge: 'Next Step',
@@ -420,6 +431,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     aiConsultDescription: 'Ottieni un\'analisi personalizzata basata sul tuo profilo completo con approfondimenti pratici.',
     aiConsultLocked: 'Bloccato',
     aiUnlockHint: () => 'Completa il prossimo passo per sbloccare',
+    planningNextName: 'Imposta il tuo obiettivo',
     freeNoSignup: 'free · no signup',
     signIn: 'Sign In',
     nextStepBadge: 'Next Step',
@@ -463,6 +475,7 @@ const STRINGS: Record<Lang, JourneyStrings> = {
     aiConsultDescription: 'Ontvang een gepersonaliseerde analyse op basis van je volledige profiel met bruikbare inzichten.',
     aiConsultLocked: 'Vergrendeld',
     aiUnlockHint: () => 'Voltooi je volgende stap om te ontgrendelen',
+    planningNextName: 'Stel je doel in',
     freeNoSignup: 'free · no signup',
     signIn: 'Sign In',
     nextStepBadge: 'Next Step',

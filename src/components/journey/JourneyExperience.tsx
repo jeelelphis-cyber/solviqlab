@@ -85,8 +85,9 @@ function buildNextName(
   cluster: IntentCluster,
   fallback: string,
   clusterName: string,
+  planningNextName: string,
 ): string {
-  if (phase === 'planning')   return 'Set Your Goal'
+  if (phase === 'planning')   return planningNextName
   if (phase === 'assessment') return clusterName
   if (!slug) return fallback
   return name ?? slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
@@ -126,7 +127,7 @@ export function JourneyExperience({ cluster, lang, currentSlug, suggestedSlug, s
   const useSuggested    = crossCluster || nextSlug === suggestedSlug
   const rawName         = useSuggested ? (suggestedName ?? null) : (decision?.name ?? null)
   const localName       = rawName ? localizeJourneyName(rawName, lang) : null
-  const nextName        = buildNextName(nextSlug, phase, localName, cluster, s.nextStepBadge, copy.clusterAssessmentName[cluster])
+  const nextName        = buildNextName(nextSlug, phase, localName, cluster, s.nextStepBadge, copy.clusterAssessmentName[cluster], s.planningNextName)
   const nextHref        = buildNextHref(nextSlug, cluster, phase, lang)
   const nextTime        = TIME_ESTIMATE[nextSlug ?? ''] ?? TIME_ESTIMATE[`${cluster}-assessment`] ?? '3 min'
 
