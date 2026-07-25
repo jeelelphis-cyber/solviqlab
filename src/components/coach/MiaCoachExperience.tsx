@@ -122,18 +122,26 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
   // ── Generating — Mia is working ────────────────────────────────────────────
   if (state === 'generating') {
     const name = data.name ?? ''
+    const genText = lang === 'uk'
+      ? `Міа готує твоє особисте відео${name ? `, ${name}` : ''}…`
+      : `Mia is preparing your personal video${name ? `, ${name}` : ''}…`
+    const genSub = lang === 'uk'
+      ? 'Зазвичай це займає 1–2 хвилини. Залишайтесь на сторінці.'
+      : 'This usually takes 1–2 minutes. Stay on this page.'
     return (
-      <div className="flex flex-col items-center justify-center gap-6 py-14 px-4 text-center">
-        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 animate-pulse flex items-center justify-center text-white text-xl font-bold">
-          M
+      <div className="flex flex-col items-center justify-center gap-6 py-10 px-4 text-center">
+        <div className="relative w-20 h-20 shrink-0">
+          <div className="absolute inset-0 rounded-full bg-violet-400 opacity-20 animate-ping" />
+          <img
+            src="https://files2.heygen.ai/avatar/v3/Abigail_expressive_2024112501/full/2.2/preview_target.webp"
+            alt="Mia"
+            className="relative w-20 h-20 rounded-full object-cover object-top border-2 border-violet-300 shadow-lg"
+            onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
+          />
         </div>
         <div>
-          <p className="text-gray-900 dark:text-white font-medium">
-            Mia is preparing your personal video{name ? `, ${name}` : ''}…
-          </p>
-          <p className="text-sm text-gray-400 mt-1">
-            This usually takes 1–2 minutes. Stay on this page.
-          </p>
+          <p className="text-gray-900 dark:text-white font-medium">{genText}</p>
+          <p className="text-sm text-gray-400 mt-1">{genSub}</p>
         </div>
       </div>
     )
@@ -163,6 +171,7 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
         name={data.name ?? ''}
         score={data.assessmentScore}
         cluster={data.cluster ?? 'weight'}
+        lang={lang}
         onStarted={handleVideoStarted}
         onFinished={handleVideoCompleted}
         onUpgrade={handleUpgrade}

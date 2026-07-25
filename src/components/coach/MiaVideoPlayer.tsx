@@ -8,6 +8,7 @@ interface Props {
   name:        string
   score?:      number | null
   cluster?:    string
+  lang?:       string
   onStarted?:  () => void
   onFinished?: () => void
   onUpgrade?:  () => void
@@ -19,15 +20,22 @@ interface PollState {
   error:    string | null
 }
 
-const POLL_INTERVAL_MS = 4000
-const MAX_POLLS        = 60  // 4 min max wait
+const POLL_INTERVAL_MS = 5000
+const MAX_POLLS        = 72  // 6 min max wait
 
-// Messages that cycle during the "Mia is working" screen.
-// Each uses the name and score to feel personal — not generic.
-function getAnalyzingMessages(name: string, score: number | null, cluster: string): string[] {
-  const scoreText = score !== null ? `your ${score}-point score` : 'your results'
+function getAnalyzingMessages(name: string, score: number | null, cluster: string, lang: string): string[] {
+  if (lang === 'uk') {
+    const scoreText    = score !== null ? `твій результат ${score} балів` : 'твої результати'
+    const clusterLabel = cluster === 'sleep' ? 'сну' : 'здоров\'я'
+    return [
+      `Переглядаю ${scoreText}, ${name}…`,
+      `Аналізую твої дані ${clusterLabel}. Хочу показати тобі одну конкретну річ.`,
+      `Знаходжу найважливіше у твоєму профілі прямо зараз.`,
+      `Майже готово, ${name}. Хочу зробити це правильно.`,
+    ]
+  }
+  const scoreText    = score !== null ? `your ${score}-point score` : 'your results'
   const clusterLabel = cluster === 'sleep' ? 'sleep' : 'health'
-
   return [
     `Reviewing ${scoreText}, ${name}…`,
     `Looking at your ${clusterLabel} data. I want to show you one specific thing.`,
@@ -36,7 +44,13 @@ function getAnalyzingMessages(name: string, score: number | null, cluster: strin
   ]
 }
 
-export function MiaVideoPlayer({ videoId, name, score = null, cluster = 'weight', onStarted, onFinished, onUpgrade }: Props) {
+const UNAVAILABLE_COPY: Record<string, { title: string; sub: string; btn: string }> = {
+  en: { title: 'Your video is almost ready.',       sub: 'Our AI coach is in high demand right now. We\'re expanding capacity — come back in a few minutes.',  btn: 'Continue to your plan →' },
+  uk: { title: 'Ваше відео майже готове.',          sub: 'Наш ШІ-коуч зараз дуже затребуваний. Ми розширюємо потужності — поверніться за кілька хвилин.',     btn: 'Продовжити до плану →' },
+  es: { title: 'Tu video está casi listo.',         sub: 'Nuestro coach IA tiene mucha demanda ahora. Estamos ampliando capacidad — vuelve en unos minutos.',    btn: 'Continuar al plan →' },
+}
+
+export function MiaVideoPlayer({ videoId, name, score = null, cluster = 'weight', lang = 'en', onStarted, onFinished, onUpgrade }: Props) {
   const [poll, setPoll]           = useState<PollState>({ status: 'pending', videoUrl: null, error: null })
   const [played, setPlayed]       = useState(false)
   const [msgIndex, setMsgIndex]   = useState(0)
@@ -45,7 +59,7 @@ export function MiaVideoPlayer({ videoId, name, score = null, cluster = 'weight'
   const intervalRef               = useRef<ReturnType<typeof setInterval> | null>(null)
   const msgIntervalRef            = useRef<ReturnType<typeof setInterval> | null>(null)
 
-  const messages = getAnalyzingMessages(name, score, cluster)
+  const messages = getAnalyzingMessages(name, score, cluster, lang)
 
   // Poll for video status
   useEffect(() => {
@@ -91,22 +105,32 @@ export function MiaVideoPlayer({ videoId, name, score = null, cluster = 'weight'
   // ── Loading state ──────────────────────────────────────────────────────────
   if (poll.status === 'pending' || poll.status === 'processing') {
     return (
-      <div className="flex flex-col items-center justify-center gap-8 py-14 px-4">
-        {/* Avatar pulse */}
-        <div className="relative w-20 h-20">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 opacity-30 animate-ping" />
-          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 animate-pulse" />
-          <div className="absolute inset-2 rounded-full bg-white dark:bg-gray-900 flex items-center justify-center text-2xl font-bold text-violet-600">
+      <div className="flex flex-col items-center justify-center gap-6 py-10 px-4">
+        {/* Mia photo with pulse ring */}
+        <div className="relative w-24 h-24 shrink-0">
+          <div className="absolute inset-0 rounded-full bg-violet-400 opacity-20 animate-ping" />
+          <img
+            src="https://files2.heygen.ai/avatar/v3/Abigail_expressive_2024112501/full/2.2/preview_target.webp"
+            alt="Mia"
+            className="relative w-24 h-24 rounded-full object-cover object-top border-2 border-violet-300 shadow-lg"
+            onError={e => {
+              const el = e.currentTarget as HTMLImageElement
+              el.style.display = 'none'
+              const fb = el.nextElementSibling as HTMLElement | null
+              if (fb) fb.style.display = 'flex'
+            }}
+          />
+          <div
+            style={{ display: 'none' }}
+            className="absolute inset-0 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 items-center justify-center text-2xl font-bold text-white"
+          >
             M
           </div>
         </div>
 
-        {/* Cycling message — personal, not generic */}
+        {/* Cycling message */}
         <div className="text-center max-w-xs">
-          <p
-            key={msgIndex}
-            className="text-gray-800 dark:text-white font-medium leading-snug animate-fade-in"
-          >
+          <p key={msgIndex} className="text-gray-800 dark:text-white font-medium leading-snug">
             {messages[msgIndex]}
           </p>
         </div>
@@ -125,18 +149,26 @@ export function MiaVideoPlayer({ videoId, name, score = null, cluster = 'weight'
     )
   }
 
-  // ── Error state ────────────────────────────────────────────────────────────
+  // ── Error / timeout state — show as "coming soon" not hard error ───────────
   if (poll.status === 'failed' || !poll.videoUrl) {
+    const copy = UNAVAILABLE_COPY[lang] ?? UNAVAILABLE_COPY.en!
     return (
-      <div className="flex flex-col items-center gap-4 py-12 px-4 text-center">
-        <p className="text-gray-500 dark:text-gray-400 text-sm">
-          {poll.error ?? 'Something went wrong generating your video.'}
-        </p>
+      <div className="flex flex-col items-center gap-5 py-10 px-4 text-center">
+        <img
+          src="https://files2.heygen.ai/avatar/v3/Abigail_expressive_2024112501/full/2.2/preview_target.webp"
+          alt="Mia"
+          className="w-20 h-20 rounded-full object-cover object-top border-2 border-violet-200 opacity-80"
+          onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
+        />
+        <div className="space-y-1.5">
+          <p className="font-semibold text-gray-900 dark:text-white text-sm">{copy.title}</p>
+          <p className="text-xs text-gray-400 leading-relaxed max-w-xs">{copy.sub}</p>
+        </div>
         <button
           onClick={onUpgrade}
-          className="text-violet-600 underline text-sm"
+          className="rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white text-sm font-medium px-6 py-3 hover:opacity-90 transition-opacity"
         >
-          Continue to your plan →
+          {copy.btn}
         </button>
       </div>
     )
