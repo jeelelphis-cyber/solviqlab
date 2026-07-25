@@ -24,13 +24,13 @@ export class HeyGenService {
         video_inputs: [{
           character: {
             type:         'avatar',
-            avatar_id:    req.avatarId ?? MIA_AVATAR_ID,
+            avatar_id:    req.avatarId || MIA_AVATAR_ID,
             avatar_style: 'normal',
           },
           voice: {
             type:       'text',
             input_text: req.script,
-            voice_id:   req.voiceId ?? MIA_VOICE_ID,
+            voice_id:   req.voiceId || MIA_VOICE_ID,
           },
         }],
         dimension: { width: 1280, height: 720 },
