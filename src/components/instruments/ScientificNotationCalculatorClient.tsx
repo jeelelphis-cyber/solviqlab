@@ -32,7 +32,7 @@ export function ScientificNotationCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
-    track('calculate_click', { slug: 'scientific-notation-calculator', category: 'math', lang: 'en' })
+    track('calculate_click', { slug: 'scientific-notation-calculator', category: 'math', lang })
     try {
       const input = {
     value: parseFloat(value),

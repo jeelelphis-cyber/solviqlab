@@ -32,7 +32,7 @@ export function AverageCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
-    track('calculate_click', { slug: 'average-calculator', category: 'math', lang: 'en' })
+    track('calculate_click', { slug: 'average-calculator', category: 'math', lang })
     try {
       const parsed = numbers.split(/[,;\s]+/).map(s => parseFloat(s.trim())).filter(n => !isNaN(n))
       if (parsed.length === 0) {

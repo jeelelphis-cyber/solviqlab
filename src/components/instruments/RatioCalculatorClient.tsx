@@ -34,7 +34,7 @@ export function RatioCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
-    track('calculate_click', { slug: 'ratio-calculator', category: 'math', lang: 'en' })
+    track('calculate_click', { slug: 'ratio-calculator', category: 'math', lang })
     try {
       const input = {
     a: parseFloat(a),

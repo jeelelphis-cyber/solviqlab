@@ -36,7 +36,7 @@ export function FractionCalculatorClient({ translations }: Props) {
   }, [result])
 
   function calculate() {
-    track('calculate_click', { slug: 'fraction-calculator', category: 'math', lang: 'en' })
+    track('calculate_click', { slug: 'fraction-calculator', category: 'math', lang })
     try {
       const input = {
     numerator1: parseFloat(numerator1),
