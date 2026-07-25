@@ -1,18 +1,12 @@
-import { permanentRedirect } from 'next/navigation'
-import { headers } from 'next/headers'
+import { redirect } from 'next/navigation'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'SolviqLab — Free Professional Calculators',
 }
 
-const SUPPORTED = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl', 'tr', 'it', 'nl']
-
+// Fallback only — middleware.ts handles geo + Accept-Language detection first.
+// This page only runs if middleware somehow passes through (e.g. local dev).
 export default function RootPage() {
-  const acceptLanguage = headers().get('accept-language') ?? 'en'
-  const preferred = acceptLanguage
-    .split(',')
-    .map(s => s.split(';')[0]!.trim().slice(0, 2).toLowerCase())
-    .find(code => SUPPORTED.includes(code))
-  permanentRedirect(`/${preferred ?? 'en'}`)
+  redirect('/en')
 }
