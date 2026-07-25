@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import { notFound }    from 'next/navigation'
+import { notFound }     from 'next/navigation'
 import { QUIZ_SLUGS, QUIZ_REGISTRY } from '@/lib/quiz/registry'
-import { QuizClient }  from '@/components/quiz/QuizClient'
+import { QuizClient }   from '@/components/quiz/QuizClient'
 
 const SUPPORTED_LANGS = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl', 'tr', 'it', 'nl']
 const BASE_URL = 'https://solviqlab.com'
@@ -10,21 +10,22 @@ interface PageProps {
   params: { lang: string; slug: string }
 }
 
-// ── Static params — 10 quizzes × 10 languages = 100 pages ────────────────────
 export function generateStaticParams() {
   return QUIZ_SLUGS.flatMap(slug =>
     SUPPORTED_LANGS.map(lang => ({ lang, slug }))
   )
 }
 
-// ── Metadata ─────────────────────────────────────────────────────────────────
 export function generateMetadata({ params }: PageProps): Metadata {
   const config = QUIZ_REGISTRY[params.slug]
   if (!config) return { title: 'Quiz Not Found' }
 
-  const title       = `${config.title} — Free Health Quiz | SolviqLab`
-  const description = config.description
-  const url         = `${BASE_URL}/${params.lang}/quiz/${params.slug}`
+  const scaleTag  = config.clinicalScale ? ` (${config.clinicalScale})` : ''
+  const title     = `${config.title}${scaleTag} — Free Online Test | SolviqLab`
+  const description = config.seoContent?.intro
+    ? config.seoContent.intro.slice(0, 160)
+    : config.description
+  const url = `${BASE_URL}/${params.lang}/quiz/${params.slug}`
 
   return {
     title,
@@ -37,64 +38,155 @@ export function generateMetadata({ params }: PageProps): Metadata {
       ),
     },
     openGraph: {
-      title,
-      description,
-      url,
+      title, description, url,
       images: [{ url: `${BASE_URL}/og/${params.slug}`, width: 1200, height: 630, alt: title }],
       type: 'website',
     },
-    twitter: {
-      card:        'summary_large_image',
-      title,
-      description,
-      images:      [`${BASE_URL}/og/${params.slug}`],
-    },
+    twitter: { card: 'summary_large_image', title, description, images: [`${BASE_URL}/og/${params.slug}`] },
   }
 }
 
-// ── Page ──────────────────────────────────────────────────────────────────────
 export default function QuizPage({ params }: PageProps) {
   const { lang, slug } = params
   const config = QUIZ_REGISTRY[slug]
   if (!config) notFound()
 
-  const schemaJson = {
-    '@context': 'https://schema.org',
-    '@type':    'Quiz',
+  // Schema.org — Quiz + FAQPage
+  const schemaQuiz = {
+    '@context':  'https://schema.org',
+    '@type':     'Quiz',
     name:        config.title,
     description: config.description,
     url:         `${BASE_URL}/${lang}/quiz/${slug}`,
     inLanguage:  lang,
     author:      { '@type': 'Organization', name: 'SolviqLab', url: BASE_URL },
     isAccessibleForFree: true,
+    ...(config.clinicalScale && {
+      about: { '@type': 'MedicalCondition', name: config.clinicalScale },
+    }),
+    ...(config.sources && {
+      citation: config.sources.map(s => ({
+        '@type': 'CreativeWork',
+        name:    s.label,
+        ...(s.url && { url: s.url }),
+      })),
+    }),
   }
+
+  const schemaFAQ = config.seoContent?.faq && config.seoContent.faq.length > 0
+    ? {
+        '@context':  'https://schema.org',
+        '@type':     'FAQPage',
+        mainEntity:  config.seoContent.faq.map(item => ({
+          '@type':          'Question',
+          name:             item.q,
+          acceptedAnswer:   { '@type': 'Answer', text: item.a },
+        })),
+      }
+    : null
+
+  const introParagraphs = config.seoContent?.intro?.split('\n\n') ?? []
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaQuiz) }}
       />
+      {schemaFAQ && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }}
+        />
+      )}
 
-      <div className="max-w-lg mx-auto px-4 py-10">
-        {/* Back link */}
+      <div className="max-w-2xl mx-auto px-4 py-10">
+        {/* Breadcrumb */}
+        <nav className="flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500 mb-6">
+          <a href={`/${lang}`} className="hover:text-violet-600 transition-colors">Home</a>
+          <span>›</span>
+          <a href={`/${lang}/quiz`} className="hover:text-violet-600 transition-colors">Quizzes</a>
+          <span>›</span>
+          <span className="text-slate-600 dark:text-slate-300">{config.title}</span>
+        </nav>
+
+        {/* Page title */}
         <div className="mb-6">
-          <a
-            href={`/${lang}/quiz`}
-            className="inline-flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
-          >
-            <span>←</span> All Quizzes
-          </a>
+          <div className="flex items-center gap-3 mb-2">
+            <span className="text-3xl">{config.icon}</span>
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight">{config.title}</h1>
+          </div>
+          {config.clinicalScale && (
+            <div className="inline-flex items-center gap-1.5 rounded-full bg-violet-50 dark:bg-violet-900/20 border border-violet-200 dark:border-violet-800 px-3 py-1 text-xs text-violet-700 dark:text-violet-300 font-medium">
+              ✓ Clinically validated · {config.clinicalScale}
+            </div>
+          )}
         </div>
 
+        {/* SEO intro — shown above quiz */}
+        {introParagraphs.length > 0 && (
+          <div className="prose prose-sm dark:prose-invert max-w-none mb-8 text-slate-600 dark:text-slate-400">
+            <p className="leading-relaxed">{introParagraphs[0]}</p>
+          </div>
+        )}
+
         {/* Quiz card */}
-        <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm">
+        <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm mb-8">
           <QuizClient config={config} lang={lang} />
         </div>
 
-        {/* Trust line */}
-        <p className="text-center text-xs text-slate-400 dark:text-slate-500 mt-6">
-          Free · No account required · Results stay on your device
+        {/* Trust / medical note */}
+        {config.medicalNote && (
+          <p className="text-xs text-slate-400 dark:text-slate-500 text-center mb-8 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3">
+            ⚕ {config.medicalNote}
+          </p>
+        )}
+
+        {/* Rest of intro paragraphs */}
+        {introParagraphs.length > 1 && (
+          <div className="prose prose-sm dark:prose-invert max-w-none mb-8 text-slate-600 dark:text-slate-400 space-y-4">
+            {introParagraphs.slice(1).map((p, i) => (
+              <p key={i} className="leading-relaxed">{p}</p>
+            ))}
+          </div>
+        )}
+
+        {/* Sources */}
+        {config.sources && config.sources.length > 0 && (
+          <div className="mb-10">
+            <h2 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">Scientific Sources</h2>
+            <ul className="space-y-1">
+              {config.sources.map((s, i) => (
+                <li key={i} className="text-xs text-slate-500 dark:text-slate-400 flex items-start gap-1.5">
+                  <span className="mt-0.5 text-violet-400">•</span>
+                  {s.url
+                    ? <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-violet-600">{s.label}</a>
+                    : s.label
+                  }
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* FAQ */}
+        {config.seoContent?.faq && config.seoContent.faq.length > 0 && (
+          <div className="mb-10">
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-5">Frequently Asked Questions</h2>
+            <div className="space-y-5">
+              {config.seoContent.faq.map((item, i) => (
+                <div key={i} className="border-b border-slate-100 dark:border-slate-800 pb-5 last:border-0 last:pb-0">
+                  <h3 className="text-sm font-semibold text-slate-800 dark:text-slate-200 mb-1.5">{item.q}</h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{item.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Footer trust */}
+        <p className="text-center text-xs text-slate-400 dark:text-slate-500">
+          Free · No account required · Results stay on your device · Not a medical diagnosis
         </p>
       </div>
     </div>

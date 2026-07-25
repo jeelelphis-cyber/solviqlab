@@ -1,33 +1,31 @@
 'use client'
 
 // ─────────────────────────────────────────────────────────────────────────────
-// QuizClient — step-by-step quiz flow with result screen
-// Sprint M-1
+// QuizClient — Sprint M-2 (clinical scales, branching, hints, rich results)
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useState, useCallback } from 'react'
-import type { QuizConfig, QuizAnswer, QuizResult } from '@/lib/quiz/types'
-import { quizEngine }  from '@/lib/quiz/engine'
+import type { QuizConfig, QuizAnswer, QuizResult, QuizQuestion } from '@/lib/quiz/types'
+import { quizEngine }    from '@/lib/quiz/engine'
 import { saveQuizResult } from '@/lib/graph/updater'
-import { analytics }   from '@/lib/analytics'
+import { analytics }     from '@/lib/analytics'
 
-// ── Minimal localStorage graph helper (no repo needed in client) ──────────────
+// ── localStorage helpers ──────────────────────────────────────────────────────
 function persistQuizResult(result: QuizResult): void {
   if (typeof window === 'undefined') return
   try {
-    const key = 'solviq:quiz:results'
-    const raw = localStorage.getItem(key)
-    const existing: QuizResult[] = raw ? (JSON.parse(raw) as QuizResult[]) : []
+    const key      = 'solviq:quiz:results'
+    const raw      = localStorage.getItem(key)
+    const existing = raw ? (JSON.parse(raw) as QuizResult[]) : []
     const filtered = existing.filter(r => r.slug !== result.slug)
     localStorage.setItem(key, JSON.stringify([...filtered, result]))
 
-    // Also update UserGraph in localStorage if present
     const graphKeys = Object.keys(localStorage).filter(k => k.startsWith('graph:'))
     for (const gk of graphKeys) {
       const raw2 = localStorage.getItem(gk)
       if (!raw2) continue
       try {
-        const graph = JSON.parse(raw2) as Parameters<typeof saveQuizResult>[0]
+        const graph   = JSON.parse(raw2) as Parameters<typeof saveQuizResult>[0]
         const updated = saveQuizResult(graph, result)
         localStorage.setItem(gk, JSON.stringify(updated))
       } catch {}
@@ -35,154 +33,203 @@ function persistQuizResult(result: QuizResult): void {
   } catch {}
 }
 
-// ── Dispatch solviqlab:result browser event ───────────────────────────────────
 function dispatchResultEvent(result: QuizResult): void {
   if (typeof window === 'undefined') return
   const ts = Date.now()
   window.dispatchEvent(new CustomEvent('solviqlab:result', {
     detail: {
-      type:      'solviqlab:result',
-      eventId:   `quiz:${result.slug}:${ts}`,
-      slug:      result.slug,
-      name:      result.slug,
-      value:     result.score,
-      label:     result.bucket,
-      category:  'quiz',
-      unit:      null,
-      metadata:  { miaHook: result.miaHook, bucket: result.bucket },
+      type: 'solviqlab:result', eventId: `quiz:${result.slug}:${ts}`,
+      slug: result.slug, name: result.slug, value: result.score,
+      label: result.bucket, category: 'quiz', unit: null,
+      metadata: { miaHook: result.miaHook, bucket: result.bucket, severity: result.severity },
       timestamp: ts,
     },
   }))
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-
-interface Props {
-  config: QuizConfig
-  lang:   string
+// ── Severity styles ───────────────────────────────────────────────────────────
+const SEVERITY_STYLE: Record<string, { ring: string; text: string; bg: string; badge: string }> = {
+  none:     { ring: 'ring-emerald-400', text: 'text-emerald-600 dark:text-emerald-400', bg: 'bg-emerald-50 dark:bg-emerald-900/20', badge: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300' },
+  mild:     { ring: 'ring-amber-400',   text: 'text-amber-600 dark:text-amber-400',     bg: 'bg-amber-50 dark:bg-amber-900/20',     badge: 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300' },
+  moderate: { ring: 'ring-orange-400',  text: 'text-orange-600 dark:text-orange-400',   bg: 'bg-orange-50 dark:bg-orange-900/20',   badge: 'bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300' },
+  severe:   { ring: 'ring-red-400',     text: 'text-red-600 dark:text-red-400',         bg: 'bg-red-50 dark:bg-red-900/20',         badge: 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300' },
 }
 
-type QuestionState = 'answering' | 'result'
-
-const BUCKET_COLORS: Record<string, { bg: string; ring: string; text: string }> = {
-  good:    { bg: 'bg-emerald-50 dark:bg-emerald-900/20', ring: 'ring-emerald-400', text: 'text-emerald-600 dark:text-emerald-400' },
-  amber:   { bg: 'bg-amber-50 dark:bg-amber-900/20',    ring: 'ring-amber-400',    text: 'text-amber-600 dark:text-amber-400' },
-  red:     { bg: 'bg-red-50 dark:bg-red-900/20',        ring: 'ring-red-400',      text: 'text-red-600 dark:text-red-400' },
-}
-
-function bucketStyle(score: number): typeof BUCKET_COLORS[string] {
-  if (score >= 70) return BUCKET_COLORS['good']!
-  if (score >= 40) return BUCKET_COLORS['amber']!
-  return BUCKET_COLORS['red']!
+function getSeverityStyle(severity?: string, score?: number) {
+  if (severity && SEVERITY_STYLE[severity]) return SEVERITY_STYLE[severity]!
+  if (score !== undefined) {
+    if (score >= 70) return SEVERITY_STYLE['none']!
+    if (score >= 40) return SEVERITY_STYLE['mild']!
+    return SEVERITY_STYLE['severe']!
+  }
+  return SEVERITY_STYLE['none']!
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
+
+interface Props { config: QuizConfig; lang: string }
+type Phase = 'intro' | 'answering' | 'result'
 
 export function QuizClient({ config, lang }: Props) {
-  const [step, setStep]           = useState(0)
-  const [answers, setAnswers]     = useState<QuizAnswer[]>([])
-  const [result, setResult]       = useState<QuizResult | null>(null)
-  const [phase, setPhase]         = useState<QuestionState>('answering')
+  const [phase,       setPhase]       = useState<Phase>('intro')
+  const [answers,     setAnswers]     = useState<QuizAnswer[]>([])
+  const [currentQ,    setCurrentQ]    = useState<QuizQuestion | null>(null)
+  const [result,      setResult]      = useState<QuizResult | null>(null)
   const [selectedVal, setSelectedVal] = useState<number | null>(null)
-  const [started, setStarted]     = useState(false)
+  const [stepNum,     setStepNum]     = useState(0)
 
-  const questions = config.questions
-  const current   = questions[step]
-  const progress  = Math.round(((step) / questions.length) * 100)
+  const totalQ = config.questions.length
 
-  // ── Start ────────────────────────────────────────────────────────────────
+  // ── Start ─────────────────────────────────────────────────────────────────
   function handleStart() {
-    setStarted(true)
+    const first = config.questions[0] ?? null
+    setCurrentQ(first)
+    setPhase('answering')
+    setStepNum(1)
     analytics.track('quiz_started', { slug: config.slug })
   }
 
-  // ── Record answer and advance ─────────────────────────────────────────────
+  // ── Answer ────────────────────────────────────────────────────────────────
   const handleAnswer = useCallback((value: number) => {
-    if (!current) return
-    const newAnswers = [...answers, { questionId: current.id, value }]
+    if (!currentQ) return
+    const newAnswers = [...answers, { questionId: currentQ.id, value }]
     setAnswers(newAnswers)
     setSelectedVal(null)
 
-    if (step + 1 >= questions.length) {
-      // Last question — compute result
+    const next = quizEngine.getNextQuestion(config, newAnswers)
+    if (!next) {
       const computed = quizEngine.compute(config, newAnswers)
       setResult(computed)
       setPhase('result')
       persistQuizResult(computed)
       dispatchResultEvent(computed)
-      analytics.track('quiz_completed', {
-        slug:   computed.slug,
-        score:  computed.score,
-        bucket: computed.bucket,
-      })
+      analytics.track('quiz_completed', { slug: computed.slug, score: computed.score, bucket: computed.bucket })
     } else {
-      setStep(s => s + 1)
+      setCurrentQ(next)
+      setStepNum(s => s + 1)
     }
-  }, [answers, current, step, questions.length, config])
+  }, [answers, currentQ, config])
 
   // ── Restart ───────────────────────────────────────────────────────────────
   function handleRestart() {
-    setStep(0)
+    setPhase('intro')
     setAnswers([])
+    setCurrentQ(null)
     setResult(null)
-    setPhase('answering')
     setSelectedVal(null)
-    setStarted(false)
+    setStepNum(0)
   }
 
-  // ── Intro screen ──────────────────────────────────────────────────────────
-  if (!started) {
+  // ─────────────────────────────────────────────────────────────────────────
+  // INTRO
+  // ─────────────────────────────────────────────────────────────────────────
+  if (phase === 'intro') {
     return (
       <div className="flex flex-col items-center gap-6 py-8 px-4 text-center">
         <div className="text-5xl">{config.icon}</div>
+
         <div>
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{config.title}</h1>
           <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-sm mx-auto">{config.description}</p>
         </div>
-        <div className="flex items-center gap-2 text-xs text-gray-400">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-          {questions.length} questions · Free · No account needed
+
+        {config.clinicalScale && (
+          <div className="flex items-center gap-2 rounded-full bg-violet-50 dark:bg-violet-900/20 border border-violet-200 dark:border-violet-800 px-3 py-1.5">
+            <span className="text-violet-600 dark:text-violet-400 text-xs">✓</span>
+            <span className="text-xs text-violet-700 dark:text-violet-300 font-medium">Clinically validated · {config.clinicalScale}</span>
+          </div>
+        )}
+
+        <div className="flex items-center gap-4 text-xs text-gray-400">
+          <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />{totalQ} questions</span>
+          <span>·</span>
+          <span>Free</span>
+          <span>·</span>
+          <span>No account needed</span>
         </div>
+
+        {config.medicalNote && (
+          <p className="text-xs text-gray-400 dark:text-gray-500 max-w-xs leading-relaxed border border-gray-200 dark:border-gray-700 rounded-lg p-3">
+            ⚕ {config.medicalNote}
+          </p>
+        )}
+
         <button
           onClick={handleStart}
           className="w-full max-w-xs rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold py-3.5 px-6 hover:opacity-90 active:scale-95 transition-all"
         >
           Start Quiz →
         </button>
+
+        {config.sources && config.sources.length > 0 && (
+          <p className="text-xs text-gray-400">
+            Based on: {config.sources.map(s => s.label).join(' · ')}
+          </p>
+        )}
       </div>
     )
   }
 
-  // ── Result screen ─────────────────────────────────────────────────────────
+  // ─────────────────────────────────────────────────────────────────────────
+  // RESULT
+  // ─────────────────────────────────────────────────────────────────────────
   if (phase === 'result' && result) {
-    const style = bucketStyle(result.score)
-    const ctaHref = `/${lang}/calculators/bmi-calculator`
+    const style  = getSeverityStyle(result.severity, result.score)
+    const ctaUrl = `/${lang}/coach`
+
+    // Display score: for normalized show 0-100, for raw show raw/max
+    const normalize = config.scoring.normalize !== false
+    const displayScore = normalize
+      ? `${result.score}/100`
+      : `${result.rawScore ?? result.score}/${config.scoring.max}`
 
     return (
       <div className="flex flex-col items-center gap-6 py-8 px-4 text-center">
         {/* Score circle */}
         <div className={`relative w-28 h-28 rounded-full ring-4 ${style.ring} flex items-center justify-center ${style.bg}`}>
           <div>
-            <div className={`text-4xl font-bold ${style.text}`}>{result.score}</div>
-            <div className="text-xs text-gray-400">/100</div>
+            <div className={`text-3xl font-bold ${style.text}`}>{displayScore.split('/')[0]}</div>
+            <div className="text-xs text-gray-400">/{displayScore.split('/')[1]}</div>
           </div>
         </div>
 
-        {/* Bucket label */}
-        <div>
-          <h2 className={`text-xl font-bold mb-1 ${style.text}`}>{result.bucket}</h2>
-          <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed max-w-sm mx-auto">
+        {/* Labels */}
+        <div className="flex flex-col items-center gap-2">
+          <h2 className={`text-xl font-bold ${style.text}`}>{result.bucket}</h2>
+          {result.severity && (
+            <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${style.badge}`}>
+              {result.severity.charAt(0).toUpperCase() + result.severity.slice(1)} severity
+            </span>
+          )}
+          <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed max-w-sm mx-auto mt-1">
             {result.description}
           </p>
         </div>
 
-        {/* Mia insight teaser */}
+        {/* 3 Actions */}
+        {result.actions && result.actions.length > 0 && (
+          <div className="w-full max-w-sm rounded-2xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 p-4 text-left">
+            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">What to do now</p>
+            <div className="space-y-2.5">
+              {result.actions.map((action, i) => (
+                <div key={i} className="flex items-start gap-2.5">
+                  <span className={`mt-0.5 w-5 h-5 rounded-full flex items-center justify-center shrink-0 text-xs font-bold ${style.badge}`}>
+                    {i + 1}
+                  </span>
+                  <p className="text-sm text-gray-700 dark:text-gray-300 leading-snug">{action}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Mia insight */}
         <div className="w-full max-w-sm rounded-2xl border border-violet-200 dark:border-violet-800 bg-violet-50 dark:bg-violet-900/20 p-4 text-left">
           <div className="flex items-start gap-3">
             <img
               src="https://files2.heygen.ai/avatar/v3/1ad51ab9fee24ae88af067206e14a1d8_44250/preview_target.webp"
               alt="Mia"
-              className="w-9 h-9 rounded-full object-cover object-top border-2 border-violet-300 flex-shrink-0"
+              className="w-9 h-9 rounded-full object-cover object-top border-2 border-violet-300 shrink-0"
               onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
             />
             <div>
@@ -196,11 +243,28 @@ export function QuizClient({ config, lang }: Props) {
 
         {/* CTA */}
         <a
-          href={ctaHref}
+          href={ctaUrl}
           className="w-full max-w-sm rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold py-3.5 px-6 hover:opacity-90 active:scale-95 transition-all text-center block"
         >
-          Get Mia&apos;s personalized insights →
+          Get Mia&apos;s personal plan →
         </a>
+
+        {/* Sources */}
+        {config.sources && config.sources.length > 0 && (
+          <div className="w-full max-w-sm text-left">
+            <p className="text-xs text-gray-400 font-medium mb-1">Sources</p>
+            <ul className="space-y-0.5">
+              {config.sources.map((s, i) => (
+                <li key={i} className="text-xs text-gray-400">
+                  {s.url
+                    ? <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">{s.label}</a>
+                    : s.label
+                  }
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <button
           onClick={handleRestart}
@@ -212,15 +276,19 @@ export function QuizClient({ config, lang }: Props) {
     )
   }
 
-  // ── Question screen ───────────────────────────────────────────────────────
-  if (!current) return null
+  // ─────────────────────────────────────────────────────────────────────────
+  // QUESTION
+  // ─────────────────────────────────────────────────────────────────────────
+  if (!currentQ) return null
+
+  const progress = Math.round(((stepNum - 1) / totalQ) * 100)
 
   return (
     <div className="flex flex-col gap-6 py-6 px-2">
-      {/* Progress bar */}
+      {/* Progress */}
       <div>
         <div className="flex justify-between text-xs text-gray-400 mb-1.5">
-          <span>Question {step + 1} of {questions.length}</span>
+          <span>Question {stepNum} of {totalQ}</span>
           <span>{progress}%</span>
         </div>
         <div className="w-full h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
@@ -229,19 +297,27 @@ export function QuizClient({ config, lang }: Props) {
             style={{ width: `${progress}%` }}
           />
         </div>
+        {config.clinicalScale && (
+          <p className="text-right text-xs text-gray-400 mt-1">{config.clinicalScale}</p>
+        )}
       </div>
 
-      {/* Question text */}
-      <div className="min-h-[60px]">
+      {/* Question */}
+      <div>
         <p className="text-lg font-semibold text-gray-900 dark:text-white leading-snug">
-          {current.text}
+          {currentQ.text}
         </p>
+        {currentQ.hint && (
+          <p className="text-xs text-gray-400 dark:text-gray-500 mt-2 leading-relaxed border-l-2 border-violet-200 dark:border-violet-700 pl-3">
+            {currentQ.hint}
+          </p>
+        )}
       </div>
 
       {/* Answer inputs */}
       <div className="flex flex-col gap-2.5">
-        {current.type === 'single' && current.options && (
-          current.options.map(opt => (
+        {(currentQ.type === 'single' || currentQ.type === 'likert') && currentQ.options && (
+          currentQ.options.map(opt => (
             <button
               key={opt.value}
               onClick={() => handleAnswer(opt.value)}
@@ -252,12 +328,9 @@ export function QuizClient({ config, lang }: Props) {
           ))
         )}
 
-        {current.type === 'yesno' && (
+        {currentQ.type === 'yesno' && (
           <div className="grid grid-cols-2 gap-3">
-            {[
-              { label: 'Yes', value: 1 },
-              { label: 'No',  value: 4 },
-            ].map(opt => (
+            {[{ label: 'Yes', value: 1 }, { label: 'No', value: 4 }].map(opt => (
               <button
                 key={opt.label}
                 onClick={() => handleAnswer(opt.value)}
@@ -269,30 +342,32 @@ export function QuizClient({ config, lang }: Props) {
           </div>
         )}
 
-        {current.type === 'scale' && (
+        {currentQ.type === 'scale' && (
           <ScaleInput
-            min={current.scaleMin ?? 1}
-            max={current.scaleMax ?? 5}
-            labels={current.scaleLabels}
+            min={currentQ.scaleMin ?? 1}
+            max={currentQ.scaleMax ?? 5}
+            labels={currentQ.scaleLabels}
             selectedVal={selectedVal}
             onSelect={setSelectedVal}
             onConfirm={handleAnswer}
           />
         )}
       </div>
+
+      {currentQ.source && (
+        <p className="text-xs text-gray-300 dark:text-gray-600 text-right">{currentQ.source}</p>
+      )}
     </div>
   )
 }
 
 // ── Scale Input ───────────────────────────────────────────────────────────────
-
 interface ScaleInputProps {
-  min:         number
-  max:         number
-  labels?:     { min: string; max: string }
+  min: number; max: number
+  labels?: { min: string; max: string }
   selectedVal: number | null
-  onSelect:    (v: number) => void
-  onConfirm:   (v: number) => void
+  onSelect: (v: number) => void
+  onConfirm: (v: number) => void
 }
 
 function ScaleInput({ min, max, labels, selectedVal, onSelect, onConfirm }: ScaleInputProps) {
@@ -302,29 +377,21 @@ function ScaleInput({ min, max, labels, selectedVal, onSelect, onConfirm }: Scal
   return (
     <div className="flex flex-col gap-4">
       {isMany ? (
-        // Slider for wide ranges (e.g. 1-10)
         <div className="flex flex-col gap-3">
           <input
-            type="range"
-            min={min}
-            max={max}
-            value={selectedVal ?? min}
+            type="range" min={min} max={max} value={selectedVal ?? min}
             onChange={e => onSelect(Number(e.target.value))}
             className="w-full accent-violet-600 cursor-pointer"
           />
           <div className="text-center">
-            <span className="text-3xl font-bold text-violet-600 dark:text-violet-400">
-              {selectedVal ?? min}
-            </span>
+            <span className="text-3xl font-bold text-violet-600 dark:text-violet-400">{selectedVal ?? min}</span>
           </div>
         </div>
       ) : (
-        // Buttons for small ranges (e.g. 1-5)
         <div className="flex gap-2 justify-center">
           {steps.map(v => (
             <button
-              key={v}
-              onClick={() => onSelect(v)}
+              key={v} onClick={() => onSelect(v)}
               className={`flex-1 min-h-[48px] rounded-xl border text-sm font-semibold transition-all active:scale-95 ${
                 selectedVal === v
                   ? 'border-violet-500 bg-violet-600 text-white'
@@ -339,8 +406,7 @@ function ScaleInput({ min, max, labels, selectedVal, onSelect, onConfirm }: Scal
 
       {labels && (
         <div className="flex justify-between text-xs text-gray-400 px-1">
-          <span>{labels.min}</span>
-          <span>{labels.max}</span>
+          <span>{labels.min}</span><span>{labels.max}</span>
         </div>
       )}
 
