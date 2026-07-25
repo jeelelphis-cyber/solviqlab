@@ -18,7 +18,7 @@ export function Footer({ lang }: { lang: string }) {
           {/* Brand */}
           <div className="col-span-2">
             <Link href={`/${lang}`} className="inline-block mb-4">
-              <span className="text-2xl font-bold tracking-tight">
+              <span className="text-2xl font-bold tracking-tight" translate="no">
                 <span className="text-blue-400">Solviq</span><span className="text-white">Lab</span>
               </span>
             </Link>
