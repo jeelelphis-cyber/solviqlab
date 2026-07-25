@@ -13,6 +13,7 @@ export interface ResultEvent {
   readonly label: string | null       // 'Normal Weight'
   readonly category: string | null    // 'normal'
   readonly unit: string | null        // 'kg/m²'
+  readonly miaFact?: string | null    // human-readable fact for Mia: "BMI 21.7 — Normal Weight"
   readonly metadata: Readonly<Record<string, unknown>>
   readonly timestamp: number          // Date.now()
   readonly sessionId?: string

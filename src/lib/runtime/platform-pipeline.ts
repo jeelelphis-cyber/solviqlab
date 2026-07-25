@@ -123,55 +123,29 @@ export function createPlatformPipeline(engines: PlatformEngines): PipelineDefini
       },
 
       // ── P25: CalculatorGraphSync ────────────────────────────────────────────
-      // Writes raw calculator results (BMI, calories, etc.) into UserGraph
-      // coachMemory.facts + identity so Mia can reference real user numbers.
+      // Reads miaFact from ResultEvent and stores in UserGraph.coachMemory.
+      // Works for ALL calculators — each calculator sets its own miaFact.
+      // Standard: calculator sets miaFact → P25 stores it → Mia uses it.
       {
-        name:        'CalculatorGraphSync.storeMetrics',
+        name:        'CalculatorGraphSync.storeMiaFact',
         priority:    25,
-        description: 'Persists calculator result metrics into UserGraph for Mia personalization.',
+        description: 'Stores miaFact from any calculator into UserGraph coachMemory for Mia personalization.',
         build: () => (event: ResultEvent) => {
           if (typeof window === 'undefined') return
+          if (!event.miaFact) return
           const userId = userEngine.getUserId()
           if (!userId) return
 
           const repo    = new GraphRepository(new LocalStorageProvider())
           const updater = new GraphUpdater(repo)
-          const meta    = (event.metadata ?? {}) as Record<string, unknown>
 
-          if (event.slug === 'bmi-calculator') {
-            const bmi      = typeof meta['bmi']      === 'number' ? (meta['bmi'] as number).toFixed(1)  : null
-            const category = typeof meta['category'] === 'string' ? meta['category'] as string          : null
-            const age      = typeof meta['age']      === 'number' ? meta['age'] as number               : null
-            const sex      = (meta['sex'] === 'male' || meta['sex'] === 'female') ? meta['sex'] as string : null
-
-            if (bmi && category) {
-              updater.addMemoryFact(userId, {
-                id:         'bmi-result',
-                text:       `BMI ${bmi} — ${category.replace(/_/g, ' ')}`,
-                category:   'health_metric',
-                importance: 'high',
-                addedAt:    new Date().toISOString(),
-              })
-            }
-            if (age || sex) {
-              updater.updateIdentity(userId, {
-                ...(age ? { age } : {}),
-              })
-            }
-          }
-
-          if (event.slug === 'calorie-calculator' || event.slug === 'tdee-calculator') {
-            const calories = typeof event.value === 'number' ? Math.round(event.value) : null
-            if (calories) {
-              updater.addMemoryFact(userId, {
-                id:         'tdee-result',
-                text:       `Daily calorie need: ${calories} kcal`,
-                category:   'health_metric',
-                importance: 'high',
-                addedAt:    new Date().toISOString(),
-              })
-            }
-          }
+          updater.addMemoryFact(userId, {
+            id:         `fact-${event.slug}`,
+            text:       event.miaFact,
+            category:   'health_metric',
+            importance: 'high',
+            addedAt:    new Date().toISOString(),
+          })
         },
       },
 

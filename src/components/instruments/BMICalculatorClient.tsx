@@ -27,8 +27,8 @@ interface Props {
 }
 
 // ─── Category Config ──────────────────────────────────────────────────────────
+// verdicts are NOT hardcoded here — they come from t.result.categories[category]
 const CATEGORY_CONFIG: Record<BMICategory, {
-  verdict: string
   icon: string
   colorClass: string
   bgClass: string
@@ -36,7 +36,6 @@ const CATEGORY_CONFIG: Record<BMICategory, {
   barColor: string
 }> = {
   underweight_severe: {
-    verdict: 'Severely Underweight',
     icon: '⚠️',
     colorClass: 'text-blue-700',
     bgClass: 'bg-blue-50 dark:bg-blue-950',
@@ -44,7 +43,6 @@ const CATEGORY_CONFIG: Record<BMICategory, {
     barColor: '#1D4ED8',
   },
   underweight: {
-    verdict: 'Underweight',
     icon: '⚠️',
     colorClass: 'text-sky-700',
     bgClass: 'bg-sky-50 dark:bg-sky-950',
@@ -52,7 +50,6 @@ const CATEGORY_CONFIG: Record<BMICategory, {
     barColor: '#0284C7',
   },
   normal: {
-    verdict: 'Healthy Weight',
     icon: '✅',
     colorClass: 'text-green-700',
     bgClass: 'bg-green-50 dark:bg-green-950',
@@ -60,7 +57,6 @@ const CATEGORY_CONFIG: Record<BMICategory, {
     barColor: '#16A34A',
   },
   overweight: {
-    verdict: 'Overweight',
     icon: '⚠️',
     colorClass: 'text-yellow-700',
     bgClass: 'bg-yellow-50 dark:bg-yellow-950',
@@ -68,7 +64,6 @@ const CATEGORY_CONFIG: Record<BMICategory, {
     barColor: '#CA8A04',
   },
   obese_1: {
-    verdict: 'Obese — Class I',
     icon: '🔴',
     colorClass: 'text-orange-700',
     bgClass: 'bg-orange-50 dark:bg-orange-950',
@@ -76,7 +71,6 @@ const CATEGORY_CONFIG: Record<BMICategory, {
     barColor: '#EA580C',
   },
   obese_2: {
-    verdict: 'Obese — Class II',
     icon: '🔴',
     colorClass: 'text-red-700',
     bgClass: 'bg-red-50 dark:bg-red-950',
@@ -84,7 +78,6 @@ const CATEGORY_CONFIG: Record<BMICategory, {
     barColor: '#DC2626',
   },
   obese_3: {
-    verdict: 'Obese — Class III',
     icon: '🔴',
     colorClass: 'text-red-800',
     bgClass: 'bg-red-100 dark:bg-red-950',
@@ -229,10 +222,14 @@ function SourcesBlock({ lang }: { lang: string }) {
 export function BMICalculatorClient({ translations, lang }: Props) {
   const t = translations as {
     form: Record<string, string>
-    result: Record<string, unknown>
+    result: Record<string, unknown> & { categories: Record<string, string> }
     validation: Record<string, string>
     aria: Record<string, string>
   }
+
+  // Returns translated category label — reads from translation file, never hardcoded
+  const categoryLabel = (cat: BMICategory): string =>
+    t.result.categories?.[cat] ?? cat.replace(/_/g, ' ')
 
   const [unit, setUnit] = useState<UnitSystem>('metric')
   const [heightCm, setHeightCm] = useState('')
@@ -308,7 +305,16 @@ export function BMICalculatorClient({ translations, lang }: Props) {
     const output = calculateBMI(input)
     setResult(output)
     track('result_shown', { slug: 'bmi-calculator', category: 'health', result_bucket: getBMIBucket(output.bmi) })
-    window.dispatchEvent(new CustomEvent('solviqlab:result', { detail: { slug: 'bmi-calculator', name: 'BMI Calculator', value: output.bmi, label: output.category, category: output.category, unit: 'kg/m²', metadata: output } }))
+    window.dispatchEvent(new CustomEvent('solviqlab:result', { detail: {
+      slug:     'bmi-calculator',
+      name:     'BMI Calculator',
+      value:    output.bmi,
+      label:    categoryLabel(output.category),
+      category: output.category,
+      unit:     'kg/m²',
+      miaFact:  `BMI ${output.bmi.toFixed(1)} — ${categoryLabel(output.category)}`,
+      metadata: output,
+    } }))
     setTimeout(() => resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 60)
   }, [validate, lang])
 
@@ -320,8 +326,7 @@ export function BMICalculatorClient({ translations, lang }: Props) {
 
   const copyResult = useCallback(() => {
     if (!result) return
-    const cfg = CATEGORY_CONFIG[result.category]
-    const text = `BMI: ${result.bmi.toFixed(1)} — ${cfg.verdict} | Healthy range: ${result.healthyWeightMin_kg.toFixed(0)}–${result.healthyWeightMax_kg.toFixed(0)} kg | solviqlab.com/en/bmi-calculator`
+    const text = `BMI: ${result.bmi.toFixed(1)} — ${categoryLabel(result.category)} | ${t.result['healthy_range_label'] ?? 'Healthy range'}: ${result.healthyWeightMin_kg.toFixed(0)}–${result.healthyWeightMax_kg.toFixed(0)} kg | solviqlab.com/${lang}/calculators/bmi-calculator`
     void navigator.clipboard.writeText(text).then(() => {
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
@@ -524,7 +529,7 @@ export function BMICalculatorClient({ translations, lang }: Props) {
           ref={resultRef}
           role="status"
           aria-live="polite"
-          aria-label={`Your BMI result: ${result.bmi.toFixed(1)}, ${cfg.verdict}`}
+          aria-label={`${t.aria?.['result_announcement'] ?? 'BMI result'}: ${result.bmi.toFixed(1)}, ${categoryLabel(result.category)}`}
           className={`transition-all duration-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
         >
           {/* Verdict Card */}
