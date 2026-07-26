@@ -11,7 +11,7 @@
   "faq": {
     "title": "Veelgestelde Vragen",
     "q1": "Hoe wordt het kortingsbedrag berekend?",
-    "a1": "Korting = Oorspronkelijke prijs × (Kortingspercentage / 100). Eindprijs = Oorspronkelijke prijs − Korting. Voorbeeld: product van €80 met 25% korting: Korting = €80 × 0,25 = €20. Eindprijs = €80 − €20 = €60.",
+    "a1": "Het kortingsbedrag is: Kortingsbedrag = Oorspronkelijke prijs × (Kortingspercentage ÷ 100). Voor een artikel van $120 met 25% korting: $120 × 0,25 = $30 bespaard. De uiteindelijke prijs is $120 − $30 = $90. Dit is de universeel toegepaste retailkortingsformule die door elke retailer wereldwijd wordt gebruikt, van e-commerceplatforms tot fysieke winkels. Het percentage vertegenwoordigt een fractie van de oorspronkelijke prijs die van de uiteindelijke kosten wordt afgetrokken.",
     "q2": "Hoe bereken ik het kortingspercentage als ik de oorspronkelijke en de kortingsprijs ken?",
     "a2": "Deze calculator werkt met procentuele kortingen. Voor een vast bedrag in dollars (bijv. '$20 korting') trek je dit eenvoudig direct af: Eindprijs = Oorspronkelijke prijs − Vaste korting. Je kunt echter het equivalente percentage vinden met: Kortings% = (Vaste korting ÷ Oorspronkelijke prijs) × 100. Een korting van $20 op een artikel van $80 is een korting van 25%. Voer dat percentage in deze calculator in om je besparing en eindprijs te verifiëren.",
     "q3": "Hoe werken meerdere kortingen (opeenvolgende kortingen)?",
@@ -21,7 +21,7 @@
     "q5": "Hoe vergelijk ik aanbiedingen met verschillende kortingen?",
     "a5": "Het effectieve kortingspercentage is het werkelijke percentage dat u bespaart op de oorspronkelijke prijs nadat alle kortingen zijn toegepast. Als een item van $150 een uitverkoopkorting van 30% heeft, waardoor het $105 wordt, en u gebruikt daar bovenop een coupon van 10%, dan is de uiteindelijke prijs $94.50. De effectieve korting = ($150 − $94.50) / $150 = 37% — niet 40%. Bereken altijd de effectieve korting vanaf de oorspronkelijke prijs om de werkelijke besparing te begrijpen, vooral bij het vergelijken van aanbiedingen bij verschillende winkels.",
     "q6": "Wat is de aanbevolen verkoopprijs (AVP) en hoe relevant is die?",
-    "a6": "AVP is de prijs die de fabrikant suggereert voor de detailhandel. In de praktijk worden veel artikelen regelmatig onder AVP verkocht, waardoor kortingen op de catalogusprijs potentieel misleidend kunnen zijn.",
+    "a6": "Zet beide om naar een prijs per eenheid of effectieve prijs. Winkel A: artikel van €80 met 20% korting = €64 eindprijs. Winkel B: hetzelfde artikel voor €75 met 10% korting = €67,50. Winkel A is de betere aanbieding, ondanks het lagere kortingspercentage — omdat de oorspronkelijke prijs en kortingsstructuur verschillen. Vergelijk altijd de uiteindelijke prijs per eenheid, niet het kortingspercentage, bij het beoordelen van concurrerende aanbiedingen.",
     "q7": "Hoe bereken ik de oorspronkelijke prijs als ik alleen de kortingsprijs ken?",
     "a7": "Herschik de kortingsformule: Oorspronkelijke prijs = Eindprijs ÷ (1 − Kortingspercentage). Als je $72 betaalde na 20% korting, was de oorspronkelijke prijs $72 ÷ 0,80 = $90. Dit is handig wanneer een winkel alleen de verkoopprijs toont zonder de oorspronkelijke 'was'-prijs. Het helpt ook om te controleren of een beweerde korting wiskundig correct is — een verdachte '70% korting'-claim kan worden geverifieerd door te controleren: Eindprijs ÷ 0,30 = beweerde oorspronkelijke prijs.",
     "q8": "Hoe werkt btw in combinatie met kortingen in Nederland?",

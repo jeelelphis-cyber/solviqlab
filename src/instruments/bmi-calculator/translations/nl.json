@@ -65,11 +65,11 @@
     "q5": "Wat zijn de WHO BMI-categorieën?",
     "a5": "De WHO definieert: Ernstig ondergewicht (<16,0), Matig ondergewicht (16,0–16,9), Licht ondergewicht (17,0–18,4), Normaal (18,5–24,9), Overgewicht (25,0–29,9), Obesitas klasse I (30,0–34,9), Obesitas klasse II (35,0–39,9), Obesitas klasse III (≥40,0).",
     "q6": "Is het BMI-bereik hetzelfde voor mannen en vrouwen?",
-    "a6": "De WHO BMI-bereiken (18,5–24,9 voor normaal) gelden gelijk voor mannen en vrouwen. Bij hetzelfde BMI hebben vrouwen echter van nature meer lichaamsvet dan mannen vanwege hormonale en reproductieve verschillen.",
+    "a6": "De WHO BMI-bereiken (18,5–24,9 voor normaal) gelden gelijk voor mannen en vrouwen. Echter, bij dezelfde BMI hebben vrouwen van nature 8–10% meer lichaamsvet dan mannen vanwege hormonale en reproductieve verschillen. Daarom pleiten sommige onderzoekers voor geslachtsspecifieke BMI-grenswaarden, hoewel de WHO deze niet heeft overgenomen. Gebruik voor een meer geslachtsgevoelige beoordeling het lichaamsvetpercentage naast de BMI.",
     "q7": "Hoe vaak moet ik mijn BMI controleren?",
     "a7": "Voor de meeste volwassenen is het berekenen van de BMI elke 3–6 maanden voldoende. Het gewicht fluctueert dagelijks met 1–3 kg door hydratatie en maaltijden. Dagelijkse metingen voegen geen klinisch nuttige informatie toe.",
     "q8": "Kan een normaal BMI betekenen dat ik toch ongezond ben?",
-    "a8": "Ja. Een aandoening genaamd 'normaal gewicht obesitas' treedt op wanneer iemand een normaal BMI heeft maar een hoog lichaamsvetpercentage. Omgekeerd kunnen atleten met een hoog BMI maar laag vetpercentage uitstekende metabolische markers hebben."
+    "a8": "Ja. Een aandoening genaamd 'normal weight obesity' of 'skinny fat' treedt op wanneer iemand een normale BMI heeft, maar een hoog percentage lichaamsvet en een lage spiermassa. Dit brengt vergelijkbare metabole risico's met zich mee als overgewicht. Omgekeerd zijn sommige mensen met een BMI in de overgewichtcategorie (25–27,9) metabool gezond. Daarom moet BMI altijd worden geïnterpreteerd samen met andere markers: middelomtrek, bloeddruk, bloedglucose en cholesterol."
   },
   "aria": {
     "result_announcement": "Resultaat: BMI {bmi}. Categorie: {category}. {summary}.",
