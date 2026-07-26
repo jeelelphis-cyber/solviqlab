@@ -12,7 +12,8 @@ import { buildCTA } from '../../../../lib/journey/cta'
 import { getClusterForSlug } from '../../../../lib/catalog/slug-cluster'
 import { localizeJourney } from '../../../../lib/journey/localize'
 import { getJourneyStrings } from '../../../../lib/journey/strings'
-import { MiaCoachBlock }    from '../../../../components/coach/MiaCoachBlock'
+import { MiaCoachBlock } from '../../../../components/coach/MiaCoachBlock'
+import { AlexCoachBlock } from '../../../../components/coach/AlexCoachBlock'
 
 interface PageProps {
   params: { lang: string; slug: string }
@@ -347,6 +348,9 @@ export default function InstrumentPage({ params }: PageProps) {
 
         {/* Mia AI Coach — appears after health calculator result */}
         <MiaCoachBlock lang={lang} />
+
+        {/* Alex AI Coach — appears after finance calculator result */}
+        <AlexCoachBlock lang={lang} />
 
         {/* V4-1 First Journey Experience — reads live IntentState, animates in after result */}
         {(() => {

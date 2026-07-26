@@ -188,7 +188,7 @@ export function QuizClient({ config, translation: tr, lang }: Props) {
   // ─────────────────────────────────────────────────────────────────────────
   if (phase === 'result' && result) {
     const style  = getSeverityStyle(result.severity, result.score)
-    const ctaUrl = `/${lang}/coach`
+    const ctaUrl = `/${lang}/coach/mia`
 
     // Display score: for normalized show 0-100, for raw show raw/max
     const normalize = config.scoring.normalize !== false

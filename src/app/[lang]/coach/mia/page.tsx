@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { CoachEntryClient } from '../../../components/coach-entry/CoachEntryClient'
+import { CoachEntryClient } from '../../../../components/coach-entry/CoachEntryClient'
+
 const SUPPORTED_LANGS = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl', 'tr', 'it', 'nl']
 
 export function generateStaticParams() {
@@ -9,11 +10,11 @@ export function generateStaticParams() {
 export function generateMetadata(): Metadata {
   return {
     title: 'Meet Mia — Your Personal Health Coach | SolviqLab',
-    description: 'Mia has reviewed your results. Get your personal plan.',
+    description: 'Mia has reviewed your results. Get your personal health plan.',
     robots: { index: false, follow: false },
   }
 }
 
-export default function CoachPage({ params }: { params: { lang: string } }) {
+export default function MiaCoachPage({ params }: { params: { lang: string } }) {
   return <CoachEntryClient lang={params.lang} personaId="mia" />
 }

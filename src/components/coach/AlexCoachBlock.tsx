@@ -5,22 +5,22 @@ import Link from 'next/link'
 import { getBrowserRuntime } from '@/lib/runtime'
 import type { InstrumentResult } from '@/lib/products/types'
 
-const HEALTH_CLUSTERS = new Set(['weight', 'sleep', 'pregnancy'])
+const FINANCE_CLUSTERS = new Set(['finance'])
 
 function detectCluster(slug: string, metadata: Record<string, unknown>): string {
   if (typeof metadata['cluster'] === 'string') return metadata['cluster']
-  if (slug.includes('sleep')) return 'sleep'
-  if (slug.includes('pregnancy') || slug.includes('due-date') || slug.includes('ovulation')) return 'pregnancy'
-  if (slug.includes('bmi') || slug.includes('body-fat') || slug.includes('tdee') ||
-      slug.includes('weight') || slug.includes('calorie') || slug.includes('bmr')) return 'weight'
+  if (slug.includes('budget') || slug.includes('loan') || slug.includes('mortgage') ||
+      slug.includes('savings') || slug.includes('investment') || slug.includes('compound') ||
+      slug.includes('debt') || slug.includes('retirement') || slug.includes('tax') ||
+      slug.includes('finance') || slug.includes('salary') || slug.includes('roi')) return 'finance'
   return ''
 }
 
-interface MiaCoachBlockProps {
+interface AlexCoachBlockProps {
   readonly lang?: string
 }
 
-export function MiaCoachBlock({ lang = 'en' }: MiaCoachBlockProps) {
+export function AlexCoachBlock({ lang = 'en' }: AlexCoachBlockProps) {
   const [visible, setVisible] = useState(false)
   const blockRef = useRef<HTMLDivElement>(null)
 
@@ -31,7 +31,7 @@ export function MiaCoachBlock({ lang = 'en' }: MiaCoachBlockProps) {
       const detail = (e as CustomEvent).detail as InstrumentResult | undefined
       if (!detail?.slug) return
       const cluster = detectCluster(detail.slug, detail.metadata)
-      if (!cluster || !HEALTH_CLUSTERS.has(cluster)) return
+      if (!cluster || !FINANCE_CLUSTERS.has(cluster)) return
       setVisible(true)
       setTimeout(() => {
         blockRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
@@ -52,27 +52,27 @@ export function MiaCoachBlock({ lang = 'en' }: MiaCoachBlockProps) {
       <div className="flex items-center gap-2 mb-3">
         <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
         <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 tracking-wide uppercase">
-          Mia is ready
+          Alex is ready
         </span>
       </div>
 
       <div className="flex items-start gap-3 mb-4">
-        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-rose-400 to-purple-600 flex items-center justify-center text-white font-bold text-sm shrink-0">
-          M
+        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-cyan-600 flex items-center justify-center text-white font-bold text-sm shrink-0">
+          A
         </div>
         <div>
-          <p className="text-sm font-semibold text-slate-900 dark:text-white mb-0.5">Mia · Your Health Coach</p>
+          <p className="text-sm font-semibold text-slate-900 dark:text-white mb-0.5">Alex · Your Finance Coach</p>
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            I reviewed your results. Let me build a plan specifically for you.
+            I reviewed your numbers. Let me build a financial action plan for you.
           </p>
         </div>
       </div>
 
       <Link
-        href={`/${lang}/coach/mia`}
-        className="block w-full py-3 rounded-xl bg-gradient-to-r from-rose-500 to-purple-600 text-white font-semibold text-sm text-center hover:opacity-90 active:scale-[0.98] transition-all"
+        href={`/${lang}/coach/alex`}
+        className="block w-full py-3 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold text-sm text-center hover:opacity-90 active:scale-[0.98] transition-all"
       >
-        Get Mia&apos;s personal plan →
+        Get Alex&apos;s financial plan →
       </Link>
       <p className="text-xs text-slate-400 dark:text-slate-500 text-center mt-2">Free · No account needed</p>
     </div>

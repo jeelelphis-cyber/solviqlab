@@ -20,7 +20,7 @@ import { coachService } from '@/lib/coach'
 import type { CoachMessage } from '@/lib/coach'
 import { getBrowserRuntime } from '@/lib/runtime/platform'
 import { CoachMessageCard } from '@/components/coach/CoachMessageCard'
-import { MiaCoachExperience } from '@/components/coach/MiaCoachExperience'
+import { MiaCoachBlock } from '@/components/coach/MiaCoachBlock'
 import { AssessmentGraphSync } from '@/lib/graph/sync-service'
 import { GraphRepository }    from '@/lib/graph/repository'
 import { GraphUpdater }       from '@/lib/graph/updater'
@@ -335,14 +335,8 @@ function ResultScreen({ result, lang, cluster, userId }: { result: AssessmentRes
         </div>
       )}
 
-      {/* Mia Video Coach — emotional bridge after results */}
-      <div className="pt-2 border-t border-slate-200 dark:border-slate-700">
-        <MiaCoachExperience
-          userId={userId}
-          score={result.overall_score}
-          cluster={result.cluster}
-        />
-      </div>
+      {/* Mia AI Coach — appears after health assessment result */}
+      <MiaCoachBlock lang={lang} />
 
       <a
         href={`/${lang}/dashboard`}

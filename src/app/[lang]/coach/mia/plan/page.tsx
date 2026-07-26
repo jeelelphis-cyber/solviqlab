@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { CoachPlanClient } from '../../../../components/coach-plan/CoachPlanClient'
+import { CoachPlanClient } from '../../../../../components/coach-plan/CoachPlanClient'
 
 const SUPPORTED_LANGS = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl', 'tr', 'it', 'nl']
 
@@ -15,6 +15,6 @@ export function generateMetadata(): Metadata {
   }
 }
 
-export default function CoachPlanPage({ params }: { params: { lang: string } }) {
+export default function MiaPlanPage({ params }: { params: { lang: string } }) {
   return <CoachPlanClient lang={params.lang} personaId="mia" />
 }

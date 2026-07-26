@@ -18,6 +18,8 @@ export function getT(lang: string) {
   return (key: string, params?: Record<string, string | number>): string => {
     const template = (dict[key] ?? TRANSLATIONS.en![key] ?? key) as string
     if (!params) return template
-    return template.replace(/\{\{(\w+)\}\}/g, (_, k) => String(params[k] ?? ''))
+    return template
+      .replace(/\{\{(\w+)\}\}/g, (_, k) => String(params[k] ?? ''))
+      .replace(/(?<!\{)\{(\w+)\}(?!\})/g, (_, k) => String(params[k] ?? ''))
   }
 }
