@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { calculateCalories, convertLbToKg, convertFtInchesToCm } from '../../instruments/calorie-calculator/lib/calculate.js'
 import type { CalorieCalculatorOutput, ActivityLevel, Goal } from '../../instruments/calorie-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
+import { t as uiT } from '../../lib/ui-strings'
 
 // ─── Analytics ───────────────────────────────────────────────────────────────
 function track(event: string, params: Record<string, string>) {
@@ -77,6 +78,7 @@ function MacroBar({ protein, carbs, fat, labelProtein, labelCarbs, labelFat }: {
 }
 
 export function CalorieCalculatorClient({ translations, lang }: Props) {
+  const s = uiT(lang)
   const t = (key: string): string => (translations[key] as string | undefined) ?? key
 
   const [unitSystem, setUnitSystem] = useState<'metric' | 'imperial'>('metric')
@@ -329,7 +331,7 @@ export function CalorieCalculatorClient({ translations, lang }: Props) {
           {/* Actions */}
           <div className="flex gap-2">
             <button onClick={copyResult} className="flex items-center gap-1.5 px-4 py-2 text-sm border border-border-default rounded-lg text-content-secondary hover:text-content-primary hover:border-border-hover transition-colors">
-              {copied ? '✓ Copied' : '⎘ Copy'}
+              {copied ? s.calcCopied : s.calcCopy}
             </button>
             <button
               onClick={() => {

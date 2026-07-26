@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { calculateDueDate } from '../../instruments/due-date-calculator/lib/calculate.js'
 import type { DueDateCalculatorOutput, DueDateMethod } from '../../instruments/due-date-calculator/lib/types.js'
 import { ShareButtons } from '../ShareButtons.js'
+import { t as uiT } from '../../lib/ui-strings'
 
 // ─── Analytics ───────────────────────────────────────────────────────────────
 function track(event: string, params: Record<string, string>) {
@@ -63,6 +64,7 @@ const TRIMESTER_COLORS: Record<number, { bg: string; text: string; border: strin
 }
 
 export function DueDateCalculatorClient({ translations, lang }: Props) {
+  const s = uiT(lang)
   const tr = (key: string) => t(key, translations)
 
   const [method, setMethod] = useState<DueDateMethod>('lmp')
@@ -395,7 +397,7 @@ export function DueDateCalculatorClient({ translations, lang }: Props) {
               onClick={copyResult}
               className="flex items-center gap-1.5 px-4 py-2 text-sm border border-border-default rounded-lg text-content-secondary hover:text-content-primary hover:border-border-hover transition-colors"
             >
-              {copied ? '✓ Copied' : '⎘ Copy'}
+              {copied ? s.calcCopied : s.calcCopy}
             </button>
             <button
               onClick={() => window.print()}

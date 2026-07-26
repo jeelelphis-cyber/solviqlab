@@ -5,6 +5,7 @@ import type { SalaryCalculatorOutput } from '../../instruments/salary-calculator
 import { CurrencySelector, useCurrency } from '../ui/CurrencySelector'
 import { formatAmount } from '../../lib/currencies'
 import { ShareButtons } from '../ShareButtons.js'
+import { t as uiT } from '../../lib/ui-strings'
 
 // ─── Analytics ───────────────────────────────────────────────────────────────
 function track(event: string, params: Record<string, string>) {
@@ -124,6 +125,7 @@ function SalaryScaleBar({ annual }: { annual: number }) {
 }
 
 export function SalaryCalculatorClient({ translations, lang }: Props) {
+  const s = uiT(lang)
   const t = (key: string) => translations[key] as string | undefined
 
   const [salaryType, setSalaryType] = useState<'hourly' | 'annual'>('hourly')
@@ -323,7 +325,7 @@ export function SalaryCalculatorClient({ translations, lang }: Props) {
               onClick={copyResult}
               className="flex items-center gap-1.5 px-4 py-2 text-sm border border-border-default rounded-lg text-content-secondary hover:text-content-primary hover:border-border-hover transition-colors"
             >
-              {copied ? '✓ Copied' : '⎘ Copy'}
+              {copied ? s.calcCopied : s.calcCopy}
             </button>
             <button
               onClick={shareResult}
@@ -346,7 +348,7 @@ export function SalaryCalculatorClient({ translations, lang }: Props) {
               onClick={() => setSourcesOpen(o => !o)}
               className="w-full flex items-center justify-between px-5 py-3 text-sm font-medium text-content-secondary hover:text-content-primary transition-colors"
             >
-              <span>Methodology & Sources</span>
+              <span>{s.methodologySources}</span>
               <span>{sourcesOpen ? '▲' : '▼'}</span>
             </button>
             {sourcesOpen && (

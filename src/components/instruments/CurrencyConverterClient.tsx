@@ -4,6 +4,7 @@ import { convertCurrency } from '../../instruments/currency-converter/lib/calcul
 import type { CurrencyConverterOutput } from '../../instruments/currency-converter/lib/types.js'
 import { CURRENCIES } from '../../lib/currencies.js'
 import { ShareButtons } from '../ShareButtons.js'
+import { t as uiT } from '../../lib/ui-strings'
 
 // ─── Analytics ───────────────────────────────────────────────────────────────
 function track(event: string, params: Record<string, string>) {
@@ -42,6 +43,7 @@ function formatResultAmount(amount: number, code: string): string {
 }
 
 export function CurrencyConverterClient({ translations, lang, rates, ratesUpdatedAt, ratesIsLive }: Props) {
+  const s = uiT(lang)
   const t = (key: string) => translations[key] as string | undefined
 
   const [amount, setAmount] = useState('1')
@@ -295,7 +297,7 @@ export function CurrencyConverterClient({ translations, lang, rates, ratesUpdate
               onClick={handleCopy}
               className="flex items-center gap-1.5 px-3 py-1.5 text-xs border border-border-default rounded-lg text-content-secondary hover:text-content-primary hover:border-border-hover transition-colors"
             >
-              {copied ? '✓ Copied' : '⎘ Copy'}
+              {copied ? s.calcCopied : s.calcCopy}
             </button>
             <ShareButtons text={`${amount} ${result.fromCode} = ${result.result} ${result.toCode} — converted free at SolviqLab`} />
           </div>
