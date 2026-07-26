@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import { getBrowserRuntime } from '@/lib/runtime'
+import { getT } from '@/lib/i18n/ui'
 import type { InstrumentResult } from '@/lib/products/types'
 
 const HEALTH_CLUSTERS = new Set(['weight', 'sleep', 'pregnancy'])
@@ -23,6 +24,7 @@ interface MiaCoachBlockProps {
 export function MiaCoachBlock({ lang = 'en' }: MiaCoachBlockProps) {
   const [visible, setVisible] = useState(false)
   const blockRef = useRef<HTMLDivElement>(null)
+  const t = getT(lang)
 
   useEffect(() => {
     getBrowserRuntime()
@@ -52,7 +54,7 @@ export function MiaCoachBlock({ lang = 'en' }: MiaCoachBlockProps) {
       <div className="flex items-center gap-2 mb-3">
         <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
         <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 tracking-wide uppercase">
-          Mia is ready
+          {t('mia.block.ready')}
         </span>
       </div>
 
@@ -61,9 +63,9 @@ export function MiaCoachBlock({ lang = 'en' }: MiaCoachBlockProps) {
           M
         </div>
         <div>
-          <p className="text-sm font-semibold text-slate-900 dark:text-white mb-0.5">Mia · Your Health Coach</p>
+          <p className="text-sm font-semibold text-slate-900 dark:text-white mb-0.5">{t('mia.block.role')}</p>
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            I reviewed your results. Let me build a plan specifically for you.
+            {t('mia.block.message')}
           </p>
         </div>
       </div>
@@ -72,9 +74,9 @@ export function MiaCoachBlock({ lang = 'en' }: MiaCoachBlockProps) {
         href={`/${lang}/coach/mia`}
         className="block w-full py-3 rounded-xl bg-gradient-to-r from-rose-500 to-purple-600 text-white font-semibold text-sm text-center hover:opacity-90 active:scale-[0.98] transition-all"
       >
-        Get Mia&apos;s personal plan →
+        {t('mia.block.cta')}
       </Link>
-      <p className="text-xs text-slate-400 dark:text-slate-500 text-center mt-2">Free · No account needed</p>
+      <p className="text-xs text-slate-400 dark:text-slate-500 text-center mt-2">{t('mia.block.free')}</p>
     </div>
   )
 }

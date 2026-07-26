@@ -240,5 +240,15 @@
   "mia.step2.yes": "Yes, I will follow your guidance",
   "mia.step3.question": "Will you be honest with me — even when it is uncomfortable?",
   "mia.step3.context": "I can only help with what I actually know. The more honest you are, the better your plan will be. That is all I ask.",
-  "mia.step3.yes": "Yes, I will be honest with you"
+  "mia.step3.yes": "Yes, I will be honest with you",
+  "mia.block.ready": "Mia is ready",
+  "mia.block.role": "Mia · Your Health Coach",
+  "mia.block.message": "I reviewed your results. Let me build a plan specifically for you.",
+  "mia.block.cta": "Get Mia's personal plan →",
+  "mia.block.free": "Free · No account needed",
+  "alex.block.ready": "Alex is ready",
+  "alex.block.role": "Alex · Your Finance Coach",
+  "alex.block.message": "I reviewed your numbers. Let me build a financial action plan for you.",
+  "alex.block.cta": "Get Alex's financial plan →",
+  "alex.block.free": "Free · No account needed"
 }

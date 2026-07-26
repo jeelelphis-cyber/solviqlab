@@ -240,5 +240,15 @@
   "mia.step2.yes": "Sì, seguirò le tue indicazioni",
   "mia.step3.question": "Sarai onesto con me — anche quando è scomodo?",
   "mia.step3.context": "Posso aiutare solo con ciò che so davvero. Più sei onesto, migliore sarà il tuo piano. È tutto ciò che chiedo.",
-  "mia.step3.yes": "Sì, sarò onesto con te"
+  "mia.step3.yes": "Sì, sarò onesto con te",
+  "mia.block.ready": "Mia è pronta",
+  "mia.block.role": "Mia · Il tuo coach della salute",
+  "mia.block.message": "Ho esaminato i tuoi risultati. Lasciami creare un piano specifico per te.",
+  "mia.block.cta": "Ottieni il piano di Mia →",
+  "mia.block.free": "Gratuito · Senza registrazione",
+  "alex.block.ready": "Alex è pronto",
+  "alex.block.role": "Alex · Il tuo coach finanziario",
+  "alex.block.message": "Ho esaminato i tuoi numeri. Lasciami creare un piano finanziario per te.",
+  "alex.block.cta": "Ottieni il piano di Alex →",
+  "alex.block.free": "Gratuito · Senza registrazione"
 }

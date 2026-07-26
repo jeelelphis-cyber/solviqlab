@@ -240,5 +240,15 @@
   "mia.step2.yes": "Oui, je suivrai vos conseils",
   "mia.step3.question": "Serez-vous honnête avec moi — même quand c'est inconfortable ?",
   "mia.step3.context": "Je ne peux aider qu'avec ce que je sais vraiment. Plus vous êtes honnête, meilleur sera votre plan. C'est tout ce que je demande.",
-  "mia.step3.yes": "Oui, je serai honnête avec vous"
+  "mia.step3.yes": "Oui, je serai honnête avec vous",
+  "mia.block.ready": "Mia est prête",
+  "mia.block.role": "Mia · Votre coach santé",
+  "mia.block.message": "J'ai examiné vos résultats. Laissez-moi créer un plan spécifiquement pour vous.",
+  "mia.block.cta": "Obtenir le plan de Mia →",
+  "mia.block.free": "Gratuit · Sans inscription",
+  "alex.block.ready": "Alex est prêt",
+  "alex.block.role": "Alex · Votre coach financier",
+  "alex.block.message": "J'ai examiné vos chiffres. Laissez-moi créer un plan financier pour vous.",
+  "alex.block.cta": "Obtenir le plan d'Alex →",
+  "alex.block.free": "Gratuit · Sans inscription"
 }

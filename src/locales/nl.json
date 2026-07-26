@@ -240,5 +240,15 @@
   "mia.step2.yes": "Ja, ik zal uw begeleiding volgen",
   "mia.step3.question": "Zult u eerlijk tegen mij zijn — ook als het ongemakkelijk is?",
   "mia.step3.context": "Ik kan alleen helpen met wat ik werkelijk weet. Hoe eerlijker u bent, hoe beter uw plan zal zijn. Dat is alles wat ik vraag.",
-  "mia.step3.yes": "Ja, ik zal eerlijk tegen u zijn"
+  "mia.step3.yes": "Ja, ik zal eerlijk tegen u zijn",
+  "mia.block.ready": "Mia is klaar",
+  "mia.block.role": "Mia · Uw gezondheidscoach",
+  "mia.block.message": "Ik heb uw resultaten bekeken. Laat me een plan speciaal voor u maken.",
+  "mia.block.cta": "Mia's persoonlijk plan →",
+  "mia.block.free": "Gratis · Geen account nodig",
+  "alex.block.ready": "Alex is klaar",
+  "alex.block.role": "Alex · Uw financiële coach",
+  "alex.block.message": "Ik heb uw cijfers bekeken. Laat me een financieel plan voor u maken.",
+  "alex.block.cta": "Alex's financieel plan →",
+  "alex.block.free": "Gratis · Geen account nodig"
 }

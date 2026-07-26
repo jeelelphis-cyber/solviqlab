@@ -240,5 +240,15 @@
   "mia.step2.yes": "Evet, rehberliğinizi takip edeceğim",
   "mia.step3.question": "Benimle dürüst olacak mısınız — rahatsız edici olduğunda bile?",
   "mia.step3.context": "Yalnızca gerçekten bildiğimle yardımcı olabilirim. Ne kadar dürüst olursanız, planınız o kadar iyi olur. İstediğim tek şey bu.",
-  "mia.step3.yes": "Evet, sizinle dürüst olacağım"
+  "mia.step3.yes": "Evet, sizinle dürüst olacağım",
+  "mia.block.ready": "Mia hazır",
+  "mia.block.role": "Mia · Sağlık Koçunuz",
+  "mia.block.message": "Sonuçlarınızı inceledim. Özellikle sizin için bir plan oluşturayım.",
+  "mia.block.cta": "Mia'nın planını al →",
+  "mia.block.free": "Ücretsiz · Kayıt gerekmez",
+  "alex.block.ready": "Alex hazır",
+  "alex.block.role": "Alex · Finans Koçunuz",
+  "alex.block.message": "Rakamlarınızı inceledim. Sizin için bir finansal plan oluşturayım.",
+  "alex.block.cta": "Alex'in planını al →",
+  "alex.block.free": "Ücretsiz · Kayıt gerekmez"
 }

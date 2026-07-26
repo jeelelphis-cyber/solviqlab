@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import { getBrowserRuntime } from '@/lib/runtime'
+import { getT } from '@/lib/i18n/ui'
 import type { InstrumentResult } from '@/lib/products/types'
 
 const FINANCE_CLUSTERS = new Set(['finance'])
@@ -23,6 +24,7 @@ interface AlexCoachBlockProps {
 export function AlexCoachBlock({ lang = 'en' }: AlexCoachBlockProps) {
   const [visible, setVisible] = useState(false)
   const blockRef = useRef<HTMLDivElement>(null)
+  const t = getT(lang)
 
   useEffect(() => {
     getBrowserRuntime()
@@ -52,7 +54,7 @@ export function AlexCoachBlock({ lang = 'en' }: AlexCoachBlockProps) {
       <div className="flex items-center gap-2 mb-3">
         <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
         <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 tracking-wide uppercase">
-          Alex is ready
+          {t('alex.block.ready')}
         </span>
       </div>
 
@@ -61,9 +63,9 @@ export function AlexCoachBlock({ lang = 'en' }: AlexCoachBlockProps) {
           A
         </div>
         <div>
-          <p className="text-sm font-semibold text-slate-900 dark:text-white mb-0.5">Alex · Your Finance Coach</p>
+          <p className="text-sm font-semibold text-slate-900 dark:text-white mb-0.5">{t('alex.block.role')}</p>
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            I reviewed your numbers. Let me build a financial action plan for you.
+            {t('alex.block.message')}
           </p>
         </div>
       </div>
@@ -72,9 +74,9 @@ export function AlexCoachBlock({ lang = 'en' }: AlexCoachBlockProps) {
         href={`/${lang}/coach/alex`}
         className="block w-full py-3 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold text-sm text-center hover:opacity-90 active:scale-[0.98] transition-all"
       >
-        Get Alex&apos;s financial plan →
+        {t('alex.block.cta')}
       </Link>
-      <p className="text-xs text-slate-400 dark:text-slate-500 text-center mt-2">Free · No account needed</p>
+      <p className="text-xs text-slate-400 dark:text-slate-500 text-center mt-2">{t('alex.block.free')}</p>
     </div>
   )
 }

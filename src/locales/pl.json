@@ -240,5 +240,15 @@
   "mia.step2.yes": "Tak, będę stosować się do Twoich wskazówek",
   "mia.step3.question": "Czy będziesz ze mną szczery — nawet gdy to będzie niewygodne?",
   "mia.step3.context": "Mogę pomóc tylko z tym, co naprawdę wiem. Im bardziej jesteś szczery, tym lepszy będzie Twój plan. To wszystko, o co proszę.",
-  "mia.step3.yes": "Tak, będę z Tobą szczery"
+  "mia.step3.yes": "Tak, będę z Tobą szczery",
+  "mia.block.ready": "Mia jest gotowa",
+  "mia.block.role": "Mia · Twój trener zdrowia",
+  "mia.block.message": "Przejrzałam Twoje wyniki. Pozwól, że stworzę plan specjalnie dla Ciebie.",
+  "mia.block.cta": "Pobierz plan Mii →",
+  "mia.block.free": "Bezpłatnie · Bez rejestracji",
+  "alex.block.ready": "Alex jest gotowy",
+  "alex.block.role": "Alex · Twój coach finansowy",
+  "alex.block.message": "Przejrzałem Twoje liczby. Pozwól, że stworzę plan finansowy dla Ciebie.",
+  "alex.block.cta": "Pobierz plan Alexa →",
+  "alex.block.free": "Bezpłatnie · Bez rejestracji"
 }

@@ -240,5 +240,15 @@
   "mia.step2.yes": "Ja, ich werde Ihren Rat befolgen",
   "mia.step3.question": "Werden Sie ehrlich mit mir sein — auch wenn es unangenehm ist?",
   "mia.step3.context": "Ich kann nur bei dem helfen, was ich wirklich weiß. Je ehrlicher Sie sind, desto besser wird Ihr Plan sein. Das ist alles, was ich bitte.",
-  "mia.step3.yes": "Ja, ich werde ehrlich mit Ihnen sein"
+  "mia.step3.yes": "Ja, ich werde ehrlich mit Ihnen sein",
+  "mia.block.ready": "Mia ist bereit",
+  "mia.block.role": "Mia · Ihr Gesundheits-Coach",
+  "mia.block.message": "Ich habe Ihre Ergebnisse überprüft. Lassen Sie mich einen Plan speziell für Sie erstellen.",
+  "mia.block.cta": "Mias persönlichen Plan holen →",
+  "mia.block.free": "Kostenlos · Ohne Registrierung",
+  "alex.block.ready": "Alex ist bereit",
+  "alex.block.role": "Alex · Ihr Finanz-Coach",
+  "alex.block.message": "Ich habe Ihre Zahlen überprüft. Lassen Sie mich einen Finanzplan für Sie erstellen.",
+  "alex.block.cta": "Alexs Finanzplan holen →",
+  "alex.block.free": "Kostenlos · Ohne Registrierung"
 }
