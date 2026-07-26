@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Questionário de Nível de Ansiedade",
+    "description": "Entenda como a ansiedade se manifesta na sua vida — e quanta da sua energia diária ela está consumindo silenciosamente."
+  },
+  "yesnoOptions": [
+    "Sim",
+    "Não"
+  ],
+  "questions": {
+    "anx1": {
+      "text": "Com que frequência sua mente acelera ou entra em espiral com pensamentos de \"e se\" que você não consegue parar?",
+      "options": [
+        "Raramente — geralmente consigo redirecionar meus pensamentos",
+        "Às vezes — em períodos de estresse",
+        "Frequentemente — na maioria dos dias isso acontece",
+        "Quase constantemente — é exaustivo"
+      ]
+    },
+    "anx2": {
+      "text": "Você evita certas situações ou pessoas porque elas te deixam ansioso?"
+    },
+    "anx3": {
+      "text": "Com que frequência você se sente fisicamente tenso — aperto no peito, respiração superficial, um nó no estômago?",
+      "scaleLabels": {
+        "min": "Quase nunca",
+        "max": "Muito frequentemente"
+      }
+    },
+    "anx4": {
+      "text": "Preocupar-se com o futuro interfere na sua capacidade de aproveitar o presente?"
+    },
+    "anx5": {
+      "text": "Como você normalmente reage quando algo inesperado acontece?",
+      "options": [
+        "Calmamente — me adapto razoavelmente bem",
+        "Um pouco abalado, mas me recupero rapidamente",
+        "Isso me desestabiliza por um tempo",
+        "Isso me leva a uma espiral"
+      ]
+    },
+    "anx6": {
+      "text": "Você tem dificuldade para dormir porque seus pensamentos não se acalmam?",
+      "options": [
+        "Não — durmo bem",
+        "Ocasionalmente — talvez uma vez por semana",
+        "Frequentemente — algumas noites por semana",
+        "Quase todas as noites"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Ansiedade Baixa",
+      "description": "Você está lidando com a incerteza e o estresse de forma saudável. Seu sistema nervoso não está em estado de alarme crônico.",
+      "actions": [
+        "Mantenha seus hábitos atuais de gerenciamento de estresse — o que você está fazendo está funcionando",
+        "Pratique um exercício de atenção plena por semana para construir resiliência para períodos mais difíceis",
+        "Mantenha-se conectado a pessoas que te trazem equilíbrio — o apoio social é o maior amortecedor contra a ansiedade"
+      ],
+      "miaHook": "Sua linha de base de ansiedade é saudável — vamos conversar sobre como mantê-la assim quando a vida ficar mais difícil."
+    },
+    {
+      "label": "Ansiedade Moderada",
+      "description": "A ansiedade está presente na sua vida e afetando algumas de suas escolhas e prazeres. Os padrões são administráveis, mas merecem atenção.",
+      "actions": [
+        "Tente uma prática diária de respiração de 5 minutos — a respiração quadrada (4-4-4-4) reduz mensuravelmente o cortisol em minutos",
+        "Identifique um comportamento de evitação e dê um pequeno passo para enfrentá-lo esta semana",
+        "Limite a cafeína até o meio-dia — ela amplifica a resposta fisiológica da ansiedade"
+      ],
+      "miaHook": "Percebi alguns padrões claros de ansiedade em suas respostas — tenho algumas ferramentas direcionadas que podem reduzir isso de forma perceptível."
+    },
+    {
+      "label": "Ansiedade Alta",
+      "description": "A ansiedade está afetando significativamente seu dia a dia. Esse nível de alerta sustentado é desgastante e merece atenção real.",
+      "actions": [
+        "Converse com um terapeuta ou médico — a TCC (Terapia Cognitivo-Comportamental) tem a base de evidências mais forte para ansiedade e geralmente mostra resultados em 6 a 8 sessões",
+        "Remova imediatamente sua maior fonte diária de cafeína — mesmo essa única mudança reduz a ansiedade de forma mensurável",
+        "Conte para uma pessoa de confiança o que você tem vivido — o isolamento amplifica a ansiedade."
+      ],
+      "miaHook": "O que você está vivendo é real — a ansiedade intensa é exaustiva e isolante. Deixe-me mostrar por onde começar a desfazê-la."
+    }
+  ],
+  "seoContent": {
+    "intro": "A ansiedade é a condição de saúde mental mais prevalente no mundo, afetando aproximadamente 284 milhões de pessoas globalmente (Our World in Data, 2019). No entanto, a maioria das pessoas que vivem com ansiedade não busca ajuda — seja porque não a reconhecem como tal, ou porque normalizaram seus efeitos.\n\nEste questionário avalia seis dimensões centrais da ansiedade: padrões cognitivos (pensamentos acelerados, preocupação), padrões comportamentais (evitação), sintomas físicos (tensão, respiração), impacto no sono, reatividade emocional e interferência no momento presente. Seus resultados fornecem um mapa personalizado de como a ansiedade está se manifestando em sua vida.",
+    "faq": [
+      {
+        "q": "Qual é a diferença entre preocupação normal e ansiedade?",
+        "a": "A preocupação normal é proporcional a uma ameaça real, temporária e não prejudica significativamente o funcionamento diário. A ansiedade envolve preocupação excessiva, difícil de controlar, muitas vezes desproporcional ao risco real, e interfere persistentemente na vida diária, no sono ou nos relacionamentos."
+      },
+      {
+        "q": "A ansiedade pode causar sintomas físicos?",
+        "a": "Sim. A ansiedade ativa o sistema nervoso simpático (luta ou fuga), causando efeitos físicos mensuráveis: aumento da frequência cardíaca, respiração superficial, tensão muscular, perturbação digestiva e elevação do cortisol. A ansiedade crônica causa efeitos físicos de longo prazo na saúde, incluindo aumento do risco cardiovascular."
+      },
+      {
+        "q": "Quais tratamentos funcionam para a ansiedade?",
+        "a": "A Terapia Cognitivo-Comportamental (CBT) é o tratamento com maior base em evidências, mostrando melhora significativa em 60–80% das pessoas. A terapia de exposição é eficaz para a ansiedade baseada em evitação. Medicamentos (ISRSs, IRSNs) são apropriados para casos moderados a graves, geralmente em combinação com terapia."
+      },
+      {
+        "q": "A cafeína piora a ansiedade?",
+        "a": "Sim. A cafeína bloqueia os receptores de adenosina e aumenta o cortisol e a adrenalina — a mesma via fisiológica ativada pela ansiedade. Em pessoas propensas à ansiedade, a cafeína piora mensuravelmente os sintomas. Reduzir a cafeína é uma das mudanças mais rápidas para diminuir a ansiedade."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "A ansiedade é uma emoção humana natural que se torna um problema quando é excessiva, persistente e interfere na vida diária. Em sua essência, a ansiedade é o sistema de detecção de ameaças do cérebro disparando incorretamente — tratando situações normais como perigosas e mantendo o corpo em um estado de prontidão fisiológica que é exaustivo e insustentável.\n\nA ansiedade se manifesta de três formas: cognitiva (pensamentos acelerados, catastrofização, espirais de preocupação), física (tensão muscular, palpitações cardíacas, respiração superficial, problemas digestivos) e comportamental (evitação, busca por reafirmação, comportamentos compulsivos). Este questionário captura todas as três dimensões.",
+    "howScored": "Este questionário avalia seis dimensões baseadas em evidências da ansiedade: padrões de pensamento, evitação comportamental, sintomas de tensão física, preocupação voltada para o futuro, reatividade a eventos inesperados e impacto no sono. As perguntas usam uma combinação de respostas em escala e sim/não para capturar tanto a frequência quanto o impacto.\n\nAs pontuações são normalizadas para 0–100. Acima de 70 indica baixa ansiedade com bons recursos de enfrentamento. 40–69 indica padrões de ansiedade moderada que valem a pena abordar. Abaixo de 40 indica ansiedade alta que está afetando significativamente o funcionamento diário.",
+    "whenToSeek": "Considere conversar com um profissional de saúde mental se:\n• Sua ansiedade estiver afetando seu sono, trabalho ou relacionamentos\n• Você estiver evitando situações ou pessoas por causa da ansiedade\n• Os sintomas físicos de ansiedade (coração acelerado, aperto no peito) forem frequentes\n• Você estiver usando álcool ou outras substâncias para lidar com a ansiedade\n• A ansiedade estiver presente há mais de 6 meses\n\nUma pontuação de 10+ no GAD-7 (uma escala clínica de ansiedade) indica que uma avaliação clínica é recomendada.",
+    "limitations": "Este questionário é uma ferramenta de triagem, não uma avaliação clínica. Ele não distingue entre diferentes transtornos de ansiedade (Transtorno de Ansiedade Generalizada, Ansiedade Social, Transtorno do Pânico, TEPT, TOC). Um diagnóstico clínico requer avaliação por um profissional de saúde mental licenciado.\n\nOs sintomas de ansiedade também se sobrepõem significativamente à depressão, TDAH, distúrbios do sono e certas condições médicas (problemas de tireoide, problemas cardiovasculares). Uma avaliação abrangente descarta esses fatores contribuintes."
+  }
+}

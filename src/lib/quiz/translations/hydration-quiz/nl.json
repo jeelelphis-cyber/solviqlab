@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Hydratatie Gezondheidsquiz",
+    "description": "De meeste mensen zijn licht uitgedroogd zonder het te weten. Ontdek of water een ontbrekend stukje van jouw gezondheidspuzzel is."
+  },
+  "questions": {
+    "hyd1": {
+      "text": "Hoeveel glazen water (250 ml) drink je op een gemiddelde dag?",
+      "options": [
+        "8 of meer — ik drink consistent",
+        "5–7 glazen",
+        "3–4 glazen",
+        "Minder dan 3 — ik vergeet te drinken"
+      ]
+    },
+    "hyd2": {
+      "text": "Heb je vaak dorst gedurende de dag?"
+    },
+    "hyd3": {
+      "text": "Welke kleur heeft je urine meestal? (Wees eerlijk!)",
+      "options": [
+        "Lichtgeel — bijna helder",
+        "Lichtgeel",
+        "Donkergeel of amber",
+        "Heel donker — ik let er niet veel op"
+      ]
+    },
+    "hyd4": {
+      "text": "Drink je regelmatig koffie, thee of alcohol zonder dit met water te compenseren?"
+    },
+    "hyd5": {
+      "text": "Heb je regelmatig last van hoofdpijn, een droge huid of moeite met concentreren?",
+      "options": [
+        "Geen van deze — ik voel me goed",
+        "Af en toe een van deze",
+        "Regelmatig twee van deze",
+        "Alle drie — vrijwel dagelijks"
+      ]
+    },
+    "hyd6": {
+      "text": "Hoe fysiek actief ben je? (Meer activiteit = hogere waterbehoefte)",
+      "scaleLabels": {
+        "min": "Zeer sedentair",
+        "max": "Zeer actief dagelijks"
+      }
+    }
+  },
+  "buckets": [
+    {
+      "label": "Goed gehydrateerd",
+      "description": "Uw hydratatiegewoonten zijn solide. Uw lichaam krijgt het water dat het nodig heeft om optimaal te functioneren.",
+      "actions": [
+        "Houd uw huidige inname aan — consistentie is belangrijker dan het halen van een specifiek getal",
+        "Verhoog met 500 ml op dagen met intensieve inspanning of hitte",
+        "Blijf suikerhoudende dranken vermijden als uw primaire hydratatiebron"
+      ],
+      "miaHook": "Uw hydratatie is goed — laten we kijken wat er nog meer van invloed kan zijn op uw energie en prestaties."
+    },
+    {
+      "label": "Licht gedehydrateerd",
+      "description": "U drinkt niet genoeg. Milde uitdroging beïnvloedt uw stemming, focus en stofwisseling meer dan de meeste mensen beseffen.",
+      "actions": [
+        "Voeg direct na het wakker worden een glas water toe — uw lichaam verliest 's nachts vocht",
+        "Stel een herinnering in om elke 2 uur te drinken — gewoontevorming is de snelste weg naar betere hydratatie",
+        "Vervang één dagelijkse koffie of suikerhoudende drank door water of kruidenthee"
+      ],
+      "miaHook": "Milde uitdroging beïnvloedt stilletjes uw energie en gewichtsbeheersing — het toevoegen van 3 glazen per dag kan dit snel veranderen."
+    },
+    {
+      "label": "Gedehydrateerd",
+      "description": "Uw waterinname ligt aanzienlijk onder wat uw lichaam nodig heeft. Dit heeft waarschijnlijk invloed op uw concentratie, huid, nieren en energie.",
+      "actions": [
+        "Begin morgen met 500 ml water vóór enig voedsel of cafeïne — maak dit niet-onderhandelbaar",
+        "Neem een 1L waterfles mee en maak deze twee keer leeg voor het avondeten",
+        "Controleer dagelijks uw urinekleur — lichtgeel is uw doelwit en uw realtime hydratatiemeter"
+      ],
+      "miaHook": "Uitdroging verklaart veel van wat u misschien aan andere dingen wijt — laat me u een eenvoudige manier zien om dit op te lossen."
+    }
+  ],
+  "seoContent": {
+    "intro": "Milde uitdroging — gedefinieerd als het verliezen van slechts 1–2% van het lichaamsvocht — vermindert cognitieve prestaties, fysiek uithoudingsvermogen, stemming en metabolisme. De meeste mensen brengen aanzienlijke delen van hun dag in deze toestand door zonder het te beseffen, omdat dorst een achterblijvende indicator is: tegen de tijd dat u dorst krijgt, bent u al mild uitgedroogd.\n\nDe nieren, hersenen, huid en het cardiovasculaire systeem zijn allemaal afhankelijk van voldoende hydratatie om te functioneren. Deze quiz evalueert uw hydratatiegewoonten op zes dimensies om u een duidelijk beeld te geven van waar u staat en wat u kunt veranderen.",
+    "faq": [
+      {
+        "q": "Hoeveel water moet ik per dag drinken?",
+        "a": "De vaak genoemde 8 glazen (2L) is een redelijke basislijn voor zittende volwassenen in gematigde klimaten. Nauwkeurigere richtlijnen van de National Academies: 3,7L totale vochtinname per dag voor mannen en 2,7L voor vrouwen (inclusief vocht uit voeding). Verhoog met 0,5–1L voor elk uur lichaamsbeweging en bij warm weer."
+      },
+      {
+        "q": "Telt koffie mee voor de dagelijkse vochtinname?",
+        "a": "Ja, tot op zekere hoogte. Het milde vochtafdrijvende effect van cafeïne wordt gecompenseerd door het vocht in de drank bij matige consumptie (tot 3–4 kopjes per dag). Overmatige cafeïne (5+ kopjes) veroorzaakt echter netto vochtverlies. Alcohol heeft een veel sterker vochtafdrijvend effect en mag niet worden meegeteld voor hydratatiedoelen."
+      },
+      {
+        "q": "Wat is de beste indicator van hydratatiestatus?",
+        "a": "Urinekleur is de meest praktische real-time indicator. Lichtgeel (limonadekleur) duidt op goede hydratatie. Donkergeel of amberkleurig duidt op uitdroging. Heldere urine kan wijzen op overhydratatie. Ochtendurine is meestal donkerder — wat telt is de kleur gedurende de dag."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Water maakt ongeveer 60% uit van het lichaamsgewicht van een volwassene en is betrokken bij elk fysiologisch proces: nutriëntentransport, temperatuurregulatie, gewrichtssmering, afvalverwijdering en cellulaire functie. Zelfs milde uitdroging (1–2% gewichtsverlies) belemmert deze processen meetbaar.\n\nOnderzoek toont consistent aan dat milde uitdroging het werkgeheugen met 7% vermindert, de aandacht en psychomotorische snelheid aantast, vermoeidheid en spanning verhoogt, en het uithoudingsvermogen met 10–20% vermindert. Voor de meeste mensen is het verbeteren van hydratatie een van de meest effectieve en goedkoopste gezondheidsinterventies die beschikbaar zijn.",
+    "howScored": "Deze quiz evalueert zes hydratatiedimensies: dagelijks innamevolume, dorstfrequentie (een achterblijvend dehydratiesignaal), urinekleur (de meest betrouwbare real-time indicator), gewoonten met betrekking tot vochtafdrijvende dranken, dehydratiesymptomen (hoofdpijn, droge huid, slechte concentratie) en fysieke activiteitsniveau (dat de waterbehoefte bepaalt).\n\nScores boven de 70 duiden op goede hydratatiegewoonten. 40–69 duidt op milde uitdrogingspatronen die het waard zijn om te corrigeren. Onder de 40 duidt op significante uitdroging die waarschijnlijk het dagelijks functioneren beïnvloedt.",
+    "whenToSeek": "Raadpleeg een arts als:\n• U voldoende water drinkt maar aanhoudend dorstig blijft (mogelijk diabetes of nierprobleem)\n• U moeite heeft met het vasthouden van vocht (frequent urineren ondanks normale inname)\n• Dehydratiesymptomen aanhouden na het verhogen van de inname gedurende 2+ weken\n• U duizeligheid, een snelle hartslag of verwardheid ervaart in combinatie met een lage waterinname",
+    "limitations": "Deze quiz beoordeelt zelfgerapporteerde hydratatiegewoonten, niet de objectieve hydratatiestatus. De werkelijke hydratatie hangt af van individuele factoren zoals lichaamsgewicht, nierfunctie, medicijngebruik, klimaat en activiteitenniveau. De quiz biedt een nuttige richtinggevende beoordeling, maar vervangt geen klinische meting (bloed-/urine-osmolaliteit)."
+  }
+}

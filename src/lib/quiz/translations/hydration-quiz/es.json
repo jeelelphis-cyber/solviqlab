@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Cuestionario de Salud sobre Hidratación",
+    "description": "La mayoría de las personas están ligeramente deshidratadas sin saberlo. Descubra si el agua es una pieza faltante en su rompecabezas de salud."
+  },
+  "questions": {
+    "hyd1": {
+      "text": "¿Cuántos vasos de agua (250 ml) bebe en un día típico?",
+      "options": [
+        "8 o más — bebo de manera constante",
+        "5–7 vasos",
+        "3–4 vasos",
+        "Menos de 3 — olvido beber"
+      ]
+    },
+    "hyd2": {
+      "text": "¿Siente sed con frecuencia durante el día?"
+    },
+    "hyd3": {
+      "text": "¿De qué color es su orina la mayor parte del tiempo? (¡Sea honesto!)",
+      "options": [
+        "Amarillo pálido — casi transparente",
+        "Amarillo claro",
+        "Amarillo oscuro o ámbar",
+        "Muy oscuro — no le presto mucha atención"
+      ]
+    },
+    "hyd4": {
+      "text": "¿Bebe café, té o alcohol con regularidad sin equilibrarlo con agua?"
+    },
+    "hyd5": {
+      "text": "¿Experimenta dolores de cabeza, piel seca o dificultad para concentrarse con frecuencia?",
+      "options": [
+        "Ninguno de estos — me siento bien",
+        "Uno de estos ocasionalmente",
+        "Dos de estos con regularidad",
+        "Los tres — casi a diario"
+      ]
+    },
+    "hyd6": {
+      "text": "¿Qué tan activo es físicamente? (Más actividad = mayores necesidades de agua)",
+      "scaleLabels": {
+        "min": "Muy sedentario",
+        "max": "Muy activo diariamente"
+      }
+    }
+  },
+  "buckets": [
+    {
+      "label": "Bien hidratado",
+      "description": "Tus hábitos de hidratación son sólidos. Tu cuerpo está recibiendo el agua que necesita para funcionar de manera óptima.",
+      "actions": [
+        "Mantén tu ingesta actual: la consistencia es más importante que alcanzar un número específico",
+        "Aumenta 500 ml en días con ejercicio intenso o calor",
+        "Continúa evitando las bebidas azucaradas como fuente principal de hidratación"
+      ],
+      "miaHook": "Tu hidratación es buena; veamos qué más podría estar afectando tu energía y rendimiento."
+    },
+    {
+      "label": "Ligeramente deshidratado",
+      "description": "No estás bebiendo lo suficiente. La deshidratación leve afecta tu estado de ánimo, concentración y metabolismo más de lo que la mayoría cree.",
+      "actions": [
+        "Agrega un vaso de agua inmediatamente después de despertar: tu cuerpo pierde agua durante la noche",
+        "Establece un recordatorio cada 2 horas para beber: la formación de hábitos es el camino más rápido hacia una mejor hidratación",
+        "Reemplaza un café o bebida azucarada diaria por agua o té de hierbas"
+      ],
+      "miaHook": "La deshidratación leve está afectando silenciosamente tu energía y control de peso: agregar 3 vasos al día puede cambiar esto rápidamente."
+    },
+    {
+      "label": "Deshidratado",
+      "description": "Tu ingesta de agua está significativamente por debajo de lo que tu cuerpo necesita. Esto probablemente está afectando tu concentración, piel, riñones y energía.",
+      "actions": [
+        "Comienza mañana con 500 ml de agua antes de cualquier alimento o cafeína: haz de esto algo innegociable",
+        "Lleva una botella de agua de 1 litro y termínala dos veces antes de la cena",
+        "Revisa el color de tu orina a diario: el amarillo pálido es tu objetivo y tu indicador de hidratación en tiempo real"
+      ],
+      "miaHook": "La deshidratación explica mucho de lo que podrías estar atribuyendo a otras causas; déjame mostrarte una manera fácil de solucionarlo."
+    }
+  ],
+  "seoContent": {
+    "intro": "La deshidratación leve — definida como la pérdida de solo el 1–2% del agua corporal — afecta el rendimiento cognitivo, la resistencia física, el estado de ánimo y el metabolismo. La mayoría de las personas pasan partes significativas de su día en este estado sin darse cuenta, porque la sed es un indicador tardío: cuando sientes sed, ya estás ligeramente deshidratado.\n\nLos riñones, el cerebro, la piel y el sistema cardiovascular dependen de una hidratación adecuada para funcionar. Este cuestionario evalúa tus hábitos de hidratación en seis dimensiones para darte una imagen clara de tu situación y qué cambiar.",
+    "faq": [
+      {
+        "q": "¿Cuánta agua debo beber al día?",
+        "a": "Los 8 vasos (2L) comúnmente citados son una base razonable para adultos sedentarios en climas templados. Una guía más precisa de las Academias Nacionales: 3.7L de líquido total al día para hombres y 2.7L para mujeres (incluyendo el agua de los alimentos). Aumenta en 0.5–1L por cada hora de ejercicio y en climas cálidos."
+      },
+      {
+        "q": "¿El café cuenta para la ingesta diaria de líquidos?",
+        "a": "Sí, hasta cierto punto. El efecto diurético leve de la cafeína se compensa con el líquido de la bebida en cantidades moderadas (hasta 3–4 tazas al día). Sin embargo, el exceso de cafeína (5+ tazas) sí provoca una pérdida neta de líquidos. El alcohol tiene un efecto diurético mucho más fuerte y no debe contar para los objetivos de hidratación."
+      },
+      {
+        "q": "¿Cuál es el mejor indicador del estado de hidratación?",
+        "a": "El color de la orina es el indicador en tiempo real más práctico. Un amarillo pálido (color de limonada) indica buena hidratación. Amarillo oscuro o ámbar indica deshidratación. Orina clara puede indicar sobrehidratación. La orina matutina tiende a ser más oscura; lo que importa es el color durante el día."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "El agua constituye aproximadamente el 60% del peso corporal adulto y está involucrada en todos los procesos fisiológicos: transporte de nutrientes, regulación de la temperatura, lubricación de las articulaciones, eliminación de desechos y función celular. Incluso la deshidratación leve (pérdida del 1–2% del peso corporal) afecta mediblemente estos procesos.\n\nLos estudios muestran consistentemente que la deshidratación leve reduce la memoria de trabajo en un 7%, afecta la atención y la velocidad psicomotora, aumenta la fatiga y la tensión, y reduce el rendimiento de resistencia en un 10–20%. Para la mayoría de las personas, mejorar la hidratación es una de las intervenciones de salud de mayor retorno y menor costo disponibles.",
+    "howScored": "Este cuestionario evalúa seis dimensiones de hidratación: volumen de ingesta diaria, frecuencia de sed (una señal tardía de deshidratación), color de la orina (el indicador en tiempo real más confiable), hábitos de bebidas diuréticas, síntomas de deshidratación (dolores de cabeza, piel seca, mala concentración) y nivel de actividad física (que determina las necesidades de agua).\n\nPuntuaciones superiores a 70 indican hábitos bien hidratados. 40–69 indica patrones de deshidratación leve que vale la pena corregir. Por debajo de 40 indica deshidratación significativa que probablemente afecta el funcionamiento diario.",
+    "whenToSeek": "Consulta a un médico si:\n• Bebes suficiente agua pero sigues teniendo sed persistente (posible diabetes o problema renal)\n• Tienes dificultad para retener líquidos (micción frecuente a pesar de una ingesta normal)\n• Los síntomas de deshidratación persisten después de aumentar la ingesta durante 2+ semanas\n• Experimentas mareos, latidos cardíacos rápidos o confusión junto con una baja ingesta de agua",
+    "limitations": "Este cuestionario evalúa hábitos de hidratación autoinformados, no el estado de hidratación objetivo. La hidratación real depende de factores individuales como el peso corporal, la función renal, el uso de medicamentos, el clima y el nivel de actividad. El cuestionario proporciona una evaluación direccional útil, pero no reemplaza la medición clínica (osmolalidad en sangre/orina)."
+  }
+}

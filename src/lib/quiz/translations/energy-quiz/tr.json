@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Günlük Enerji Seviyeleri Testi",
+    "description": "Düşük enerji sadece yorgunluk değildir — bir işarettir. Sizi neyin tükettiğini ve neyin geri kazandırabileceğini keşfedin."
+  },
+  "questions": {
+    "en1": {
+      "text": "Sabah uyandığınızda kendinizi nasıl hissediyorsunuz?",
+      "options": [
+        "Hazır — dinlenmiş ve zihnim açık hissediyorum",
+        "İdare eder — harekete geçmek için bir kahve gerekiyor",
+        "Yorgun — daha fazla uyuyabilmeyi dilerdim",
+        "Bitkin — sabahlar gerçekten zor geçiyor"
+      ]
+    },
+    "en2": {
+      "text": "Enerjiniz gün boyunca ne kadar tutarlı bir şekilde yüksek kalıyor?",
+      "scaleLabels": {
+        "min": "Şiddetli düşüşler yaşıyorum",
+        "max": "Gün boyu dengeli"
+      }
+    },
+    "en3": {
+      "text": "Öğleden sonra (yaklaşık 14:00–16:00 arası) belirgin bir enerji düşüşü yaşıyor musunuz?"
+    },
+    "en4": {
+      "text": "Beslenmeniz gününüzü nasıl şekillendiriyor — enerji için mi yoksa sadece açlık için mi yiyorsunuz?",
+      "options": [
+        "Bilinçli olarak — enerjimi beslemek için yiyorum",
+        "Makul ölçüde — çoğunlukla iyi seçimler yapıyorum",
+        "Tutarsız — ne bulursam onu alıyorum",
+        "Kötü — şeker, kafein ve hızlı çözümler"
+      ]
+    },
+    "en5": {
+      "text": "Düşük enerji, gün içinde yaptıklarınızı ne kadar sınırlıyor?",
+      "options": [
+        "Hiç sınırlamıyor — istediğim her şeyi yapıyorum",
+        "Biraz — önceliklendiriyorum ama çok fazla şey kaçırmıyorum",
+        "Belirgin şekilde — yapmak istediğim şeyleri atlıyorum",
+        "Hayatımın tamamı kısıtlanmış hissediyorum — önemli ölçüde"
+      ]
+    },
+    "en6": {
+      "text": "Bir hafta sonu dinlenmesinin ardından, genellikle kendinizi yenilenmiş mi yoksa hâlâ yorgun mu hissedersiniz?",
+      "options": [
+        "Yenilenmiş — hafta sonları beni dinlendiriyor",
+        "Biraz daha iyi ama tam olarak toparlanmış değil",
+        "Hâlâ yorgun — dinlenmenin pek faydası olmuyor",
+        "Bazen daha kötü — dinlenmek beni daha da halsizleştiriyor"
+      ]
+    },
+    "en7": {
+      "text": "Günü geçirmek için kafeine bağımlı mısınız — zevk için değil, günü tamamlamak için?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Yüksek Enerji",
+      "description": "Enerjiniz yaşam tarzınız tarafından iyi bir şekilde destekleniyor. Rezervleriniz var ve efordan sonra iyi toparlanıyorsunuz.",
+      "actions": [
+        "Mevcut uyku ve beslenme alışkanlıklarınızı koruyun — bunlar en büyük enerji kaldıraçlarınızdır",
+        "Haftada bir yüksek yoğunluklu egzersiz seansı ekleyin — bu aslında temel enerji seviyenizi artırır",
+        "Hafta sonları bile uyku programınızı koruyun — tutarlılık enerjiyi dengede tutan şeydir"
+      ],
+      "miaHook": "Enerji temeliniz güçlü — şimdi bunu en yüksek performans için daha da optimize etmekten bahsedelim."
+    },
+    {
+      "label": "Enerji Kaçakları",
+      "description": "Enerjiniz var, ancak tutarsız. Belirli kalıplar ruh halinizi, üretkenliğinizi ve motivasyonunuzu etkileyen düşüşlere neden oluyor.",
+      "actions": [
+        "Öğünlerinizi kan şekeri dalgalanmaları açısından denetleyin — yüksek glisemik indeksli yiyecekler yaşadığınız çökmelere neden oluyor",
+        "İlk kafein alımınızı uyandıktan 90 dakika sonraya taşıyın — bu tek başına sürekli enerjiyi önemli ölçüde artırır",
+        "Öğle yemeğinden sonra 15 dakikalık yürüyüş ekleyin — bu, öğleden sonraki enerji düşüşünü %30–40 oranında azaltır"
+      ],
+      "miaHook": "Enerjiniz, görebildiğim birkaç spesifik kalıp tarafından tüketiliyor — bunları düzeltmek genellikle diğer her şeyde kademeli faydalar sağlar."
+    },
+    {
+      "label": "Kronik Olarak Düşük Enerji",
+      "description": "Enerjiniz önemli ölçüde tükenmiş durumda ve bu durum yaşam kalitenizi etkiliyor. Bu genellikle çok faktörlüdür — uyku, beslenme, stres ve hareketin tümü rol oynar.",
+      "actions": [
+        "Tıbbi nedenleri ekarte etmek için bir doktora görünün — tiroid fonksiyon bozukluğu, anemi, uyku apnesi ve vitamin eksikliklerinin tümü düşük enerji olarak kendini gösterir.",
+        "Önümüzdeki 30 gün boyunca uykuyu her şeyin üzerinde tutun — 7,5–9 saat tartışılmaz bir gerekliliktir.",
+        "Diyetinizden en büyük enerji tüketicilerini hemen çıkarın: aşırı işlenmiş gıdalar, aşırı alkol veya aşırı kafein."
+      ],
+      "miaHook": "Yaşadığınız şey tembellik değil — düzgün bir şekilde desteklenmeyen bir sistemdir. Sıfırdan yeniden inşa etmenize yardımcı olmama izin verin."
+    }
+  ],
+  "seoContent": {
+    "intro": "Düşük enerji, dünya çapında en yaygın sağlık şikayetlerinden biridir — ancak aynı zamanda en tedavi edilebilir olanlardan biridir. Araştırmalar sürekli olarak kronik yorgunluk ve düşük enerjinin nadiren tek bir faktörden kaynaklandığını göstermektedir. Bunun yerine, uyku kalitesi, beslenme düzenleri, fiziksel aktivite seviyeleri, stres yükü ve altta yatan tıbbi durumların birleşik etkisinden kaynaklanır.\n\nBu test, enerji düzenlerinizi yedi boyutta değerlendirerek, düşük enerjinizin yapısal (alışkanlık değişiklikleriyle düzeltilebilir) olup olmadığını veya tıbbi değerlendirme gerektirip gerektirmediğini belirlemenize yardımcı olur.",
+    "faq": [
+      {
+        "q": "Sağlıklı insanlarda düşük enerjiye ne sebep olur?",
+        "a": "Sağlıklı insanlarda düşük enerjinin en yaygın nedenleri şunlardır: yetersiz veya kalitesiz uyku, beslenme yetersizlikleri (demir, B12, D vitamini), dehidrasyon, aşırı kafein bağımlılığı, yüksek stres yükü, hareketsiz yaşam tarzı (paradoksal olarak enerjiyi azaltır) ve kan şekeri dengesizliğine neden olan düzensiz öğün zamanlaması."
+      },
+      {
+        "q": "Düşük enerji ne zaman tıbbi olarak araştırılmalıdır?",
+        "a": "Şu durumlarda bir doktora görünün: düşük enerji 4 haftadan uzun sürüyorsa, 7–9 saat uyumanıza rağmen hala bitkin hissediyorsanız, açıklanamayan kilo değişiklikleriniz varsa veya enerji sorunlarına başka semptomlar (saç dökülmesi, soğuğa hassasiyet, hızlı kalp atışı) eşlik ediyorsa. Yaygın tıbbi nedenler arasında tiroid bozuklukları, anemi, uyku apnesi ve diyabet bulunur."
+      },
+      {
+        "q": "Egzersiz enerjiyi artırır mı yoksa tüketir mi?",
+        "a": "Düzenli orta düzey egzersiz, temel enerjiyi artırır. Bu sezgisel olmayan ancak iyi kanıtlanmış bir durumdur: aerobik egzersiz mitokondri yoğunluğunu artırır, uyku kalitesini iyileştirir ve kortizolü düzenler — bunların tümü sürekli enerjiyi artırır. Anahtar düzenliliktir: haftada 3–5 seans orta yoğunlukta egzersiz."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Enerji, uyku, beslenme, hareket, stres hormonları, sirkadiyen ritim ve mitokondriyal fonksiyonun etkileşimi tarafından yönetilen karmaşık bir fizyolojik durumdur. Kronik düşük enerji — ara sıra oluşan yorgunluktan farklı olarak — bu sistemlerden bir veya daha fazlasının optimal şekilde çalışmadığını gösterir.\n\nEn yaygın suçlular şunlardır: uyku borcu (haftalar boyunca biriken), yetersiz beslenmeden kaynaklanan kan şekeri düzensizliği, fiziksel kondisyon kaybı, kronik stres (kortizolü yükseltir ve onarıcı hormonları baskılar) ve kafein bağımlılığı (yorgunluğu çözmeden maskeler).",
+    "howScored": "Bu test yedi enerji boyutunu değerlendirir: sabah yenilenmesi (uyku kalitesi göstergesi), gün içi tutarlılık, öğleden sonra çöküş düzenleri, beslenmeyle yakıt kalitesi, enerjiyle sınırlı aktivite, dinlenmeden toparlanma ve kafein bağımlılığı.\n\n70'in üzerindeki puanlar, iyi yaşam tarzı temelleriyle desteklenen enerjiyi gösterir. 40–69, hedeflenmeye değer, belirlenebilir enerji kaçaklarını gösterir. 40'ın altı, hem yaşam tarzı değişiklikleri hem de tıbbi değerlendirme gerektiren kronik olarak tükenmiş enerjiyi gösterir.",
+    "whenToSeek": "Şu durumlarda bir doktora görünün:\n• Yeterli uykuya rağmen düşük enerji 4 haftadan uzun sürdüyse\n• 8+ saat uyuyor ancak yorgun uyanıyorsanız\n• Enerji sorunlarına açıklanamayan kilo değişiklikleri, saç incelmesi, soğuğa hassasiyet veya kalp çarpıntısı eşlik ediyorsa\n• Depresyon veya anksiyete geçmişiniz varsa (her ikisi de önemli enerji tükenmesine neden olur)\n• Bir uyku bozukluğundan şüpheleniyorsanız (horlama, nefes kesilmesi, sık uyanma)\n\nYaygın tıbbi nedenler: hipotiroidizm, demir eksikliği anemisi, B12 veya D vitamini eksikliği, obstrüktif uyku apnesi, tip 2 diyabet.",
+    "limitations": "Bu test, yaşam tarzına dayalı enerji düzenlerini tarar. Yorgunluğa neden olan tıbbi durumları teşhis edemez. Sonuçlar, kendi bildirilen algıları yansıtır ve objektif fizyolojik ölçümleri yakalamayabilir. Bireysel enerji temel seviyeleri önemli ölçüde değişir — bir kişi için normal olan, bir başkasında tükenmeyi gösterebilir."
+  }
+}

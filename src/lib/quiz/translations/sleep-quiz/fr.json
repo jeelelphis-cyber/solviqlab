@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Questionnaire sur la qualité du sommeil (Échelle de somnolence d'Epworth)",
+    "description": "L'Échelle de somnolence d'Epworth est la référence clinique mondiale pour mesurer la somnolence diurne excessive. Utilisée par les spécialistes du sommeil dans le monde entier pour détecter les troubles du sommeil.",
+    "medicalNote": "Un score élevé peut indiquer un trouble du sommeil tel que l'apnée du sommeil ou la narcolepsie. Veuillez consulter un professionnel de santé en cas d'inquiétude."
+  },
+  "likertOptions": [
+    "Ne somnolerait jamais",
+    "Faible risque de somnoler",
+    "Risque modéré de somnoler",
+    "Risque élevé de somnoler"
+  ],
+  "questions": {
+    "ess1": {
+      "text": "Assis en train de lire",
+      "hint": "S'endormir en lisant est l'un des premiers signes de privation chronique de sommeil."
+    },
+    "ess2": {
+      "text": "Regarder la télévision",
+      "hint": "Même des activités passives comme regarder la télévision ne devraient pas provoquer de somnolence si vous bénéficiez d'un sommeil suffisant et de qualité."
+    },
+    "ess3": {
+      "text": "Assis inactif dans un lieu public (par exemple, un théâtre ou une réunion)",
+      "hint": "Lutter pour rester éveillé dans des environnements publics calmes est un marqueur diagnostique clé de la somnolence excessive."
+    },
+    "ess4": {
+      "text": "En tant que passager dans une voiture pendant une heure sans pause",
+      "hint": "Le mouvement régulier d'un trajet en voiture est un déclencheur standard de somnolence. Des scores élevés ici indiquent une dette de sommeil sérieuse."
+    },
+    "ess5": {
+      "text": "Allongé pour se reposer l'après-midi lorsque les circonstances le permettent",
+      "hint": "La capacité à s'endormir rapidement pendant une sieste l'après-midi reflète votre véritable niveau de pression de sommeil."
+    },
+    "ess6": {
+      "text": "Assis en train de parler à quelqu'un",
+      "hint": "S'endormir pendant une conversation est un signe cliniquement significatif de somnolence diurne excessive."
+    },
+    "ess7": {
+      "text": "Assis tranquillement après un déjeuner sans alcool",
+      "hint": "Les baisses d'énergie après le déjeuner sont normales, mais une forte probabilité de somnolence ici sans alcool indique un trouble du sommeil."
+    },
+    "ess8": {
+      "text": "Dans une voiture, à l'arrêt pendant quelques minutes dans la circulation",
+      "hint": "La somnolence au volant ou à l'arrêt dans la circulation est un risque direct pour la sécurité et un indicateur clinique clé."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Sommeil normal",
+      "description": "Votre somnolence diurne se situe dans la plage normale. Votre sommeil semble vous restaurer de manière adéquate.",
+      "actions": [
+        "Maintenez votre horaire de sommeil actuel — la régularité est le protecteur de sommeil le plus puissant",
+        "Gardez votre chambre en dessous de 18°C (65°F) — la température optimale pour un sommeil profond",
+        "Limitez la caféine après 14h pour protéger l'architecture du sommeil"
+      ],
+      "miaHook": "Votre base de sommeil est solide. Je veux vous montrer comment la rendre encore plus réparatrice — il existe encore un niveau au-dessus de celui où vous êtes maintenant."
+    },
+    {
+      "label": "Somnolence excessive légère",
+      "description": "Somnolence diurne légèrement élevée. Peut indiquer un manque de sommeil léger ou des problèmes de sommeil à un stade précoce.",
+      "actions": [
+        "Ajoutez 30 minutes à votre fenêtre de sommeil pendant les 2 prochaines semaines et suivez vos niveaux d'énergie",
+        "Inspectez votre chambre pour la lumière et le bruit — tous deux fragmentent le sommeil sans vous réveiller complètement",
+        "Évitez les écrans pendant 45 minutes avant le coucher cette semaine"
+      ],
+      "miaHook": "Votre score est limite — ce qui signifie que de petits changements font une grande différence maintenant. Je peux vous montrer exactement où votre sommeil fuit."
+    },
+    {
+      "label": "Somnolence excessive modérée",
+      "description": "Somnolence diurne excessive modérée. Ce niveau est lié à une conduite altérée, une productivité réduite et des problèmes métaboliques.",
+      "actions": [
+        "Consultez un médecin pour un éventuel trouble du sommeil — à ce score, un dépistage de l'apnée du sommeil est approprié",
+        "Arrêtez toute consommation d'alcool 3 heures avant le coucher — cela fragmente l'architecture du sommeil même si cela vous aide à vous endormir",
+        "Fixez une heure de coucher non négociable pour les 30 prochains jours et protégez-la"
+      ],
+      "miaHook": "À ce niveau, votre sommeil affecte tout — votre poids, votre humeur, votre concentration. J'ai un protocole qui cible spécifiquement cela."
+    },
+    {
+      "label": "Somnolence excessive sévère",
+      "description": "Somnolence diurne sévère. Cela augmente considérablement le risque d'accident et est associé à des troubles graves du sommeil. Une évaluation médicale est fortement recommandée.",
+      "actions": [
+        "Planifiez une étude du sommeil (polysomnographie) avec votre médecin — ce score justifie une investigation",
+        "Ne conduisez pas si vous vous sentez somnolent — vos réflexes sont altérés à ce niveau de somnolence",
+        "Évitez d'utiliser des machines lourdes jusqu'à ce qu'un spécialiste vous évalue"
+      ],
+      "miaHook": "Je veux être direct : un score aussi élevé nécessite une attention médicale, pas seulement une routine de sommeil. Laissez-moi vous aider à déterminer la bonne première étape."
+    }
+  ],
+  "seoContent": {
+    "intro": "L'échelle de somnolence d'Epworth (ESS) a été développée par le Dr Murray Johns à l'hôpital Epworth de Melbourne, en Australie, en 1991. Elle est depuis devenue la référence clinique mondiale pour mesurer la somnolence diurne excessive (SDE), utilisée dans les laboratoires du sommeil, les hôpitaux et les instituts de recherche du monde entier.\n\nContrairement aux journaux de sommeil ou aux évaluations subjectives de la fatigue, l'ESS mesure votre probabilité de somnoler dans 8 situations spécifiques — fournissant une image objective de votre véritable privation de sommeil. Les scores vont de 0 à 24. Un score supérieur à 10 indique une somnolence excessive justifiant une évaluation clinique.\n\nLes troubles du sommeil touchent 50 à 70 millions de personnes rien qu'aux États-Unis (CDC, 2023). La somnolence diurne excessive non traitée augmente le risque d'accidents de la route de 2,5 fois, contribue à la prise de poids, à la dépression, aux maladies cardiovasculaires et réduit considérablement la qualité de vie.",
+    "faq": [
+      {
+        "q": "Qu'est-ce que l'échelle de somnolence d'Epworth ?",
+        "a": "L'ESS est un questionnaire validé de 8 items qui mesure la somnolence diurne en demandant à quel point vous êtes susceptible de somnoler dans des situations courantes. C'est la référence mondiale utilisée par les spécialistes du sommeil et a été publiée dans la revue Sleep en 1991."
+      },
+      {
+        "q": "Quel est un score Epworth normal ?",
+        "a": "Un score de 0 à 7 est considéré comme normal. Les scores de 8 à 9 suggèrent une somnolence excessive légère ; 10 à 15 modérée ; et 16 à 24 sévère. La majorité des adultes en bonne santé obtiennent un score entre 4 et 8."
+      },
+      {
+        "q": "Quelles sont les causes de la somnolence diurne excessive ?",
+        "a": "Les causes les plus courantes incluent une durée de sommeil insuffisante, l'apnée obstructive du sommeil, la narcolepsie, le syndrome des jambes sans repos, une mauvaise qualité de sommeil, les médicaments et la dépression."
+      },
+      {
+        "q": "Dois-je consulter un médecin si j'ai obtenu un score supérieur à 10 ?",
+        "a": "Oui. Un score de 10 ou plus justifie une évaluation clinique. Votre médecin peut prescrire une polysomnographie (étude du sommeil) pour exclure l'apnée du sommeil ou d'autres troubles."
+      },
+      {
+        "q": "Une mauvaise qualité de sommeil peut-elle entraîner une prise de poids ?",
+        "a": "Oui. La privation de sommeil dérègle la ghréline et la leptine — les hormones de la faim — augmentant l'appétit et les envies d'aliments riches en calories. Des études montrent que dormir moins de 6 heures par nuit augmente le risque d'obésité de 23 %."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "La somnolence diurne excessive (SDE) est une condition dans laquelle une personne se sent somnolente pendant la journée et a du mal à rester éveillée dans des situations où la vigilance est attendue. Elle touche environ 20 % de la population mondiale et se distingue de la fatigue normale — il s'agit d'un niveau de somnolence persistant et pathologique qui altère le fonctionnement.\n\nLa SDE est un symptôme principal de plusieurs troubles du sommeil, notamment l'apnée obstructive du sommeil (la cause la plus courante), la narcolepsie, l'hypersomnie idiopathique et les troubles du rythme circadien. Elle peut également résulter d'un manque chronique de sommeil — la cause la plus évitable touchant des millions de personnes.\n\nL'échelle de somnolence d'Epworth a été conçue pour mesurer objectivement la SDE en évaluant la probabilité de somnoler dans 8 situations standardisées. Contrairement à la question « vous sentez-vous fatigué ? », l'ESS capture des preuves comportementales de somnolence qui sont fortement corrélées à des mesures physiologiques telles que le test itératif de latence d'endormissement (MSLT).",
+    "clinicalBackground": "L'échelle de somnolence d'Epworth a été développée par le Dr Murray Johns et publiée dans la revue Sleep en 1991. Le Dr Johns était médecin à l'hôpital Epworth de Melbourne et a remarqué que les évaluations subjectives de la somnolence étaient peu fiables. Il a conçu l'ESS pour mesurer la probabilité de somnoler dans des situations qui varient systématiquement dans leurs propriétés inductrices de sommeil.\n\nL'étude de validation originale a montré une forte corrélation avec les mesures objectives de somnolence (MSLT, r = 0,51) et une fiabilité test-retest élevée (r = 0,82). L'ESS a depuis été validée dans des dizaines de langues et de populations de patients.\n\nC'est désormais l'outil clinique le plus utilisé pour le dépistage des troubles du sommeil dans le monde, approuvé par l'American Academy of Sleep Medicine (AASM), la British Sleep Society, et intégré dans les directives cliniques pour l'apnée du sommeil, la narcolepsie et l'hypersomnie dans le monde entier.",
+    "howScored": "L'échelle de somnolence d'Epworth évalue la probabilité de s'assoupir dans 8 situations spécifiques, sur une échelle de 0 à 3 :\n• 0 : Ne s'assoupirait jamais\n• 1 : Faible risque de s'assoupir\n• 2 : Risque modéré de s'assoupir\n• 3 : Risque élevé de s'assoupir\n\nLes scores totaux vont de 0 à 24. Seuils cliniques :\n• 0–7 : Plage normale (la moyenne est de 5–6 chez les adultes en bonne santé)\n• 8–9 : Somnolence excessive légère/limite\n• 10–15 : Somnolence diurne excessive modérée — une évaluation clinique est justifiée\n• 16–24 : Somnolence diurne excessive sévère — une évaluation urgente est recommandée\n\nUn score de 10+ présente une sensibilité de 78 % et une spécificité de 79 % pour identifier les troubles du sommeil cliniquement significatifs dans la population générale.",
+    "interpretation": "**Score 0–7 (Normal) :** Votre sommeil vous restaure correctement. L'adulte en bonne santé moyen obtient un score de 5–6. Concentrez-vous sur le maintien de votre horaire de sommeil et la protection de la qualité de votre sommeil.\n\n**Score 8–9 (Léger/Limite) :** Légèrement au-dessus de la normale. Cela peut refléter une dette de sommeil accumulée, des horaires de sommeil irréguliers ou des problèmes de sommeil débutants. Des changements comportementaux — horaires de sommeil constants, améliorations de l'hygiène du sommeil — sont généralement suffisants à ce niveau.\n\n**Score 10–15 (Modéré) :** Cette plage est cliniquement significative. Les recherches montrent qu'à ce niveau, les performances de conduite sont altérées de manière équivalente à un taux d'alcoolémie de 0,05 %. Les fonctions cognitives, l'humeur, le métabolisme et la fonction immunitaire sont tous mesurablement affectés. Une évaluation médicale est appropriée, notamment pour dépister l'apnée du sommeil.\n\n**Score 16–24 (Sévère) :** Ce niveau de somnolence représente un problème grave de sécurité et de santé. Le risque d'accidents de la route est 2,5 fois plus élevé que la moyenne. Une évaluation médicale immédiate, y compris une étude du sommeil, est fortement recommandée.",
+    "whenToSeek": "Consultez un professionnel de santé si :\n\n• Votre score ESS est de 10 ou plus\n• On vous a dit que vous ronflez fortement ou que vous arrêtez de respirer pendant le sommeil\n• Vous ne vous sentez pas reposé après une nuit complète de sommeil\n• Vous vous endormez involontairement pendant la journée\n• Votre somnolence affecte votre travail, votre conduite ou vos relations\n• Un partenaire de lit a observé des mouvements de jambes inhabituels ou des halètements\n\nConsultez en urgence si :\n• Vous avez eu un accident évité de justesse dû à la somnolence au volant\n• Vous ressentez une faiblesse musculaire soudaine déclenchée par des émotions (cataplexie — un signe de narcolepsie)\n• Vous êtes incapable de rester éveillé au travail malgré une opportunité de sommeil adéquate",
+    "limitations": "**1. Rappel subjectif :** L'ESS mesure la probabilité perçue de s'assoupir, ce qui peut être influencé par la conscience de soi et le biais de rappel. Les personnes souffrant de troubles sévères du sommeil sous-estiment parfois leur somnolence car la fatigue chronique est devenue leur état de base.\n\n**2. Variation situationnelle :** Tout le monde ne rencontre pas régulièrement les 8 situations. Les personnes qui ne conduisent jamais, par exemple, peuvent avoir des difficultés à répondre précisément à l'item 8.\n\n**3. N'identifie pas la cause :** Un score ESS élevé indique une somnolence excessive mais ne diagnostique pas sa cause. L'apnée du sommeil, la narcolepsie, les effets médicamenteux et la simple privation de sommeil produisent tous des scores similaires.\n\n**4. Non validé pour les enfants de moins de 12 ans :** L'ESS a été développée et validée dans des populations adultes. La somnolence pédiatrique est évaluée avec des outils différents.\n\n**5. Mesure ponctuelle :** L'ESS reflète votre expérience récente du sommeil. Les voyages, les maladies, le travail posté et les événements de la vie peuvent temporairement augmenter les scores sans indiquer un trouble chronique."
+  }
+}

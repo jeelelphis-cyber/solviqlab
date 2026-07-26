@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Quiz o Wskaźniku Zdrowia Stylu Życia",
+    "description": "Uzyskaj szczery obraz tego, jak Twoje codzienne nawyki — sen, ruch, odżywianie, stres — składają się na ogólny stan zdrowia."
+  },
+  "questions": {
+    "ls1": {
+      "text": "Jak opisałbyś swoją dietę w typowy dzień powszedni?",
+      "options": [
+        "Głównie pełnowartościowe produkty — gotuję i planuję posiłki z wyprzedzeniem",
+        "Mieszanka — częściowo zdrowo, częściowo nie",
+        "Często wygodne lub szybkie jedzenie — nie mam czasu",
+        "Głównie przetworzona żywność — nie jestem z tego dumny"
+      ]
+    },
+    "ls2": {
+      "text": "Ile dni w tygodniu wykonujesz jakąś formę celowej aktywności fizycznej?",
+      "scaleLabels": {
+        "min": "0 dni",
+        "max": "7 dni"
+      }
+    },
+    "ls3": {
+      "text": "Jak dobrze sypiasz w większość nocy?",
+      "options": [
+        "Dobrze — 7–9 godzin, budzę się wypoczęty",
+        "Średnio — czasami niespokojnie",
+        "Źle — mniej niż 6 godzin lub z przerwami",
+        "Bardzo źle — to stały problem"
+      ]
+    },
+    "ls4": {
+      "text": "Czy każdego dnia masz czas tylko dla siebie — czas naprawdę należący do Ciebie, bez żadnych obowiązków?"
+    },
+    "ls5": {
+      "text": "Jak często pijesz alkohol lub palisz?",
+      "options": [
+        "Nigdy lub bardzo rzadko",
+        "Okazjonalnie — towarzysko",
+        "Kilka razy w tygodniu",
+        "Codziennie"
+      ]
+    },
+    "ls6": {
+      "text": "Kiedy myślisz o swoim zdrowiu ogólnie, jak się czujesz?",
+      "options": [
+        "Dobrze — w większości dbam o siebie",
+        "W porządku — ale wiem, że mogłoby być lepiej",
+        "Nie najlepiej — zaniedbuję pewne rzeczy",
+        "Martwię się — czuję, że zawiodłem/am samego/samą siebie"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Silne podstawy stylu życia",
+      "description": "Budujesz dobre nawyki w kluczowych obszarach. Twoje codzienne wybory działają na Twoją korzyść.",
+      "actions": [
+        "Zidentyfikuj swój najsłabszy filar (sen, odżywianie, ruch lub stres) i zoptymalizuj go dalej",
+        "Śledź jeden wskaźnik zdrowia przez 30 dni — to, co jest mierzone, jest zarządzane",
+        "Podziel się swoimi nawykami z kimś — społeczna odpowiedzialność podwaja wskaźniki konsekwencji"
+      ],
+      "miaHook": "Robisz wiele rzeczy dobrze — chcę pomóc Ci zidentyfikować jeden obszar, w którym skupiona uwaga przyniesie Ci największy zwrot."
+    },
+    {
+      "label": "Przestrzeń do rozwoju",
+      "description": "Twój styl życia ma solidne elementy, ale są luki, które prawdopodobnie kosztują Cię energię i zdrowie, nawet o tym nie wiedząc.",
+      "actions": [
+        "Wybierz jeden nawyk do poprawy w tym miesiącu — nie wszystko naraz. Zacznij od snu, jeśli wynosi poniżej 7 godzin",
+        "Przygotuj posiłki jeden dzień w tygodniu — ten pojedynczy nawyk jest najsilniejszym predyktorem poprawy jakości odżywiania",
+        "Dodaj 20 minut spaceru dziennie — to najbardziej dostępna interwencja o udowodnionych, wszechstronnych korzyściach zdrowotnych"
+      ],
+      "miaHook": "Widzę, które konkretne nawyki podkopują Twój postęp — porozmawiajmy o priorytetyzacji zmiany o największym wpływie."
+    },
+    {
+      "label": "Konieczna przebudowa stylu życia",
+      "description": "Wiele obszarów Twojego stylu życia wymaga uwagi. Ale nie musisz zmieniać wszystkiego naraz — jedna zmiana na raz tworzy trwałą zmianę.",
+      "actions": [
+        "Zacznij od snu — to fundament, na którym opiera się wszystko inne. Priorytetem jest 7,5 godziny snu, zanim zmienisz cokolwiek innego.",
+        "Zastąp jeden przetworzony posiłek dziennie domowym odpowiednikiem — to najszybsza interwencja żywieniowa.",
+        "Porozmawiaj z lekarzem o ogólnym badaniu zdrowia — wzorce stylu życia na tym poziomie często mają mierzalne skutki fizjologiczne, które warto ocenić."
+      ],
+      "miaHook": "Nosisz na sobie więcej, niż powinieneś — Twoje obecne nawyki działają przeciwko Tobie w sposób, którego możesz jeszcze w pełni nie dostrzegać."
+    }
+  ],
+  "seoContent": {
+    "intro": "Cztery filary zdrowego stylu życia — odżywianie, aktywność fizyczna, sen i zarządzanie stresem — oddziałują na siebie nieustannie. Osłabienie jednego filaru zwiększa obciążenie pozostałych: słaby sen podnosi poziom kortyzolu (pogłębiając stres i sprzyjając przyrostowi masy ciała), wysoki stres pogarsza jakość snu i prowadzi do złych wyborów żywieniowych, a brak aktywności fizycznej obniża jakość snu i zdrowie metaboliczne.\n\nTen quiz daje uczciwy wynik złożony ze wszystkich czterech filarów oraz dwóch dodatkowych czynników: spożycia alkoholu/tytoniu i subiektywnej oceny stanu zdrowia. Zrozumienie, gdzie się znajdujesz, to pierwszy krok w kierunku ukierunkowanej, skutecznej zmiany.",
+    "faq": [
+      {
+        "q": "Który czynnik stylu życia ma największy wpływ na zdrowie?",
+        "a": "Badania konsekwentnie wskazują sen jako fundament — reguluje on hormony apetytu, funkcje poznawcze, odpowiedź immunologiczną i regulację emocji. Jednak filary się uzupełniają: regularne ćwiczenia znacznie poprawiają jakość snu, zdrowe odżywianie stabilizuje nastrój i energię, a zarządzanie stresem ułatwia utrzymanie wszystkich innych zachowań."
+      },
+      {
+        "q": "Jak szybko zmiany stylu życia mogą poprawić zdrowie?",
+        "a": "Ciśnienie krwi i poziom cukru reagują w ciągu kilku dni na zmiany w diecie. Jakość snu poprawia się w ciągu 1–2 tygodni od ustalenia stałych pór snu. Wydolność sercowo-naczyniowa mierzalnie poprawia się w ciągu 4 tygodni regularnych ćwiczeń. Markery zdrowia psychicznego poprawiają się w ciągu 2–4 tygodni regularnych, umiarkowanych ćwiczeń. Znaczące zmiany składu ciała wymagają 8–12 tygodni konsekwentnego wysiłku."
+      },
+      {
+        "q": "Czy lepiej zmieniać jeden nawyk na raz, czy kilka jednocześnie?",
+        "a": "Badania nad zmianą zachowań (Fogg, Stanford) oraz badania kliniczne potwierdzają, że lepiej zaczynać od jednego nawyku na raz. Siła woli jest ograniczonym zasobem — próba jednoczesnej zmiany wielu nawyków znacznie obniża konsekwencję. Jednak koncepcja 'nawyków kluczowych' pokazuje, że niektóre zmiany (regularny sen, codzienna aktywność) automatycznie wywołują poprawę w innych obszarach."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Medycyna stylu życia to szybko rozwijająca się dziedzina medycyny, która wykorzystuje interwencje behawioralne oparte na dowodach naukowych — dietę, aktywność fizyczną, sen, zarządzanie stresem i unikanie substancji psychoaktywnych — jako podstawowe leczenie w profilaktyce i leczeniu chorób przewlekłych.\n\nCztery podstawowe filary stylu życia odpowiadają za około 80% obciążenia chorobami przewlekłymi (CDC, 2023). Choroby sercowo-naczyniowe, cukrzyca typu 2, wiele nowotworów i zaburzenia zdrowia psychicznego są silnie uzależnione od modyfikowalnych czynników stylu życia. Oznacza to, że największym pojedynczym wyznacznikiem Twojego długoterminowego zdrowia nie są geny — to Twoje codzienne nawyki.",
+    "howScored": "Ten quiz ocenia sześć wymiarów: jakość odżywiania (produkty pełnoziarniste vs. przetworzone), częstotliwość aktywności fizycznej, jakość i długość snu, codzienny czas regeneracji, spożycie alkoholu/tytoniu oraz subiektywną ocenę stanu zdrowia.\n\nWyniki powyżej 70 punktów wskazują na silne podstawy stylu życia, z większością filarów dobrze wspartych. 40–69 punktów oznacza mieszany styl życia z możliwymi do zidentyfikowania lukami wartymi poprawy. Poniżej 40 punktów wskazuje na wiele filarów stylu życia znacząco odbiegających od zalecanych norm zdrowotnych.",
+    "whenToSeek": "Skonsultuj się z lekarzem, jeśli:\n• Uzyskujesz najniższe wyniki przez 3+ miesięcy bez poprawy\n• Masz chorobę przewlekłą (cukrzycę, nadciśnienie, otyłość), a zmiany stylu życia utknęły w martwym punkcie\n• Potrzebujesz profesjonalnego wsparcia, aby zmienić nawyki, które wymykają się spod kontroli (przejadanie się, spożywanie alkoholu, brak aktywności fizycznej)\n• Doświadczasz objawów towarzyszących problemom ze stylem życia: zmęczenia, bólu, problemów nastroju lub niewyjaśnionych zmian masy ciała",
+    "limitations": "Ten quiz ocenia subiektywnie zgłaszane nawyki stylu życia, które podlegają błędom pamięci i efektom społecznej aprobaty (ludzie mają tendencję do zgłaszania nieco lepszych nawyków niż faktycznie utrzymują). Wyniki odzwierciedlają stan w danym momencie i mogą nie uwzględniać sezonowych wahań lub niedawnych zmian. Jest to narzędzie przesiewowe, a nie ocena medyczna."
+  }
+}

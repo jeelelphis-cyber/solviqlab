@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Questionário de Prontidão para Perda de Peso",
+    "description": "Você está realmente pronto para perder peso — ou apenas esperando? Descubra o que realmente está no seu caminho antes de começar."
+  },
+  "questions": {
+    "wr1": {
+      "text": "Por que você quer perder peso agora? O que realmente está motivando você?",
+      "options": [
+        "Minha saúde — quero me sentir melhor a longo prazo",
+        "Energia e confiança — qualidade de vida diária",
+        "Um evento futuro — tenho um prazo",
+        "Pressão externa — outros querem que eu faça"
+      ]
+    },
+    "wr2": {
+      "text": "Você já tentou perder peso antes e parou? O que aconteceu?",
+      "options": [
+        "Mantive bem o sucesso anterior",
+        "Perdi e recuperei — agora entendo o porquê",
+        "Parei porque era muito restritivo",
+        "Parei porque não vi resultados rapidamente"
+      ]
+    },
+    "wr3": {
+      "text": "Você tem um plano específico e realista de como vai se alimentar de forma diferente?"
+    },
+    "wr4": {
+      "text": "Quão pronto você se sente para fazer mudanças consistentes — não uma dieta radical, mas mudanças no estilo de vida?",
+      "scaleLabels": {
+        "min": "Nem um pouco pronto",
+        "max": "Completamente pronto"
+      }
+    },
+    "wr5": {
+      "text": "O quanto o estresse ou a emoção influenciam seus hábitos alimentares?",
+      "options": [
+        "Muito pouco — como baseado na fome",
+        "Às vezes — dias estressantes afetam minhas escolhas",
+        "Frequentemente — a comida é meu conforto",
+        "Sempre — comer emocionalmente é meu padrão"
+      ]
+    },
+    "wr6": {
+      "text": "Você tem apoio — pessoas que vão incentivar em vez de sabotar seus objetivos?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Pronto para Começar",
+      "description": "Você tem a mentalidade, motivação e consciência para fazer um progresso real e sustentável. Agora é sobre a estratégia certa.",
+      "actions": [
+        "Comece esta semana — sua janela de prontidão é real e deve ser aproveitada",
+        "Defina uma meta específica e mensurável de 8 semanas (não um número para a vida toda) — perder de 4 a 6 kg em 8 semanas é realista e motivador",
+        "Conte para sua rede de apoio sobre seu plano — a responsabilidade aumenta as taxas de sucesso em 65%"
+      ],
+      "miaHook": "Você está genuinamente pronto — não apenas esperando. Deixe-me dar um plano inicial personalizado com base no seu perfil."
+    },
+    {
+      "label": "Quase Pronto",
+      "description": "Você está motivado, mas algumas peças-chave ainda não estão no lugar. Abordá-las agora fará a diferença entre uma mudança duradoura e outro falso começo.",
+      "actions": [
+        "Identifique o motivo específico pelo qual tentativas anteriores pararam — resolva essa causa raiz antes de recomeçar",
+        "Construa seu sistema de apoio primeiro — identifique 1 a 2 pessoas que vão incentivar ativamente sua jornada",
+        "Passe 2 semanas melhorando seu sono para 7 horas ou mais antes de começar — o sono é o principal preditor de adesão à dieta"
+      ],
+      "miaHook": "Consigo ver o que está faltando no seu quadro de prontidão — vamos fechar essas lacunas antes de você começar, para que desta vez funcione."
+    },
+    {
+      "label": "Ainda Não Está na Hora",
+      "description": "Começar agora pode levar à frustração e a outro ciclo de parar e recomeçar. Vamos construir a base certa primeiro.",
+      "actions": [
+        "Concentre-se em entender seu porquê — a motivação baseada na saúde tem uma taxa de sucesso 3× maior do que a motivação baseada em eventos ou pressão externa",
+        "Aborde a alimentação emocional antes de iniciar uma dieta — sem isso, nenhum plano alimentar se manterá a longo prazo",
+        "Trabalhe com um coach, terapeuta ou nutricionista para construir a base certa — tentar fazer isso sozinho com o quadro atual de prontidão é a receita para outro recomeço"
+      ],
+      "miaHook": "Começar sem abordar o que vejo em suas respostas é o que leva a desistir. Vamos fazer isso direito — e apenas uma vez."
+    }
+  ],
+  "seoContent": {
+    "intro": "Pesquisas sobre mudança de comportamento mostram consistentemente que motivação e intenção isoladamente são preditores insuficientes para o sucesso na perda de peso. O que diferencia pessoas que alcançam perda de peso duradoura daquelas que passam por tentativas repetidas é a prontidão psicológica: clareza de motivação, expectativas realistas, um plano concreto e suporte adequado.\n\nEste questionário avalia seis dimensões da prontidão para perda de peso, baseadas na pesquisa do Modelo Transteórico (Prochaska & DiClemente) e na psicologia comportamental. Entender onde você realmente está — não onde você gostaria de estar — é o insight mais valioso que você pode ter antes de começar.",
+    "faq": [
+      {
+        "q": "Qual é o preditor mais forte de sucesso na perda de peso?",
+        "a": "Pesquisas identificam consistentemente a motivação intrínseca (orientada pela saúde vs. aparência), autoeficácia (confiança na própria capacidade de fazer mudanças), suporte social e expectativas realistas como os preditores mais fortes de perda de peso sustentada. Pessoas que perdem peso por razões de saúde o mantêm por significativamente mais tempo do que aquelas motivadas por eventos ou pressão externa."
+      },
+      {
+        "q": "Por que a maioria das dietas falha?",
+        "a": "As principais razões são: começar com um déficit calórico muito grande (fome insustentável), confiar na força de vontade em vez de no design do ambiente, não lidar com a alimentação emocional, falta de suporte social, pensamento de tudo ou nada (um dia ruim leva a desistir) e estabelecer prazos irreais. Estes problemas são solucionáveis — com a preparação adequada."
+      },
+      {
+        "q": "Como posso quebrar o ciclo de perder e recuperar peso?",
+        "a": "Pesquisas sobre 'ciclagem de peso' mostram que os fatores-chave para quebrar o padrão são: mudar de uma mentalidade de dieta de curto prazo para uma mudança de estilo de vida permanente, lidar com a alimentação emocional com ferramentas comportamentais (não força de vontade), incorporar uma fase de manutenção no plano desde o início e escolher uma abordagem sustentável o suficiente para que você possa imaginá-la por 5 anos."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "A prontidão para perda de peso é um conceito psicológico desenvolvido a partir do Modelo Transteórico de mudança de comportamento (Prochaska & DiClemente, 1983). Ele descreve o quão preparada uma pessoa está — cognitivamente, motivacionalmente e comportamentalmente — para fazer e sustentar mudanças significativas no estilo de vida.\n\nA prontidão não é um estado fixo — ela flutua com as circunstâncias da vida, níveis de estresse e ambiente social. Tentar perder peso durante períodos de baixa prontidão aumenta significativamente a probabilidade de recaída e contribui para o ciclo frustrante de tentativas repetidas.",
+    "howScored": "Este questionário avalia seis dimensões da prontidão: qualidade da motivação (intrínseca vs. extrínseca), aprendizado com tentativas anteriores, planejamento concreto, confiança subjetiva na prontidão, padrões de alimentação emocional e disponibilidade de suporte social.\n\nPontuações acima de 70 indicam alta prontidão — comece agora. 40–69 indica prontidão parcial — lacunas específicas devem ser abordadas primeiro. Abaixo de 40 indica que as condições fundamentais para o sucesso ainda não estão estabelecidas — a preparação melhorará significativamente os resultados.",
+    "whenToSeek": "Considere suporte profissional se:\n• Você teve 3 ou mais tentativas significativas de perda de peso que não resultaram em mudança duradoura\n• A alimentação emocional ou por estresse é um padrão significativo que parece fora de controle\n• Você tem um IMC acima de 35 — a supervisão médica melhora significativamente os resultados neste nível\n• Compulsão alimentar, ciclos de restrição ou outros padrões alimentares desordenados estão presentes\n• Preocupações com o peso estão afetando significativamente a saúde mental ou a qualidade de vida",
+    "limitations": "Este questionário avalia a prontidão psicológica, não a adequação médica para perda de peso. Condições de saúde individuais, medicamentos e fatores metabólicos não capturados aqui podem influenciar significativamente a capacidade e a abordagem de perda de peso. Sempre consulte um profissional de saúde antes de iniciar um programa significativo de perda de peso, especialmente com condições de saúde subjacentes."
+  }
+}

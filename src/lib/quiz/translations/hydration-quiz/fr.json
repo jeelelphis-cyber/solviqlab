@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Quiz sur l'hydratation et la santé",
+    "description": "La plupart des gens sont légèrement déshydratés sans le savoir. Découvrez si l'eau est un élément manquant de votre équilibre santé."
+  },
+  "questions": {
+    "hyd1": {
+      "text": "Combien de verres d'eau (250 ml) buvez-vous par jour en moyenne ?",
+      "options": [
+        "8 ou plus — je bois régulièrement",
+        "5 à 7 verres",
+        "3 à 4 verres",
+        "Moins de 3 — j'oublie de boire"
+      ]
+    },
+    "hyd2": {
+      "text": "Ressentez-vous souvent la soif pendant la journée ?"
+    },
+    "hyd3": {
+      "text": "De quelle couleur est votre urine la plupart du temps ? (Soyez honnête !)",
+      "options": [
+        "Jaune pâle — presque transparent",
+        "Jaune clair",
+        "Jaune foncé ou ambré",
+        "Très foncée — je n'y prête pas attention"
+      ]
+    },
+    "hyd4": {
+      "text": "Buvez-vous régulièrement du café, du thé ou de l'alcool sans compenser avec de l'eau ?"
+    },
+    "hyd5": {
+      "text": "Ressentez-vous régulièrement des maux de tête, une peau sèche ou des difficultés de concentration ?",
+      "options": [
+        "Aucun de ces symptômes — je me sens bien",
+        "Un de ces symptômes occasionnellement",
+        "Deux de ces symptômes régulièrement",
+        "Les trois — presque tous les jours"
+      ]
+    },
+    "hyd6": {
+      "text": "Quel est votre niveau d'activité physique ? (Plus d'activité = besoins en eau plus élevés)",
+      "scaleLabels": {
+        "min": "Très sédentaire",
+        "max": "Très actif quotidiennement"
+      }
+    }
+  },
+  "buckets": [
+    {
+      "label": "Bien hydraté",
+      "description": "Vos habitudes d'hydratation sont solides. Votre corps reçoit l'eau dont il a besoin pour fonctionner au mieux.",
+      "actions": [
+        "Maintenez votre apport actuel — la constance est plus importante que d'atteindre un nombre spécifique",
+        "Augmentez de 500 ml les jours d'exercice intense ou de forte chaleur",
+        "Continuez à éviter les boissons sucrées comme source principale d'hydratation"
+      ],
+      "miaHook": "Votre hydratation est bonne — examinons ce qui pourrait autrement affecter votre énergie et vos performances."
+    },
+    {
+      "label": "Légèrement déshydraté",
+      "description": "Vous ne buvez pas assez. La déshydratation légère affecte votre humeur, votre concentration et votre métabolisme plus que la plupart des gens ne le réalisent.",
+      "actions": [
+        "Ajoutez un verre d'eau immédiatement après le réveil — votre corps perd de l'eau pendant la nuit",
+        "Réglez un rappel toutes les 2 heures pour boire — la formation d'habitudes est le chemin le plus rapide vers une meilleure hydratation",
+        "Remplacez un café ou une boisson sucrée quotidien par de l'eau ou une tisane"
+      ],
+      "miaHook": "La déshydratation légère affecte silencieusement votre énergie et votre gestion du poids — ajouter 3 verres par jour peut changer cela rapidement."
+    },
+    {
+      "label": "Déshydraté",
+      "description": "Votre apport en eau est significativement inférieur à ce dont votre corps a besoin. Cela affecte probablement votre concentration, votre peau, vos reins et votre énergie.",
+      "actions": [
+        "Commencez demain avec 500 ml d'eau avant toute nourriture ou caféine — faites-en une priorité non négociable",
+        "Portez une bouteille d'eau de 1 L et finissez-la deux fois avant le dîner",
+        "Vérifiez la couleur de votre urine quotidiennement — le jaune pâle est votre cible et votre indicateur d'hydratation en temps réel"
+      ],
+      "miaHook": "La déshydratation explique beaucoup de choses que vous pourriez attribuer à d'autres causes — laissez-moi vous montrer un moyen simple d'y remédier."
+    }
+  ],
+  "seoContent": {
+    "intro": "Une déshydratation légère — définie comme une perte de seulement 1 à 2 % de l'eau corporelle — altère les performances cognitives, l'endurance physique, l'humeur et le métabolisme. La plupart des gens passent une grande partie de leur journée dans cet état sans s'en rendre compte, car la soif est un indicateur tardif : au moment où vous avez soif, vous êtes déjà légèrement déshydraté.\n\nLes reins, le cerveau, la peau et le système cardiovasculaire dépendent tous d'une hydratation adéquate pour fonctionner. Ce quiz évalue vos habitudes d'hydratation selon six dimensions pour vous donner une image claire de votre situation et de ce qu'il faut changer.",
+    "faq": [
+      {
+        "q": "Quelle quantité d'eau dois-je boire par jour ?",
+        "a": "La référence courante de 8 verres (2 L) est une base raisonnable pour les adultes sédentaires en climat tempéré. Des recommandations plus précises de la National Academies : 3,7 L de liquide total par jour pour les hommes et 2,7 L pour les femmes (y compris l'eau provenant des aliments). Augmentez de 0,5 à 1 L pour chaque heure d'exercice et par temps chaud."
+      },
+      {
+        "q": "Le café compte-t-il dans l'apport hydrique quotidien ?",
+        "a": "Oui, dans une certaine mesure. L'effet diurétique léger de la caféine est compensé par le liquide de la boisson en quantités modérées (jusqu'à 3 à 4 tasses par jour). Cependant, une consommation excessive de caféine (5 tasses ou plus) entraîne une perte nette de liquide. L'alcool a un effet diurétique beaucoup plus fort et ne doit pas être compté dans les objectifs d'hydratation."
+      },
+      {
+        "q": "Quel est le meilleur indicateur de l'état d'hydratation ?",
+        "a": "La couleur de l'urine est l'indicateur en temps réel le plus pratique. Une couleur jaune pâle (couleur limonade) indique une bonne hydratation. Un jaune foncé ou ambré indique une déshydratation. Une urine claire peut indiquer une surhydratation. L'urine du matin a tendance à être plus foncée — ce qui compte, c'est la couleur tout au long de la journée."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "L'eau représente environ 60 % du poids corporel adulte et intervient dans tous les processus physiologiques : transport des nutriments, régulation de la température, lubrification des articulations, élimination des déchets et fonction cellulaire. Même une déshydratation légère (perte de 1 à 2 % du poids corporel) altère mesurablement ces processus.\n\nDes études montrent systématiquement qu'une déshydratation légère réduit la mémoire de travail de 7 %, altère l'attention et la vitesse psychomotrice, augmente la fatigue et la tension, et réduit les performances d'endurance de 10 à 20 %. Pour la plupart des gens, améliorer l'hydratation est l'une des interventions de santé les plus rentables et les plus simples disponibles.",
+    "howScored": "Ce quiz évalue six dimensions de l'hydratation : le volume d'apport quotidien, la fréquence de la soif (un signal tardif de déshydratation), la couleur de l'urine (l'indicateur en temps réel le plus fiable), les habitudes de consommation de boissons diurétiques, les symptômes de déshydratation (maux de tête, peau sèche, manque de concentration) et le niveau d'activité physique (qui détermine les besoins en eau).\n\nLes scores supérieurs à 70 indiquent des habitudes bien hydratées. 40 à 69 indiquent des schémas de déshydratation légère qu'il vaut la peine de corriger. En dessous de 40, cela indique une déshydratation significative qui affecte probablement le fonctionnement quotidien.",
+    "whenToSeek": "Consultez un médecin si :\n• Vous buvez suffisamment d'eau mais restez constamment assoiffé (possible diabète ou problème rénal)\n• Vous avez du mal à retenir les liquides (mictions fréquentes malgré un apport normal)\n• Les symptômes de déshydratation persistent après avoir augmenté l'apport pendant 2 semaines ou plus\n• Vous ressentez des étourdissements, un rythme cardiaque rapide ou une confusion accompagnant un faible apport en eau",
+    "limitations": "Ce quiz évalue les habitudes d'hydratation auto-déclarées, et non l'état d'hydratation objectif. L'hydratation réelle dépend de facteurs individuels, notamment le poids corporel, la fonction rénale, la prise de médicaments, le climat et le niveau d'activité. Le quiz fournit une évaluation directionnelle utile mais ne remplace pas une mesure clinique (osmolalité sanguine/urinaire)."
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Hidrasyon Sağlık Testi",
+    "description": "Çoğu insan farkında olmadan hafif derecede susuz kalır. Suyun sağlık bulmacanızın eksik bir parçası olup olmadığını keşfedin."
+  },
+  "questions": {
+    "hyd1": {
+      "text": "Tipik bir günde kaç bardak su (250ml) içiyorsunuz?",
+      "options": [
+        "8 veya daha fazla — Düzenli olarak içiyorum",
+        "5–7 bardak",
+        "3–4 bardak",
+        "3'ten az — İçmeyi unutuyorum"
+      ]
+    },
+    "hyd2": {
+      "text": "Gün içinde sık sık susadığınızı hissediyor musunuz?"
+    },
+    "hyd3": {
+      "text": "İdrarınız çoğu zaman hangi renkte? (Dürüst olun!)",
+      "options": [
+        "Soluk sarı — neredeyse berrak",
+        "Açık sarı",
+        "Koyu sarı veya kehribar",
+        "Çok koyu — pek fark etmiyorum"
+      ]
+    },
+    "hyd4": {
+      "text": "Düzenli olarak kahve, çay veya alkol tüketiyor ve suyla dengelemiyor musunuz?"
+    },
+    "hyd5": {
+      "text": "Düzenli olarak baş ağrısı, kuru cilt veya konsantrasyon güçlüğü yaşıyor musunuz?",
+      "options": [
+        "Bunların hiçbiri — Kendimi iyi hissediyorum",
+        "Ara sıra bunlardan biri",
+        "Düzenli olarak bunlardan ikisi",
+        "Her üçü de — neredeyse her gün"
+      ]
+    },
+    "hyd6": {
+      "text": "Fiziksel olarak ne kadar aktifsiniz? (Daha fazla aktivite = daha yüksek su ihtiyacı)",
+      "scaleLabels": {
+        "min": "Çok hareketsiz",
+        "max": "Günlük çok aktif"
+      }
+    }
+  },
+  "buckets": [
+    {
+      "label": "İyi Hidrate",
+      "description": "Hidrasyon alışkanlıklarınız sağlam. Vücudunuz en iyi şekilde çalışması için ihtiyaç duyduğu suyu alıyor.",
+      "actions": [
+        "Mevcut alımınızı koruyun — tutarlılık belirli bir rakama ulaşmaktan daha önemlidir",
+        "Yoğun egzersiz veya sıcak hava olan günlerde 500 ml artırın",
+        "Birincil hidrasyon kaynağınız olarak şekerli içeceklerden kaçınmaya devam edin"
+      ],
+      "miaHook": "Hidrasyonunuz iyi — şimdi enerjinizi ve performansınızı etkileyebilecek başka faktörlere bakalım."
+    },
+    {
+      "label": "Hafif Dehidrate",
+      "description": "Yeterince su içmiyorsunuz. Hafif dehidrasyon, çoğu insanın fark ettiğinden daha fazla ruh halinizi, odaklanmanızı ve metabolizmanızı etkiler.",
+      "actions": [
+        "Uyandıktan hemen sonra bir bardak su ekleyin — vücudunuz gece boyunca su kaybeder",
+        "Her 2 saatte bir su içmek için hatırlatıcı kurun — alışkanlık oluşturmak, daha iyi hidrasyona giden en hızlı yoldur",
+        "Günlük bir kahve veya şekerli içeceği su veya bitki çayı ile değiştirin"
+      ],
+      "miaHook": "Hafif dehidrasyon, enerjinizi ve kilo yönetiminizi sessizce etkiliyor — günde 3 bardak eklemek bunu hızla değiştirebilir."
+    },
+    {
+      "label": "Dehidrate",
+      "description": "Su alımınız vücudunuzun ihtiyaç duyduğunun önemli ölçüde altında. Bu durum konsantrasyonunuzu, cildinizi, böbreklerinizi ve enerjinizi etkiliyor olabilir.",
+      "actions": [
+        "Yarına herhangi bir yiyecek veya kafeinden önce 500 ml su içerek başlayın — bunu tartışılmaz bir kural haline getirin",
+        "Yanınızda 1 litrelik bir su şişesi taşıyın ve akşam yemeğinden önce iki kez bitirin",
+        "İdrar renginizi her gün kontrol edin — soluk sarı hedefiniz ve gerçek zamanlı hidrasyon göstergenizdir"
+      ],
+      "miaHook": "Dehidrasyon, başka şeylere bağlayabileceğiniz birçok sorunu açıklıyor — bunu düzeltmenin kolay bir yolunu göstereyim."
+    }
+  ],
+  "seoContent": {
+    "intro": "Hafif dehidrasyon — vücut suyunun yalnızca %1-2'sinin kaybı olarak tanımlanır — bilişsel performansı, fiziksel dayanıklılığı, ruh halini ve metabolizmayı olumsuz etkiler. Çoğu insan, gününün önemli bir bölümünü bu durumun farkında olmadan geçirir çünkü susuzluk gecikmeli bir göstergedir: susadığınızı hissettiğinizde, zaten hafif derecede susuz kalmışsınızdır.\n\nBöbrekler, beyin, cilt ve kardiyovasküler sistem, düzgün çalışmak için yeterli hidrasyona bağımlıdır. Bu test, altı farklı boyutta hidrasyon alışkanlıklarınızı değerlendirerek, mevcut durumunuz ve neleri değiştirmeniz gerektiği konusunda size net bir tablo sunar.",
+    "faq": [
+      {
+        "q": "Günde ne kadar su içmeliyim?",
+        "a": "Yaygın olarak belirtilen 8 bardak (2L), ılıman iklimlerde hareketsiz yetişkinler için makul bir temel seviyedir. Ulusal Akademiler'den daha kesin bir kılavuz: Erkekler için günde 3,7L toplam sıvı ve kadınlar için 2,7L (yiyeceklerden alınan su dahil). Her saatlik egzersiz ve sıcak havalarda 0,5-1L artırın."
+      },
+      {
+        "q": "Kahve günlük sıvı alımına sayılır mı?",
+        "a": "Evet, bir dereceye kadar. Kafeinin hafif idrar söktürücü etkisi, ılımlı miktarlarda (günde 3-4 fincana kadar) içecekteki sıvı ile dengelenir. Ancak aşırı kafein (5+ fincan) net sıvı kaybına neden olur. Alkol çok daha güçlü bir idrar söktürücü etkiye sahiptir ve hidrasyon hedeflerine dahil edilmemelidir."
+      },
+      {
+        "q": "Hidrasyon durumunun en iyi göstergesi nedir?",
+        "a": "İdrar rengi, en pratik gerçek zamanlı göstergedir. Açık sarı (limonata rengi) iyi hidrasyonu gösterir. Koyu sarı veya kehribar rengi dehidrasyonu gösterir. Berrak idrar aşırı hidrasyona işaret edebilir. Sabah idrarı daha koyu olma eğilimindedir — önemli olan gün boyunca idrar rengidir."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Su, yetişkin vücut ağırlığının yaklaşık %60'ını oluşturur ve her fizyolojik süreçte yer alır: besin taşınması, sıcaklık düzenlemesi, eklem kayganlığı, atık eliminasyonu ve hücresel işlev. Hafif dehidrasyon (vücut ağırlığının %1-2'sinin kaybı) bile bu süreçleri ölçülebilir şekilde bozar.\n\nÇalışmalar tutarlı bir şekilde, hafif dehidrasyonun çalışma belleğini %7 oranında azalttığını, dikkat ve psikomotor hızı bozduğunu, yorgunluk ve gerginliği artırdığını ve dayanıklılık performansını %10-20 oranında düşürdüğünü göstermektedir. Çoğu insan için, hidrasyonu iyileştirmek, en yüksek getirili ve en düşük maliyetli sağlık müdahalelerinden biridir.",
+    "howScored": "Bu test altı hidrasyon boyutunu değerlendirir: günlük alım hacmi, susuzluk sıklığı (gecikmeli bir dehidrasyon sinyali), idrar rengi (en güvenilir gerçek zamanlı gösterge), idrar söktürücü içecek alışkanlıkları, dehidrasyon belirtileri (baş ağrıları, kuru cilt, zayıf konsantrasyon) ve fiziksel aktivite seviyesi (su ihtiyacını belirler).\n\n70'in üzerindeki puanlar iyi hidrasyon alışkanlıklarını gösterir. 40-69 arası, düzeltilmesi gereken hafif dehidrasyon modellerini gösterir. 40'ın altı, günlük işlevleri etkileme olasılığı yüksek olan önemli dehidrasyonu gösterir.",
+    "whenToSeek": "Aşağıdaki durumlarda bir doktora görünün:\n• Yeterli su içmenize rağmen sürekli susuyorsanız (olası diyabet veya böbrek sorunu)\n• Sıvıyı tutmakta zorluk çekiyorsanız (normal alıma rağmen sık idrara çıkma)\n• Alımı artırdıktan sonra 2+ hafta boyunca dehidrasyon belirtileri devam ediyorsa\n• Düşük su alımıyla birlikte baş dönmesi, hızlı kalp atışı veya kafa karışıklığı yaşıyorsanız",
+    "limitations": "Bu test, objektif hidrasyon durumunu değil, kendi bildirdiğiniz hidrasyon alışkanlıklarını değerlendirir. Gerçek hidrasyon; vücut ağırlığı, böbrek fonksiyonu, ilaç kullanımı, iklim ve aktivite seviyesi gibi bireysel faktörlere bağlıdır. Test, yararlı bir yönlendirici değerlendirme sağlar ancak klinik ölçümün (kan/ idrar ozmolalitesi) yerini almaz."
+  }
+}

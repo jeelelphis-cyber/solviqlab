@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Codzienna ocena poziomu energii",
+    "description": "Niski poziom energii to nie tylko zmęczenie — to sygnał. Dowiedz się, co Cię wyczerpuje i co może Cię przywrócić do równowagi."
+  },
+  "questions": {
+    "en1": {
+      "text": "Jak się czujesz, gdy budzisz się rano?",
+      "options": [
+        "Gotowy/a — czuję się wypoczęty/a i jasno myślę",
+        "W porządku — potrzebuję kawy, by ruszyć z miejsca",
+        "Zmęczony/a — chciałbym/chciałabym pospać dłużej",
+        "Wyczerpany/a — poranki są dla mnie prawdziwym wyzwaniem"
+      ]
+    },
+    "en2": {
+      "text": "Jak stabilnie utrzymuje się Twój poziom energii w ciągu dnia?",
+      "scaleLabels": {
+        "min": "Gwałtownie spada",
+        "max": "Stabilny przez cały dzień"
+      }
+    },
+    "en3": {
+      "text": "Czy doświadczasz znacznego spadku energii po południu (około 14–16)?"
+    },
+    "en4": {
+      "text": "Jak Twoja dieta wpływa na energię w ciągu dnia — jesz dla energii czy tylko z głodu?",
+      "options": [
+        "Świadomie — jem, by dostarczyć energii",
+        "Umiarkowanie — przeważnie dobre wybory",
+        "Nieregularnie — sięgam po to, co jest pod ręką",
+        "Źle — cukier, kofeina i szybkie rozwiązania"
+      ]
+    },
+    "en5": {
+      "text": "Jak bardzo niski poziom energii ogranicza to, co robisz w ciągu dnia?",
+      "options": [
+        "Wcale — robię wszystko, co chcę",
+        "Trochę — ustalam priorytety, ale niewiele tracę",
+        "Wyraźnie — rezygnuję z rzeczy, które chciałem/chciałam zrobić",
+        "Znacząco — całe moje życie wydaje się ograniczone"
+      ]
+    },
+    "en6": {
+      "text": "Po weekendowym odpoczynku czujesz się zwykle zregenerowany — czy wciąż zmęczony?",
+      "options": [
+        "Zregenerowany — weekendy mnie odnawiają",
+        "Nieco lepiej, ale nie w pełni odnowiony",
+        "Wciąż zmęczony — odpoczynek niewiele pomaga",
+        "Czasem gorzej — odpoczynek sprawia, że jestem bardziej ospały"
+      ]
+    },
+    "en7": {
+      "text": "Czy polegasz na kofeinie, aby funkcjonować — nie dla przyjemności, ale by przetrwać dzień?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Wysoki poziom energii",
+      "description": "Twoja energia jest dobrze wspierana przez styl życia. Masz rezerwy i dobrze regenerujesz się po wysiłku.",
+      "actions": [
+        "Utrzymuj obecne nawyki dotyczące snu i odżywiania — to Twoje największe dźwignie energetyczne",
+        "Dodaj jeden trening o wysokiej intensywności tygodniowo — faktycznie podnosi podstawowy poziom energii",
+        "Chroń swój harmonogram snu nawet w weekendy — konsekwencja utrzymuje stabilną energię"
+      ],
+      "miaHook": "Twoja podstawa energetyczna jest silna — porozmawiajmy o jej dalszej optymalizacji dla szczytowej wydajności."
+    },
+    {
+      "label": "Wycieki energii",
+      "description": "Masz energię, ale jest ona niestabilna. Pewne wzorce powodują spadki, które wpływają na nastrój, produktywność i motywację.",
+      "actions": [
+        "Przeanalizuj swoje posiłki pod kątem skoków cukru we krwi — produkty o wysokim indeksie glikemicznym powodują odczuwane przez Ciebie załamania",
+        "Przesuń pierwszą kofeinę na 90 minut po przebudzeniu — to samo w sobie znacznie poprawia trwałą energię",
+        "Dodaj 15 minut spaceru po obiedzie — zmniejsza popołudniowy spadek energii o 30–40%"
+      ],
+      "miaHook": "Twoja energia jest drenowana przez kilka konkretnych wzorców, które widzę — naprawienie ich często przynosi kaskadowe korzyści we wszystkich innych obszarach."
+    },
+    {
+      "label": "Chronicznie niski poziom energii",
+      "description": "Twoja energia jest znacznie obniżona i wpływa na jakość życia. Zwykle ma to wiele przyczyn – sen, odżywianie, stres i aktywność fizyczna odgrywają tu rolę.",
+      "actions": [
+        "Skonsultuj się z lekarzem, aby wykluczyć przyczyny medyczne – dysfunkcja tarczycy, anemia, bezdech senny i niedobory witamin mogą objawiać się niskim poziomem energii.",
+        "Przez najbliższe 30 dni priorytetem powinien być sen – 7,5–9 godzin to absolutne minimum.",
+        "Natychmiast usuń z diety największe źródła utraty energii: żywność wysoko przetworzoną, nadmiar alkoholu lub nadmierną ilość kofeiny."
+      ],
+      "miaHook": "To, czego doświadczasz, nie jest lenistwem – to system, który nie jest odpowiednio wspierany. Pozwól mi pomóc Ci odbudować go od podstaw."
+    }
+  ],
+  "seoContent": {
+    "intro": "Niski poziom energii to jedna z najczęstszych dolegliwości zdrowotnych na świecie – a jednocześnie jedna z najbardziej uleczalnych. Badania konsekwentnie pokazują, że przewlekłe zmęczenie i niski poziom energii rzadko mają jedną przyczynę. Zamiast tego wynikają z kumulacji czynników takich jak jakość snu, nawyki żywieniowe, poziom aktywności fizycznej, obciążenie stresem oraz choroby współistniejące.\n\nTen quiz ocenia Twoje wzorce energetyczne w siedmiu wymiarach, pomagając określić, czy Twój niski poziom energii ma charakter strukturalny (możliwy do poprawy poprzez zmianę nawyków), czy wymaga konsultacji lekarskiej.",
+    "faq": [
+      {
+        "q": "Co powoduje niski poziom energii u zdrowych osób?",
+        "a": "U zdrowych osób najczęstsze przyczyny niskiego poziomu energii to: niewystarczająca lub niskiej jakości sen, niedobory żywieniowe (żelazo, witamina B12, witamina D), odwodnienie, nadmierne uzależnienie od kofeiny, wysoki poziom stresu, siedzący tryb życia (który paradoksalnie obniża energię) oraz nieregularne posiłki powodujące niestabilność poziomu cukru we krwi."
+      },
+      {
+        "q": "Kiedy niski poziom energii wymaga diagnostyki medycznej?",
+        "a": "Skonsultuj się z lekarzem, jeśli: niski poziom energii utrzymuje się dłużej niż 4 tygodnie, śpisz 7–9 godzin, ale nadal czujesz się wyczerpany, masz niewyjaśnione zmiany masy ciała lub problemom energetycznym towarzyszą inne objawy (wypadanie włosów, nadwrażliwość na zimno, przyspieszone bicie serca). Częste przyczyny medyczne to zaburzenia tarczycy, anemia, bezdech senny i cukrzyca."
+      },
+      {
+        "q": "Czy ćwiczenia zwiększają energię, czy ją wyczerpują?",
+        "a": "Regularne, umiarkowane ćwiczenia zwiększają podstawowy poziom energii. Jest to intuicyjnie zaskakujące, ale dobrze udokumentowane: ćwiczenia aerobowe zwiększają gęstość mitochondriów, poprawiają jakość snu i regulują poziom kortyzolu – wszystko to podnosi trwałą energię. Kluczowa jest regularność: 3–5 sesji tygodniowo o umiarkowanej intensywności."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Energia to złożony stan fizjologiczny, regulowany przez interakcję snu, odżywiania, ruchu, hormonów stresu, rytmu dobowego i funkcji mitochondriów. Przewlekły niski poziom energii – odróżniany od sporadycznego zmęczenia – wskazuje, że jeden lub więcej z tych systemów nie działa optymalnie.\n\nNajczęstszymi winowajcami są: dług snu (narastający przez tygodnie), zaburzenia poziomu cukru we krwi spowodowane złym odżywianiem, brak kondycji fizycznej, przewlekły stres (podnoszący poziom kortyzolu i hamujący hormony regeneracyjne) oraz uzależnienie od kofeiny (maskujące zmęczenie bez jego rozwiązywania).",
+    "howScored": "Ten quiz ocenia siedem wymiarów energetycznych: poranną regenerację (wskaźnik jakości snu), spójność w ciągu dnia, popołudniowe spadki, jakość odżywiania, ograniczenie aktywności z powodu braku energii, regenerację po odpoczynku oraz uzależnienie od kofeiny.\n\nWyniki powyżej 70 wskazują na dobrze wspieraną energię i solidne podstawy stylu życia. 40–69 oznacza możliwe do zidentyfikowania wycieki energii, które warto wyeliminować. Poniżej 40 wskazuje na chronicznie wyczerpaną energię, która prawdopodobnie wymaga zarówno zmian stylu życia, jak i konsultacji lekarskiej.",
+    "whenToSeek": "Skonsultuj się z lekarzem, jeśli:\n• Niski poziom energii utrzymuje się dłużej niż 4 tygodnie pomimo odpowiedniej ilości snu\n• Śpisz 8+ godzin, ale budzisz się wyczerpany\n• Problemom energetycznym towarzyszą niewyjaśnione zmiany masy ciała, przerzedzenie włosów, nadwrażliwość na zimno lub kołatanie serca\n• Masz historię depresji lub lęku (oba te stany powodują znaczne wyczerpanie energii)\n• Podejrzewasz zaburzenia snu (chrapanie, łapanie powietrza, częste wybudzenia)\n\nCzęste przyczyny medyczne: niedoczynność tarczycy, niedokrwistość z niedoboru żelaza, niedobór witaminy B12 lub D, obturacyjny bezdech senny, cukrzyca typu 2.",
+    "limitations": "Ten quiz przesiewowo ocenia wzorce energetyczne związane ze stylem życia. Nie może diagnozować chorób powodujących zmęczenie. Wyniki odzwierciedlają subiektywne odczucia i mogą nie oddawać obiektywnych pomiarów fizjologicznych. Indywidualne poziomy energii znacznie się różnią – to, co dla jednej osoby jest normą, u innej może wskazywać na wyczerpanie."
+  }
+}

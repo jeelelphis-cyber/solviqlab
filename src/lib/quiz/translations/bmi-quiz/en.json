@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "title": "BMI & Weight Health Quiz",
+    "description": "Find out how your current weight, habits, and lifestyle affect your health — in 5 honest questions."
+  },
+
+  "questions": {
+    "bq1": {
+      "text": "How would you describe your current weight compared to what feels right for your body?",
+      "options": [
+        "About right — I feel comfortable",
+        "Slightly off — a few kilos either way",
+        "Noticeably above or below where I want to be",
+        "Far from where I need to be"
+      ]
+    },
+    "bq2": {
+      "text": "How often do you move your body in a way that gets your heart rate up?",
+      "options": [
+        "Most days — it's part of my routine",
+        "2–3 times a week",
+        "Once a week or less",
+        "Rarely or never"
+      ]
+    },
+    "bq3": {
+      "text": "How balanced is your typical daily diet?",
+      "scaleLabels": { "min": "Mostly processed", "max": "Mostly whole foods" }
+    },
+    "bq4": {
+      "text": "Do you tend to eat when stressed or bored, even when you're not hungry?"
+    },
+    "bq5": {
+      "text": "How often do you track or think about what you eat?",
+      "options": [
+        "Regularly — I'm mindful of my choices",
+        "Sometimes — when I remember",
+        "Rarely — I eat without thinking",
+        "Never tracked it"
+      ]
+    },
+    "bq6": {
+      "text": "How would you rate your energy levels throughout the day?",
+      "options": [
+        "Steady — I feel good most of the day",
+        "Variable — highs and lows",
+        "Often tired, especially afternoons",
+        "Exhausted most of the time"
+      ]
+    }
+  },
+
+  "buckets": [
+    {
+      "label": "Healthy Weight Zone",
+      "description": "Your habits suggest you're in a good place. Small, consistent tweaks can keep you there long-term.",
+      "actions": [
+        "Maintain your current nutrition and movement habits — consistency is the most underrated tool",
+        "Add one strength training session per week — muscle mass is the strongest predictor of healthy aging and metabolism",
+        "Track your weight weekly (same time, same day) — early trend detection prevents gradual drift"
+      ],
+      "miaHook": "Your score shows solid foundations — I want to build on what's already working for you."
+    },
+    {
+      "label": "Room to Improve",
+      "description": "You're aware of your health, but a few key habits are holding you back. The good news: small changes make a big difference.",
+      "actions": [
+        "Reduce ultra-processed food by 50% this week — this single change is associated with significant improvements in weight and metabolic markers",
+        "Add 7,000 steps per day as a baseline — below this threshold, weight management becomes significantly harder",
+        "Address emotional eating if present — it's not willpower, it's a pattern that responds well to structured strategies"
+      ],
+      "miaHook": "I can see 2–3 specific things that, if changed, would shift your weight trend within 4 weeks."
+    },
+    {
+      "label": "Needs Attention",
+      "description": "Your current patterns may be working against your health goals. But awareness is the first step, and you're already here.",
+      "actions": [
+        "Start by understanding your caloric baseline — even a rough food diary for one week reveals patterns you don't currently see",
+        "Move for 20 minutes every single day — the specifics matter less than the daily consistency",
+        "Consider speaking with a registered dietitian — personalized guidance dramatically outperforms generic advice for significant weight goals"
+      ],
+      "miaHook": "I've seen people in your exact situation turn things around completely — let me show you where to start."
+    }
+  ],
+
+  "seoContent": {
+    "intro": "BMI (Body Mass Index) is a widely used screening tool, but it is one data point, not a complete picture of health. Your weight interacts with your activity level, diet quality, stress, sleep, and body composition to determine actual health outcomes.\n\nThis quiz goes beyond BMI to assess the behavioral and lifestyle factors that determine whether your weight is trending toward health or away from it — giving you actionable insights rather than just a number.",
+    "faq": [
+      {
+        "q": "Is BMI an accurate health measure?",
+        "a": "BMI is a useful population-level screening tool but has significant individual limitations. It does not distinguish between muscle and fat mass (athletes often register as 'overweight'), does not account for fat distribution (visceral vs. subcutaneous), and varies in accuracy across ethnicities. Waist circumference and waist-to-height ratio are often more predictive of metabolic health risk."
+      },
+      {
+        "q": "What is a healthy weight?",
+        "a": "Healthy weight is best defined as the weight at which your metabolic markers (blood pressure, blood sugar, cholesterol) are in normal ranges and you have adequate energy and physical function. For most people, this falls within a BMI of 18.5–24.9 kg/m², though individual healthy ranges vary based on age, sex, ethnicity, and muscle mass."
+      },
+      {
+        "q": "What is the most effective way to manage weight?",
+        "a": "Research consistently shows that sustainable weight management requires a modest caloric deficit (300–500 kcal/day), high protein intake (1.6–2g/kg body weight) to preserve muscle, regular resistance training, adequate sleep (poor sleep increases ghrelin by 28%), and stress management (high cortisol promotes fat storage)."
+      }
+    ]
+  },
+
+  "content": {
+    "whatIs": "Weight health is the intersection of body mass, body composition, metabolic function, and lifestyle behavior. Excess adipose tissue — particularly visceral fat stored around abdominal organs — is a direct driver of insulin resistance, systemic inflammation, cardiovascular disease, and type 2 diabetes.\n\nHowever, weight is not purely a behavioral choice. Genetics account for 40–70% of BMI variance. Sleep deprivation, stress hormones, gut microbiome composition, and certain medications all significantly affect weight regulation. This quiz assesses the controllable behavioral factors.",
+
+    "howScored": "This quiz evaluates six weight-relevant dimensions: subjective weight satisfaction, cardiovascular activity frequency, dietary quality, emotional eating patterns, nutritional awareness, and energy levels (a key metabolic indicator).\n\nScores above 70 indicate healthy habits supporting weight management. 40–69 indicates identifiable patterns worth improving. Below 40 indicates multiple habits that are working against weight and metabolic health goals.",
+
+    "whenToSeek": "Consult a healthcare provider if:\n• Your BMI is above 30 (obesity range) — medical evaluation and personalized guidance are appropriate\n• You have tried multiple weight loss approaches without success\n• Weight gain has been rapid (5+ kg in 3 months without intentional change)\n• You have diabetes, high blood pressure, or high cholesterol alongside excess weight\n• Emotional eating or disordered eating patterns are significantly affecting your relationship with food",
+
+    "limitations": "This quiz assesses lifestyle behaviors, not actual weight or BMI. It is a screening tool for habits, not a medical assessment. Weight is influenced by factors beyond behavior including genetics, medications, hormonal conditions, and medical history. Always interpret results in context with other health information and medical advice."
+  }
+}

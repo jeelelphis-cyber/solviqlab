@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Cuestionario de Puntuación de Salud y Estilo de Vida",
+    "description": "Obtén una instantánea honesta de cómo tus hábitos diarios — sueño, movimiento, nutrición, estrés — se suman a tu salud general."
+  },
+  "questions": {
+    "ls1": {
+      "text": "¿Cómo describirías tu alimentación en un día laborable típico?",
+      "options": [
+        "Principalmente alimentos integrales — cocino y planifico con anticipación",
+        "Una mezcla — algo saludable, algo no",
+        "A menudo comida convencional o rápida — no tengo tiempo",
+        "Mayormente procesada — no estoy orgulloso de ello"
+      ]
+    },
+    "ls2": {
+      "text": "¿Cuántos días a la semana realizas alguna forma de actividad física intencional?",
+      "scaleLabels": {
+        "min": "0 días",
+        "max": "7 días"
+      }
+    },
+    "ls3": {
+      "text": "¿Qué tan bien duermes la mayoría de las noches?",
+      "options": [
+        "Bien — 7–9 horas, me despierto descansado",
+        "Aceptable — a veces inquieto",
+        "Mal — menos de 6 horas o con interrupciones",
+        "Muy mal — es un problema constante"
+      ]
+    },
+    "ls4": {
+      "text": "¿Tienes tiempo libre cada día — tiempo que sea genuinamente tuyo sin obligaciones?"
+    },
+    "ls5": {
+      "text": "¿Con qué frecuencia consumes alcohol o fumas?",
+      "options": [
+        "Nunca o muy raramente",
+        "Ocasionalmente — en situaciones sociales",
+        "Varias veces a la semana",
+        "Diariamente"
+      ]
+    },
+    "ls6": {
+      "text": "Cuando piensas en tu salud en general, ¿cómo te sientes?",
+      "options": [
+        "Bien — en su mayoría me estoy cuidando",
+        "Aceptable — pero sé que podría hacerlo mejor",
+        "No muy bien — he estado descuidando cosas",
+        "Preocupado — siento que me he fallado a mí mismo"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Base de Estilo de Vida Sólida",
+      "description": "Estás construyendo buenos hábitos en las áreas clave. Tus elecciones diarias están trabajando a tu favor.",
+      "actions": [
+        "Identifica tu pilar más débil (sueño, nutrición, movimiento o estrés) y optimízalo aún más",
+        "Monitorea una métrica de salud durante 30 días — lo que se mide, se gestiona",
+        "Comparte tus hábitos con alguien — la responsabilidad social duplica las tasas de consistencia"
+      ],
+      "miaHook": "Estás haciendo muchas cosas bien — quiero ayudarte a identificar el área donde la atención enfocada te dará el mayor rendimiento."
+    },
+    {
+      "label": "Espacio para Mejorar",
+      "description": "Tu estilo de vida tiene elementos sólidos, pero hay brechas que probablemente te están costando energía y salud sin que te des cuenta.",
+      "actions": [
+        "Elige un hábito para arreglar este mes — no todo a la vez. Empieza con el sueño si es menor a 7 horas",
+        "Prepara comidas un día a la semana — este hábito por sí solo es el predictor más fuerte de una mejor calidad nutricional",
+        "Añade 20 minutos de caminata diaria — es la intervención más accesible con beneficios comprobados para la salud en general"
+      ],
+      "miaHook": "Puedo ver qué hábitos específicos están socavando tu progreso — hablemos sobre priorizar el cambio de mayor impacto."
+    },
+    {
+      "label": "Reestructuración del Estilo de Vida Necesaria",
+      "description": "Múltiples áreas de tu estilo de vida necesitan atención. Pero no tienes que cambiar todo a la vez — un cambio a la vez crea una transformación duradera.",
+      "actions": [
+        "Empieza por el sueño: es la base sobre la que se construye todo lo demás. Prioriza 7.5 horas antes de cambiar cualquier otra cosa.",
+        "Reemplaza una comida procesada al día por una opción casera: esta es la intervención nutricional más rápida y efectiva.",
+        "Habla con un médico sobre un chequeo general de salud: los patrones de estilo de vida en este nivel suelen tener efectos fisiológicos medibles que vale la pena evaluar."
+      ],
+      "miaHook": "Estás cargando más de lo que deberías: tus hábitos actuales están trabajando en tu contra de maneras que quizás aún no ves por completo."
+    }
+  ],
+  "seoContent": {
+    "intro": "Los cuatro pilares de la salud en el estilo de vida — nutrición, actividad física, sueño y manejo del estrés — interactúan continuamente. La debilidad en cualquier pilar ejerce presión adicional sobre los demás: el mal sueño aumenta el cortisol (empeorando el estrés y promoviendo el aumento de peso), el estrés elevado perjudica la calidad del sueño y lleva a malas elecciones alimentarias, y la inactividad física reduce la calidad del sueño y la salud metabólica.\n\nEste cuestionario te brinda una puntuación compuesta honesta en los cuatro pilares más dos factores adicionales: consumo de alcohol/tabaco y percepción de salud autoevaluada. Comprender dónde te encuentras es el primer paso hacia un cambio dirigido y de alto impacto.",
+    "faq": [
+      {
+        "q": "¿Qué factor del estilo de vida tiene el mayor impacto en la salud?",
+        "a": "Las investigaciones muestran consistentemente que el sueño es la base: regula las hormonas del apetito, la función cognitiva, la respuesta inmunitaria y la regulación emocional. Sin embargo, los pilares se potencian entre sí: el ejercicio regular mejora drásticamente la calidad del sueño, la nutrición saludable estabiliza el estado de ánimo y la energía, y el manejo del estrés facilita mantener todos los demás comportamientos."
+      },
+      {
+        "q": "¿Qué tan rápido pueden los cambios en el estilo de vida mejorar la salud?",
+        "a": "La presión arterial y el azúcar en sangre responden en cuestión de días a los cambios en la dieta. La calidad del sueño mejora en 1 a 2 semanas con horarios de sueño consistentes. La condición cardiovascular mejora de forma medible en 4 semanas de ejercicio regular. Los marcadores de salud mental mejoran en 2 a 4 semanas de ejercicio moderado regular. Los cambios significativos en la composición corporal toman de 8 a 12 semanas de esfuerzo sostenido."
+      },
+      {
+        "q": "¿Es mejor cambiar un hábito a la vez o varios a la vez?",
+        "a": "Tanto la investigación sobre cambio de comportamiento (Fogg, Stanford) como los ensayos clínicos apoyan comenzar con un hábito a la vez. La fuerza de voluntad es un recurso limitado: intentar múltiples cambios simultáneos reduce drásticamente la adherencia. Sin embargo, el concepto de 'hábito clave' muestra que algunos cambios (sueño constante, ejercicio diario) desencadenan mejoras automáticas en otras áreas."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "La medicina del estilo de vida es un campo médico en rápido crecimiento que utiliza intervenciones conductuales basadas en evidencia — dieta, actividad física, sueño, manejo del estrés y evitación de sustancias — como tratamiento principal para la prevención y el manejo de enfermedades crónicas.\n\nLos cuatro pilares centrales del estilo de vida representan aproximadamente el 80% de la carga de enfermedades crónicas (CDC, 2023). Las enfermedades cardiovasculares, la diabetes tipo 2, muchos cánceres y los trastornos de salud mental están fuertemente influenciados por factores de estilo de vida modificables. Esto significa que el mayor determinante individual de tu salud a largo plazo no es la genética, sino tus hábitos diarios.",
+    "howScored": "Este cuestionario evalúa seis dimensiones: calidad nutricional (alimentos integrales vs. procesados), frecuencia de actividad física, calidad y duración del sueño, tiempo diario de recuperación, consumo de alcohol/tabaco y percepción subjetiva de salud.\n\nLas puntuaciones superiores a 70 indican bases sólidas de estilo de vida con la mayoría de los pilares bien respaldados. De 40 a 69 indica un estilo de vida mixto con brechas identificables que vale la pena abordar. Por debajo de 40 indica múltiples pilares del estilo de vida que están significativamente por debajo de las recomendaciones de salud.",
+    "whenToSeek": "Consulta a un profesional de la salud si:\n• Has obtenido una puntuación en el rango más bajo durante 3 meses o más sin mejora\n• Tienes una condición crónica (diabetes, hipertensión, obesidad) y los cambios en el estilo de vida se han estancado\n• Necesitas apoyo profesional para cambiar hábitos que sientes fuera de control (comer en exceso, consumo de alcohol, inactividad física)\n• Experimentas síntomas junto con problemas de estilo de vida: fatiga, dolor, problemas de ánimo o cambios de peso inexplicables",
+    "limitations": "Este cuestionario evalúa hábitos de estilo de vida autoinformados, los cuales están sujetos a sesgo de recuerdo y efectos de deseabilidad social (las personas tienden a reportar hábitos ligeramente mejores de los que realmente mantienen). Los resultados reflejan una instantánea en el tiempo y pueden no capturar variaciones estacionales o cambios recientes. Esta es una herramienta de detección, no una evaluación médica."
+  }
+}

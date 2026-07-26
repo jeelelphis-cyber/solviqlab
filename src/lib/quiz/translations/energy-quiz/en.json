@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "title": "Daily Energy Levels Quiz",
+    "description": "Low energy isn't just tiredness — it's a signal. Find out what's draining you and what could restore you."
+  },
+
+  "questions": {
+    "en1": {
+      "text": "How do you feel when you wake up in the morning?",
+      "options": [
+        "Ready — I feel rested and clear",
+        "Okay — takes a coffee to get going",
+        "Tired — I wish I could sleep more",
+        "Exhausted — mornings are a real struggle"
+      ]
+    },
+    "en2": {
+      "text": "How consistently does your energy stay up throughout the day?",
+      "scaleLabels": { "min": "Crashes badly", "max": "Steady all day" }
+    },
+    "en3": {
+      "text": "Do you experience a significant afternoon energy crash (around 2–4pm)?"
+    },
+    "en4": {
+      "text": "How is your diet fueling your day — are you eating for energy or just hunger?",
+      "options": [
+        "Intentionally — I eat to fuel my energy",
+        "Reasonably — mostly good choices",
+        "Inconsistently — I grab what's available",
+        "Poorly — sugar, caffeine, and quick fixes"
+      ]
+    },
+    "en5": {
+      "text": "How much does low energy limit what you actually do in a day?",
+      "options": [
+        "Not at all — I do everything I want to",
+        "A little — I prioritize but don't miss much",
+        "Noticeably — I skip things I wanted to do",
+        "Significantly — my whole life feels reduced"
+      ]
+    },
+    "en6": {
+      "text": "After a weekend of rest, do you typically feel recharged — or still tired?",
+      "options": [
+        "Recharged — weekends restore me",
+        "Somewhat better but not fully restored",
+        "Still tired — rest doesn't seem to help much",
+        "Worse sometimes — rest makes me more sluggish"
+      ]
+    },
+    "en7": {
+      "text": "Do you rely on caffeine to function — not for pleasure, but to get through the day?"
+    }
+  },
+
+  "buckets": [
+    {
+      "label": "High Energy",
+      "description": "Your energy is well-supported by your lifestyle. You have reserves and you recover well from exertion.",
+      "actions": [
+        "Maintain your current sleep and nutrition habits — these are your biggest energy levers",
+        "Add one high-intensity exercise session per week — it actually increases baseline energy",
+        "Protect your sleep schedule even on weekends — consistency is what keeps energy stable"
+      ],
+      "miaHook": "Your energy foundation is strong — let's talk about optimizing it even further for peak performance."
+    },
+    {
+      "label": "Energy Leaks",
+      "description": "You have energy, but it's inconsistent. Certain patterns are causing drops that affect your mood, productivity, and motivation.",
+      "actions": [
+        "Audit your meals for blood sugar spikes — high-glycemic foods cause the crashes you're experiencing",
+        "Move your first caffeine to 90 minutes after waking — this alone dramatically improves sustained energy",
+        "Add 15 minutes of walking after lunch — it reduces the afternoon energy crash by 30–40%"
+      ],
+      "miaHook": "Your energy is being drained by a few specific patterns I can see — fixing these often has cascading benefits across everything else."
+    },
+    {
+      "label": "Chronically Low Energy",
+      "description": "Your energy is significantly depleted and affecting your quality of life. This is usually multi-factorial — sleep, nutrition, stress, and movement all play a role.",
+      "actions": [
+        "See a doctor to rule out medical causes — thyroid dysfunction, anemia, sleep apnea, and vitamin deficiencies all present as low energy",
+        "Prioritize sleep above all else for the next 30 days — 7.5–9 hours is non-negotiable",
+        "Remove the biggest energy drain from your diet immediately: ultra-processed foods, excess alcohol, or excessive caffeine"
+      ],
+      "miaHook": "What you're experiencing isn't laziness — it's a system that isn't being supported properly. Let me help you rebuild from the ground up."
+    }
+  ],
+
+  "seoContent": {
+    "intro": "Low energy is one of the most common health complaints globally — yet it is also one of the most treatable. Research consistently shows that chronic fatigue and low energy are rarely caused by a single factor. Instead, they result from the compounding effect of sleep quality, nutritional patterns, physical activity levels, stress load, and underlying medical conditions.\n\nThis quiz evaluates your energy patterns across seven dimensions, helping you identify whether your low energy is structural (fixable through habit changes) or whether it warrants medical evaluation.",
+    "faq": [
+      {
+        "q": "What causes low energy in healthy people?",
+        "a": "In otherwise healthy people, the most common causes of low energy are: insufficient or poor-quality sleep, nutritional deficiencies (iron, B12, vitamin D), dehydration, excessive caffeine dependence, high stress load, sedentary lifestyle (which paradoxically reduces energy), and irregular meal timing causing blood sugar instability."
+      },
+      {
+        "q": "When should low energy be investigated medically?",
+        "a": "See a doctor if: low energy persists for more than 4 weeks, you sleep 7–9 hours but still feel exhausted, you have unexplained weight changes, or energy issues are accompanied by other symptoms (hair loss, cold sensitivity, rapid heartbeat). Common medical causes include thyroid disorders, anemia, sleep apnea, and diabetes."
+      },
+      {
+        "q": "Does exercise increase energy or drain it?",
+        "a": "Regular moderate exercise increases baseline energy. This is counterintuitive but well-established: aerobic exercise increases mitochondrial density, improves sleep quality, and regulates cortisol — all of which boost sustained energy. The key is regularity: 3–5 sessions per week of moderate intensity."
+      }
+    ]
+  },
+
+  "content": {
+    "whatIs": "Energy is a complex physiological state governed by the interaction of sleep, nutrition, movement, stress hormones, circadian rhythm, and mitochondrial function. Chronic low energy — distinct from occasional tiredness — indicates that one or more of these systems is not functioning optimally.\n\nThe most common culprits are sleep debt (accumulated across weeks), blood sugar dysregulation from poor nutrition, physical deconditioning, chronic stress (which elevates cortisol and suppresses restorative hormones), and caffeine dependence (which masks fatigue without resolving it).",
+
+    "howScored": "This quiz evaluates seven energy dimensions: morning restoration (sleep quality indicator), intra-day consistency, afternoon crash patterns, nutritional fueling quality, energy-limited activity, recovery from rest, and caffeine dependence.\n\nScores above 70 indicate well-supported energy with good lifestyle foundations. 40–69 indicates identifiable energy leaks worth targeting. Below 40 indicates chronically depleted energy that likely requires both lifestyle changes and medical evaluation.",
+
+    "whenToSeek": "See a doctor if:\n• Low energy has persisted for more than 4 weeks despite adequate sleep\n• You sleep 8+ hours but wake up exhausted\n• Energy issues are accompanied by unexplained weight changes, hair thinning, cold sensitivity, or heart palpitations\n• You have a history of depression or anxiety (both cause significant energy depletion)\n• You suspect a sleep disorder (snoring, gasping, frequent waking)\n\nCommon medical causes: hypothyroidism, iron-deficiency anemia, vitamin B12 or D deficiency, obstructive sleep apnea, type 2 diabetes.",
+
+    "limitations": "This quiz screens for lifestyle-based energy patterns. It cannot diagnose medical conditions that cause fatigue. Results reflect self-reported perceptions and may not capture objective physiological measures. Individual energy baselines vary significantly — what feels normal for one person may indicate depletion in another."
+  }
+}

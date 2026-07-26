@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Quiz o BMI i zdrowiu wagi",
+    "description": "Dowiedz się, jak Twoja aktualna waga, nawyki i styl życia wpływają na Twoje zdrowie — w 5 szczerych pytaniach."
+  },
+  "questions": {
+    "bq1": {
+      "text": "Jak opisałbyś/opisałabyś swoją obecną wagę w porównaniu z tym, co wydaje Ci się odpowiednie dla Twojego ciała?",
+      "options": [
+        "Mniej więcej odpowiednia — czuję się komfortowo",
+        "Nieco odbiegająca — kilka kilogramów w tę lub w tę stronę",
+        "Wyraźnie powyżej lub poniżej tego, gdzie chcę być",
+        "Daleko od tego, gdzie muszę być"
+      ]
+    },
+    "bq2": {
+      "text": "Jak często poruszasz swoim ciałem w sposób, który przyspiesza tętno?",
+      "options": [
+        "Większość dni — to część mojej rutyny",
+        "2–3 razy w tygodniu",
+        "Raz w tygodniu lub rzadziej",
+        "Rzadko lub nigdy"
+      ]
+    },
+    "bq3": {
+      "text": "Jak zbilansowana jest Twoja typowa codzienna dieta?",
+      "scaleLabels": {
+        "min": "Głównie przetworzona",
+        "max": "Głównie pełnowartościowe produkty"
+      }
+    },
+    "bq4": {
+      "text": "Czy masz tendencję do jedzenia, gdy jesteś zestresowany/zestresowana lub znudzony/znudzona, nawet gdy nie jesteś głodny/głodna?"
+    },
+    "bq5": {
+      "text": "Jak często śledzisz lub myślisz o tym, co jesz?",
+      "options": [
+        "Regularnie — jestem świadomy/świadoma swoich wyborów",
+        "Czasami — gdy sobie przypomnę",
+        "Rzadko — jem bez zastanowienia",
+        "Nigdy tego nie śledziłem/am"
+      ]
+    },
+    "bq6": {
+      "text": "Jak ocenił(a)byś swój poziom energii w ciągu dnia?",
+      "options": [
+        "Stabilny — czuję się dobrze przez większość dnia",
+        "Zmienny — wzloty i upadki",
+        "Często zmęczony/a, zwłaszcza po południu",
+        "Wyczerpany/a przez większość czasu"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Strefa zdrowej wagi",
+      "description": "Twoje nawyki wskazują, że jesteś w dobrej kondycji. Drobne, konsekwentne korekty mogą utrzymać Cię w tym stanie na dłużej.",
+      "actions": [
+        "Utrzymuj obecne nawyki żywieniowe i ruchowe — konsekwencja to najbardziej niedoceniane narzędzie",
+        "Dodaj jeden trening siłowy tygodniowo — masa mięśniowa jest najsilniejszym predyktorem zdrowego starzenia się i metabolizmu",
+        "Monitoruj wagę raz w tygodniu (o tej samej porze, tego samego dnia) — wczesne wykrywanie trendów zapobiega stopniowemu dryfowaniu"
+      ],
+      "miaHook": "Twój wynik wskazuje na solidne podstawy — chcę budować na tym, co już u Ciebie działa."
+    },
+    {
+      "label": "Przestrzeń do poprawy",
+      "description": "Jesteś świadomy/a swojego zdrowia, ale kilka kluczowych nawyków Cię hamuje. Dobra wiadomość: małe zmiany przynoszą duże efekty.",
+      "actions": [
+        "Ogranicz żywność wysoko przetworzoną o 50% w tym tygodniu — ta jedna zmiana wiąże się ze znaczną poprawą wskaźników wagi i metabolicznych",
+        "Dodaj 7 000 kroków dziennie jako wartość bazową — poniżej tego progu zarządzanie wagą staje się znacznie trudniejsze",
+        "Zajmij się jedzeniem emocjonalnym, jeśli występuje — to nie kwestia siły woli, ale wzorca, który dobrze reaguje na ustrukturyzowane strategie"
+      ],
+      "miaHook": "Widzę 2–3 konkretne rzeczy, które po zmianie zmieniłyby trend Twojej wagi w ciągu 4 tygodni."
+    },
+    {
+      "label": "Wymaga uwagi",
+      "description": "Twoje obecne wzorce mogą działać przeciwko Twoim celom zdrowotnym. Ale świadomość to pierwszy krok, a Ty już tu jesteś.",
+      "actions": [
+        "Zacznij od zrozumienia swojego bazowego zapotrzebowania kalorycznego — nawet przybliżony dziennik żywieniowy prowadzony przez tydzień ujawni wzorce, których obecnie nie dostrzegasz.",
+        "Ruszaj się przez 20 minut każdego dnia — konkretny rodzaj aktywności jest mniej ważny niż codzienna konsekwencja.",
+        "Rozważ rozmowę z zarejestrowanym dietetykiem — spersonalizowane wskazówki znacząco przewyższają ogólne porady w przypadku poważnych celów wagowych."
+      ],
+      "miaHook": "Widziałem osoby w dokładnie takiej sytuacji jak Twoja, które całkowicie odmieniły swoje życie — pozwól, że pokażę Ci, od czego zacząć."
+    }
+  ],
+  "seoContent": {
+    "intro": "BMI (wskaźnik masy ciała) jest powszechnie stosowanym narzędziem przesiewowym, ale stanowi tylko jeden punkt danych, a nie pełny obraz zdrowia. Twoja waga oddziałuje z poziomem aktywności, jakością diety, stresem, snem i składem ciała, determinując rzeczywiste wyniki zdrowotne.\n\nTen quiz wykracza poza BMI, oceniając behawioralne i stylowe czynniki, które decydują o tym, czy Twoja waga zmierza w kierunku zdrowia, czy od niego — dostarczając praktycznych wskazówek, a nie tylko liczby.",
+    "faq": [
+      {
+        "q": "Czy BMI jest dokładną miarą zdrowia?",
+        "a": "BMI jest użytecznym narzędziem przesiewowym na poziomie populacji, ale ma znaczące ograniczenia indywidualne. Nie rozróżnia masy mięśniowej od tłuszczowej (sportowcy często są klasyfikowani jako 'z nadwagą'), nie uwzględnia rozmieszczenia tkanki tłuszczowej (trzewna vs. podskórna) i różni się dokładnością w zależności od grupy etnicznej. Obwód talii i stosunek talii do wzrostu są często bardziej predykcyjne dla ryzyka metabolicznego."
+      },
+      {
+        "q": "Co to jest zdrowa waga?",
+        "a": "Zdrową wagę najlepiej definiuje się jako wagę, przy której markery metaboliczne (ciśnienie krwi, poziom cukru, cholesterol) mieszczą się w normie, a Ty masz wystarczającą energię i sprawność fizyczną. Dla większości osób mieści się to w zakresie BMI 18,5–24,9 kg/m², choć indywidualne zdrowe zakresy różnią się w zależności od wieku, płci, pochodzenia etnicznego i masy mięśniowej."
+      },
+      {
+        "q": "Jaki jest najskuteczniejszy sposób kontrolowania wagi?",
+        "a": "Badania konsekwentnie pokazują, że trwałe zarządzanie wagą wymaga umiarkowanego deficytu kalorycznego (300–500 kcal/dzień), wysokiego spożycia białka (1,6–2 g/kg masy ciała) w celu zachowania mięśni, regularnych treningów siłowych, odpowiedniej ilości snu (niedobór snu zwiększa grelinę o 28%) oraz zarządzania stresem (wysoki kortyzol sprzyja magazynowaniu tłuszczu)."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Zdrowie wagowe to przecięcie masy ciała, składu ciała, funkcji metabolicznych i stylu życia. Nadmiar tkanki tłuszczowej — szczególnie tłuszcz trzewny gromadzący się wokół narządów jamy brzusznej — jest bezpośrednim czynnikiem napędzającym insulinooporność, stan zapalny ogólnoustrojowy, choroby układu krążenia i cukrzycę typu 2.\n\nJednak waga nie jest wyłącznie kwestią wyboru behawioralnego. Genetyka odpowiada za 40–70% zmienności BMI. Niedobór snu, hormony stresu, skład mikrobiomu jelitowego oraz niektóre leki znacząco wpływają na regulację wagi. Ten quiz ocenia kontrolowane czynniki behawioralne.",
+    "howScored": "Ten quiz ocenia sześć wymiarów związanych z wagą: subiektywną satysfakcję z wagi, częstotliwość aktywności sercowo-naczyniowej, jakość diety, wzorce jedzenia emocjonalnego, świadomość żywieniową oraz poziom energii (kluczowy wskaźnik metaboliczny).\n\nWyniki powyżej 70 wskazują na zdrowe nawyki wspierające kontrolę wagi. 40–69 oznacza rozpoznawalne wzorce warte poprawy. Poniżej 40 oznacza wiele nawyków działających na niekorzyść celów związanych z wagą i zdrowiem metabolicznym.",
+    "whenToSeek": "Skonsultuj się z lekarzem, jeśli:\n• Twoje BMI przekracza 30 (zakres otyłości) — wskazana jest ocena medyczna i spersonalizowane wskazówki\n• Próbowałeś wielu metod odchudzania bez sukcesu\n• Przyrost masy ciała był gwałtowny (5+ kg w ciągu 3 miesięcy bez celowej zmiany)\n• Masz cukrzycę, wysokie ciśnienie krwi lub wysoki cholesterol wraz z nadwagą\n• Jedzenie emocjonalne lub zaburzone wzorce odżywiania znacząco wpływają na Twój związek z jedzeniem",
+    "limitations": "Ten quiz ocenia zachowania związane ze stylem życia, a nie rzeczywistą wagę czy BMI. Jest narzędziem przesiewowym do oceny nawyków, a nie oceną medyczną. Na wagę wpływają czynniki wykraczające poza zachowanie, w tym genetyka, leki, zaburzenia hormonalne i historia medyczna. Zawsze interpretuj wyniki w kontekście innych informacji zdrowotnych i porad medycznych."
+  }
+}

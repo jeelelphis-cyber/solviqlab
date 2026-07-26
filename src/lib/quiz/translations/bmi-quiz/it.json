@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Quiz su BMI e Salute del Peso",
+    "description": "Scopri in 5 domande sincere come il tuo peso attuale, le tue abitudini e il tuo stile di vita influenzano la tua salute."
+  },
+  "questions": {
+    "bq1": {
+      "text": "Come descriveresti il tuo peso attuale rispetto a ciò che ritieni giusto per il tuo corpo?",
+      "options": [
+        "Giusto — mi sento a mio agio",
+        "Leggermente fuori — qualche chilo in più o in meno",
+        "Notevolmente sopra o sotto dove vorrei essere",
+        "Lontano da dove dovrei essere"
+      ]
+    },
+    "bq2": {
+      "text": "Con quale frequenza muovi il corpo in modo da aumentare il battito cardiaco?",
+      "options": [
+        "Quasi tutti i giorni — fa parte della mia routine",
+        "2–3 volte a settimana",
+        "Una volta a settimana o meno",
+        "Raramente o mai"
+      ]
+    },
+    "bq3": {
+      "text": "Quanto è equilibrata la tua tipica alimentazione quotidiana?",
+      "scaleLabels": {
+        "min": "Per lo più processata",
+        "max": "Per lo più cibi integrali"
+      }
+    },
+    "bq4": {
+      "text": "Tendi a mangiare quando sei stressato o annoiato, anche se non hai fame?"
+    },
+    "bq5": {
+      "text": "Con quale frequenza tieni traccia o rifletti su ciò che mangi?",
+      "options": [
+        "Regolarmente — sono attento alle mie scelte",
+        "A volte — quando mi ricordo",
+        "Raramente — mangio senza pensarci",
+        "Mai monitorato"
+      ]
+    },
+    "bq6": {
+      "text": "Come valuteresti i tuoi livelli di energia durante la giornata?",
+      "options": [
+        "Stabili — mi sento bene per la maggior parte del giorno",
+        "Variabili — alti e bassi",
+        "Spesso stanco/a, soprattutto nel pomeriggio",
+        "Esausto/a quasi sempre"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Zona Peso Sano",
+      "description": "Le tue abitudini suggeriscono che sei in una buona posizione. Piccoli aggiustamenti costanti possono mantenerti lì a lungo termine.",
+      "actions": [
+        "Mantieni le tue attuali abitudini alimentari e di movimento — la costanza è lo strumento più sottovalutato",
+        "Aggiungi una sessione di allenamento di forza a settimana — la massa muscolare è il più forte predittore di un invecchiamento sano e del metabolismo",
+        "Pesa settimanalmente (stesso giorno, stessa ora) — la rilevazione precoce delle tendenze previene la deriva graduale"
+      ],
+      "miaHook": "Il tuo punteggio mostra solide basi — voglio costruire su ciò che già funziona per te."
+    },
+    {
+      "label": "Margine di Miglioramento",
+      "description": "Sei consapevole della tua salute, ma alcune abitudini chiave ti frenano. La buona notizia: piccoli cambiamenti fanno una grande differenza.",
+      "actions": [
+        "Riduci del 50% gli alimenti ultra-processati questa settimana — questo singolo cambiamento è associato a miglioramenti significativi nel peso e nei marcatori metabolici",
+        "Aggiungi 7.000 passi al giorno come base — al di sotto di questa soglia, la gestione del peso diventa significativamente più difficile",
+        "Affronta l'alimentazione emotiva se presente — non è una questione di forza di volontà, ma un pattern che risponde bene a strategie strutturate"
+      ],
+      "miaHook": "Vedo 2–3 cose specifiche che, se modificate, cambierebbero la tendenza del tuo peso entro 4 settimane."
+    },
+    {
+      "label": "Richiede Attenzione",
+      "description": "I tuoi schemi attuali potrebbero ostacolare i tuoi obiettivi di salute. Ma la consapevolezza è il primo passo, e tu sei già qui.",
+      "actions": [
+        "Inizia comprendendo il tuo fabbisogno calorico di base — anche un semplice diario alimentare di una settimana rivela schemi che al momento non vedi.",
+        "Muoviti per 20 minuti ogni giorno — i dettagli specifici contano meno della costanza quotidiana.",
+        "Considera di parlare con un dietista registrato — una guida personalizzata supera di gran lunga i consigli generici per obiettivi di peso significativi."
+      ],
+      "miaHook": "Ho visto persone nella tua stessa situazione cambiare completamente le cose — lascia che ti mostri da dove iniziare."
+    }
+  ],
+  "seoContent": {
+    "intro": "Il BMI (Indice di Massa Corporea) è uno strumento di screening ampiamente utilizzato, ma è un singolo dato, non un quadro completo della salute. Il tuo peso interagisce con il livello di attività, la qualità della dieta, lo stress, il sonno e la composizione corporea per determinare i reali risultati di salute.\n\nQuesto quiz va oltre il BMI per valutare i fattori comportamentali e legati allo stile di vita che determinano se il tuo peso sta tendendo verso la salute o allontanandosi da essa — fornendoti spunti pratici, non solo un numero.",
+    "faq": [
+      {
+        "q": "Il BMI è una misura accurata della salute?",
+        "a": "Il BMI è uno strumento di screening utile a livello di popolazione, ma presenta significative limitazioni individuali. Non distingue tra massa muscolare e grassa (gli atleti spesso risultano 'in sovrappeso'), non tiene conto della distribuzione del grasso (viscerale vs. sottocutaneo) e varia in accuratezza tra diverse etnie. La circonferenza vita e il rapporto vita-altezza sono spesso più predittivi del rischio per la salute metabolica."
+      },
+      {
+        "q": "Qual è un peso sano?",
+        "a": "Un peso sano è meglio definito come il peso al quale i tuoi marcatori metabolici (pressione sanguigna, glicemia, colesterolo) rientrano nei range normali e hai energia e funzionalità fisica adeguate. Per la maggior parte delle persone, questo corrisponde a un BMI compreso tra 18,5 e 24,9 kg/m², sebbene i range sani individuali varino in base a età, sesso, etnia e massa muscolare."
+      },
+      {
+        "q": "Qual è il modo più efficace per gestire il peso?",
+        "a": "La ricerca mostra costantemente che una gestione sostenibile del peso richiede un moderato deficit calorico (300–500 kcal/giorno), un elevato apporto proteico (1,6–2 g/kg di peso corporeo) per preservare la massa muscolare, un regolare allenamento di resistenza, un sonno adeguato (un sonno scarso aumenta la grelina del 28%) e la gestione dello stress (il cortisolo alto favorisce l'accumulo di grasso)."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "La salute del peso è l'intersezione tra massa corporea, composizione corporea, funzione metabolica e comportamento legato allo stile di vita. Il tessuto adiposo in eccesso — in particolare il grasso viscerale immagazzinato intorno agli organi addominali — è un motore diretto di insulino-resistenza, infiammazione sistemica, malattie cardiovascolari e diabete di tipo 2.\n\nTuttavia, il peso non è puramente una scelta comportamentale. La genetica spiega il 40–70% della varianza del BMI. La privazione del sonno, gli ormoni dello stress, la composizione del microbioma intestinale e alcuni farmaci influenzano significativamente la regolazione del peso. Questo quiz valuta i fattori comportamentali controllabili.",
+    "howScored": "Questo quiz valuta sei dimensioni rilevanti per il peso: soddisfazione soggettiva del peso, frequenza dell'attività cardiovascolare, qualità della dieta, schemi alimentari emotivi, consapevolezza nutrizionale e livelli di energia (un indicatore metabolico chiave).\n\nPunteggi superiori a 70 indicano abitudini sane che supportano la gestione del peso. 40–69 indica schemi identificabili che vale la pena migliorare. Sotto 40 indica molteplici abitudini che ostacolano gli obiettivi di peso e salute metabolica.",
+    "whenToSeek": "Consulta un operatore sanitario se:\n• Il tuo BMI è superiore a 30 (range di obesità) — sono appropriate una valutazione medica e una guida personalizzata\n• Hai provato molteplici approcci per la perdita di peso senza successo\n• L'aumento di peso è stato rapido (5+ kg in 3 mesi senza un cambiamento intenzionale)\n• Hai diabete, pressione alta o colesterolo alto insieme a peso eccessivo\n• L'alimentazione emotiva o schemi alimentari disordinati stanno influenzando significativamente il tuo rapporto con il cibo",
+    "limitations": "Questo quiz valuta i comportamenti legati allo stile di vita, non il peso effettivo o il BMI. È uno strumento di screening per le abitudini, non una valutazione medica. Il peso è influenzato da fattori che vanno oltre il comportamento, inclusi genetica, farmaci, condizioni ormonali e storia medica. Interpreta sempre i risultati nel contesto di altre informazioni sanitarie e consigli medici."
+  }
+}

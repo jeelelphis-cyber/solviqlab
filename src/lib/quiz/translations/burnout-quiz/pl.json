@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Kwestionariusz ryzyka wypalenia zawodowego",
+    "description": "Wypalenie nie pojawia się z dnia na dzień. Sprawdź, na jakim etapie spektrum się znajdujesz, zanim powrót do równowagi stanie się trudniejszy."
+  },
+  "questions": {
+    "bu1": {
+      "text": "Czy czujesz się emocjonalnie wyczerpany(-a) swoją pracą lub codziennymi obowiązkami – jeszcze zanim dzień się zacznie?",
+      "options": [
+        "Nie – na ogół czuję się zaangażowany(-a)",
+        "Czasami – w trudne tygodnie",
+        "Często – większość tygodni jest ciężka",
+        "Prawie zawsze – funkcjonuję na resztkach energii"
+      ]
+    },
+    "bu2": {
+      "text": "Czy straciłeś(-aś) motywację lub entuzjazm do rzeczy, które kiedyś sprawiały Ci przyjemność?"
+    },
+    "bu3": {
+      "text": "Jak oceniasz swoją skuteczność w pracy lub w głównych obowiązkach w ostatnim czasie?",
+      "options": [
+        "Bardzo skuteczny(-a) – wykonuję swoją najlepszą pracę",
+        "W porządku – realizuję zadania",
+        "Poniżej mojego zwykłego standardu – zauważam spadek",
+        "Po prostu wykonuję rutynowe czynności"
+      ]
+    },
+    "bu4": {
+      "text": "Czy zauważasz u siebie narastający cynizm lub dystans wobec otaczających Cię osób?"
+    },
+    "bu5": {
+      "text": "Jak często w ciągu dnia robisz sobie prawdziwe przerwy – nie tylko przeglądając telefon, ale faktycznie odpoczywając?",
+      "scaleLabels": {
+        "min": "Nigdy",
+        "max": "Kilka razy dziennie"
+      }
+    },
+    "bu6": {
+      "text": "Kiedy wyobrażasz sobie nadchodzący tydzień, jakie jest Twoje pierwsze odczucie?",
+      "options": [
+        "Pełen energii – mam rzeczy, na które czekam",
+        "Neutralne – po prostu kolejny tydzień",
+        "Dread — czujesz, że to za dużo",
+        "Dread — nie widzisz w tym żadnego światła"
+      ]
+    },
+    "bu7": {
+      "text": "Czy czujesz, że niezależnie od tego, ile robisz, to i tak nigdy nie jest wystarczająco?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Niskie ryzyko wypalenia",
+      "description": "Radzisz sobie dobrze. Twoje rezerwy energetyczne są nienaruszone, a Ty masz zdrowe mechanizmy ochronne.",
+      "actions": [
+        "Utrzymuj swoje nawyki regeneracyjne — to, co Cię teraz chroni, warto nazwać i pielęgnować",
+        "Wprowadź do każdego tygodnia jedną proaktywną praktykę regeneracyjną (nie tylko reaktywny odpoczynek)",
+        "Sprawdzaj się raz w miesiącu — wypalenie narasta powoli, a wczesna świadomość jest kluczowa"
+      ],
+      "miaHook": "Jesteś w dobrej formie — porozmawiajmy teraz o tym, jak w niej pozostać, gdy narasta presja."
+    },
+    {
+      "label": "Wczesne sygnały ostrzegawcze",
+      "description": "Wykazujesz niektóre wczesne sygnały wypalenia. To idealny moment, aby działać — zanim regeneracja stanie się trudniejsza.",
+      "actions": [
+        "Zdejmij w tym tygodniu jedną rzecz ze swojego talerza obowiązków — na tym etapie wypalenie reaguje na redukcję, a nie optymalizację",
+        "Dodaj jedną prawdziwą aktywność regeneracyjną, która nie ma nic wspólnego z produktywnością",
+        "Powiedz komuś zaufanemu, że czujesz presję — wsparcie społeczne opóźnia postęp wypalenia"
+      ],
+      "miaHook": "Widzę w Twoich odpowiedziach wczesne wzorce wypalenia — dobra wiadomość jest taka, że ten etap jest bardzo odwracalny przy odpowiednich zmianach."
+    },
+    {
+      "label": "Strefa wypalenia",
+      "description": "Twoje odpowiedzi wskazują na znaczące wypalenie. Wpływa ono na Twoje zdrowie, relacje i produktywność — to nie słabość, to realny stan fizjologiczny.",
+      "actions": [
+        "Porozmawiaj z lekarzem lub terapeutą — wypalenie na tym poziomie ma mierzalne skutki fizjologiczne i wymaga profesjonalnego wsparcia",
+        "Weź w tym tygodniu przynajmniej jeden pełny dzień całkowicie wolny od wszelkich czynności związanych z pracą — nie „łagodny” dzień, ale całkowitą przerwę",
+        "Zidentyfikuj największe źródło drenażu Twojej energii i rozpocznij proces jego redukcji lub eliminacji — nawet jeśli wydaje się to niemożliwe"
+      ],
+      "miaHook": "To, czego doświadczasz, jest prawdziwe i poważne — chcę pomóc Ci wytyczyć ścieżkę powrotu do zdrowia, która nie wymaga rezygnacji ze wszystkiego."
+    }
+  ],
+  "seoContent": {
+    "intro": "Wypalenie zawodowe to stan chronicznego stresu w miejscu pracy, charakteryzujący się trzema wymiarami: wyczerpaniem emocjonalnym, depersonalizacją (cynizmem i dystansem) oraz obniżonym poczuciem osobistych osiągnięć. Po raz pierwszy opisane przez psychologa Herberta Freudenbergera w 1974 roku i formalnie uznane przez WHO w 2019 roku, wypalenie jest obecnie klasyfikowane jako zjawisko zawodowe dotykające szacunkowo 67% pracowników w pewnym momencie ich kariery.\n\nWypalenie nie pojawia się nagle — rozwija się przez miesiące w postępującym cyklu przeciążenia, wyczerpania i wycofania. Ten quiz ocenia, gdzie znajdujesz się na spektrum, abyś mógł działać, zanim powrót do zdrowia stanie się trudniejszy.",
+    "faq": [
+      {
+        "q": "Jaka jest różnica między wypaleniem zawodowym a depresją?",
+        "a": "Wypalenie zawodowe jest przede wszystkim związane z kontekstem pracy i znacząco poprawia się po odpoczynku, urlopie i usunięciu czynników stresogennych. Depresja przenika wszystkie dziedziny życia i nie ustępuje po samym odpoczynku. Jednak silne wypalenie może wywołać depresję kliniczną. Jeśli objawy utrzymują się poza kontekstem pracy, wskazana jest ocena kliniczna."
+      },
+      {
+        "q": "Czy można wyzdrowieć z wypalenia zawodowego?",
+        "a": "Tak. Powrót do zdrowia po wypaleniu jest możliwy i dobrze udokumentowany. Wczesne stadium wypalenia (łagodne sygnały ostrzegawcze) zwykle ustępuje w ciągu tygodni przy odpowiednim odpoczynku i wyznaczaniu granic. Poważne wypalenie może wymagać 3–12 miesięcy systematycznej regeneracji. Kluczowe czynniki to: zmniejszenie wymagań, zwiększenie aktywności regeneracyjnych oraz zajęcie się przyczynami źródłowymi."
+      },
+      {
+        "q": "Co powoduje wypalenie zawodowe?",
+        "a": "Badania (Maslach & Leiter, 2016) identyfikują sześć niedopasowań w miejscu pracy prowadzących do wypalenia: nadmierne obciążenie pracą, brak kontroli, niewystarczające nagrody, rozpad relacji w zespole, niesprawiedliwość oraz konflikt wartości. Przyczyniają się do tego również czynniki osobiste, takie jak perfekcjonizm, trudności w wyznaczaniu granic i złe nawyki regeneracyjne."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Wypalenie zawodowe to syndrom wynikający z przewlekłego stresu w miejscu pracy, który nie został skutecznie opanowany. WHO (ICD-11, 2019) definiuje je poprzez trzy wymiary: uczucie wyczerpania energetycznego lub emocjonalnego, zwiększony dystans psychiczny do pracy lub negatywne bądź cyniczne nastawienie wobec niej, oraz obniżoną efektywność zawodową.\n\nWypalenie rozwija się przez postępujące etapy — od entuzjazmu i nadmiernego zaangażowania, przez stagnację, frustrację i apatię — osiągnięcie pełnego stanu wypalenia zajmuje zazwyczaj 6–18 miesięcy. Powrót do zdrowia wymaga takiego samego nakładu czasu w odwrotnym kierunku.",
+    "howScored": "Ten quiz ocenia siedem wskaźników wypalenia zaczerpniętych z Maslach Burnout Inventory (złotego standardu w narzędziach klinicznych) oraz Copenhagen Burnout Inventory: wyczerpanie emocjonalne, utratę motywacji, spadek efektywności, depersonalizację/cynizm, zachowania regeneracyjne, lęk antycypacyjny oraz poczucie „nigdy dość”.\n\nWyniki powyżej 70 oznaczają niskie ryzyko z dobrymi buforami ochronnymi. 40–69 wskazuje na wczesne sygnały ostrzegawcze, które dobrze reagują na interwencję. Poniżej 40 oznacza znaczące wypalenie wymagające aktywnej regeneracji.",
+    "whenToSeek": "Poszukaj profesjonalnego wsparcia, jeśli:\n• Przebywasz w strefie wypalenia dłużej niż 4 tygodnie\n• Pojawiły się objawy fizyczne (przewlekłe bóle głowy, częste choroby, zaburzenia snu)\n• Wypalenie wpływa na Twoje relacje osobiste, nie tylko zawodowe\n• Sięgasz po alkohol lub substancje, aby radzić sobie z wymaganiami pracy\n• Doświadczasz objawów depresji wraz z wypaleniem\n\nLekarz pierwszego kontaktu lub terapeuta specjalizujący się w medycynie pracy może zapewnić odpowiednie wsparcie.",
+    "limitations": "Ten quiz mierzy ryzyko wypalenia, a nie stanowi klinicznej diagnozy wypalenia. Maslach Burnout Inventory (MBI) jest klinicznym standardem i wymaga profesjonalnego przeprowadzenia. Wyniki tutaj wskazują na wzorce i poziomy ryzyka, a nie wnioski diagnostyczne.\n\nObjawy wypalenia w znacznym stopniu pokrywają się z depresją, zaburzeniami lękowymi, ADHD oraz niektórymi schorzeniami (dysfunkcja tarczycy, anemia). Jeśli objawy są nasilone lub utrzymują się w wielu dziedzinach życia, zalecana jest ocena kliniczna."
+  }
+}

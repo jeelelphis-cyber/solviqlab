@@ -6,9 +6,11 @@
 
 import { useState, useCallback } from 'react'
 import type { QuizConfig, QuizAnswer, QuizResult, QuizQuestion } from '@/lib/quiz/types'
+import type { QuizTranslation }  from '@/lib/quiz/translation-types'
 import { quizEngine }    from '@/lib/quiz/engine'
 import { saveQuizResult } from '@/lib/graph/updater'
 import { analytics }     from '@/lib/analytics'
+import { getT }          from '@/lib/i18n/ui'
 
 // ── localStorage helpers ──────────────────────────────────────────────────────
 function persistQuizResult(result: QuizResult): void {
@@ -67,10 +69,11 @@ function getSeverityStyle(severity?: string, score?: number) {
 
 // ─────────────────────────────────────────────────────────────────────────────
 
-interface Props { config: QuizConfig; lang: string }
+interface Props { config: QuizConfig; translation: QuizTranslation; lang: string }
 type Phase = 'intro' | 'answering' | 'result'
 
-export function QuizClient({ config, lang }: Props) {
+export function QuizClient({ config, translation: tr, lang }: Props) {
+  const t = getT(lang)
   const [phase,       setPhase]       = useState<Phase>('intro')
   const [answers,     setAnswers]     = useState<QuizAnswer[]>([])
   const [currentQ,    setCurrentQ]    = useState<QuizQuestion | null>(null)
@@ -99,10 +102,20 @@ export function QuizClient({ config, lang }: Props) {
     const next = quizEngine.getNextQuestion(config, newAnswers)
     if (!next) {
       const computed = quizEngine.compute(config, newAnswers)
-      setResult(computed)
+      // Overlay translated bucket text
+      const bucketIdx = config.scoring.buckets.findIndex(b => b.label === computed.bucket)
+      const tb = tr.buckets[bucketIdx] ?? tr.buckets[tr.buckets.length - 1]
+      const translated: QuizResult = tb ? {
+        ...computed,
+        bucket:      tb.label,
+        description: tb.description,
+        actions:     tb.actions,
+        miaHook:     tb.miaHook,
+      } : computed
+      setResult(translated)
       setPhase('result')
-      persistQuizResult(computed)
-      dispatchResultEvent(computed)
+      persistQuizResult(translated)
+      dispatchResultEvent(translated)
       analytics.track('quiz_completed', { slug: computed.slug, score: computed.score, bucket: computed.bucket })
     } else {
       setCurrentQ(next)
@@ -129,28 +142,28 @@ export function QuizClient({ config, lang }: Props) {
         <div className="text-5xl">{config.icon}</div>
 
         <div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{config.title}</h1>
-          <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-sm mx-auto">{config.description}</p>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{tr.meta.title}</h1>
+          <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-sm mx-auto">{tr.meta.description}</p>
         </div>
 
         {config.clinicalScale && (
           <div className="flex items-center gap-2 rounded-full bg-violet-50 dark:bg-violet-900/20 border border-violet-200 dark:border-violet-800 px-3 py-1.5">
             <span className="text-violet-600 dark:text-violet-400 text-xs">✓</span>
-            <span className="text-xs text-violet-700 dark:text-violet-300 font-medium">Clinically validated · {config.clinicalScale}</span>
+            <span className="text-xs text-violet-700 dark:text-violet-300 font-medium">{t('quiz.clinically_validated')} · {config.clinicalScale}</span>
           </div>
         )}
 
         <div className="flex items-center gap-4 text-xs text-gray-400">
-          <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />{totalQ} questions</span>
+          <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />{t('quiz.questions_count', { n: totalQ })}</span>
           <span>·</span>
-          <span>Free</span>
+          <span>{t('quiz.free')}</span>
           <span>·</span>
-          <span>No account needed</span>
+          <span>{t('quiz.no_account')}</span>
         </div>
 
-        {config.medicalNote && (
+        {tr.meta.medicalNote && (
           <p className="text-xs text-gray-400 dark:text-gray-500 max-w-xs leading-relaxed border border-gray-200 dark:border-gray-700 rounded-lg p-3">
-            ⚕ {config.medicalNote}
+            ⚕ {tr.meta.medicalNote}
           </p>
         )}
 
@@ -158,12 +171,12 @@ export function QuizClient({ config, lang }: Props) {
           onClick={handleStart}
           className="w-full max-w-xs rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold py-3.5 px-6 hover:opacity-90 active:scale-95 transition-all"
         >
-          Start Quiz →
+          {t('quiz.start_btn')}
         </button>
 
         {config.sources && config.sources.length > 0 && (
           <p className="text-xs text-gray-400">
-            Based on: {config.sources.map(s => s.label).join(' · ')}
+            {t('quiz.based_on')} {config.sources.map(s => s.label).join(' · ')}
           </p>
         )}
       </div>
@@ -209,7 +222,7 @@ export function QuizClient({ config, lang }: Props) {
         {/* 3 Actions */}
         {result.actions && result.actions.length > 0 && (
           <div className="w-full max-w-sm rounded-2xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 p-4 text-left">
-            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">What to do now</p>
+            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">{t('quiz.what_to_do')}</p>
             <div className="space-y-2.5">
               {result.actions.map((action, i) => (
                 <div key={i} className="flex items-start gap-2.5">
@@ -233,7 +246,7 @@ export function QuizClient({ config, lang }: Props) {
               onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
             />
             <div>
-              <p className="text-xs font-semibold text-violet-700 dark:text-violet-300 mb-0.5">Mia · Your Coach</p>
+              <p className="text-xs font-semibold text-violet-700 dark:text-violet-300 mb-0.5">{t('quiz.mia_coach')}</p>
               <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed italic">
                 &ldquo;{result.miaHook}&rdquo;
               </p>
@@ -246,13 +259,13 @@ export function QuizClient({ config, lang }: Props) {
           href={ctaUrl}
           className="w-full max-w-sm rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold py-3.5 px-6 hover:opacity-90 active:scale-95 transition-all text-center block"
         >
-          Get Mia&apos;s personal plan →
+          {t('quiz.get_plan')}
         </a>
 
         {/* Sources */}
         {config.sources && config.sources.length > 0 && (
           <div className="w-full max-w-sm text-left">
-            <p className="text-xs text-gray-400 font-medium mb-1">Sources</p>
+            <p className="text-xs text-gray-400 font-medium mb-1">{t('quiz.sources')}</p>
             <ul className="space-y-0.5">
               {config.sources.map((s, i) => (
                 <li key={i} className="text-xs text-gray-400">
@@ -270,7 +283,7 @@ export function QuizClient({ config, lang }: Props) {
           onClick={handleRestart}
           className="text-xs text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors underline underline-offset-2"
         >
-          Retake quiz
+          {t('quiz.retake')}
         </button>
       </div>
     )
@@ -288,7 +301,7 @@ export function QuizClient({ config, lang }: Props) {
       {/* Progress */}
       <div>
         <div className="flex justify-between text-xs text-gray-400 mb-1.5">
-          <span>Question {stepNum} of {totalQ}</span>
+          <span>{t('quiz.question_of', { n: stepNum, total: totalQ })}</span>
           <span>{progress}%</span>
         </div>
         <div className="w-full h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
@@ -305,32 +318,47 @@ export function QuizClient({ config, lang }: Props) {
       {/* Question */}
       <div>
         <p className="text-lg font-semibold text-gray-900 dark:text-white leading-snug">
-          {currentQ.text}
+          {tr.questions[currentQ.id]?.text ?? currentQ.text}
         </p>
-        {currentQ.hint && (
+        {(tr.questions[currentQ.id]?.hint ?? currentQ.hint) && (
           <p className="text-xs text-gray-400 dark:text-gray-500 mt-2 leading-relaxed border-l-2 border-violet-200 dark:border-violet-700 pl-3">
-            {currentQ.hint}
+            {tr.questions[currentQ.id]?.hint ?? currentQ.hint}
           </p>
         )}
       </div>
 
       {/* Answer inputs */}
       <div className="flex flex-col gap-2.5">
-        {(currentQ.type === 'single' || currentQ.type === 'likert') && currentQ.options && (
-          currentQ.options.map(opt => (
+        {currentQ.type === 'likert' && currentQ.options && (
+          currentQ.options.map((opt, i) => (
             <button
               key={opt.value}
               onClick={() => handleAnswer(opt.value)}
               className="w-full min-h-[48px] rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 py-3 text-sm text-left text-gray-800 dark:text-gray-100 hover:border-violet-400 hover:bg-violet-50 dark:hover:bg-violet-900/20 active:scale-[0.98] transition-all font-medium"
             >
-              {opt.label}
+              {tr.likertOptions?.[i] ?? opt.label}
+            </button>
+          ))
+        )}
+
+        {currentQ.type === 'single' && currentQ.options && (
+          currentQ.options.map((opt, i) => (
+            <button
+              key={opt.value}
+              onClick={() => handleAnswer(opt.value)}
+              className="w-full min-h-[48px] rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 py-3 text-sm text-left text-gray-800 dark:text-gray-100 hover:border-violet-400 hover:bg-violet-50 dark:hover:bg-violet-900/20 active:scale-[0.98] transition-all font-medium"
+            >
+              {tr.questions[currentQ.id]?.options?.[i] ?? opt.label}
             </button>
           ))
         )}
 
         {currentQ.type === 'yesno' && (
           <div className="grid grid-cols-2 gap-3">
-            {[{ label: 'Yes', value: 1 }, { label: 'No', value: 4 }].map(opt => (
+            {[
+              { label: tr.yesnoOptions?.[0] ?? 'Yes', value: 1 },
+              { label: tr.yesnoOptions?.[1] ?? 'No',  value: 4 },
+            ].map(opt => (
               <button
                 key={opt.label}
                 onClick={() => handleAnswer(opt.value)}
@@ -346,10 +374,11 @@ export function QuizClient({ config, lang }: Props) {
           <ScaleInput
             min={currentQ.scaleMin ?? 1}
             max={currentQ.scaleMax ?? 5}
-            labels={currentQ.scaleLabels}
+            labels={tr.questions[currentQ.id]?.scaleLabels ?? currentQ.scaleLabels}
             selectedVal={selectedVal}
             onSelect={setSelectedVal}
             onConfirm={handleAnswer}
+            continueLabel={t('quiz.continue')}
           />
         )}
       </div>
@@ -368,9 +397,10 @@ interface ScaleInputProps {
   selectedVal: number | null
   onSelect: (v: number) => void
   onConfirm: (v: number) => void
+  continueLabel?: string
 }
 
-function ScaleInput({ min, max, labels, selectedVal, onSelect, onConfirm }: ScaleInputProps) {
+function ScaleInput({ min, max, labels, selectedVal, onSelect, onConfirm, continueLabel = 'Continue →' }: ScaleInputProps) {
   const steps = Array.from({ length: max - min + 1 }, (_, i) => min + i)
   const isMany = steps.length > 6
 
@@ -415,7 +445,7 @@ function ScaleInput({ min, max, labels, selectedVal, onSelect, onConfirm }: Scal
         onClick={() => { if (selectedVal !== null) onConfirm(selectedVal) }}
         className="w-full rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold py-3 text-sm disabled:opacity-40 disabled:cursor-not-allowed hover:opacity-90 active:scale-95 transition-all"
       >
-        Continue →
+        {continueLabel}
       </button>
     </div>
   )

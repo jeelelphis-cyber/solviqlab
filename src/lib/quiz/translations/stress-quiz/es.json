@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "title": "Cuestionario de Nivel de Estrés (PSS-10)",
+    "description": "La Escala de Estrés Percibido es la herramienta de medición de estrés más utilizada en el mundo. Utilizada en investigaciones de Harvard, Stanford, CDC y NIH. Tarda 3 minutos.",
+    "medicalNote": "Esto mide el estrés percibido, no un diagnóstico clínico. El estrés crónico alto es un riesgo grave para la salud. Busque apoyo profesional si se siente abrumado."
+  },
+  "likertOptions": [
+    "Nunca",
+    "Casi nunca",
+    "A veces",
+    "Con bastante frecuencia",
+    "Muy a menudo"
+  ],
+  "reverseLikertOptions": [
+    "Nunca",
+    "Casi nunca",
+    "A veces",
+    "Con bastante frecuencia",
+    "Muy a menudo"
+  ],
+  "questions": {
+    "pss1": {
+      "text": "En el último mes, ¿con qué frecuencia se ha sentido molesto por algo que sucedió inesperadamente?",
+      "hint": "La reactividad emocional ante eventos inesperados es uno de los indicadores más fuertes de la carga general de estrés."
+    },
+    "pss2": {
+      "text": "En el último mes, ¿con qué frecuencia ha sentido que no podía controlar las cosas importantes en su vida?",
+      "hint": "La percepción de falta de control es el núcleo psicológico del estrés: activa la respuesta del cortisol."
+    },
+    "pss3": {
+      "text": "En el último mes, ¿con qué frecuencia se ha sentido nervioso y estresado?",
+      "hint": "La activación nerviosa crónica mantiene el sistema nervioso simpático en un estado de alerta casi constante."
+    },
+    "pss4": {
+      "text": "En el último mes, ¿con qué frecuencia se ha sentido seguro de su capacidad para manejar sus problemas personales?",
+      "hint": "La autoeficacia es un amortiguador contra el estrés: este ítem se puntúa de forma inversa. Mayor confianza = menor estrés."
+    },
+    "pss5": {
+      "text": "En el último mes, ¿con qué frecuencia sintió que las cosas le salían bien?",
+      "hint": "La valoración positiva de la dirección de la vida es un factor protector. Este ítem se puntúa de forma inversa."
+    },
+    "pss6": {
+      "text": "En el último mes, ¿con qué frecuencia sintió que no podía hacer frente a todas las cosas que tenía que hacer?",
+      "hint": "Sentirse abrumado por la carga de tareas es un indicador directo de estrés y un precursor del agotamiento."
+    },
+    "pss7": {
+      "text": "En el último mes, ¿con qué frecuencia pudo controlar las irritaciones en su vida?",
+      "hint": "La regulación de las irritaciones refleja la capacidad de control emocional: este ítem se puntúa de forma inversa."
+    },
+    "pss8": {
+      "text": "En el último mes, ¿con qué frecuencia sintió que tenía el control de las cosas?",
+      "hint": "Un sentido de dominio sobre las circunstancias es uno de los recursos centrales para amortiguar el estrés."
+    },
+    "pss9": {
+      "text": "En el último mes, ¿con qué frecuencia se ha enojado por cosas que estaban fuera de su control?",
+      "hint": "La ira ante eventos incontrolables activa el eje HPA y eleva el cortisol, un biomarcador directo del estrés."
+    },
+    "pss10": {
+      "text": "En el último mes, ¿con qué frecuencia sintió que las dificultades se acumulaban hasta tal punto que no podía superarlas?",
+      "hint": "La sobrecarga cognitiva, cuando los problemas parecen insuperables, es el predictor más fuerte de agotamiento."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Estrés Bajo",
+      "description": "Su estrés percibido es bajo. Tiene buenos recursos de afrontamiento y se siente en gran medida en control de su vida.",
+      "actions": [
+        "Mantenga sus hábitos de manejo del estrés: la constancia importa más que la intensidad",
+        "Practique una actividad proactiva de recuperación por semana (caminata en la naturaleza, sauna, tiempo social)",
+        "Documente lo que le está funcionando ahora: querrá volver a esto durante los períodos más difíciles"
+      ],
+      "miaHook": "Su estrés está bien manejado en este momento. Quiero ayudarle a desarrollar resiliencia antes de que llegue el próximo período difícil."
+    },
+    {
+      "label": "Estrés Moderado",
+      "description": "Estrés percibido moderado. Estás afrontando la situación, pero sientes la presión. Sin intervención, esto puede escalar hasta el agotamiento.",
+      "actions": [
+        "Añade un ritual diario de desconexión de 5 minutos después del trabajo: una caminata, un ejercicio de respiración o escribir en un diario.",
+        "Identifica tus 3 principales factores de estrés de esta semana y elimina o reduce uno de ellos.",
+        "El sueño es tu herramienta más poderosa para recuperarte del estrés: prioriza de forma innegociable 7 a 8 horas."
+      ],
+      "miaHook": "El estrés moderado es donde la mayoría de las personas viven sin darse cuenta de que los está agotando lentamente. Tengo un protocolo que se enfoca exactamente en dónde tu puntuación muestra el desgaste."
+    },
+    {
+      "label": "Estrés Alto",
+      "description": "Estrés percibido alto. En este nivel, el estrés está dañando significativamente tu salud física y mental. La investigación vincula puntuaciones del PSS superiores a 27 con un mayor riesgo de depresión, enfermedades cardíacas y supresión inmunológica.",
+      "actions": [
+        "Elimina un compromiso importante de tu vida esta semana, no eventualmente, esta semana.",
+        "Habla hoy con un terapeuta, médico o persona de confianza sobre tu carga de estrés.",
+        "Deja la cafeína después del mediodía y el alcohol por completo; ambos empeoran la respuesta del cortisol."
+      ],
+      "miaHook": "Tu puntuación está en un rango donde tu cuerpo está sufriendo daños fisiológicos reales. Quiero ayudarte a tomar medidas inmediatas, no un plan de 30 días, sino hoy."
+    }
+  ],
+  "seoContent": {
+    "intro": "La Escala de Estrés Percibido (PSS-10) fue desarrollada por el Dr. Sheldon Cohen en la Universidad Carnegie Mellon en 1983. Es el instrumento psicológico más utilizado para medir la percepción del estrés en entornos de investigación y clínicos, empleado por los CDC, NIH, Harvard y Stanford en miles de estudios.\n\nA diferencia de las medidas de estrés que cuentan eventos estresantes, el PSS-10 mide qué tan estresado te sientes: tu valoración psicológica de tu propia situación. Esto lo hace excepcionalmente preciso porque dos personas pueden experimentar los mismos eventos y tener respuestas al estrés completamente diferentes.\n\nLas puntuaciones van de 0 a 40. El estadounidense promedio obtiene 13 (Cohen et al., 2016). Las puntuaciones superiores a 27 se asocian con un riesgo significativamente mayor de depresión, enfermedades cardiovasculares y supresión del sistema inmunológico (APA Stress in America, 2023). Comprender tu nivel de estrés es el primer paso para manejarlo.",
+    "faq": [
+      {
+        "q": "¿Qué es el PSS-10?",
+        "a": "La Escala de Estrés Percibido (PSS-10) es un cuestionario validado de 10 ítems desarrollado por el Dr. Sheldon Cohen en 1983. Es la herramienta más utilizada en la investigación del estrés a nivel mundial, midiendo qué tan estresado, abrumado y fuera de control te sientes."
+      },
+      {
+        "q": "¿Cuál es una puntuación normal del PSS-10?",
+        "a": "La puntuación promedio del PSS-10 en Estados Unidos es de aproximadamente 13. Las puntuaciones de 0 a 13 indican estrés bajo, de 14 a 26 estrés moderado y de 27 a 40 estrés alto. Las mujeres tienden a puntuar ligeramente más alto que los hombres en todos los grupos de edad."
+      },
+      {
+        "q": "¿Por qué algunas preguntas se puntúan de forma inversa?",
+        "a": "Cuatro ítems (4, 5, 7, 8) preguntan sobre sentimientos positivos: confianza y control. Estos se puntúan de forma inversa porque sentirse más seguro o en control indica menor estrés. Este es el protocolo estándar del PSS-10 y se maneja automáticamente en este cuestionario."
+      },
+      {
+        "q": "¿Puede el estrés causar problemas de salud física?",
+        "a": "Sí. El estrés crónico elevado aumenta el cortisol, suprime el sistema inmunológico, incrementa la inflamación y eleva significativamente el riesgo de enfermedades cardíacas, diabetes, depresión y obesidad. La puntuación del PSS-10 superior a 27 se asocia con estos resultados en múltiples estudios longitudinales."
+      },
+      {
+        "q": "¿Con qué frecuencia debería repetir este cuestionario?",
+        "a": "Realizar la prueba mensualmente permite hacer un seguimiento de las tendencias. El estrés suele fluctuar según las circunstancias de la vida, pero las puntuaciones altas crónicas (27+) durante 2 meses o más requieren apoyo profesional."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "El estrés es la respuesta fisiológica y psicológica del cuerpo a demandas que superan los recursos de afrontamiento percibidos. En ráfagas cortas, el estrés es adaptativo: agudiza la concentración y moviliza energía. Sin embargo, el estrés crónico es un grave riesgo para la salud.\n\nLa Escala de Estrés Percibido mide el estrés percibido: tu experiencia subjetiva de sentirte abrumado, sin control e incapaz de afrontar la situación. Esto es diferente del recuento objetivo de factores estresantes (cuántas cosas malas sucedieron) porque dos personas que enfrentan circunstancias idénticas pueden tener respuestas al estrés muy diferentes según sus recursos de afrontamiento, apoyo social y patrones de valoración cognitiva.\n\nEl PSS-10 es el estándar de oro mundial para medir esta experiencia subjetiva. Ha sido validado en cientos de miles de participantes en más de 60 países y es utilizado en investigación clínica por todas las principales instituciones de salud.",
+    "clinicalBackground": "El Dr. Sheldon Cohen desarrolló el PSS en 1983 en la Universidad Carnegie Mellon como parte de una investigación sobre el estrés y la susceptibilidad a enfermedades infecciosas. La escala fue diseñada para medir el grado en que las situaciones de la vida se valoran como estresantes.\n\nEl PSS-10 (versión de 10 ítems) es el formato más utilizado. Consta de 6 ítems redactados negativamente (respuestas más altas = más estrés) y 4 ítems redactados positivamente que se puntúan de forma inversa. Este formato bidireccional reduce el sesgo de aquiescencia y mide tanto el estrés como los recursos de afrontamiento.\n\nEl PSS ha sido traducido a más de 50 idiomas y se utiliza en investigaciones publicadas por la OMS, los CDC, los NIH, la Escuela de Salud Pública de Harvard y las principales revistas médicas, incluidas JAMA, The Lancet y NEJM.",
+    "howScored": "El PSS-10 utiliza una escala de frecuencia de 5 puntos para el último mes:\n• 0: Nunca\n• 1: Casi nunca\n• 2: A veces\n• 3: Con bastante frecuencia\n• 4: Muy a menudo\n\nLos ítems 4, 5, 7 y 8 se puntúan de forma inversa (0=4, 1=3, 2=2, 3=1, 4=0). Las puntuaciones totales oscilan entre 0 y 40.\n\nUmbrales clínicos:\n• 0–13: Estrés percibido bajo\n• 14–26: Estrés percibido moderado\n• 27–40: Estrés percibido alto\n\nEl adulto estadounidense promedio obtiene aproximadamente 13 puntos. Se considera que un cambio de 5 puntos es clínicamente significativo para hacer un seguimiento de la respuesta al tratamiento.",
+    "interpretation": "**Puntuación 0–13 (Estrés bajo):** Te sientes en gran medida en control de tu vida y tienes una buena capacidad de afrontamiento. Las investigaciones muestran que las puntuaciones bajas en el PSS se asocian con una mejor función inmunológica, un menor riesgo cardiovascular y una mayor longitud de los telómeros (un marcador biológico del envejecimiento). Concéntrate en mantener lo que funciona.\n\n**Puntuación 14–26 (Estrés moderado):** Estás afrontando la situación pero bajo presión. Este rango es donde vive la mayoría de los adultos trabajadores, y muchos lo normalizan sin darse cuenta del desgaste físico acumulativo. El estrés moderado mantenido durante meses se asocia con alteraciones del sueño, aumento de peso, mayor susceptibilidad a enfermedades y tensión en las relaciones.\n\n**Puntuación 27–40 (Estrés alto):** En este nivel, el estrés crónico está dañando tu salud de forma mensurable. Las puntuaciones altas en el PSS se asocian con: un 40% más de riesgo de depresión, una probabilidad 2 veces mayor de eventos cardiovasculares, una respuesta inmunitaria reducida en un 50% a las vacunas, envejecimiento celular acelerado y deterioro significativo en la toma de decisiones. Esto no es un problema de personalidad, es un estado fisiológico que requiere intervención activa.",
+    "whenToSeek": "Considera buscar apoyo profesional si:\n\n• Tu puntuación en el PSS-10 es de 27 o más\n• Tu puntuación se ha mantenido en el rango moderado a alto durante más de 6 semanas\n• El estrés está afectando tu sueño, apetito o salud física\n• Estás usando alcohol, comida u otras sustancias para afrontar la situación\n• El estrés está afectando tu rendimiento laboral o tus relaciones\n• Estás experimentando ansiedad, ataques de pánico o un estado de ánimo bajo persistente junto con un alto nivel de estrés\n\nTipos de apoyo profesional basados en evidencia para el manejo del estrés:\n• Terapia Cognitivo Conductual (CBT) — reduce las puntuaciones del PSS en un promedio de 8 a 12 puntos\n• Reducción del Estrés Basada en Mindfulness (MBSR) — programa de 8 semanas con una sólida base de evidencia\n• Medicación (ISRS/IRSN) — apropiada cuando el estrés ha progresado a ansiedad o depresión clínica",
+    "limitations": "**1. Sesgo de autoinforme:** El PSS mide el estrés percibido, no la carga objetiva de estrés. Las personas que tienden a minimizar los problemas pueden obtener una puntuación más baja de lo que sugiere su nivel de estrés fisiológico real.\n\n**2. Medición puntual:** El PSS pregunta sobre el último mes. Una puntuación alta durante una crisis aguda (duelo, pérdida de empleo) puede no reflejar tu nivel de estrés basal.\n\n**3. No identifica factores estresantes:** El PSS mide la experiencia del estrés, no su origen. Identificar factores estresantes específicos requiere una evaluación más detallada.\n\n**4. Variación cultural:** La expresión y aceptabilidad del estrés varía entre culturas. Algunas poblaciones muestran puntuaciones sistemáticamente más altas o más bajas que reflejan normas culturales en torno a la expresión del malestar psicológico, más que diferencias reales en los niveles de estrés.\n\n**5. No reemplaza una evaluación clínica:** Una puntuación alta en el PSS indica la necesidad de atención, no un diagnóstico de un trastorno de ansiedad o estrés. Las condiciones clínicas requieren una evaluación profesional."
+  }
+}

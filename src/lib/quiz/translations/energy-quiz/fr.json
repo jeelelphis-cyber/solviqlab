@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Questionnaire sur les niveaux d'énergie quotidiens",
+    "description": "Un faible niveau d'énergie n'est pas qu'une simple fatigue : c'est un signal. Découvrez ce qui vous épuise et ce qui pourrait vous revitaliser."
+  },
+  "questions": {
+    "en1": {
+      "text": "Comment vous sentez-vous au réveil le matin ?",
+      "options": [
+        "Prêt(e) — je me sens reposé(e) et lucide",
+        "Correct — il me faut un café pour démarrer",
+        "Fatigué(e) — j'aimerais pouvoir dormir plus",
+        "Épuisé(e) — les matins sont un vrai combat"
+      ]
+    },
+    "en2": {
+      "text": "À quel point votre énergie reste-t-elle stable tout au long de la journée ?",
+      "scaleLabels": {
+        "min": "Chutes importantes",
+        "max": "Stable toute la journée"
+      }
+    },
+    "en3": {
+      "text": "Ressentez-vous un coup de fatigue important l'après-midi (vers 14h–16h) ?"
+    },
+    "en4": {
+      "text": "Comment votre alimentation alimente-t-elle votre journée — mangez-vous pour l'énergie ou simplement par faim ?",
+      "options": [
+        "Intentionnellement — je mange pour soutenir mon énergie",
+        "Raisonnablement — la plupart du temps, de bons choix",
+        "De manière irrégulière — je prends ce qui est disponible",
+        "Mal — sucre, caféine et solutions rapides"
+      ]
+    },
+    "en5": {
+      "text": "Dans quelle mesure un faible niveau d'énergie limite-t-il ce que vous faites réellement dans une journée ?",
+      "options": [
+        "Pas du tout — je fais tout ce que je veux",
+        "Un peu — je priorise mais ne manque pas grand-chose",
+        "Notablement — j'abandonne des activités que je souhaitais faire",
+        "Significativement — toute ma vie semble réduite"
+      ]
+    },
+    "en6": {
+      "text": "Après un week-end de repos, vous sentez-vous généralement rechargé(e) — ou toujours fatigué(e) ?",
+      "options": [
+        "Rechargé(e) — les week-ends me restaurent",
+        "Un peu mieux mais pas complètement restauré(e)",
+        "Toujours fatigué(e) — le repos ne semble pas beaucoup aider",
+        "Parfois pire — le repos me rend plus léthargique"
+      ]
+    },
+    "en7": {
+      "text": "Dépendez-vous de la caféine pour fonctionner — non par plaisir, mais pour traverser la journée ?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Énergie Élevée",
+      "description": "Votre énergie est bien soutenue par votre mode de vie. Vous avez des réserves et vous récupérez bien après un effort.",
+      "actions": [
+        "Maintenez vos habitudes actuelles de sommeil et d'alimentation — ce sont vos principaux leviers d'énergie",
+        "Ajoutez une séance d'exercice de haute intensité par semaine — cela augmente en fait l'énergie de base",
+        "Protégez votre horaire de sommeil même le week-end — la cohérence est ce qui maintient l'énergie stable"
+      ],
+      "miaHook": "Votre base énergétique est solide — parlons de l'optimiser encore davantage pour une performance maximale."
+    },
+    {
+      "label": "Fuites d'Énergie",
+      "description": "Vous avez de l'énergie, mais elle est irrégulière. Certains schémas provoquent des baisses qui affectent votre humeur, votre productivité et votre motivation.",
+      "actions": [
+        "Auditez vos repas pour détecter les pics de glycémie — les aliments à indice glycémique élevé provoquent les baisses que vous ressentez",
+        "Déplacez votre première caféine à 90 minutes après le réveil — cela seul améliore considérablement l'énergie soutenue",
+        "Ajoutez 15 minutes de marche après le déjeuner — cela réduit la baisse d'énergie de l'après-midi de 30 à 40 %"
+      ],
+      "miaHook": "Votre énergie est drainée par quelques schémas spécifiques que je peux voir — les corriger a souvent des avantages en cascade sur tout le reste."
+    },
+    {
+      "label": "Énergie Chroniquement Basse",
+      "description": "Votre énergie est considérablement épuisée et affecte votre qualité de vie. Cela est généralement multifactoriel — le sommeil, la nutrition, le stress et l'activité physique jouent tous un rôle.",
+      "actions": [
+        "Consultez un médecin pour écarter les causes médicales — dysfonctionnement thyroïdien, anémie, apnée du sommeil et carences vitaminiques se manifestent tous par une faible énergie.",
+        "Priorisez le sommeil avant tout pour les 30 prochains jours — 7,5 à 9 heures sont non négociables.",
+        "Éliminez immédiatement de votre alimentation les plus grandes sources de perte d'énergie : aliments ultra-transformés, excès d'alcool ou excès de caféine."
+      ],
+      "miaHook": "Ce que vous ressentez n'est pas de la paresse — c'est un système qui n'est pas correctement soutenu. Laissez-moi vous aider à reconstruire à partir de la base."
+    }
+  ],
+  "seoContent": {
+    "intro": "La faible énergie est l'une des plaintes de santé les plus courantes dans le monde — pourtant, elle est aussi l'une des plus traitables. Les recherches montrent systématiquement que la fatigue chronique et la faible énergie sont rarement causées par un seul facteur. Elles résultent plutôt de l'effet cumulatif de la qualité du sommeil, des habitudes nutritionnelles, des niveaux d'activité physique, de la charge de stress et des conditions médicales sous-jacentes.\n\nCe quiz évalue vos schémas énergétiques sur sept dimensions, vous aidant à identifier si votre faible énergie est structurelle (réparable par des changements d'habitudes) ou si elle nécessite une évaluation médicale.",
+    "faq": [
+      {
+        "q": "Qu'est-ce qui cause une faible énergie chez les personnes en bonne santé ?",
+        "a": "Chez les personnes par ailleurs en bonne santé, les causes les plus courantes de faible énergie sont : un sommeil insuffisant ou de mauvaise qualité, des carences nutritionnelles (fer, B12, vitamine D), la déshydratation, une dépendance excessive à la caféine, une charge de stress élevée, un mode de vie sédentaire (qui réduit paradoxalement l'énergie) et des horaires de repas irréguliers provoquant une instabilité de la glycémie."
+      },
+      {
+        "q": "Quand une faible énergie doit-elle être examinée médicalement ?",
+        "a": "Consultez un médecin si : la faible énergie persiste plus de 4 semaines, vous dormez 7 à 9 heures mais vous vous sentez toujours épuisé, vous avez des changements de poids inexpliqués, ou les problèmes d'énergie sont accompagnés d'autres symptômes (perte de cheveux, sensibilité au froid, rythme cardiaque rapide). Les causes médicales courantes incluent les troubles thyroïdiens, l'anémie, l'apnée du sommeil et le diabète."
+      },
+      {
+        "q": "L'exercice augmente-t-il l'énergie ou l'épuise-t-il ?",
+        "a": "L'exercice modéré régulier augmente l'énergie de base. C'est contre-intuitif mais bien établi : l'exercice aérobie augmente la densité mitochondriale, améliore la qualité du sommeil et régule le cortisol — tout cela stimule une énergie soutenue. La clé est la régularité : 3 à 5 séances par semaine d'intensité modérée."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "L'énergie est un état physiologique complexe régi par l'interaction du sommeil, de la nutrition, de l'activité physique, des hormones du stress, du rythme circadien et de la fonction mitochondriale. Une faible énergie chronique — distincte de la fatigue occasionnelle — indique qu'un ou plusieurs de ces systèmes ne fonctionnent pas de manière optimale.\n\nLes coupables les plus courants sont la dette de sommeil (accumulée sur des semaines), la dérégulation de la glycémie due à une mauvaise nutrition, le déconditionnement physique, le stress chronique (qui élève le cortisol et supprime les hormones réparatrices) et la dépendance à la caféine (qui masque la fatigue sans la résoudre).",
+    "howScored": "Ce quiz évalue sept dimensions énergétiques : la récupération matinale (indicateur de qualité du sommeil), la cohérence intra-journalière, les schémas de baisse d'énergie en après-midi, la qualité du carburant nutritionnel, l'activité limitée par l'énergie, la récupération après le repos et la dépendance à la caféine.\n\nLes scores supérieurs à 70 indiquent une énergie bien soutenue avec de bonnes bases de style de vie. 40–69 indique des fuites d'énergie identifiables qu'il vaut la peine de cibler. En dessous de 40 indique une énergie chroniquement épuisée qui nécessite probablement à la fois des changements de style de vie et une évaluation médicale.",
+    "whenToSeek": "Consultez un médecin si :\n• La faible énergie persiste depuis plus de 4 semaines malgré un sommeil adéquat\n• Vous dormez 8 heures ou plus mais vous vous réveillez épuisé\n• Les problèmes d'énergie sont accompagnés de changements de poids inexpliqués, d'un amincissement des cheveux, d'une sensibilité au froid ou de palpitations cardiaques\n• Vous avez des antécédents de dépression ou d'anxiété (les deux causent un épuisement énergétique significatif)\n• Vous soupçonnez un trouble du sommeil (ronflements, halètements, réveils fréquents)\n\nCauses médicales courantes : hypothyroïdie, anémie ferriprive, carence en vitamine B12 ou D, apnée obstructive du sommeil, diabète de type 2.",
+    "limitations": "Ce quiz évalue les schémas énergétiques liés au mode de vie. Il ne peut pas diagnostiquer les conditions médicales qui causent la fatigue. Les résultats reflètent des perceptions auto-déclarées et peuvent ne pas capturer des mesures physiologiques objectives. Les niveaux d'énergie de base varient considérablement d'une personne à l'autre — ce qui semble normal pour une personne peut indiquer un épuisement chez une autre."
+  }
+}

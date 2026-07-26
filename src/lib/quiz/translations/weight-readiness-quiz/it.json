@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Quiz sulla Prontezza alla Perdita di Peso",
+    "description": "Sei davvero pronto a perdere peso — o lo stai solo sperando? Scopri cosa ti ostacola veramente prima di iniziare."
+  },
+  "questions": {
+    "wr1": {
+      "text": "Perché vuoi perdere peso in questo momento? Cosa ti spinge veramente?",
+      "options": [
+        "La mia salute — voglio sentirmi meglio a lungo termine",
+        "Energia e fiducia — qualità della vita quotidiana",
+        "Un evento imminente — ho una scadenza",
+        "Pressione esterna — altri lo vogliono per me"
+      ]
+    },
+    "wr2": {
+      "text": "Hai già provato a perdere peso in passato e hai smesso? Cosa è successo?",
+      "options": [
+        "Ho mantenuto con successo i risultati precedenti",
+        "Ho perso e ripreso peso — ora capisco il perché",
+        "Ho smesso perché era troppo restrittivo",
+        "Ho smesso perché non vedevo risultati rapidamente"
+      ]
+    },
+    "wr3": {
+      "text": "Hai un piano specifico e realistico su come cambierai la tua alimentazione?"
+    },
+    "wr4": {
+      "text": "Quanto ti senti pronto a fare cambiamenti costanti — non una dieta drastica, ma cambiamenti nello stile di vita?",
+      "scaleLabels": {
+        "min": "Per niente pronto",
+        "max": "Completamente pronto"
+      }
+    },
+    "wr5": {
+      "text": "Quanto lo stress o le emozioni influenzano le tue abitudini alimentari?",
+      "options": [
+        "Molto poco — mangio in base alla fame",
+        "A volte — le giornate stressanti influenzano le mie scelte",
+        "Spesso — il cibo è un conforto per me",
+        "Sempre — l'alimentazione emotiva è il mio schema"
+      ]
+    },
+    "wr6": {
+      "text": "Hai supporto — persone che ti incoraggeranno anziché sabotare i tuoi obiettivi?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Pronto per Iniziare",
+      "description": "Hai la mentalità, la motivazione e la consapevolezza per fare progressi reali e sostenibili. Ora si tratta della strategia giusta.",
+      "actions": [
+        "Inizia questa settimana — la tua finestra di prontezza è reale e va sfruttata",
+        "Stabilisci un obiettivo specifico e misurabile per 8 settimane (non un numero a vita) — una perdita di 4–6 kg in 8 settimane è realistica e motivante",
+        "Comunica il tuo piano alla tua rete di supporto — la responsabilità aumenta i tassi di successo del 65%"
+      ],
+      "miaHook": "Sei veramente pronto — non solo speranzoso. Lascia che ti dia un piano di partenza personalizzato basato sul tuo profilo."
+    },
+    {
+      "label": "Quasi Pronto",
+      "description": "Sei motivato, ma alcuni elementi chiave non sono ancora a posto. Affrontarli ora farà la differenza tra un cambiamento duraturo e un altro falso inizio.",
+      "actions": [
+        "Identifica il motivo specifico per cui i tentativi precedenti si sono fermati — affronta quella causa principale prima di ricominciare",
+        "Costruisci prima il tuo sistema di supporto — individua 1–2 persone che incoraggeranno attivamente il tuo percorso",
+        "Dedica 2 settimane a migliorare il sonno a 7+ ore prima di iniziare — il sonno è il predittore numero 1 dell'aderenza alla dieta"
+      ],
+      "miaHook": "Vedo cosa manca nel tuo quadro di prontezza — colmiamo queste lacune prima che tu inizi, così questa volta sarà definitivo."
+    },
+    {
+      "label": "Non Ancora Pronto",
+      "description": "Iniziare subito potrebbe portare a frustrazione e a un altro ciclo di stop e ripartenza. Costruiamo prima le giuste fondamenta.",
+      "actions": [
+        "Concentrati sul capire il tuo perché — la motivazione legata alla salute ha un tasso di successo 3 volte superiore rispetto alla motivazione basata su eventi o pressioni esterne",
+        "Affronta l'alimentazione emotiva prima di iniziare una dieta — senza questo, nessun piano alimentare reggerà a lungo termine",
+        "Lavora con un coach, un terapeuta o un dietista per costruire le giuste fondamenta — cercare di fare da soli con l'attuale quadro di prontezza è la ricetta per un altro riavvio"
+      ],
+      "miaHook": "Iniziare senza affrontare ciò che vedo nelle tue risposte è ciò che porta ad arrendersi. Facciamolo bene — e una volta sola."
+    }
+  ],
+  "seoContent": {
+    "intro": "La ricerca sul cambiamento comportamentale mostra costantemente che motivazione e intenzione da sole non sono predittori sufficienti del successo nella perdita di peso. Ciò che distingue le persone che ottengono una perdita di peso duratura da quelle che attraversano tentativi ripetuti è la prontezza psicologica: chiarezza della motivazione, aspettative realistiche, un piano concreto e un supporto adeguato.\n\nQuesto quiz valuta sei dimensioni della prontezza alla perdita di peso, basate sulla ricerca del Modello Transteoretico (Prochaska & DiClemente) e sulla psicologia comportamentale. Comprendere dove ti trovi realmente — non dove vorresti essere — è l'informazione più preziosa che puoi ottenere prima di iniziare.",
+    "faq": [
+      {
+        "q": "Qual è il più forte predittore del successo nella perdita di peso?",
+        "a": "La ricerca identifica costantemente la motivazione intrinseca (guidata dalla salute rispetto all'aspetto fisico), l'autoefficacia (fiducia nella propria capacità di apportare cambiamenti), il supporto sociale e le aspettative realistiche come i più forti predittori di una perdita di peso sostenuta. Le persone che perdono peso per motivi di salute lo mantengono significativamente più a lungo rispetto a quelle motivate da eventi o pressioni esterne."
+      },
+      {
+        "q": "Perché la maggior parte delle diete fallisce?",
+        "a": "Le ragioni principali sono: iniziare con un deficit calorico troppo elevato (fame insostenibile), fare affidamento sulla forza di volontà piuttosto che sulla progettazione ambientale, non affrontare l'alimentazione emotiva, mancanza di supporto sociale, pensiero tutto-o-niente (un giorno negativo porta ad abbandonare) e stabilire tempistiche irrealistiche. Questi aspetti sono risolvibili — con la giusta preparazione."
+      },
+      {
+        "q": "Come posso interrompere il ciclo di perdita e recupero del peso?",
+        "a": "La ricerca sul 'ciclo del peso' mostra che i fattori chiave per interrompere il modello sono: passare da una mentalità dietetica a breve termine a un cambiamento permanente dello stile di vita, affrontare l'alimentazione emotiva con strumenti comportamentali (non con la forza di volontà), includere una fase di mantenimento nel piano fin dall'inizio e scegliere un approccio sufficientemente sostenibile da poter immaginare di seguirlo per 5 anni."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "La prontezza alla perdita di peso è un concetto psicologico sviluppato dal Modello Transteoretico del cambiamento comportamentale (Prochaska & DiClemente, 1983). Descrive quanto una persona sia preparata — cognitivamente, motivazionalmente e comportamentalmente — ad apportare e mantenere cambiamenti significativi nello stile di vita.\n\nLa prontezza non è uno stato fisso — fluttua in base alle circostanze della vita, ai livelli di stress e all'ambiente sociale. Tentare la perdita di peso durante periodi di bassa prontezza aumenta significativamente la probabilità di ricaduta e contribuisce al frustrante ciclo di tentativi ripetuti.",
+    "howScored": "Questo quiz valuta sei dimensioni della prontezza: qualità della motivazione (intrinseca vs. estrinseca), consapevolezza dai tentativi precedenti, pianificazione concreta, fiducia soggettiva nella prontezza, modelli di alimentazione emotiva e disponibilità di supporto sociale.\n\nPunteggi superiori a 70 indicano un'alta prontezza — inizia ora. 40–69 indica una prontezza parziale — è necessario affrontare prima lacune specifiche. Sotto 40 indica che le condizioni fondamentali per il successo non sono ancora in atto — la preparazione migliorerà significativamente i risultati.",
+    "whenToSeek": "Considera il supporto professionale se:\n• Hai avuto 3 o più tentativi significativi di perdita di peso che non hanno portato a un cambiamento duraturo\n• L'alimentazione emotiva o da stress è un modello significativo che sembra fuori controllo\n• Hai un BMI superiore a 35 — la supervisione medica migliora significativamente i risultati a questo livello\n• Sono presenti abbuffate, cicli di restrizione o altri modelli alimentari disordinati\n• Le preoccupazioni relative al peso influenzano significativamente la salute mentale o la qualità della vita",
+    "limitations": "Questo quiz valuta la prontezza psicologica, non l'idoneità medica alla perdita di peso. Condizioni di salute individuali, farmaci e fattori metabolici non considerati qui possono influenzare significativamente la capacità e l'approccio alla perdita di peso. Consulta sempre un medico prima di iniziare un programma significativo di perdita di peso, specialmente in presenza di condizioni di salute sottostanti."
+  }
+}

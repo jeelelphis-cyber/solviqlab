@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "title": "Lifestyle Health Score Quiz",
+    "description": "Get an honest snapshot of how your daily habits — sleep, movement, nutrition, stress — add up to your overall health."
+  },
+
+  "questions": {
+    "ls1": {
+      "text": "How would you describe your diet on a typical weekday?",
+      "options": [
+        "Mostly whole foods — I cook and plan ahead",
+        "A mix — some healthy, some not",
+        "Often convenient or fast — I don't have time",
+        "Mostly processed — I'm not proud of it"
+      ]
+    },
+    "ls2": {
+      "text": "How many days a week do you do some form of intentional physical activity?",
+      "scaleLabels": { "min": "0 days", "max": "7 days" }
+    },
+    "ls3": {
+      "text": "How well do you sleep on most nights?",
+      "options": [
+        "Well — 7–9 hours, I wake up rested",
+        "Okay — sometimes restless",
+        "Poorly — fewer than 6 hours or disrupted",
+        "Very poorly — it's a consistent problem"
+      ]
+    },
+    "ls4": {
+      "text": "Do you have downtime each day — time that's genuinely yours with no obligations?"
+    },
+    "ls5": {
+      "text": "How often do you drink alcohol or smoke?",
+      "options": [
+        "Never or very rarely",
+        "Occasionally — socially",
+        "Several times a week",
+        "Daily"
+      ]
+    },
+    "ls6": {
+      "text": "When you think about your health overall, how do you feel?",
+      "options": [
+        "Good — I'm mostly taking care of myself",
+        "Okay — but I know I could do better",
+        "Not great — I've been neglecting things",
+        "Concerned — I feel like I've let myself down"
+      ]
+    }
+  },
+
+  "buckets": [
+    {
+      "label": "Strong Lifestyle Foundation",
+      "description": "You're building good habits across the key areas. Your daily choices are working in your favor.",
+      "actions": [
+        "Identify your one weakest pillar (sleep, nutrition, movement, or stress) and optimize it further",
+        "Track one health metric for 30 days — what gets measured gets managed",
+        "Share your habits with someone — social accountability doubles consistency rates"
+      ],
+      "miaHook": "You're doing a lot right — I want to help you identify the one area where focused attention will give you the most return."
+    },
+    {
+      "label": "Room to Grow",
+      "description": "Your lifestyle has solid elements, but there are gaps that are probably costing you energy and health without you realizing it.",
+      "actions": [
+        "Choose one habit to fix this month — not everything at once. Start with sleep if it's below 7 hours",
+        "Meal prep one day per week — this single habit is the strongest predictor of improved nutrition quality",
+        "Add 20 minutes of walking daily — it's the most accessible intervention with proven across-the-board health benefits"
+      ],
+      "miaHook": "I can see which specific habits are undercutting your progress — let's talk about prioritizing the highest-impact change."
+    },
+    {
+      "label": "Lifestyle Overhaul Needed",
+      "description": "Multiple areas of your lifestyle need attention. But you don't have to change everything at once — one shift at a time creates lasting change.",
+      "actions": [
+        "Start with sleep — it is the foundation everything else is built on. Prioritize 7.5 hours before changing anything else",
+        "Replace one processed meal per day with a home-cooked alternative — this is the single fastest nutrition intervention",
+        "Talk to a doctor about a general health check — lifestyle patterns at this level often have measurable physiological effects worth assessing"
+      ],
+      "miaHook": "You're carrying more than you should be — your current habits are working against you in ways you might not fully see yet."
+    }
+  ],
+
+  "seoContent": {
+    "intro": "The four pillars of lifestyle health — nutrition, physical activity, sleep, and stress management — interact continuously. Weakness in any one pillar places additional strain on the others: poor sleep increases cortisol (making stress worse and promoting weight gain), high stress impairs sleep quality and leads to poor food choices, physical inactivity reduces sleep quality and metabolic health.\n\nThis quiz gives you an honest composite score across all four pillars plus two additional factors: alcohol/tobacco use and self-assessed health perception. Understanding where you stand is the first step toward targeted, high-impact change.",
+    "faq": [
+      {
+        "q": "Which lifestyle factor has the biggest impact on health?",
+        "a": "Research consistently shows sleep as the foundation — it regulates appetite hormones, cognitive function, immune response, and emotional regulation. However, the pillars compound: regular exercise dramatically improves sleep quality, healthy nutrition stabilizes mood and energy, and stress management makes all other behaviors easier to maintain."
+      },
+      {
+        "q": "How quickly can lifestyle changes improve health?",
+        "a": "Blood pressure and blood sugar respond within days to dietary changes. Sleep quality improves within 1–2 weeks of consistent sleep timing. Cardiovascular fitness measurably improves within 4 weeks of regular exercise. Mental health markers improve within 2–4 weeks of regular moderate exercise. Significant body composition changes take 8–12 weeks of sustained effort."
+      },
+      {
+        "q": "Is it better to change one habit at a time or multiple at once?",
+        "a": "Research on behavior change (Fogg, Stanford) and clinical trials both support starting with one habit at a time. Willpower is a limited resource — attempting multiple simultaneous changes dramatically reduces adherence. However, the 'keystone habit' concept shows that some changes (consistent sleep, daily exercise) trigger automatic improvement in other areas."
+      }
+    ]
+  },
+
+  "content": {
+    "whatIs": "Lifestyle medicine is a rapidly growing medical field that uses evidence-based behavioral interventions — diet, physical activity, sleep, stress management, and substance avoidance — as primary treatment for chronic disease prevention and management.\n\nThe four core lifestyle pillars account for approximately 80% of chronic disease burden (CDC, 2023). Cardiovascular disease, type 2 diabetes, many cancers, and mental health disorders are strongly influenced by modifiable lifestyle factors. This means the largest single determinant of your long-term health is not genetics — it is your daily habits.",
+
+    "howScored": "This quiz evaluates six dimensions: nutritional quality (whole vs. processed foods), physical activity frequency, sleep quality and duration, daily recovery time, alcohol/tobacco use, and subjective health perception.\n\nScores above 70 indicate strong lifestyle foundations with most pillars well-supported. 40–69 indicates a mixed lifestyle with identifiable gaps worth targeting. Below 40 indicates multiple lifestyle pillars that are significantly below recommended health guidelines.",
+
+    "whenToSeek": "Consult a healthcare provider if:\n• You have scored in the lowest range for 3+ months without improvement\n• You have a chronic condition (diabetes, hypertension, obesity) and lifestyle changes have stalled\n• You need professional support to change habits that feel out of control (overeating, alcohol use, physical inactivity)\n• You experience symptoms alongside lifestyle issues: fatigue, pain, mood problems, or unexplained weight changes",
+
+    "limitations": "This quiz assesses self-reported lifestyle habits, which are subject to recall bias and social desirability effects (people tend to report slightly better habits than they actually maintain). Results reflect a snapshot in time and may not capture seasonal variation or recent changes. This is a screening tool, not a medical assessment."
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Yaşam Tarzı Sağlık Puanı Testi",
+    "description": "Günlük alışkanlıklarınızın — uyku, hareket, beslenme, stres — genel sağlığınıza nasıl yansıdığına dair dürüst bir anlık görüntü edinin."
+  },
+  "questions": {
+    "ls1": {
+      "text": "Tipik bir hafta içi gününde beslenmenizi nasıl tanımlarsınız?",
+      "options": [
+        "Çoğunlukla tam gıdalar — yemek yapar ve planlarım",
+        "Karma — biraz sağlıklı, biraz değil",
+        "Genellikle pratik veya fast food — vaktim yok",
+        "Çoğunlukla işlenmiş gıdalar — bundan gurur duymuyorum"
+      ]
+    },
+    "ls2": {
+      "text": "Haftada kaç gün bilinçli olarak fiziksel aktivite yapıyorsunuz?",
+      "scaleLabels": {
+        "min": "0 gün",
+        "max": "7 gün"
+      }
+    },
+    "ls3": {
+      "text": "Çoğu gece ne kadar iyi uyuyorsunuz?",
+      "options": [
+        "İyi — 7–9 saat, dinlenmiş uyanıyorum",
+        "Orta — bazen huzursuz",
+        "Kötü — 6 saatten az veya bölünmüş",
+        "Çok kötü — bu sürekli bir sorun"
+      ]
+    },
+    "ls4": {
+      "text": "Her gün kendinize ait, hiçbir zorunluluğun olmadığı bir boş vaktiniz oluyor mu?"
+    },
+    "ls5": {
+      "text": "Ne sıklıkla alkol tüketiyor veya sigara içiyorsunuz?",
+      "options": [
+        "Hiç veya çok nadiren",
+        "Ara sıra — sosyal ortamlarda",
+        "Haftada birkaç kez",
+        "Günlük"
+      ]
+    },
+    "ls6": {
+      "text": "Genel sağlığınızı düşündüğünüzde kendinizi nasıl hissediyorsunuz?",
+      "options": [
+        "İyi — çoğunlukla kendime iyi bakıyorum",
+        "İdare eder — ama daha iyisini yapabileceğimi biliyorum",
+        "Pek iyi değil — bazı şeyleri ihmal ediyorum",
+        "Endişeliyim — kendimi hayal kırıklığına uğrattığımı hissediyorum"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Güçlü Yaşam Tarzı Temeli",
+      "description": "Temel alanlarda iyi alışkanlıklar geliştiriyorsunuz. Günlük seçimleriniz sizin lehinize çalışıyor.",
+      "actions": [
+        "En zayıf sütununuzu (uyku, beslenme, hareket veya stres) belirleyin ve daha da optimize edin",
+        "30 gün boyunca bir sağlık ölçütünü takip edin — ölçülen şey yönetilir",
+        "Alışkanlıklarınızı bir başkasıyla paylaşın — sosyal hesap verebilirlik tutarlılık oranlarını ikiye katlar"
+      ],
+      "miaHook": "Doğru yaptığınız pek çok şey var — odaklanmanızın size en çok getiriyi sağlayacağı bir alanı belirlemenize yardımcı olmak istiyorum."
+    },
+    {
+      "label": "Gelişime Açık Alan",
+      "description": "Yaşam tarzınız sağlam unsurlara sahip, ancak muhtemelen farkında olmadan size enerji ve sağlık kaybettiren boşluklar var.",
+      "actions": [
+        "Bu ay için bir alışkanlık seçin — hepsini birden değil. Uyku 7 saatin altındaysa onunla başlayın",
+        "Haftada bir gün yemek hazırlığı yapın — bu tek alışkanlık, beslenme kalitesinin iyileşmesinin en güçlü öngörücüsüdür",
+        "Günde 20 dakika yürüyüş ekleyin — bu, her alanda sağlık yararları kanıtlanmış en erişilebilir müdahaledir"
+      ],
+      "miaHook": "İlerlemenizi baltalayan belirli alışkanlıkları görebiliyorum — en yüksek etkili değişime öncelik vermek hakkında konuşalım."
+    },
+    {
+      "label": "Yaşam Tarzı Revizyonu Gerekli",
+      "description": "Yaşam tarzınızın birden fazla alanı ilgiye ihtiyaç duyuyor. Ancak her şeyi bir anda değiştirmek zorunda değilsiniz — bir seferde bir değişim kalıcı dönüşüm yaratır.",
+      "actions": [
+        "Uykuyla başlayın — diğer her şeyin üzerine inşa edildiği temeldir. Başka bir şeyi değiştirmeden önce 7,5 saate öncelik verin.",
+        "Günde bir işlenmiş öğünü ev yapımı bir alternatifle değiştirin — bu, beslenme alanındaki en hızlı müdahaledir.",
+        "Genel bir sağlık kontrolü için bir doktora danışın — bu seviyedeki yaşam tarzı alışkanlıkları genellikle değerlendirilmeye değer ölçülebilir fizyolojik etkilere sahiptir."
+      ],
+      "miaHook": "Taşımanız gerekenden fazlasını taşıyorsunuz — mevcut alışkanlıklarınız, tam olarak göremeyebileceğiniz şekillerde size karşı çalışıyor."
+    }
+  ],
+  "seoContent": {
+    "intro": "Yaşam tarzı sağlığının dört temel direği — beslenme, fiziksel aktivite, uyku ve stres yönetimi — sürekli olarak etkileşim halindedir. Herhangi bir direkteki zayıflık, diğerlerine ek yük bindirir: kötü uyku kortizolü artırır (stresi kötüleştirir ve kilo alımını teşvik eder), yüksek stres uyku kalitesini bozar ve kötü besin seçimlerine yol açar, fiziksel hareketsizlik uyku kalitesini ve metabolik sağlığı azaltır.\n\nBu test, dört direğin tamamı artı iki ek faktör (alkol/tütün kullanımı ve kendi kendine değerlendirilen sağlık algısı) boyunca size dürüst bir bileşik puan verir. Nerede olduğunuzu anlamak, hedefli ve yüksek etkili değişime giden ilk adımdır.",
+    "faq": [
+      {
+        "q": "Hangi yaşam tarzı faktörünün sağlık üzerinde en büyük etkisi vardır?",
+        "a": "Araştırmalar tutarlı bir şekilde uykunun temel olduğunu göstermektedir — iştah hormonlarını, bilişsel işlevi, bağışıklık tepkisini ve duygusal düzenlemeyi kontrol eder. Ancak direkler birbirini güçlendirir: düzenli egzersiz uyku kalitesini önemli ölçüde artırır, sağlıklı beslenme ruh halini ve enerjiyi dengeler, stres yönetimi ise diğer tüm davranışları sürdürmeyi kolaylaştırır."
+      },
+      {
+        "q": "Yaşam tarzı değişiklikleri sağlığı ne kadar hızlı iyileştirebilir?",
+        "a": "Kan basıncı ve kan şekeri, diyet değişikliklerinden sonraki günler içinde yanıt verir. Uyku kalitesi, tutarlı uyku saatlerinin 1-2 haftası içinde iyileşir. Kardiyovasküler fitness, düzenli egzersizin 4 haftası içinde ölçülebilir şekilde iyileşir. Ruh sağlığı belirteçleri, düzenli orta düzey egzersizin 2-4 haftası içinde iyileşir. Önemli vücut kompozisyonu değişiklikleri, sürekli çabanın 8-12 haftasını gerektirir."
+      },
+      {
+        "q": "Bir seferde bir alışkanlığı mı yoksa aynı anda birkaçını mı değiştirmek daha iyidir?",
+        "a": "Davranış değişikliği üzerine araştırmalar (Fogg, Stanford) ve klinik deneylerin her ikisi de bir seferde bir alışkanlıkla başlamayı desteklemektedir. İrade gücü sınırlı bir kaynaktır — aynı anda birden fazla değişiklik denemek, uyumu önemli ölçüde azaltır. Bununla birlikte, 'kilit taşı alışkanlığı' kavramı, bazı değişikliklerin (tutarlı uyku, günlük egzersiz) diğer alanlarda otomatik iyileşmeyi tetiklediğini göstermektedir."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Yaşam tarzı tıbbı, kronik hastalıkların önlenmesi ve yönetiminde birincil tedavi olarak kanıta dayalı davranışsal müdahaleleri (diyet, fiziksel aktivite, uyku, stres yönetimi ve madde kullanımından kaçınma) kullanan hızla büyüyen bir tıp alanıdır.\n\nDört temel yaşam tarzı direği, kronik hastalık yükünün yaklaşık %80'ini oluşturur (CDC, 2023). Kardiyovasküler hastalık, tip 2 diyabet, birçok kanser türü ve ruh sağlığı bozuklukları, değiştirilebilir yaşam tarzı faktörlerinden güçlü bir şekilde etkilenir. Bu, uzun vadeli sağlığınızın en büyük tek belirleyicisinin genetik değil, günlük alışkanlıklarınız olduğu anlamına gelir.",
+    "howScored": "Bu test altı boyutu değerlendirir: beslenme kalitesi (bütün vs. işlenmiş gıdalar), fiziksel aktivite sıklığı, uyku kalitesi ve süresi, günlük toparlanma süresi, alkol/tütün kullanımı ve öznel sağlık algısı.\n\n70'in üzerindeki puanlar, çoğu direğin iyi desteklendiği güçlü yaşam tarzı temellerini gösterir. 40-69, hedeflenmeye değer belirlenebilir boşlukları olan karma bir yaşam tarzını gösterir. 40'ın altı, önerilen sağlık yönergelerinin önemli ölçüde altında olan birden fazla yaşam tarzı direğini gösterir.",
+    "whenToSeek": "Aşağıdaki durumlarda bir sağlık uzmanına danışın:\n• 3+ aydır iyileşme olmadan en düşük aralıkta puan aldıysanız\n• Kronik bir durumunuz (diyabet, hipertansiyon, obezite) varsa ve yaşam tarzı değişiklikleri durmuşsa\n• Kontrol dışı hissedilen alışkanlıkları (aşırı yeme, alkol kullanımı, fiziksel hareketsizlik) değiştirmek için profesyonel desteğe ihtiyacınız varsa\n• Yaşam tarzı sorunlarının yanı sıra yorgunluk, ağrı, ruh hali sorunları veya açıklanamayan kilo değişiklikleri gibi semptomlar yaşıyorsanız",
+    "limitations": "Bu test, hatırlama yanlılığına ve sosyal beğenirlik etkisine (insanlar gerçekte sürdürdüklerinden biraz daha iyi alışkanlıklar bildirme eğilimindedir) tabi olan kendi kendine bildirilen yaşam tarzı alışkanlıklarını değerlendirir. Sonuçlar, zaman içindeki bir anlık görüntüyü yansıtır ve mevsimsel değişiklikleri veya yakın zamandaki değişiklikleri yakalamayabilir. Bu tıbbi bir değerlendirme değil, bir tarama aracıdır."
+  }
+}

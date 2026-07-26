@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Schlafqualitäts-Quiz (Epworth-Schläfrigkeitsskala)",
+    "description": "Die Epworth-Schläfrigkeitsskala ist der globale klinische Standard zur Messung übermäßiger Tagesschläfrigkeit. Sie wird von Schlafspezialisten weltweit zur Erkennung von Schlafstörungen eingesetzt.",
+    "medicalNote": "Ein hoher Wert kann auf eine Schlafstörung wie Schlafapnoe oder Narkolepsie hinweisen. Bitte konsultieren Sie bei Bedenken einen Arzt."
+  },
+  "likertOptions": [
+    "Würde niemals einnicken",
+    "Geringe Wahrscheinlichkeit einzunicken",
+    "Mäßige Wahrscheinlichkeit einzunicken",
+    "Hohe Wahrscheinlichkeit einzunicken"
+  ],
+  "questions": {
+    "ess1": {
+      "text": "Sitzen und Lesen",
+      "hint": "Das Einschlafen beim Lesen ist eines der frühesten Anzeichen für chronischen Schlafmangel."
+    },
+    "ess2": {
+      "text": "Fernsehen",
+      "hint": "Selbst passive Aktivitäten wie Fernsehen sollten keine Schläfrigkeit verursachen, wenn Sie ausreichend und erholsamen Schlaf bekommen."
+    },
+    "ess3": {
+      "text": "Inaktiv an einem öffentlichen Ort sitzen (z. B. im Theater oder bei einer Besprechung)",
+      "hint": "Das Kämpfen gegen das Wachbleiben in ruhigen öffentlichen Umgebungen ist ein wichtiges diagnostisches Merkmal für übermäßige Schläfrigkeit."
+    },
+    "ess4": {
+      "text": "Als Beifahrer eine Stunde lang ohne Pause im Auto sitzen",
+      "hint": "Die gleichmäßige Bewegung einer Autofahrt ist ein typischer Auslöser für Schläfrigkeit. Hohe Werte hier deuten auf ein ernsthaftes Schlafdefizit hin."
+    },
+    "ess5": {
+      "text": "Sich am Nachmittag hinlegen, um sich auszuruhen, wenn die Umstände es erlauben",
+      "hint": "Die Fähigkeit, während einer Nachmittagsruhe schnell einzuschlafen, spiegelt Ihren tatsächlichen Schlafdruck wider."
+    },
+    "ess6": {
+      "text": "Sitzen und mit jemandem sprechen",
+      "hint": "Das Einschlafen während eines Gesprächs ist ein klinisch bedeutsames Zeichen für übermäßige Tagesschläfrigkeit."
+    },
+    "ess7": {
+      "text": "Ruhiges Sitzen nach einem alkoholfreien Mittagessen",
+      "hint": "Nachmittagstiefs sind normal, aber eine hohe Einschlafneigung hier ohne Alkoholkonsum deutet auf eine Schlafstörung hin."
+    },
+    "ess8": {
+      "text": "Im Auto, während man für ein paar Minuten im Stau steht",
+      "hint": "Schläfrigkeit beim Fahren oder im Stau ist ein direktes Sicherheitsrisiko und ein wichtiger klinischer Indikator."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Normaler Schlaf",
+      "description": "Ihre Tagesschläfrigkeit liegt im normalen Bereich. Ihr Schlaf scheint Sie ausreichend zu erholen.",
+      "actions": [
+        "Halten Sie Ihren aktuellen Schlafrhythmus ein – Beständigkeit ist der stärkste Schutz für den Schlaf",
+        "Halten Sie Ihr Schlafzimmer unter 18 °C (65 °F) – die optimale Temperatur für Tiefschlaf",
+        "Begrenzen Sie Koffein nach 14:00 Uhr, um die Schlafarchitektur zu schützen"
+      ],
+      "miaHook": "Ihre Schlafgrundlage ist solide. Ich möchte Ihnen zeigen, wie Sie sie noch erholsamer gestalten können – es gibt noch eine Stufe über Ihrem jetzigen Niveau."
+    },
+    {
+      "label": "Leichte übermäßige Schläfrigkeit",
+      "description": "Leicht erhöhte Tagesschläfrigkeit. Kann auf leichten Schlafmangel oder beginnende Schlafprobleme hindeuten.",
+      "actions": [
+        "Erweitern Sie Ihr Schlaffenster in den nächsten 2 Wochen um 30 Minuten und beobachten Sie Ihr Energieniveau",
+        "Überprüfen Sie Ihr Schlafzimmer auf Licht und Lärm – beides fragmentiert den Schlaf, ohne dass Sie vollständig aufwachen",
+        "Vermeiden Sie diese Woche Bildschirme 45 Minuten vor dem Schlafengehen"
+      ],
+      "miaHook": "Ihr Wert liegt im Grenzbereich – das bedeutet, dass kleine Veränderungen jetzt einen großen Unterschied machen können. Ich kann Ihnen genau zeigen, wo Ihr Schlaf undicht ist."
+    },
+    {
+      "label": "Mäßige übermäßige Schläfrigkeit",
+      "description": "Mäßige übermäßige Tagesschläfrigkeit. Dieses Niveau wird mit Beeinträchtigungen beim Fahren, verminderter Produktivität und Stoffwechselproblemen in Verbindung gebracht.",
+      "actions": [
+        "Suchen Sie einen Arzt auf, um eine mögliche Schlafstörung abzuklären – bei diesem Wert ist ein Screening auf Schlafapnoe angemessen",
+        "Stellen Sie den Alkoholkonsum 3 Stunden vor dem Schlafengehen vollständig ein – er fragmentiert die Schlafarchitektur, auch wenn er das Einschlafen erleichtert",
+        "Legen Sie für die nächsten 30 Tage eine feste, nicht verhandelbare Schlafenszeit fest und halten Sie diese ein"
+      ],
+      "miaHook": "Auf diesem Niveau beeinträchtigt Ihr Schlaf alles – Ihr Gewicht, Ihre Stimmung, Ihre Konzentration. Ich habe ein Protokoll, das genau darauf abzielt."
+    },
+    {
+      "label": "Schwere übermäßige Schläfrigkeit",
+      "description": "Schwere Tagesschläfrigkeit. Dies erhöht das Unfallrisiko erheblich und ist mit ernsthaften Schlafstörungen verbunden. Eine medizinische Untersuchung wird dringend empfohlen.",
+      "actions": [
+        "Vereinbaren Sie einen Schlaftest (Polysomnographie) mit Ihrem Arzt – dieser Wert rechtfertigt eine Abklärung",
+        "Fahren Sie nicht, wenn Sie sich schläfrig fühlen – Ihre Reflexe sind bei diesem Schläfrigkeitsgrad beeinträchtigt",
+        "Vermeiden Sie das Bedienen schwerer Maschinen, bis Sie von einem Spezialisten untersucht wurden"
+      ],
+      "miaHook": "Ich möchte direkt sein: Ein so hoher Wert erfordert medizinische Aufmerksamkeit, nicht nur eine Schlafroutine. Lassen Sie mich Ihnen helfen, den richtigen ersten Schritt zu finden."
+    }
+  ],
+  "seoContent": {
+    "intro": "Die Epworth-Schläfrigkeitsskala (ESS) wurde 1991 von Dr. Murray Johns am Epworth Hospital in Melbourne, Australien, entwickelt. Seitdem ist sie zum globalen klinischen Standard für die Messung übermäßiger Tagesschläfrigkeit (EDS) geworden und wird in Schlaflaboren, Krankenhäusern und Forschungseinrichtungen weltweit eingesetzt.\n\nIm Gegensatz zu Schlaftagebüchern oder subjektiven Befindlichkeitseinschätzungen misst die ESS Ihre Wahrscheinlichkeit, in 8 spezifischen Situationen einzunicken – und liefert so ein objektives Bild davon, wie schlafentzogen Sie tatsächlich sind. Die Werte reichen von 0 bis 24. Ein Wert über 10 deutet auf übermäßige Schläfrigkeit hin, die eine klinische Abklärung erfordert.\n\nSchlafstörungen betreffen allein in den USA 50–70 Millionen Menschen (CDC, 2023). Unbehandelte übermäßige Tagesschläfrigkeit erhöht das Risiko von Verkehrsunfällen um das 2,5-fache, trägt zu Gewichtszunahme, Depressionen, Herz-Kreislauf-Erkrankungen bei und verringert die Lebensqualität erheblich.",
+    "faq": [
+      {
+        "q": "Was ist die Epworth-Schläfrigkeitsskala?",
+        "a": "Die ESS ist ein validierter 8-Fragen-Fragebogen, der die Tagesschläfrigkeit misst, indem er fragt, wie wahrscheinlich es ist, dass Sie in alltäglichen Situationen einnicken. Sie ist der globale Standard, der von Schlafspezialisten verwendet wird und 1991 in der Fachzeitschrift Sleep veröffentlicht wurde."
+      },
+      {
+        "q": "Was ist ein normaler Epworth-Wert?",
+        "a": "Ein Wert von 0–7 gilt als normal. Werte von 8–9 deuten auf eine leichte, 10–15 auf eine mittelschwere und 16–24 auf eine schwere übermäßige Schläfrigkeit hin. Die meisten gesunden Erwachsenen erzielen Werte zwischen 4 und 8."
+      },
+      {
+        "q": "Was verursacht übermäßige Tagesschläfrigkeit?",
+        "a": "Zu den häufigsten Ursachen gehören unzureichende Schlafdauer, obstruktive Schlafapnoe, Narkolepsie, Restless-Legs-Syndrom, schlechte Schlafqualität, Medikamente und Depressionen."
+      },
+      {
+        "q": "Sollte ich einen Arzt aufsuchen, wenn ich über 10 Punkte erzielt habe?",
+        "a": "Ja. Ein Wert von 10 oder höher rechtfertigt eine klinische Abklärung. Ihr Arzt kann eine Polysomnographie (Schlaftest) anordnen, um Schlafapnoe oder andere Störungen auszuschließen."
+      },
+      {
+        "q": "Kann schlechte Schlafqualität zu Gewichtszunahme führen?",
+        "a": "Ja. Schlafentzug dereguliert Ghrelin und Leptin – die Hungerhormone – und steigert den Appetit sowie das Verlangen nach kalorienreichen Lebensmitteln. Studien zeigen, dass weniger als 6 Stunden Schlaf pro Nacht das Risiko für Fettleibigkeit um 23 % erhöht."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Übermäßige Tagesschläfrigkeit (EDS) ist ein Zustand, bei dem eine Person tagsüber Schläfrigkeit verspürt und Schwierigkeiten hat, in Situationen wach zu bleiben, in denen Wachsamkeit erwartet wird. Sie betrifft etwa 20 % der Weltbevölkerung und unterscheidet sich von normaler Müdigkeit – es handelt sich um eine anhaltende, pathologische Schläfrigkeit, die die Funktionsfähigkeit beeinträchtigt.\n\nEDS ist ein Hauptsymptom mehrerer Schlafstörungen, darunter obstruktive Schlafapnoe (die häufigste Ursache), Narkolepsie, idiopathische Hypersomnie und zirkadiane Rhythmusstörungen. Sie kann auch auf chronisch unzureichenden Schlaf zurückzuführen sein – die am besten vermeidbare Ursache, die Millionen von Menschen betrifft.\n\nDie Epworth-Schläfrigkeitsskala wurde entwickelt, um EDS objektiv zu messen, indem die Wahrscheinlichkeit des Einnickens in 8 standardisierten Situationen bewertet wird. Im Gegensatz zur Frage 'Fühlen Sie sich müde?' erfasst die ESS Verhaltenshinweise auf Schläfrigkeit, die stark mit physiologischen Messungen wie dem Multiplen Schlaflatenztest (MSLT) korrelieren.",
+    "clinicalBackground": "Die Epworth-Schläfrigkeitsskala wurde von Dr. Murray Johns entwickelt und 1991 in der Fachzeitschrift Sleep veröffentlicht. Dr. Johns war Arzt am Epworth Hospital in Melbourne, der feststellte, dass subjektive Einschätzungen der Schläfrigkeit unzuverlässig waren. Er entwarf die ESS, um die Wahrscheinlichkeit des Einnickens in Situationen zu messen, die sich systematisch in ihren schlafinduzierenden Eigenschaften unterscheiden.\n\nDie ursprüngliche Validierungsstudie zeigte eine starke Korrelation mit objektiven Messungen der Schläfrigkeit (MSLT, r = 0,51) und eine hohe Test-Retest-Reliabilität (r = 0,82). Die ESS wurde seitdem in Dutzenden von Sprachen und Patientengruppen validiert.\n\nSie ist heute das weltweit am häufigsten verwendete klinische Instrument für das Screening von Schlafstörungen, wird von der American Academy of Sleep Medicine (AASM) und der British Sleep Society empfohlen und ist in klinische Leitlinien für Schlafapnoe, Narkolepsie und Hypersomnie weltweit aufgenommen worden.",
+    "howScored": "Die Epworth-Schläfrigkeitsskala fragt, wie wahrscheinlich es ist, dass Sie in 8 bestimmten Situationen auf einer Skala von 0–3 einnicken:\n• 0: Würde nie einnicken\n• 1: Geringe Wahrscheinlichkeit einzunicken\n• 2: Mittlere Wahrscheinlichkeit einzunicken\n• 3: Hohe Wahrscheinlichkeit einzunicken\n\nDie Gesamtpunktzahl reicht von 0 bis 24. Klinische Schwellenwerte:\n• 0–7: Normalbereich (Durchschnitt liegt bei 5–6 bei gesunden Erwachsenen)\n• 8–9: Grenzwertig/leichte übermäßige Schläfrigkeit\n• 10–15: Moderate übermäßige Tagesschläfrigkeit — klinische Abklärung empfohlen\n• 16–24: Schwere übermäßige Tagesschläfrigkeit — dringende Abklärung empfohlen\n\nEin Wert von 10+ hat eine Sensitivität von 78% und eine Spezifität von 79% zur Identifizierung klinisch bedeutsamer Schlafstörungen in der Allgemeinbevölkerung.",
+    "interpretation": "**Wert 0–7 (Normal):** Ihr Schlaf erholt Sie ausreichend. Der durchschnittliche gesunde Erwachsene erreicht 5–6 Punkte. Konzentrieren Sie sich darauf, Ihren Schlafrhythmus beizubehalten und die Schlafqualität zu schützen.\n\n**Wert 8–9 (Leicht/Grenzwertig):** Leicht über dem Normalwert. Dies kann auf ein angesammeltes Schlafdefizit, unregelmäßige Schlafzeiten oder beginnende Schlafprobleme hindeuten. Verhaltensänderungen — gleichbleibende Schlafenszeiten, Verbesserung der Schlafhygiene — sind auf diesem Niveau in der Regel ausreichend.\n\n**Wert 10–15 (Moderat):** Dieser Bereich ist klinisch bedeutsam. Studien zeigen, dass auf diesem Niveau die Fahrleistung ähnlich beeinträchtigt ist wie bei einem Blutalkoholspiegel von 0,05 %. Kognitive Funktion, Stimmung, Stoffwechsel und Immunfunktion sind messbar beeinträchtigt. Eine medizinische Abklärung ist sinnvoll, insbesondere zur Untersuchung auf Schlafapnoe.\n\n**Wert 16–24 (Schwer):** Dieses Ausmaß an Schläfrigkeit stellt ein ernstes Sicherheits- und Gesundheitsrisiko dar. Das Risiko für Kraftfahrzeugunfälle ist 2,5× höher als der Durchschnitt. Eine sofortige medizinische Abklärung einschließlich einer Schlafstudie wird dringend empfohlen.",
+    "whenToSeek": "Konsultieren Sie einen Arzt, wenn:\n\n• Ihr ESS-Wert 10 oder höher ist\n• Ihnen gesagt wurde, dass Sie laut schnarchen oder im Schlaf aufhören zu atmen\n• Sie sich nach einer vollen Nacht Schlaf nicht erholt fühlen\n• Sie tagsüber unwillkürlich einschlafen\n• Ihre Schläfrigkeit Ihre Arbeit, Ihr Fahrverhalten oder Ihre Beziehungen beeinträchtigt\n• Ein Bettpartner ungewöhnliche Beinbewegungen oder nach Luft schnappen beobachtet hat\n\nSuchen Sie sofortige medizinische Hilfe auf, wenn:\n• Sie aufgrund von Müdigkeit beim Fahren einen Beinaheunfall hatten\n• Sie plötzliche Muskelschwäche erleben, die durch Emotionen ausgelöst wird (Kataplexie — ein Zeichen von Narkolepsie)\n• Sie trotz ausreichender Schlafmöglichkeit bei der Arbeit nicht wach bleiben können",
+    "limitations": "**1. Subjektive Erinnerung:** Die ESS misst die wahrgenommene Wahrscheinlichkeit einzunicken, was durch Selbstwahrnehmung und Erinnerungsverzerrung beeinflusst werden kann. Menschen mit schweren Schlafstörungen unterschätzen manchmal ihre Schläfrigkeit, weil chronische Müdigkeit zu ihrem Normalzustand geworden ist.\n\n**2. Situationsabhängigkeit:** Nicht jeder erlebt alle 8 Situationen regelmäßig. Menschen, die zum Beispiel nie Auto fahren, haben möglicherweise Schwierigkeiten, Punkt 8 genau zu beantworten.\n\n**3. Keine Ursachenidentifikation:** Ein hoher ESS-Wert zeigt übermäßige Schläfrigkeit an, diagnostiziert aber nicht deren Ursache. Schlafapnoe, Narkolepsie, Medikamentennebenwirkungen und einfacher Schlafmangel können alle ähnliche Werte erzeugen.\n\n**4. Nicht für Kinder unter 12 Jahren validiert:** Die ESS wurde in erwachsenen Bevölkerungsgruppen entwickelt und validiert. Schläfrigkeit bei Kindern wird mit anderen Instrumenten beurteilt.\n\n**5. Momentaufnahme:** Die ESS spiegelt Ihre aktuelle Schlaferfahrung wider. Reisen, Krankheit, Schichtarbeit und Lebensereignisse können die Werte vorübergehend erhöhen, ohne auf eine chronische Störung hinzuweisen."
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "title": "Anxiety Level Quiz",
+    "description": "Understand how anxiety shows up in your life — and how much of your daily energy it's quietly consuming."
+  },
+
+  "yesnoOptions": ["Yes", "No"],
+
+  "questions": {
+    "anx1": {
+      "text": "How often does your mind race or spiral into \"what if\" thoughts you can't stop?",
+      "options": [
+        "Rarely — I can usually redirect my thoughts",
+        "Sometimes — in stressful periods",
+        "Often — most days it happens",
+        "Almost constantly — it's exhausting"
+      ]
+    },
+    "anx2": {
+      "text": "Do you avoid certain situations or people because they make you anxious?"
+    },
+    "anx3": {
+      "text": "How often do you feel physically tense — chest tightness, shallow breathing, a knot in your stomach?",
+      "scaleLabels": { "min": "Almost never", "max": "Very frequently" }
+    },
+    "anx4": {
+      "text": "Does worrying about the future interfere with your ability to enjoy the present?"
+    },
+    "anx5": {
+      "text": "How do you typically respond when something unexpected happens?",
+      "options": [
+        "Calmly — I adapt fairly well",
+        "A little rattled, but I recover quickly",
+        "It throws me off for a while",
+        "It sends me into a spiral"
+      ]
+    },
+    "anx6": {
+      "text": "Do you find it hard to sleep because your thoughts won't quiet down?",
+      "options": [
+        "No — I sleep fine",
+        "Occasionally — maybe once a week",
+        "Often — a few nights a week",
+        "Almost every night"
+      ]
+    }
+  },
+
+  "buckets": [
+    {
+      "label": "Low Anxiety",
+      "description": "You're managing uncertainty and stress in a healthy way. Your nervous system isn't in chronic alarm mode.",
+      "actions": [
+        "Maintain your current stress management habits — what you're doing is working",
+        "Practice one mindfulness exercise per week to build resilience for harder periods",
+        "Stay connected to people who ground you — social support is the strongest anxiety buffer"
+      ],
+      "miaHook": "Your anxiety baseline is healthy — let's talk about keeping it that way when life gets harder."
+    },
+    {
+      "label": "Moderate Anxiety",
+      "description": "Anxiety is present in your life and affecting some of your choices and enjoyment. The patterns are manageable but worth addressing.",
+      "actions": [
+        "Try a 5-minute daily breathing practice — box breathing (4-4-4-4) measurably reduces cortisol within minutes",
+        "Identify one avoidance behavior and take one small step toward facing it this week",
+        "Limit caffeine to before noon — it amplifies the physiological anxiety response"
+      ],
+      "miaHook": "I noticed a few clear anxiety patterns in your answers — I have some targeted tools that can reduce this noticeably."
+    },
+    {
+      "label": "High Anxiety",
+      "description": "Anxiety is significantly affecting your day-to-day life. This level of sustained alertness is tiring and worth real attention.",
+      "actions": [
+        "Talk to a therapist or doctor — CBT (Cognitive Behavioral Therapy) has the strongest evidence base for anxiety and often shows results in 6–8 sessions",
+        "Remove your biggest daily caffeine source immediately — even this single change reduces anxiety measurably",
+        "Tell one person you trust what you've been experiencing — isolation amplifies anxiety"
+      ],
+      "miaHook": "What you're living with is real — high anxiety is exhausting and isolating. Let me show you where to start unwinding it."
+    }
+  ],
+
+  "seoContent": {
+    "intro": "Anxiety is the most prevalent mental health condition in the world, affecting approximately 284 million people globally (Our World in Data, 2019). Yet most people living with anxiety don't seek help — either because they don't recognize it for what it is, or because they've normalized its effects.\n\nThis quiz assesses six core dimensions of anxiety: cognitive patterns (racing thoughts, worry), behavioral patterns (avoidance), physical symptoms (tension, breathing), sleep impact, emotional reactivity, and present-moment interference. Your results give you a personalized map of how anxiety is showing up in your life.",
+    "faq": [
+      {
+        "q": "What's the difference between normal worry and anxiety?",
+        "a": "Normal worry is proportional to a real threat, temporary, and doesn't significantly impair daily functioning. Anxiety involves excessive worry that is difficult to control, often disproportionate to actual risk, and persistently interferes with daily life, sleep, or relationships."
+      },
+      {
+        "q": "Can anxiety cause physical symptoms?",
+        "a": "Yes. Anxiety activates the sympathetic nervous system (fight-or-flight), causing measurable physical effects: elevated heart rate, shallow breathing, muscle tension, digestive disruption, and elevated cortisol. Chronic anxiety causes long-term physical health effects including increased cardiovascular risk."
+      },
+      {
+        "q": "What treatments work for anxiety?",
+        "a": "Cognitive Behavioral Therapy (CBT) is the most evidence-based treatment, showing significant improvement in 60–80% of people. Exposure therapy is effective for avoidance-based anxiety. Medication (SSRIs, SNRIs) is appropriate for moderate-to-severe cases, often in combination with therapy."
+      },
+      {
+        "q": "Does caffeine make anxiety worse?",
+        "a": "Yes. Caffeine blocks adenosine receptors and increases cortisol and adrenaline — the same physiological pathway activated by anxiety. In people prone to anxiety, caffeine measurably worsens symptoms. Reducing caffeine is one of the fastest single changes for lowering anxiety."
+      }
+    ]
+  },
+
+  "content": {
+    "whatIs": "Anxiety is a natural human emotion that becomes a problem when it is excessive, persistent, and interferes with daily life. At its core, anxiety is the brain's threat-detection system misfiring — treating normal situations as dangerous and keeping the body in a state of physiological readiness that is exhausting and unsustainable.\n\nAnxiety manifests in three ways: cognitive (racing thoughts, catastrophizing, worry spirals), physical (muscle tension, heart palpitations, shallow breathing, digestive issues), and behavioral (avoidance, reassurance-seeking, compulsive behaviors). This quiz captures all three dimensions.",
+
+    "howScored": "This quiz assesses six evidence-based dimensions of anxiety: thought patterns, behavioral avoidance, physical tension symptoms, future-focused worry, reactivity to unexpected events, and sleep impact. Questions use a mix of scaled responses and yes/no to capture both frequency and impact.\n\nScores are normalized to 0–100. Above 70 indicates low anxiety with good coping resources. 40–69 indicates moderate anxiety patterns worth addressing. Below 40 indicates high anxiety that is significantly affecting daily functioning.",
+
+    "whenToSeek": "Consider speaking with a mental health professional if:\n• Your anxiety is affecting your sleep, work, or relationships\n• You are avoiding situations or people because of anxiety\n• Physical anxiety symptoms (heart racing, chest tightness) are frequent\n• You are using alcohol or other substances to manage anxiety\n• Anxiety has been present for more than 6 months\n\nGAD-7 score of 10+ (a clinical anxiety scale) indicates a clinical evaluation is warranted.",
+
+    "limitations": "This quiz is a screening tool, not a clinical assessment. It does not distinguish between different anxiety disorders (Generalized Anxiety Disorder, Social Anxiety, Panic Disorder, PTSD, OCD). A clinical diagnosis requires evaluation by a licensed mental health professional.\n\nAnxiety symptoms also overlap significantly with depression, ADHD, sleep disorders, and certain medical conditions (thyroid issues, cardiovascular problems). A comprehensive evaluation rules out these contributing factors."
+  }
+}

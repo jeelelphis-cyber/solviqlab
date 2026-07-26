@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Cuestionario de Preparación para la Pérdida de Peso",
+    "description": "¿Estás realmente listo para perder peso — o solo lo esperas? Descubre qué se interpone realmente en tu camino antes de empezar."
+  },
+  "questions": {
+    "wr1": {
+      "text": "¿Por qué quieres perder peso ahora mismo? ¿Qué te impulsa realmente?",
+      "options": [
+        "Mi salud — quiero sentirme mejor a largo plazo",
+        "Energía y confianza — calidad de vida diaria",
+        "Un evento próximo — tengo una fecha límite",
+        "Presión externa — otros quieren que lo haga"
+      ]
+    },
+    "wr2": {
+      "text": "¿Has intentado perder peso antes y lo dejaste? ¿Qué pasó?",
+      "options": [
+        "He mantenido éxitos previos bien",
+        "He perdido y recuperado — ahora entiendo por qué",
+        "Lo dejé porque era demasiado restrictivo",
+        "Lo dejé porque no vi resultados rápidamente"
+      ]
+    },
+    "wr3": {
+      "text": "¿Tienes un plan específico y realista sobre cómo cambiarás tu alimentación?"
+    },
+    "wr4": {
+      "text": "¿Qué tan listo te sientes para hacer cambios consistentes — no una dieta drástica, sino cambios de estilo de vida?",
+      "scaleLabels": {
+        "min": "Nada listo",
+        "max": "Completamente listo"
+      }
+    },
+    "wr5": {
+      "text": "¿Cuánto influyen el estrés o las emociones en tus hábitos alimenticios?",
+      "options": [
+        "Muy poco — como según el hambre",
+        "A veces — los días estresantes afectan mis elecciones",
+        "A menudo — la comida es mi consuelo",
+        "Siempre — la alimentación emocional es mi patrón"
+      ]
+    },
+    "wr6": {
+      "text": "¿Tienes apoyo — personas que te animen en lugar de sabotear tus metas?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Listo para comenzar",
+      "description": "Tienes la mentalidad, motivación y conciencia para lograr un progreso real y sostenible. Ahora se trata de la estrategia adecuada.",
+      "actions": [
+        "Comienza esta semana — tu ventana de disposición es real y debe aprovecharse",
+        "Establece una meta específica y medible a 8 semanas (no un número de por vida) — perder 4–6 kg en 8 semanas es realista y motivador",
+        "Informa a tu red de apoyo sobre tu plan — la responsabilidad aumenta las tasas de éxito en un 65%"
+      ],
+      "miaHook": "Estás genuinamente listo — no solo con esperanza. Déjame darte un plan de inicio personalizado basado en tu perfil."
+    },
+    {
+      "label": "Casi listo",
+      "description": "Estás motivado, pero aún faltan algunos elementos clave. Abordarlos ahora marcará la diferencia entre un cambio duradero y otro falso comienzo.",
+      "actions": [
+        "Identifica la razón específica por la que los intentos anteriores se detuvieron — aborda esa causa raíz antes de comenzar de nuevo",
+        "Construye primero tu sistema de apoyo — identifica 1–2 personas que animen activamente tu camino",
+        "Dedica 2 semanas a mejorar tu sueño a 7+ horas antes de comenzar — el sueño es el predictor número 1 de la adherencia a la dieta"
+      ],
+      "miaHook": "Puedo ver lo que falta en tu panorama de disposición — cerremos esas brechas antes de que empieces, para que esta vez sea definitivo."
+    },
+    {
+      "label": "Aún no es momento",
+      "description": "Comenzar ahora mismo puede llevar a frustración y otro ciclo de paradas y reinicios. Construyamos primero la base adecuada.",
+      "actions": [
+        "Concéntrate en entender tu porqué — la motivación basada en la salud tiene una tasa de éxito 3 veces mayor que la motivación impulsada por eventos o presión externa",
+        "Aborda la alimentación emocional antes de comenzar una dieta — sin esto, ningún plan alimenticio se mantendrá a largo plazo",
+        "Trabaja con un coach, terapeuta o dietista para construir la base adecuada — intentar hacerlo solo con el panorama actual de disposición es la receta para otro reinicio"
+      ],
+      "miaHook": "Comenzar sin abordar lo que veo en tus respuestas es lo que lleva a rendirse. Hagámoslo bien — y solo una vez."
+    }
+  ],
+  "seoContent": {
+    "intro": "La investigación sobre el cambio de comportamiento muestra consistentemente que la motivación y la intención por sí solas no son predictores suficientes del éxito en la pérdida de peso. Lo que separa a las personas que logran una pérdida de peso duradera de aquellas que pasan por intentos repetidos es la preparación psicológica: claridad de motivación, expectativas realistas, un plan concreto y apoyo suficiente.\n\nEste cuestionario evalúa seis dimensiones de la preparación para la pérdida de peso, basadas en la investigación del Modelo Transteórico (Prochaska & DiClemente) y la psicología conductual. Comprender dónde te encuentras realmente — no dónde te gustaría estar — es la visión más valiosa que puedes tener antes de comenzar.",
+    "faq": [
+      {
+        "q": "¿Cuál es el predictor más fuerte del éxito en la pérdida de peso?",
+        "a": "La investigación identifica consistentemente la motivación intrínseca (impulsada por la salud frente a la apariencia), la autoeficacia (confianza en la propia capacidad para hacer cambios), el apoyo social y las expectativas realistas como los predictores más fuertes de la pérdida de peso sostenida. Las personas que pierden peso por razones de salud lo mantienen significativamente más tiempo que aquellas motivadas por eventos o presión externa."
+      },
+      {
+        "q": "¿Por qué fracasan la mayoría de las dietas?",
+        "a": "Las razones principales son: comenzar con un déficit calórico demasiado grande (hambre insostenible), depender de la fuerza de voluntad en lugar del diseño del entorno, no abordar la alimentación emocional, falta de apoyo social, pensamiento de todo o nada (un mal día lleva a abandonar) y establecer plazos poco realistas. Estos problemas se pueden solucionar con la preparación adecuada."
+      },
+      {
+        "q": "¿Cómo rompo el ciclo de perder y recuperar peso?",
+        "a": "La investigación sobre el 'ciclo de peso' muestra que los factores clave para romper el patrón son: cambiar de una mentalidad de dieta a corto plazo a un cambio de estilo de vida permanente, abordar la alimentación emocional con herramientas conductuales (no con fuerza de voluntad), incorporar una fase de mantenimiento desde el principio y elegir un enfoque lo suficientemente sostenible como para imaginarlo durante 5 años."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "La preparación para la pérdida de peso es un concepto psicológico desarrollado a partir del Modelo Transteórico del cambio de comportamiento (Prochaska & DiClemente, 1983). Describe cuán preparada está una persona — cognitiva, motivacional y conductualmente — para realizar y mantener cambios significativos en el estilo de vida.\n\nLa preparación no es un estado fijo — fluctúa según las circunstancias de la vida, los niveles de estrés y el entorno social. Intentar perder peso durante períodos de baja preparación aumenta significativamente la probabilidad de recaída y contribuye al frustrante ciclo de intentos repetidos.",
+    "howScored": "Este cuestionario evalúa seis dimensiones de preparación: calidad de la motivación (intrínseca vs. extrínseca), aprendizaje de intentos anteriores, planificación concreta, confianza subjetiva en la preparación, patrones de alimentación emocional y disponibilidad de apoyo social.\n\nPuntuaciones superiores a 70 indican alta preparación — comienza ahora. 40–69 indica preparación parcial — primero se deben abordar brechas específicas. Por debajo de 40 indica que las condiciones fundamentales para el éxito aún no están en su lugar — la preparación mejorará significativamente los resultados.",
+    "whenToSeek": "Considera apoyo profesional si:\n• Has tenido 3 o más intentos significativos de pérdida de peso que no resultaron en un cambio duradero\n• La alimentación emocional o por estrés es un patrón significativo que se siente fuera de control\n• Tienes un IMC superior a 35 — la supervisión médica mejora significativamente los resultados en este nivel\n• Están presentes atracones, ciclos de restricción u otros patrones alimentarios desordenados\n• Las preocupaciones sobre el peso están afectando significativamente la salud mental o la calidad de vida",
+    "limitations": "Este cuestionario evalúa la preparación psicológica, no la idoneidad médica para la pérdida de peso. Las condiciones de salud individuales, los medicamentos y los factores metabólicos no capturados aquí pueden influir significativamente en la capacidad y el enfoque para perder peso. Siempre consulta a un profesional de la salud antes de comenzar un programa significativo de pérdida de peso, especialmente si tienes condiciones de salud subyacentes."
+  }
+}

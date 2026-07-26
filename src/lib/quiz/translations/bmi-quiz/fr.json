@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Quiz sur l'IMC et la santé du poids",
+    "description": "Découvrez comment votre poids actuel, vos habitudes et votre mode de vie affectent votre santé — en 5 questions honnêtes."
+  },
+  "questions": {
+    "bq1": {
+      "text": "Comment décririez-vous votre poids actuel par rapport à ce qui vous semble juste pour votre corps ?",
+      "options": [
+        "À peu près correct — je me sens à l'aise",
+        "Légèrement décalé — quelques kilos de plus ou de moins",
+        "Nettement au-dessus ou en dessous de là où je veux être",
+        "Loin de là où je dois être"
+      ]
+    },
+    "bq2": {
+      "text": "À quelle fréquence bougez-vous votre corps d'une manière qui accélère votre rythme cardiaque ?",
+      "options": [
+        "La plupart des jours — cela fait partie de ma routine",
+        "2 à 3 fois par semaine",
+        "Une fois par semaine ou moins",
+        "Rarement ou jamais"
+      ]
+    },
+    "bq3": {
+      "text": "À quel point votre alimentation quotidienne typique est-elle équilibrée ?",
+      "scaleLabels": {
+        "min": "Principalement transformée",
+        "max": "Principalement des aliments complets"
+      }
+    },
+    "bq4": {
+      "text": "Avez-vous tendance à manger lorsque vous êtes stressé(e) ou ennuyé(e), même lorsque vous n'avez pas faim ?"
+    },
+    "bq5": {
+      "text": "À quelle fréquence suivez-vous ou réfléchissez-vous à ce que vous mangez ?",
+      "options": [
+        "Régulièrement — je suis attentif(ve) à mes choix",
+        "Parfois — quand je m'en souviens",
+        "Rarement — je mange sans réfléchir",
+        "Jamais suivi"
+      ]
+    },
+    "bq6": {
+      "text": "Comment évalueriez-vous votre niveau d'énergie tout au long de la journée ?",
+      "options": [
+        "Stable — je me sens bien la plupart du temps",
+        "Variable — hauts et bas",
+        "Souvent fatigué(e), surtout l'après-midi",
+        "Épuisé(e) la plupart du temps"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Zone de poids santé",
+      "description": "Vos habitudes suggèrent que vous êtes en bonne voie. De petits ajustements constants peuvent vous y maintenir à long terme.",
+      "actions": [
+        "Maintenez vos habitudes actuelles en matière d'alimentation et d'activité physique — la constance est l'outil le plus sous-estimé",
+        "Ajoutez une séance de renforcement musculaire par semaine — la masse musculaire est le prédicteur le plus fort d'un vieillissement en bonne santé et d'un métabolisme efficace",
+        "Pesez-vous chaque semaine (au même moment, le même jour) — la détection précoce des tendances évite une dérive progressive"
+      ],
+      "miaHook": "Votre score montre des bases solides — je souhaite m'appuyer sur ce qui fonctionne déjà pour vous."
+    },
+    {
+      "label": "Des progrès possibles",
+      "description": "Vous êtes conscient(e) de votre santé, mais quelques habitudes clés vous freinent. La bonne nouvelle : de petits changements font une grande différence.",
+      "actions": [
+        "Réduisez les aliments ultra-transformés de 50 % cette semaine — ce seul changement est associé à des améliorations significatives du poids et des marqueurs métaboliques",
+        "Ajoutez 7 000 pas par jour comme base de référence — en dessous de ce seuil, la gestion du poids devient nettement plus difficile",
+        "Traitez l'alimentation émotionnelle si elle est présente — ce n'est pas une question de volonté, mais un schéma qui répond bien à des stratégies structurées"
+      ],
+      "miaHook": "Je vois 2 à 3 éléments spécifiques qui, s'ils sont modifiés, feraient évoluer votre tendance pondérale en 4 semaines."
+    },
+    {
+      "label": "Nécessite une attention particulière",
+      "description": "Vos schémas actuels peuvent aller à l'encontre de vos objectifs de santé. Mais la prise de conscience est la première étape, et vous y êtes déjà.",
+      "actions": [
+        "Commencez par comprendre votre base calorique de référence : même un journal alimentaire approximatif tenu pendant une semaine révèle des schémas que vous ne voyez pas actuellement.",
+        "Bougez 20 minutes chaque jour — les détails importent moins que la régularité quotidienne.",
+        "Envisagez de consulter un diététicien diplômé — un accompagnement personnalisé surpasse largement les conseils génériques pour des objectifs de poids significatifs."
+      ],
+      "miaHook": "J'ai vu des personnes dans votre situation exacte transformer complètement leur vie — laissez-moi vous montrer par où commencer."
+    }
+  ],
+  "seoContent": {
+    "intro": "L'IMC (Indice de Masse Corporelle) est un outil de dépistage largement utilisé, mais il ne représente qu'un point de données, pas un tableau complet de la santé. Votre poids interagit avec votre niveau d'activité, la qualité de votre alimentation, votre stress, votre sommeil et votre composition corporelle pour déterminer les résultats réels en matière de santé.\n\nCe quiz va au-delà de l'IMC pour évaluer les facteurs comportementaux et liés au mode de vie qui déterminent si votre poids évolue vers la santé ou s'en éloigne — vous offrant des informations exploitables plutôt qu'un simple chiffre.",
+    "faq": [
+      {
+        "q": "L'IMC est-il une mesure de santé précise ?",
+        "a": "L'IMC est un outil de dépistage utile au niveau de la population, mais il présente des limites individuelles importantes. Il ne fait pas la distinction entre la masse musculaire et la masse grasse (les athlètes sont souvent classés comme « en surpoids »), ne tient pas compte de la répartition des graisses (viscérale vs sous-cutanée) et sa précision varie selon les ethnies. Le tour de taille et le rapport taille-hanches sont souvent plus prédictifs du risque pour la santé métabolique."
+      },
+      {
+        "q": "Qu'est-ce qu'un poids santé ?",
+        "a": "Un poids santé se définit au mieux comme le poids auquel vos marqueurs métaboliques (tension artérielle, glycémie, cholestérol) se situent dans les plages normales et où vous disposez d'une énergie et d'une fonction physique adéquates. Pour la plupart des gens, cela correspond à un IMC compris entre 18,5 et 24,9 kg/m², bien que les plages saines individuelles varient en fonction de l'âge, du sexe, de l'origine ethnique et de la masse musculaire."
+      },
+      {
+        "q": "Quelle est la méthode la plus efficace pour gérer son poids ?",
+        "a": "Les recherches montrent systématiquement qu'une gestion durable du poids nécessite un déficit calorique modeste (300–500 kcal/jour), un apport élevé en protéines (1,6–2 g/kg de poids corporel) pour préserver les muscles, un entraînement régulier en résistance, un sommeil suffisant (un mauvais sommeil augmente la ghréline de 28 %) et une gestion du stress (un cortisol élevé favorise le stockage des graisses)."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "La santé pondérale est l'intersection de la masse corporelle, de la composition corporelle, de la fonction métabolique et du comportement lié au mode de vie. L'excès de tissu adipeux — en particulier la graisse viscérale stockée autour des organes abdominaux — est un moteur direct de la résistance à l'insuline, de l'inflammation systémique, des maladies cardiovasculaires et du diabète de type 2.\n\nCependant, le poids n'est pas uniquement un choix comportemental. La génétique représente 40 à 70 % de la variance de l'IMC. La privation de sommeil, les hormones du stress, la composition du microbiote intestinal et certains médicaments affectent tous significativement la régulation du poids. Ce quiz évalue les facteurs comportementaux sur lesquels vous pouvez agir.",
+    "howScored": "Ce quiz évalue six dimensions liées au poids : la satisfaction subjective vis-à-vis du poids, la fréquence de l'activité cardiovasculaire, la qualité de l'alimentation, les habitudes alimentaires émotionnelles, la conscience nutritionnelle et les niveaux d'énergie (un indicateur métabolique clé).\n\nLes scores supérieurs à 70 indiquent des habitudes saines soutenant la gestion du poids. 40–69 indique des schémas identifiables qui méritent d'être améliorés. En dessous de 40, cela indique de multiples habitudes qui vont à l'encontre des objectifs de poids et de santé métabolique.",
+    "whenToSeek": "Consultez un professionnel de santé si :\n• Votre IMC est supérieur à 30 (obésité) — une évaluation médicale et des conseils personnalisés sont appropriés\n• Vous avez essayé plusieurs approches de perte de poids sans succès\n• La prise de poids a été rapide (5 kg ou plus en 3 mois sans changement intentionnel)\n• Vous souffrez de diabète, d'hypertension artérielle ou d'hypercholestérolémie en plus d'un excès de poids\n• L'alimentation émotionnelle ou les troubles du comportement alimentaire affectent significativement votre relation avec la nourriture",
+    "limitations": "Ce quiz évalue les comportements liés au mode de vie, et non le poids réel ou l'IMC. C'est un outil de dépistage des habitudes, pas une évaluation médicale. Le poids est influencé par des facteurs allant au-delà du comportement, notamment la génétique, les médicaments, les conditions hormonales et les antécédents médicaux. Interprétez toujours les résultats en contexte avec d'autres informations de santé et avis médicaux."
+  }
+}

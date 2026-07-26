@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "title": "Depressie Screening Quiz (PHQ-9)",
+    "description": "De PHQ-9 is de gouden standaard voor depressiescreening, wereldwijd gebruikt door artsen. Duurt 2 minuten. Gebaseerd op meer dan 20 jaar klinisch onderzoek.",
+    "medicalNote": "Dit is een screeningsinstrument, geen klinische diagnose. Als u in crisis verkeert, neem dan onmiddellijk contact op met een professional in de geestelijke gezondheidszorg of een crisislijn."
+  },
+  "likertOptions": [
+    "Helemaal niet",
+    "Meerdere dagen",
+    "Meer dan de helft van de dagen",
+    "Bijna elke dag"
+  ],
+  "questions": {
+    "phq1": {
+      "text": "Weinig interesse of plezier in dingen doen",
+      "hint": "Anhedonie — verlies van plezier — is een van de twee kerneigenschappen van depressie."
+    },
+    "phq2": {
+      "text": "Somber, depressief of hopeloos voelen",
+      "hint": "Aanhoudende sombere stemming is het tweede kerndiagnostische criterium voor een depressieve stoornis."
+    },
+    "phq3": {
+      "text": "Moeite met in slaap vallen of doorslapen, of te veel slapen",
+      "hint": "Slaapstoornissen komen voor bij meer dan 90% van de mensen met depressie en verslechteren de cognitieve functie."
+    },
+    "phq4": {
+      "text": "Vermoeidheid of weinig energie hebben",
+      "hint": "Depressiegerelateerde vermoeidheid is neurobiologisch — veroorzaakt door ontregelde serotonine en dopamine."
+    },
+    "phq5": {
+      "text": "Weinig eetlust of te veel eten",
+      "hint": "Veranderingen in eetlust treffen 70–80% van de depressieve personen. Beide uitersten zijn klinische signalen."
+    },
+    "phq6": {
+      "text": "Een slecht gevoel over uzelf hebben — of dat u een mislukkeling bent of uzelf of uw gezin teleurgesteld heeft",
+      "hint": "Aanhoudende schuldgevoelens en gevoelens van waardeloosheid behoren tot de sterkste voorspellers van de ernst van depressie."
+    },
+    "phq7": {
+      "text": "Moeite met concentreren op dingen, zoals lezen of televisie kijken",
+      "hint": "Depressie vermindert de activiteit in de prefrontale cortex, wat direct het concentratievermogen en het geheugen aantast."
+    },
+    "phq8": {
+      "text": "Zo langzaam bewegen of spreken dat andere mensen het hebben opgemerkt — of het tegenovergestelde, zo rusteloos of ongedurig zijn dat je veel meer dan normaal in beweging bent",
+      "hint": "Psychomotorische veranderingen zijn waarneembaar voor anderen en vormen een belangrijke indicator van de ernst bij klinische depressie."
+    },
+    "phq9": {
+      "text": "Gedachten dat je beter af zou zijn als je dood was, of over jezelf op de een of andere manier pijn doen",
+      "hint": "Als u deze gedachten heeft, neem dan onmiddellijk contact op met een crisislijn of een zorgverlener."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Minimale of Geen Depressie",
+      "description": "Uw score wijst niet op significante depressieve symptomen. Blijf uw mentale welzijn onderhouden.",
+      "actions": [
+        "Houd uw huidige slaapschema aan — een consistent slaappatroon is de sterkste beschermende factor tegen depressie",
+        "Blijf in beweging: zelfs 20 minuten wandelen 3 keer per week verlaagt het risico op depressie met 26% (Harvard Health, 2018)",
+        "Check maandelijks in — stemming fluctueert van nature en vroegtijdig bewustzijn is uw beste hulpmiddel"
+      ],
+      "miaHook": "Uw score valt in de gezonde range. Laat me u laten zien wat het onderzoek zegt om dit zo te houden."
+    },
+    {
+      "label": "Milde Depressie",
+      "description": "Er zijn milde depressieve symptomen aanwezig. Deze zijn echt en verdienen aandacht — ze kunnen zonder ondersteuning verergeren.",
+      "actions": [
+        "Start een dagelijks stemmingslogboek van 5 minuten — het bijhouden van patronen is de eerste stap naar verandering",
+        "Voeg gestructureerde fysieke activiteit toe: 30 minuten matige lichaamsbeweging heeft antidepressieve effecten die gelijkwaardig zijn aan medicatie bij milde gevallen (Blumenthal et al., JAMA, 2007)",
+        "Praat met iemand die u vertrouwt of overweeg een gesprek met een therapeut — zelfs 4–6 sessies kunnen milde symptomen aanzienlijk verminderen"
+      ],
+      "miaHook": "Milde symptomen die vroeg worden opgemerkt, zijn het gemakkelijkst aan te pakken. Dit is wat het verschil maakt bij uw score."
+    },
+    {
+      "label": "Matige Depressie",
+      "description": "Matige depressie heeft een significante invloed op het dagelijks functioneren. Professionele ondersteuning naast leefstijlaanpassingen wordt aanbevolen.",
+      "actions": [
+        "Plan deze week een afspraak met uw huisarts of een professional in de geestelijke gezondheidszorg — matige depressie reageert zeer goed op behandeling",
+        "Vertel iemand die je vertrouwt hoe je je voelt — isolatie versterkt depressieve symptomen",
+        "Bescherm je basisbehoeften: slaap 7–9 uur, eet regelmatig en ga dagelijks naar buiten — dit zijn geen opties bij matige depressie"
+      ],
+      "miaHook": "Op dit niveau heb je meer nodig dan zelfhulpmiddelen. Hier lees je hoe je de juiste volgende stap zet."
+    },
+    {
+      "label": "Matig Ernstige Depressie",
+      "description": "Je symptomen hebben een aanzienlijke impact op je leven. Er bestaan effectieve behandelingen — neem snel contact op met een zorgverlener.",
+      "actions": [
+        "Neem binnen 48 uur contact op met een professional in de geestelijke gezondheidszorg of je huisarts — dit niveau van depressie is goed behandelbaar",
+        "Als je in de VS bent, bel dan de hulplijn van SAMHSA: 1-800-662-4357 (gratis, vertrouwelijk, 24/7)",
+        "Vraag iemand die je vertrouwt om je te steunen bij het maken van die eerste afspraak — je hoeft dit niet alleen te doen"
+      ],
+      "miaHook": "Je symptomen verdienen professionele zorg — en effectieve behandeling werkt. Laat me je helpen de eerste stap te zetten."
+    },
+    {
+      "label": "Ernstige Depressie",
+      "description": "Ernstige depressie. Zoek onmiddellijk professionele hulp. Je verdient de juiste zorg en er bestaan effectieve behandelingen.",
+      "actions": [
+        "Neem contact op met een crisislijn of spoedeisende hulp als je in gevaar bent: 988 Suicide & Crisis Lifeline (VS), Samaritans 116 123 (VK/Ierland)",
+        "Ga naar de dichtstbijzijnde spoedeisende hulp of bel een vertrouwd persoon om je te brengen — je moet nu niet alleen zijn",
+        "Weet dat ernstige depressie een medische aandoening is — het is geen zwakte en het is niet blijvend. Behandeling werkt."
+      ],
+      "miaHook": "Zoek nu steun. Je doet ertoe en er bestaat effectieve hulp."
+    }
+  ],
+  "seoContent": {
+    "intro": "De PHQ-9 (Patient Health Questionnaire-9) is het meest gebruikte, klinisch gevalideerde depressiescreeningsinstrument ter wereld. Ontwikkeld door drs. Robert Spitzer, Janet Williams en Kurt Kroenke, is het gevalideerd in meer dan 8.000 onderzoeken in meer dan 80 landen en wordt het door de WHO, NHS, APA, Mayo Clinic en CDC gebruikt als primair screeningsinstrument.\n\nIn tegenstelling tot algemene stemmingsquizzen, verwijst de PHQ-9 direct naar de negen diagnostische criteria voor een depressieve stoornis (MDD) uit de DSM-5. Elke vraag komt overeen met een kernsymptoom dat clinici bij elke depressiebeoordeling evalueren. Dit maakt het uniek nauwkeurig: je score is geen persoonlijkheidsbeoordeling — het is een gestandaardiseerde klinische meting.\n\nScores variëren van 0 tot 27. Een score van 10 of hoger heeft een sensitiviteit van 88% en een specificiteit van 88% voor een depressieve stoornis (Kroenke et al., JGIM 2001). Dit betekent dat het de aandoening bij bijna 9 van de 10 mensen correct identificeert — dezelfde nauwkeurigheid als het meten van de bloeddruk bij hypertensie.",
+    "faq": [
+      {
+        "q": "Wat is de PHQ-9 en wie heeft deze ontwikkeld?",
+        "a": "De PHQ-9 (Patient Health Questionnaire-9) is ontwikkeld door drs. Robert Spitzer, Janet Williams en Kurt Kroenke aan de Columbia University, gefinancierd door Pfizer Inc. Het werd voor het eerst gepubliceerd in 2001 in het Journal of General Internal Medicine (PMID: 11556941). Het is in het publieke domein — wat betekent dat elke arts, onderzoeker of platform het vrij kan gebruiken. Het is nu het meest gebruikte depressiescreeningsinstrument wereldwijd, toegepast in de eerstelijnszorg, psychiatrie, onderzoek en digitale gezondheidszorg."
+      },
+      {
+        "q": "Wat betekenen PHQ-9-scores?",
+        "a": "PHQ-9-scores variëren van 0 tot 27. De klinische drempels zijn: 0–4 (geen of minimale depressie), 5–9 (lichte depressie), 10–14 (matige depressie), 15–19 (matig ernstige depressie) en 20–27 (ernstige depressie). Een score van 10 of hoger is de standaard klinische afkapwaarde voor het diagnosticeren van een depressieve stoornis, met een sensitiviteit van 88% en een specificiteit van 88%."
+      },
+      {
+        "q": "Is deze quiz een medische diagnose?",
+        "a": "Nee. De PHQ-9 is een screeningsinstrument — het identificeert wie waarschijnlijk depressie heeft en een professional moet raadplegen. Het is geen vervanging voor een klinisch interview, lichamelijk onderzoek of formele diagnose. Alleen een erkende zorgverlener (arts, psychiater, psycholoog) kan een depressieve stoornis (Major Depressive Disorder) diagnosticeren. Een PHQ-9-score van 10+ wordt echter door elke grote medische instelling serieus genomen en is voldoende reden om een evaluatie aan te vragen."
+      },
+      {
+        "q": "Hoe nauwkeurig is de PHQ-9?",
+        "a": "De PHQ-9 is gevalideerd in honderden onderzoeken. De nauwkeurigheidsmetingen zijn: sensitiviteit 88%, specificiteit 88%, positief voorspellende waarde 71–85%, negatief voorspellende waarde 95% (Kroenke, Spitzer & Williams, JGIM 2001). Ter vergelijking: een mammogram heeft ongeveer 87% sensitiviteit. De PHQ-9 is een van de meest rigoureus gevalideerde instrumenten in de gehele geestelijke gezondheidszorgscreening."
+      },
+      {
+        "q": "Hoe vaak moet ik de PHQ-9 opnieuw doen?",
+        "a": "Klinici nemen de PHQ-9 doorgaans elke 2–4 weken opnieuw af bij het monitoren van de behandelrespons, of elke 3–6 maanden voor algemeen welzijnsonderzoek. Als u 10+ scoorde, doe de test dan na 2 weken opnieuw na het starten van een interventie (therapie, leefstijlveranderingen, medicatie) om te meten of uw score verbetert. Een daling van 5 punten wordt beschouwd als een klinisch betekenisvolle verbetering."
+      },
+      {
+        "q": "Wat moet ik doen als ik 10 of hoger scoor?",
+        "a": "Een score van 10+ betekent dat er symptomen op depressieniveau aanwezig zijn en dat u met een zorgverlener moet spreken. U kunt beginnen bij uw huisarts — zij zijn getraind om PHQ-9-resultaten te bespreken en kunnen u indien nodig doorverwijzen naar een specialist in de geestelijke gezondheidszorg. Als uw score 20+ is, zoek dan dringend zorg. Als u gedachten aan zelfbeschadiging heeft (PHQ-9 item 9), neem dan onmiddellijk contact op met een crisislijn: 988 (VS), 116 123 Samaritans (VK), of uw lokale hulpdiensten."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Depressie is een van de meest voorkomende medische aandoeningen ter wereld en treft wereldwijd ongeveer 280 miljoen mensen (WHO, 2023). Het is geen verdriet — het is een neurobiologische stoornis die wordt gekenmerkt door aanhoudende veranderingen in stemming, cognitie, slaap, eetlust, energie en motivatie die ten minste twee weken duren en het dagelijks functioneren belemmeren.\n\nEen depressieve stoornis (Major Depressive Disorder, MDD) wordt gediagnosticeerd wanneer vijf of meer van de negen PHQ-9-symptomen bijna elke dag gedurende ten minste twee weken aanwezig zijn, waarbij ten minste één symptoom een sombere stemming of anhedonie (verlies van interesse) is. Depressie heeft een duidelijke neurobiologische basis: het omvat ontregeling van serotonine, noradrenaline, dopamine en de HPA-as (hypothalamus-hypofyse-bijnier).\n\nDepressie is goed behandelbaar. Ongeveer 80–90% van de mensen met depressie reageert positief op behandeling — doorgaans psychotherapie, medicatie of een combinatie. De meest voorkomende reden dat behandeling faalt, is dat er niet mee wordt begonnen.",
+    "clinicalBackground": "De PHQ-9 is ontwikkeld als onderdeel van het PRIME-MD-project (Primary Care Evaluation of Mental Disorders), een grootschalig onderzoek dat bedoeld was om psychiatrische diagnostische hulpmiddelen naar de eerstelijnszorg te brengen, waar de meeste geestelijke gezondheidsproblemen onopgemerkt blijven.\n\nDe negen items komen direct overeen met de DSM-IV- (nu DSM-5) criteria voor een depressieve episode. Elk item gebruikt een 4-punts Likertschaal die de frequentie over de afgelopen twee weken meet: 0 (Helemaal niet), 1 (Enkele dagen), 2 (Meer dan de helft van de dagen), 3 (Bijna elke dag).\n\nDe oorspronkelijke validatiestudie (Kroenke, Spitzer & Williams, 2001) includeerde 6.000 patiënten in acht eerstelijnsklinieken. De PHQ-9 is sindsdien gevalideerd in meer dan 8.000 onderzoeken in meer dan 80 landen, bij verschillende leeftijdsgroepen (adolescenten, volwassenen, ouderen), medische populaties (kanker, hartziekten, diabetes) en culturele contexten. Het is vertaald in meer dan 100 talen.",
+    "howScored": "De PHQ-9 wordt gescoord door de numerieke waarden van alle negen antwoorden op te tellen: 0 (Helemaal niet), 1 (Enkele dagen), 2 (Meer dan de helft van de dagen), 3 (Bijna elke dag). De totale score varieert van 0 tot 27.\n\nKlinische drempelwaarden vastgesteld door Kroenke et al. (2001):\n• 0–4: Minimale of geen depressie\n• 5–9: Milde depressie\n• 10–14: Matige depressie (standaard diagnostische afkapwaarde: ≥10)\n• 15–19: Matig ernstige depressie\n• 20–27: Ernstige depressie\n\nItem 9 (gedachten aan zelfbeschadiging) wordt altijd apart geïnterpreteerd, ongeacht de totale score — elke score boven 0 op dit item vereist klinische aandacht.\n\nVoor behandelmonitoring wordt een verandering van 5 punten als klinisch betekenisvol beschouwd. Remissie wordt doorgaans gedefinieerd als een score onder 5.",
+    "interpretation": "Uw score in context begrijpen:\n\n**Score 0–4 (Minimaal):** Dit bereik weerspiegelt normale stemmingsschommelingen. De meeste mensen ervaren af en toe een sombere stemming, vermoeidheid of slaapveranderingen — dit wijst niet op depressie. Focus op onderhoud: consistente slaap, regelmatige beweging en sociale verbinding zijn de meest onderbouwde beschermende factoren.\n\n**Score 5–9 (Mild):** Symptomen zijn aanwezig maar nog niet op diagnostisch niveau. Dit is het meest behandelbare bereik — milde depressie reageert goed op gedragsinterventies (beweging, slaaphygiëne, gestructureerde sociale activiteit) en kortdurende psychologische therapie (CGT). Onbehandeld gaat milde depressie in ongeveer 30% van de gevallen over in matige of ernstige depressie.\n\n**Score 10–14 (Matig):** Symptomen voldoen aan of naderen de klinische diagnostische criteria en hebben waarschijnlijk invloed op het dagelijks functioneren. Dit bereik heeft de sterkste wetenschappelijke onderbouwing voor gecombineerde behandeling (therapie + leefstijl) en soms medicatie. Een arts of professional in de geestelijke gezondheidszorg moet u evalueren.\n\n**Score 15–19 (Matig ernstig):** Er is sprake van significante dagelijkse beperking. Dit bereik wijst sterk op de noodzaak van professionele behandeling — doorgaans een combinatie van psychotherapie (CGT, IPT) en antidepressiva. Responspercentages op dit niveau zijn ongeveer 60–70% met behandeling.\n\n**Score 20–27 (Ernstig):** Ernstige depressie is een medisch noodgeval, op dezelfde manier als een diabetische crisis een medisch noodgeval is. Onmiddellijke professionele zorg is vereist. Als u gedachten aan zelfbeschadiging heeft, neem dan nu contact op met de hulpdiensten of een crisislijn.",
+    "whenToSeek": "U moet contact opnemen met een zorgverlener als:\n\n• Uw PHQ-9-score 10 of hoger is\n• Uw score 5–9 is en al meer dan 4 weken consistent is\n• U hoger dan 0 heeft geantwoord op vraag 9 (gedachten aan zelfbeschadiging)\n• Uw stemming uw werk, relaties of dagelijks functioneren aanzienlijk beïnvloedt\n• U zelfhulpstrategieën gedurende 4+ weken heeft geprobeerd zonder verbetering\n\nU moet onmiddellijk contact opnemen met de hulpdiensten of een crisislijn als:\n• U gedachten heeft aan zelfmoord of zelfbeschadiging\n• U zich niet in staat voelt uzelf veilig te houden\n• Een dierbare in direct gevaar verkeert\n\nCrisisbronnen: 988 Suicide & Crisis Lifeline (VS, bellen of sms'en), Samaritans 116 123 (VK/IE), Crisis Text Line: sms HOME naar 741741 (VS/CA/VK).",
+    "limitations": "De PHQ-9 is een screeningsinstrument met belangrijke beperkingen die elke gebruiker moet begrijpen:\n\n**1. Het is geen diagnose.** Alleen een erkende clinicus kan een depressieve stoornis diagnosticeren na een uitgebreide evaluatie, inclusief medische voorgeschiedenis, lichamelijk onderzoek en klinisch interview.\n\n**2. Lichamelijke aandoeningen kunnen scores verhogen.** Medische aandoeningen zoals hypothyreoïdie, bloedarmoede, chronische pijn, slaapapneu en diabetes veroorzaken symptomen (vermoeidheid, slaapveranderingen, eetlustveranderingen) die overlappen met depressie. Een arts kan onderscheid maken tussen deze.\n\n**3. Het houdt geen rekening met context.** Een hoge score direct na een rouwproces, bevalling of een grote levensgebeurtenis kan een normale aanpassing weerspiegelen in plaats van een klinische depressie. De DSM-5 vereist dat symptomen significant lijden of beperkingen veroorzaken.\n\n**4. Culturele variatie.** Hoewel de PHQ-9 in verschillende culturen is gevalideerd, varieert de uiting van depressie. Sommige culturen uiten depressie meer via lichamelijke symptomen (pijn, vermoeidheid) dan via emotionele. Een clinicus die bekend is met uw achtergrond kan betere context bieden.\n\n**5. Herinneringsbias.** De PHQ-9 vraagt naar de afgelopen twee weken. Uw score weerspiegelt mogelijk geen periodes van langere duur of fluctuerende symptomen die een langer klinisch interview zou kunnen vastleggen."
+  }
+}

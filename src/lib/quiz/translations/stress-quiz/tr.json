@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "title": "Stres Seviyesi Testi (PSS-10)",
+    "description": "Algılanan Stres Ölçeği, dünyada en yaygın kullanılan stres ölçüm aracıdır. Harvard, Stanford, CDC ve NIH araştırmaları tarafından kullanılır. 3 dakika sürer.",
+    "medicalNote": "Bu, algılanan stresi ölçer, klinik bir tanı değildir. Kronik yüksek stres ciddi bir sağlık riskidir. Bunalmış hissediyorsanız lütfen profesyonel destek alın."
+  },
+  "likertOptions": [
+    "Hiçbir zaman",
+    "Neredeyse hiçbir zaman",
+    "Bazen",
+    "Oldukça sık",
+    "Çok sık"
+  ],
+  "reverseLikertOptions": [
+    "Hiçbir zaman",
+    "Neredeyse hiçbir zaman",
+    "Bazen",
+    "Oldukça sık",
+    "Çok sık"
+  ],
+  "questions": {
+    "pss1": {
+      "text": "Geçen ay, beklenmedik bir şey olduğu için ne sıklıkla üzüldünüz?",
+      "hint": "Beklenmedik olaylara karşı duygusal tepki, genel stres yükünün en güçlü göstergelerinden biridir."
+    },
+    "pss2": {
+      "text": "Geçen ay, hayatınızdaki önemli şeyleri kontrol edemediğinizi ne sıklıkla hissettiniz?",
+      "hint": "Algılanan kontrol eksikliği, stresin psikolojik çekirdeğidir — kortizol tepkisini aktive eder."
+    },
+    "pss3": {
+      "text": "Geçen ay, ne sıklıkla gergin ve stresli hissettiniz?",
+      "hint": "Kronik sinirsel aktivasyon, sempatik sinir sistemini neredeyse sürekli bir uyanıklık halinde tutar."
+    },
+    "pss4": {
+      "text": "Geçen ay, kişisel sorunlarınızla başa çıkma yeteneğiniz konusunda ne sıklıkla kendinize güvendiniz?",
+      "hint": "Öz yeterlilik strese karşı bir tampon görevi görür — bu madde ters puanlanır. Yüksek güven = düşük stres."
+    },
+    "pss5": {
+      "text": "Geçen ay, ne sıklıkla işlerin istediğiniz gibi gittiğini hissettiniz?",
+      "hint": "Yaşam yönüne dair olumlu değerlendirme koruyucu bir faktördür. Bu madde ters puanlanır."
+    },
+    "pss6": {
+      "text": "Geçen ay, ne sıklıkla yapmanız gereken her şeyle başa çıkamadığınızı hissettiniz?",
+      "hint": "Görev yükü karşısında bunalmış hissetmek doğrudan bir stres göstergesi ve tükenmişliğin habercisidir."
+    },
+    "pss7": {
+      "text": "Geçen ay, hayatınızdaki sinir bozucu durumları ne sıklıkla kontrol edebildiniz?",
+      "hint": "Sinir bozucu durumları düzenleme, duygusal kontrol kapasitesini yansıtır — bu madde ters puanlanır."
+    },
+    "pss8": {
+      "text": "Geçen ay, ne sıklıkla her şeyin üstesinden geldiğinizi hissettiniz?",
+      "hint": "Koşullar üzerinde hakimiyet hissi, temel stres tamponlayıcı kaynaklardan biridir."
+    },
+    "pss9": {
+      "text": "Geçen ay, kontrolünüz dışındaki şeyler yüzünden ne sıklıkla öfkelendiniz?",
+      "hint": "Kontrol edilemeyen olaylara duyulan öfke, HPA eksenini harekete geçirir ve kortizolü yükseltir — doğrudan bir stres biyobelirteci."
+    },
+    "pss10": {
+      "text": "Geçen ay, zorlukların o kadar biriktiğini ve üstesinden gelemediğinizi ne sıklıkla hissettiniz?",
+      "hint": "Bilişsel bunaltı — sorunların aşılamaz göründüğü durum — tükenmişliğin en güçlü öngörücüsüdür."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Düşük Stres",
+      "description": "Algılanan stres seviyeniz düşük. İyi başa çıkma kaynaklarına sahipsiniz ve hayatınızı büyük ölçüde kontrol altında hissediyorsunuz.",
+      "actions": [
+        "Stres yönetimi alışkanlıklarınızı sürdürün — tutarlılık yoğunluktan daha önemlidir",
+        "Haftada bir proaktif iyileşme aktivitesi yapın (doğa yürüyüşü, sauna, sosyal zaman)",
+        "Şu anda sizin için işe yarayan şeyleri belgeleyin — daha zor dönemlerde buna geri dönmek isteyeceksiniz."
+      ],
+      "miaHook": "Stresiniz şu anda iyi yönetiliyor. Bir sonraki zorlu dönem gelmeden önce dayanıklılığınızı artırmanıza yardımcı olmak istiyorum."
+    },
+    {
+      "label": "Orta Düzey Stres",
+      "description": "Orta düzeyde algılanan stres. Başa çıkıyorsunuz ancak baskıyı hissediyorsunuz. Müdahale edilmezse bu durum tükenmişliğe dönüşebilir.",
+      "actions": [
+        "İşten sonra günlük 5 dakikalık bir rahatlama ritüeli ekleyin — bir yürüyüş, nefes egzersizi veya günlük yazma.",
+        "Bu hafta en önemli 3 stres kaynağınızı belirleyin ve bunlardan birini ortadan kaldırın veya azaltın.",
+        "Uyku, stresle başa çıkmada en güçlü aracınızdır — tartışmasız 7-8 saat uykuya öncelik verin."
+      ],
+      "miaHook": "Orta düzey stres, çoğu insanın farkında olmadan yaşadığı ve yavaşça enerjisini tüketen bir durumdur. Puanınızın tam olarak nerede tükendiğini gösteren bir protokolüm var."
+    },
+    {
+      "label": "Yüksek Stres",
+      "description": "Yüksek algılanan stres. Bu seviyede stres, fiziksel ve zihinsel sağlığınıza önemli ölçüde zarar vermektedir. Araştırmalar, PSS puanının 27'nin üzerinde olmasını depresyon, kalp hastalığı ve bağışıklık baskılanması riskinin artmasıyla ilişkilendirmektedir.",
+      "actions": [
+        "Bu hafta hayatınızdan önemli bir taahhüdü çıkarın — bir gün değil, bu hafta.",
+        "Stres yükünüz hakkında bugün bir terapist, doktor veya güvendiğiniz biriyle konuşun.",
+        "Öğleden sonra kafeini ve tamamen alkolü bırakın — her ikisi de kortizol tepkisini kötüleştirir."
+      ],
+      "miaHook": "Puanınız, vücudunuzun gerçek fizyolojik hasar aldığı bir aralıkta. Size hemen harekete geçmenizde yardımcı olmak istiyorum — 30 günlük bir plan değil, bugün."
+    }
+  ],
+  "seoContent": {
+    "intro": "Algılanan Stres Ölçeği (PSS-10), 1983 yılında Carnegie Mellon Üniversitesi'nden Dr. Sheldon Cohen tarafından geliştirilmiştir. Araştırma ve klinik ortamlarda stres algısını ölçmek için en yaygın kullanılan psikolojik araçtır ve CDC, NIH, Harvard ve Stanford tarafından binlerce çalışmada kullanılmıştır.\n\nStresli olayları sayan stres ölçümlerinin aksine, PSS-10 ne kadar stresli hissettiğinizi ölçer — kendi durumunuza ilişkin psikolojik değerlendirmenizi. Bu, onu benzersiz bir şekilde doğru kılar çünkü iki kişi aynı olayları yaşayabilir ve tamamen farklı stres tepkileri verebilir.\n\nPuanlar 0 ile 40 arasında değişir. Ortalama bir Amerikalı 13 puan alır (Cohen ve ark., 2016). 27'nin üzerindeki puanlar, depresyon, kardiyovasküler hastalık ve bağışıklık sistemi baskılanması riskinin önemli ölçüde artmasıyla ilişkilidir (APA Stress in America, 2023). Stres seviyenizi anlamak, onu yönetmeye yönelik ilk adımdır.",
+    "faq": [
+      {
+        "q": "PSS-10 nedir?",
+        "a": "Algılanan Stres Ölçeği (PSS-10), 1983 yılında Dr. Sheldon Cohen tarafından geliştirilmiş, 10 maddelik geçerli bir ankettir. Küresel olarak stres araştırmalarında en yaygın kullanılan araçtır ve ne kadar stresli, bunalmış ve kontrol dışında hissettiğinizi ölçer."
+      },
+      {
+        "q": "Normal bir PSS-10 puanı nedir?",
+        "a": "Ortalama bir Amerikalının PSS-10 puanı yaklaşık 13'tür. 0–13 puan düşük stresi, 14–26 orta düzey stresi ve 27–40 yüksek stresi gösterir. Kadınlar tüm yaş gruplarında erkeklerden biraz daha yüksek puan alma eğilimindedir."
+      },
+      {
+        "q": "Neden bazı sorular ters puanlanıyor?",
+        "a": "Dört madde (4, 5, 7, 8) olumlu duyguları — güven ve kontrolü — sorgular. Bunlar ters puanlanır çünkü daha güvenli veya kontrollü hissetmek daha düşük stresi gösterir. Bu, standart PSS-10 protokolüdür ve bu testte otomatik olarak yapılır."
+      },
+      {
+        "q": "Stres fiziksel sağlık sorunlarına neden olabilir mi?",
+        "a": "Evet. Kronik yüksek stres, kortizolü yükseltir, bağışıklık sistemini baskılar, iltihabı artırır ve kalp hastalığı, diyabet, depresyon ve obezite riskini önemli ölçüde yükseltir. PSS-10 puanının 27'nin üzerinde olması, birden fazla boylamsal çalışmada bu sonuçlarla ilişkilendirilmiştir."
+      },
+      {
+        "q": "Bu testi ne sıklıkla tekrar yapmalıyım?",
+        "a": "Aylık tekrarlar, eğilimleri takip etmenizi sağlar. Stres genellikle yaşam koşullarına bağlı olarak dalgalanır, ancak 2+ ay boyunca sürekli yüksek puanlar (27+) profesyonel destek gerektirir."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Stres, vücudun algılanan başa çıkma kaynaklarını aşan taleplere karşı fizyolojik ve psikolojik tepkisidir. Kısa süreli stres uyum sağlayıcıdır — odağı keskinleştirir ve enerjiyi harekete geçirir. Ancak kronik stres ciddi bir sağlık tehdididir.\n\nAlgılanan Stres Ölçeği, algılanan stresi — yani bunalmış, kontrolü kaybetmiş ve başa çıkamama hissine dair öznel deneyiminizi — ölçer. Bu, nesnel stres faktörü sayımlarından (kaç kötü olay olduğu) farklıdır çünkü aynı koşullarla karşı karşıya kalan iki kişi, başa çıkma kaynakları, sosyal destek ve bilişsel değerlendirme kalıplarına bağlı olarak çok farklı stres tepkileri verebilir.\n\nPSS-10, bu öznel deneyimi ölçmek için küresel altın standarttır. 60'tan fazla ülkede yüz binlerce katılımcı üzerinde doğrulanmıştır ve her büyük sağlık kurumu tarafından klinik araştırmalarda kullanılmaktadır.",
+    "clinicalBackground": "Dr. Sheldon Cohen, PSS'yi 1983 yılında Carnegie Mellon Üniversitesi'nde, stres ve bulaşıcı hastalıklara yatkınlık üzerine yaptığı araştırmanın bir parçası olarak geliştirmiştir. Ölçek, kişinin hayatındaki durumların ne ölçüde stresli olarak değerlendirildiğini ölçmek için tasarlanmıştır.\n\nPSS-10 (10 maddelik versiyon) en yaygın kullanılan formattır. 6 olumsuz ifadeli madde (yüksek yanıtlar = daha fazla stres) ve ters puanlanan 4 olumlu ifadeli maddeden oluşur. Bu çift yönlü format, onay yanlılığını azaltır ve hem stresi hem de başa çıkma kaynaklarını ölçer.\n\nPSS, 50'den fazla dile çevrilmiştir ve WHO, CDC, NIH, Harvard Halk Sağlığı Okulu ile JAMA, Lancet ve NEJM dahil olmak üzere büyük tıp dergilerinde yayınlanan araştırmalarda kullanılmaktadır.",
+    "howScored": "PSS-10, geçen ay için 5 puanlık bir sıklık ölçeği kullanır:\n• 0: Hiçbir zaman\n• 1: Neredeyse hiçbir zaman\n• 2: Bazen\n• 3: Oldukça sık\n• 4: Çok sık\n\n4, 5, 7 ve 8. maddeler ters puanlanır (0=4, 1=3, 2=2, 3=1, 4=0). Toplam puanlar 0 ile 40 arasında değişir.\n\nKlinik eşikler:\n• 0–13: Düşük algılanan stres\n• 14–26: Orta düzey algılanan stres\n• 27–40: Yüksek algılanan stres\n\nOrtalama bir ABD'li yetişkin yaklaşık 13 puan alır. Tedavi yanıtını takip etmek için 5 puanlık bir değişiklik klinik olarak anlamlı kabul edilir.",
+    "interpretation": "**Puan 0–13 (Düşük Stres):** Hayatınız üzerinde büyük ölçüde kontrol sahibi olduğunuzu ve iyi bir başa çıkma kapasiteniz olduğunu hissediyorsunuz. Araştırmalar, düşük PSS puanlarının daha iyi bağışıklık fonksiyonu, daha düşük kardiyovasküler risk ve daha uzun telomer uzunluğu (biyolojik bir yaşlanma belirteci) ile ilişkili olduğunu göstermektedir. İşe yarayan şeyleri sürdürmeye odaklanın.\n\n**Puan 14–26 (Orta Düzey Stres):** İdare ediyorsunuz ancak baskı altındasınız. Bu aralık, çoğu çalışan yetişkinin bulunduğu yerdir ve birçoğu bunu, kümülatif fiziksel bedelini fark etmeden normalleştirir. Aylar boyunca süren orta düzey stres, uyku bozukluğu, kilo alımı, artan hastalık yatkınlığı ve ilişki gerginliği ile ilişkilidir.\n\n**Puan 27–40 (Yüksek Stres):** Bu seviyede, kronik stres sağlığınıza ölçülebilir şekilde zarar vermektedir. Yüksek PSS puanları şunlarla ilişkilidir: %40 artmış depresyon riski, 2 kat daha yüksek kardiyovasküler olay olasılığı, aşılara karşı %50 azalmış bağışıklık yanıtı, hızlanmış hücresel yaşlanma ve önemli ölçüde bozulmuş karar verme yetisi. Bu bir kişilik sorunu değil — aktif müdahale gerektiren fizyolojik bir durumdur.",
+    "whenToSeek": "Aşağıdaki durumlarda profesyonel destek almayı düşünün:\n\n• PSS-10 puanınız 27 veya daha yüksekse\n• Puanınız 6 haftadan uzun süredir orta-yüksek aralıktaysa\n• Stres uykunuzu, iştahınızı veya fiziksel sağlığınızı etkiliyorsa\n• Başa çıkmak için alkol, yiyecek veya diğer maddeleri kullanıyorsanız\n• Stres iş performansınızı veya ilişkilerinizi etkiliyorsa\n• Yüksek stresin yanı sıra anksiyete, panik atak veya kalıcı düşük ruh hali yaşıyorsanız\n\nStres yönetimi için kanıta dayalı profesyonel destek türleri:\n• Bilişsel Davranışçı Terapi (CBT) — PSS puanlarını ortalama 8–12 puan azaltır\n• Farkındalık Temelli Stres Azaltma (MBSR) — güçlü kanıt temeline sahip 8 haftalık program\n• İlaç tedavisi (SSRI'lar/SNRI'lar) — stres klinik anksiyete veya depresyona ilerlediğinde uygundur",
+    "limitations": "**1. Kendi bildirim yanlılığı:** PSS, nesnel stres yükünü değil, algılanan stresi ölçer. Sorunları küçümseme eğiliminde olan kişiler, gerçek fizyolojik stres seviyelerinin önerdiğinden daha düşük puan alabilir.\n\n**2. Anlık ölçüm:** PSS, geçen ayı sorar. Akut bir kriz (yas, iş kaybı) sırasında alınan yüksek bir puan, temel stres seviyenizi yansıtmayabilir.\n\n**3. Stres faktörlerini belirlemez:** PSS, stres deneyimini ölçer, kaynağını değil. Belirli stres faktörlerini belirlemek daha ayrıntılı bir değerlendirme gerektirir.\n\n**4. Kültürel farklılık:** Stresin ifadesi ve kabul edilebilirliği kültürler arasında farklılık gösterir. Bazı popülasyonlar, psikolojik sıkıntıyı ifade etmeyle ilgili kültürel normları yansıtan, gerçek stres seviyelerindeki farklılıklardan ziyade sistematik olarak daha yüksek veya daha düşük puanlar gösterir.\n\n**5. Klinik değerlendirmenin yerini tutmaz:** Yüksek bir PSS puanı, dikkat edilmesi gerektiğini gösterir, bir anksiyete veya stres bozukluğu teşhisi değildir. Klinik durumlar profesyonel değerlendirme gerektirir."
+  }
+}

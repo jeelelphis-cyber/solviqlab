@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import { notFound }     from 'next/navigation'
 import { QUIZ_SLUGS, QUIZ_REGISTRY } from '@/lib/quiz/registry'
-import { QuizClient }   from '@/components/quiz/QuizClient'
+import { loadQuizTranslation }        from '@/lib/quiz/translation-loader'
+import { getT }                       from '@/lib/i18n/ui'
+import { QuizClient }                 from '@/components/quiz/QuizClient'
 
 const SUPPORTED_LANGS = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl', 'tr', 'it', 'nl']
 const BASE_URL = 'https://solviqlab.com'
@@ -20,11 +22,12 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const config = QUIZ_REGISTRY[params.slug]
   if (!config) return { title: 'Quiz Not Found' }
 
+  const tr        = loadQuizTranslation(params.slug, params.lang)
   const scaleTag  = config.clinicalScale ? ` (${config.clinicalScale})` : ''
-  const title     = `${config.title}${scaleTag} — Free Online Test | SolviqLab`
-  const description = config.seoContent?.intro
-    ? config.seoContent.intro.slice(0, 160)
-    : config.description
+  const title     = `${tr.meta.title}${scaleTag} — Free Online Test | SolviqLab`
+  const description = tr.seoContent.intro
+    ? tr.seoContent.intro.slice(0, 160)
+    : tr.meta.description
   const url = `${BASE_URL}/${params.lang}/quiz/${params.slug}`
 
   return {
@@ -51,12 +54,17 @@ export default function QuizPage({ params }: PageProps) {
   const config = QUIZ_REGISTRY[slug]
   if (!config) notFound()
 
+  const tr = loadQuizTranslation(slug, lang)
+  const t  = getT(lang)
+
+  const introParagraphs = tr.seoContent.intro?.split('\n\n') ?? []
+
   // Schema.org — Quiz + FAQPage
   const schemaQuiz = {
     '@context':  'https://schema.org',
     '@type':     'Quiz',
-    name:        config.title,
-    description: config.description,
+    name:        tr.meta.title,
+    description: tr.meta.description,
     url:         `${BASE_URL}/${lang}/quiz/${slug}`,
     inLanguage:  lang,
     author:      { '@type': 'Organization', name: 'SolviqLab', url: BASE_URL },
@@ -73,19 +81,17 @@ export default function QuizPage({ params }: PageProps) {
     }),
   }
 
-  const schemaFAQ = config.seoContent?.faq && config.seoContent.faq.length > 0
+  const schemaFAQ = tr.seoContent.faq && tr.seoContent.faq.length > 0
     ? {
         '@context':  'https://schema.org',
         '@type':     'FAQPage',
-        mainEntity:  config.seoContent.faq.map(item => ({
-          '@type':          'Question',
-          name:             item.q,
-          acceptedAnswer:   { '@type': 'Answer', text: item.a },
+        mainEntity:  tr.seoContent.faq.map(item => ({
+          '@type':        'Question',
+          name:           item.q,
+          acceptedAnswer: { '@type': 'Answer', text: item.a },
         })),
       }
     : null
-
-  const introParagraphs = config.seoContent?.intro?.split('\n\n') ?? []
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900">
@@ -107,18 +113,18 @@ export default function QuizPage({ params }: PageProps) {
           <span>›</span>
           <a href={`/${lang}/quiz`} className="hover:text-violet-600 transition-colors">Quizzes</a>
           <span>›</span>
-          <span className="text-slate-600 dark:text-slate-300">{config.title}</span>
+          <span className="text-slate-600 dark:text-slate-300">{tr.meta.title}</span>
         </nav>
 
         {/* Page title */}
         <div className="mb-6">
           <div className="flex items-center gap-3 mb-2">
             <span className="text-3xl">{config.icon}</span>
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight">{config.title}</h1>
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight">{tr.meta.title}</h1>
           </div>
           {config.clinicalScale && (
             <div className="inline-flex items-center gap-1.5 rounded-full bg-violet-50 dark:bg-violet-900/20 border border-violet-200 dark:border-violet-800 px-3 py-1 text-xs text-violet-700 dark:text-violet-300 font-medium">
-              ✓ Clinically validated · {config.clinicalScale}
+              ✓ {t('quiz.clinically_validated')} · {config.clinicalScale}
             </div>
           )}
         </div>
@@ -132,13 +138,13 @@ export default function QuizPage({ params }: PageProps) {
 
         {/* Quiz card */}
         <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm mb-8">
-          <QuizClient config={config} lang={lang} />
+          <QuizClient config={config} translation={tr} lang={lang} />
         </div>
 
         {/* Trust / medical note */}
-        {config.medicalNote && (
+        {tr.meta.medicalNote && (
           <p className="text-xs text-slate-400 dark:text-slate-500 text-center mb-8 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3">
-            ⚕ {config.medicalNote}
+            ⚕ {tr.meta.medicalNote}
           </p>
         )}
 
@@ -151,10 +157,46 @@ export default function QuizPage({ params }: PageProps) {
           </div>
         )}
 
+        {/* Content sections (Gold Standard) */}
+        {tr.content.whatIs && (
+          <div className="mb-8">
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-3">
+              {lang === 'en' ? 'What is this?' : tr.meta.title.split('(')[0]?.trim()}
+            </h2>
+            <div className="prose prose-sm dark:prose-invert max-w-none text-slate-600 dark:text-slate-400">
+              {tr.content.whatIs.split('\n\n').map((p, i) => (
+                <p key={i} className="leading-relaxed mb-3">{p}</p>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {tr.content.interpretation && (
+          <div className="mb-8">
+            <div className="prose prose-sm dark:prose-invert max-w-none text-slate-600 dark:text-slate-400">
+              {tr.content.interpretation.split('\n\n').map((p, i) => (
+                <p key={i} className="leading-relaxed mb-3">{p}</p>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {tr.content.whenToSeek && (
+          <div className="mb-8 bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
+            <div className="prose prose-sm dark:prose-invert max-w-none text-slate-700 dark:text-slate-300">
+              {tr.content.whenToSeek.split('\n\n').map((p, i) => (
+                <p key={i} className="leading-relaxed mb-2 last:mb-0">{p}</p>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Sources */}
         {config.sources && config.sources.length > 0 && (
           <div className="mb-10">
-            <h2 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">Scientific Sources</h2>
+            <h2 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
+              {t('ui.scientific_sources')}
+            </h2>
             <ul className="space-y-1">
               {config.sources.map((s, i) => (
                 <li key={i} className="text-xs text-slate-500 dark:text-slate-400 flex items-start gap-1.5">
@@ -170,11 +212,13 @@ export default function QuizPage({ params }: PageProps) {
         )}
 
         {/* FAQ */}
-        {config.seoContent?.faq && config.seoContent.faq.length > 0 && (
+        {tr.seoContent.faq && tr.seoContent.faq.length > 0 && (
           <div className="mb-10">
-            <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-5">Frequently Asked Questions</h2>
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-5">
+              Frequently Asked Questions
+            </h2>
             <div className="space-y-5">
-              {config.seoContent.faq.map((item, i) => (
+              {tr.seoContent.faq.map((item, i) => (
                 <div key={i} className="border-b border-slate-100 dark:border-slate-800 pb-5 last:border-0 last:pb-0">
                   <h3 className="text-sm font-semibold text-slate-800 dark:text-slate-200 mb-1.5">{item.q}</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{item.a}</p>
@@ -186,7 +230,7 @@ export default function QuizPage({ params }: PageProps) {
 
         {/* Footer trust */}
         <p className="text-center text-xs text-slate-400 dark:text-slate-500">
-          Free · No account required · Results stay on your device · Not a medical diagnosis
+          {t('ui.free_no_account')}
         </p>
       </div>
     </div>

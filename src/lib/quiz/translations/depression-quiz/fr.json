@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "title": "Questionnaire de dépistage de la dépression (PHQ-9)",
+    "description": "Le PHQ-9 est l'outil de dépistage de la dépression de référence utilisé par les médecins dans le monde entier. Il prend 2 minutes. Basé sur plus de 20 ans de recherche clinique.",
+    "medicalNote": "Cet outil est un instrument de dépistage, pas un diagnostic clinique. Si vous êtes en crise, veuillez contacter immédiatement un professionnel de la santé mentale ou une ligne d'écoute."
+  },
+  "likertOptions": [
+    "Pas du tout",
+    "Plusieurs jours",
+    "Plus de la moitié des jours",
+    "Presque tous les jours"
+  ],
+  "questions": {
+    "phq1": {
+      "text": "Peu d'intérêt ou de plaisir à faire des choses",
+      "hint": "L'anhédonie — perte de plaisir — est l'un des deux symptômes principaux de la dépression."
+    },
+    "phq2": {
+      "text": "Se sentir triste, déprimé ou désespéré",
+      "hint": "L'humeur basse persistante est le deuxième critère diagnostique principal du trouble dépressif majeur."
+    },
+    "phq3": {
+      "text": "Difficultés à s'endormir ou à rester endormi, ou dormir trop",
+      "hint": "Les troubles du sommeil surviennent chez plus de 90 % des personnes souffrant de dépression et aggravent les fonctions cognitives."
+    },
+    "phq4": {
+      "text": "Se sentir fatigué ou avoir peu d'énergie",
+      "hint": "La fatigue liée à la dépression est neurobiologique — causée par une dérégulation de la sérotonine et de la dopamine."
+    },
+    "phq5": {
+      "text": "Manque d'appétit ou hyperphagie",
+      "hint": "Les changements d'appétit touchent 70 à 80 % des personnes dépressives. Les deux extrêmes sont des signaux cliniques."
+    },
+    "phq6": {
+      "text": "Avoir une mauvaise opinion de soi-même — ou penser que l'on est un échec ou que l'on a déçu sa famille ou soi-même",
+      "hint": "La culpabilité persistante et le sentiment d'inutilité sont parmi les prédicteurs les plus forts de la sévérité de la dépression."
+    },
+    "phq7": {
+      "text": "Difficultés à se concentrer sur des choses, comme lire ou regarder la télévision",
+      "hint": "La dépression réduit l'activité du cortex préfrontal, ce qui altère directement l'attention et la mémoire."
+    },
+    "phq8": {
+      "text": "Se déplacer ou parler si lentement que d'autres personnes auraient pu le remarquer — ou au contraire, être si agité ou nerveux que vous avez bougé beaucoup plus que d'habitude",
+      "hint": "Les changements psychomoteurs sont observables par autrui et constituent un marqueur clé de sévérité dans la dépression clinique."
+    },
+    "phq9": {
+      "text": "Des pensées selon lesquelles vous seriez mieux mort, ou de vous faire du mal d'une manière ou d'une autre",
+      "hint": "Si vous avez ces pensées, veuillez contacter immédiatement une ligne de crise ou un professionnel de santé."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Dépression minime ou absente",
+      "description": "Votre score ne suggère aucun symptôme dépressif significatif. Continuez à prendre soin de votre bien-être mental.",
+      "actions": [
+        "Maintenez votre rythme de sommeil actuel — un sommeil régulier est le facteur protecteur le plus fort contre la dépression",
+        "Continuez à bouger : même 20 minutes de marche 3 fois par semaine réduit le risque de dépression de 26 % (Harvard Health, 2018)",
+        "Faites un point mensuel — l'humeur fluctue naturellement et une prise de conscience précoce est votre meilleur outil"
+      ],
+      "miaHook": "Votre score se situe dans la fourchette saine. Laissez-moi vous montrer ce que la recherche dit pour le maintenir."
+    },
+    {
+      "label": "Dépression légère",
+      "description": "Des symptômes dépressifs légers sont présents. Ils sont réels et méritent de l'attention — ils peuvent progresser sans soutien.",
+      "actions": [
+        "Commencez un journal d'humeur quotidien de 5 minutes — suivre les schémas est la première étape vers le changement",
+        "Ajoutez une activité physique structurée : 30 minutes d'exercice modéré ont des effets antidépresseurs équivalents à ceux des médicaments pour les cas légers (Blumenthal et al., JAMA, 2007)",
+        "Parlez à quelqu'un en qui vous avez confiance ou envisagez de consulter un thérapeute — même 4 à 6 séances peuvent réduire significativement les symptômes légers"
+      ],
+      "miaHook": "Les symptômes légers détectés tôt sont les plus faciles à traiter. Voici ce qui fait vraiment la différence à votre niveau de score."
+    },
+    {
+      "label": "Dépression modérée",
+      "description": "La dépression modérée affecte significativement le fonctionnement quotidien. Un soutien professionnel associé à des changements de mode de vie est recommandé.",
+      "actions": [
+        "Prenez rendez-vous avec votre médecin ou un professionnel de la santé mentale cette semaine — la dépression modérée répond très bien au traitement",
+        "Parlez à une personne de confiance de ce que vous ressentez : l'isolement aggrave les symptômes dépressifs.",
+        "Protégez vos bases fondamentales : dormez 7 à 9 heures, mangez régulièrement et sortez chaque jour — ces éléments ne sont pas optionnels face à une dépression modérée."
+      ],
+      "miaHook": "À ce niveau, vous avez besoin de plus que des outils d'auto-assistance. Voici comment faire le bon pas suivant."
+    },
+    {
+      "label": "Dépression modérément sévère",
+      "description": "Vos symptômes ont un impact significatif sur votre vie. Des traitements efficaces existent — veuillez consulter un professionnel de santé rapidement.",
+      "actions": [
+        "Contactez un professionnel de la santé mentale ou votre médecin dans les 48 heures — ce niveau de dépression est très traitable.",
+        "Si vous êtes aux États-Unis, vous pouvez appeler la ligne d'assistance de SAMHSA : 1-800-662-4357 (gratuit, confidentiel, 24h/24 et 7j/7).",
+        "Demandez à une personne de confiance de vous soutenir pour prendre ce premier rendez-vous — vous n'avez pas à traverser cela seul(e)."
+      ],
+      "miaHook": "Vos symptômes méritent des soins professionnels — et un traitement efficace fonctionne. Laissez-moi vous aider à faire le premier pas."
+    },
+    {
+      "label": "Dépression sévère",
+      "description": "Dépression sévère. Veuillez demander de l'aide professionnelle immédiatement. Vous méritez des soins appropriés et des traitements efficaces existent.",
+      "actions": [
+        "Veuillez contacter une ligne de crise ou les services d'urgence si vous êtes en danger : 988 Suicide & Crisis Lifeline (États-Unis), Samaritans 116 123 (Royaume-Uni/Irlande).",
+        "Rendez-vous aux urgences les plus proches ou appelez une personne de confiance pour vous y emmener — vous ne devriez pas être seul(e) en ce moment.",
+        "Sachez que la dépression sévère est une condition médicale — ce n'est pas une faiblesse et ce n'est pas permanent. Le traitement fonctionne."
+      ],
+      "miaHook": "Veuillez demander du soutien maintenant. Vous comptez et une aide efficace existe."
+    }
+  ],
+  "seoContent": {
+    "intro": "Le PHQ-9 (Patient Health Questionnaire-9) est l'outil de dépistage de la dépression le plus utilisé et cliniquement validé au monde. Développé par les Drs. Robert Spitzer, Janet Williams et Kurt Kroenke, il a été validé dans plus de 8 000 études dans plus de 80 pays et est utilisé par l'OMS, le NHS, l'APA, la Mayo Clinic et le CDC comme instrument de dépistage principal.\n\nContrairement aux quiz d'humeur généraux, le PHQ-9 correspond directement aux neuf critères diagnostiques du trouble dépressif majeur (TDM) du DSM-5. Chaque question correspond à un symptôme central que les cliniciens évaluent dans chaque évaluation de la dépression. Cela le rend particulièrement précis : votre score n'est pas une évaluation de la personnalité — c'est une mesure clinique standardisée.\n\nLes scores vont de 0 à 27. Un score de 10 ou plus a une sensibilité de 88 % et une spécificité de 88 % pour le trouble dépressif majeur (Kroenke et al., JGIM 2001). Cela signifie qu'il identifie correctement la condition chez près de 9 personnes sur 10 — la même précision que la mesure de la pression artérielle pour l'hypertension.",
+    "faq": [
+      {
+        "q": "Qu'est-ce que le PHQ-9 et qui l'a développé ?",
+        "a": "Le PHQ-9 (Patient Health Questionnaire-9) a été développé par les Drs. Robert Spitzer, Janet Williams et Kurt Kroenke à l'Université Columbia, financé par Pfizer Inc. Il a été publié pour la première fois en 2001 dans le Journal of General Internal Medicine (PMID : 11556941). Il est dans le domaine public — ce qui signifie que tout médecin, chercheur ou plateforme peut l'utiliser librement. C'est désormais l'outil de dépistage de la dépression le plus largement adopté dans le monde, utilisé en soins primaires, en psychiatrie, en recherche et en santé numérique."
+      },
+      {
+        "q": "Que signifient les scores du PHQ-9 ?",
+        "a": "Les scores du PHQ-9 vont de 0 à 27. Les seuils cliniques sont : 0–4 (dépression minimale ou absente), 5–9 (dépression légère), 10–14 (dépression modérée), 15–19 (dépression modérément sévère) et 20–27 (dépression sévère). Un score de 10 ou plus est le seuil clinique standard pour diagnostiquer un trouble dépressif majeur, avec une sensibilité de 88 % et une spécificité de 88 %."
+      },
+      {
+        "q": "Ce questionnaire est-il un diagnostic médical ?",
+        "a": "Non. Le PHQ-9 est un outil de dépistage — il identifie les personnes susceptibles de souffrir de dépression et devant consulter un professionnel. Il ne remplace pas un entretien clinique, un examen physique ou un diagnostic formel. Seul un professionnel de santé agréé (médecin, psychiatre, psychologue) peut diagnostiquer un trouble dépressif majeur. Cependant, un score PHQ-9 de 10 ou plus est pris au sérieux par toutes les grandes institutions médicales et constitue une justification suffisante pour demander une évaluation."
+      },
+      {
+        "q": "Quelle est la précision du PHQ-9 ?",
+        "a": "Le PHQ-9 a été validé dans des centaines d'études. Ses mesures de précision sont : sensibilité 88 %, spécificité 88 %, valeur prédictive positive 71–85 %, valeur prédictive négative 95 % (Kroenke, Spitzer & Williams, JGIM 2001). À titre de comparaison, une mammographie a une sensibilité d'environ 87 %. Le PHQ-9 est l'un des outils les plus rigoureusement validés dans l'ensemble du dépistage en santé mentale."
+      },
+      {
+        "q": "À quelle fréquence devrais-je repasser le PHQ-9 ?",
+        "a": "Les cliniciens réadministrent généralement le PHQ-9 toutes les 2 à 4 semaines lors du suivi de la réponse au traitement, ou tous les 3 à 6 mois pour une surveillance générale du bien-être. Si vous avez obtenu un score de 10 ou plus, repassez-le dans 2 semaines après avoir commencé une intervention (thérapie, changements de mode de vie, médicaments) pour mesurer si votre score s'améliore. Une baisse de 5 points est considérée comme une amélioration cliniquement significative."
+      },
+      {
+        "q": "Que dois-je faire si j'obtiens un score de 10 ou plus ?",
+        "a": "Un score de 10 ou plus signifie que des symptômes de niveau dépressif sont présents et que vous devriez consulter un professionnel de santé. Vous pouvez commencer par votre médecin traitant — il est formé pour discuter des résultats du PHQ-9 et peut vous orienter vers un spécialiste en santé mentale si nécessaire. Si votre score est de 20 ou plus, veuillez consulter d'urgence. Si vous avez des pensées d'automutilation (item 9 du PHQ-9), veuillez contacter immédiatement une ligne d'écoute : 988 (États-Unis), 116 123 Samaritains (Royaume-Uni), ou vos services d'urgence locaux."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "La dépression est l'une des conditions médicales les plus courantes dans le monde, touchant environ 280 millions de personnes dans le monde (OMS, 2023). Ce n'est pas de la tristesse — c'est un trouble neurobiologique caractérisé par des changements persistants de l'humeur, de la cognition, du sommeil, de l'appétit, de l'énergie et de la motivation qui durent au moins deux semaines et altèrent le fonctionnement quotidien.\n\nLe trouble dépressif majeur (TDM) est diagnostiqué lorsque cinq ou plus des neuf symptômes du PHQ-9 sont présents presque tous les jours pendant au moins deux semaines, avec au moins un symptôme étant l'humeur dépressive ou l'anhédonie (perte d'intérêt). La dépression a une base neurobiologique claire : elle implique une dérégulation de la sérotonine, de la noradrénaline, de la dopamine et de l'axe HPA (hypothalamo-hypophyso-surrénalien) du stress.\n\nLa dépression est hautement traitable. Environ 80 à 90 % des personnes souffrant de dépression répondent positivement au traitement — généralement une psychothérapie, des médicaments ou une combinaison. La raison la plus courante pour laquelle le traitement échoue est de ne pas le commencer.",
+    "clinicalBackground": "Le PHQ-9 a été développé dans le cadre du projet PRIME-MD (Primary Care Evaluation of Mental Disorders), une vaste étude conçue pour intégrer les outils diagnostiques psychiatriques dans les soins primaires où la plupart des problèmes de santé mentale passent inaperçus.\n\nLes neuf items correspondent directement aux critères du DSM-IV (maintenant DSM-5) pour l'épisode dépressif majeur. Chaque item utilise une échelle de Likert à 4 points mesurant la fréquence au cours des deux dernières semaines : 0 (Pas du tout), 1 (Plusieurs jours), 2 (Plus de la moitié des jours), 3 (Presque tous les jours).\n\nL'étude de validation originale (Kroenke, Spitzer & Williams, 2001) a inclus 6 000 patients dans huit cliniques de soins primaires. Le PHQ-9 a depuis été validé dans plus de 8 000 études dans plus de 80 pays, à travers les groupes d'âge (adolescents, adultes, personnes âgées), les populations médicales (cancer, cardiaque, diabète) et les contextes culturels. Il a été traduit dans plus de 100 langues.",
+    "howScored": "Le PHQ-9 est noté en additionnant les valeurs numériques des neuf réponses : 0 (Pas du tout), 1 (Plusieurs jours), 2 (Plus de la moitié des jours), 3 (Presque tous les jours). Le total varie de 0 à 27.\n\nSeuils cliniques établis par Kroenke et al. (2001) :\n• 0–4 : Dépression minimale ou absente\n• 5–9 : Dépression légère\n• 10–14 : Dépression modérée (seuil diagnostique standard : ≥10)\n• 15–19 : Dépression modérément sévère\n• 20–27 : Dépression sévère\n\nL'item 9 (pensées d'automutilation) est toujours interprété séparément, quel que soit le score total — tout score supérieur à 0 sur cet item nécessite une attention clinique.\n\nPour le suivi du traitement, un changement de 5 points est considéré comme cliniquement significatif. La rémission est généralement définie comme un score inférieur à 5.",
+    "interpretation": "Comprendre votre score dans son contexte :\n\n**Score 0–4 (Minimal) :** Cette plage reflète une variation normale de l'humeur. La plupart des gens ressentent occasionnellement une humeur basse, de la fatigue ou des changements de sommeil — cela n'indique pas une dépression. Concentrez-vous sur le maintien : un sommeil régulier, une activité physique régulière et des liens sociaux sont les facteurs de protection les plus soutenus par la recherche.\n\n**Score 5–9 (Léger) :** Les symptômes sont présents mais pas encore au seuil diagnostique. C'est la plage la plus exploitable — la dépression légère répond bien aux interventions comportementales (exercice, hygiène du sommeil, activité sociale structurée) et à une brève thérapie psychologique (TCC). Non traitée, la dépression légère évolue vers une dépression modérée ou sévère dans environ 30 % des cas.\n\n**Score 10–14 (Modéré) :** Les symptômes atteignent ou approchent les critères diagnostiques cliniques et affectent probablement le fonctionnement quotidien. Cette plage présente la base de preuves la plus solide pour un traitement combiné (thérapie + mode de vie) et parfois des médicaments. Un médecin ou un professionnel de la santé mentale devrait vous évaluer.\n\n**Score 15–19 (Modérément sévère) :** Une altération quotidienne significative est présente. Cette plage indique fortement la nécessité d'un traitement professionnel — généralement une combinaison de psychothérapie (TCC, TIP) et de médicaments antidépresseurs. Les taux de réponse à ce niveau sont d'environ 60 à 70 % avec traitement.\n\n**Score 20–27 (Sévère) :** La dépression sévère est une urgence médicale au même titre qu'une crise diabétique est une urgence médicale. Des soins professionnels immédiats sont nécessaires. Si vous avez des pensées d'automutilation, veuillez contacter les services d'urgence ou une ligne d'écoute maintenant.",
+    "whenToSeek": "Vous devriez contacter un professionnel de santé si :\n\n• Votre score PHQ-9 est de 10 ou plus\n• Votre score est de 5–9 et est constant depuis plus de 4 semaines\n• Vous avez répondu autre chose que 0 à la question 9 (pensées d'automutilation)\n• Votre humeur affecte significativement votre travail, vos relations ou votre fonctionnement quotidien\n• Vous avez essayé des stratégies d'auto-assistance pendant 4 semaines ou plus sans amélioration\n\nVous devriez contacter les services d'urgence ou une ligne d'écoute immédiatement si :\n• Vous avez des pensées suicidaires ou d'automutilation\n• Vous vous sentez incapable de vous protéger\n• Un proche est en danger immédiat\n\nRessources de crise : 988 Suicide & Crisis Lifeline (États-Unis, appel ou texto), Samaritains 116 123 (Royaume-Uni/Irlande), Crisis Text Line : envoyez HOME au 741741 (États-Unis/Canada/Royaume-Uni).",
+    "limitations": "Le PHQ-9 est un outil de dépistage avec des limites importantes que chaque utilisateur devrait comprendre :\n\n**1. Ce n'est pas un diagnostic.** Seul un clinicien agréé peut diagnostiquer un trouble dépressif majeur après une évaluation complète incluant les antécédents médicaux, un examen physique et un entretien clinique.\n\n**2. Les conditions somatiques peuvent gonfler les scores.** Des conditions médicales telles que l'hypothyroïdie, l'anémie, la douleur chronique, l'apnée du sommeil et le diabète provoquent des symptômes (fatigue, changements de sommeil, changements d'appétit) qui chevauchent ceux de la dépression. Un médecin peut faire la distinction entre ces derniers.\n\n**3. Il ne capture pas le contexte.** Un score élevé immédiatement après un deuil, un accouchement ou un événement majeur de la vie peut refléter une adaptation normale plutôt qu'une dépression clinique. Le DSM-5 exige que les symptômes causent une détresse ou une altération significative.\n\n**4. Variation culturelle.** Bien que le PHQ-9 ait été validé à travers les cultures, l'expression de la dépression varie. Certaines cultures expriment davantage la dépression par des symptômes somatiques (douleur, fatigue) que par des symptômes émotionnels. Un clinicien familier avec votre contexte peut fournir un meilleur éclairage.\n\n**5. Biais de rappel.** Le PHQ-9 interroge sur les deux dernières semaines. Votre score peut ne pas refléter des périodes de plus longue durée ou des symptômes fluctuants qu'un entretien clinique plus long pourrait capturer."
+  }
+}

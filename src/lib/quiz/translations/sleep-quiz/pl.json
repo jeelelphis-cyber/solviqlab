@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Kwestionariusz Jakości Snu (Skala Senności Epworth)",
+    "description": "Skala Senności Epworth to globalny kliniczny standard pomiaru nadmiernej senności w ciągu dnia. Stosowana przez specjalistów snu na całym świecie do wykrywania zaburzeń snu.",
+    "medicalNote": "Wysoki wynik może wskazywać na zaburzenia snu, takie jak bezdech senny lub narkolepsja. W razie wątpliwości skonsultuj się z lekarzem."
+  },
+  "likertOptions": [
+    "Nigdy nie drzemię",
+    "Niewielka szansa na drzemkę",
+    "Umiarkowana szansa na drzemkę",
+    "Duża szansa na drzemkę"
+  ],
+  "questions": {
+    "ess1": {
+      "text": "Siedzenie i czytanie",
+      "hint": "Zasypianie podczas czytania to jeden z pierwszych objawów przewlekłego niedoboru snu."
+    },
+    "ess2": {
+      "text": "Oglądanie telewizji",
+      "hint": "Nawet bierne czynności, takie jak oglądanie telewizji, nie powinny powodować senności, jeśli śpisz wystarczająco długo i dobrze."
+    },
+    "ess3": {
+      "text": "Siedzenie w bezruchu w miejscu publicznym (np. w teatrze lub na spotkaniu)",
+      "hint": "Trudności z utrzymaniem przytomności w cichych miejscach publicznych to kluczowy wskaźnik diagnostyczny nadmiernej senności."
+    },
+    "ess4": {
+      "text": "Jako pasażer w samochodzie przez godzinę bez przerwy",
+      "hint": "Stały ruch podczas jazdy samochodem to standardowy wyzwalacz senności. Wysokie wyniki w tym pytaniu wskazują na poważny deficyt snu."
+    },
+    "ess5": {
+      "text": "Położenie się, aby odpocząć po południu, gdy pozwalają na to okoliczności",
+      "hint": "Zdolność do szybkiego zaśnięcia podczas popołudniowego odpoczynku odzwierciedla rzeczywisty poziom presji snu."
+    },
+    "ess6": {
+      "text": "Siedzenie i rozmowa z kimś",
+      "hint": "Zasypianie podczas rozmowy to klinicznie istotny objaw nadmiernej senności w ciągu dnia."
+    },
+    "ess7": {
+      "text": "Siedzenie spokojnie po obiedzie bez alkoholu",
+      "hint": "Popołudniowe spadki energii są normalne, ale wysokie prawdopodobieństwo drzemki bez spożycia alkoholu wskazuje na zaburzenia snu."
+    },
+    "ess8": {
+      "text": "W samochodzie, podczas zatrzymania na kilka minut w korku",
+      "hint": "Senność podczas prowadzenia samochodu lub zatrzymania w ruchu drogowym stanowi bezpośrednie ryzyko bezpieczeństwa i jest kluczowym wskaźnikiem klinicznym."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Normalny sen",
+      "description": "Twoja senność w ciągu dnia mieści się w normie. Twój sen wydaje się odpowiednio regenerować organizm.",
+      "actions": [
+        "Utrzymuj obecny harmonogram snu – konsekwencja jest najsilniejszym strażnikiem snu",
+        "Utrzymuj temperaturę w sypialni poniżej 18°C – optymalna temperatura dla głębokiego snu",
+        "Ogranicz kofeinę po godzinie 14:00, aby chronić architekturę snu"
+      ],
+      "miaHook": "Twoja podstawa snu jest solidna. Chcę Ci pokazać, jak uczynić go jeszcze bardziej regenerującym – istnieje poziom wyższy niż ten, na którym jesteś teraz."
+    },
+    {
+      "label": "Łagodna nadmierna senność",
+      "description": "Nieznacznie podwyższona senność w ciągu dnia. Może wskazywać na łagodny niedobór snu lub wczesne stadium problemów ze snem.",
+      "actions": [
+        "Dodaj 30 minut do swojego okna snu na najbliższe 2 tygodnie i monitoruj poziom energii",
+        "Sprawdź sypialnię pod kątem światła i hałasu – oba czynniki fragmentują sen, nawet jeśli nie budzą Cię całkowicie",
+        "Unikaj ekranów przez 45 minut przed snem w tym tygodniu"
+      ],
+      "miaHook": "Twój wynik jest graniczny – co oznacza, że małe zmiany robią teraz dużą różnicę. Mogę Ci dokładnie pokazać, gdzie Twój sen traci na jakości."
+    },
+    {
+      "label": "Umiarkowana nadmierna senność",
+      "description": "Umiarkowana nadmierna senność w ciągu dnia. Ten poziom wiąże się z upośledzeniem zdolności prowadzenia pojazdów, obniżoną produktywnością i problemami metabolicznymi.",
+      "actions": [
+        "Skonsultuj się z lekarzem w sprawie potencjalnych zaburzeń snu – przy takim wyniku wskazane jest badanie przesiewowe w kierunku bezdechu sennego",
+        "Zaprzestań spożywania alkoholu na 3 godziny przed snem – fragmentuje on architekturę snu, nawet jeśli pomaga zasnąć",
+        "Ustal niepodlegający negocjacjom czas snu na najbliższe 30 dni i go przestrzegaj"
+      ],
+      "miaHook": "Na tym poziomie Twój sen wpływa na wszystko — na wagę, nastrój, koncentrację. Mam protokół, który celuje właśnie w ten problem."
+    },
+    {
+      "label": "Ciężka nadmierna senność",
+      "description": "Ciężka senność w ciągu dnia. Znacząco zwiększa ryzyko wypadków i jest związana z poważnymi zaburzeniami snu. Zalecana jest pilna konsultacja lekarska.",
+      "actions": [
+        "Umów się na badanie snu (polisomnografię) u lekarza — ten wynik wymaga diagnostyki",
+        "Nie prowadź pojazdów, jeśli czujesz się senny — na tym poziomie senności Twoje refleksy są osłabione",
+        "Unikaj obsługiwania ciężkich maszyn do czasu oceny przez specjalistę"
+      ],
+      "miaHook": "Chcę być szczery: tak wysoki wynik wymaga pomocy medycznej, a nie tylko zmiany rutyny snu. Pozwól, że pomogę Ci znaleźć odpowiedni pierwszy krok."
+    }
+  ],
+  "seoContent": {
+    "intro": "Skala Senności Epworth (ESS) została opracowana przez dr. Murraya Johnsa w Szpitalu Epworth w Melbourne w Australii w 1991 roku. Od tego czasu stała się globalnym standardem klinicznym do pomiaru nadmiernej senności w ciągu dnia (EDS), stosowanym w laboratoriach snu, szpitalach i instytucjach badawczych na całym świecie.\n\nW przeciwieństwie do dzienników snu czy subiektywnych ocen samopoczucia, ESS mierzy prawdopodobieństwo zaśnięcia w 8 konkretnych sytuacjach — dając obiektywny obraz tego, jak bardzo jesteś pozbawiony snu. Wyniki wahają się od 0 do 24. Wynik powyżej 10 wskazuje na nadmierną senność wymagającą oceny klinicznej.\n\nZaburzenia snu dotykają 50–70 milionów ludzi w samych Stanach Zjednoczonych (CDC, 2023). Nieleczona nadmierna senność w ciągu dnia zwiększa ryzyko wypadków drogowych 2,5-krotnie, przyczynia się do przyrostu masy ciała, depresji, chorób układu krążenia i znacząco obniża jakość życia.",
+    "faq": [
+      {
+        "q": "Czym jest Skala Senności Epworth?",
+        "a": "ESS to zatwierdzony kwestionariusz składający się z 8 pytań, który mierzy senność w ciągu dnia, pytając o prawdopodobieństwo zaśnięcia w typowych sytuacjach. Jest to globalny standard stosowany przez specjalistów snu, opublikowany w czasopiśmie Sleep w 1991 roku."
+      },
+      {
+        "q": "Jaki jest prawidłowy wynik w skali Epworth?",
+        "a": "Wynik 0–7 uznaje się za prawidłowy. Wyniki 8–9 wskazują na łagodną nadmierną senność; 10–15 na umiarkowaną; a 16–24 na ciężką. Większość zdrowych dorosłych osiąga wyniki między 4 a 8."
+      },
+      {
+        "q": "Co powoduje nadmierną senność w ciągu dnia?",
+        "a": "Najczęstsze przyczyny to niewystarczająca długość snu, obturacyjny bezdech senny, narkolepsja, zespół niespokojnych nóg, słaba jakość snu, leki oraz depresja."
+      },
+      {
+        "q": "Czy powinienem zgłosić się do lekarza, jeśli uzyskałem wynik powyżej 10?",
+        "a": "Tak. Wynik 10 lub wyższy wymaga oceny klinicznej. Lekarz może zlecić polisomnografię (badanie snu), aby wykluczyć bezdech senny lub inne zaburzenia."
+      },
+      {
+        "q": "Czy słaba jakość snu może powodować przyrost masy ciała?",
+        "a": "Tak. Niedobór snu zaburza regulację greliny i leptyny — hormonów głodu — zwiększając apetyt i ochotę na wysokokaloryczne jedzenie. Badania pokazują, że spanie krócej niż 6 godzin na dobę zwiększa ryzyko otyłości o 23%."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Nadmierna senność w ciągu dnia (EDS) to stan, w którym osoba odczuwa senność w ciągu dnia i ma trudności z utrzymaniem czujności w sytuacjach wymagających skupienia. Dotyka około 20% populacji globalnej i różni się od normalnego zmęczenia — jest to uporczywy, patologiczny poziom senności upośledzający funkcjonowanie.\n\nEDS jest głównym objawem kilku zaburzeń snu, w tym obturacyjnego bezdechu sennego (najczęstsza przyczyna), narkolepsji, idiopatycznej hipersomnii oraz zaburzeń rytmu okołodobowego. Może również wynikać z chronicznego niedoboru snu — najbardziej możliwej do zapobieżenia przyczyny dotykającej miliony ludzi.\n\nSkala Senności Epworth została zaprojektowana do obiektywnego pomiaru EDS poprzez ocenę prawdopodobieństwa zaśnięcia w 8 standardowych sytuacjach. W przeciwieństwie do pytania 'czy czujesz się zmęczony?', ESS dostarcza behawioralnych dowodów senności, które silnie korelują z pomiarami fizjologicznymi, takimi jak Test Wielokrotnej Latencji Snu (MSLT).",
+    "clinicalBackground": "Skala Senności Epworth została opracowana przez dr. Murraya Johnsa i opublikowana w czasopiśmie Sleep w 1991 roku. Dr Johns był lekarzem w Szpitalu Epworth w Melbourne, który zauważył, że subiektywne oceny senności są zawodne. Zaprojektował ESS do pomiaru prawdopodobieństwa zaśnięcia w sytuacjach, które systematycznie różnią się właściwościami wywołującymi sen.\n\nOryginalne badanie walidacyjne wykazało silną korelację z obiektywnymi pomiarami senności (MSLT, r = 0,51) oraz wysoką rzetelność test-retest (r = 0,82). ESS został następnie zatwierdzony w kilkudziesięciu językach i populacjach pacjentów.\n\nObecnie jest to najszerzej stosowane narzędzie kliniczne do badań przesiewowych zaburzeń snu na świecie, rekomendowane przez Amerykańską Akademię Medycyny Snu (AASM), Brytyjskie Towarzystwo Snu oraz włączone do wytycznych klinicznych dotyczących bezdechu sennego, narkolepsji i hipersomnii na całym świecie.",
+    "howScored": "Skala Senności Epworth mierzy, jak prawdopodobne jest, że zaśniesz w 8 konkretnych sytuacjach w skali 0–3:\n• 0: Nigdy bym nie zasnął/zasnęła\n• 1: Niewielkie prawdopodobieństwo zaśnięcia\n• 2: Umiarkowane prawdopodobieństwo zaśnięcia\n• 3: Wysokie prawdopodobieństwo zaśnięcia\n\nCałkowity wynik mieści się w zakresie od 0 do 24. Progi kliniczne:\n• 0–7: Norma (średnia wynosi 5–6 u zdrowych dorosłych)\n• 8–9: Graniczna/łagodna nadmierna senność\n• 10–15: Umiarkowana nadmierna senność w ciągu dnia — wskazana ocena kliniczna\n• 16–24: Ciężka nadmierna senność w ciągu dnia — zalecana pilna ocena\n\nWynik 10+ ma czułość 78% i swoistość 79% w identyfikacji klinicznie istotnych zaburzeń snu w populacji ogólnej.",
+    "interpretation": "**Wynik 0–7 (Norma):** Twój sen odpowiednio Cię regeneruje. Przeciętny zdrowy dorosły osiąga wynik 5–6. Skup się na utrzymaniu harmonogramu snu i ochronie jego jakości.\n\n**Wynik 8–9 (Łagodny/graniczny):** Nieco powyżej normy. Może to odzwierciedlać nagromadzony dług senny, nieregularne pory snu lub wczesne stadium problemów ze snem. Zmiany behawioralne — stałe pory snu, poprawa higieny snu — są zwykle wystarczające na tym poziomie.\n\n**Wynik 10–15 (Umiarkowany):** Ten zakres jest klinicznie istotny. Badania pokazują, że na tym poziomie zdolność prowadzenia pojazdów jest upośledzona w stopniu odpowiadającym stężeniu alkoholu we krwi 0,05%. Funkcje poznawcze, nastrój, metabolizm i odporność są mierzalnie zaburzone. Wskazana jest ocena medyczna, szczególnie w kierunku bezdechu sennego.\n\n**Wynik 16–24 (Ciężki):** Ten poziom senności stanowi poważne zagrożenie dla bezpieczeństwa i zdrowia. Ryzyko wypadków samochodowych jest 2,5× wyższe niż przeciętnie. Zdecydowanie zaleca się pilną ocenę medyczną, w tym badanie snu.",
+    "whenToSeek": "Skonsultuj się z lekarzem, jeśli:\n\n• Twój wynik ESS wynosi 10 lub więcej\n• Ktoś powiedział Ci, że głośno chrapiesz lub przestajesz oddychać podczas snu\n• Czujesz się niewypoczęty po całej nocy snu\n• Zasypiasz mimowolnie w ciągu dnia\n• Twoja senność wpływa na pracę, prowadzenie pojazdów lub relacje\n• Partner zauważył nietypowe ruchy nóg lub łapanie powietrza\n\nSzukaj pilnej pomocy, jeśli:\n• Miałeś bliski wypadek z powodu senności podczas prowadzenia pojazdu\n• Doświadczasz nagłego osłabienia mięśni wywołanego emocjami (katapleksja — objaw narkolepsji)\n• Nie jesteś w stanie utrzymać przytomności w pracy pomimo odpowiedniej możliwości snu",
+    "limitations": "**1. Subiektywne przypominanie:** ESS mierzy postrzegane prawdopodobieństwo zaśnięcia, na co mogą wpływać samoświadomość i błąd przypominania. Osoby z ciężkimi zaburzeniami snu czasami nie doceniają swojej senności, ponieważ chroniczne zmęczenie stało się ich normą.\n\n**2. Zmienność sytuacyjna:** Nie każdy regularnie doświadcza wszystkich 8 sytuacji. Osoby, które nigdy nie prowadzą samochodu, mogą mieć trudności z dokładną odpowiedzią na pytanie 8.\n\n**3. Nie identyfikuje przyczyny:** Wysoki wynik ESS wskazuje na nadmierną senność, ale nie diagnozuje jej przyczyny. Bezdech senny, narkolepsja, skutki uboczne leków i zwykły niedobór snu dają podobne wyniki.\n\n**4. Nie zwalidowano dla dzieci poniżej 12 roku życia:** ESS została opracowana i zwalidowana w populacji dorosłych. Senność u dzieci ocenia się za pomocą innych narzędzi.\n\n**5. Pomiar punktowy:** ESS odzwierciedla Twoje ostatnie doświadczenia ze snem. Podróże, choroba, praca zmianowa i wydarzenia życiowe mogą tymczasowo podnieść wyniki bez wskazywania na przewlekłe zaburzenie."
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Quiz sull'Idratazione",
+    "description": "Molte persone sono leggermente disidratate senza saperlo. Scopri se l'acqua è un tassello mancante del tuo benessere."
+  },
+  "questions": {
+    "hyd1": {
+      "text": "Quanti bicchieri d'acqua (250 ml) bevi in una giornata tipica?",
+      "options": [
+        "8 o più — bevo regolarmente",
+        "5–7 bicchieri",
+        "3–4 bicchieri",
+        "Meno di 3 — dimentico di bere"
+      ]
+    },
+    "hyd2": {
+      "text": "Ti capita spesso di avere sete durante il giorno?"
+    },
+    "hyd3": {
+      "text": "Di che colore è la tua urina la maggior parte del tempo? (Sii onesto!)",
+      "options": [
+        "Giallo pallido — quasi trasparente",
+        "Giallo chiaro",
+        "Giallo scuro o ambrato",
+        "Molto scuro — non ci faccio caso"
+      ]
+    },
+    "hyd4": {
+      "text": "Consumi regolarmente caffè, tè o alcol senza bilanciare con acqua?"
+    },
+    "hyd5": {
+      "text": "Soffri regolarmente di mal di testa, pelle secca o difficoltà di concentrazione?",
+      "options": [
+        "Nessuno di questi — mi sento bene",
+        "Uno di questi occasionalmente",
+        "Due di questi regolarmente",
+        "Tutti e tre — quasi ogni giorno"
+      ]
+    },
+    "hyd6": {
+      "text": "Quanto sei attivo fisicamente? (Più attività = maggior fabbisogno di acqua)",
+      "scaleLabels": {
+        "min": "Molto sedentario",
+        "max": "Molto attivo ogni giorno"
+      }
+    }
+  },
+  "buckets": [
+    {
+      "label": "Ben Idratato",
+      "description": "Le tue abitudini di idratazione sono solide. Il tuo corpo riceve l'acqua di cui ha bisogno per funzionare al meglio.",
+      "actions": [
+        "Mantieni il tuo apporto attuale: la costanza è più importante che raggiungere un numero specifico",
+        "Aumenta di 500 ml nei giorni con esercizio intenso o caldo",
+        "Continua a evitare bevande zuccherate come fonte primaria di idratazione"
+      ],
+      "miaHook": "La tua idratazione è buona — vediamo cos'altro potrebbe influenzare la tua energia e le tue prestazioni."
+    },
+    {
+      "label": "Leggermente Disidratato",
+      "description": "Non stai bevendo abbastanza. La disidratazione lieve influisce sul tuo umore, sulla concentrazione e sul metabolismo più di quanto la maggior parte delle persone creda.",
+      "actions": [
+        "Aggiungi un bicchiere d'acqua subito dopo il risveglio: il tuo corpo perde acqua durante la notte",
+        "Imposta un promemoria ogni 2 ore per bere: la formazione di abitudini è la via più rapida per una migliore idratazione",
+        "Sostituisci un caffè o una bevanda zuccherata al giorno con acqua o tisana"
+      ],
+      "miaHook": "La disidratazione lieve sta silenziosamente influenzando la tua energia e la gestione del peso: aggiungere 3 bicchieri al giorno può cambiare rapidamente questa situazione."
+    },
+    {
+      "label": "Disidratato",
+      "description": "Il tuo apporto di acqua è significativamente inferiore a ciò di cui il tuo corpo ha bisogno. Questo probabilmente influisce sulla tua concentrazione, pelle, reni ed energia.",
+      "actions": [
+        "Inizia domani con 500 ml di acqua prima di qualsiasi cibo o caffeina: rendi questo non negoziabile",
+        "Porta con te una bottiglia d'acqua da 1 litro e finiscila due volte prima di cena",
+        "Controlla il colore delle tue urine ogni giorno: il giallo pallido è il tuo obiettivo e il tuo indicatore di idratazione in tempo reale"
+      ],
+      "miaHook": "La disidratazione spiega molto di ciò che potresti attribuire ad altre cause — lascia che ti mostri un modo semplice per risolvere questo problema."
+    }
+  ],
+  "seoContent": {
+    "intro": "La disidratazione lieve — definita come la perdita di appena l'1–2% dell'acqua corporea — compromette le prestazioni cognitive, la resistenza fisica, l'umore e il metabolismo. Molte persone trascorrono gran parte della giornata in questo stato senza rendersene conto, perché la sete è un indicatore ritardato: quando si avverte sete, si è già lievemente disidratati.\n\nI reni, il cervello, la pelle e il sistema cardiovascolare dipendono tutti da un'adeguata idratazione per funzionare. Questo quiz valuta le tue abitudini di idratazione in sei dimensioni per darti un quadro chiaro della tua situazione e di cosa modificare.",
+    "faq": [
+      {
+        "q": "Quanta acqua dovrei bere al giorno?",
+        "a": "I comunemente citati 8 bicchieri (2 litri) rappresentano una base ragionevole per adulti sedentari in climi temperati. Una guida più precisa fornita dalla National Academies: 3,7 litri di liquidi totali al giorno per gli uomini e 2,7 litri per le donne (inclusa l'acqua derivante dal cibo). Aumentare di 0,5–1 litro per ogni ora di esercizio fisico e in caso di clima caldo."
+      },
+      {
+        "q": "Il caffè conta come apporto di liquidi giornaliero?",
+        "a": "Sì, in una certa misura. Il lieve effetto diuretico della caffeina è compensato dal liquido contenuto nella bevanda in quantità moderate (fino a 3–4 tazze al giorno). Tuttavia, un consumo eccessivo di caffeina (5 o più tazze) provoca una perdita netta di liquidi. L'alcol ha un effetto diuretico molto più forte e non dovrebbe essere conteggiato ai fini degli obiettivi di idratazione."
+      },
+      {
+        "q": "Qual è il miglior indicatore dello stato di idratazione?",
+        "a": "Il colore delle urine è l'indicatore in tempo reale più pratico. Un colore giallo paglierino (colore limonata) indica una buona idratazione. Un colore giallo scuro o ambrato indica disidratazione. Urine trasparenti possono indicare un'eccessiva idratazione. Le urine del mattino tendono ad essere più scure — ciò che conta è il colore durante il giorno."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "L'acqua costituisce circa il 60% del peso corporeo di un adulto ed è coinvolta in ogni processo fisiologico: trasporto dei nutrienti, regolazione della temperatura, lubrificazione articolare, eliminazione delle scorie e funzione cellulare. Anche una lieve disidratazione (perdita dell'1–2% del peso corporeo) compromette in modo misurabile questi processi.\n\nGli studi dimostrano costantemente che una lieve disidratazione riduce la memoria di lavoro del 7%, compromette l'attenzione e la velocità psicomotoria, aumenta l'affaticamento e la tensione, e riduce le prestazioni di resistenza del 10–20%. Per la maggior parte delle persone, migliorare l'idratazione è uno degli interventi sanitari con il più alto rapporto beneficio-costo disponibili.",
+    "howScored": "Questo quiz valuta sei dimensioni dell'idratazione: volume di assunzione giornaliero, frequenza della sete (un segnale ritardato di disidratazione), colore delle urine (l'indicatore in tempo reale più affidabile), abitudini relative a bevande diuretiche, sintomi di disidratazione (mal di testa, pelle secca, scarsa concentrazione) e livello di attività fisica (che determina il fabbisogno idrico).\n\nPunteggi superiori a 70 indicano abitudini di buona idratazione. 40–69 indica schemi di lieve disidratazione che vale la pena correggere. Sotto 40 indica una disidratazione significativa che probabilmente influisce sul funzionamento quotidiano.",
+    "whenToSeek": "Consulta un medico se:\n• Bevi acqua a sufficienza ma hai ancora sete persistente (possibile diabete o problema renale)\n• Hai difficoltà a trattenere i liquidi (minzione frequente nonostante un'assunzione normale)\n• I sintomi di disidratazione persistono dopo aver aumentato l'assunzione per 2 o più settimane\n• Avverti vertigini, battito cardiaco accelerato o confusione insieme a una bassa assunzione di acqua",
+    "limitations": "Questo quiz valuta le abitudini di idratazione auto-riferite, non lo stato di idratazione oggettivo. L'idratazione effettiva dipende da fattori individuali tra cui peso corporeo, funzionalità renale, uso di farmaci, clima e livello di attività. Il quiz fornisce una valutazione direzionale utile ma non sostituisce la misurazione clinica (osmolalità del sangue/urine)."
+  }
+}

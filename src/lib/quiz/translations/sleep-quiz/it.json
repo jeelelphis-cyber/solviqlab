@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Questionario sulla Qualità del Sonno (Scala di Epworth per la Sonnolenza)",
+    "description": "La Scala di Epworth per la Sonnolenza è lo standard clinico globale per misurare l'eccessiva sonnolenza diurna. Utilizzata dai medici del sonno in tutto il mondo per individuare i disturbi del sonno.",
+    "medicalNote": "Un punteggio elevato può indicare un disturbo del sonno come l'apnea notturna o la narcolessia. Se hai preoccupazioni, consulta un medico."
+  },
+  "likertOptions": [
+    "Non mi addormenterei mai",
+    "Leggera possibilità di addormentarmi",
+    "Moderata possibilità di addormentarmi",
+    "Alta possibilità di addormentarmi"
+  ],
+  "questions": {
+    "ess1": {
+      "text": "Seduto e leggendo",
+      "hint": "Addormentarsi mentre si legge è uno dei primi segni di privazione cronica del sonno."
+    },
+    "ess2": {
+      "text": "Guardare la TV",
+      "hint": "Anche attività passive come guardare la TV non dovrebbero causare sonnolenza se si dorme a sufficienza e in modo qualitativo."
+    },
+    "ess3": {
+      "text": "Seduto inattivo in un luogo pubblico (es. teatro o riunione)",
+      "hint": "Faticare a restare svegli in ambienti pubblici silenziosi è un indicatore diagnostico chiave di eccessiva sonnolenza."
+    },
+    "ess4": {
+      "text": "Come passeggero in auto per un'ora senza sosta",
+      "hint": "Il movimento costante di un viaggio in auto è un fattore scatenante standard di sonnolenza. Punteggi alti qui indicano un grave debito di sonno."
+    },
+    "ess5": {
+      "text": "Sdraiato per riposare nel pomeriggio quando le circostanze lo permettono",
+      "hint": "La capacità di addormentarsi rapidamente durante il riposo pomeridiano riflette il tuo reale livello di pressione del sonno."
+    },
+    "ess6": {
+      "text": "Seduto e parlando con qualcuno",
+      "hint": "Addormentarsi durante una conversazione è un segno clinicamente significativo di eccessiva sonnolenza diurna."
+    },
+    "ess7": {
+      "text": "Seduto tranquillamente dopo un pranzo senza alcol",
+      "hint": "I cali di energia dopo pranzo sono normali, ma un'alta probabilità di sonnolenza qui senza alcol indica un disturbo del sonno."
+    },
+    "ess8": {
+      "text": "In auto, mentre si è fermi per qualche minuto nel traffico",
+      "hint": "La sonnolenza durante la guida o mentre si è fermi nel traffico è un rischio diretto per la sicurezza e un indicatore clinico chiave."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Sonno Normale",
+      "description": "La tua sonnolenza diurna rientra nei limiti normali. Il tuo sonno sembra essere adeguatamente ristoratore.",
+      "actions": [
+        "Mantieni il tuo attuale programma di sonno: la costanza è il più potente protettore del sonno",
+        "Mantieni la tua camera da letto sotto i 18°C (65°F): la temperatura ottimale per il sonno profondo",
+        "Limita la caffeina dopo le 14:00 per proteggere l'architettura del sonno"
+      ],
+      "miaHook": "Le tue basi del sonno sono solide. Voglio mostrarti come renderlo ancora più ristoratore: esiste ancora un livello superiore a quello in cui ti trovi ora."
+    },
+    {
+      "label": "Sonnolenza Eccessiva Lieve",
+      "description": "Sonnolenza diurna leggermente elevata. Può indicare una lieve privazione del sonno o problemi di sonno in fase iniziale.",
+      "actions": [
+        "Aggiungi 30 minuti alla tua finestra di sonno per le prossime 2 settimane e monitora i livelli di energia",
+        "Controlla la tua camera da letto per luce e rumore: entrambi frammentano il sonno senza svegliarti completamente",
+        "Evita gli schermi per 45 minuti prima di andare a letto questa settimana"
+      ],
+      "miaHook": "Il tuo punteggio è borderline, il che significa che piccoli cambiamenti fanno una grande differenza in questo momento. Posso mostrarti esattamente dove il tuo sonno sta perdendo efficacia."
+    },
+    {
+      "label": "Sonnolenza Eccessiva Moderata",
+      "description": "Sonnolenza diurna eccessiva moderata. Questo livello è collegato a una guida compromessa, una ridotta produttività e problemi metabolici.",
+      "actions": [
+        "Consulta un medico per un potenziale disturbo del sonno: con questo punteggio, uno screening per l'apnea notturna è appropriato",
+        "Interrompi del tutto l'alcol 3 ore prima di andare a letto: frammenta l'architettura del sonno anche se ti aiuta ad addormentarti",
+        "Stabilisci un orario per andare a letto non negoziabile per i prossimi 30 giorni e rispettalo"
+      ],
+      "miaHook": "A questo livello, il tuo sonno sta influenzando tutto: il peso, l'umore, la concentrazione. Ho un protocollo che mira specificamente a questo."
+    },
+    {
+      "label": "Sonnolenza Eccessiva Grave",
+      "description": "Sonnolenza diurna grave. Questo aumenta significativamente il rischio di incidenti ed è associato a gravi disturbi del sonno. Una valutazione medica è fortemente raccomandata.",
+      "actions": [
+        "Prenota uno studio del sonno (polisonnografia) con il tuo medico: questo punteggio richiede un'indagine approfondita",
+        "Non guidare se ti senti assonnato: i tuoi riflessi sono compromessi a questo livello di sonnolenza",
+        "Evita di utilizzare macchinari pesanti fino a quando non sarai valutato da uno specialista"
+      ],
+      "miaHook": "Voglio essere diretto: un punteggio così alto necessita di attenzione medica, non solo di una routine del sonno. Lascia che ti aiuti a capire qual è il primo passo giusto."
+    }
+  ],
+  "seoContent": {
+    "intro": "La Epworth Sleepiness Scale (ESS) è stata sviluppata dal Dr. Murray Johns presso l'Epworth Hospital di Melbourne, Australia, nel 1991. Da allora è diventata lo standard clinico globale per misurare l'eccessiva sonnolenza diurna (EDS), utilizzata in laboratori del sonno, ospedali e istituti di ricerca in tutto il mondo.\n\nA differenza dei diari del sonno o delle valutazioni soggettive della stanchezza, l'ESS misura la tua probabilità di addormentarti in 8 situazioni specifiche, fornendo un quadro oggettivo di quanto tu sia realmente privato del sonno. I punteggi vanno da 0 a 24. Un punteggio superiore a 10 indica un'eccessiva sonnolenza che richiede una valutazione clinica.\n\nI disturbi del sonno colpiscono 50-70 milioni di persone solo negli Stati Uniti (CDC, 2023). L'eccessiva sonnolenza diurna non trattata aumenta il rischio di incidenti stradali di 2,5 volte, contribuisce all'aumento di peso, alla depressione, alle malattie cardiovascolari e riduce significativamente la qualità della vita.",
+    "faq": [
+      {
+        "q": "Cos'è la Epworth Sleepiness Scale?",
+        "a": "L'ESS è un questionario validato di 8 item che misura la sonnolenza diurna chiedendo quanto è probabile che ti addormenti in situazioni comuni. È lo standard globale utilizzato dagli specialisti del sonno ed è stato pubblicato sulla rivista Sleep nel 1991."
+      },
+      {
+        "q": "Qual è un punteggio Epworth normale?",
+        "a": "Un punteggio di 0-7 è considerato normale. Punteggi di 8-9 suggeriscono una lieve eccessiva sonnolenza; 10-15 moderata; e 16-24 grave. La maggior parte degli adulti sani ottiene un punteggio tra 4 e 8."
+      },
+      {
+        "q": "Cosa causa l'eccessiva sonnolenza diurna?",
+        "a": "Le cause più comuni includono durata del sonno insufficiente, apnea ostruttiva del sonno, narcolessia, sindrome delle gambe senza riposo, scarsa qualità del sonno, farmaci e depressione."
+      },
+      {
+        "q": "Dovrei consultare un medico se ho ottenuto un punteggio superiore a 10?",
+        "a": "Sì. Un punteggio di 10 o superiore richiede una valutazione clinica. Il tuo medico potrebbe prescrivere una polisonnografia (studio del sonno) per escludere l'apnea notturna o altri disturbi."
+      },
+      {
+        "q": "Una scarsa qualità del sonno può causare aumento di peso?",
+        "a": "Sì. La privazione del sonno altera la grelina e la leptina, gli ormoni della fame, aumentando l'appetito e la voglia di cibi ipercalorici. Gli studi dimostrano che dormire meno di 6 ore a notte aumenta il rischio di obesità del 23%."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "L'eccessiva sonnolenza diurna (EDS) è una condizione in cui una persona si sente assonnata durante il giorno e fatica a rimanere sveglia in situazioni in cui ci si aspetta vigilanza. Colpisce circa il 20% della popolazione globale ed è distinta dalla normale stanchezza: è un livello di sonnolenza persistente e patologico che compromette il funzionamento.\n\nL'EDS è un sintomo primario di diversi disturbi del sonno, tra cui l'apnea ostruttiva del sonno (la causa più comune), la narcolessia, l'ipersonnia idiopatica e i disturbi del ritmo circadiano. Può anche derivare da un sonno cronicamente insufficiente, la causa più prevenibile che colpisce milioni di persone.\n\nLa Epworth Sleepiness Scale è stata progettata per misurare oggettivamente l'EDS valutando la probabilità di addormentarsi in 8 situazioni standardizzate. A differenza della domanda 'ti senti stanco?', l'ESS cattura prove comportamentali di sonnolenza che sono fortemente correlate con misure fisiologiche come il Multiple Sleep Latency Test (MSLT).",
+    "clinicalBackground": "La Epworth Sleepiness Scale è stata sviluppata dal Dr. Murray Johns e pubblicata sulla rivista Sleep nel 1991. Il Dr. Johns era un medico presso l'Epworth Hospital di Melbourne che notò che le valutazioni soggettive della sonnolenza erano inaffidabili. Ha progettato l'ESS per misurare la probabilità di addormentarsi in situazioni che variano sistematicamente nelle loro proprietà di indurre il sonno.\n\nLo studio di validazione originale ha mostrato una forte correlazione con misure oggettive di sonnolenza (MSLT, r = 0,51) e un'elevata affidabilità test-retest (r = 0,82). L'ESS è stata successivamente validata in dozzine di lingue e popolazioni di pazienti.\n\nOra è lo strumento clinico più utilizzato a livello globale per lo screening dei disturbi del sonno, approvato dall'American Academy of Sleep Medicine (AASM), dalla British Sleep Society e incorporato nelle linee guida cliniche per l'apnea notturna, la narcolessia e l'ipersonnia in tutto il mondo.",
+    "howScored": "La scala Epworth Sleepiness Scale chiede quanto è probabile che ti addormenti in 8 situazioni specifiche su una scala da 0 a 3:\n• 0: Non mi addormenterei mai\n• 1: Leggera probabilità di addormentarmi\n• 2: Moderata probabilità di addormentarmi\n• 3: Alta probabilità di addormentarmi\n\nI punteggi totali vanno da 0 a 24. Soglie cliniche:\n• 0–7: Range normale (la media è 5–6 negli adulti sani)\n• 8–9: Sonnolenza borderline/lieve\n• 10–15: Sonnolenza diurna eccessiva moderata — è indicata una valutazione clinica\n• 16–24: Sonnolenza diurna eccessiva grave — si raccomanda una valutazione urgente\n\nUn punteggio di 10+ ha una sensibilità del 78% e una specificità del 79% per identificare disturbi del sonno clinicamente significativi nella popolazione generale.",
+    "interpretation": "**Punteggio 0–7 (Normale):** Il tuo sonno ti sta riposando adeguatamente. La media per un adulto sano è 5–6. Concentrati sul mantenere il tuo programma di sonno e proteggere la qualità del sonno.\n\n**Punteggio 8–9 (Lieve/Borderline):** Leggermente sopra la norma. Potrebbe riflettere un debito di sonno accumulato, orari di sonno irregolari o problemi di sonno in fase iniziale. I cambiamenti comportamentali — orari di sonno costanti, miglioramenti dell'igiene del sonno — sono di solito sufficienti a questo livello.\n\n**Punteggio 10–15 (Moderato):** Questo range è clinicamente significativo. La ricerca mostra che a questo livello, le prestazioni di guida sono compromesse in modo equivalente a un tasso alcolemico dello 0,05%. La funzione cognitiva, l'umore, il metabolismo e la funzione immunitaria sono tutti influenzati in modo misurabile. È appropriata una valutazione medica, in particolare per lo screening dell'apnea notturna.\n\n**Punteggio 16–24 (Grave):** Questo livello di sonnolenza rappresenta un serio problema di sicurezza e salute. Il rischio di incidenti automobilistici è 2,5 volte superiore alla media. Si raccomanda vivamente una valutazione medica immediata, inclusi uno studio del sonno.",
+    "whenToSeek": "Consulta un medico se:\n\n• Il tuo punteggio ESS è 10 o superiore\n• Ti è stato detto che russi forte o smetti di respirare durante il sonno\n• Ti senti non riposato dopo una notte intera di sonno\n• Ti addormenti involontariamente durante il giorno\n• La tua sonnolenza sta influenzando il lavoro, la guida o le relazioni\n• Un partner ha osservato movimenti insoliti delle gambe o respiro affannoso\n\nCerca cure urgenti se:\n• Hai avuto un incidente sfiorato a causa della sonnolenza durante la guida\n• Sperimenti improvvisa debolezza muscolare scatenata da emozioni (cataplessia — un segno di narcolessia)\n• Non riesci a rimanere sveglio al lavoro nonostante un'adeguata opportunità di sonno",
+    "limitations": "**1. Ricordo soggettivo:** La ESS misura la probabilità percepita di addormentarsi, che può essere influenzata dalla consapevolezza di sé e dal bias di richiamo. Le persone con gravi disturbi del sonno a volte sottovalutano la loro sonnolenza perché la stanchezza cronica è diventata la loro condizione di base.\n\n**2. Variazione situazionale:** Non tutti incontrano regolarmente tutte le 8 situazioni. Le persone che non guidano mai, ad esempio, potrebbero avere difficoltà a rispondere con precisione all'item 8.\n\n**3. Non identifica la causa:** Un punteggio ESS alto indica sonnolenza eccessiva ma non ne diagnostica la causa. Apnea notturna, narcolessia, effetti di farmaci e semplice privazione del sonno producono tutti punteggi simili.\n\n**4. Non validato per bambini sotto i 12 anni:** La ESS è stata sviluppata e validata in popolazioni adulte. La sonnolenza pediatrica viene valutata con strumenti diversi.\n\n**5. Misurazione puntuale:** La ESS riflette la tua esperienza recente di sonno. Viaggi, malattie, lavoro a turni ed eventi della vita possono aumentare temporaneamente i punteggi senza indicare un disturbo cronico."
+  }
+}

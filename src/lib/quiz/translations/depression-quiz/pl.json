@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "title": "Kwestionariusz przesiewowy depresji (PHQ-9)",
+    "description": "PHQ-9 to złoty standard narzędzia przesiewowego w kierunku depresji, stosowany przez lekarzy na całym świecie. Zajmuje 2 minuty. Opiera się na ponad 20 latach badań klinicznych.",
+    "medicalNote": "To narzędzie przesiewowe, a nie diagnoza kliniczna. Jeśli znajdujesz się w kryzysie, natychmiast skontaktuj się z profesjonalistą zdrowia psychicznego lub linią kryzysową."
+  },
+  "likertOptions": [
+    "Wcale nie",
+    "Kilka dni",
+    "Ponad połowę dni",
+    "Prawie każdego dnia"
+  ],
+  "questions": {
+    "phq1": {
+      "text": "Niewielkie zainteresowanie lub przyjemność z robienia rzeczy",
+      "hint": "Anhedonia — utrata zdolności odczuwania przyjemności — jest jednym z dwóch głównych objawów depresji."
+    },
+    "phq2": {
+      "text": "Poczucie przygnębienia, depresji lub beznadziei",
+      "hint": "Utrzymujący się obniżony nastrój jest drugim głównym kryterium diagnostycznym dużego zaburzenia depresyjnego."
+    },
+    "phq3": {
+      "text": "Trudności z zasypianiem lub utrzymaniem snu, albo spanie zbyt dużo",
+      "hint": "Zaburzenia snu występują u ponad 90% osób z depresją i pogarszają funkcje poznawcze."
+    },
+    "phq4": {
+      "text": "Poczucie zmęczenia lub brak energii",
+      "hint": "Zmęczenie związane z depresją ma podłoże neurobiologiczne — spowodowane jest zaburzoną regulacją serotoniny i dopaminy."
+    },
+    "phq5": {
+      "text": "Słaby apetyt lub przejadanie się",
+      "hint": "Zmiany apetytu dotyczą 70–80% osób z depresją. Obie skrajności są sygnałami klinicznymi."
+    },
+    "phq6": {
+      "text": "Złe myślenie o sobie — lub poczucie, że jest się porażką, albo że zawiodło się siebie lub rodzinę",
+      "hint": "Utrzymujące się poczucie winy i bezwartościowości należą do najsilniejszych predyktorów ciężkości depresji."
+    },
+    "phq7": {
+      "text": "Trudności z koncentracją na rzeczach, takich jak czytanie lub oglądanie telewizji",
+      "hint": "Depresja zmniejsza aktywność kory przedczołowej, bezpośrednio upośledzając uwagę i pamięć."
+    },
+    "phq8": {
+      "text": "Poruszanie się lub mówienie tak wolno, że inni ludzie mogli to zauważyć – lub przeciwnie, bycie tak niespokojnym lub rozdrażnionym, że poruszałeś się znacznie więcej niż zwykle",
+      "hint": "Zmiany psychoruchowe są zauważalne dla innych i stanowią kluczowy wskaźnik nasilenia w klinicznej depresji."
+    },
+    "phq9": {
+      "text": "Myśli, że byłoby lepiej, gdybyś nie żył, lub o zrobieniu sobie krzywdy w jakiś sposób",
+      "hint": "Jeśli masz takie myśli, natychmiast skontaktuj się z linią kryzysową lub pracownikiem służby zdrowia."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Minimalna depresja lub brak depresji",
+      "description": "Twój wynik nie wskazuje na istotne objawy depresyjne. Kontynuuj dbanie o swoje samopoczucie psychiczne.",
+      "actions": [
+        "Utrzymuj obecny harmonogram snu – regularny sen jest najsilniejszym czynnikiem ochronnym przed depresją",
+        "Ruszaj się: nawet 20 minut spaceru 3 razy w tygodniu zmniejsza ryzyko depresji o 26% (Harvard Health, 2018)",
+        "Sprawdzaj się co miesiąc – nastrój naturalnie się waha, a wczesna świadomość to Twoje najlepsze narzędzie"
+      ],
+      "miaHook": "Twój wynik mieści się w zdrowym zakresie. Pokażę Ci, co według badań pomaga go utrzymać."
+    },
+    {
+      "label": "Łagodna depresja",
+      "description": "Występują łagodne objawy depresyjne. Są one realne i zasługują na uwagę – bez wsparcia mogą się nasilić.",
+      "actions": [
+        "Rozpocznij codzienny, 5-minutowy dziennik nastroju – śledzenie wzorców to pierwszy krok do zmiany",
+        "Dodaj ustrukturyzowaną aktywność fizyczną: 30 minut umiarkowanego wysiłku ma działanie przeciwdepresyjne porównywalne z lekami w łagodnych przypadkach (Blumenthal i in., JAMA, 2007)",
+        "Porozmawiaj z kimś, komu ufasz, lub rozważ rozmowę z terapeutą – nawet 4–6 sesji może znacząco zmniejszyć łagodne objawy"
+      ],
+      "miaHook": "Łagodne objawy wykryte wcześnie są najłatwiejsze do opanowania. Oto, co naprawdę działa przy Twoim wyniku."
+    },
+    {
+      "label": "Umiarkowana depresja",
+      "description": "Umiarkowana depresja znacząco wpływa na codzienne funkcjonowanie. Zalecane jest profesjonalne wsparcie wraz ze zmianami stylu życia.",
+      "actions": [
+        "Umów się w tym tygodniu na wizytę u lekarza lub specjalisty zdrowia psychicznego – umiarkowana depresja bardzo dobrze reaguje na leczenie",
+        "Powiedz komuś zaufanemu, jak się czujesz — izolacja nasila objawy depresyjne",
+        "Zadbaj o podstawy: śpij 7–9 godzin, jedz regularnie i wychodź na zewnątrz codziennie — to nie są opcje, gdy mierzysz się z umiarkowaną depresją"
+      ],
+      "miaHook": "Na tym poziomie potrzebujesz czegoś więcej niż narzędzi samopomocy. Oto jak zrobić właściwy krok dalej."
+    },
+    {
+      "label": "Umiarkowanie ciężka depresja",
+      "description": "Twoje objawy znacząco wpływają na Twoje życie. Istnieją skuteczne metody leczenia — skontaktuj się wkrótce z lekarzem.",
+      "actions": [
+        "Skontaktuj się ze specjalistą zdrowia psychicznego lub swoim lekarzem w ciągu najbliższych 48 godzin — ten poziom depresji jest bardzo uleczalny",
+        "Jeśli jesteś w USA, możesz zadzwonić na infolinię SAMHSA: 1-800-662-4357 (bezpłatna, poufna, 24/7)",
+        "Poproś kogoś zaufanego, aby wesprzeł Cię w umówieniu pierwszej wizyty — nie musisz przechodzić przez to sam"
+      ],
+      "miaHook": "Twoje objawy zasługują na profesjonalną opiekę — a skuteczne leczenie działa. Pozwól mi pomóc Ci zrobić pierwszy krok."
+    },
+    {
+      "label": "Ciężka depresja",
+      "description": "Ciężka depresja. Proszę, natychmiast poszukaj profesjonalnej pomocy. Zasługujesz na właściwą opiekę, a skuteczne metody leczenia istnieją.",
+      "actions": [
+        "Skontaktuj się z linią kryzysową lub służbami ratunkowymi, jeśli jesteś w niebezpieczeństwie: 988 Suicide & Crisis Lifeline (USA), Samaritans 116 123 (Wielka Brytania/Irlandia)",
+        "Udaj się na najbliższy oddział ratunkowy lub zadzwoń do zaufanej osoby, która Cię zawiezie — nie powinieneś być teraz sam",
+        "Wiedz, że ciężka depresja to stan medyczny — to nie słabość i nie jest trwała. Leczenie działa."
+      ],
+      "miaHook": "Proszę, sięgnij po wsparcie już teraz. Jesteś ważny, a skuteczna pomoc istnieje."
+    }
+  ],
+  "seoContent": {
+    "intro": "PHQ-9 (Kwestionariusz Zdrowia Pacjenta-9) jest najszerzej stosowanym, klinicznie zwalidowanym narzędziem przesiewowym w kierunku depresji na świecie. Opracowany przez dr. Roberta Spitzera, dr Janet Williams i dr. Kurta Kroenkego, został zwalidowany w ponad 8000 badań w ponad 80 krajach i jest używany przez WHO, NHS, APA, Mayo Clinic oraz CDC jako podstawowe narzędzie przesiewowe.\n\nW przeciwieństwie do ogólnych quizów nastroju, PHQ-9 bezpośrednio odwzorowuje dziewięć kryteriów diagnostycznych dużego zaburzenia depresyjnego (MDD) z DSM-5. Każde pytanie odpowiada podstawowemu objawowi, który klinicyści oceniają w każdej diagnozie depresji. Dzięki temu jest wyjątkowo dokładny: Twój wynik nie jest oceną osobowości — to standaryzowany pomiar kliniczny.\n\nWyniki mieszczą się w zakresie od 0 do 27. Wynik 10 lub wyższy ma 88% czułości i 88% swoistości dla dużego zaburzenia depresyjnego (Kroenke i in., JGIM 2001). Oznacza to, że prawidłowo identyfikuje stan u prawie 9 na 10 osób — taką samą dokładność jak pomiar ciśnienia krwi w przypadku nadciśnienia.",
+    "faq": [
+      {
+        "q": "Czym jest PHQ-9 i kto go opracował?",
+        "a": "PHQ-9 (Kwestionariusz Zdrowia Pacjenta-9) został opracowany przez dr. Roberta Spitzera, dr Janet Williams i dr. Kurta Kroenkego na Uniwersytecie Columbia, finansowany przez Pfizer Inc. Został po raz pierwszy opublikowany w 2001 roku w Journal of General Internal Medicine (PMID: 11556941). Jest w domenie publicznej — co oznacza, że każdy lekarz, badacz lub platforma może z niego swobodnie korzystać. Jest obecnie najszerzej przyjętym narzędziem przesiewowym w kierunku depresji na świecie, stosowanym w podstawowej opiece zdrowotnej, psychiatrii, badaniach i zdrowiu cyfrowym."
+      },
+      {
+        "q": "Co oznaczają wyniki PHQ-9?",
+        "a": "Wyniki PHQ-9 mieszczą się w zakresie od 0 do 27. Progi kliniczne to: 0–4 (brak depresji lub minimalna depresja), 5–9 (łagodna depresja), 10–14 (umiarkowana depresja), 15–19 (umiarkowanie ciężka depresja) i 20–27 (ciężka depresja). Wynik 10 lub wyższy jest standardowym klinicznym punktem odcięcia do diagnozowania dużego zaburzenia depresyjnego, z 88% czułością i 88% swoistością."
+      },
+      {
+        "q": "Czy ten quiz jest diagnozą medyczną?",
+        "a": "Nie. PHQ-9 to narzędzie przesiewowe – identyfikuje osoby, które prawdopodobnie mają depresję i powinny skonsultować się ze specjalistą. Nie zastępuje ono wywiadu klinicznego, badania fizykalnego ani formalnej diagnozy. Tylko licencjonowany pracownik służby zdrowia (lekarz, psychiatra, psycholog) może zdiagnozować duże zaburzenie depresyjne. Jednak wynik PHQ-9 wynoszący 10+ jest traktowany poważnie przez każdą główną instytucję medyczną i stanowi wystarczające uzasadnienie do poszukiwania oceny."
+      },
+      {
+        "q": "Jak dokładny jest PHQ-9?",
+        "a": "PHQ-9 został zatwierdzony w setkach badań. Jego wskaźniki dokładności to: czułość 88%, swoistość 88%, dodatnia wartość predykcyjna 71–85%, ujemna wartość predykcyjna 95% (Kroenke, Spitzer & Williams, JGIM 2001). Dla porównania, mammografia ma około 87% czułości. PHQ-9 jest jednym z najbardziej rygorystycznie zatwierdzonych narzędzi w całym przesiewie zdrowia psychicznego."
+      },
+      {
+        "q": "Jak często powinienem ponownie wypełniać PHQ-9?",
+        "a": "Klinicyści zazwyczaj ponownie podają PHQ-9 co 2–4 tygodnie podczas monitorowania odpowiedzi na leczenie lub co 3–6 miesięcy w celu ogólnego monitorowania dobrostanu. Jeśli uzyskałeś wynik 10+, powtórz test za 2 tygodnie po rozpoczęciu jakiejkolwiek interwencji (terapii, zmian stylu życia, leków), aby zmierzyć, czy Twój wynik się poprawia. Spadek o 5 punktów jest uważany za klinicznie znaczącą poprawę."
+      },
+      {
+        "q": "Co powinienem zrobić, jeśli uzyskam wynik 10 lub wyższy?",
+        "a": "Wynik 10+ oznacza, że występują objawy na poziomie depresji i powinieneś porozmawiać z pracownikiem służby zdrowia. Możesz zacząć od swojego lekarza pierwszego kontaktu – jest on przeszkolony w zakresie omawiania wyników PHQ-9 i może w razie potrzeby skierować Cię do specjalisty zdrowia psychicznego. Jeśli Twój wynik wynosi 20+, prosimy o pilne skorzystanie z pomocy. Jeśli doświadczasz myśli o samookaleczeniu (punkt 9 PHQ-9), prosimy o natychmiastowy kontakt z linią kryzysową: 988 (USA), 116 123 Samarytanie (Wielka Brytania) lub lokalne służby ratunkowe."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Depresja jest jednym z najczęstszych schorzeń medycznych na świecie, dotykającym około 280 milionów ludzi na całym świecie (WHO, 2023). To nie jest smutek – to zaburzenie neurobiologiczne charakteryzujące się trwałymi zmianami nastroju, funkcji poznawczych, snu, apetytu, energii i motywacji, które utrzymują się co najmniej dwa tygodnie i upośledzają codzienne funkcjonowanie.\n\nDuże zaburzenie depresyjne (MDD) jest diagnozowane, gdy pięć lub więcej z dziewięciu objawów PHQ-9 występuje prawie każdego dnia przez co najmniej dwa tygodnie, a co najmniej jednym objawem jest obniżony nastrój lub anhedonia (utrata zainteresowania). Depresja ma wyraźne podłoże neurobiologiczne: obejmuje dysregulację serotoniny, noradrenaliny, dopaminy oraz osi stresu HPA (podwzgórze-przysadka-nadnercza).\n\nDepresja jest wysoce uleczalna. Około 80–90% osób z depresją reaguje pozytywnie na leczenie – zazwyczaj psychoterapię, leki lub ich kombinację. Najczęstszym powodem niepowodzenia leczenia jest jego nierozpoczęcie.",
+    "clinicalBackground": "PHQ-9 został opracowany w ramach projektu PRIME-MD (Primary Care Evaluation of Mental Disorders), dużego badania mającego na celu wprowadzenie psychiatrycznych narzędzi diagnostycznych do placówek podstawowej opieki zdrowotnej, gdzie większość problemów zdrowia psychicznego pozostaje niewykryta.\n\nDziewięć pozycji odpowiada bezpośrednio kryteriom DSM-IV (obecnie DSM-5) dla epizodu dużej depresji. Każda pozycja wykorzystuje 4-punktową skalę Likerta mierzącą częstotliwość w ciągu ostatnich dwóch tygodni: 0 (wcale), 1 (kilka dni), 2 (więcej niż połowa dni), 3 (prawie każdego dnia).\n\nOryginalne badanie walidacyjne (Kroenke, Spitzer & Williams, 2001) objęło 6000 pacjentów w ośmiu klinikach podstawowej opieki zdrowotnej. PHQ-9 został następnie zatwierdzony w ponad 8000 badań w ponad 80 krajach, w różnych grupach wiekowych (młodzież, dorośli, osoby starsze), populacjach medycznych (nowotwory, choroby serca, cukrzyca) i kontekstach kulturowych. Został przetłumaczony na ponad 100 języków.",
+    "howScored": "PHQ-9 jest oceniany poprzez zsumowanie wartości liczbowych wszystkich dziewięciu odpowiedzi: 0 (wcale), 1 (kilka dni), 2 (więcej niż połowa dni), 3 (prawie każdego dnia). Całkowity wynik waha się od 0 do 27.\n\nProgi kliniczne ustalone przez Kroenke i in. (2001):\n• 0–4: Minimalna lub brak depresji\n• 5–9: Łagodna depresja\n• 10–14: Umiarkowana depresja (standardowy próg diagnostyczny: ≥10)\n• 15–19: Umiarkowanie ciężka depresja\n• 20–27: Ciężka depresja\n\nPunkt 9 (myśli o samookaleczeniu) jest zawsze interpretowany oddzielnie, niezależnie od całkowitego wyniku – każdy wynik powyżej 0 w tym punkcie wymaga uwagi klinicznej.\n\nW przypadku monitorowania leczenia, zmiana o 5 punktów jest uważana za klinicznie znaczącą. Remisja jest zazwyczaj definiowana jako wynik poniżej 5.",
+    "interpretation": "Zrozumienie swojego wyniku w kontekście:\n\n**Wynik 0–4 (Minimalny):** Ten zakres odzwierciedla normalne wahania nastroju. Większość ludzi doświadcza okazjonalnie obniżonego nastroju, zmęczenia lub zmian snu – nie wskazuje to na depresję. Skup się na utrzymaniu: konsekwentny sen, regularna aktywność fizyczna i kontakty społeczne to najbardziej poparte badaniami czynniki ochronne.\n\n**Wynik 5–9 (Łagodny):** Objawy występują, ale jeszcze nie osiągają progu diagnostycznego. Jest to najbardziej podatny na działanie zakres – łagodna depresja dobrze reaguje na interwencje behawioralne (ćwiczenia, higiena snu, zorganizowana aktywność społeczna) i krótką terapię psychologiczną (CBT). Nieleczona, łagodna depresja przechodzi w umiarkowaną lub ciężką w około 30% przypadków.\n\n**Wynik 10–14 (Umiarkowany):** Objawy spełniają lub zbliżają się do klinicznych kryteriów diagnostycznych i prawdopodobnie wpływają na codzienne funkcjonowanie. Ten zakres ma najsilniejsze podstawy dowodowe dla leczenia skojarzonego (terapia + styl życia), a czasami leków. Powinieneś zostać oceniony przez lekarza lub specjalistę zdrowia psychicznego.\n\n**Wynik 15–19 (Umiarkowanie ciężki):** Występuje znaczne codzienne upośledzenie. Ten zakres silnie wskazuje na potrzebę profesjonalnego leczenia – zazwyczaj kombinacji psychoterapii (CBT, IPT) i leków przeciwdepresyjnych. Wskaźniki odpowiedzi na tym poziomie wynoszą około 60–70% przy leczeniu.\n\n**Wynik 20–27 (Ciężki):** Ciężka depresja jest stanem nagłym medycznym, podobnie jak kryzys cukrzycowy jest stanem nagłym medycznym. Wymagana jest natychmiastowa profesjonalna opieka. Jeśli masz myśli o samookaleczeniu, prosimy o natychmiastowy kontakt ze służbami ratunkowymi lub linią kryzysową.",
+    "whenToSeek": "Powinieneś skontaktować się z pracownikiem służby zdrowia, jeśli:\n\n• Twój wynik PHQ-9 wynosi 10 lub więcej\n• Twój wynik wynosi 5–9 i utrzymuje się przez ponad 4 tygodnie\n• Odpowiedziałeś powyżej 0 na pytanie 9 (myśli o samookaleczeniu)\n• Twój nastrój znacząco wpływa na Twoją pracę, relacje lub codzienne funkcjonowanie\n• Próbowałeś strategii samopomocy przez 4+ tygodni bez poprawy\n\nPowinieneś natychmiast skontaktować się ze służbami ratunkowymi lub linią kryzysową, jeśli:\n• Masz myśli samobójcze lub o samookaleczeniu\n• Czujesz, że nie jesteś w stanie zapewnić sobie bezpieczeństwa\n• Bliska osoba jest w bezpośrednim niebezpieczeństwie\n\nZasoby kryzysowe: 988 Linia Kryzysowa ds. Zapobiegania Samobójstwom (USA, telefon lub SMS), Samarytanie 116 123 (Wielka Brytania/Irlandia), Linia Tekstowa Kryzysowa: wyślij SMS HOME na numer 741741 (USA/Kanada/Wielka Brytania).",
+    "limitations": "PHQ-9 jest narzędziem przesiewowym z ważnymi ograniczeniami, które każdy użytkownik powinien zrozumieć:\n\n**1. To nie jest diagnoza.** Tylko licencjonowany klinicysta może zdiagnozować duże zaburzenie depresyjne po kompleksowej ocenie obejmującej wywiad medyczny, badanie fizykalne i wywiad kliniczny.\n\n**2. Schorzenia somatyczne mogą zawyżać wyniki.** Stany medyczne, takie jak niedoczynność tarczycy, anemia, przewlekły ból, bezdech senny i cukrzyca, powodują objawy (zmęczenie, zmiany snu, zmiany apetytu), które nakładają się na depresję. Lekarz może odróżnić te stany.\n\n**3. Nie uwzględnia kontekstu.** Wysoki wynik bezpośrednio po żałobie, porodzie lub ważnym wydarzeniu życiowym może odzwierciedlać normalną adaptację, a nie depresję kliniczną. DSM-5 wymaga, aby objawy powodowały znaczny stres lub upośledzenie.\n\n**4. Różnice kulturowe.** Chociaż PHQ-9 został zatwierdzony w różnych kulturach, ekspresja depresji jest różna. Niektóre kultury wyrażają depresję bardziej poprzez objawy somatyczne (ból, zmęczenie) niż emocjonalne. Klinicysta znający Twoje pochodzenie może zapewnić lepszy kontekst.\n\n**5. Błąd przypominania.** PHQ-9 pyta o ostatnie dwa tygodnie. Twój wynik może nie odzwierciedlać okresów o dłuższym czasie trwania lub zmiennych objawów, które uchwyciłby dłuższy wywiad kliniczny."
+  }
+}

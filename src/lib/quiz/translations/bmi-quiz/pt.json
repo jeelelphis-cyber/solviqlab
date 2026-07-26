@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Questionário de Peso e Saúde (IMC)",
+    "description": "Descubra como seu peso atual, hábitos e estilo de vida afetam sua saúde — em 5 perguntas sinceras."
+  },
+  "questions": {
+    "bq1": {
+      "text": "Como você descreveria seu peso atual em comparação com o que parece ideal para o seu corpo?",
+      "options": [
+        "Aproximadamente ideal — sinto-me confortável",
+        "Um pouco fora — alguns quilos a mais ou a menos",
+        "Visivelmente acima ou abaixo do que gostaria",
+        "Muito distante do que preciso"
+      ]
+    },
+    "bq2": {
+      "text": "Com que frequência você movimenta o corpo de forma que acelere os batimentos cardíacos?",
+      "options": [
+        "Quase todos os dias — faz parte da minha rotina",
+        "2 a 3 vezes por semana",
+        "Uma vez por semana ou menos",
+        "Raramente ou nunca"
+      ]
+    },
+    "bq3": {
+      "text": "Quão equilibrada é sua alimentação diária típica?",
+      "scaleLabels": {
+        "min": "Principalmente alimentos processados",
+        "max": "Principalmente alimentos naturais"
+      }
+    },
+    "bq4": {
+      "text": "Você tende a comer quando está estressado ou entediado, mesmo sem sentir fome?"
+    },
+    "bq5": {
+      "text": "Com que frequência você monitora ou reflete sobre o que come?",
+      "options": [
+        "Regularmente — estou atento às minhas escolhas",
+        "Às vezes — quando me lembro",
+        "Raramente — como sem pensar",
+        "Nunca acompanhei"
+      ]
+    },
+    "bq6": {
+      "text": "Como você classificaria seus níveis de energia ao longo do dia?",
+      "options": [
+        "Estável — me sinto bem na maior parte do dia",
+        "Variável — altos e baixos",
+        "Frequentemente cansado(a), especialmente à tarde",
+        "Exausto(a) na maior parte do tempo"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Zona de Peso Saudável",
+      "description": "Seus hábitos sugerem que você está em um bom lugar. Pequenos ajustes consistentes podem mantê-lo(a) assim a longo prazo.",
+      "actions": [
+        "Mantenha seus hábitos atuais de nutrição e movimento — a consistência é a ferramenta mais subestimada",
+        "Adicione uma sessão de treino de força por semana — a massa muscular é o preditor mais forte de envelhecimento saudável e metabolismo",
+        "Acompanhe seu peso semanalmente (mesmo horário, mesmo dia) — a detecção precoce de tendências evita o desvio gradual"
+      ],
+      "miaHook": "Sua pontuação mostra bases sólidas — quero construir sobre o que já está funcionando para você."
+    },
+    {
+      "label": "Espaço para Melhorar",
+      "description": "Você está ciente da sua saúde, mas alguns hábitos-chave estão te segurando. A boa notícia: pequenas mudanças fazem uma grande diferença.",
+      "actions": [
+        "Reduza alimentos ultraprocessados em 50% esta semana — essa única mudança está associada a melhorias significativas no peso e marcadores metabólicos",
+        "Adicione 7.000 passos por dia como meta mínima — abaixo desse limite, o gerenciamento de peso se torna significativamente mais difícil",
+        "Aborde a alimentação emocional, se presente — não é questão de força de vontade, é um padrão que responde bem a estratégias estruturadas"
+      ],
+      "miaHook": "Consigo ver 2–3 coisas específicas que, se mudadas, alterariam sua tendência de peso em 4 semanas."
+    },
+    {
+      "label": "Precisa de Atenção",
+      "description": "Seus padrões atuais podem estar trabalhando contra seus objetivos de saúde. Mas a conscientização é o primeiro passo, e você já está aqui.",
+      "actions": [
+        "Comece entendendo sua linha de base calórica — mesmo um diário alimentar aproximado por uma semana revela padrões que você ainda não enxerga.",
+        "Mova-se por 20 minutos todos os dias — os detalhes específicos importam menos do que a consistência diária.",
+        "Considere conversar com um nutricionista registrado — orientação personalizada supera drasticamente conselhos genéricos para metas significativas de peso."
+      ],
+      "miaHook": "Já vi pessoas na sua situação exata transformarem completamente sua realidade — deixe-me mostrar por onde começar."
+    }
+  ],
+  "seoContent": {
+    "intro": "O IMC (Índice de Massa Corporal) é uma ferramenta de triagem amplamente utilizada, mas é um ponto de dado, não um quadro completo de saúde. Seu peso interage com seu nível de atividade, qualidade da dieta, estresse, sono e composição corporal para determinar os resultados reais de saúde.\n\nEste questionário vai além do IMC para avaliar os fatores comportamentais e de estilo de vida que determinam se seu peso está caminhando em direção à saúde ou se afastando dela — oferecendo insights acionáveis em vez de apenas um número.",
+    "faq": [
+      {
+        "q": "O IMC é uma medida precisa de saúde?",
+        "a": "O IMC é uma ferramenta de triagem útil em nível populacional, mas tem limitações individuais significativas. Ele não distingue entre massa muscular e gordura (atletas frequentemente são classificados como 'sobrepeso'), não considera a distribuição de gordura (visceral vs. subcutânea) e varia em precisão entre etnias. A circunferência da cintura e a relação cintura-altura são frequentemente mais preditivas do risco de saúde metabólica."
+      },
+      {
+        "q": "O que é um peso saudável?",
+        "a": "O peso saudável é melhor definido como o peso no qual seus marcadores metabólicos (pressão arterial, açúcar no sangue, colesterol) estão em faixas normais e você tem energia e função física adequadas. Para a maioria das pessoas, isso se enquadra em um IMC de 18,5–24,9 kg/m², embora as faixas saudáveis individuais variem com base em idade, sexo, etnia e massa muscular."
+      },
+      {
+        "q": "Qual é a maneira mais eficaz de gerenciar o peso?",
+        "a": "Pesquisas mostram consistentemente que o gerenciamento sustentável do peso requer um déficit calórico moderado (300–500 kcal/dia), alta ingestão de proteínas (1,6–2g/kg de peso corporal) para preservar músculos, treinamento de resistência regular, sono adequado (sono ruim aumenta a grelina em 28%) e gerenciamento do estresse (cortisol elevado promove armazenamento de gordura)."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "A saúde do peso é a interseção entre massa corporal, composição corporal, função metabólica e comportamento de estilo de vida. O excesso de tecido adiposo — particularmente a gordura visceral armazenada ao redor dos órgãos abdominais — é um impulsionador direto da resistência à insulina, inflamação sistêmica, doenças cardiovasculares e diabetes tipo 2.\n\nNo entanto, o peso não é puramente uma escolha comportamental. A genética é responsável por 40–70% da variação do IMC. Privação de sono, hormônios do estresse, composição do microbioma intestinal e certos medicamentos afetam significativamente a regulação do peso. Este questionário avalia os fatores comportamentais controláveis.",
+    "howScored": "Este questionário avalia seis dimensões relevantes ao peso: satisfação subjetiva com o peso, frequência de atividade cardiovascular, qualidade da dieta, padrões de alimentação emocional, consciência nutricional e níveis de energia (um indicador metabólico chave).\n\nPontuações acima de 70 indicam hábitos saudáveis que apoiam o gerenciamento de peso. 40–69 indica padrões identificáveis que valem a pena melhorar. Abaixo de 40 indica múltiplos hábitos que estão trabalhando contra as metas de peso e saúde metabólica.",
+    "whenToSeek": "Consulte um profissional de saúde se:\n• Seu IMC estiver acima de 30 (faixa de obesidade) — avaliação médica e orientação personalizada são apropriadas\n• Você tentou várias abordagens de perda de peso sem sucesso\n• O ganho de peso foi rápido (5+ kg em 3 meses sem mudança intencional)\n• Você tem diabetes, pressão alta ou colesterol alto juntamente com excesso de peso\n• A alimentação emocional ou padrões alimentares desordenados estão afetando significativamente sua relação com a comida",
+    "limitations": "Este questionário avalia comportamentos de estilo de vida, não o peso real ou IMC. É uma ferramenta de triagem para hábitos, não uma avaliação médica. O peso é influenciado por fatores além do comportamento, incluindo genética, medicamentos, condições hormonais e histórico médico. Sempre interprete os resultados no contexto com outras informações de saúde e aconselhamento médico."
+  }
+}

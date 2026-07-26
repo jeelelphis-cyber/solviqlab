@@ -119,5 +119,19 @@
   "registration.saved_subtitle": "Sonuçlarınız senkronize edildi. Doğrulamak için e-postanızı kontrol edin.",
   "registration.mia_ready": "Mia hazır",
   "registration.error.email_required": "E-posta gerekli",
-  "registration.error.email_invalid": "Lütfen geçerli bir e-posta adresi girin"
+  "registration.error.email_invalid": "Lütfen geçerli bir e-posta adresi girin",
+  "quiz.start_btn": "Teste Başla →",
+  "quiz.questions_count": "{{n}} soru",
+  "quiz.free": "Ücretsiz",
+  "quiz.no_account": "Hesap gerekmez",
+  "quiz.clinically_validated": "Klinik olarak onaylanmış",
+  "quiz.what_to_do": "Şimdi ne yapmalı",
+  "quiz.mia_coach": "Mia · Koçunuz",
+  "quiz.get_plan": "Mia'nın kişisel planını al →",
+  "quiz.retake": "Testi tekrarla",
+  "quiz.based_on": "Dayanarak:",
+  "quiz.sources": "Kaynaklar",
+  "quiz.question_of": "Soru {{n}} / {{total}}",
+  "quiz.severity_label": "{{severity}} şiddeti",
+  "quiz.continue": "Devam Et →"
 }

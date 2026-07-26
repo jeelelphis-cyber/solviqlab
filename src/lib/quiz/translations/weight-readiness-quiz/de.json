@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Quiz zur Bereitschaft zur Gewichtsabnahme",
+    "description": "Sind Sie wirklich bereit, Gewicht zu verlieren – oder hoffen Sie es nur? Finden Sie heraus, was Ihnen wirklich im Weg steht, bevor Sie beginnen."
+  },
+  "questions": {
+    "wr1": {
+      "text": "Warum möchten Sie jetzt Gewicht verlieren? Was treibt Sie wirklich an?",
+      "options": [
+        "Meine Gesundheit – ich möchte mich langfristig besser fühlen",
+        "Energie und Selbstvertrauen – tägliche Lebensqualität",
+        "Ein bevorstehendes Ereignis – ich habe eine Frist",
+        "Externer Druck – andere möchten, dass ich es tue"
+      ]
+    },
+    "wr2": {
+      "text": "Haben Sie schon einmal versucht, Gewicht zu verlieren, und aufgehört? Was ist passiert?",
+      "options": [
+        "Ich habe frühere Erfolge gut aufrechterhalten",
+        "Ich habe abgenommen und wieder zugenommen – ich verstehe jetzt, warum",
+        "Ich habe aufgehört, weil es zu restriktiv war",
+        "Ich habe aufgehört, weil ich keine schnellen Ergebnisse sah"
+      ]
+    },
+    "wr3": {
+      "text": "Haben Sie einen spezifischen, realistischen Plan, wie Sie sich anders ernähren werden?"
+    },
+    "wr4": {
+      "text": "Wie bereit fühlen Sie sich, konsequente Veränderungen vorzunehmen – keine Crash-Diät, sondern Änderungen des Lebensstils?",
+      "scaleLabels": {
+        "min": "Überhaupt nicht bereit",
+        "max": "Völlig bereit"
+      }
+    },
+    "wr5": {
+      "text": "Wie sehr beeinflussen Stress oder Emotionen Ihre Essgewohnheiten?",
+      "options": [
+        "Sehr wenig – ich esse basierend auf Hunger",
+        "Manchmal – stressige Tage beeinflussen meine Entscheidungen",
+        "Oft – Essen ist für mich Trost",
+        "Immer — emotionales Essen ist mein Muster"
+      ]
+    },
+    "wr6": {
+      "text": "Haben Sie Unterstützung — Menschen, die Ihre Ziele fördern statt sabotieren?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Bereit zu starten",
+      "description": "Sie haben die Einstellung, Motivation und das Bewusstsein, um echte, nachhaltige Fortschritte zu erzielen. Jetzt geht es um die richtige Strategie.",
+      "actions": [
+        "Noch diese Woche starten — Ihr Bereitschaftsfenster ist real und sollte genutzt werden",
+        "Setzen Sie sich ein spezifisches, messbares 8-Wochen-Ziel (keine lebenslange Zahl) — 4–6 kg Verlust in 8 Wochen ist realistisch und motivierend",
+        "Informieren Sie Ihr Unterstützungsnetzwerk über Ihren Plan — Verantwortlichkeit erhöht die Erfolgsrate um 65 %"
+      ],
+      "miaHook": "Sie sind wirklich bereit — nicht nur hoffnungsvoll. Lassen Sie mich Ihnen einen personalisierten Startplan basierend auf Ihrem Profil geben."
+    },
+    {
+      "label": "Fast bereit",
+      "description": "Sie sind motiviert, aber einige Schlüsselelemente sind noch nicht vorhanden. Diese jetzt anzugehen, macht den Unterschied zwischen dauerhafter Veränderung und einem weiteren Fehlstart aus.",
+      "actions": [
+        "Identifizieren Sie den spezifischen Grund, warum frühere Versuche gescheitert sind — gehen Sie diese Ursache an, bevor Sie erneut beginnen",
+        "Bauen Sie zuerst Ihr Unterstützungssystem auf — identifizieren Sie 1–2 Personen, die Ihre Reise aktiv fördern werden",
+        "Verbessern Sie zwei Wochen lang Ihren Schlaf auf 7+ Stunden, bevor Sie beginnen — Schlaf ist der wichtigste Prädiktor für die Einhaltung einer Diät"
+      ],
+      "miaHook": "Ich sehe, was in Ihrem Bereitschaftsbild fehlt — lassen Sie uns diese Lücken schließen, bevor Sie beginnen, damit es diesmal hält."
+    },
+    {
+      "label": "Noch nicht ganz",
+      "description": "Jetzt einzusteigen könnte zu Frustration und einem weiteren Start-Stopp-Zyklus führen. Lassen Sie uns zuerst die richtige Grundlage schaffen.",
+      "actions": [
+        "Konzentrieren Sie sich darauf, Ihr Warum zu verstehen — gesundheitsgetriebene Motivation hat eine 3× höhere Erfolgsrate als ereignisgetriebene oder durch äußeren Druck entstandene Motivation",
+        "Gehen Sie emotionales Essen an, bevor Sie mit einer Diät beginnen — ohne dies wird kein Ernährungsplan langfristig halten",
+        "Arbeiten Sie mit einem Coach, Therapeuten oder Ernährungsberater, um die richtige Grundlage zu schaffen — der Versuch, dies allein mit dem aktuellen Bereitschaftsbild zu tun, ist das Rezept für einen weiteren Neustart"
+      ],
+      "miaHook": "Ohne die Berücksichtigung dessen, was ich in Ihren Antworten sehe, zu starten, führt zum Aufgeben. Lassen Sie uns dies richtig machen — und nur einmal."
+    }
+  ],
+  "seoContent": {
+    "intro": "Die Forschung zu Verhaltensänderungen zeigt durchgängig, dass Motivation und Absicht allein keine ausreichenden Prädiktoren für den Erfolg einer Gewichtsabnahme sind. Was Menschen, die eine dauerhafte Gewichtsabnahme erreichen, von denen unterscheidet, die sich in wiederholten Versuchen befinden, ist die psychologische Bereitschaft: Klarheit der Motivation, realistische Erwartungen, ein konkreter Plan und ausreichende Unterstützung.\n\nDieser Test bewertet sechs Dimensionen der Bereitschaft zur Gewichtsabnahme, die aus der Forschung zum Transtheoretischen Modell (Prochaska & DiClemente) und der Verhaltenspsychologie abgeleitet sind. Zu verstehen, wo Sie tatsächlich stehen – nicht, wo Sie sein möchten – ist die wertvollste Erkenntnis, die Sie vor Beginn gewinnen können.",
+    "faq": [
+      {
+        "q": "Was ist der stärkste Prädiktor für den Erfolg einer Gewichtsabnahme?",
+        "a": "Die Forschung identifiziert durchgängig intrinsische Motivation (gesundheitsgetrieben vs. aussehensgetrieben), Selbstwirksamkeit (Vertrauen in die eigene Fähigkeit, Veränderungen vorzunehmen), soziale Unterstützung und realistische Erwartungen als die stärksten Prädiktoren für eine nachhaltige Gewichtsabnahme. Menschen, die aus gesundheitlichen Gründen abnehmen, halten das Gewicht signifikant länger als diejenigen, die durch Ereignisse oder äußeren Druck motiviert sind."
+      },
+      {
+        "q": "Warum scheitern die meisten Diäten?",
+        "a": "Die Hauptgründe sind: ein zu großes Kaloriendefizit zu Beginn (unhaltbarer Hunger), Verlassen auf Willenskraft statt auf Umweltgestaltung, Nichtbeachtung von emotionalem Essen, fehlende soziale Unterstützung, Alles-oder-Nichts-Denken (ein schlechter Tag führt zum Aufgeben) und das Setzen unrealistischer Zeitpläne. Diese sind behebbar – mit der richtigen Vorbereitung."
+      },
+      {
+        "q": "Wie durchbreche ich den Kreislauf des Abnehmens und Wiederzunehmens?",
+        "a": "Die Forschung zum 'Gewichtszyklus' zeigt, dass die Schlüsselfaktoren zum Durchbrechen des Musters sind: Wechsel von einer kurzfristigen Diät-Denkweise zu einer dauerhaften Lebensstiländerung, Adressieren von emotionalem Essen mit Verhaltenswerkzeugen (nicht Willenskraft), Aufbau einer Erhaltungsphase von Anfang an in den Plan und Wahl eines Ansatzes, der nachhaltig genug ist, dass Sie ihn sich für 5 Jahre vorstellen könnten."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Die Bereitschaft zur Gewichtsabnahme ist ein psychologisches Konzept, das aus dem Transtheoretischen Modell der Verhaltensänderung (Prochaska & DiClemente, 1983) entwickelt wurde. Es beschreibt, wie bereit eine Person ist – kognitiv, motivational und verhaltensbezogen – bedeutende Lebensstiländerungen vorzunehmen und aufrechtzuerhalten.\n\nBereitschaft ist kein fester Zustand – sie schwankt mit Lebensumständen, Stresslevel und sozialem Umfeld. Der Versuch einer Gewichtsabnahme in Phasen geringer Bereitschaft erhöht die Wahrscheinlichkeit eines Rückfalls erheblich und trägt zum frustrierenden Kreislauf wiederholter Versuche bei.",
+    "howScored": "Dieser Test bewertet sechs Bereitschaftsdimensionen: Qualität der Motivation (intrinsisch vs. extrinsisch), Erkenntnisse aus früheren Versuchen, konkrete Planung, subjektives Bereitschaftsvertrauen, Muster emotionalen Essens und Verfügbarkeit sozialer Unterstützung.\n\nWerte über 70 weisen auf eine hohe Bereitschaft hin – beginnen Sie jetzt. 40–69 zeigen eine teilweise Bereitschaft an – spezifische Lücken sollten zuerst angegangen werden. Unter 40 bedeutet, dass die grundlegenden Voraussetzungen für den Erfolg noch nicht gegeben sind – Vorbereitung wird die Ergebnisse deutlich verbessern.",
+    "whenToSeek": "Ziehen Sie professionelle Unterstützung in Betracht, wenn:\n• Sie 3 oder mehr bedeutende Versuche zur Gewichtsabnahme hatten, die nicht zu einer dauerhaften Veränderung führten\n• Emotionales oder Stressessen ein bedeutendes Muster ist, das sich außer Kontrolle anfühlt\n• Sie einen BMI über 35 haben – medizinische Überwachung verbessert die Ergebnisse auf diesem Niveau erheblich\n• Essanfälle, Einschränkungszyklen oder andere gestörte Essmuster vorhanden sind\n• Gewichtsprobleme die psychische Gesundheit oder Lebensqualität erheblich beeinträchtigen",
+    "limitations": "Dieser Test bewertet die psychologische Bereitschaft, nicht die medizinische Eignung für eine Gewichtsabnahme. Individuelle Gesundheitszustände, Medikamente und Stoffwechselfaktoren, die hier nicht erfasst werden, können die Fähigkeit zur Gewichtsabnahme und den Ansatz erheblich beeinflussen. Konsultieren Sie immer einen Arzt, bevor Sie mit einem bedeutenden Programm zur Gewichtsabnahme beginnen, insbesondere bei bestehenden Gesundheitsproblemen."
+  }
+}

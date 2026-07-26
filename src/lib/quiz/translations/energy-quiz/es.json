@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Cuestionario de Niveles de Energía Diarios",
+    "description": "La baja energía no es solo cansancio, es una señal. Descubre qué te está agotando y qué podría restaurarte."
+  },
+  "questions": {
+    "en1": {
+      "text": "¿Cómo te sientes al despertarte por la mañana?",
+      "options": [
+        "Listo/a — me siento descansado/a y despejado/a",
+        "Aceptable — necesito un café para arrancar",
+        "Cansado/a — desearía poder dormir más",
+        "Agotado/a — las mañanas son una verdadera lucha"
+      ]
+    },
+    "en2": {
+      "text": "¿Con qué constancia se mantiene tu energía durante el día?",
+      "scaleLabels": {
+        "min": "Sufro bajones fuertes",
+        "max": "Constante todo el día"
+      }
+    },
+    "en3": {
+      "text": "¿Experimentas una caída significativa de energía por la tarde (alrededor de las 2–4 p.m.)?"
+    },
+    "en4": {
+      "text": "¿Cómo alimenta tu dieta tu día? ¿Comes para tener energía o solo por hambre?",
+      "options": [
+        "Intencionadamente — como para alimentar mi energía",
+        "Razonablemente — mayormente buenas elecciones",
+        "De forma inconsistente — agarro lo que haya disponible",
+        "Mal — azúcar, cafeína y soluciones rápidas"
+      ]
+    },
+    "en5": {
+      "text": "¿Cuánto limita la baja energía lo que realmente haces en un día?",
+      "options": [
+        "Para nada — hago todo lo que quiero",
+        "Un poco — priorizo, pero no me pierdo de mucho",
+        "Notablemente — salto cosas que quería hacer",
+        "Significativamente — siento que toda mi vida se ha reducido"
+      ]
+    },
+    "en6": {
+      "text": "Después de un fin de semana de descanso, ¿suele sentirse recargado o todavía cansado?",
+      "options": [
+        "Recargado — los fines de semana me restauran",
+        "Algo mejor, pero no completamente restaurado",
+        "Todavía cansado — el descanso no parece ayudar mucho",
+        "Peor a veces — el descanso me vuelve más lento"
+      ]
+    },
+    "en7": {
+      "text": "¿Depende de la cafeína para funcionar, no por placer, sino para pasar el día?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Alta Energía",
+      "description": "Su energía está bien respaldada por su estilo de vida. Tiene reservas y se recupera bien del esfuerzo.",
+      "actions": [
+        "Mantenga sus hábitos actuales de sueño y nutrición — estos son sus mayores impulsores de energía",
+        "Agregue una sesión de ejercicio de alta intensidad por semana — esto realmente aumenta la energía basal",
+        "Proteja su horario de sueño incluso los fines de semana — la consistencia es lo que mantiene la energía estable"
+      ],
+      "miaHook": "Su base energética es sólida — hablemos de optimizarla aún más para un rendimiento máximo."
+    },
+    {
+      "label": "Fugas de Energía",
+      "description": "Tiene energía, pero es inconsistente. Ciertos patrones están causando bajones que afectan su estado de ánimo, productividad y motivación.",
+      "actions": [
+        "Revise sus comidas para detectar picos de azúcar en sangre — los alimentos de alto índice glucémico causan las caídas que está experimentando",
+        "Traslade su primera cafeína a 90 minutos después de despertar — esto por sí solo mejora drásticamente la energía sostenida",
+        "Agregue 15 minutos de caminata después del almuerzo — reduce el bajón de energía de la tarde en un 30–40%"
+      ],
+      "miaHook": "Su energía está siendo drenada por algunos patrones específicos que puedo ver — arreglar estos a menudo tiene beneficios en cadena sobre todo lo demás."
+    },
+    {
+      "label": "Energía Crónicamente Baja",
+      "description": "Tu energía está significativamente agotada y está afectando tu calidad de vida. Esto suele ser multifactorial: el sueño, la nutrición, el estrés y el movimiento juegan un papel importante.",
+      "actions": [
+        "Consulta a un médico para descartar causas médicas: disfunción tiroidea, anemia, apnea del sueño y deficiencias vitamínicas se presentan como baja energía.",
+        "Prioriza el sueño por encima de todo durante los próximos 30 días: 7.5–9 horas no son negociables.",
+        "Elimina de inmediato el mayor drenaje de energía de tu dieta: alimentos ultraprocesados, exceso de alcohol o cafeína excesiva."
+      ],
+      "miaHook": "Lo que estás experimentando no es pereza, es un sistema que no está siendo apoyado adecuadamente. Permíteme ayudarte a reconstruir desde cero."
+    }
+  ],
+  "seoContent": {
+    "intro": "La baja energía es una de las quejas de salud más comunes a nivel mundial, y sin embargo, también es una de las más tratables. La investigación muestra consistentemente que la fatiga crónica y la baja energía rara vez son causadas por un solo factor. En cambio, resultan del efecto acumulativo de la calidad del sueño, los patrones nutricionales, los niveles de actividad física, la carga de estrés y las condiciones médicas subyacentes.\n\nEste cuestionario evalúa tus patrones de energía en siete dimensiones, ayudándote a identificar si tu baja energía es estructural (reparable mediante cambios de hábitos) o si requiere evaluación médica.",
+    "faq": [
+      {
+        "q": "¿Qué causa la baja energía en personas sanas?",
+        "a": "En personas por lo demás sanas, las causas más comunes de baja energía son: sueño insuficiente o de mala calidad, deficiencias nutricionales (hierro, B12, vitamina D), deshidratación, dependencia excesiva de cafeína, alta carga de estrés, estilo de vida sedentario (que paradójicamente reduce la energía) y horarios de comida irregulares que causan inestabilidad en el azúcar en sangre."
+      },
+      {
+        "q": "¿Cuándo se debe investigar médicamente la baja energía?",
+        "a": "Consulta a un médico si: la baja energía persiste por más de 4 semanas, duermes 7–9 horas pero aún te sientes agotado, tienes cambios de peso inexplicables, o los problemas de energía van acompañados de otros síntomas (pérdida de cabello, sensibilidad al frío, latidos cardíacos rápidos). Las causas médicas comunes incluyen trastornos tiroideos, anemia, apnea del sueño y diabetes."
+      },
+      {
+        "q": "¿El ejercicio aumenta la energía o la agota?",
+        "a": "El ejercicio moderado regular aumenta la energía basal. Esto es contraintuitivo pero está bien establecido: el ejercicio aeróbico aumenta la densidad mitocondrial, mejora la calidad del sueño y regula el cortisol, todo lo cual aumenta la energía sostenida. La clave es la regularidad: 3–5 sesiones por semana de intensidad moderada."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "La energía es un estado fisiológico complejo gobernado por la interacción del sueño, la nutrición, el movimiento, las hormonas del estrés, el ritmo circadiano y la función mitocondrial. La baja energía crónica —distinta del cansancio ocasional— indica que uno o más de estos sistemas no está funcionando de manera óptima.\n\nLos culpables más comunes son la deuda de sueño (acumulada durante semanas), la desregulación del azúcar en sangre por una mala nutrición, el desacondicionamiento físico, el estrés crónico (que eleva el cortisol y suprime las hormonas reparadoras) y la dependencia de la cafeína (que enmascara la fatiga sin resolverla).",
+    "howScored": "Este cuestionario evalúa siete dimensiones de la energía: restauración matutina (indicador de calidad del sueño), consistencia intra-diaria, patrones de bajón vespertino, calidad del combustible nutricional, actividad limitada por la energía, recuperación tras el descanso y dependencia de la cafeína.\n\nPuntuaciones superiores a 70 indican energía bien respaldada con buenas bases de estilo de vida. 40–69 indica fugas de energía identificables que vale la pena abordar. Por debajo de 40 indica energía crónicamente agotada que probablemente requiere tanto cambios en el estilo de vida como evaluación médica.",
+    "whenToSeek": "Consulta a un médico si:\n• La baja energía ha persistido durante más de 4 semanas a pesar de dormir adecuadamente\n• Duermes 8+ horas pero te despiertas agotado\n• Los problemas de energía van acompañados de cambios de peso inexplicables, adelgazamiento del cabello, sensibilidad al frío o palpitaciones cardíacas\n• Tienes antecedentes de depresión o ansiedad (ambos causan un agotamiento significativo de energía)\n• Sospechas un trastorno del sueño (ronquidos, jadeos, despertares frecuentes)\n\nCausas médicas comunes: hipotiroidismo, anemia por deficiencia de hierro, deficiencia de vitamina B12 o D, apnea obstructiva del sueño, diabetes tipo 2.",
+    "limitations": "Este cuestionario evalúa patrones de energía basados en el estilo de vida. No puede diagnosticar condiciones médicas que causan fatiga. Los resultados reflejan percepciones autoinformadas y pueden no capturar medidas fisiológicas objetivas. Las líneas de base de energía individual varían significativamente — lo que se siente normal para una persona puede indicar agotamiento en otra."
+  }
+}

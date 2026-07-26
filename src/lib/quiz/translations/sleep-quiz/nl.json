@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Slaapkwaliteit Quiz (Epworth Slaperigheidsschaal)",
+    "description": "De Epworth Slaperigheidsschaal is de wereldwijde klinische standaard voor het meten van overmatige slaperigheid overdag. Het wordt wereldwijd door slaapspecialisten gebruikt om slaapstoornissen op te sporen.",
+    "medicalNote": "Een hoge score kan wijzen op een slaapstoornis zoals slaapapneu of narcolepsie. Raadpleeg bij twijfel een zorgverlener."
+  },
+  "likertOptions": [
+    "Zou nooit dommelen",
+    "Kleine kans op dommelen",
+    "Matige kans op dommelen",
+    "Grote kans op dommelen"
+  ],
+  "questions": {
+    "ess1": {
+      "text": "Zittend lezen",
+      "hint": "In slaap vallen tijdens het lezen is een van de eerste tekenen van chronisch slaaptekort."
+    },
+    "ess2": {
+      "text": "Televisie kijken",
+      "hint": "Zelfs passieve activiteiten zoals tv-kijken zouden geen slaperigheid moeten veroorzaken als u voldoende en kwalitatieve slaap krijgt."
+    },
+    "ess3": {
+      "text": "Stilzitten op een openbare plek (bijv. een theater of vergadering)",
+      "hint": "Moeite hebben om wakker te blijven in stille openbare omgevingen is een belangrijke diagnostische marker voor overmatige slaperigheid."
+    },
+    "ess4": {
+      "text": "Als passagier in een auto gedurende een uur zonder pauze",
+      "hint": "De gelijkmatige beweging van een autorit is een standaard trigger voor slaperigheid. Hoge scores hier wijzen op een ernstig slaaptekort."
+    },
+    "ess5": {
+      "text": "Liggen om uit te rusten in de middag wanneer de omstandigheden het toelaten",
+      "hint": "Het vermogen om snel in slaap te vallen tijdens een middagrust weerspiegelt uw werkelijke slaapdruk."
+    },
+    "ess6": {
+      "text": "Zittend praten met iemand",
+      "hint": "In slaap vallen tijdens een gesprek is een klinisch significant teken van overmatige slaperigheid overdag."
+    },
+    "ess7": {
+      "text": "Stilzitten na een lunch zonder alcohol",
+      "hint": "Een dip na de lunch is normaal, maar een hoge kans op indutten zonder alcohol duidt hier op een slaapstoornis."
+    },
+    "ess8": {
+      "text": "In de auto, terwijl u enkele minuten stilstaat in het verkeer",
+      "hint": "Slaperigheid tijdens het rijden of stilstaan in het verkeer is een direct veiligheidsrisico en een belangrijke klinische indicator."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Normale slaap",
+      "description": "Uw slaperigheid overdag valt binnen het normale bereik. Uw slaap lijkt u voldoende te herstellen.",
+      "actions": [
+        "Houd uw huidige slaapschema aan — consistentie is de krachtigste beschermer van uw slaap",
+        "Houd uw slaapkamer onder de 18°C (65°F) — de optimale temperatuur voor diepe slaap",
+        "Beperk cafeïne na 14:00 uur om de slaaparchitectuur te beschermen"
+      ],
+      "miaHook": "Uw slaapfundering is solide. Ik wil u laten zien hoe u deze nog herstellender kunt maken — er is nog een niveau boven waar u nu bent."
+    },
+    {
+      "label": "Lichte overmatige slaperigheid",
+      "description": "Licht verhoogde slaperigheid overdag. Kan wijzen op milde slaaptekort of beginnende slaapproblemen.",
+      "actions": [
+        "Voeg de komende 2 weken 30 minuten toe aan uw slaapvenster en volg uw energieniveaus",
+        "Controleer uw slaapkamer op licht en geluid — beide fragmenteren de slaap zonder u volledig te wekken",
+        "Vermijd schermen gedurende 45 minuten voor het slapengaan deze week"
+      ],
+      "miaHook": "Uw score is grensoverschrijdend — wat betekent dat kleine veranderingen nu een groot verschil maken. Ik kan u precies laten zien waar uw slaap lekt."
+    },
+    {
+      "label": "Matige overmatige slaperigheid",
+      "description": "Matige overmatige slaperigheid overdag. Dit niveau wordt in verband gebracht met verminderd rijvermogen, lagere productiviteit en metabole problemen.",
+      "actions": [
+        "Raadpleeg een arts over een mogelijke slaapstoornis — bij deze score is screening op slaapapneu passend",
+        "Stop alle alcohol 3 uur voor het slapengaan — het fragmenteert de slaaparchitectuur, zelfs als het u helpt in slaap te vallen",
+        "Stel een niet-onderhandelbaar bedtijdstip in voor de komende 30 dagen en bescherm dit"
+      ],
+      "miaHook": "Op dit niveau beïnvloedt uw slaap alles — uw gewicht, uw stemming, uw concentratie. Ik heb een protocol dat hier specifiek op inspeelt."
+    },
+    {
+      "label": "Ernstige overmatige slaperigheid",
+      "description": "Ernstige slaperigheid overdag. Dit verhoogt het risico op ongelukken aanzienlijk en wordt geassocieerd met ernstige slaapstoornissen. Medisch onderzoek wordt sterk aanbevolen.",
+      "actions": [
+        "Plan een slaaponderzoek (polysomnografie) bij uw arts — deze score rechtvaardigt nader onderzoek",
+        "Rijd niet als u zich slaperig voelt — uw reflexen zijn verminderd bij dit niveau van slaperigheid",
+        "Vermijd het bedienen van zware machines totdat u bent beoordeeld door een specialist"
+      ],
+      "miaHook": "Ik wil direct zijn: een score die zo hoog is, vereist medische aandacht, niet alleen een slaaproutine. Laat me u helpen de juiste eerste stap te bepalen."
+    }
+  ],
+  "seoContent": {
+    "intro": "De Epworth Slaperigheidsschaal (ESS) is ontwikkeld door Dr. Murray Johns in het Epworth Ziekenhuis in Melbourne, Australië in 1991. Het is sindsdien de wereldwijde klinische standaard geworden voor het meten van overmatige slaperigheid overdag (EDS), gebruikt in slaap laboratoria, ziekenhuizen en onderzoeksinstellingen wereldwijd.\n\nIn tegenstelling tot slaapdagboeken of subjectieve gevoelsbeoordelingen, meet de ESS uw kans om in slaap te vallen in 8 specifieke situaties — en geeft een objectief beeld van hoe slaapgebrek u werkelijk heeft. Scores variëren van 0 tot 24. Een score boven de 10 duidt op overmatige slaperigheid die klinische evaluatie rechtvaardigt.\n\nSlaapstoornissen treffen 50–70 miljoen mensen alleen al in de VS (CDC, 2023). Onbehandelde overmatige slaperigheid overdag verhoogt het risico op verkeersongevallen met 2,5×, draagt bij aan gewichtstoename, depressie, hart- en vaatziekten en vermindert de kwaliteit van leven aanzienlijk.",
+    "faq": [
+      {
+        "q": "Wat is de Epworth Slaperigheidsschaal?",
+        "a": "De ESS is een gevalideerde vragenlijst met 8 items die slaperigheid overdag meet door te vragen hoe groot de kans is dat u in slaap valt in alledaagse situaties. Het is de wereldwijde standaard die door slaapspecialisten wordt gebruikt en werd in 1991 gepubliceerd in het tijdschrift Sleep."
+      },
+      {
+        "q": "Wat is een normale Epworth-score?",
+        "a": "Een score van 0–7 wordt als normaal beschouwd. Scores van 8–9 duiden op milde overmatige slaperigheid; 10–15 matig; en 16–24 ernstig. De meeste gezonde volwassenen scoren tussen de 4 en 8."
+      },
+      {
+        "q": "Wat veroorzaakt overmatige slaperigheid overdag?",
+        "a": "De meest voorkomende oorzaken zijn onvoldoende slaapduur, obstructieve slaapapneu, narcolepsie, rusteloze benen syndroom, slechte slaapkwaliteit, medicijnen en depressie."
+      },
+      {
+        "q": "Moet ik een arts raadplegen als ik boven de 10 scoor?",
+        "a": "Ja. Een score van 10 of hoger rechtvaardigt klinische evaluatie. Uw arts kan een polysomnografie (slaaponderzoek) aanvragen om slaapapneu of andere aandoeningen uit te sluiten."
+      },
+      {
+        "q": "Kan slechte slaapkwaliteit gewichtstoename veroorzaken?",
+        "a": "Ja. Slaapgebrek ontregelt ghreline en leptine — de hongerhormonen — waardoor de eetlust en het verlangen naar calorierijk voedsel toenemen. Studies tonen aan dat minder dan 6 uur slaap per nacht het risico op obesitas met 23% verhoogt."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Overmatige slaperigheid overdag (EDS) is een aandoening waarbij een persoon zich overdag slaperig voelt en moeite heeft om wakker te blijven in situaties waar alertheid wordt verwacht. Het treft ongeveer 20% van de wereldbevolking en is te onderscheiden van normale vermoeidheid — het is een aanhoudende, pathologische mate van slaperigheid die het functioneren belemmert.\n\nEDS is een primair symptoom van verschillende slaapstoornissen, waaronder obstructieve slaapapneu (de meest voorkomende oorzaak), narcolepsie, idiopathische hypersomnie en circadiane ritmestoornissen. Het kan ook het gevolg zijn van chronisch onvoldoende slaap — de meest voorkombare oorzaak die miljoenen mensen treft.\n\nDe Epworth Slaperigheidsschaal is ontworpen om EDS objectief te meten door de kans op in slaap vallen te beoordelen in 8 gestandaardiseerde situaties. In tegenstelling tot de vraag 'voelt u zich moe?', legt de ESS gedragsmatig bewijs van slaperigheid vast dat sterk correleert met fysiologische metingen zoals de Multiple Sleep Latency Test (MSLT).",
+    "clinicalBackground": "De Epworth Slaperigheidsschaal is ontwikkeld door Dr. Murray Johns en gepubliceerd in het tijdschrift Sleep in 1991. Dr. Johns was arts in het Epworth Ziekenhuis in Melbourne en merkte dat subjectieve beoordelingen van slaperigheid onbetrouwbaar waren. Hij ontwierp de ESS om de kans op in slaap vallen te meten in situaties die systematisch variëren in hun slaapopwekkende eigenschappen.\n\nDe oorspronkelijke validatiestudie toonde een sterke correlatie aan met objectieve metingen van slaperigheid (MSLT, r = 0,51) en een hoge test-hertest betrouwbaarheid (r = 0,82). De ESS is sindsdien gevalideerd in tientallen talen en patiëntenpopulaties.\n\nHet is nu het meest gebruikte klinische hulpmiddel voor screening op slaapstoornissen wereldwijd, onderschreven door de American Academy of Sleep Medicine (AASM), de British Sleep Society, en opgenomen in klinische richtlijnen voor slaapapneu, narcolepsie en hypersomnie wereldwijd.",
+    "howScored": "De Epworth-schaal voor slaperigheid vraagt hoe waarschijnlijk het is dat u in slaap valt in 8 specifieke situaties op een schaal van 0–3:\n• 0: Zou nooit in slaap vallen\n• 1: Kleine kans om in slaap te vallen\n• 2: Matige kans om in slaap te vallen\n• 3: Grote kans om in slaap te vallen\n\nDe totale scores variëren van 0 tot 24. Klinische drempelwaarden:\n• 0–7: Normaal bereik (gemiddelde is 5–6 bij gezonde volwassenen)\n• 8–9: Grens/milde overmatige slaperigheid\n• 10–15: Matige overmatige slaperigheid overdag — klinische evaluatie is aangewezen\n• 16–24: Ernstige overmatige slaperigheid overdag — dringende evaluatie aanbevolen\n\nEen score van 10+ heeft een sensitiviteit van 78% en specificiteit van 79% voor het identificeren van klinisch significante slaapstoornissen in algemene populaties.",
+    "interpretation": "**Score 0–7 (Normaal):** Uw slaap herstelt u voldoende. De gemiddelde gezonde volwassene scoort 5–6. Richt u op het handhaven van uw slaapschema en het beschermen van de slaapkwaliteit.\n\n**Score 8–9 (Mild/Grens):** Iets boven normaal. Dit kan wijzen op opgebouwde slaapschuld, onregelmatige slaaptijden of beginnende slaapproblemen. Gedragsveranderingen — consistente slaaptijden, verbeteringen in slaaphygiëne — zijn op dit niveau meestal voldoende.\n\n**Score 10–15 (Matig):** Dit bereik is klinisch significant. Onderzoek toont aan dat op dit niveau de rijprestaties even sterk zijn verminderd als bij een alcoholpromillage van 0,05%. Cognitieve functie, stemming, metabolisme en immuunfunctie zijn allemaal meetbaar beïnvloed. Medische evaluatie is passend, met name om te screenen op slaapapneu.\n\n**Score 16–24 (Ernstig):** Dit niveau van slaperigheid vormt een ernstig veiligheids- en gezondheidsrisico. Het risico op verkeersongevallen is 2,5× hoger dan gemiddeld. Onmiddellijke medische evaluatie, inclusief een slaaponderzoek, wordt sterk aanbevolen.",
+    "whenToSeek": "Raadpleeg een zorgverlener als:\n\n• Uw ESS-score 10 of hoger is\n• U is verteld dat u luid snurkt of stopt met ademen tijdens de slaap\n• U zich niet uitgerust voelt na een volledige nachtrust\n• U overdag onvrijwillig in slaap valt\n• Uw slaperigheid uw werk, rijgedrag of relaties beïnvloedt\n• Een bedpartner heeft ongebruikelijke beenbewegingen of naar adem happen waargenomen\n\nZoek spoedeisende hulp als:\n• U een bijna-ongeluk heeft gehad door slaperigheid tijdens het rijden\n• U plotselinge spierzwakte ervaart die wordt uitgelokt door emoties (kataplexie — een teken van narcolepsie)\n• U niet wakker kunt blijven op werk, ondanks voldoende slaapmogelijkheden",
+    "limitations": "**1. Subjectieve herinnering:** De ESS meet de waargenomen kans om in slaap te vallen, wat kan worden beïnvloed door zelfbewustzijn en herinneringsbias. Mensen met ernstige slaapstoornissen onderschatten soms hun slaperigheid omdat chronische vermoeidheid hun basisniveau is geworden.\n\n**2. Situationele variatie:** Niet iedereen komt regelmatig in alle 8 situaties terecht. Mensen die nooit autorijden, kunnen bijvoorbeeld moeite hebben om item 8 nauwkeurig te beantwoorden.\n\n**3. Identificeert de oorzaak niet:** Een hoge ESS-score duidt op overmatige slaperigheid, maar stelt geen diagnose van de oorzaak. Slaapapneu, narcolepsie, medicatie-effecten en eenvoudige slaapgebrek leveren allemaal vergelijkbare scores op.\n\n**4. Niet gevalideerd voor kinderen onder 12:** De ESS is ontwikkeld en gevalideerd in volwassen populaties. Slaperigheid bij kinderen wordt beoordeeld met andere instrumenten.\n\n**5. Momentopname:** De ESS weerspiegelt uw recente slaapervaring. Reizen, ziekte, ploegendienst en levensgebeurtenissen kunnen tijdelijk de scores verhogen zonder dat dit wijst op een chronische aandoening."
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "BMI & Gewichtsgesundheits-Quiz",
+    "description": "Finden Sie heraus, wie Ihr aktuelles Gewicht, Ihre Gewohnheiten und Ihr Lebensstil Ihre Gesundheit beeinflussen – in 5 ehrlichen Fragen."
+  },
+  "questions": {
+    "bq1": {
+      "text": "Wie würden Sie Ihr aktuelles Gewicht im Vergleich zu dem beschreiben, was sich für Ihren Körper richtig anfühlt?",
+      "options": [
+        "Etwa richtig – ich fühle mich wohl",
+        "Leicht daneben – ein paar Kilo in die eine oder andere Richtung",
+        "Deutlich über oder unter dem, wo ich sein möchte",
+        "Weit entfernt von dem, wo ich sein muss"
+      ]
+    },
+    "bq2": {
+      "text": "Wie oft bewegen Sie Ihren Körper auf eine Weise, die Ihre Herzfrequenz erhöht?",
+      "options": [
+        "An den meisten Tagen – es ist Teil meiner Routine",
+        "2–3 Mal pro Woche",
+        "Einmal pro Woche oder weniger",
+        "Selten oder nie"
+      ]
+    },
+    "bq3": {
+      "text": "Wie ausgewogen ist Ihre typische tägliche Ernährung?",
+      "scaleLabels": {
+        "min": "Hauptsächlich verarbeitete Lebensmittel",
+        "max": "Hauptsächlich vollwertige Lebensmittel"
+      }
+    },
+    "bq4": {
+      "text": "Neigen Sie dazu, bei Stress oder Langeweile zu essen, auch wenn Sie keinen Hunger haben?"
+    },
+    "bq5": {
+      "text": "Wie oft verfolgen oder denken Sie darüber nach, was Sie essen?",
+      "options": [
+        "Regelmäßig – ich achte bewusst auf meine Entscheidungen",
+        "Manchmal – wenn ich daran denke",
+        "Selten – ich esse, ohne nachzudenken",
+        "Nie verfolgt"
+      ]
+    },
+    "bq6": {
+      "text": "Wie würden Sie Ihr Energieniveau im Laufe des Tages bewerten?",
+      "options": [
+        "Gleichmäßig — ich fühle mich die meiste Zeit gut",
+        "Schwankend — Höhen und Tiefen",
+        "Oft müde, besonders nachmittags",
+        "Die meiste Zeit erschöpft"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Gesunder Gewichtsbereich",
+      "description": "Ihre Gewohnheiten deuten darauf hin, dass Sie in einer guten Verfassung sind. Kleine, konsequente Anpassungen können Sie langfristig dort halten.",
+      "actions": [
+        "Behalten Sie Ihre aktuellen Ernährungs- und Bewegungsgewohnheiten bei — Beständigkeit ist das am meisten unterschätzte Werkzeug",
+        "Fügen Sie eine Krafteinheit pro Woche hinzu — Muskelmasse ist der stärkste Prädiktor für gesundes Altern und Stoffwechsel",
+        "Wiegen Sie sich wöchentlich (gleiche Zeit, gleicher Tag) — frühe Trenderkennung verhindert schleichende Veränderungen"
+      ],
+      "miaHook": "Ihr Ergebnis zeigt solide Grundlagen — ich möchte auf dem aufbauen, was bereits für Sie funktioniert."
+    },
+    {
+      "label": "Verbesserungspotenzial",
+      "description": "Sie sind sich Ihrer Gesundheit bewusst, aber einige wenige Schlüsselgewohnheiten halten Sie zurück. Die gute Nachricht: Kleine Veränderungen bewirken Großes.",
+      "actions": [
+        "Reduzieren Sie stark verarbeitete Lebensmittel diese Woche um 50 % — diese einzelne Veränderung ist mit signifikanten Verbesserungen bei Gewicht und Stoffwechselmarkern verbunden",
+        "Fügen Sie 7.000 Schritte pro Tag als Basis hinzu — unterhalb dieser Schwelle wird Gewichtsmanagement deutlich schwieriger",
+        "Gehen Sie emotionales Essen an, falls vorhanden — es ist nicht Willenskraft, sondern ein Muster, das gut auf strukturierte Strategien anspricht"
+      ],
+      "miaHook": "Ich sehe 2–3 spezifische Dinge, die, wenn geändert, Ihren Gewichtstrend innerhalb von 4 Wochen verschieben würden."
+    },
+    {
+      "label": "Handlungsbedarf",
+      "description": "Ihre aktuellen Muster könnten Ihren Gesundheitszielen entgegenwirken. Aber Bewusstsein ist der erste Schritt, und Sie sind bereits hier.",
+      "actions": [
+        "Beginnen Sie damit, Ihren Kalorien-Grundumsatz zu verstehen – selbst ein grobes Ernährungstagebuch für eine Woche zeigt Muster auf, die Sie derzeit nicht sehen.",
+        "Bewegen Sie sich jeden Tag 20 Minuten – die genaue Art der Bewegung ist weniger wichtig als die tägliche Beständigkeit.",
+        "Ziehen Sie ein Gespräch mit einem registrierten Ernährungsberater in Betracht – persönliche Beratung übertrifft allgemeine Ratschläge für bedeutende Gewichtsziele bei weitem."
+      ],
+      "miaHook": "Ich habe Menschen in genau Ihrer Situation gesehen, die alles zum Positiven gewendet haben – lassen Sie mich Ihnen zeigen, wo Sie anfangen können."
+    }
+  ],
+  "seoContent": {
+    "intro": "Der BMI (Body-Mass-Index) ist ein weit verbreitetes Screening-Instrument, aber er ist nur ein Datenpunkt und kein vollständiges Bild der Gesundheit. Ihr Gewicht interagiert mit Ihrem Aktivitätsniveau, Ihrer Ernährungsqualität, Ihrem Stress, Ihrem Schlaf und Ihrer Körperzusammensetzung, um die tatsächlichen gesundheitlichen Ergebnisse zu bestimmen.\n\nDieses Quiz geht über den BMI hinaus und bewertet die Verhaltens- und Lebensstilfaktoren, die bestimmen, ob sich Ihr Gewicht in Richtung Gesundheit oder davon weg entwickelt – und gibt Ihnen umsetzbare Erkenntnisse statt nur einer Zahl.",
+    "faq": [
+      {
+        "q": "Ist der BMI ein genaues Gesundheitsmaß?",
+        "a": "Der BMI ist ein nützliches Screening-Instrument auf Bevölkerungsebene, hat aber erhebliche individuelle Einschränkungen. Er unterscheidet nicht zwischen Muskel- und Fettmasse (Sportler werden oft als 'übergewichtig' eingestuft), berücksichtigt nicht die Fettverteilung (viszeral vs. subkutan) und variiert in seiner Genauigkeit zwischen verschiedenen Ethnien. Taillenumfang und Taille-zu-Größe-Verhältnis sind oft aussagekräftiger für das metabolische Gesundheitsrisiko."
+      },
+      {
+        "q": "Was ist ein gesundes Gewicht?",
+        "a": "Ein gesundes Gewicht ist am besten als das Gewicht definiert, bei dem Ihre Stoffwechselmarker (Blutdruck, Blutzucker, Cholesterin) im Normalbereich liegen und Sie über ausreichend Energie und körperliche Funktion verfügen. Für die meisten Menschen liegt dies innerhalb eines BMI von 18,5–24,9 kg/m², obwohl die individuellen gesunden Bereiche je nach Alter, Geschlecht, Ethnizität und Muskelmasse variieren."
+      },
+      {
+        "q": "Was ist der effektivste Weg, um das Gewicht zu kontrollieren?",
+        "a": "Die Forschung zeigt durchgängig, dass eine nachhaltige Gewichtskontrolle ein moderates Kaloriendefizit (300–500 kcal/Tag), eine hohe Proteinzufuhr (1,6–2 g/kg Körpergewicht) zum Erhalt der Muskulatur, regelmäßiges Krafttraining, ausreichenden Schlaf (schlechter Schlaf erhöht Ghrelin um 28 %) und Stressmanagement (hohes Cortisol fördert die Fettspeicherung) erfordert."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Gewichtsgesundheit ist die Schnittstelle von Körpermasse, Körperzusammensetzung, Stoffwechselfunktion und Lebensstilverhalten. Überschüssiges Fettgewebe – insbesondere viszerales Fett, das um die Bauchorgane gespeichert wird – ist ein direkter Treiber für Insulinresistenz, systemische Entzündungen, Herz-Kreislauf-Erkrankungen und Typ-2-Diabetes.\n\nGewicht ist jedoch nicht rein eine Verhaltensentscheidung. Die Genetik macht 40–70 % der BMI-Varianz aus. Schlafmangel, Stresshormone, die Zusammensetzung des Darmmikrobioms und bestimmte Medikamente beeinflussen die Gewichtsregulation erheblich. Dieses Quiz bewertet die kontrollierbaren Verhaltensfaktoren.",
+    "howScored": "Dieses Quiz bewertet sechs gewichtsrelevante Dimensionen: subjektive Gewichtszufriedenheit, Häufigkeit kardiovaskulärer Aktivität, Ernährungsqualität, emotionales Essverhalten, Ernährungswissen und Energieniveau (ein wichtiger Stoffwechselindikator).\n\nWerte über 70 deuten auf gesunde Gewohnheiten hin, die die Gewichtskontrolle unterstützen. 40–69 zeigt identifizierbare Muster an, die verbesserungswürdig sind. Unter 40 weist auf mehrere Gewohnheiten hin, die gegen Gewichts- und Stoffwechselgesundheitsziele arbeiten.",
+    "whenToSeek": "Konsultieren Sie einen Arzt, wenn:\n• Ihr BMI über 30 liegt (Adipositas-Bereich) – eine medizinische Untersuchung und persönliche Beratung sind angezeigt\n• Sie mehrere Ansätze zur Gewichtsabnahme ohne Erfolg versucht haben\n• Die Gewichtszunahme schnell erfolgte (5+ kg in 3 Monaten ohne beabsichtigte Änderung)\n• Sie haben Diabetes, Bluthochdruck oder hohes Cholesterin in Verbindung mit Übergewicht\n• Emotionales Essen oder gestörte Essmuster Ihre Beziehung zum Essen erheblich beeinträchtigen",
+    "limitations": "Dieses Quiz bewertet Lebensstilverhalten, nicht das tatsächliche Gewicht oder den BMI. Es ist ein Screening-Instrument für Gewohnheiten, keine medizinische Beurteilung. Das Gewicht wird durch Faktoren jenseits des Verhaltens beeinflusst, darunter Genetik, Medikamente, hormonelle Erkrankungen und die Krankengeschichte. Interpretieren Sie die Ergebnisse immer im Kontext mit anderen Gesundheitsinformationen und ärztlichem Rat."
+  }
+}

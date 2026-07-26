@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Test de risque d'épuisement professionnel",
+    "description": "L'épuisement professionnel ne survient pas du jour au lendemain. Vérifiez où vous vous situez sur le spectre avant qu'il ne devienne plus difficile de revenir en arrière."
+  },
+  "questions": {
+    "bu1": {
+      "text": "Vous sentez-vous émotionnellement vidé(e) par votre travail ou vos responsabilités quotidiennes — même avant que la journée ne commence ?",
+      "options": [
+        "Non — je me sens généralement impliqué(e)",
+        "Parfois — lors des semaines difficiles",
+        "Souvent — la plupart des semaines sont lourdes",
+        "Presque toujours — je fonctionne à vide"
+      ]
+    },
+    "bu2": {
+      "text": "Avez-vous perdu la motivation ou l'enthousiasme pour des choses que vous aimiez auparavant ?"
+    },
+    "bu3": {
+      "text": "À quel point vous sentez-vous efficace au travail ou dans vos principales responsabilités ces derniers temps ?",
+      "options": [
+        "Très efficace — je donne le meilleur de moi-même",
+        "Correct — j'accomplis ce que j'ai à faire",
+        "En dessous de mon niveau habituel — je remarque la baisse",
+        "Je fais juste ce qu'il faut sans enthousiasme"
+      ]
+    },
+    "bu4": {
+      "text": "Vous surprenez-vous à devenir plus cynique ou détaché(e) envers les personnes autour de vous ?"
+    },
+    "bu5": {
+      "text": "À quelle fréquence prenez-vous de véritables pauses pendant la journée — pas seulement du défilement, mais un vrai repos ?",
+      "scaleLabels": {
+        "min": "Jamais",
+        "max": "Plusieurs fois par jour"
+      }
+    },
+    "bu6": {
+      "text": "Lorsque vous imaginez votre semaine à venir, quelle est votre première réaction ?",
+      "options": [
+        "Energisé(e) — j'ai des choses qui me motivent",
+        "Neutre — juste une semaine de plus",
+        "Dread — c'est comme si c'était trop",
+        "Dread — je n'y vois aucune lueur"
+      ]
+    },
+    "bu7": {
+      "text": "Avez-vous l'impression que quoi que vous fassiez, ce n'est jamais assez ?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Faible risque d'épuisement professionnel",
+      "description": "Vous tenez bien le coup. Vos réserves d'énergie sont intactes et vous disposez de tampons sains.",
+      "actions": [
+        "Maintenez vos habitudes de récupération — ce qui vous protège aujourd'hui mérite d'être nommé et préservé",
+        "Instaurez une pratique de récupération proactive chaque semaine (pas seulement un repos réactif)",
+        "Faites un point mensuel avec vous-même — l'épuisement professionnel s'installe lentement et une prise de conscience précoce est essentielle"
+      ],
+      "miaHook": "Vous êtes en bonne forme — parlons maintenant de la manière de le rester lorsque la pression monte."
+    },
+    {
+      "label": "Signes d'alerte précoces",
+      "description": "Vous présentez certains des premiers signaux d'épuisement professionnel. C'est le moment idéal pour agir — avant que la récupération ne devienne plus difficile.",
+      "actions": [
+        "Retirez une chose de votre emploi du temps cette semaine — à ce stade, l'épuisement professionnel répond à la réduction, pas à l'optimisation",
+        "Ajoutez une véritable activité de récupération qui n'a rien à voir avec la productivité",
+        "Parlez à une personne de confiance de la pression que vous ressentez — le soutien social retarde la progression de l'épuisement professionnel"
+      ],
+      "miaHook": "Je vois des schémas d'épuisement précoce dans vos réponses — la bonne nouvelle, c'est qu'à ce stade, la récupération est tout à fait possible avec les bons ajustements."
+    },
+    {
+      "label": "Zone d'épuisement professionnel",
+      "description": "Vos réponses suggèrent un épuisement professionnel significatif. Cela affecte votre santé, vos relations et votre productivité — ce n'est pas une faiblesse, c'est un état physiologique réel.",
+      "actions": [
+        "Consultez un médecin ou un thérapeute — à ce niveau, l'épuisement professionnel a des effets physiologiques mesurables et bénéficie d'un soutien professionnel",
+        "Prenez au moins une journée entière complètement libre de toute activité liée au travail cette semaine — pas une journée « douce », mais une pause complète",
+        "Identifiez la plus grande source d'épuisement de votre énergie et commencez le processus de réduction ou de suppression — même si cela semble impossible"
+      ],
+      "miaHook": "Ce que vous ressentez est réel et sérieux — je souhaite vous aider à tracer un chemin de rétablissement qui ne vous oblige pas à tout abandonner."
+    }
+  ],
+  "seoContent": {
+    "intro": "L'épuisement professionnel (burnout) est un état de stress chronique au travail caractérisé par trois dimensions : l'épuisement émotionnel, la dépersonnalisation (cynisme et détachement) et une diminution du sentiment d'accomplissement personnel. Décrit pour la première fois par le psychologue Herbert Freudenberger en 1974 et officiellement reconnu par l'OMS en 2019, le burnout est désormais classé comme un phénomène professionnel touchant environ 67 % des travailleurs à un moment donné de leur carrière.\n\nLe burnout ne survient pas soudainement — il se développe sur plusieurs mois à travers un cycle progressif de surinvestissement, d'épuisement et de retrait. Ce questionnaire évalue où vous vous situez sur le spectre afin que vous puissiez agir avant qu'il ne devienne plus difficile de se rétablir.",
+    "faq": [
+      {
+        "q": "Quelle est la différence entre le burnout et la dépression ?",
+        "a": "Le burnout est principalement spécifique au contexte professionnel et s'améliore significativement avec le repos, les vacances et l'éloignement des facteurs de stress. La dépression est omniprésente dans tous les domaines de la vie et ne se résout pas par le seul repos. Cependant, un burnout sévère peut déclencher une dépression clinique. Si les symptômes persistent en dehors du contexte professionnel, une évaluation clinique est recommandée."
+      },
+      {
+        "q": "Peut-on se remettre d'un burnout ?",
+        "a": "Oui. Le rétablissement du burnout est possible et bien documenté. Un burnout à un stade précoce (signes d'alerte légers) se résout généralement en quelques semaines avec un repos approprié et la mise en place de limites. Un burnout sévère peut nécessiter 3 à 12 mois de rétablissement soutenu. Les facteurs clés sont : réduire les exigences, augmenter les activités de récupération et traiter les causes profondes."
+      },
+      {
+        "q": "Quelles sont les causes du burnout ?",
+        "a": "La recherche (Maslach & Leiter, 2016) identifie six inadéquations en milieu professionnel qui provoquent le burnout : charge de travail excessive, manque de contrôle, récompenses insuffisantes, rupture de la communauté, injustice et conflit de valeurs. Des facteurs personnels comme le perfectionnisme, la difficulté à fixer des limites et de mauvaises habitudes de récupération y contribuent également."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Le burnout est un syndrome résultant d'un stress chronique au travail qui n'a pas été géré avec succès. L'OMS (CIM-11, 2019) le définit par trois dimensions : des sentiments d'épuisement énergétique ou d'épuisement, une distance mentale accrue par rapport à son travail ou des sentiments de négativisme ou de cynisme liés à son travail, et une efficacité professionnelle réduite.\n\nLe burnout se développe par étapes progressives — de l'enthousiasme et du surinvestissement à la stagnation, la frustration et l'apathie — prenant généralement 6 à 18 mois pour atteindre l'état d'épuisement complet. Le rétablissement nécessite le même investissement de temps en sens inverse.",
+    "howScored": "Ce questionnaire évalue sept indicateurs de burnout issus du Maslach Burnout Inventory (l'outil clinique de référence) et du Copenhagen Burnout Inventory : l'épuisement émotionnel, la perte de motivation, la réduction de l'efficacité, la dépersonnalisation/cynisme, les comportements de récupération, l'appréhension anticipée et le sentiment de 'jamais assez'.\n\nLes scores supérieurs à 70 indiquent un faible risque avec des protections saines. 40–69 indique des signes d'alerte précoces qui répondent bien à une intervention. En dessous de 40, cela indique un burnout significatif nécessitant un rétablissement actif.",
+    "whenToSeek": "Consultez un professionnel de santé si :\n• Vous êtes dans la zone de burnout depuis plus de 4 semaines\n• Des symptômes physiques sont apparus (maux de tête chroniques, maladies fréquentes, troubles du sommeil)\n• Le burnout affecte vos relations personnelles, et pas seulement le travail\n• Vous utilisez de l'alcool ou des substances pour faire face aux exigences professionnelles\n• Vous ressentez des symptômes de dépression en plus du burnout\n\nUn médecin traitant ou un thérapeute spécialisé en santé au travail peut fournir un soutien approprié.",
+    "limitations": "Ce questionnaire mesure le risque de burnout, et non un diagnostic clinique de burnout. Le Maslach Burnout Inventory (MBI) est la référence clinique et nécessite une administration professionnelle. Les résultats indiquent ici des schémas et des niveaux de risque, et non des conclusions diagnostiques.\n\nLes symptômes du burnout chevauchent considérablement ceux de la dépression, des troubles anxieux, du TDAH et de certaines conditions médicales (dysfonctionnement thyroïdien, anémie). Si les symptômes sont sévères ou persistent dans plusieurs domaines de la vie, une évaluation clinique est recommandée."
+  }
+}

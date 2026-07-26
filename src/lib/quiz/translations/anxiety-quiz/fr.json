@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Quiz sur le niveau d'anxiété",
+    "description": "Comprenez comment l'anxiété se manifeste dans votre vie — et quelle part de votre énergie quotidienne elle consomme silencieusement."
+  },
+  "yesnoOptions": [
+    "Oui",
+    "Non"
+  ],
+  "questions": {
+    "anx1": {
+      "text": "À quelle fréquence votre esprit s'emballe-t-il ou tourne-t-il en boucle sur des pensées du type « et si » que vous ne pouvez pas arrêter ?",
+      "options": [
+        "Rarement — je peux généralement rediriger mes pensées",
+        "Parfois — pendant les périodes stressantes",
+        "Souvent — la plupart des jours, cela arrive",
+        "Presque constamment — c'est épuisant"
+      ]
+    },
+    "anx2": {
+      "text": "Évitez-vous certaines situations ou certaines personnes parce qu'elles vous rendent anxieux ?"
+    },
+    "anx3": {
+      "text": "À quelle fréquence ressentez-vous une tension physique — oppression thoracique, respiration superficielle, nœud à l'estomac ?",
+      "scaleLabels": {
+        "min": "Presque jamais",
+        "max": "Très fréquemment"
+      }
+    },
+    "anx4": {
+      "text": "Le fait de vous inquiéter pour l'avenir interfère-t-il avec votre capacité à profiter du présent ?"
+    },
+    "anx5": {
+      "text": "Comment réagissez-vous généralement lorsque quelque chose d'inattendu se produit ?",
+      "options": [
+        "Calmement — je m'adapte assez bien",
+        "Un peu secoué(e), mais je récupère rapidement",
+        "Cela me déstabilise pendant un moment",
+        "Cela me plonge dans une spirale"
+      ]
+    },
+    "anx6": {
+      "text": "Avez-vous du mal à dormir parce que vos pensées ne se calment pas ?",
+      "options": [
+        "Non — je dors bien",
+        "Occasionnellement — peut-être une fois par semaine",
+        "Souvent — quelques nuits par semaine",
+        "Presque toutes les nuits"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Anxiété faible",
+      "description": "Vous gérez l'incertitude et le stress de manière saine. Votre système nerveux n'est pas en mode d'alarme chronique.",
+      "actions": [
+        "Maintenez vos habitudes actuelles de gestion du stress — ce que vous faites fonctionne",
+        "Pratiquez un exercice de pleine conscience par semaine pour renforcer votre résilience face aux périodes plus difficiles",
+        "Restez connecté aux personnes qui vous ancrent — le soutien social est le plus puissant bouclier contre l'anxiété"
+      ],
+      "miaHook": "Votre niveau de base d'anxiété est sain — parlons de la façon de le maintenir ainsi lorsque la vie devient plus difficile."
+    },
+    {
+      "label": "Anxiété modérée",
+      "description": "L'anxiété est présente dans votre vie et affecte certains de vos choix et de votre plaisir. Les schémas sont gérables mais méritent d'être abordés.",
+      "actions": [
+        "Essayez une pratique de respiration quotidienne de 5 minutes — la respiration en carré (4-4-4-4) réduit mesurablement le cortisol en quelques minutes",
+        "Identifiez un comportement d'évitement et faites un petit pas pour y faire face cette semaine",
+        "Limitez la caféine à avant midi — elle amplifie la réponse physiologique à l'anxiété"
+      ],
+      "miaHook": "J'ai remarqué plusieurs schémas d'anxiété clairs dans vos réponses — j'ai des outils ciblés qui peuvent réduire cela de manière notable."
+    },
+    {
+      "label": "Anxiété élevée",
+      "description": "L'anxiété affecte considérablement votre vie quotidienne. Ce niveau d'alerte soutenu est épuisant et mérite une attention réelle.",
+      "actions": [
+        "Parlez à un thérapeute ou à un médecin — la TCC (Thérapie Cognitivo-Comportementale) a la base de preuves la plus solide pour l'anxiété et montre souvent des résultats en 6 à 8 séances",
+        "Supprimez immédiatement votre plus grande source quotidienne de caféine — même ce seul changement réduit l'anxiété de manière mesurable",
+        "Parle à une personne de confiance de ce que tu vis — l'isolement amplifie l'anxiété"
+      ],
+      "miaHook": "Ce que tu vis est réel — une anxiété élevée est épuisante et isolante. Laisse-moi te montrer par où commencer à la désamorcer."
+    }
+  ],
+  "seoContent": {
+    "intro": "L'anxiété est la condition de santé mentale la plus répandue dans le monde, touchant environ 284 millions de personnes à l'échelle mondiale (Our World in Data, 2019). Pourtant, la plupart des personnes vivant avec l'anxiété ne cherchent pas d'aide — soit parce qu'elles ne la reconnaissent pas pour ce qu'elle est, soit parce qu'elles ont normalisé ses effets.\n\nCe quiz évalue six dimensions fondamentales de l'anxiété : les schémas cognitifs (pensées qui s'emballent, inquiétude), les schémas comportementaux (évitement), les symptômes physiques (tension, respiration), l'impact sur le sommeil, la réactivité émotionnelle et l'interférence avec le moment présent. Tes résultats te fournissent une carte personnalisée de la façon dont l'anxiété se manifeste dans ta vie.",
+    "faq": [
+      {
+        "q": "Quelle est la différence entre une inquiétude normale et l'anxiété ?",
+        "a": "L'inquiétude normale est proportionnelle à une menace réelle, temporaire et n'altère pas significativement le fonctionnement quotidien. L'anxiété implique une inquiétude excessive difficile à contrôler, souvent disproportionnée par rapport au risque réel, et interfère de manière persistante avec la vie quotidienne, le sommeil ou les relations."
+      },
+      {
+        "q": "L'anxiété peut-elle provoquer des symptômes physiques ?",
+        "a": "Oui. L'anxiété active le système nerveux sympathique (réaction de combat ou de fuite), provoquant des effets physiques mesurables : augmentation du rythme cardiaque, respiration superficielle, tension musculaire, perturbation digestive et élévation du cortisol. L'anxiété chronique entraîne des effets physiques à long terme, notamment un risque cardiovasculaire accru."
+      },
+      {
+        "q": "Quels traitements fonctionnent pour l'anxiété ?",
+        "a": "La thérapie cognitivo-comportementale (CBT) est le traitement le plus fondé sur des preuves, montrant une amélioration significative chez 60 à 80 % des personnes. La thérapie d'exposition est efficace pour l'anxiété basée sur l'évitement. Les médicaments (ISRS, IRSNA) sont appropriés pour les cas modérés à sévères, souvent en combinaison avec une thérapie."
+      },
+      {
+        "q": "La caféine aggrave-t-elle l'anxiété ?",
+        "a": "Oui. La caféine bloque les récepteurs d'adénosine et augmente le cortisol et l'adrénaline — la même voie physiologique activée par l'anxiété. Chez les personnes sujettes à l'anxiété, la caféine aggrave mesurablement les symptômes. Réduire la caféine est l'un des changements les plus rapides pour diminuer l'anxiété."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "L'anxiété est une émotion humaine naturelle qui devient un problème lorsqu'elle est excessive, persistante et interfère avec la vie quotidienne. À la base, l'anxiété est un dysfonctionnement du système de détection des menaces du cerveau — traitant des situations normales comme dangereuses et maintenant le corps dans un état de préparation physiologique épuisant et insoutenable.\n\nL'anxiété se manifeste de trois façons : cognitive (pensées qui s'emballent, catastrophisme, spirales d'inquiétude), physique (tension musculaire, palpitations cardiaques, respiration superficielle, problèmes digestifs) et comportementale (évitement, recherche de réassurance, comportements compulsifs). Ce quiz capture ces trois dimensions.",
+    "howScored": "Ce quiz évalue six dimensions de l'anxiété fondées sur des preuves : les schémas de pensée, l'évitement comportemental, les symptômes de tension physique, l'inquiétude tournée vers l'avenir, la réactivité aux événements inattendus et l'impact sur le sommeil. Les questions utilisent un mélange de réponses graduées et de oui/non pour capturer à la fois la fréquence et l'impact.\n\nLes scores sont normalisés de 0 à 100. Au-dessus de 70 indique une faible anxiété avec de bonnes ressources d'adaptation. 40–69 indique des schémas d'anxiété modérés qui méritent d'être abordés. En dessous de 40 indique une anxiété élevée qui affecte significativement le fonctionnement quotidien.",
+    "whenToSeek": "Envisage de parler à un professionnel de la santé mentale si :\n• Ton anxiété affecte ton sommeil, ton travail ou tes relations\n• Tu évites des situations ou des personnes à cause de l'anxiété\n• Les symptômes physiques d'anxiété (cœur qui s'emballe, oppression thoracique) sont fréquents\n• Tu utilises de l'alcool ou d'autres substances pour gérer l'anxiété\n• L'anxiété est présente depuis plus de 6 mois\n\nUn score GAD-7 de 10+ (une échelle clinique d'anxiété) indique qu'une évaluation clinique est justifiée.",
+    "limitations": "Ce quiz est un outil de dépistage, pas une évaluation clinique. Il ne fait pas la distinction entre différents troubles anxieux (trouble anxieux généralisé, anxiété sociale, trouble panique, TSPT, TOC). Un diagnostic clinique nécessite une évaluation par un professionnel de la santé mentale agréé.\n\nLes symptômes d'anxiété chevauchent également de manière significative ceux de la dépression, du TDAH, des troubles du sommeil et de certaines conditions médicales (problèmes thyroïdiens, problèmes cardiovasculaires). Une évaluation complète permet d'exclure ces facteurs contributifs."
+  }
+}

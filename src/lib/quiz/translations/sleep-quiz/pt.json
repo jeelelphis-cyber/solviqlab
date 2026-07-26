@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Questionário de Qualidade do Sono (Escala de Sonolência de Epworth)",
+    "description": "A Escala de Sonolência de Epworth é o padrão clínico global para medir a sonolência diurna excessiva. Utilizada por especialistas em sono em todo o mundo para detectar distúrbios do sono.",
+    "medicalNote": "Uma pontuação alta pode indicar um distúrbio do sono, como apneia do sono ou narcolepsia. Consulte um profissional de saúde se estiver preocupado."
+  },
+  "likertOptions": [
+    "Nunca cochilaria",
+    "Pequena chance de cochilar",
+    "Moderada chance de cochilar",
+    "Grande chance de cochilar"
+  ],
+  "questions": {
+    "ess1": {
+      "text": "Sentado e lendo",
+      "hint": "Adormecer enquanto lê é um dos primeiros sinais de privação crônica de sono."
+    },
+    "ess2": {
+      "text": "Assistindo TV",
+      "hint": "Atividades passivas, como assistir TV, não devem causar sonolência se você estiver tendo um sono adequado e de qualidade."
+    },
+    "ess3": {
+      "text": "Sentado inativo em um local público (ex.: teatro ou reunião)",
+      "hint": "Lutar para ficar acordado em ambientes públicos silenciosos é um marcador diagnóstico chave para sonolência excessiva."
+    },
+    "ess4": {
+      "text": "Como passageiro em um carro por uma hora sem pausa",
+      "hint": "O movimento constante de uma viagem de carro é um gatilho padrão de sonolência. Pontuações altas aqui indicam dívida de sono grave."
+    },
+    "ess5": {
+      "text": "Deitado para descansar à tarde quando as circunstâncias permitem",
+      "hint": "A capacidade de adormecer rapidamente durante o descanso da tarde reflete seu verdadeiro nível de pressão do sono."
+    },
+    "ess6": {
+      "text": "Sentado e conversando com alguém",
+      "hint": "Adormecer durante uma conversa é um sinal clinicamente significativo de sonolência diurna excessiva."
+    },
+    "ess7": {
+      "text": "Sentado calmamente após o almoço sem álcool",
+      "hint": "A sonolência pós-almoço é normal, mas uma alta probabilidade de cochilar aqui, sem consumo de álcool, indica um distúrbio do sono."
+    },
+    "ess8": {
+      "text": "No carro, enquanto parado por alguns minutos no trânsito",
+      "hint": "A sonolência ao dirigir ou parado no trânsito é um risco direto à segurança e um indicador clínico importante."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Sono Normal",
+      "description": "Sua sonolência diurna está dentro da faixa normal. Seu sono parece estar restaurando você adequadamente.",
+      "actions": [
+        "Mantenha sua rotina de sono atual — a consistência é o protetor mais poderoso do sono",
+        "Mantenha seu quarto abaixo de 18°C (65°F) — a temperatura ideal para o sono profundo",
+        "Limite a cafeína após as 14h para proteger a arquitetura do sono"
+      ],
+      "miaHook": "Sua base de sono é sólida. Quero te mostrar como torná-la ainda mais restauradora — ainda há um nível acima de onde você está agora."
+    },
+    {
+      "label": "Sonolência Excessiva Leve",
+      "description": "Sonolência diurna ligeiramente elevada. Pode indicar privação leve de sono ou problemas iniciais de sono.",
+      "actions": [
+        "Adicione 30 minutos à sua janela de sono nas próximas 2 semanas e monitore seus níveis de energia",
+        "Revise seu quarto em busca de luz e ruído — ambos fragmentam o sono sem que você acorde completamente",
+        "Evite telas por 45 minutos antes de dormir nesta semana"
+      ],
+      "miaHook": "Sua pontuação está no limite — o que significa que pequenas mudanças fazem uma grande diferença agora. Posso te mostrar exatamente onde seu sono está sendo prejudicado."
+    },
+    {
+      "label": "Sonolência Excessiva Moderada",
+      "description": "Sonolência diurna excessiva moderada. Esse nível está associado a dirigir com risco, redução da produtividade e problemas metabólicos.",
+      "actions": [
+        "Consulte um médico sobre um possível distúrbio do sono — com essa pontuação, a triagem para apneia do sono é apropriada",
+        "Pare de consumir álcool 3 horas antes de dormir — ele fragmenta a arquitetura do sono, mesmo que ajude a pegar no sono",
+        "Defina um horário de dormir inegociável pelos próximos 30 dias e mantenha-o"
+      ],
+      "miaHook": "Neste nível, seu sono está afetando tudo — seu peso, seu humor, seu foco. Eu tenho um protocolo que tem como alvo específico isso."
+    },
+    {
+      "label": "Sonolência Excessiva Grave",
+      "description": "Sonolência diurna grave. Isso aumenta significativamente o risco de acidentes e está associado a distúrbios graves do sono. Uma avaliação médica é fortemente recomendada.",
+      "actions": [
+        "Agende um estudo do sono (polissonografia) com seu médico — essa pontuação justifica uma investigação",
+        "Não dirija se sentir sonolência — seus reflexos estão prejudicados neste nível de sonolência",
+        "Evite operar máquinas pesadas até ser avaliado por um especialista"
+      ],
+      "miaHook": "Quero ser direto: uma pontuação tão alta precisa de atenção médica, não apenas de uma rotina de sono. Deixe-me ajudá-lo a descobrir o primeiro passo certo."
+    }
+  ],
+  "seoContent": {
+    "intro": "A Escala de Sonolência de Epworth (ESS) foi desenvolvida pelo Dr. Murray Johns no Epworth Hospital em Melbourne, Austrália, em 1991. Desde então, tornou-se o padrão clínico global para medir a sonolência diurna excessiva (SDE), usada em laboratórios do sono, hospitais e instituições de pesquisa em todo o mundo.\n\nDiferente de diários do sono ou avaliações subjetivas de sentimentos, a ESS mede sua probabilidade de cochilar em 8 situações específicas — fornecendo uma imagem objetiva de quão privado de sono você realmente está. As pontuações variam de 0 a 24. Uma pontuação acima de 10 indica sonolência excessiva que justifica uma avaliação clínica.\n\nOs distúrbios do sono afetam 50–70 milhões de pessoas apenas nos EUA (CDC, 2023). A sonolência diurna excessiva não tratada aumenta o risco de acidentes rodoviários em 2,5×, contribui para o ganho de peso, depressão, doenças cardiovasculares e reduz significativamente a qualidade de vida.",
+    "faq": [
+      {
+        "q": "O que é a Escala de Sonolência de Epworth?",
+        "a": "A ESS é um questionário validado de 8 itens que mede a sonolência diurna perguntando qual a probabilidade de você cochilar em situações comuns. É o padrão global usado por especialistas do sono e foi publicado no periódico Sleep em 1991."
+      },
+      {
+        "q": "Qual é uma pontuação normal de Epworth?",
+        "a": "Uma pontuação de 0–7 é considerada normal. Pontuações de 8–9 sugerem sonolência excessiva leve; 10–15 moderada; e 16–24 grave. A maioria dos adultos saudáveis pontua entre 4 e 8."
+      },
+      {
+        "q": "O que causa a sonolência diurna excessiva?",
+        "a": "As causas mais comuns incluem duração insuficiente do sono, apneia obstrutiva do sono, narcolepsia, síndrome das pernas inquietas, má qualidade do sono, medicamentos e depressão."
+      },
+      {
+        "q": "Devo consultar um médico se pontuei acima de 10?",
+        "a": "Sim. Uma pontuação de 10 ou acima justifica uma avaliação clínica. Seu médico pode solicitar uma polissonografia (estudo do sono) para descartar apneia do sono ou outros distúrbios."
+      },
+      {
+        "q": "A má qualidade do sono pode causar ganho de peso?",
+        "a": "Sim. A privação do sono desregula a grelina e a leptina — os hormônios da fome — aumentando o apetite e os desejos por alimentos calóricos. Estudos mostram que dormir menos de 6 horas por noite aumenta o risco de obesidade em 23%."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "A sonolência diurna excessiva (SDE) é uma condição na qual uma pessoa se sente sonolenta durante o dia e luta para permanecer acordada em situações onde se espera alerta. Afeta aproximadamente 20% da população global e é distinta do cansaço normal — é um nível de sonolência persistente e patológico que prejudica o funcionamento.\n\nA SDE é um sintoma primário de vários distúrbios do sono, incluindo apneia obstrutiva do sono (a causa mais comum), narcolepsia, hipersonia idiopática e distúrbios do ritmo circadiano. Também pode resultar de sono insuficiente crônico — a causa mais evitável que afeta milhões de pessoas.\n\nA Escala de Sonolência de Epworth foi projetada para medir a SDE objetivamente, avaliando a probabilidade de cochilar em 8 situações padronizadas. Diferente de perguntar 'você se sente cansado?', a ESS captura evidências comportamentais de sonolência que se correlacionam fortemente com medidas fisiológicas, como o Teste de Latência Múltipla do Sono (MSLT).",
+    "clinicalBackground": "A Escala de Sonolência de Epworth foi desenvolvida pelo Dr. Murray Johns e publicada no periódico Sleep em 1991. O Dr. Johns era um médico no Epworth Hospital em Melbourne que notou que as avaliações subjetivas de sonolência não eram confiáveis. Ele projetou a ESS para medir a probabilidade de cochilar em situações que variam sistematicamente em suas propriedades indutoras do sono.\n\nO estudo de validação original mostrou forte correlação com medidas objetivas de sonolência (MSLT, r = 0,51) e alta confiabilidade teste-reteste (r = 0,82). A ESS desde então foi validada em dezenas de idiomas e populações de pacientes.\n\nAtualmente, é a ferramenta clínica mais amplamente usada para triagem de distúrbios do sono globalmente, endossada pela Academia Americana de Medicina do Sono (AASM), pela Sociedade Britânica do Sono e incorporada nas diretrizes clínicas para apneia do sono, narcolepsia e hipersonia em todo o mundo.",
+    "howScored": "A Escala de Sonolência de Epworth pergunta qual a probabilidade de você cochilar em 8 situações específicas, em uma escala de 0 a 3:\n• 0: Nunca cochilaria\n• 1: Pequena chance de cochilar\n• 2: Chance moderada de cochilar\n• 3: Alta chance de cochilar\n\nAs pontuações totais variam de 0 a 24. Limiares clínicos:\n• 0–7: Faixa normal (a média é de 5–6 em adultos saudáveis)\n• 8–9: Sonolência excessiva limítrofe/leve\n• 10–15: Sonolência diurna excessiva moderada — avaliação clínica recomendada\n• 16–24: Sonolência diurna excessiva grave — avaliação urgente recomendada\n\nUma pontuação de 10+ tem sensibilidade de 78% e especificidade de 79% para identificar distúrbios do sono clinicamente significativos na população em geral.",
+    "interpretation": "**Pontuação 0–7 (Normal):** Seu sono está restaurando você adequadamente. O adulto saudável médio pontua de 5 a 6. Foque em manter sua rotina de sono e proteger a qualidade do sono.\n\n**Pontuação 8–9 (Leve/Limítrofe):** Ligeiramente acima do normal. Isso pode refletir dívida de sono acumulada, horários de sono irregulares ou problemas de sono em estágio inicial. Mudanças comportamentais — horários de sono consistentes, melhorias na higiene do sono — geralmente são suficientes neste nível.\n\n**Pontuação 10–15 (Moderada):** Esta faixa é clinicamente significativa. Pesquisas mostram que, neste nível, o desempenho ao dirigir é prejudicado de forma equivalente a um nível de álcool no sangue de 0,05%. A função cognitiva, o humor, o metabolismo e a função imunológica são todos afetados de forma mensurável. A avaliação médica é apropriada, particularmente para rastrear apneia do sono.\n\n**Pontuação 16–24 (Grave):** Este nível de sonolência representa uma séria preocupação de segurança e saúde. O risco de acidentes de trânsito é 2,5 vezes maior que a média. A avaliação médica imediata, incluindo um estudo do sono, é fortemente recomendada.",
+    "whenToSeek": "Consulte um profissional de saúde se:\n\n• Sua pontuação no ESS for 10 ou superior\n• Alguém já lhe disse que você ronca alto ou para de respirar durante o sono\n• Você se sente sem descanso após uma noite inteira de sono\n• Você adormece involuntariamente durante o dia\n• Sua sonolência está afetando seu trabalho, direção ou relacionamentos\n• Um parceiro de cama observou movimentos incomuns nas pernas ou engasgos\n\nProcure atendimento urgente se:\n• Você teve um quase acidente devido à sonolência ao dirigir\n• Você sente fraqueza muscular súbita desencadeada por emoções (cataplexia — um sinal de narcolepsia)\n• Você não consegue ficar acordado no trabalho, apesar de ter oportunidade adequada de sono",
+    "limitations": "**1. Recordação subjetiva:** O ESS mede a probabilidade percebida de cochilar, que pode ser influenciada pela autoconsciência e viés de recordação. Pessoas com distúrbios do sono graves às vezes subestimam sua sonolência porque a fadiga crônica se tornou sua linha de base.\n\n**2. Variação situacional:** Nem todo mundo encontra todas as 8 situações regularmente. Pessoas que nunca dirigem, por exemplo, podem ter dificuldade em responder ao item 8 com precisão.\n\n**3. Não identifica a causa:** Uma pontuação alta no ESS indica sonolência excessiva, mas não diagnostica sua causa. Apneia do sono, narcolepsia, efeitos de medicamentos e simples privação de sono produzem pontuações semelhantes.\n\n**4. Não validado para crianças menores de 12 anos:** O ESS foi desenvolvido e validado em populações adultas. A sonolência pediátrica é avaliada com ferramentas diferentes.\n\n**5. Medida pontual:** O ESS reflete sua experiência recente de sono. Viagens, doenças, trabalho por turnos e eventos de vida podem elevar temporariamente as pontuações sem indicar um distúrbio crônico."
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "title": "Depresyon Tarama Testi (PHQ-9)",
+    "description": "PHQ-9, dünya çapında doktorlar tarafından kullanılan altın standart depresyon tarama aracıdır. 2 dakika sürer. 20 yılı aşkın klinik araştırmaya dayanmaktadır.",
+    "medicalNote": "Bu bir tarama aracıdır, klinik tanı değildir. Kriz halindeyseniz, lütfen hemen bir ruh sağlığı uzmanına veya kriz hattına başvurun."
+  },
+  "likertOptions": [
+    "Hiçbir zaman",
+    "Birkaç gün",
+    "Günlerin yarısından fazlasında",
+    "Neredeyse her gün"
+  ],
+  "questions": {
+    "phq1": {
+      "text": "İşlere karşı ilgi veya zevk azlığı",
+      "hint": "Anhedoni — zevk alamama — depresyonun iki temel semptomundan biridir."
+    },
+    "phq2": {
+      "text": "Keyifsiz, depresif veya umutsuz hissetme",
+      "hint": "Kalıcı düşük ruh hali, majör depresif bozukluk için ikinci temel tanı kriteridir."
+    },
+    "phq3": {
+      "text": "Uykuya dalmakta veya uyumakta zorluk çekme ya da çok fazla uyuma",
+      "hint": "Uyku bozuklukları, depresyonu olan kişilerin %90'ından fazlasında görülür ve bilişsel işlevi kötüleştirir."
+    },
+    "phq4": {
+      "text": "Yorgun hissetme veya enerjinin az olması",
+      "hint": "Depresyona bağlı yorgunluk, nörobiyolojiktir — düzensiz serotonin ve dopaminden kaynaklanır."
+    },
+    "phq5": {
+      "text": "İştahsızlık veya aşırı yeme",
+      "hint": "İştah değişiklikleri, depresyondaki bireylerin %70-80'ini etkiler. Her iki uç da klinik sinyallerdir."
+    },
+    "phq6": {
+      "text": "Kendiniz hakkında kötü hissetme — ya da başarısız olduğunuzu veya kendinizi ya da ailenizi hayal kırıklığına uğrattığınızı düşünme",
+      "hint": "Kalıcı suçluluk ve değersizlik duyguları, depresyon şiddetinin en güçlü belirleyicileri arasındadır."
+    },
+    "phq7": {
+      "text": "Okuma veya televizyon izleme gibi şeylere odaklanmakta zorluk çekme",
+      "hint": "Depresyon, prefrontal korteks aktivitesini azaltarak doğrudan dikkat ve hafızayı olumsuz etkiler."
+    },
+    "phq8": {
+      "text": "Başkalarının fark edebileceği kadar yavaş hareket etmek veya konuşmak — ya da tam tersi, normalden çok daha fazla kıpır kıpır veya huzursuz olup sürekli hareket halinde bulunmak",
+      "hint": "Psikomotor değişiklikler başkaları tarafından gözlemlenebilir ve klinik depresyonda önemli bir şiddet belirtecidir."
+    },
+    "phq9": {
+      "text": "Ölmüş olmayı ya da kendinize bir şekilde zarar vermeyi düşünmek",
+      "hint": "Bu tür düşünceleriniz varsa, lütfen hemen bir kriz hattına veya sağlık uzmanına başvurun."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Minimal veya Depresyon Yok",
+      "description": "Puanınız, belirgin bir depresif belirti olmadığını göstermektedir. Zihinsel sağlığınızı korumaya devam edin.",
+      "actions": [
+        "Mevcut uyku düzeninizi sürdürün — düzenli uyku, depresyona karşı en güçlü koruyucu faktördür",
+        "Hareket etmeye devam edin: haftada 3 kez 20 dakikalık yürüyüş bile depresyon riskini %26 oranında azaltır (Harvard Health, 2018)",
+        "Ayda bir kendinizi kontrol edin — ruh hali doğal olarak dalgalanır ve erken farkındalık en iyi aracınızdır"
+      ],
+      "miaHook": "Puanınız sağlıklı aralıkta. Araştırmaların bu seviyeyi korumak için ne önerdiğini göstereyim."
+    },
+    {
+      "label": "Hafif Depresyon",
+      "description": "Hafif depresif belirtiler mevcut. Bunlar gerçektir ve ilgiyi hak eder — destek olmadan ilerleyebilirler.",
+      "actions": [
+        "Günde 5 dakikalık bir ruh hali günlüğü tutmaya başlayın — kalıpları takip etmek değişimin ilk adımıdır",
+        "Yapılandırılmış fiziksel aktivite ekleyin: 30 dakikalık orta düzey egzersiz, hafif vakalarda ilaç tedavisine eşdeğer antidepresan etkiye sahiptir (Blumenthal ve ark., JAMA, 2007)",
+        "Güvendiğiniz biriyle konuşun veya bir terapistle görüşmeyi düşünün — 4–6 seans bile hafif belirtileri önemli ölçüde azaltabilir"
+      ],
+      "miaHook": "Erken fark edilen hafif belirtiler en kolay şekilde ele alınır. İşte puanınızda gerçekten fark yaratan şeyler."
+    },
+    {
+      "label": "Orta Düzey Depresyon",
+      "description": "Orta düzey depresyon, günlük işlevselliği önemli ölçüde etkilemektedir. Yaşam tarzı değişikliklerinin yanı sıra profesyonel destek önerilir.",
+      "actions": [
+        "Bu hafta doktorunuzdan veya bir ruh sağlığı uzmanından randevu alın — orta düzey depresyon tedaviye çok iyi yanıt verir",
+        "Güvendiğin birine nasıl hissettiğini anlat — yalnızlık depresif belirtileri artırır",
+        "Temel ihtiyaçlarını koru: 7–9 saat uyu, düzenli beslen ve her gün dışarı çık — bunlar orta düzey depresyonla baş ederken seçenek değil, zorunluluktur"
+      ],
+      "miaHook": "Bu seviyede, yalnızca kendi kendine yardım araçlarından daha fazlasına ihtiyacın var. İşte doğru adımı nasıl atacağın."
+    },
+    {
+      "label": "Orta Şiddette Depresyon",
+      "description": "Belirtilerin hayatını önemli ölçüde etkiliyor. Etkili tedaviler mevcut — lütfen yakın zamanda bir sağlık uzmanına başvur.",
+      "actions": [
+        "Önümüzdeki 48 saat içinde bir ruh sağlığı uzmanına veya doktoruna başvur — bu düzeydeki depresyon oldukça tedavi edilebilir",
+        "ABD'deysen, SAMHSA yardım hattını arayabilirsin: 1-800-662-4357 (ücretsiz, gizli, 7/24)",
+        "Güvendiğin birinden ilk randevunu alman için sana destek olmasını iste — bunu tek başına halletmek zorunda değilsin"
+      ],
+      "miaHook": "Belirtilerin profesyonel bakımı hak ediyor — ve etkili tedavi işe yarıyor. İlk adımı atmana yardım edeyim."
+    },
+    {
+      "label": "Şiddetli Depresyon",
+      "description": "Şiddetli depresyon. Lütfen hemen profesyonel yardım al. Uygun bakımı hak ediyorsun ve etkili tedaviler mevcut.",
+      "actions": [
+        "Tehlikedeysen lütfen bir kriz hattına veya acil servislere başvur: 988 Suicide & Crisis Lifeline (ABD), Samaritans 116 123 (BK/İrlanda)",
+        "En yakın acil servise git veya güvendiğin birinden seni götürmesini iste — şu anda yalnız olmamalısın",
+        "Şiddetli depresyonun tıbbi bir durum olduğunu bil — bu bir zayıflık değil ve kalıcı değil. Tedavi işe yarıyor."
+      ],
+      "miaHook": "Lütfen hemen destek al. Sen önemlisin ve etkili yardım mevcut."
+    }
+  ],
+  "seoContent": {
+    "intro": "PHQ-9 (Hasta Sağlığı Anketi-9), dünyada en yaygın kullanılan, klinik olarak doğrulanmış depresyon tarama aracıdır. Dr. Robert Spitzer, Janet Williams ve Kurt Kroenke tarafından geliştirilmiş olup, 80'den fazla ülkede 8.000'in üzerinde çalışmada doğrulanmış ve WHO, NHS, APA, Mayo Clinic ve CDC tarafından birincil tarama aracı olarak kullanılmaktadır.\n\nGenel ruh hali testlerinin aksine, PHQ-9 doğrudan DSM-5'teki Majör Depresif Bozukluk (MDB) için dokuz tanı kriterine karşılık gelir. Her soru, klinisyenlerin her depresyon değerlendirmesinde değerlendirdiği temel bir semptoma karşılık gelir. Bu da onu benzersiz bir şekilde doğru kılar: puanın bir kişilik değerlendirmesi değil, standartlaştırılmış bir klinik ölçümdür.\n\nPuanlar 0 ile 27 arasında değişir. 10 veya üzeri bir puan, Majör Depresif Bozukluk için %88 duyarlılık ve %88 özgüllüğe sahiptir (Kroenke ve ark., JGIM 2001). Bu, durumu neredeyse 10 kişiden 9'unda doğru bir şekilde tanımladığı anlamına gelir — hipertansiyon için kan basıncı ölçümüyle aynı doğruluk.",
+    "faq": [
+      {
+        "q": "PHQ-9 nedir ve kim tarafından geliştirilmiştir?",
+        "a": "PHQ-9 (Hasta Sağlığı Anketi-9), Columbia Üniversitesi'nde Dr. Robert Spitzer, Janet Williams ve Kurt Kroenke tarafından Pfizer Inc. finansmanıyla geliştirilmiştir. İlk olarak 2001 yılında Journal of General Internal Medicine'de yayımlanmıştır (PMID: 11556941). Kamu malıdır — yani herhangi bir doktor, araştırmacı veya platform tarafından ücretsiz olarak kullanılabilir. Artık küresel olarak en yaygın benimsenen depresyon tarama aracıdır ve birinci basamak sağlık hizmetleri, psikiyatri, araştırma ve dijital sağlıkta kullanılmaktadır."
+      },
+      {
+        "q": "PHQ-9 puanları ne anlama gelir?",
+        "a": "PHQ-9 puanları 0 ile 27 arasında değişir. Klinik eşikler şunlardır: 0–4 (minimal veya depresyon yok), 5–9 (hafif depresyon), 10–14 (orta depresyon), 15–19 (orta şiddette depresyon) ve 20–27 (şiddetli depresyon). 10 veya üzeri bir puan, Majör Depresif Bozukluk teşhisi için standart klinik kesme noktasıdır ve %88 duyarlılık ve %88 özgüllüğe sahiptir."
+      },
+      {
+        "q": "Bu test tıbbi bir teşhis midir?",
+        "a": "Hayır. PHQ-9 bir tarama aracıdır — depresyona sahip olma olasılığı yüksek olan ve bir uzmana görünmesi gereken kişileri belirler. Klinik bir görüşme, fizik muayene veya resmi teşhisin yerini tutmaz. Yalnızca lisanslı bir sağlık hizmeti sağlayıcısı (doktor, psikiyatrist, psikolog) Majör Depresif Bozukluk teşhisi koyabilir. Bununla birlikte, 10 ve üzeri bir PHQ-9 puanı, her büyük tıbbi kurum tarafından ciddiye alınır ve bir değerlendirme talep etmek için yeterli gerekçedir."
+      },
+      {
+        "q": "PHQ-9 ne kadar doğrudur?",
+        "a": "PHQ-9 yüzlerce çalışmada doğrulanmıştır. Doğruluk ölçütleri şunlardır: duyarlılık %88, özgüllük %88, pozitif öngörü değeri %71–85, negatif öngörü değeri %95 (Kroenke, Spitzer & Williams, JGIM 2001). Karşılaştırma yapmak gerekirse, bir mamogram yaklaşık %87 duyarlılığa sahiptir. PHQ-9, tüm ruh sağlığı taramaları arasında en titizlikle doğrulanmış araçlardan biridir."
+      },
+      {
+        "q": "PHQ-9'u ne sıklıkla tekrar almalıyım?",
+        "a": "Klinisyenler, tedavi yanıtını izlerken genellikle her 2–4 haftada bir veya genel sağlık takibi için her 3–6 ayda bir PHQ-9'u yeniden uygular. 10 veya üzeri puan aldıysanız, herhangi bir müdahaleye (terapi, yaşam tarzı değişiklikleri, ilaç) başladıktan 2 hafta sonra puanınızın iyileşip iyileşmediğini ölçmek için testi tekrarlayın. 5 puanlık bir düşüş, klinik olarak anlamlı bir iyileşme olarak kabul edilir."
+      },
+      {
+        "q": "10 veya üzeri puan alırsam ne yapmalıyım?",
+        "a": "10+ puan, depresyon düzeyinde semptomların mevcut olduğu anlamına gelir ve bir sağlık hizmeti sağlayıcısıyla konuşmalısınız. Birinci basamak doktorunuzla başlayabilirsiniz — PHQ-9 sonuçlarını tartışmak üzere eğitilmişlerdir ve gerekirse sizi bir ruh sağlığı uzmanına yönlendirebilirler. Puanınız 20+ ise, lütfen acilen tıbbi yardım alın. Kendinize zarar verme düşünceleriniz varsa (PHQ-9 madde 9), lütfen hemen bir kriz hattını arayın: 988 (ABD), 116 123 Samaritans (Birleşik Krallık) veya yerel acil servisleriniz."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Depresyon, dünya çapında yaklaşık 280 milyon insanı etkileyen en yaygın tıbbi durumlardan biridir (WHO, 2023). Üzüntü değildir — ruh hali, biliş, uyku, iştah, enerji ve motivasyonda en az iki hafta süren ve günlük işlevselliği bozan kalıcı değişikliklerle karakterize nörobiyolojik bir bozukluktur.\n\nMajör Depresif Bozukluk (MDB), dokuz PHQ-9 semptomundan beş veya daha fazlasının en az iki hafta boyunca neredeyse her gün mevcut olması ve en az bir semptomun depresif ruh hali veya anhedoni (ilgi kaybı) olması durumunda teşhis edilir. Depresyonun net bir nörobiyolojik temeli vardır: serotonin, norepinefrin, dopamin ve HPA (hipotalamik-hipofiz-adrenal) stres ekseninin düzensizliğini içerir.\n\nDepresyon oldukça tedavi edilebilir. Depresyonu olan kişilerin yaklaşık %80–90'ı tedaviye olumlu yanıt verir — tipik olarak psikoterapi, ilaç veya bir kombinasyon. Tedavinin başarısız olmasının en yaygın nedeni, tedaviye başlanmamasıdır.",
+    "clinicalBackground": "PHQ-9, ruh sağlığının çoğunun tespit edilmediği birinci basamak ortamlarına psikiyatrik tanı araçlarını getirmek için tasarlanmış büyük bir çalışma olan PRIME-MD (Birinci Basamakta Ruhsal Bozuklukların Değerlendirilmesi) projesinin bir parçası olarak geliştirilmiştir.\n\nDokuz madde, doğrudan DSM-IV (şimdi DSM-5) Majör Depresif Dönem kriterlerine karşılık gelir. Her madde, son iki haftadaki sıklığı ölçen 4 puanlık bir Likert ölçeği kullanır: 0 (Hiçbir zaman), 1 (Birkaç gün), 2 (Günlerin yarısından fazlasında), 3 (Hemen hemen her gün).\n\nOrijinal doğrulama çalışması (Kroenke, Spitzer & Williams, 2001), sekiz birinci basamak kliniğinde 6.000 hasta kaydetti. PHQ-9, o zamandan beri 80'den fazla ülkede, yaş grupları (ergenler, yetişkinler, yaşlılar), tıbbi popülasyonlar (kanser, kalp, diyabet) ve kültürel bağlamlar arasında 8.000'den fazla çalışmada doğrulanmıştır. 100'den fazla dile çevrilmiştir.",
+    "howScored": "PHQ-9, dokuz yanıtın tümünün sayısal değerlerinin toplanmasıyla puanlanır: 0 (Hiçbir zaman), 1 (Birkaç gün), 2 (Günlerin yarısından fazlasında), 3 (Hemen hemen her gün). Toplam puan 0 ile 27 arasında değişir.\n\nKroenke ve ark. (2001) tarafından belirlenen klinik eşikler:\n• 0–4: Minimal veya depresyon yok\n• 5–9: Hafif depresyon\n• 10–14: Orta derecede depresyon (standart tanı kesme noktası: ≥10)\n• 15–19: Orta-ağır depresyon\n• 20–27: Ağır depresyon\n\nMadde 9 (kendine zarar verme düşünceleri), toplam puandan bağımsız olarak her zaman ayrı ayrı yorumlanır — bu maddede 0'ın üzerindeki herhangi bir puan klinik dikkat gerektirir.\n\nTedavi takibi için 5 puanlık bir değişiklik klinik olarak anlamlı kabul edilir. Remisyon tipik olarak 5'in altındaki bir puan olarak tanımlanır.",
+    "interpretation": "Puanınızı bağlam içinde anlamak:\n\n**Puan 0–4 (Minimal):** Bu aralık normal ruh hali değişimlerini yansıtır. Çoğu insan ara sıra düşük ruh hali, yorgunluk veya uyku değişiklikleri yaşar — bu depresyonu göstermez. Bakıma odaklanın: tutarlı uyku, düzenli hareket ve sosyal bağlantı, araştırmalarla en çok desteklenen koruyucu faktörlerdir.\n\n**Puan 5–9 (Hafif):** Semptomlar mevcuttur ancak henüz tanı eşiğinde değildir. Bu en uygulanabilir aralıktır — hafif depresyon, davranışsal müdahalelere (egzersiz, uyku hijyeni, yapılandırılmış sosyal aktivite) ve kısa süreli psikolojik terapiye (BDT) iyi yanıt verir. Tedavi edilmezse, hafif depresyon vakaların yaklaşık %30'unda orta veya ağır depresyona ilerler.\n\n**Puan 10–14 (Orta):** Semptomlar klinik tanı kriterlerini karşılamakta veya yaklaşmaktadır ve muhtemelen günlük işlevselliği etkilemektedir. Bu aralık, kombine tedavi (terapi + yaşam tarzı) ve bazen ilaç için en güçlü kanıt tabanına sahiptir. Bir doktor veya ruh sağlığı uzmanı sizi değerlendirmelidir.\n\n**Puan 15–19 (Orta-Ağır):** Önemli günlük bozulma mevcuttur. Bu aralık, güçlü bir şekilde profesyonel tedavi ihtiyacını gösterir — tipik olarak psikoterapi (BDT, KİPT) ve antidepresan ilacın bir kombinasyonu. Bu düzeyde tedavi ile yanıt oranları yaklaşık %60–70'tir.\n\n**Puan 20–27 (Ağır):** Ağır depresyon, diyabetik bir krizin tıbbi bir acil durum olması gibi tıbbi bir acil durumdur. Acil profesyonel bakım gereklidir. Kendinize zarar verme düşünceleriniz varsa, lütfen acil servislerle veya bir kriz hattıyla iletişime geçin.",
+    "whenToSeek": "Aşağıdaki durumlarda bir sağlık hizmeti sağlayıcısına başvurmalısınız:\n\n• PHQ-9 puanınız 10 veya daha yüksekse\n• Puanınız 5–9 arasındaysa ve 4 haftadan uzun süredir devam ediyorsa\n• 9. Soruda (kendine zarar verme düşünceleri) 0'ın üzerinde bir yanıt verdiyseniz\n• Ruh haliniz işinizi, ilişkilerinizi veya günlük işlevselliğinizi önemli ölçüde etkiliyorsa\n• 4 haftadan uzun süredir kendi kendine yardım stratejileri denediyseniz ve iyileşme olmadıysa\n\nAşağıdaki durumlarda derhal acil servislerle veya bir kriz hattıyla iletişime geçmelisiniz:\n• İntihar veya kendine zarar verme düşünceleriniz varsa\n• Kendinizi güvende tutamayacağınızı hissediyorsanız\n• Bir sevdiğiniz kişi acil tehlikedeyse\n\nKriz kaynakları: 988 İntihar ve Kriz Yaşam Hattı (ABD, arayın veya mesaj atın), Samaritans 116 123 (Birleşik Krallık/İrlanda), Kriz Metin Hattı: 741741'e HOME yazın (ABD/KA/BK).",
+    "limitations": "PHQ-9, her kullanıcının anlaması gereken önemli sınırlamaları olan bir tarama aracıdır:\n\n**1. Teşhis değildir.** Yalnızca lisanslı bir klinisyen, tıbbi geçmiş, fizik muayene ve klinik görüşmeyi içeren kapsamlı bir değerlendirmeden sonra Majör Depresif Bozukluk teşhisi koyabilir.\n\n**2. Bedensel durumlar puanları yükseltebilir.** Hipotiroidizm, anemi, kronik ağrı, uyku apnesi ve diyabet gibi tıbbi durumlar, depresyonla örtüşen semptomlara (yorgunluk, uyku değişiklikleri, iştah değişiklikleri) neden olur. Bir doktor bunları ayırt edebilir.\n\n**3. Bağlamı yakalamaz.** Yas, doğum veya büyük bir yaşam olayından hemen sonra alınan yüksek bir puan, klinik depresyondan ziyade normal uyumu yansıtabilir. DSM-5, semptomların önemli sıkıntı veya bozulmaya neden olmasını gerektirir.\n\n**4. Kültürel farklılık.** PHQ-9 farklı kültürlerde doğrulanmış olsa da, depresyonun ifadesi değişiklik gösterir. Bazı kültürler depresyonu duygusal semptomlardan çok bedensel semptomlar (ağrı, yorgunluk) yoluyla ifade eder. Geçmişinize aşina bir klinisyen daha iyi bağlam sağlayabilir.\n\n**5. Hatırlama yanlılığı.** PHQ-9 son iki haftayı sorar. Puanınız, daha uzun bir klinik görüşmenin yakalayacağı daha uzun süreli dönemleri veya dalgalı semptomları yansıtmayabilir."
+  }
+}

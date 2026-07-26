@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "title": "Kwestionariusz poziomu stresu (PSS-10)",
+    "description": "Skala odczuwanego stresu jest najczęściej używanym narzędziem do pomiaru stresu na świecie. Wykorzystywana w badaniach Harvardu, Stanford, CDC i NIH. Zajmuje 3 minuty.",
+    "medicalNote": "To narzędzie mierzy odczuwany stres, a nie stanowi diagnozy klinicznej. Przewlekły wysoki stres stanowi poważne zagrożenie dla zdrowia. W razie przeciążenia prosimy o skorzystanie z profesjonalnego wsparcia."
+  },
+  "likertOptions": [
+    "Nigdy",
+    "Prawie nigdy",
+    "Czasami",
+    "Dość często",
+    "Bardzo często"
+  ],
+  "reverseLikertOptions": [
+    "Nigdy",
+    "Prawie nigdy",
+    "Czasami",
+    "Dość często",
+    "Bardzo często"
+  ],
+  "questions": {
+    "pss1": {
+      "text": "W ciągu ostatniego miesiąca, jak często byłeś/aś zdenerwowany/a z powodu czegoś, co wydarzyło się niespodziewanie?",
+      "hint": "Reaktywność emocjonalna na nieoczekiwane zdarzenia jest jednym z najsilniejszych wskaźników ogólnego obciążenia stresem."
+    },
+    "pss2": {
+      "text": "W ciągu ostatniego miesiąca, jak często czułeś/aś, że nie jesteś w stanie kontrolować ważnych rzeczy w swoim życiu?",
+      "hint": "Postrzegany brak kontroli jest psychologicznym rdzeniem stresu – aktywuje reakcję kortyzolową."
+    },
+    "pss3": {
+      "text": "W ciągu ostatniego miesiąca, jak często czułeś/aś się nerwowo i zestresowany/a?",
+      "hint": "Przewlekła aktywacja nerwowa utrzymuje współczulny układ nerwowy w stanie niemal ciągłej gotowości."
+    },
+    "pss4": {
+      "text": "W ciągu ostatniego miesiąca, jak często czułeś/aś się pewny/a swoich umiejętności radzenia sobie z osobistymi problemami?",
+      "hint": "Poczucie własnej skuteczności działa jak bufor przed stresem — to pytanie jest punktowane odwrotnie. Wyższa pewność siebie = niższy poziom stresu."
+    },
+    "pss5": {
+      "text": "W ostatnim miesiącu, jak często czułeś(aś), że sprawy układają się po Twojej myśli?",
+      "hint": "Pozytywna ocena kierunku życiowego jest czynnikiem ochronnym. To pytanie jest punktowane odwrotnie."
+    },
+    "pss6": {
+      "text": "W ostatnim miesiącu, jak często zdarzało Ci się, że nie radziłeś(aś) sobie ze wszystkim, co musiałeś(aś) zrobić?",
+      "hint": "Poczucie przytłoczenia obowiązkami jest bezpośrednim wskaźnikiem stresu i prekursorem wypalenia zawodowego."
+    },
+    "pss7": {
+      "text": "W ostatnim miesiącu, jak często udawało Ci się kontrolować irytujące sytuacje w swoim życiu?",
+      "hint": "Regulacja irytacji odzwierciedla zdolność kontroli emocjonalnej — to pytanie jest punktowane odwrotnie."
+    },
+    "pss8": {
+      "text": "W ostatnim miesiącu, jak często czułeś(aś), że panujesz nad sytuacją?",
+      "hint": "Poczucie mistrzostwa nad okolicznościami to jeden z kluczowych zasobów chroniących przed stresem."
+    },
+    "pss9": {
+      "text": "W ostatnim miesiącu, jak często złościłeś(aś) się z powodu rzeczy, na które nie miałeś(aś) wpływu?",
+      "hint": "Złość na niekontrolowane zdarzenia aktywuje oś HPA i podnosi poziom kortyzolu — bezpośredni biomarker stresu."
+    },
+    "pss10": {
+      "text": "W ostatnim miesiącu, jak często czułeś(aś), że trudności piętrzą się tak bardzo, że nie możesz ich pokonać?",
+      "hint": "Przeciążenie poznawcze — gdy problemy wydają się nie do pokonania — jest najsilniejszym predyktorem wypalenia."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Niski poziom stresu",
+      "description": "Twój odczuwany poziom stresu jest niski. Masz dobre zasoby radzenia sobie i czujesz się w dużej mierze panem swojego życia.",
+      "actions": [
+        "Utrzymuj swoje nawyki zarządzania stresem — konsekwencja jest ważniejsza niż intensywność",
+        "Raz w tygodniu praktykuj jedną proaktywną aktywność regeneracyjną (spacer na łonie natury, sauna, czas towarzyski)",
+        "Udokumentuj to, co teraz działa — wrócisz do tego w trudniejszych okresach"
+      ],
+      "miaHook": "Twój stres jest obecnie dobrze zarządzany. Chcę pomóc Ci budować odporność przed nadejściem kolejnego trudnego okresu."
+    },
+    {
+      "label": "Umiarkowany poziom stresu",
+      "description": "Umiarkowany odczuwany stres. Radzisz sobie, ale czujesz presję. Bez interwencji może to przerodzić się w wypalenie.",
+      "actions": [
+        "Dodaj 5-minutowy rytuał odprężenia po pracy — spacer, ćwiczenia oddechowe lub wpis w dzienniku.",
+        "Zidentyfikuj swoje 3 główne stresory w tym tygodniu i wyeliminuj lub ogranicz jeden z nich.",
+        "Sen to najpotężniejsze narzędzie regeneracji po stresie — priorytetowo traktuj 7-8 godzin snu bez negocjacji."
+      ],
+      "miaHook": "Umiarkowany stres to stan, w którym większość ludzi żyje, nie zdając sobie sprawy, że powoli ich wyczerpuje. Mam protokół, który celuje dokładnie w obszar, gdzie Twój wynik wskazuje na wyczerpanie."
+    },
+    {
+      "label": "Wysoki stres",
+      "description": "Wysoki odczuwany stres. Na tym poziomie stres znacząco szkodzi Twojemu zdrowiu fizycznemu i psychicznemu. Badania wiążą wyniki PSS powyżej 27 ze zwiększonym ryzykiem depresji, chorób serca i osłabienia odporności.",
+      "actions": [
+        "Usuń jedno główne zobowiązanie ze swojego życia w tym tygodniu — nie za jakiś czas, ale w tym tygodniu.",
+        "Porozmawiaj dzisiaj z terapeutą, lekarzem lub zaufaną osobą o swoim obciążeniu stresem.",
+        "Przestań spożywać kofeinę po południu i całkowicie zrezygnuj z alkoholu — oba nasilają reakcję kortyzolową."
+      ],
+      "miaHook": "Twój wynik znajduje się w zakresie, w którym Twoje ciało doznaje realnych uszkodzeń fizjologicznych. Chcę pomóc Ci podjąć natychmiastowe działanie — nie 30-dniowy plan, ale działanie już dziś."
+    }
+  ],
+  "seoContent": {
+    "intro": "Skala Odczuwanego Stresu (PSS-10) została opracowana przez dr. Sheldona Cohena na Uniwersytecie Carnegie Mellon w 1983 roku. Jest to najszerzej stosowane narzędzie psychologiczne do pomiaru percepcji stresu w badaniach i praktyce klinicznej, używane przez CDC, NIH, Harvard i Stanford w tysiącach badań.\n\nW przeciwieństwie do miar stresu, które liczą stresujące wydarzenia, PSS-10 mierzy, jak zestresowany się czujesz — Twoją psychologiczną ocenę własnej sytuacji. To czyni go wyjątkowo dokładnym, ponieważ dwie osoby mogą doświadczać tych samych wydarzeń i mieć zupełnie różne reakcje stresowe.\n\nWyniki wahają się od 0 do 40. Przeciętny Amerykanin osiąga wynik 13 (Cohen i in., 2016). Wyniki powyżej 27 są związane ze znacząco zwiększonym ryzykiem depresji, chorób układu krążenia i osłabienia układu odpornościowego (APA Stress in America, 2023). Zrozumienie swojego poziomu stresu to pierwszy krok w kierunku jego zarządzania.",
+    "faq": [
+      {
+        "q": "Czym jest PSS-10?",
+        "a": "Skala Odczuwanego Stresu (PSS-10) to 10-punktowy, zwalidowany kwestionariusz opracowany przez dr. Sheldona Cohena w 1983 roku. Jest to najszerzej stosowane narzędzie w badaniach nad stresem na świecie, mierzące, jak zestresowany, przytłoczony i pozbawiony kontroli się czujesz."
+      },
+      {
+        "q": "Jaki jest prawidłowy wynik PSS-10?",
+        "a": "Średni wynik PSS-10 u Amerykanów wynosi około 13. Wyniki 0–13 oznaczają niski stres, 14–26 umiarkowany stres, a 27–40 wysoki stres. Kobiety zwykle osiągają nieco wyższe wyniki niż mężczyźni we wszystkich grupach wiekowych."
+      },
+      {
+        "q": "Dlaczego niektóre pytania są punktowane odwrotnie?",
+        "a": "Cztery pozycje (4, 5, 7, 8) dotyczą pozytywnych uczuć — pewności siebie i kontroli. Są one punktowane odwrotnie, ponieważ większa pewność siebie lub kontrola wskazują na niższy poziom stresu. Jest to standardowy protokół PSS-10 i jest obsługiwany automatycznie w tym quizie."
+      },
+      {
+        "q": "Czy stres może powodować problemy ze zdrowiem fizycznym?",
+        "a": "Tak. Przewlekły wysoki stres podnosi poziom kortyzolu, osłabia układ odpornościowy, zwiększa stan zapalny i znacząco podnosi ryzyko chorób serca, cukrzycy, depresji i otyłości. Wynik PSS-10 powyżej 27 jest powiązany z tymi skutkami w wielu długoterminowych badaniach."
+      },
+      {
+        "q": "Jak często powinienem/ powinnam powtarzać ten quiz?",
+        "a": "Comiesięczne powtarzanie testu pozwala śledzić trendy. Stres zazwyczaj zmienia się wraz z okolicznościami życiowymi, ale przewlekle wysokie wyniki (27+) utrzymujące się przez 2+ miesiące wymagają wsparcia specjalisty."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Stres to fizjologiczna i psychologiczna reakcja organizmu na wymagania przekraczające postrzegane zasoby radzenia sobie. W krótkich epizodach stres jest adaptacyjny – wyostrza koncentrację i mobilizuje energię. Przewlekły stres jest jednak poważnym zagrożeniem dla zdrowia.\n\nSkala Odczuwanego Stresu mierzy subiektywne doświadczenie bycia przytłoczonym, pozbawionym kontroli i niezdolnym do radzenia sobie. Różni się to od obiektywnej liczby stresorów (ile złych rzeczy się wydarzyło), ponieważ dwie osoby w identycznych okolicznościach mogą mieć bardzo różne reakcje stresowe w zależności od swoich zasobów radzenia sobie, wsparcia społecznego i wzorców oceny poznawczej.\n\nPSS-10 jest globalnym złotym standardem pomiaru tego subiektywnego doświadczenia. Została zwalidowana na setkach tysięcy uczestników w ponad 60 krajach i jest używana w badaniach klinicznych przez każdą główną instytucję zdrowotną.",
+    "clinicalBackground": "Dr Sheldon Cohen opracował PSS w 1983 roku na Uniwersytecie Carnegie Mellon w ramach badań nad stresem i podatnością na choroby zakaźne. Skala została zaprojektowana do pomiaru stopnia, w jakim sytuacje życiowe są oceniane jako stresujące.\n\nPSS-10 (wersja 10-itemowa) jest najczęściej używanym formatem. Składa się z 6 stwierdzeń sformułowanych negatywnie (wyższe odpowiedzi = więcej stresu) i 4 stwierdzeń sformułowanych pozytywnie, które są punktowane odwrotnie. Ten dwukierunkowy format zmniejsza błąd uległości i mierzy zarówno stres, jak i zasoby radzenia sobie.\n\nPSS została przetłumaczona na ponad 50 języków i jest używana w badaniach publikowanych przez WHO, CDC, NIH, Harvard School of Public Health oraz w głównych czasopismach medycznych, w tym JAMA, Lancet i NEJM.",
+    "howScored": "PSS-10 wykorzystuje 5-punktową skalę częstotliwości dla ostatniego miesiąca:\n• 0: Nigdy\n• 1: Prawie nigdy\n• 2: Czasami\n• 3: Dość często\n• 4: Bardzo często\n\nPozycje 4, 5, 7 i 8 są punktowane odwrotnie (0=4, 1=3, 2=2, 3=1, 4=0). Całkowity wynik mieści się w zakresie od 0 do 40.\n\nProgi kliniczne:\n• 0–13: Niski poziom odczuwanego stresu\n• 14–26: Umiarkowany poziom odczuwanego stresu\n• 27–40: Wysoki poziom odczuwanego stresu\n\nPrzeciętny dorosły Amerykanin uzyskuje około 13 punktów. Zmiana o 5 punktów jest uważana za klinicznie istotną do śledzenia odpowiedzi na leczenie.",
+    "interpretation": "**Wynik 0–13 (Niski stres):** Czujesz się w dużej mierze w kontroli nad swoim życiem i masz dobre zdolności radzenia sobie. Badania pokazują, że niskie wyniki PSS są związane z lepszą funkcją odpornościową, niższym ryzykiem sercowo-naczyniowym i dłuższą długością telomerów (biologiczny marker starzenia). Skup się na utrzymaniu tego, co działa.\n\n**Wynik 14–26 (Umiarkowany stres):** Radzisz sobie, ale jesteś pod presją. Ten zakres jest typowy dla większości pracujących dorosłych, a wielu normalizuje go, nie zdając sobie sprawy z kumulatywnego fizycznego obciążenia. Umiarkowany stres utrzymujący się przez miesiące wiąże się z zaburzeniami snu, przyrostem masy ciała, zwiększoną podatnością na choroby i napięciem w relacjach.\n\n**Wynik 27–40 (Wysoki stres):** Na tym poziomie przewlekły stres w mierzalny sposób szkodzi Twojemu zdrowiu. Wysokie wyniki PSS są związane z: 40% zwiększonym ryzykiem depresji, 2× wyższym prawdopodobieństwem zdarzeń sercowo-naczyniowych, 50% zmniejszoną odpowiedzią immunologiczną na szczepionki, przyspieszonym starzeniem komórkowym i znacząco upośledzonym podejmowaniem decyzji. To nie jest kwestia osobowości – to stan fizjologiczny wymagający aktywnej interwencji.",
+    "whenToSeek": "Rozważ wsparcie specjalisty, jeśli:\n\n• Twój wynik PSS-10 wynosi 27 lub więcej\n• Twój wynik utrzymuje się w zakresie umiarkowanym do wysokiego przez ponad 6 tygodni\n• Stres wpływa na Twój sen, apetyt lub zdrowie fizyczne\n• Używasz alkoholu, jedzenia lub innych substancji, aby sobie radzić\n• Stres wpływa na Twoją wydajność w pracy lub relacje\n• Doświadczasz lęku, ataków paniki lub utrzymującego się obniżonego nastroju wraz z wysokim stresem\n\nRodzaje profesjonalnego wsparcia opartego na dowodach w zarządzaniu stresem:\n• Terapia poznawczo-behawioralna (CBT) – obniża wyniki PSS średnio o 8–12 punktów\n• Redukcja stresu oparta na uważności (MBSR) – 8-tygodniowy program z silną bazą dowodową\n• Leki (SSRI/SNRI) – odpowiednie, gdy stres przerodził się w kliniczny lęk lub depresję",
+    "limitations": "**1. Błąd samoopisu:** PSS mierzy postrzegany stres, a nie obiektywne obciążenie stresem. Osoby, które mają tendencję do minimalizowania problemów, mogą uzyskać niższy wynik niż sugerowałby ich rzeczywisty fizjologiczny poziom stresu.\n\n**2. Pomiar punktowy:** PSS pyta o ostatni miesiąc. Wysoki wynik podczas ostrego kryzysu (żałoba, utrata pracy) może nie odzwierciedlać Twojego podstawowego poziomu stresu.\n\n**3. Nie identyfikuje stresorów:** PSS mierzy doświadczenie stresu, a nie jego źródło. Identyfikacja konkretnych stresorów wymaga bardziej szczegółowej oceny.\n\n**4. Różnice kulturowe:** Ekspresja i akceptowalność stresu różnią się w zależności od kultury. Niektóre populacje wykazują systematycznie wyższe lub niższe wyniki, które odzwierciedlają normy kulturowe dotyczące wyrażania dystresu psychicznego, a nie rzeczywiste różnice w poziomie stresu.\n\n**5. Nie zastępuje oceny klinicznej:** Wysoki wynik PSS wskazuje na potrzebę uwagi, a nie na diagnozę zaburzenia lękowego lub stresowego. Stany kliniczne wymagają profesjonalnej oceny."
+  }
+}

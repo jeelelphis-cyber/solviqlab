@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Questionário de Risco de Burnout",
+    "description": "O burnout não acontece da noite para o dia. Verifique onde você está no espectro antes que fique mais difícil de se recuperar."
+  },
+  "questions": {
+    "bu1": {
+      "text": "Você se sente emocionalmente esgotado pelo seu trabalho ou responsabilidades diárias — mesmo antes do dia começar?",
+      "options": [
+        "Não — geralmente me sinto engajado",
+        "Às vezes — em semanas difíceis",
+        "Frequentemente — a maioria das semanas é pesada",
+        "Quase sempre — estou no limite"
+      ]
+    },
+    "bu2": {
+      "text": "Você perdeu a motivação ou o entusiasmo por coisas que costumava gostar?"
+    },
+    "bu3": {
+      "text": "Quão eficaz você se sente no trabalho ou em suas principais responsabilidades ultimamente?",
+      "options": [
+        "Muito eficaz — estou fazendo meu melhor trabalho",
+        "Ok — estou cumprindo as tarefas",
+        "Abaixo do meu padrão habitual — percebo a queda",
+        "Apenas cumprindo as obrigações"
+      ]
+    },
+    "bu4": {
+      "text": "Você tem se tornado mais cínico ou distante das pessoas ao seu redor?"
+    },
+    "bu5": {
+      "text": "Com que frequência você faz pausas genuínas durante o dia — não apenas rolando a tela, mas descanso de verdade?",
+      "scaleLabels": {
+        "min": "Nunca",
+        "max": "Várias vezes ao dia"
+      }
+    },
+    "bu6": {
+      "text": "Quando você imagina sua semana pela frente, qual é seu primeiro sentimento?",
+      "options": [
+        "Energizado — tenho coisas que estou ansioso para fazer",
+        "Neutro — apenas mais uma semana",
+        "Dread — parece que é demais",
+        "Dread — não consigo ver luz nisso"
+      ]
+    },
+    "bu7": {
+      "text": "Você sente que, não importa o quanto faça, nunca é suficiente?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Baixo Risco de Burnout",
+      "description": "Você está se saindo bem. Suas reservas de energia estão intactas e você tem amortecedores saudáveis em vigor.",
+      "actions": [
+        "Mantenha seus hábitos de recuperação — o que está te protegendo agora merece ser nomeado e preservado",
+        "Crie uma prática proativa de recuperação a cada semana (não apenas descanso reativo)",
+        "Faça uma autoavaliação mensal — o burnout se desenvolve lentamente e a conscientização precoce é essencial"
+      ],
+      "miaHook": "Você está em boa forma — agora vamos conversar sobre como permanecer assim quando a pressão aumentar."
+    },
+    {
+      "label": "Sinais de Alerta Precoces",
+      "description": "Você está apresentando alguns dos sinais iniciais de burnout. Este é o momento ideal para agir — antes que se torne mais difícil de se recuperar.",
+      "actions": [
+        "Retire uma coisa da sua lista esta semana — o burnout neste estágio responde à redução, não à otimização",
+        "Adicione uma atividade genuína de recuperação que não tenha nada a ver com produtividade",
+        "Conte a alguém de confiança que você está sentindo a pressão — o apoio social retarda a progressão do burnout"
+      ],
+      "miaHook": "Identifico padrões iniciais de burnout em suas respostas — a boa notícia é que este estágio é muito recuperável com os ajustes certos."
+    },
+    {
+      "label": "Zona de Burnout",
+      "description": "Suas respostas sugerem burnout significativo. Isso afeta sua saúde, relacionamentos e produtividade — não é fraqueza, é um estado fisiológico real.",
+      "actions": [
+        "Converse com um médico ou terapeuta — o burnout neste nível tem efeitos fisiológicos mensuráveis e se beneficia de apoio profissional",
+        "Tire pelo menos um dia inteiro completamente livre de todas as atividades relacionadas ao trabalho esta semana — não um dia \"leve\", mas uma pausa completa",
+        "Identifique a maior fonte de dreno de sua energia e comece o processo de reduzi-la ou removê-la — mesmo que pareça impossível"
+      ],
+      "miaHook": "O que você está vivenciando é real e sério — quero ajudar você a traçar um caminho de recuperação que não exija que você abandone tudo."
+    }
+  ],
+  "seoContent": {
+    "intro": "Burnout é um estado de estresse crônico no trabalho caracterizado por três dimensões: exaustão emocional, despersonalização (cinismo e distanciamento) e redução da sensação de realização pessoal. Descrito pela primeira vez pelo psicólogo Herbert Freudenberger em 1974 e formalmente reconhecido pela OMS em 2019, o burnout é hoje classificado como um fenômeno ocupacional que afeta cerca de 67% dos trabalhadores em algum momento de suas carreiras.\n\nO burnout não acontece de repente — ele se desenvolve ao longo de meses por meio de um ciclo progressivo de comprometimento excessivo, exaustão e retraimento. Este questionário avalia onde você está no espectro para que possa agir antes que a recuperação se torne mais difícil.",
+    "faq": [
+      {
+        "q": "Qual é a diferença entre burnout e depressão?",
+        "a": "O burnout é primariamente específico ao contexto de trabalho e melhora significativamente com descanso, férias e afastamento dos estressores. A depressão é abrangente em todos os domínios da vida e não se resolve apenas com descanso. No entanto, o burnout grave pode desencadear depressão clínica. Se os sintomas persistirem fora dos contextos de trabalho, uma avaliação clínica é recomendada."
+      },
+      {
+        "q": "É possível se recuperar do burnout?",
+        "a": "Sim. A recuperação do burnout é possível e bem documentada. O burnout em estágio inicial (sinais de alerta leves) geralmente se recupera em semanas com descanso adequado e estabelecimento de limites. O burnout grave pode levar de 3 a 12 meses de recuperação sustentada. Os fatores-chave são: reduzir as demandas, aumentar as atividades de recuperação e abordar as causas raízes."
+      },
+      {
+        "q": "O que causa o burnout?",
+        "a": "A pesquisa (Maslach & Leiter, 2016) identifica seis incompatibilidades no ambiente de trabalho que causam burnout: carga de trabalho excessiva, falta de controle, recompensa insuficiente, ruptura da comunidade, injustiça e conflito de valores. Fatores pessoais como perfeccionismo, dificuldade em estabelecer limites e maus hábitos de recuperação também contribuem."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Burnout é uma síndrome resultante do estresse crônico no trabalho que não foi gerenciado com sucesso. A OMS (CID-11, 2019) o define por três dimensões: sensação de esgotamento ou exaustão energética, aumento do distanciamento mental do trabalho ou sentimentos de negativismo ou cinismo relacionados ao trabalho, e redução da eficácia profissional.\n\nO burnout se desenvolve por estágios progressivos — desde entusiasmo e comprometimento excessivo até estagnação, frustração e apatia — geralmente levando de 6 a 18 meses para atingir o estado de esgotamento total. A recuperação exige o mesmo investimento de tempo no sentido inverso.",
+    "howScored": "Este questionário avalia sete indicadores de burnout baseados no Maslach Burnout Inventory (a ferramenta clínica padrão-ouro) e no Copenhagen Burnout Inventory: exaustão emocional, perda de motivação, redução da eficácia, despersonalização/cinismo, comportamentos de recuperação, apreensão antecipatória e a sensação de 'nunca ser suficiente'.\n\nPontuações acima de 70 indicam baixo risco com amortecedores saudáveis. 40–69 indica sinais de alerta precoces que respondem bem à intervenção. Abaixo de 40 indica burnout significativo que requer recuperação ativa.",
+    "whenToSeek": "Busque apoio profissional se:\n• Você estiver na zona de burnout por mais de 4 semanas\n• Sintomas físicos aparecerem (dores de cabeça crônicas, doenças frequentes, distúrbios do sono)\n• O burnout estiver afetando seus relacionamentos pessoais, não apenas o trabalho\n• Você estiver usando álcool ou substâncias para lidar com as demandas do trabalho\n• Você estiver apresentando sintomas de depressão junto com o burnout\n\nUm médico de atenção primária ou terapeuta especializado em saúde ocupacional pode fornecer o apoio adequado.",
+    "limitations": "Este questionário mede o risco de burnout, não um diagnóstico clínico de burnout. O Maslach Burnout Inventory (MBI) é o padrão clínico e requer administração profissional. Os resultados aqui indicam padrões e níveis de risco, não conclusões diagnósticas.\n\nOs sintomas de burnout se sobrepõem significativamente à depressão, transtornos de ansiedade, TDAH e certas condições médicas (disfunção tireoidiana, anemia). Se os sintomas forem graves ou persistirem em vários domínios da vida, uma avaliação clínica é recomendada."
+  }
+}

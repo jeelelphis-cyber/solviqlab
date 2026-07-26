@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "title": "Weight Loss Readiness Quiz",
+    "description": "Are you actually ready to lose weight — or just hoping? Find out what's really in your way before you start."
+  },
+
+  "questions": {
+    "wr1": {
+      "text": "Why do you want to lose weight right now? What's really driving you?",
+      "options": [
+        "My health — I want to feel better long-term",
+        "Energy and confidence — daily quality of life",
+        "An upcoming event — I have a deadline",
+        "External pressure — others want me to"
+      ]
+    },
+    "wr2": {
+      "text": "Have you tried to lose weight before and stopped? What happened?",
+      "options": [
+        "I've maintained previous success well",
+        "I've lost and regained — I understand why now",
+        "I stopped because it was too restrictive",
+        "I stopped because I saw no results quickly"
+      ]
+    },
+    "wr3": {
+      "text": "Do you have a specific, realistic plan for how you'll eat differently?"
+    },
+    "wr4": {
+      "text": "How ready do you feel to make consistent changes — not a crash diet, but lifestyle shifts?",
+      "scaleLabels": { "min": "Not ready at all", "max": "Completely ready" }
+    },
+    "wr5": {
+      "text": "How much does stress or emotion drive your eating habits?",
+      "options": [
+        "Very little — I eat based on hunger",
+        "Sometimes — stressful days affect my choices",
+        "Often — food is comfort for me",
+        "Always — emotional eating is my pattern"
+      ]
+    },
+    "wr6": {
+      "text": "Do you have support — people who will encourage rather than sabotage your goals?"
+    }
+  },
+
+  "buckets": [
+    {
+      "label": "Ready to Start",
+      "description": "You have the mindset, motivation, and awareness to make real, sustainable progress. Now it's about the right strategy.",
+      "actions": [
+        "Start this week — your readiness window is real and should be used",
+        "Set a specific, measurable 8-week goal (not a lifetime number) — 4–6 kg loss in 8 weeks is realistic and motivating",
+        "Tell your support network about your plan — accountability increases success rates by 65%"
+      ],
+      "miaHook": "You're genuinely ready — not just hoping. Let me give you a personalized starting plan based on your profile."
+    },
+    {
+      "label": "Almost Ready",
+      "description": "You're motivated but a few key pieces aren't in place yet. Addressing them now will make the difference between lasting change and another false start.",
+      "actions": [
+        "Identify the specific reason previous attempts stopped — address that root cause before starting again",
+        "Build your support system first — identify 1–2 people who will actively encourage your journey",
+        "Spend 2 weeks improving your sleep to 7+ hours before starting — sleep is the #1 predictor of diet adherence"
+      ],
+      "miaHook": "I can see what's missing in your readiness picture — let's close those gaps before you begin, so this time sticks."
+    },
+    {
+      "label": "Not Quite Yet",
+      "description": "Jumping in right now may lead to frustration and another stop-start cycle. Let's build the right foundation first.",
+      "actions": [
+        "Focus on understanding your why — health-driven motivation has a 3× higher success rate than event-driven or external-pressure motivation",
+        "Address emotional eating before starting a diet — without this, no eating plan will stick long-term",
+        "Work with a coach, therapist, or dietitian to build the right foundation — trying to do this alone with the current readiness picture is the recipe for another restart"
+      ],
+      "miaHook": "Starting without addressing what I see in your answers is what leads to giving up. Let's do this right — and only once."
+    }
+  ],
+
+  "seoContent": {
+    "intro": "Research on behavior change consistently shows that motivation and intention alone are insufficient predictors of weight loss success. What separates people who achieve lasting weight loss from those who cycle through repeated attempts is psychological readiness: clarity of motivation, realistic expectations, a concrete plan, and sufficient support.\n\nThis quiz assesses six dimensions of weight loss readiness drawn from Transtheoretical Model research (Prochaska & DiClemente) and behavioral psychology. Understanding where you genuinely are — not where you want to be — is the most valuable insight you can have before you begin.",
+    "faq": [
+      {
+        "q": "What is the strongest predictor of weight loss success?",
+        "a": "Research consistently identifies intrinsic motivation (health-driven vs. appearance-driven), self-efficacy (confidence in one's ability to make changes), social support, and realistic expectations as the strongest predictors of sustained weight loss. People who lose weight for health reasons maintain it significantly longer than those motivated by events or external pressure."
+      },
+      {
+        "q": "Why do most diets fail?",
+        "a": "The primary reasons are: starting with too large a caloric deficit (unsustainable hunger), relying on willpower rather than environmental design, not addressing emotional eating, lack of social support, all-or-nothing thinking (one bad day leads to quitting), and setting unrealistic timelines. These are fixable — with the right preparation."
+      },
+      {
+        "q": "How do I break the cycle of losing and regaining weight?",
+        "a": "Research on 'weight cycling' shows the key factors for breaking the pattern are: shifting from short-term diet mindset to permanent lifestyle change, addressing emotional eating with behavioral tools (not willpower), building a maintenance phase into the plan from the start, and choosing an approach sustainable enough that you could imagine doing it for 5 years."
+      }
+    ]
+  },
+
+  "content": {
+    "whatIs": "Weight loss readiness is a psychological concept developed from the Transtheoretical Model of behavior change (Prochaska & DiClemente, 1983). It describes how prepared a person is — cognitively, motivationally, and behaviorally — to make and sustain significant lifestyle changes.\n\nReadiness is not a fixed state — it fluctuates with life circumstances, stress levels, and social environment. Attempting weight loss during low-readiness periods significantly increases the probability of relapse and contributes to the frustrating cycle of repeated attempts.",
+
+    "howScored": "This quiz evaluates six readiness dimensions: quality of motivation (intrinsic vs. extrinsic), insight from previous attempts, concrete planning, subjective readiness confidence, emotional eating patterns, and social support availability.\n\nScores above 70 indicate high readiness — start now. 40–69 indicates partial readiness — specific gaps should be addressed first. Below 40 indicates that the foundational conditions for success are not yet in place — preparation will significantly improve outcomes.",
+
+    "whenToSeek": "Consider professional support if:\n• You have had 3 or more significant weight loss attempts that did not result in lasting change\n• Emotional or stress eating is a significant pattern that feels out of control\n• You have a BMI above 35 — medical supervision improves outcomes significantly at this level\n• Binge eating, restriction cycles, or other disordered eating patterns are present\n• Weight concerns are significantly affecting mental health or quality of life",
+
+    "limitations": "This quiz assesses psychological readiness, not medical appropriateness for weight loss. Individual health conditions, medications, and metabolic factors not captured here can significantly influence weight loss ability and approach. Always consult a healthcare provider before beginning a significant weight loss program, especially with underlying health conditions."
+  }
+}

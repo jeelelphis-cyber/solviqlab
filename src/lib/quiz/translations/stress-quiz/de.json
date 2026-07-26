@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "title": "Stress-Level-Test (PSS-10)",
+    "description": "Die Perceived Stress Scale ist das weltweit am häufigsten verwendete Instrument zur Stressmessung. Es wird in der Forschung von Harvard, Stanford, CDC und NIH eingesetzt. Die Durchführung dauert 3 Minuten.",
+    "medicalNote": "Dies misst wahrgenommenen Stress, keine klinische Diagnose. Chronisch hoher Stress stellt ein ernstes Gesundheitsrisiko dar. Bitte suchen Sie professionelle Unterstützung, wenn Sie sich überfordert fühlen."
+  },
+  "likertOptions": [
+    "Nie",
+    "Fast nie",
+    "Manchmal",
+    "Ziemlich oft",
+    "Sehr oft"
+  ],
+  "reverseLikertOptions": [
+    "Nie",
+    "Fast nie",
+    "Manchmal",
+    "Ziemlich oft",
+    "Sehr oft"
+  ],
+  "questions": {
+    "pss1": {
+      "text": "Wie oft waren Sie im letzten Monat verärgert, weil etwas unerwartet passiert ist?",
+      "hint": "Emotionale Reaktivität auf unerwartete Ereignisse ist einer der stärksten Indikatoren für die allgemeine Stressbelastung."
+    },
+    "pss2": {
+      "text": "Wie oft hatten Sie im letzten Monat das Gefühl, dass Sie die wichtigen Dinge in Ihrem Leben nicht kontrollieren konnten?",
+      "hint": "Wahrgenommener Kontrollverlust ist der psychologische Kern von Stress – er aktiviert die Cortisolreaktion."
+    },
+    "pss3": {
+      "text": "Wie oft fühlten Sie sich im letzten Monat nervös und gestresst?",
+      "hint": "Chronische nervöse Aktivierung hält das sympathische Nervensystem in einem nahezu ständigen Alarmzustand."
+    },
+    "pss4": {
+      "text": "Wie oft waren Sie im letzten Monat zuversichtlich, dass Sie Ihre persönlichen Probleme bewältigen können?",
+      "hint": "Selbstwirksamkeit ist ein Puffer gegen Stress – dieses Item wird umgekehrt bewertet. Höheres Selbstvertrauen = geringerer Stress."
+    },
+    "pss5": {
+      "text": "Wie oft hatten Sie im letzten Monat das Gefühl, dass die Dinge in Ihrem Sinne liefen?",
+      "hint": "Positive Bewertung der Lebensrichtung ist ein Schutzfaktor. Dieses Item wird umgekehrt bewertet."
+    },
+    "pss6": {
+      "text": "Wie oft hatten Sie im letzten Monat das Gefühl, dass Sie mit all den Dingen, die Sie tun mussten, nicht zurechtkamen?",
+      "hint": "Überforderung durch Aufgabenlast ist ein direkter Stressindikator und ein Vorbote von Burnout."
+    },
+    "pss7": {
+      "text": "Wie oft konnten Sie im letzten Monat Ärgernisse in Ihrem Leben kontrollieren?",
+      "hint": "Die Regulierung von Ärgernissen spiegelt die emotionale Kontrollfähigkeit wider – dieses Item wird umgekehrt bewertet."
+    },
+    "pss8": {
+      "text": "Wie oft hatten Sie im letzten Monat das Gefühl, die Dinge im Griff zu haben?",
+      "hint": "Ein Gefühl der Meisterschaft über die Umstände ist eine der zentralen stresspuffernden Ressourcen."
+    },
+    "pss9": {
+      "text": "Wie oft waren Sie im letzten Monat verärgert über Dinge, die außerhalb Ihrer Kontrolle lagen?",
+      "hint": "Wut über unkontrollierbare Ereignisse aktiviert die HPA-Achse und erhöht den Cortisolspiegel – ein direkter Stress-Biomarker."
+    },
+    "pss10": {
+      "text": "Wie oft hatten Sie im letzten Monat das Gefühl, dass sich die Schwierigkeiten so sehr häuften, dass Sie sie nicht überwinden konnten?",
+      "hint": "Kognitive Überforderung – wenn Probleme unüberwindbar erscheinen – ist der stärkste Prädiktor für Burnout."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Geringer Stress",
+      "description": "Ihr wahrgenommener Stress ist niedrig. Sie verfügen über gute Bewältigungsressourcen und fühlen sich weitgehend in Kontrolle über Ihr Leben.",
+      "actions": [
+        "Behalten Sie Ihre Stressmanagement-Gewohnheiten bei – Beständigkeit ist wichtiger als Intensität",
+        "Planen Sie einmal pro Woche eine proaktive Erholungsaktivität ein (Naturspaziergang, Sauna, soziale Zeit)",
+        "Dokumentieren Sie, was gerade für Sie funktioniert – Sie werden in schwierigeren Zeiten darauf zurückgreifen wollen"
+      ],
+      "miaHook": "Ihr Stress ist derzeit gut gemanagt. Ich möchte Ihnen helfen, Resilienz aufzubauen, bevor die nächste schwierige Phase eintritt."
+    },
+    {
+      "label": "Moderater Stress",
+      "description": "Moderates wahrgenommenes Stressniveau. Sie kommen zurecht, spüren aber den Druck. Ohne Intervention kann dies zu einem Burnout führen.",
+      "actions": [
+        "Fügen Sie nach der Arbeit ein tägliches 5-minütiges Entspannungsritual ein – einen Spaziergang, eine Atemübung oder einen Tagebucheintrag.",
+        "Identifizieren Sie diese Woche Ihre drei größten Stressfaktoren und eliminieren oder reduzieren Sie einen davon.",
+        "Schlaf ist Ihr wirksamstes Werkzeug zur Stresserholung – priorisieren Sie 7-8 Stunden unverhandelbar."
+      ],
+      "miaHook": "Moderater Stress ist der Zustand, in dem die meisten Menschen leben, ohne zu merken, dass er sie langsam erschöpft. Ich habe ein Protokoll, das genau dort ansetzt, wo Ihr Wert den Energieverlust anzeigt."
+    },
+    {
+      "label": "Hoher Stress",
+      "description": "Hohes wahrgenommenes Stressniveau. Auf diesem Niveau schadet Stress Ihrer körperlichen und geistigen Gesundheit erheblich. Die Forschung verbindet PSS-Werte über 27 mit einem erhöhten Risiko für Depressionen, Herzkrankheiten und Immunschwäche.",
+      "actions": [
+        "Entfernen Sie diese Woche eine große Verpflichtung aus Ihrem Leben – nicht irgendwann, sondern diese Woche.",
+        "Sprechen Sie noch heute mit einem Therapeuten, Arzt oder einer vertrauenswürdigen Person über Ihre Stressbelastung.",
+        "Verzichten Sie ab Mittag auf Koffein und ganz auf Alkohol – beides verschlechtert die Cortisolreaktion."
+      ],
+      "miaHook": "Ihr Wert liegt in einem Bereich, in dem Ihr Körper echten physiologischen Schaden nimmt. Ich möchte Ihnen helfen, sofort zu handeln – nicht mit einem 30-Tage-Plan, sondern heute."
+    }
+  ],
+  "seoContent": {
+    "intro": "Die Perceived Stress Scale (PSS-10) wurde 1983 von Dr. Sheldon Cohen an der Carnegie Mellon University entwickelt. Sie ist das weltweit am häufigsten verwendete psychologische Instrument zur Messung der Stresswahrnehmung in Forschung und klinischem Umfeld und wird von CDC, NIH, Harvard und Stanford in Tausenden von Studien eingesetzt.\n\nIm Gegensatz zu Stressmessungen, die stressige Ereignisse zählen, misst die PSS-10, wie gestresst Sie sich fühlen – Ihre psychologische Bewertung Ihrer eigenen Situation. Dies macht sie einzigartig genau, da zwei Menschen die gleichen Ereignisse erleben und völlig unterschiedliche Stressreaktionen haben können.\n\nDie Werte reichen von 0 bis 40. Der durchschnittliche Amerikaner erreicht 13 (Cohen et al., 2016). Werte über 27 sind mit einem signifikant erhöhten Risiko für Depressionen, Herz-Kreislauf-Erkrankungen und Immunsuppression verbunden (APA Stress in America, 2023). Das Verständnis Ihres Stressniveaus ist der erste Schritt zur Bewältigung.",
+    "faq": [
+      {
+        "q": "Was ist die PSS-10?",
+        "a": "Die Perceived Stress Scale (PSS-10) ist ein 10-teiliger validierter Fragebogen, der 1983 von Dr. Sheldon Cohen entwickelt wurde. Es ist das weltweit am häufigsten verwendete Instrument in der Stressforschung und misst, wie gestresst, überfordert und kontrolllos Sie sich fühlen."
+      },
+      {
+        "q": "Was ist ein normaler PSS-10-Wert?",
+        "a": "Der durchschnittliche amerikanische PSS-10-Wert liegt bei etwa 13. Werte von 0–13 deuten auf geringen Stress hin, 14–26 auf moderaten Stress und 27–40 auf hohen Stress. Frauen neigen dazu, in allen Altersgruppen etwas höhere Werte zu erzielen als Männer."
+      },
+      {
+        "q": "Warum werden einige Fragen umgekehrt bewertet?",
+        "a": "Vier Items (4, 5, 7, 8) fragen nach positiven Gefühlen – Selbstvertrauen und Kontrolle. Diese werden umgekehrt bewertet, da mehr Selbstvertrauen oder Kontrolle auf geringeren Stress hinweist. Dies ist das Standard-PSS-10-Protokoll und wird in diesem Quiz automatisch durchgeführt."
+      },
+      {
+        "q": "Kann Stress körperliche Gesundheitsprobleme verursachen?",
+        "a": "Ja. Chronischer hoher Stress erhöht Cortisol, unterdrückt das Immunsystem, verstärkt Entzündungen und erhöht das Risiko für Herzkrankheiten, Diabetes, Depressionen und Fettleibigkeit erheblich. Der PSS-10-Wert über 27 wird in mehreren Längsschnittstudien mit diesen Ergebnissen in Verbindung gebracht."
+      },
+      {
+        "q": "Wie oft sollte ich diesen Test wiederholen?",
+        "a": "Eine monatliche Wiederholung ermöglicht es Ihnen, Trends zu verfolgen. Stress schwankt typischerweise mit den Lebensumständen, aber chronisch hohe Werte (27+) über 2+ Monate hinweg rechtfertigen professionelle Unterstützung."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Stress ist die physiologische und psychologische Reaktion des Körpers auf Anforderungen, die die wahrgenommenen Bewältigungsressourcen übersteigen. In kurzen Schüben ist Stress anpassungsfähig – er schärft die Konzentration und mobilisiert Energie. Chronischer Stress hingegen ist eine ernsthafte Gesundheitsgefahr.\n\nDie Perceived Stress Scale misst den wahrgenommenen Stress – Ihr subjektives Erleben von Überforderung, Kontrollverlust und Bewältigungsunfähigkeit. Dies unterscheidet sich von der objektiven Anzahl an Stressoren (wie viele schlechte Dinge passiert sind), da zwei Personen mit identischen Umständen aufgrund ihrer Bewältigungsressourcen, sozialen Unterstützung und kognitiven Bewertungsmuster sehr unterschiedliche Stressreaktionen haben können.\n\nDie PSS-10 ist der globale Goldstandard zur Messung dieses subjektiven Erlebens. Sie wurde an Hunderttausenden von Teilnehmern in über 60 Ländern validiert und wird in der klinischen Forschung von allen großen Gesundheitsinstitutionen verwendet.",
+    "clinicalBackground": "Dr. Sheldon Cohen entwickelte die PSS 1983 an der Carnegie Mellon University im Rahmen der Forschung zu Stress und Anfälligkeit für Infektionskrankheiten. Die Skala wurde entwickelt, um das Ausmaß zu messen, in dem Situationen im Leben einer Person als stressig bewertet werden.\n\nDie PSS-10 (10-Item-Version) ist das am häufigsten verwendete Format. Sie besteht aus 6 negativ formulierten Items (höhere Antworten = mehr Stress) und 4 positiv formulierten Items, die umgekehrt bewertet werden. Dieses bidirektionale Format reduziert die Zustimmungstendenz und misst sowohl Stress als auch Bewältigungsressourcen.\n\nDie PSS wurde in über 50 Sprachen übersetzt und wird in der Forschung verwendet, die von der WHO, CDC, NIH, Harvard School of Public Health und großen medizinischen Fachzeitschriften wie JAMA, Lancet und NEJM veröffentlicht wird.",
+    "howScored": "Die PSS-10 verwendet eine 5-Punkte-Häufigkeitsskala für den letzten Monat:\n• 0: Niemals\n• 1: Fast nie\n• 2: Manchmal\n• 3: Ziemlich oft\n• 4: Sehr oft\n\nDie Items 4, 5, 7 und 8 werden umgekehrt bewertet (0=4, 1=3, 2=2, 3=1, 4=0). Die Gesamtpunktzahl reicht von 0 bis 40.\n\nKlinische Schwellenwerte:\n• 0–13: Niedriger wahrgenommener Stress\n• 14–26: Moderater wahrgenommener Stress\n• 27–40: Hoher wahrgenommener Stress\n\nDer durchschnittliche US-Erwachsene erreicht etwa 13 Punkte. Eine Änderung um 5 Punkte wird als klinisch bedeutsam für die Verfolgung des Behandlungserfolgs angesehen.",
+    "interpretation": "**Punktzahl 0–13 (Niedriger Stress):** Sie fühlen sich weitgehend in Kontrolle über Ihr Leben und haben eine gute Bewältigungsfähigkeit. Die Forschung zeigt, dass niedrige PSS-Werte mit einer besseren Immunfunktion, einem geringeren kardiovaskulären Risiko und einer längeren Telomerlänge (einem biologischen Marker für das Altern) verbunden sind. Konzentrieren Sie sich darauf, das beizubehalten, was funktioniert.\n\n**Punktzahl 14–26 (Moderater Stress):** Sie kommen zurecht, stehen aber unter Druck. Dieser Bereich ist der, in dem die meisten berufstätigen Erwachsenen leben, und viele normalisieren ihn, ohne sich der kumulativen körperlichen Belastung bewusst zu sein. Über Monate anhaltender moderater Stress wird mit Schlafstörungen, Gewichtszunahme, erhöhter Krankheitsanfälligkeit und Beziehungsbelastungen in Verbindung gebracht.\n\n**Punktzahl 27–40 (Hoher Stress):** Auf diesem Niveau schädigt chronischer Stress Ihre Gesundheit messbar. Hohe PSS-Werte werden in Verbindung gebracht mit: 40 % erhöhtem Risiko für Depressionen, 2× höherer Wahrscheinlichkeit für kardiovaskuläre Ereignisse, 50 % reduzierter Immunantwort auf Impfstoffe, beschleunigter Zellalterung und erheblich beeinträchtigter Entscheidungsfindung. Dies ist kein Persönlichkeitsproblem – es ist ein physiologischer Zustand, der aktives Eingreifen erfordert.",
+    "whenToSeek": "Ziehen Sie professionelle Unterstützung in Betracht, wenn:\n\n• Ihr PSS-10-Wert 27 oder höher ist\n• Ihr Wert seit mehr als 6 Wochen im moderaten bis hohen Bereich liegt\n• Stress Ihren Schlaf, Appetit oder Ihre körperliche Gesundheit beeinträchtigt\n• Sie Alkohol, Essen oder andere Substanzen zur Bewältigung verwenden\n• Stress Ihre Arbeitsleistung oder Beziehungen beeinträchtigt\n• Sie neben hohem Stress unter Angstzuständen, Panikattacken oder anhaltend niedergeschlagener Stimmung leiden\n\nArten professioneller Unterstützung, die evidenzbasiert für das Stressmanagement sind:\n• Kognitive Verhaltenstherapie (CBT) – senkt PSS-Werte durchschnittlich um 8–12 Punkte\n• Mindfulness-Based Stress Reduction (MBSR) – 8-wöchiges Programm mit starker Evidenzbasis\n• Medikamente (SSRIs/SNRIs) – geeignet, wenn Stress zu klinischer Angst oder Depression fortgeschritten ist",
+    "limitations": "**1. Selbstberichtsverzerrung:** Die PSS misst den wahrgenommenen Stress, nicht die objektive Stressbelastung. Menschen, die dazu neigen, Probleme zu verharmlosen, können niedrigere Werte erzielen, als ihr tatsächliches physiologisches Stressniveau vermuten lässt.\n\n**2. Zeitpunktmessung:** Die PSS fragt nach dem letzten Monat. Ein hoher Wert während einer akuten Krise (Trauerfall, Arbeitsplatzverlust) spiegelt möglicherweise nicht Ihr grundlegendes Stressniveau wider.\n\n**3. Identifiziert keine Stressoren:** Die PSS misst die Erfahrung von Stress, nicht seine Quelle. Die Identifizierung spezifischer Stressoren erfordert eine detailliertere Bewertung.\n\n**4. Kulturelle Unterschiede:** Der Ausdruck und die Akzeptanz von Stress variieren zwischen den Kulturen. Einige Bevölkerungsgruppen zeigen systematisch höhere oder niedrigere Werte, die kulturelle Normen hinsichtlich des Ausdrucks psychischer Belastung widerspiegeln, anstatt tatsächliche Unterschiede im Stressniveau.\n\n**5. Kein Ersatz für eine klinische Bewertung:** Ein hoher PSS-Wert zeigt die Notwendigkeit von Aufmerksamkeit an, nicht eine Diagnose einer Angst- oder Stressstörung. Klinische Zustände erfordern eine professionelle Beurteilung."
+  }
+}

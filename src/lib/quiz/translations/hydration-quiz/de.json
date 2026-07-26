@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Hydrations-Gesundheitsquiz",
+    "description": "Die meisten Menschen sind leicht dehydriert, ohne es zu wissen. Finden Sie heraus, ob Wasser ein fehlender Teil Ihres Gesundheitspuzzles ist."
+  },
+  "questions": {
+    "hyd1": {
+      "text": "Wie viele Gläser Wasser (250 ml) trinken Sie an einem typischen Tag?",
+      "options": [
+        "8 oder mehr – ich trinke regelmäßig",
+        "5–7 Gläser",
+        "3–4 Gläser",
+        "Weniger als 3 – ich vergesse zu trinken"
+      ]
+    },
+    "hyd2": {
+      "text": "Haben Sie tagsüber oft Durst?"
+    },
+    "hyd3": {
+      "text": "Welche Farbe hat Ihr Urin meistens? (Seien Sie ehrlich!)",
+      "options": [
+        "Hellgelb – fast klar",
+        "Hellgelb",
+        "Dunkelgelb oder bernsteinfarben",
+        "Sehr dunkel – ich achte nicht darauf"
+      ]
+    },
+    "hyd4": {
+      "text": "Trinken Sie regelmäßig Kaffee, Tee oder Alkohol, ohne dies mit Wasser auszugleichen?"
+    },
+    "hyd5": {
+      "text": "Leiden Sie regelmäßig unter Kopfschmerzen, trockener Haut oder Konzentrationsschwierigkeiten?",
+      "options": [
+        "Keines davon – mir geht es gut",
+        "Gelegentlich eines davon",
+        "Regelmäßig zwei davon",
+        "Alle drei – so gut wie täglich"
+      ]
+    },
+    "hyd6": {
+      "text": "Wie körperlich aktiv sind Sie? (Mehr Aktivität = höherer Wasserbedarf)",
+      "scaleLabels": {
+        "min": "Sehr wenig Bewegung",
+        "max": "Sehr aktiv im Alltag"
+      }
+    }
+  },
+  "buckets": [
+    {
+      "label": "Gut hydriert",
+      "description": "Ihre Trinkgewohnheiten sind solide. Ihr Körper bekommt das Wasser, das er braucht, um optimal zu funktionieren.",
+      "actions": [
+        "Behalten Sie Ihre derzeitige Trinkmenge bei – Beständigkeit ist wichtiger als das Erreichen einer bestimmten Zahl",
+        "Erhöhen Sie die Menge an Tagen mit intensivem Training oder Hitze um 500 ml",
+        "Vermeiden Sie weiterhin zuckerhaltige Getränke als primäre Flüssigkeitsquelle"
+      ],
+      "miaHook": "Ihre Flüssigkeitsversorgung ist gut – schauen wir uns an, was sonst noch Ihre Energie und Leistungsfähigkeit beeinträchtigen könnte."
+    },
+    {
+      "label": "Leicht dehydriert",
+      "description": "Sie trinken nicht ganz genug. Leichte Dehydrierung beeinträchtigt Ihre Stimmung, Konzentration und Ihren Stoffwechsel stärker, als die meisten Menschen glauben.",
+      "actions": [
+        "Trinken Sie direkt nach dem Aufwachen ein Glas Wasser – Ihr Körper verliert über Nacht Flüssigkeit",
+        "Stellen Sie einen Wecker, der Sie alle 2 Stunden ans Trinken erinnert – Gewohnheitsbildung ist der schnellste Weg zu besserer Flüssigkeitsversorgung",
+        "Ersetzen Sie täglich einen Kaffee oder ein zuckerhaltiges Getränk durch Wasser oder Kräutertee"
+      ],
+      "miaHook": "Leichte Dehydrierung beeinträchtigt still und leise Ihre Energie und Ihr Gewichtsmanagement – 3 zusätzliche Gläser am Tag können dies schnell ändern."
+    },
+    {
+      "label": "Dehydriert",
+      "description": "Ihre Flüssigkeitsaufnahme liegt deutlich unter dem, was Ihr Körper benötigt. Dies wirkt sich wahrscheinlich auf Ihre Konzentration, Haut, Nieren und Energie aus.",
+      "actions": [
+        "Beginnen Sie morgen mit 500 ml Wasser, bevor Sie etwas essen oder Koffein zu sich nehmen – machen Sie dies zur unverhandelbaren Regel",
+        "Tragen Sie eine 1-Liter-Wasserflasche bei sich und leeren Sie sie zweimal vor dem Abendessen",
+        "Überprüfen Sie täglich Ihre Urinfarbe – blasses Gelb ist Ihr Ziel und Ihr Echtzeit-Indikator für die Flüssigkeitsversorgung"
+      ],
+      "miaHook": "Dehydrierung erklärt vieles, was Sie vielleicht anderen Ursachen zuschreiben – lassen Sie mich Ihnen einen einfachen Weg zeigen, dies zu beheben."
+    }
+  ],
+  "seoContent": {
+    "intro": "Milde Dehydrierung – definiert als ein Verlust von nur 1–2 % des Körperwassers – beeinträchtigt kognitive Leistungsfähigkeit, körperliche Ausdauer, Stimmung und Stoffwechsel. Die meisten Menschen verbringen große Teile ihres Tages in diesem Zustand, ohne es zu merken, denn Durst ist ein nachlaufender Indikator: Wenn Sie Durst verspüren, sind Sie bereits leicht dehydriert.\n\nDie Nieren, das Gehirn, die Haut und das Herz-Kreislauf-System sind alle auf eine ausreichende Flüssigkeitszufuhr angewiesen, um zu funktionieren. Dieses Quiz bewertet Ihre Hydrationsgewohnheiten in sechs Dimensionen, um Ihnen ein klares Bild davon zu geben, wo Sie stehen und was Sie ändern sollten.",
+    "faq": [
+      {
+        "q": "Wie viel Wasser sollte ich pro Tag trinken?",
+        "a": "Die allgemein genannten 8 Gläser (2 Liter) sind ein vernünftiger Ausgangswert für bewegungsarme Erwachsene in gemäßigten Klimazonen. Eine präzisere Richtlinie der National Academies: 3,7 Liter Gesamtflüssigkeit pro Tag für Männer und 2,7 Liter für Frauen (einschließlich des über die Nahrung aufgenommenen Wassers). Erhöhen Sie die Menge um 0,5–1 Liter pro Stunde Sport und bei heißem Wetter."
+      },
+      {
+        "q": "Zählt Kaffee zur täglichen Flüssigkeitsaufnahme?",
+        "a": "Ja, bis zu einem gewissen Grad. Die milde harntreibende Wirkung von Koffein wird bei moderaten Mengen (bis zu 3–4 Tassen pro Tag) durch die Flüssigkeit im Getränk ausgeglichen. Übermäßiger Koffeinkonsum (5+ Tassen) führt jedoch zu einem Netto-Flüssigkeitsverlust. Alkohol hat eine viel stärkere harntreibende Wirkung und sollte nicht auf die Hydrationsziele angerechnet werden."
+      },
+      {
+        "q": "Was ist der beste Indikator für den Hydrationsstatus?",
+        "a": "Die Urinfarbe ist der praktischste Echtzeit-Indikator. Hellgelb (Limonadenfarbe) deutet auf eine gute Hydration hin. Dunkelgelb oder bernsteinfarben weist auf Dehydrierung hin. Klarer Urin kann auf eine Überwässerung hindeuten. Morgenurin ist tendenziell dunkler – entscheidend ist die Farbe im Laufe des Tages."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Wasser macht etwa 60 % des Körpergewichts eines Erwachsenen aus und ist an jedem physiologischen Prozess beteiligt: Nährstofftransport, Temperaturregulierung, Gelenkschmierung, Abfallbeseitigung und Zellfunktion. Selbst eine milde Dehydrierung (1–2 % Gewichtsverlust) beeinträchtigt diese Prozesse messbar.\n\nStudien zeigen durchgängig, dass milde Dehydrierung das Arbeitsgedächtnis um 7 % reduziert, Aufmerksamkeit und psychomotorische Geschwindigkeit beeinträchtigt, Müdigkeit und Anspannung erhöht und die Ausdauerleistung um 10–20 % verringert. Für die meisten Menschen ist die Verbesserung der Flüssigkeitszufuhr eine der wirksamsten und kostengünstigsten Gesundheitsmaßnahmen.",
+    "howScored": "Dieses Quiz bewertet sechs Hydrationsdimensionen: tägliche Trinkmenge, Dursthäufigkeit (ein nachlaufendes Dehydrationssignal), Urinfarbe (der zuverlässigste Echtzeit-Indikator), Gewohnheiten bei harntreibenden Getränken, Dehydrationssymptome (Kopfschmerzen, trockene Haut, Konzentrationsschwäche) und körperliches Aktivitätsniveau (das den Wasserbedarf bestimmt).\n\nWerte über 70 deuten auf gut hydrierte Gewohnheiten hin. 40–69 weist auf milde Dehydrationsmuster hin, die es wert sind, korrigiert zu werden. Unter 40 deutet auf eine signifikante Dehydrierung hin, die wahrscheinlich die tägliche Funktionsfähigkeit beeinträchtigt.",
+    "whenToSeek": "Suchen Sie einen Arzt auf, wenn:\n• Sie ausreichend Wasser trinken, aber dennoch anhaltenden Durst verspüren (möglicherweise Diabetes oder Nierenproblem)\n• Sie Schwierigkeiten haben, Flüssigkeit zu speichern (häufiges Wasserlassen trotz normaler Aufnahme)\n• Dehydrationssymptome nach 2+ Wochen erhöhter Flüssigkeitszufuhr anhalten\n• Sie Schwindel, Herzrasen oder Verwirrtheit bei geringer Wasseraufnahme verspüren",
+    "limitations": "Dieses Quiz bewertet selbstberichtete Hydrationsgewohnheiten, nicht den objektiven Hydrationsstatus. Die tatsächliche Hydration hängt von individuellen Faktoren ab, darunter Körpergewicht, Nierenfunktion, Medikamenteneinnahme, Klima und Aktivitätsniveau. Das Quiz bietet eine nützliche richtungsweisende Einschätzung, ersetzt aber keine klinische Messung (Blut-/Urinosmolalität)."
+  }
+}

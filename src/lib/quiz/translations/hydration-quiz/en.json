@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "title": "Hydration Health Quiz",
+    "description": "Most people are mildly dehydrated without knowing it. Find out if water is a missing piece of your health puzzle."
+  },
+
+  "questions": {
+    "hyd1": {
+      "text": "How many glasses of water (250ml) do you drink on a typical day?",
+      "options": [
+        "8 or more — I drink consistently",
+        "5–7 glasses",
+        "3–4 glasses",
+        "Fewer than 3 — I forget to drink"
+      ]
+    },
+    "hyd2": {
+      "text": "Do you often feel thirsty during the day?"
+    },
+    "hyd3": {
+      "text": "What color is your urine most of the time? (Be honest!)",
+      "options": [
+        "Pale yellow — almost clear",
+        "Light yellow",
+        "Dark yellow or amber",
+        "Very dark — I don't notice much"
+      ]
+    },
+    "hyd4": {
+      "text": "Do you regularly drink coffee, tea, or alcohol without balancing with water?"
+    },
+    "hyd5": {
+      "text": "Do you experience headaches, dry skin, or difficulty concentrating regularly?",
+      "options": [
+        "None of these — I feel fine",
+        "One of these occasionally",
+        "Two of these regularly",
+        "All three — pretty much daily"
+      ]
+    },
+    "hyd6": {
+      "text": "How active are you physically? (More activity = higher water needs)",
+      "scaleLabels": { "min": "Very sedentary", "max": "Very active daily" }
+    }
+  },
+
+  "buckets": [
+    {
+      "label": "Well Hydrated",
+      "description": "Your hydration habits are solid. Your body is getting the water it needs to function at its best.",
+      "actions": [
+        "Maintain your current intake — consistency is more important than hitting a specific number",
+        "Increase by 500ml on days with intense exercise or heat",
+        "Continue avoiding sugary drinks as your primary hydration source"
+      ],
+      "miaHook": "Your hydration is good — let's look at what else might be affecting your energy and performance."
+    },
+    {
+      "label": "Mildly Dehydrated",
+      "description": "You're not drinking quite enough. Mild dehydration affects your mood, focus, and metabolism more than most people realize.",
+      "actions": [
+        "Add one glass of water immediately after waking — your body loses water overnight",
+        "Set a reminder every 2 hours to drink — habit formation is the fastest path to better hydration",
+        "Replace one daily coffee or sugary drink with water or herbal tea"
+      ],
+      "miaHook": "Mild dehydration is silently affecting your energy and weight management — adding 3 glasses a day can change this fast."
+    },
+    {
+      "label": "Dehydrated",
+      "description": "Your water intake is significantly below what your body needs. This is likely affecting your concentration, skin, kidneys, and energy.",
+      "actions": [
+        "Start tomorrow with 500ml of water before any food or caffeine — make this non-negotiable",
+        "Carry a 1L water bottle and finish it twice before dinner",
+        "Check your urine color daily — pale yellow is your target and your real-time hydration gauge"
+      ],
+      "miaHook": "Dehydration explains a lot of what you might be blaming on other things — let me show you an easy way to fix this."
+    }
+  ],
+
+  "seoContent": {
+    "intro": "Mild dehydration — defined as losing just 1–2% of body water — impairs cognitive performance, physical endurance, mood, and metabolism. Most people spend significant portions of their day in this state without realizing it, because thirst is a lagging indicator: by the time you feel thirsty, you are already mildly dehydrated.\n\nThe kidneys, brain, skin, and cardiovascular system all depend on adequate hydration to function. This quiz evaluates your hydration habits across six dimensions to give you a clear picture of where you stand and what to change.",
+    "faq": [
+      {
+        "q": "How much water should I drink per day?",
+        "a": "The commonly cited 8 glasses (2L) is a reasonable baseline for sedentary adults in temperate climates. More precise guidance from the National Academies: 3.7L total fluid/day for men and 2.7L for women (including food-derived water). Increase by 0.5–1L for every hour of exercise and in hot weather."
+      },
+      {
+        "q": "Does coffee count toward daily fluid intake?",
+        "a": "Yes, to a degree. The mild diuretic effect of caffeine is offset by the fluid in the beverage in moderate amounts (up to 3–4 cups/day). However, excessive caffeine (5+ cups) does cause net fluid loss. Alcohol has a much stronger diuretic effect and should not count toward hydration goals."
+      },
+      {
+        "q": "What is the best indicator of hydration status?",
+        "a": "Urine color is the most practical real-time indicator. Pale yellow (lemonade color) indicates good hydration. Dark yellow or amber indicates dehydration. Clear urine may indicate overhydration. Morning urine tends to be darker — what matters is the color throughout the day."
+      }
+    ]
+  },
+
+  "content": {
+    "whatIs": "Water comprises approximately 60% of adult body weight and is involved in every physiological process: nutrient transport, temperature regulation, joint lubrication, waste elimination, and cellular function. Even mild dehydration (1–2% body weight loss) measurably impairs these processes.\n\nStudies consistently show that mild dehydration reduces working memory by 7%, impairs attention and psychomotor speed, increases fatigue and tension, and reduces endurance performance by 10–20%. For most people, improving hydration is one of the highest-return, lowest-cost health interventions available.",
+
+    "howScored": "This quiz evaluates six hydration dimensions: daily intake volume, thirst frequency (a lagging dehydration signal), urine color (the most reliable real-time indicator), diuretic beverage habits, dehydration symptoms (headaches, dry skin, poor concentration), and physical activity level (which determines water needs).\n\nScores above 70 indicate well-hydrated habits. 40–69 indicates mild dehydration patterns worth correcting. Below 40 indicates significant dehydration that is likely affecting daily functioning.",
+
+    "whenToSeek": "See a doctor if:\n• You are drinking adequate water but remain persistently thirsty (possible diabetes or kidney issue)\n• You have difficulty retaining fluids (frequent urination despite normal intake)\n• Dehydration symptoms persist after increasing intake for 2+ weeks\n• You experience dizziness, rapid heartbeat, or confusion alongside low water intake",
+
+    "limitations": "This quiz assesses self-reported hydration habits, not objective hydration status. Actual hydration depends on individual factors including body weight, kidney function, medication use, climate, and activity level. The quiz provides a useful directional assessment but does not replace clinical measurement (blood/urine osmolality)."
+  }
+}

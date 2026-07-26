@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Täglicher Energielevel-Test",
+    "description": "Niedrige Energie ist nicht nur Müdigkeit – sie ist ein Signal. Finden Sie heraus, was Ihnen Energie raubt und was Sie wiederherstellen könnte."
+  },
+  "questions": {
+    "en1": {
+      "text": "Wie fühlen Sie sich, wenn Sie morgens aufwachen?",
+      "options": [
+        "Bereit – ich fühle mich ausgeruht und klar",
+        "Okay – ich brauche einen Kaffee, um in Gang zu kommen",
+        "Müde – ich wünschte, ich könnte länger schlafen",
+        "Erschöpft – Morgen sind eine echte Herausforderung"
+      ]
+    },
+    "en2": {
+      "text": "Wie konstant bleibt Ihre Energie im Laufe des Tages?",
+      "scaleLabels": {
+        "min": "Starke Einbrüche",
+        "max": "Gleichmäßig den ganzen Tag"
+      }
+    },
+    "en3": {
+      "text": "Erleben Sie einen signifikanten Energieabfall am Nachmittag (etwa 14–16 Uhr)?"
+    },
+    "en4": {
+      "text": "Wie unterstützt Ihre Ernährung Ihren Tag – essen Sie für Energie oder nur aus Hunger?",
+      "options": [
+        "Bewusst – ich esse, um meine Energie zu fördern",
+        "Ziemlich gut – meistens gute Entscheidungen",
+        "Unbeständig – ich greife zu dem, was verfügbar ist",
+        "Schlecht – Zucker, Koffein und schnelle Lösungen"
+      ]
+    },
+    "en5": {
+      "text": "Wie stark schränkt niedrige Energie das ein, was Sie an einem Tag tatsächlich tun?",
+      "options": [
+        "Überhaupt nicht – ich mache alles, was ich möchte",
+        "Ein wenig – ich setze Prioritäten, verpasse aber nicht viel",
+        "Deutlich – ich lasse Dinge aus, die ich tun wollte",
+        "Erheblich – mein ganzes Leben fühlt sich eingeschränkt an"
+      ]
+    },
+    "en6": {
+      "text": "Fühlen Sie sich nach einem erholsamen Wochenende typischerweise erholt – oder immer noch müde?",
+      "options": [
+        "Erholt – Wochenenden stellen mich wieder her",
+        "Etwas besser, aber nicht vollständig erholt",
+        "Immer noch müde – Ruhe scheint nicht viel zu helfen",
+        "Manchmal schlimmer – Ruhe macht mich träger"
+      ]
+    },
+    "en7": {
+      "text": "Sind Sie auf Koffein angewiesen, um zu funktionieren – nicht aus Genuss, sondern um durch den Tag zu kommen?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Hohe Energie",
+      "description": "Ihre Energie wird durch Ihren Lebensstil gut unterstützt. Sie haben Reserven und erholen sich gut von Anstrengung.",
+      "actions": [
+        "Behalten Sie Ihre aktuellen Schlaf- und Ernährungsgewohnheiten bei – dies sind Ihre größten Energiehebel",
+        "Fügen Sie einmal pro Woche eine hochintensive Trainingseinheit hinzu – sie erhöht tatsächlich die Grundenergie",
+        "Schützen Sie Ihren Schlafrhythmus auch an Wochenenden – Beständigkeit ist der Schlüssel zu stabiler Energie"
+      ],
+      "miaHook": "Ihre Energiebasis ist stark – lassen Sie uns darüber sprechen, sie für Höchstleistungen noch weiter zu optimieren."
+    },
+    {
+      "label": "Energielecks",
+      "description": "Sie haben Energie, aber sie ist unbeständig. Bestimmte Muster verursachen Einbrüche, die Ihre Stimmung, Produktivität und Motivation beeinträchtigen.",
+      "actions": [
+        "Überprüfen Sie Ihre Mahlzeiten auf Blutzuckerspitzen – Lebensmittel mit hohem glykämischen Index verursachen die Einbrüche, die Sie erleben",
+        "Verschieben Sie Ihr erstes Koffein auf 90 Minuten nach dem Aufwachen – allein das verbessert die anhaltende Energie dramatisch",
+        "Fügen Sie nach dem Mittagessen 15 Minuten Gehen hinzu – das reduziert den nachmittäglichen Energieabfall um 30–40 %"
+      ],
+      "miaHook": "Ihre Energie wird durch einige spezifische Muster entzogen, die ich erkennen kann – die Behebung dieser hat oft kaskadenartige Vorteile für alles andere."
+    },
+    {
+      "label": "Chronisch niedrige Energie",
+      "description": "Ihre Energie ist deutlich verringert und beeinträchtigt Ihre Lebensqualität. Dies ist in der Regel multifaktoriell bedingt – Schlaf, Ernährung, Stress und Bewegung spielen alle eine Rolle.",
+      "actions": [
+        "Suchen Sie einen Arzt auf, um medizinische Ursachen auszuschließen – Schilddrüsenfunktionsstörungen, Anämie, Schlafapnoe und Vitaminmangel äußern sich alle als Energiemangel.",
+        "Priorisieren Sie in den nächsten 30 Tagen den Schlaf über alles andere – 7,5–9 Stunden sind nicht verhandelbar.",
+        "Entfernen Sie sofort die größten Energiequellen aus Ihrer Ernährung: stark verarbeitete Lebensmittel, übermäßigen Alkohol oder übermäßiges Koffein."
+      ],
+      "miaHook": "Was Sie erleben, ist keine Faulheit – es ist ein System, das nicht richtig unterstützt wird. Lassen Sie mir helfen, Sie von Grund auf wieder aufzubauen."
+    }
+  ],
+  "seoContent": {
+    "intro": "Energiemangel ist weltweit eine der häufigsten gesundheitlichen Beschwerden – und dennoch auch eine der am besten behandelbaren. Die Forschung zeigt durchgängig, dass chronische Müdigkeit und Energiemangel selten durch einen einzelnen Faktor verursacht werden. Stattdessen resultieren sie aus der kumulativen Wirkung von Schlafqualität, Ernährungsmustern, körperlicher Aktivität, Stressbelastung und zugrunde liegenden medizinischen Erkrankungen.\n\nDieser Quiz bewertet Ihre Energiemuster in sieben Dimensionen und hilft Ihnen zu erkennen, ob Ihr Energiemangel strukturell (durch Gewohnheitsänderungen behebbar) ist oder eine medizinische Abklärung erfordert.",
+    "faq": [
+      {
+        "q": "Was verursacht Energiemangel bei gesunden Menschen?",
+        "a": "Bei ansonsten gesunden Menschen sind die häufigsten Ursachen für Energiemangel: unzureichender oder schlechter Schlaf, Nährstoffmangel (Eisen, B12, Vitamin D), Dehydrierung, übermäßige Koffeinabhängigkeit, hohe Stressbelastung, Bewegungsmangel (der paradoxerweise die Energie reduziert) und unregelmäßige Mahlzeiten, die zu Blutzuckerinstabilität führen."
+      },
+      {
+        "q": "Wann sollte Energiemangel medizinisch abgeklärt werden?",
+        "a": "Suchen Sie einen Arzt auf, wenn: Energiemangel länger als 4 Wochen anhält, Sie 7–9 Stunden schlafen, aber immer noch erschöpft sind, Sie unerklärliche Gewichtsveränderungen haben oder Energieprobleme von anderen Symptomen (Haarausfall, Kälteempfindlichkeit, schneller Herzschlag) begleitet werden. Häufige medizinische Ursachen sind Schilddrüsenerkrankungen, Anämie, Schlafapnoe und Diabetes."
+      },
+      {
+        "q": "Steigert Bewegung die Energie oder raubt sie?",
+        "a": "Regelmäßige moderate Bewegung steigert die Grundenergie. Dies ist kontraintuitiv, aber gut belegt: Aerobic-Übungen erhöhen die Mitochondriendichte, verbessern die Schlafqualität und regulieren Cortisol – all dies steigert die anhaltende Energie. Der Schlüssel liegt in der Regelmäßigkeit: 3–5 Einheiten pro Woche mit moderater Intensität."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Energie ist ein komplexer physiologischer Zustand, der durch das Zusammenspiel von Schlaf, Ernährung, Bewegung, Stresshormonen, dem zirkadianen Rhythmus und der mitochondrialen Funktion gesteuert wird. Chronischer Energiemangel – im Gegensatz zu gelegentlicher Müdigkeit – zeigt an, dass eines oder mehrere dieser Systeme nicht optimal funktionieren.\n\nDie häufigsten Übeltäter sind Schlafdefizit (über Wochen angesammelt), Blutzucker-Dysregulation durch schlechte Ernährung, körperliche Dekonditionierung, chronischer Stress (der Cortisol erhöht und erholsame Hormone unterdrückt) und Koffeinabhängigkeit (die Müdigkeit überdeckt, ohne sie zu beheben).",
+    "howScored": "Dieser Quiz bewertet sieben Energiedimensionen: morgendliche Erholung (Indikator für Schlafqualität), Konstanz im Tagesverlauf, Nachmittagstiefs, Qualität der Nährstoffversorgung, energiebedingte Aktivitätseinschränkung, Erholung durch Ruhe und Koffeinabhängigkeit.\n\nWerte über 70 deuten auf gut unterstützte Energie mit soliden Lebensstilgrundlagen hin. 40–69 weist auf identifizierbare Energieverluste hin, die es zu adressieren gilt. Unter 40 zeigt chronisch erschöpfte Energie an, die wahrscheinlich sowohl Lebensstiländerungen als auch eine medizinische Abklärung erfordert.",
+    "whenToSeek": "Suchen Sie einen Arzt auf, wenn:\n• Energiemangel trotz ausreichendem Schlaf länger als 4 Wochen anhält\n• Sie 8+ Stunden schlafen, aber erschöpft aufwachen\n• Energieprobleme von unerklärlichen Gewichtsveränderungen, Haarausdünnung, Kälteempfindlichkeit oder Herzklopfen begleitet werden\n• Sie eine Vorgeschichte von Depressionen oder Angstzuständen haben (beide verursachen erheblichen Energieverlust)\n• Sie eine Schlafstörung vermuten (Schnarchen, Atemaussetzer, häufiges Aufwachen)\n\nHäufige medizinische Ursachen: Schilddrüsenunterfunktion, Eisenmangelanämie, Vitamin-B12- oder D-Mangel, obstruktive Schlafapnoe, Typ-2-Diabetes.",
+    "limitations": "Dieser Quiz dient dem Screening auf lebensstilbedingte Energiemuster. Er kann keine medizinischen Erkrankungen diagnostizieren, die Müdigkeit verursachen. Die Ergebnisse spiegeln selbstberichtete Wahrnehmungen wider und erfassen möglicherweise keine objektiven physiologischen Messwerte. Individuelle Energie-Baselines variieren erheblich – was für eine Person normal erscheint, kann bei einer anderen auf Erschöpfung hindeuten."
+  }
+}

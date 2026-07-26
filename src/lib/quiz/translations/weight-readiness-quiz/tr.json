@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Kilo Vermeye Hazır Olma Testi",
+    "description": "Gerçekten kilo vermeye hazır mısınız — yoksa sadece umut mu ediyorsunuz? Başlamadan önce önünüzdeki gerçek engelleri keşfedin."
+  },
+  "questions": {
+    "wr1": {
+      "text": "Şu anda neden kilo vermek istiyorsunuz? Sizi gerçekten ne motive ediyor?",
+      "options": [
+        "Sağlığım — uzun vadede daha iyi hissetmek istiyorum",
+        "Enerji ve özgüven — günlük yaşam kalitesi",
+        "Yaklaşan bir etkinlik — bir son tarihim var",
+        "Dış baskı — başkaları bunu istiyor"
+      ]
+    },
+    "wr2": {
+      "text": "Daha önce kilo vermeyi denediniz ve bıraktınız mı? Ne oldu?",
+      "options": [
+        "Önceki başarımı iyi korudum",
+        "Kilo verip geri aldım — şimdi nedenini anlıyorum",
+        "Çok kısıtlayıcı olduğu için bıraktım",
+        "Hızlıca sonuç göremediğim için bıraktım"
+      ]
+    },
+    "wr3": {
+      "text": "Nasıl farklı besleneceğinize dair spesifik ve gerçekçi bir planınız var mı?"
+    },
+    "wr4": {
+      "text": "Tutarlı değişiklikler yapmaya — geçici bir diyet değil, yaşam tarzı değişikliklerine — ne kadar hazır hissediyorsunuz?",
+      "scaleLabels": {
+        "min": "Hiç hazır değilim",
+        "max": "Tamamen hazırım"
+      }
+    },
+    "wr5": {
+      "text": "Stres veya duygular yeme alışkanlıklarınızı ne kadar etkiliyor?",
+      "options": [
+        "Çok az — açlığıma göre yemek yerim",
+        "Bazen — stresli günler seçimlerimi etkiler",
+        "Sık sık — yemek benim için bir rahatlık kaynağıdır",
+        "Her zaman — duygusal yeme benim alışkanlığım"
+      ]
+    },
+    "wr6": {
+      "text": "Desteğiniz var mı — hedeflerinizi sabote etmek yerine sizi teşvik edecek insanlar?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Başlamaya Hazır",
+      "description": "Gerçek ve sürdürülebilir bir ilerleme kaydetmek için gereken zihniyete, motivasyona ve farkındalığa sahipsiniz. Şimdi önemli olan doğru strateji.",
+      "actions": [
+        "Bu hafta başlayın — hazır olma pencereniz gerçektir ve kullanılmalıdır",
+        "Ölçülebilir, belirli bir 8 haftalık hedef belirleyin (ömür boyu bir rakam değil) — 8 haftada 4–6 kg kaybı gerçekçi ve motive edicidir",
+        "Destek ağınıza planınızı anlatın — hesap verebilirlik başarı oranlarını %65 artırır"
+      ],
+      "miaHook": "Gerçekten hazırsınız — sadece umut etmiyorsunuz. Profilinize dayalı kişiselleştirilmiş bir başlangıç planı vermeme izin verin."
+    },
+    {
+      "label": "Neredeyse Hazır",
+      "description": "Motivasyonunuz yüksek ancak birkaç önemli unsur henüz yerine oturmamış. Bunları şimdi ele almak, kalıcı bir değişimle yeni bir yanlış başlangıç arasındaki farkı yaratacaktır.",
+      "actions": [
+        "Önceki girişimlerin durmasının belirli nedenini belirleyin — tekrar başlamadan önce bu temel nedeni ele alın",
+        "Önce destek sisteminizi oluşturun — yolculuğunuzda sizi aktif olarak teşvik edecek 1–2 kişi belirleyin",
+        "Başlamadan önce uykunuzu 2 hafta boyunca 7+ saate çıkarın — uyku, diyete uyumun 1 numaralı belirleyicisidir"
+      ],
+      "miaHook": "Hazır olma tablonuzda neyin eksik olduğunu görebiliyorum — başlamadan önce bu boşlukları kapatalım ki bu sefer kalıcı olsun."
+    },
+    {
+      "label": "Henüz Tam Olarak Değil",
+      "description": "Hemen başlamak hayal kırıklığına ve bir başka dur-kalk döngüsüne yol açabilir. Önce doğru temeli oluşturalım.",
+      "actions": [
+        "Nedeninizi anlamaya odaklanın — sağlık odaklı motivasyon, olay odaklı veya dış baskı motivasyonundan 3 kat daha yüksek başarı oranına sahiptir",
+        "Diyete başlamadan önce duygusal yeme alışkanlığını ele alın — bu olmadan hiçbir beslenme planı uzun vadede kalıcı olmaz",
+        "Doğru temeli oluşturmak için bir koç, terapist veya diyetisyenle çalışın — mevcut hazır olma tablosuyla bunu tek başına yapmaya çalışmak, başka bir yeniden başlatmanın reçetesidir"
+      ],
+      "miaHook": "Cevaplarınızda gördüklerimi ele almadan başlamak, pes etmeye yol açan şeydir. Bunu doğru yapalım — ve sadece bir kez."
+    }
+  ],
+  "seoContent": {
+    "intro": "Davranış değişikliği üzerine yapılan araştırmalar, motivasyon ve niyetin tek başına kilo verme başarısını öngörmede yetersiz kaldığını tutarlı bir şekilde göstermektedir. Kalıcı kilo kaybı sağlayan kişileri, tekrarlayan denemeler arasında gidip gelenlerden ayıran şey psikolojik hazırlıktır: motivasyonun netliği, gerçekçi beklentiler, somut bir plan ve yeterli destek.\n\nBu test, Transteoretik Model araştırmaları (Prochaska & DiClemente) ve davranışsal psikolojiden alınan kilo verme hazırlığının altı boyutunu değerlendirir. Başlamadan önce sahip olabileceğiniz en değerli içgörü, olmak istediğiniz yerde değil, gerçekten nerede olduğunuzu anlamaktır.",
+    "faq": [
+      {
+        "q": "Kilo verme başarısının en güçlü öngörücüsü nedir?",
+        "a": "Araştırmalar, içsel motivasyonu (sağlık odaklı ve görünüm odaklı olmayan), öz yeterliliği (kişinin değişiklik yapma yeteneğine olan güveni), sosyal desteği ve gerçekçi beklentileri, sürdürülebilir kilo kaybının en güçlü öngörücüleri olarak tutarlı bir şekilde tanımlamaktadır. Sağlık nedenleriyle kilo veren kişiler, bunu olaylar veya dış baskılar nedeniyle motive olanlara göre önemli ölçüde daha uzun süre korumaktadır."
+      },
+      {
+        "q": "Çoğu diyet neden başarısız olur?",
+        "a": "Başlıca nedenler şunlardır: çok büyük bir kalori açığı ile başlamak (sürdürülemez açlık), irade gücüne güvenmek yerine çevresel düzenlemeye güvenmemek, duygusal yemeyi ele almamak, sosyal destek eksikliği, ya hep ya hiç düşüncesi (kötü bir gün bırakmaya yol açar) ve gerçekçi olmayan zaman çizelgeleri belirlemek. Bunlar doğru hazırlıkla düzeltilebilir."
+      },
+      {
+        "q": "Kilo verme ve geri alma döngüsünü nasıl kırabilirim?",
+        "a": "'Kilo döngüsü' üzerine yapılan araştırmalar, bu döngüyü kırmanın temel faktörlerinin şunlar olduğunu göstermektedir: kısa vadeli diyet zihniyetinden kalıcı yaşam tarzı değişikliğine geçmek, duygusal yemeyi irade gücüyle değil davranışsal araçlarla ele almak, en başından plana bir koruma aşaması dahil etmek ve 5 yıl boyunca yapabileceğinizi hayal edebileceğiniz kadar sürdürülebilir bir yaklaşım seçmek."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Kilo verme hazırlığı, Transteoretik Davranış Değişikliği Modeli'nden (Prochaska & DiClemente, 1983) geliştirilmiş psikolojik bir kavramdır. Bir kişinin önemli yaşam tarzı değişiklikleri yapmak ve sürdürmek için bilişsel, motivasyonel ve davranışsal olarak ne kadar hazır olduğunu tanımlar.\n\nHazırlık sabit bir durum değildir; yaşam koşullarına, stres seviyelerine ve sosyal çevreye göre dalgalanır. Düşük hazırlık dönemlerinde kilo vermeye çalışmak, nüksetme olasılığını önemli ölçüde artırır ve sinir bozucu tekrarlayan denemeler döngüsüne katkıda bulunur.",
+    "howScored": "Bu test altı hazırlık boyutunu değerlendirir: motivasyon kalitesi (içsel ve dışsal), önceki denemelerden elde edilen içgörü, somut planlama, öznel hazırlık güveni, duygusal yeme kalıpları ve sosyal destek mevcudiyeti.\n\n70'in üzerindeki puanlar yüksek hazırlığı gösterir — hemen başlayın. 40–69 kısmi hazırlığı gösterir — önce belirli eksiklikler giderilmelidir. 40'ın altı, başarı için temel koşulların henüz oluşmadığı anlamına gelir — hazırlık sonuçları önemli ölçüde iyileştirecektir.",
+    "whenToSeek": "Aşağıdaki durumlarda profesyonel destek almayı düşünün:\n• Kalıcı bir değişiklikle sonuçlanmayan 3 veya daha fazla önemli kilo verme denemeniz olduysa\n• Duygusal veya stres yemesi, kontrolden çıkmış gibi hissedilen önemli bir kalıpsa\n• BMI'niz 35'in üzerindeyse — bu seviyede tıbbi gözetim sonuçları önemli ölçüde iyileştirir\n• Tıkınırcasına yeme, kısıtlama döngüleri veya diğer düzensiz yeme kalıpları mevcutsa\n• Kilo endişeleri ruh sağlığını veya yaşam kalitesini önemli ölçüde etkiliyorsa",
+    "limitations": "Bu test, kilo kaybı için tıbbi uygunluğu değil, psikolojik hazırlığı değerlendirir. Burada yakalanmayan bireysel sağlık koşulları, ilaçlar ve metabolik faktörler, kilo verme yeteneğini ve yaklaşımını önemli ölçüde etkileyebilir. Özellikle altta yatan sağlık sorunları varsa, önemli bir kilo verme programına başlamadan önce her zaman bir sağlık uzmanına danışın."
+  }
+}

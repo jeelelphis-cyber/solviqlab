@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Cuestionario de Calidad del Sueño (Escala de Somnolencia de Epworth)",
+    "description": "La Escala de Somnolencia de Epworth es el estándar clínico global para medir la somnolencia diurna excesiva. Utilizada por especialistas del sueño en todo el mundo para detectar trastornos del sueño.",
+    "medicalNote": "Una puntuación alta puede indicar un trastorno del sueño como apnea del sueño o narcolepsia. Consulte a un profesional de la salud si tiene inquietudes."
+  },
+  "likertOptions": [
+    "Nunca me dormiría",
+    "Ligera posibilidad de dormitar",
+    "Moderada posibilidad de dormitar",
+    "Alta posibilidad de dormitar"
+  ],
+  "questions": {
+    "ess1": {
+      "text": "Sentado y leyendo",
+      "hint": "Quedarse dormido mientras se lee es uno de los primeros signos de privación crónica del sueño."
+    },
+    "ess2": {
+      "text": "Viendo televisión",
+      "hint": "Incluso actividades pasivas como ver televisión no deberían causar somnolencia si se duerme lo suficiente y con calidad."
+    },
+    "ess3": {
+      "text": "Sentado inactivo en un lugar público (por ejemplo, un teatro o una reunión)",
+      "hint": "Tener dificultades para mantenerse despierto en entornos públicos tranquilos es un marcador diagnóstico clave de somnolencia excesiva."
+    },
+    "ess4": {
+      "text": "Como pasajero en un automóvil durante una hora sin descanso",
+      "hint": "El movimiento constante de un viaje en automóvil es un desencadenante estándar de somnolencia. Puntuaciones altas aquí indican una deuda de sueño grave."
+    },
+    "ess5": {
+      "text": "Acostado para descansar por la tarde cuando las circunstancias lo permitan",
+      "hint": "La capacidad de quedarse dormido rápidamente durante el descanso vespertino refleja su verdadero nivel de presión de sueño."
+    },
+    "ess6": {
+      "text": "Sentado y conversando con alguien",
+      "hint": "Quedarse dormido durante una conversación es un signo clínicamente significativo de somnolencia diurna excesiva."
+    },
+    "ess7": {
+      "text": "Sentado tranquilamente después de un almuerzo sin alcohol",
+      "hint": "Las somnolencias post-almuerzo son normales, pero una alta probabilidad de quedarse dormido aquí sin consumo de alcohol indica un trastorno del sueño."
+    },
+    "ess8": {
+      "text": "En un automóvil, mientras está detenido unos minutos en el tráfico",
+      "hint": "La somnolencia al conducir o al estar detenido en el tráfico es un riesgo directo para la seguridad y un indicador clínico clave."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Sueño Normal",
+      "description": "Su somnolencia diurna está dentro del rango normal. Su sueño parece estar restaurándolo adecuadamente.",
+      "actions": [
+        "Mantenga su horario de sueño actual: la consistencia es el protector más poderoso del sueño",
+        "Mantenga su dormitorio por debajo de 18°C (65°F): la temperatura óptima para el sueño profundo",
+        "Limite la cafeína después de las 2 p. m. para proteger la arquitectura del sueño"
+      ],
+      "miaHook": "Su base de sueño es sólida. Quiero mostrarle cómo hacerla aún más reparadora; todavía hay un nivel por encima de donde se encuentra ahora."
+    },
+    {
+      "label": "Somnolencia Excesiva Leve",
+      "description": "Somnolencia diurna ligeramente elevada. Puede indicar privación leve de sueño o problemas de sueño en etapa temprana.",
+      "actions": [
+        "Agregue 30 minutos a su ventana de sueño durante las próximas 2 semanas y registre sus niveles de energía",
+        "Revise su dormitorio en busca de luz y ruido; ambos fragmentan el sueño sin despertarlo por completo",
+        "Evite las pantallas durante 45 minutos antes de acostarse esta semana"
+      ],
+      "miaHook": "Su puntuación está en el límite, lo que significa que pequeños cambios marcan una gran diferencia ahora mismo. Puedo mostrarle exactamente dónde se está filtrando su sueño."
+    },
+    {
+      "label": "Somnolencia Excesiva Moderada",
+      "description": "Somnolencia diurna excesiva moderada. Este nivel está relacionado con deterioro al conducir, reducción de la productividad y problemas metabólicos.",
+      "actions": [
+        "Consulte a un médico sobre un posible trastorno del sueño; con esta puntuación, es apropiada una evaluación de apnea del sueño",
+        "Deje de consumir alcohol 3 horas antes de acostarse; fragmenta la arquitectura del sueño incluso si le ayuda a conciliar el sueño",
+        "Establezca una hora de acostarse innegociable durante los próximos 30 días y protéjala"
+      ],
+      "miaHook": "En este nivel, tu sueño lo está afectando todo: tu peso, tu estado de ánimo, tu concentración. Tengo un protocolo dirigido específicamente a esto."
+    },
+    {
+      "label": "Somnolencia Excesiva Severa",
+      "description": "Somnolencia diurna severa. Esto aumenta significativamente el riesgo de accidentes y se asocia con trastornos del sueño graves. Se recomienda encarecidamente una evaluación médica.",
+      "actions": [
+        "Programa un estudio del sueño (polisomnografía) con tu médico — esta puntuación justifica una investigación",
+        "No conduzcas si te sientes somnoliento — tus reflejos están alterados en este nivel de somnolencia",
+        "Evita operar maquinaria pesada hasta ser evaluado por un especialista"
+      ],
+      "miaHook": "Quiero ser directo: una puntuación tan alta necesita atención médica, no solo una rutina de sueño. Déjame ayudarte a determinar el primer paso correcto."
+    }
+  ],
+  "seoContent": {
+    "intro": "La Escala de Somnolencia de Epworth (ESS) fue desarrollada por el Dr. Murray Johns en el Hospital Epworth de Melbourne, Australia, en 1991. Desde entonces, se ha convertido en el estándar clínico mundial para medir la somnolencia diurna excesiva (SDE), utilizada en laboratorios del sueño, hospitales e instituciones de investigación en todo el mundo.\n\nA diferencia de los diarios de sueño o las evaluaciones subjetivas de sentirse cansado, la ESS mide tu probabilidad de quedarte dormido en 8 situaciones específicas, proporcionando una imagen objetiva de cuán privado de sueño estás realmente. Las puntuaciones van de 0 a 24. Una puntuación superior a 10 indica somnolencia excesiva que justifica una evaluación clínica.\n\nLos trastornos del sueño afectan a 50–70 millones de personas solo en EE. UU. (CDC, 2023). La somnolencia diurna excesiva no tratada aumenta el riesgo de accidentes de tráfico en 2.5×, contribuye al aumento de peso, la depresión, las enfermedades cardiovasculares y reduce significativamente la calidad de vida.",
+    "faq": [
+      {
+        "q": "¿Qué es la Escala de Somnolencia de Epworth?",
+        "a": "La ESS es un cuestionario validado de 8 ítems que mide la somnolencia diurna preguntando qué probabilidad hay de que te quedes dormido en situaciones comunes. Es el estándar mundial utilizado por especialistas del sueño y fue publicado en la revista Sleep en 1991."
+      },
+      {
+        "q": "¿Cuál es una puntuación normal en la Epworth?",
+        "a": "Una puntuación de 0–7 se considera normal. Las puntuaciones de 8–9 sugieren somnolencia excesiva leve; 10–15 moderada; y 16–24 severa. La mayoría de los adultos sanos obtienen puntuaciones entre 4 y 8."
+      },
+      {
+        "q": "¿Qué causa la somnolencia diurna excesiva?",
+        "a": "Las causas más comunes incluyen duración insuficiente del sueño, apnea obstructiva del sueño, narcolepsia, síndrome de piernas inquietas, mala calidad del sueño, medicamentos y depresión."
+      },
+      {
+        "q": "¿Debo ver a un médico si obtuve una puntuación superior a 10?",
+        "a": "Sí. Una puntuación de 10 o superior justifica una evaluación clínica. Tu médico puede solicitar una polisomnografía (estudio del sueño) para descartar apnea del sueño u otros trastornos."
+      },
+      {
+        "q": "¿Puede la mala calidad del sueño causar aumento de peso?",
+        "a": "Sí. La privación del sueño desregula la grelina y la leptina — las hormonas del hambre — aumentando el apetito y los antojos de alimentos ricos en calorías. Los estudios muestran que dormir menos de 6 horas por noche aumenta el riesgo de obesidad en un 23%."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "La somnolencia diurna excesiva (SDE) es una condición en la que una persona se siente somnolienta durante el día y lucha por mantenerse despierta en situaciones donde se espera alerta. Afecta aproximadamente al 20% de la población mundial y es distinta del cansancio normal — es un nivel de somnolencia persistente y patológico que afecta el funcionamiento.\n\nLa SDE es un síntoma principal de varios trastornos del sueño, incluyendo la apnea obstructiva del sueño (la causa más común), la narcolepsia, la hipersomnia idiopática y los trastornos del ritmo circadiano. También puede resultar de la falta crónica de sueño — la causa más prevenible que afecta a millones de personas.\n\nLa Escala de Somnolencia de Epworth fue diseñada para medir la SDE de manera objetiva evaluando la probabilidad de quedarse dormido en 8 situaciones estandarizadas. A diferencia de preguntar '¿te sientes cansado?', la ESS captura evidencia conductual de somnolencia que se correlaciona fuertemente con medidas fisiológicas como la Prueba de Latencia Múltiple del Sueño (MSLT).",
+    "clinicalBackground": "La Escala de Somnolencia de Epworth fue desarrollada por el Dr. Murray Johns y publicada en la revista Sleep en 1991. El Dr. Johns era médico en el Hospital Epworth de Melbourne, quien notó que las evaluaciones subjetivas de la somnolencia no eran fiables. Diseñó la ESS para medir la probabilidad de quedarse dormido en situaciones que varían sistemáticamente en sus propiedades inductoras del sueño.\n\nEl estudio de validación original mostró una fuerte correlación con medidas objetivas de somnolencia (MSLT, r = 0.51) y una alta fiabilidad test-retest (r = 0.82). La ESS ha sido validada desde entonces en docenas de idiomas y poblaciones de pacientes.\n\nAhora es la herramienta clínica más utilizada para la detección de trastornos del sueño a nivel mundial, respaldada por la Academia Americana de Medicina del Sueño (AASM), la Sociedad Británica del Sueño e incorporada en las guías clínicas para la apnea del sueño, la narcolepsia y la hipersomnia en todo el mundo.",
+    "howScored": "La Escala de Somnolencia de Epworth pregunta qué tan probable es que te quedes dormido en 8 situaciones específicas en una escala de 0 a 3:\n• 0: Nunca me quedaría dormido\n• 1: Baja probabilidad de quedarme dormido\n• 2: Probabilidad moderada de quedarme dormido\n• 3: Alta probabilidad de quedarme dormido\n\nLas puntuaciones totales van de 0 a 24. Umbrales clínicos:\n• 0–7: Rango normal (el promedio es 5–6 en adultos sanos)\n• 8–9: Somnolencia excesiva leve/límite\n• 10–15: Somnolencia diurna excesiva moderada — se recomienda evaluación clínica\n• 16–24: Somnolencia diurna excesiva grave — se recomienda evaluación urgente\n\nUna puntuación de 10 o más tiene una sensibilidad del 78% y una especificidad del 79% para identificar trastornos del sueño clínicamente significativos en poblaciones generales.",
+    "interpretation": "**Puntuación 0–7 (Normal):** Tu sueño te está restaurando adecuadamente. El adulto sano promedio obtiene 5–6. Concéntrate en mantener tu horario de sueño y proteger la calidad del mismo.\n\n**Puntuación 8–9 (Leve/Límite):** Ligeramente por encima de lo normal. Esto puede reflejar una deuda de sueño acumulada, horarios de sueño irregulares o problemas de sueño en etapa temprana. Los cambios de comportamiento — horarios de sueño consistentes, mejoras en la higiene del sueño — suelen ser suficientes en este nivel.\n\n**Puntuación 10–15 (Moderada):** Este rango es clínicamente significativo. Las investigaciones muestran que en este nivel, el rendimiento al conducir se ve afectado de manera equivalente a un nivel de alcohol en sangre del 0.05%. La función cognitiva, el estado de ánimo, el metabolismo y la función inmunológica se ven afectados de forma medible. Es apropiada una evaluación médica, particularmente para detectar apnea del sueño.\n\n**Puntuación 16–24 (Grave):** Este nivel de somnolencia representa un problema grave de seguridad y salud. El riesgo de accidentes automovilísticos es 2.5 veces mayor que el promedio. Se recomienda encarecidamente una evaluación médica inmediata que incluya un estudio del sueño.",
+    "whenToSeek": "Consulta a un profesional de la salud si:\n\n• Tu puntuación en la ESS es de 10 o más\n• Te han dicho que roncas fuerte o dejas de respirar mientras duermes\n• Te sientes sin descanso después de una noche completa de sueño\n• Te quedas dormido involuntariamente durante el día\n• Tu somnolencia está afectando tu trabajo, conducción o relaciones\n• Tu pareja de cama ha observado movimientos inusuales en las piernas o jadeos\n\nBusca atención urgente si:\n• Has tenido un accidente por poco debido a la somnolencia mientras conducías\n• Experimentas debilidad muscular repentina desencadenada por emociones (cataplejía — un signo de narcolepsia)\n• No puedes mantenerte despierto en el trabajo a pesar de tener una oportunidad adecuada de sueño",
+    "limitations": "**1. Recuerdo subjetivo:** La ESS mide la probabilidad percibida de quedarse dormido, lo que puede verse influenciado por la autoconciencia y el sesgo de recuerdo. Las personas con trastornos del sueño graves a veces subestiman su somnolencia porque la fatiga crónica se ha convertido en su línea de base.\n\n**2. Variación situacional:** No todas las personas se encuentran con las 8 situaciones con regularidad. Por ejemplo, quienes nunca conducen pueden tener dificultades para responder con precisión al ítem 8.\n\n**3. No identifica la causa:** Una puntuación alta en la ESS indica somnolencia excesiva, pero no diagnostica su causa. La apnea del sueño, la narcolepsia, los efectos de los medicamentos y la simple privación del sueño producen puntuaciones similares.\n\n**4. No validado para niños menores de 12 años:** La ESS fue desarrollada y validada en poblaciones adultas. La somnolencia pediátrica se evalúa con diferentes herramientas.\n\n**5. Medición puntual:** La ESS refleja tu experiencia de sueño reciente. Los viajes, las enfermedades, el trabajo por turnos y los eventos de la vida pueden elevar temporalmente las puntuaciones sin indicar un trastorno crónico."
+  }
+}

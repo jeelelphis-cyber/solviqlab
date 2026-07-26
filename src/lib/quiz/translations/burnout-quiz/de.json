@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Burnout-Risiko-Quiz",
+    "description": "Burnout passiert nicht über Nacht. Überprüfen Sie, wo Sie auf dem Spektrum stehen, bevor es schwieriger wird, zurückzukommen."
+  },
+  "questions": {
+    "bu1": {
+      "text": "Fühlen Sie sich emotional ausgelaugt durch Ihre Arbeit oder täglichen Verpflichtungen – noch bevor der Tag beginnt?",
+      "options": [
+        "Nein – ich bin im Allgemeinen engagiert",
+        "Manchmal – in harten Wochen",
+        "Oft – die meisten Wochen fühlen sich schwer an",
+        "Fast immer – ich funktioniere nur noch auf Reserve"
+      ]
+    },
+    "bu2": {
+      "text": "Haben Sie die Motivation oder Begeisterung für Dinge verloren, die Ihnen früher Freude bereitet haben?"
+    },
+    "bu3": {
+      "text": "Wie effektiv fühlen Sie sich in letzter Zeit bei der Arbeit oder in Ihren Hauptverantwortlichkeiten?",
+      "options": [
+        "Sehr effektiv – ich leiste meine beste Arbeit",
+        "In Ordnung – ich erledige meine Aufgaben",
+        "Unter meinem üblichen Standard – ich bemerke den Abfall",
+        "Ich mache nur noch Dienst nach Vorschrift"
+      ]
+    },
+    "bu4": {
+      "text": "Stellen Sie fest, dass Sie zynischer oder distanzierter gegenüber Menschen in Ihrer Umgebung werden?"
+    },
+    "bu5": {
+      "text": "Wie oft gönnen Sie sich tagsüber echte Pausen – nicht nur Scrollen, sondern tatsächliche Erholung?",
+      "scaleLabels": {
+        "min": "Nie",
+        "max": "Mehrmals täglich"
+      }
+    },
+    "bu6": {
+      "text": "Wenn Sie sich Ihre kommende Woche vorstellen, was ist Ihr erstes Gefühl?",
+      "options": [
+        "Voller Energie – ich habe Dinge, auf die ich mich freue",
+        "Neutral – nur eine weitere Woche",
+        "Dread — es fühlt sich an wie zu viel",
+        "Dread — ich sehe kein Licht darin"
+      ]
+    },
+    "bu7": {
+      "text": "Haben Sie das Gefühl, dass es nie genug ist, egal wie viel Sie tun?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Niedriges Burnout-Risiko",
+      "description": "Sie halten sich gut. Ihre Energiereserven sind intakt und Sie haben gesunde Puffer eingerichtet.",
+      "actions": [
+        "Behalten Sie Ihre Erholungsgewohnheiten bei — was Sie jetzt schützt, ist es wert, benannt und beibehalten zu werden",
+        "Bauen Sie jede Woche eine proaktive Erholungspraxis ein (nicht nur reaktive Ruhe)",
+        "Überprüfen Sie sich monatlich — Burnout entwickelt sich langsam, und frühes Bewusstsein ist alles"
+      ],
+      "miaHook": "Sie sind in guter Verfassung — jetzt sprechen wir darüber, wie Sie das bleiben, wenn der Druck steigt."
+    },
+    {
+      "label": "Frühe Warnsignale",
+      "description": "Sie zeigen einige der frühen Anzeichen von Burnout. Dies ist der ideale Zeitpunkt zu handeln — bevor die Erholung schwieriger wird.",
+      "actions": [
+        "Nehmen Sie diese Woche eine Sache von Ihrer To-Do-Liste — Burnout reagiert in diesem Stadium auf Reduktion, nicht auf Optimierung",
+        "Fügen Sie eine echte Erholungsaktivität hinzu, die nichts mit Produktivität zu tun hat",
+        "Erzählen Sie jemandem, dem Sie vertrauen, dass Sie den Druck spüren — soziale Unterstützung verzögert das Fortschreiten von Burnout"
+      ],
+      "miaHook": "Ich sehe frühe Burnout-Muster in Ihren Antworten — die gute Nachricht ist, dass dieses Stadium mit den richtigen Veränderungen sehr gut erholbar ist."
+    },
+    {
+      "label": "Burnout-Zone",
+      "description": "Ihre Antworten deuten auf ein erhebliches Burnout hin. Dies betrifft Ihre Gesundheit, Beziehungen und Produktivität — es ist keine Schwäche, sondern ein echter physiologischer Zustand.",
+      "actions": [
+        "Sprechen Sie mit einem Arzt oder Therapeuten — Burnout auf diesem Niveau hat messbare physiologische Auswirkungen und profitiert von professioneller Unterstützung",
+        "Nehmen Sie sich diese Woche mindestens einen ganzen Tag komplett frei von allen arbeitsbezogenen Aktivitäten — kein „sanfter“ Tag, sondern eine vollständige Pause",
+        "Identifizieren Sie die größte einzelne Energiequelle und beginnen Sie den Prozess, sie zu reduzieren oder zu entfernen — auch wenn es unmöglich erscheint"
+      ],
+      "miaHook": "Was Sie erleben, ist real und ernst zu nehmen – ich möchte Ihnen helfen, einen Erholungsweg zu finden, der nicht erfordert, dass Sie alles aufgeben."
+    }
+  ],
+  "seoContent": {
+    "intro": "Burnout ist ein Zustand chronischer Arbeitsbelastung, der durch drei Dimensionen gekennzeichnet ist: emotionale Erschöpfung, Depersonalisierung (Zynismus und Distanzierung) und ein vermindertes Gefühl persönlicher Leistungsfähigkeit. Erstmals beschrieben vom Psychologen Herbert Freudenberger im Jahr 1974 und 2019 von der WHO offiziell anerkannt, wird Burnout heute als arbeitsbedingtes Phänomen eingestuft, von dem schätzungsweise 67 % der Arbeitnehmer irgendwann in ihrer Karriere betroffen sind.\n\nBurnout tritt nicht plötzlich auf – es entwickelt sich über Monate in einem fortschreitenden Kreislauf aus Überengagement, Erschöpfung und Rückzug. Dieser Quiz bewertet, wo Sie sich auf dem Spektrum befinden, damit Sie handeln können, bevor die Erholung schwieriger wird.",
+    "faq": [
+      {
+        "q": "Was ist der Unterschied zwischen Burnout und Depression?",
+        "a": "Burnout ist primär arbeitskontextspezifisch und verbessert sich deutlich mit Ruhe, Urlaub und dem Entfernen von Stressfaktoren. Depression ist in allen Lebensbereichen allgegenwärtig und lässt sich nicht allein durch Ruhe beheben. Schwerer Burnout kann jedoch eine klinische Depression auslösen. Wenn Symptome außerhalb des Arbeitskontexts bestehen bleiben, ist eine klinische Abklärung angezeigt."
+      },
+      {
+        "q": "Kann man sich von Burnout erholen?",
+        "a": "Ja. Die Erholung von Burnout ist möglich und gut dokumentiert. Frühstadium-Burnout (leichte Warnsignale) erholt sich typischerweise innerhalb von Wochen mit angemessener Ruhe und Grenzsetzung. Schwerer Burnout kann 3–12 Monate anhaltende Erholung erfordern. Die Schlüsselfaktoren sind: Reduzierung der Anforderungen, Steigerung der Erholungsaktivitäten und Behebung der Ursachen."
+      },
+      {
+        "q": "Was verursacht Burnout?",
+        "a": "Die Forschung (Maslach & Leiter, 2016) identifiziert sechs arbeitsbedingte Ungleichgewichte, die Burnout verursachen: übermäßige Arbeitsbelastung, mangelnde Kontrolle, unzureichende Belohnung, Zusammenbruch der Gemeinschaft, Ungerechtigkeit und Wertekonflikte. Persönliche Faktoren wie Perfektionismus, Schwierigkeiten beim Setzen von Grenzen und schlechte Erholungsgewohnheiten tragen ebenfalls bei."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Burnout ist ein Syndrom, das aus chronischer Arbeitsbelastung resultiert, die nicht erfolgreich bewältigt wurde. Die WHO (ICD-11, 2019) definiert es durch drei Dimensionen: Gefühle von Energieverlust oder Erschöpfung, erhöhte geistige Distanz zur eigenen Arbeit oder Gefühle von Negativismus oder Zynismus in Bezug auf die eigene Arbeit sowie verminderte berufliche Leistungsfähigkeit.\n\nBurnout entwickelt sich durch fortschreitende Stadien – von Begeisterung und Überengagement über Stagnation, Frustration und Apathie – und dauert in der Regel 6–18 Monate, um den vollständig ausgebrannten Zustand zu erreichen. Die Erholung erfordert denselben Zeitaufwand in umgekehrter Richtung.",
+    "howScored": "Dieser Quiz bewertet sieben Burnout-Indikatoren, die aus dem Maslach Burnout Inventory (dem klinischen Goldstandard) und dem Copenhagen Burnout Inventory abgeleitet sind: emotionale Erschöpfung, Motivationsverlust, verminderte Leistungsfähigkeit, Depersonalisierung/Zynismus, Erholungsverhalten, antizipatorisches Unbehagen und das Gefühl des 'Nie genug'.\n\nWerte über 70 deuten auf ein geringes Risiko mit gesunden Puffern hin. 40–69 weist auf frühe Warnsignale hin, die gut auf Interventionen ansprechen. Unter 40 deutet auf signifikanten Burnout hin, der aktive Erholung erfordert.",
+    "whenToSeek": "Suchen Sie professionelle Unterstützung, wenn:\n• Sie sich seit mehr als 4 Wochen im Burnout-Bereich befinden\n• Körperliche Symptome aufgetreten sind (chronische Kopfschmerzen, häufige Erkrankungen, Schlafstörungen)\n• Burnout Ihre persönlichen Beziehungen beeinträchtigt, nicht nur die Arbeit\n• Sie Alkohol oder Substanzen verwenden, um mit Arbeitsanforderungen umzugehen\n• Sie neben Burnout Symptome einer Depression erleben\n\nEin Hausarzt oder ein auf Arbeitsmedizin spezialisierter Therapeut kann angemessene Unterstützung bieten.",
+    "limitations": "Dieser Quiz misst das Burnout-Risiko, nicht eine klinische Burnout-Diagnose. Das Maslach Burnout Inventory (MBI) ist der klinische Standard und erfordert eine professionelle Durchführung. Die Ergebnisse hier zeigen Muster und Risikostufen, keine diagnostischen Schlussfolgerungen.\n\nBurnout-Symptome überschneiden sich erheblich mit Depressionen, Angststörungen, ADHS und bestimmten medizinischen Zuständen (Schilddrüsenfunktionsstörungen, Anämie). Wenn Symptome schwerwiegend sind oder in mehreren Lebensbereichen bestehen bleiben, wird eine klinische Abklärung empfohlen."
+  }
+}

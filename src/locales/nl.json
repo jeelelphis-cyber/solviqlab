@@ -119,5 +119,19 @@
   "registration.saved_subtitle": "Uw resultaten zijn gesynchroniseerd. Controleer uw e-mail om te verifiëren.",
   "registration.mia_ready": "Mia is gereed",
   "registration.error.email_required": "E-mail is vereist",
-  "registration.error.email_invalid": "Voer een geldig e-mailadres in"
+  "registration.error.email_invalid": "Voer een geldig e-mailadres in",
+  "quiz.start_btn": "Start Quiz →",
+  "quiz.questions_count": "{{n}} vragen",
+  "quiz.free": "Gratis",
+  "quiz.no_account": "Geen account nodig",
+  "quiz.clinically_validated": "Klinisch gevalideerd",
+  "quiz.what_to_do": "Wat nu te doen",
+  "quiz.mia_coach": "Mia · Jouw Coach",
+  "quiz.get_plan": "Ontvang Mia's persoonlijke plan →",
+  "quiz.retake": "Quiz opnieuw doen",
+  "quiz.based_on": "Gebaseerd op:",
+  "quiz.sources": "Bronnen",
+  "quiz.question_of": "Vraag {{n}} van {{total}}",
+  "quiz.severity_label": "Ernst: {{severity}}",
+  "quiz.continue": "Doorgaan →"
 }

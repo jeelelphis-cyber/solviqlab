@@ -119,5 +119,19 @@
   "registration.saved_subtitle": "Tus resultados están sincronizados. Revisa tu correo electrónico para verificar.",
   "registration.mia_ready": "Mia está lista",
   "registration.error.email_required": "El correo electrónico es obligatorio",
-  "registration.error.email_invalid": "Por favor, ingresa un correo electrónico válido"
+  "registration.error.email_invalid": "Por favor, ingresa un correo electrónico válido",
+  "quiz.start_btn": "Comenzar cuestionario →",
+  "quiz.questions_count": "{{n}} preguntas",
+  "quiz.free": "Gratis",
+  "quiz.no_account": "Sin necesidad de cuenta",
+  "quiz.clinically_validated": "Validado clínicamente",
+  "quiz.what_to_do": "Qué hacer ahora",
+  "quiz.mia_coach": "Mia · Tu Coach",
+  "quiz.get_plan": "Obtén el plan personal de Mia →",
+  "quiz.retake": "Repetir cuestionario",
+  "quiz.based_on": "Basado en:",
+  "quiz.sources": "Fuentes",
+  "quiz.question_of": "Pregunta {{n}} de {{total}}",
+  "quiz.severity_label": "Gravedad {{severity}}",
+  "quiz.continue": "Continuar →"
 }

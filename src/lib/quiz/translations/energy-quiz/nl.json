@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Dagelijkse Energieniveaus Quiz",
+    "description": "Lage energie is niet alleen vermoeidheid — het is een signaal. Ontdek wat je energie kost en wat je kan herstellen."
+  },
+  "questions": {
+    "en1": {
+      "text": "Hoe voel je je als je 's ochtends wakker wordt?",
+      "options": [
+        "Klaar — ik voel me uitgerust en helder",
+        "Oké — ik heb een kop koffie nodig om op gang te komen",
+        "Vermoeid — ik wou dat ik langer kon slapen",
+        "Uitgeput — ochtenden zijn een echte strijd"
+      ]
+    },
+    "en2": {
+      "text": "Hoe consistent blijft je energieniveau gedurende de dag?",
+      "scaleLabels": {
+        "min": "Ik stort flink in",
+        "max": "Stabiel de hele dag"
+      }
+    },
+    "en3": {
+      "text": "Ervaar je een aanzienlijke energiedip in de middag (rond 14:00–16:00 uur)?"
+    },
+    "en4": {
+      "text": "Hoe voedt je dieet je dag — eet je voor energie of alleen uit honger?",
+      "options": [
+        "Bewust — ik eet om mijn energie te voeden",
+        "Redelijk — meestal goede keuzes",
+        "Inconsistent — ik pak wat er beschikbaar is",
+        "Slecht — suiker, cafeïne en snelle oplossingen"
+      ]
+    },
+    "en5": {
+      "text": "Hoeveel beperkt lage energie wat je daadwerkelijk op een dag doet?",
+      "options": [
+        "Helemaal niet — ik doe alles wat ik wil",
+        "Een beetje — ik stel prioriteiten, maar mis niet veel",
+        "Merkbaar — ik sla dingen over die ik wilde doen",
+        "Aanzienlijk — mijn hele leven voelt beperkt"
+      ]
+    },
+    "en6": {
+      "text": "Voel je je na een weekend rust doorgaans opgeladen — of nog steeds moe?",
+      "options": [
+        "Opgeladen — weekenden herstellen me",
+        "Enigszins beter maar niet volledig hersteld",
+        "Nog steeds moe — rust lijkt niet veel te helpen",
+        "Soms slechter — rust maakt me nog trager"
+      ]
+    },
+    "en7": {
+      "text": "Vertrouw je op cafeïne om te functioneren — niet voor plezier, maar om de dag door te komen?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Hoge Energie",
+      "description": "Je energie wordt goed ondersteund door je levensstijl. Je hebt reserves en je herstelt goed van inspanning.",
+      "actions": [
+        "Houd je huidige slaap- en voedingsgewoonten aan — dit zijn je grootste energie-hefbomen",
+        "Voeg één keer per week een intensieve trainingssessie toe — het verhoogt daadwerkelijk je basisenergie",
+        "Bescherm je slaapschema, ook in het weekend — consistentie is wat energie stabiel houdt"
+      ],
+      "miaHook": "Je energiefundament is sterk — laten we bespreken hoe we dit nog verder kunnen optimaliseren voor topprestaties."
+    },
+    {
+      "label": "Energielekken",
+      "description": "Je hebt energie, maar het is inconsistent. Bepaalde patronen veroorzaken dalingen die je stemming, productiviteit en motivatie beïnvloeden.",
+      "actions": [
+        "Controleer je maaltijden op bloedsuikerpieken — hoog-glycemische voedingsmiddelen veroorzaken de crashes die je ervaart",
+        "Verplaats je eerste cafeïne naar 90 minuten na het wakker worden — dit alleen al verbetert de aanhoudende energie aanzienlijk",
+        "Voeg 15 minuten wandelen toe na de lunch — het vermindert de middagenergiecrash met 30–40%"
+      ],
+      "miaHook": "Je energie wordt uitgeput door een paar specifieke patronen die ik kan zien — het oplossen hiervan heeft vaak cascade-effecten op al het andere."
+    },
+    {
+      "label": "Chronisch Lage Energie",
+      "description": "Uw energie is aanzienlijk verminderd en dit heeft invloed op uw kwaliteit van leven. Dit is meestal multifactorieel — slaap, voeding, stress en beweging spelen allemaal een rol.",
+      "actions": [
+        "Raadpleeg een arts om medische oorzaken uit te sluiten — schildklierdisfunctie, bloedarmoede, slaapapneu en vitaminegebreken kunnen zich allemaal uiten als lage energie.",
+        "Geef de komende 30 dagen prioriteit aan slaap boven al het andere — 7,5–9 uur is niet onderhandelbaar.",
+        "Verwijder de grootste energielekken onmiddellijk uit uw dieet: sterk bewerkte voedingsmiddelen, overmatig alcoholgebruik of overmatige cafeïne."
+      ],
+      "miaHook": "Wat u ervaart is geen luiheid — het is een systeem dat niet goed wordt ondersteund. Laat me u helpen om vanaf de basis op te bouwen."
+    }
+  ],
+  "seoContent": {
+    "intro": "Lage energie is wereldwijd een van de meest voorkomende gezondheidsklachten — maar ook een van de best behandelbare. Onderzoek toont consistent aan dat chronische vermoeidheid en lage energie zelden door één enkele factor worden veroorzaakt. In plaats daarvan zijn ze het gevolg van het cumulatieve effect van slaapkwaliteit, voedingspatronen, fysieke activiteitsniveaus, stressbelasting en onderliggende medische aandoeningen.\n\nDeze quiz evalueert uw energieniveaus over zeven dimensies en helpt u te identificeren of uw lage energie structureel is (oplosbaar door gewoontes aan te passen) of dat medisch onderzoek gerechtvaardigd is.",
+    "faq": [
+      {
+        "q": "Wat veroorzaakt lage energie bij gezonde mensen?",
+        "a": "Bij overigens gezonde mensen zijn de meest voorkomende oorzaken van lage energie: onvoldoende of slechte slaapkwaliteit, voedingsgebreken (ijzer, B12, vitamine D), uitdroging, overmatige cafeïneafhankelijkheid, hoge stressbelasting, een zittende levensstijl (die paradoxaal genoeg energie vermindert) en onregelmatige maaltijden die bloedsuikerinstabiliteit veroorzaken."
+      },
+      {
+        "q": "Wanneer moet lage energie medisch worden onderzocht?",
+        "a": "Raadpleeg een arts als: lage energie langer dan 4 weken aanhoudt, u 7–9 uur slaapt maar nog steeds uitgeput bent, u onverklaarbare gewichtsveranderingen heeft, of energieproblemen gepaard gaan met andere symptomen (haaruitval, koudegevoeligheid, snelle hartslag). Veelvoorkomende medische oorzaken zijn schildklieraandoeningen, bloedarmoede, slaapapneu en diabetes."
+      },
+      {
+        "q": "Verhoogt beweging energie of put het uit?",
+        "a": "Regelmatige matige lichaamsbeweging verhoogt de basisenergie. Dit is contra-intuïtief maar goed onderbouwd: aërobe oefening verhoogt de mitochondriale dichtheid, verbetert de slaapkwaliteit en reguleert cortisol — wat allemaal bijdraagt aan aanhoudende energie. De sleutel is regelmaat: 3–5 sessies per week van matige intensiteit."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Energie is een complexe fysiologische toestand die wordt gereguleerd door de interactie van slaap, voeding, beweging, stresshormonen, het circadiaanse ritme en mitochondriale functie. Chronisch lage energie — te onderscheiden van incidentele vermoeidheid — geeft aan dat een of meer van deze systemen niet optimaal functioneren.\n\nDe meest voorkomende boosdoeners zijn slaaptekort (opgebouwd over weken), bloedsuikerontregeling door slechte voeding, fysieke deconditionering, chronische stress (die cortisol verhoogt en herstellende hormonen onderdrukt) en cafeïneafhankelijkheid (die vermoeidheid maskeert zonder deze op te lossen).",
+    "howScored": "Deze quiz evalueert zeven energiedimensies: ochtendherstel (indicator van slaapkwaliteit), consistentie gedurende de dag, middagdipjes, kwaliteit van voedingsbrandstof, energiebeperkte activiteit, herstel na rust en cafeïneafhankelijkheid.\n\nScores boven 70 duiden op goed ondersteunde energie met een goede leefstijlbasis. 40–69 wijst op identificeerbare energielekken die het waard zijn aan te pakken. Onder de 40 duidt op chronisch uitgeputte energie die waarschijnlijk zowel leefstijlveranderingen als medisch onderzoek vereist.",
+    "whenToSeek": "Raadpleeg een arts als:\n• Lage energie langer dan 4 weken aanhoudt ondanks voldoende slaap\n• U 8+ uur slaapt maar uitgeput wakker wordt\n• Energieproblemen gepaard gaan met onverklaarbare gewichtsveranderingen, haaruitval, koudegevoeligheid of hartkloppingen\n• U een voorgeschiedenis heeft van depressie of angst (beide veroorzaken aanzienlijke energievermindering)\n• U een slaapstoornis vermoedt (snurken, naar adem happen, frequent wakker worden)\n\nVeelvoorkomende medische oorzaken: hypothyreoïdie, ijzergebreksanemie, vitamine B12- of D-tekort, obstructieve slaapapneu, type 2-diabetes.",
+    "limitations": "Deze quiz screent op leefstijlgerelateerde energiepatronen. Het kan geen medische aandoeningen diagnosticeren die vermoeidheid veroorzaken. Resultaten weerspiegelen zelfgerapporteerde percepties en geven mogelijk geen objectieve fysiologische metingen weer. Individuele energiebaselines variëren aanzienlijk — wat voor de ene persoon normaal aanvoelt, kan bij een ander op uitputting wijzen."
+  }
+}

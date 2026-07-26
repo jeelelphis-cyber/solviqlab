@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Quiz sul Rischio di Burnout",
+    "description": "Il burnout non arriva dall'oggi al domani. Verifica dove ti trovi nello spettro prima che diventi più difficile tornare indietro."
+  },
+  "questions": {
+    "bu1": {
+      "text": "Ti senti emotivamente esausto dal tuo lavoro o dalle responsabilità quotidiane — anche prima che la giornata inizi?",
+      "options": [
+        "No — generalmente mi sento coinvolto",
+        "A volte — nelle settimane difficili",
+        "Spesso — la maggior parte delle settimane sono pesanti",
+        "Quasi sempre — vado avanti a energia residua"
+      ]
+    },
+    "bu2": {
+      "text": "Hai perso motivazione o entusiasmo per le cose che ti piacevano?"
+    },
+    "bu3": {
+      "text": "Quanto ti senti efficace al lavoro o nelle tue principali responsabilità ultimamente?",
+      "options": [
+        "Molto efficace — sto dando il meglio di me",
+        "Ok — porto a termine le cose",
+        "Sotto il mio solito standard — noto il calo",
+        "Vado avanti per inerzia"
+      ]
+    },
+    "bu4": {
+      "text": "Ti accorgi di diventare più cinico o distaccato verso le persone intorno a te?"
+    },
+    "bu5": {
+      "text": "Quanto spesso ti prendi delle vere pause durante la giornata — non solo scorrendo il telefono, ma un vero riposo?",
+      "scaleLabels": {
+        "min": "Mai",
+        "max": "Più volte al giorno"
+      }
+    },
+    "bu6": {
+      "text": "Quando immagini la tua settimana imminente, qual è la tua prima sensazione?",
+      "options": [
+        "Pieno di energia — ho cose che non vedo l'ora di fare",
+        "Neutrale — solo un'altra settimana",
+        "Dread — sembra essere troppo",
+        "Dread — non riesco a vedere alcuna luce in questo"
+      ]
+    },
+    "bu7": {
+      "text": "Senti che, per quanto tu faccia, non è mai abbastanza?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Rischio di Burnout Basso",
+      "description": "Te la stai cavando bene. Le tue riserve energetiche sono intatte e hai dei sani margini di protezione.",
+      "actions": [
+        "Mantieni le tue abitudini di recupero — ciò che ti protegge ora merita di essere riconosciuto e preservato",
+        "Costruisci una pratica di recupero proattiva ogni settimana (non solo riposo reattivo)",
+        "Fai un check-in con te stesso ogni mese — il burnout si accumula lentamente e la consapevolezza precoce è tutto"
+      ],
+      "miaHook": "Sei in buona forma — ora parliamo di come rimanerci quando la pressione aumenta."
+    },
+    {
+      "label": "Segnali di Allarme Precoci",
+      "description": "Stai mostrando alcuni dei primi segnali di burnout. Questo è il momento ideale per agire — prima che diventi più difficile riprendersi.",
+      "actions": [
+        "Togli una cosa dal tuo programma questa settimana — in questa fase il burnout risponde alla riduzione, non all'ottimizzazione",
+        "Aggiungi una vera attività di recupero che non abbia nulla a che fare con la produttività",
+        "Racconta a qualcuno di cui ti fidi che stai sentendo la pressione — il supporto sociale rallenta la progressione del burnout"
+      ],
+      "miaHook": "Vedo schemi di burnout precoce nelle tue risposte — la buona notizia è che questa fase è molto recuperabile con i giusti cambiamenti."
+    },
+    {
+      "label": "Zona Burnout",
+      "description": "Le tue risposte suggeriscono un burnout significativo. Questo influisce sulla tua salute, relazioni e produttività — non è debolezza, è un vero stato fisiologico.",
+      "actions": [
+        "Parla con un medico o un terapeuta — il burnout a questo livello ha effetti fisiologici misurabili e beneficia del supporto professionale",
+        "Prenditi almeno un giorno intero completamente libero da tutte le attività lavorative questa settimana — non un giorno \"leggero\", ma una pausa completa",
+        "Identifica il singolo maggior drenaggio della tua energia e inizia il processo per ridurlo o rimuoverlo — anche se sembra impossibile"
+      ],
+      "miaHook": "Quello che stai vivendo è reale e serio — voglio aiutarti a tracciare un percorso di recupero che non richieda di abbandonare tutto."
+    }
+  ],
+  "seoContent": {
+    "intro": "Il burnout è uno stato di stress lavorativo cronico caratterizzato da tre dimensioni: esaurimento emotivo, depersonalizzazione (cinismo e distacco) e una ridotta sensazione di realizzazione personale. Descritto per la prima volta dallo psicologo Herbert Freudenberger nel 1974 e riconosciuto formalmente dall'OMS nel 2019, il burnout è oggi classificato come un fenomeno occupazionale che colpisce circa il 67% dei lavoratori in qualche momento della loro carriera.\n\nIl burnout non si manifesta all'improvviso — si sviluppa nell'arco di mesi attraverso un ciclo progressivo di eccessivo impegno, esaurimento e ritiro. Questo quiz valuta dove ti trovi nello spettro, così da poter agire prima che diventi più difficile recuperare.",
+    "faq": [
+      {
+        "q": "Qual è la differenza tra burnout e depressione?",
+        "a": "Il burnout è principalmente specifico del contesto lavorativo e migliora significativamente con il riposo, le vacanze e l'allontanamento dai fattori di stress. La depressione è pervasiva in tutti gli ambiti della vita e non si risolve solo con il riposo. Tuttavia, un burnout grave può innescare una depressione clinica. Se i sintomi persistono al di fuori del contesto lavorativo, è consigliata una valutazione clinica."
+      },
+      {
+        "q": "Si può guarire dal burnout?",
+        "a": "Sì. Il recupero dal burnout è possibile e ben documentato. Il burnout in fase iniziale (segnali di allarme lievi) di solito si risolve in poche settimane con un adeguato riposo e la definizione di confini. Il burnout grave può richiedere da 3 a 12 mesi di recupero sostenuto. I fattori chiave sono: ridurre le richieste, aumentare le attività di recupero e affrontare le cause profonde."
+      },
+      {
+        "q": "Quali sono le cause del burnout?",
+        "a": "La ricerca (Maslach & Leiter, 2016) identifica sei discrepanze lavorative che causano il burnout: carico di lavoro eccessivo, mancanza di controllo, ricompensa insufficiente, rottura della comunità, ingiustizia e conflitto di valori. Anche fattori personali come il perfezionismo, la difficoltà a stabilire limiti e scarse abitudini di recupero contribuiscono."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Il burnout è una sindrome derivante da stress lavorativo cronico che non è stato gestito con successo. L'OMS (ICD-11, 2019) lo definisce attraverso tre dimensioni: sensazioni di esaurimento o mancanza di energia, aumento della distanza mentale dal proprio lavoro o sentimenti di negativismo o cinismo legati al proprio lavoro, e ridotta efficacia professionale.\n\nIl burnout si sviluppa attraverso fasi progressive — dall'entusiasmo e l'eccessivo impegno alla stagnazione, frustrazione e apatia — impiegando tipicamente da 6 a 18 mesi per raggiungere lo stato di completo esaurimento. Il recupero richiede lo stesso investimento di tempo in senso inverso.",
+    "howScored": "Questo quiz valuta sette indicatori di burnout tratti dal Maslach Burnout Inventory (lo strumento clinico di riferimento) e dal Copenhagen Burnout Inventory: esaurimento emotivo, perdita di motivazione, riduzione dell'efficacia, depersonalizzazione/cinismo, comportamenti di recupero, terrore anticipatorio e la sensazione di 'non essere mai abbastanza'.\n\nPunteggi superiori a 70 indicano un basso rischio con barriere protettive sane. 40–69 indica segnali di allarme precoci che rispondono bene all'intervento. Sotto 40 indica un burnout significativo che richiede un recupero attivo.",
+    "whenToSeek": "Cerca supporto professionale se:\n• Ti trovi nella zona di burnout da più di 4 settimane\n• Sono comparsi sintomi fisici (mal di testa cronici, malattie frequenti, disturbi del sonno)\n• Il burnout sta influenzando le tue relazioni personali, non solo il lavoro\n• Stai usando alcol o sostanze per far fronte alle richieste lavorative\n• Stai vivendo sintomi di depressione insieme al burnout\n\nUn medico di base o un terapeuta specializzato in salute occupazionale può fornire il supporto appropriato.",
+    "limitations": "Questo quiz misura il rischio di burnout, non una diagnosi clinica di burnout. Il Maslach Burnout Inventory (MBI) è lo standard clinico e richiede una somministrazione professionale. I risultati qui indicano modelli e livelli di rischio, non conclusioni diagnostiche.\n\nI sintomi del burnout si sovrappongono significativamente a quelli della depressione, dei disturbi d'ansia, dell'ADHD e di alcune condizioni mediche (disfunzione tiroidea, anemia). Se i sintomi sono gravi o persistono in più ambiti della vita, è consigliata una valutazione clinica."
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "BMI & Gewicht Gezondheidsquiz",
+    "description": "Ontdek hoe uw huidige gewicht, gewoonten en levensstijl uw gezondheid beïnvloeden — in 5 eerlijke vragen."
+  },
+  "questions": {
+    "bq1": {
+      "text": "Hoe zou u uw huidige gewicht omschrijven in vergelijking met wat voor uw lichaam goed voelt?",
+      "options": [
+        "Ongeveer goed — ik voel me prettig",
+        "Een beetje afwijkend — een paar kilo meer of minder",
+        "Merkbaar boven of onder waar ik wil zijn",
+        "Ver verwijderd van waar ik moet zijn"
+      ]
+    },
+    "bq2": {
+      "text": "Hoe vaak beweegt u op een manier die uw hartslag verhoogt?",
+      "options": [
+        "De meeste dagen — het is onderdeel van mijn routine",
+        "2–3 keer per week",
+        "Eén keer per week of minder",
+        "Zelden of nooit"
+      ]
+    },
+    "bq3": {
+      "text": "Hoe evenwichtig is uw typische dagelijkse voeding?",
+      "scaleLabels": {
+        "min": "Voornamelijk bewerkt",
+        "max": "Voornamelijk onbewerkt voedsel"
+      }
+    },
+    "bq4": {
+      "text": "Heeft u de neiging om te eten wanneer u gestrest of verveeld bent, zelfs als u geen honger heeft?"
+    },
+    "bq5": {
+      "text": "Hoe vaak houdt u bij of denkt u na over wat u eet?",
+      "options": [
+        "Regelmatig — ik ben me bewust van mijn keuzes",
+        "Soms — wanneer ik eraan denk",
+        "Zelden — ik eet zonder nadenken",
+        "Nooit bijgehouden"
+      ]
+    },
+    "bq6": {
+      "text": "Hoe zou u uw energieniveau gedurende de dag beoordelen?",
+      "options": [
+        "Stabiel — ik voel me het grootste deel van de dag goed",
+        "Wisselend — pieken en dalen",
+        "Vaak moe, vooral 's middags",
+        "Meestal uitgeput"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Gezond gewichtsbereik",
+      "description": "Uw gewoonten wijzen erop dat u er goed voor staat. Kleine, consistente aanpassingen kunnen u hier op lange termijn houden.",
+      "actions": [
+        "Houd uw huidige voedings- en bewegingsgewoonten aan — consistentie is het meest onderschatte hulpmiddel",
+        "Voeg één krachttrainingssessie per week toe — spiermassa is de sterkste voorspeller van gezond ouder worden en een gezonde stofwisseling",
+        "Weeg uzelf wekelijks (zelfde tijd, zelfde dag) — vroegtijdige trenddetectie voorkomt geleidelijke verschuiving"
+      ],
+      "miaHook": "Uw score toont een solide basis — ik wil voortbouwen op wat al voor u werkt."
+    },
+    {
+      "label": "Ruimte voor verbetering",
+      "description": "U bent zich bewust van uw gezondheid, maar een paar belangrijke gewoonten houden u tegen. Het goede nieuws: kleine veranderingen maken een groot verschil.",
+      "actions": [
+        "Verminder de inname van sterk bewerkte voeding deze week met 50% — deze ene verandering wordt geassocieerd met significante verbeteringen in gewicht en metabole markers",
+        "Voeg 7.000 stappen per dag toe als basis — onder deze drempel wordt gewichtsbeheersing aanzienlijk moeilijker",
+        "Pak emotioneel eten aan indien aanwezig — het is geen wilskracht, maar een patroon dat goed reageert op gestructureerde strategieën"
+      ],
+      "miaHook": "Ik zie 2–3 specifieke dingen die, als ze worden veranderd, uw gewichtstrend binnen 4 weken zouden verschuiven."
+    },
+    {
+      "label": "Vereist aandacht",
+      "description": "Uw huidige patronen werken mogelijk tegen uw gezondheidsdoelen. Maar bewustwording is de eerste stap, en u bent er al.",
+      "actions": [
+        "Begin met het begrijpen van je calorische basislijn — zelfs een ruw voedingsdagboek voor één week onthult patronen die je nu niet ziet.",
+        "Beweeg elke dag 20 minuten — de specifieke activiteit is minder belangrijk dan de dagelijkse consistentie.",
+        "Overweeg een gesprek met een geregistreerde diëtist — persoonlijke begeleiding presteert aanzienlijk beter dan algemeen advies voor significante gewichtsdoelen."
+      ],
+      "miaHook": "Ik heb mensen in jouw exacte situatie hun situatie volledig zien omkeren — laat me je laten zien waar je moet beginnen."
+    }
+  ],
+  "seoContent": {
+    "intro": "BMI (Body Mass Index) is een veelgebruikte screeningsmethode, maar het is één gegeven, geen volledig beeld van gezondheid. Je gewicht werkt samen met je activiteitenniveau, voedingskwaliteit, stress, slaap en lichaamssamenstelling om de werkelijke gezondheidsresultaten te bepalen.\n\nDeze quiz gaat verder dan BMI en beoordeelt de gedrags- en leefstijlfactoren die bepalen of je gewicht richting gezondheid of er vandaan beweegt — en geeft je bruikbare inzichten in plaats van alleen een getal.",
+    "faq": [
+      {
+        "q": "Is BMI een nauwkeurige gezondheidsmaatstaf?",
+        "a": "BMI is een nuttig screeningsinstrument op populatieniveau, maar heeft aanzienlijke individuele beperkingen. Het maakt geen onderscheid tussen spiermassa en vetmassa (atleten worden vaak geregistreerd als 'overgewicht'), houdt geen rekening met vetverdeling (visceraal versus subcutaan) en varieert in nauwkeurigheid tussen etniciteiten. Tailleomtrek en taille-hoogteverhouding zijn vaak voorspellender voor metabool gezondheidsrisico."
+      },
+      {
+        "q": "Wat is een gezond gewicht?",
+        "a": "Een gezond gewicht wordt het best gedefinieerd als het gewicht waarbij je metabole markers (bloeddruk, bloedsuiker, cholesterol) binnen normale waarden vallen en je voldoende energie en fysiek functioneren hebt. Voor de meeste mensen valt dit binnen een BMI van 18,5–24,9 kg/m², hoewel individuele gezonde bereiken variëren op basis van leeftijd, geslacht, etniciteit en spiermassa."
+      },
+      {
+        "q": "Wat is de meest effectieve manier om gewicht te beheersen?",
+        "a": "Onderzoek toont consistent aan dat duurzaam gewichtsbeheer een bescheiden calorietekort (300–500 kcal/dag), hoge eiwitinname (1,6–2 g/kg lichaamsgewicht) om spieren te behouden, regelmatige krachttraining, voldoende slaap (slechte slaap verhoogt ghreline met 28%) en stressmanagement (hoge cortisol bevordert vetopslag) vereist."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Gewichtsgezondheid is het snijvlak van lichaamsmassa, lichaamssamenstelling, metabole functie en leefstijlgedrag. Overtollig vetweefsel — met name visceraal vet opgeslagen rond de buikorganen — is een directe aanjager van insulineresistentie, systemische ontsteking, hart- en vaatziekten en type 2 diabetes.\n\nGewicht is echter niet puur een gedragskeuze. Genetica verklaart 40–70% van de BMI-variantie. Slaaptekort, stresshormonen, de samenstelling van het darmmicrobioom en bepaalde medicijnen hebben allemaal een significante invloed op gewichtsregulatie. Deze quiz beoordeelt de beheersbare gedragsfactoren.",
+    "howScored": "Deze quiz evalueert zes gewichtsrelevante dimensies: subjectieve gewichtstevredenheid, frequentie van cardiovasculaire activiteit, voedingskwaliteit, emotionele eetpatronen, voedingsbewustzijn en energieniveaus (een belangrijke metabole indicator).\n\nScores boven de 70 geven gezonde gewoonten aan die gewichtsbeheer ondersteunen. 40–69 geeft identificeerbare patronen aan die verbetering verdienen. Onder de 40 geeft meerdere gewoonten aan die tegen gewichts- en metabole gezondheidsdoelen werken.",
+    "whenToSeek": "Raadpleeg een zorgverlener als:\n• Je BMI boven de 30 ligt (obesitasbereik) — medische evaluatie en persoonlijke begeleiding zijn passend\n• Je meerdere benaderingen voor gewichtsverlies zonder succes hebt geprobeerd\n• Gewichtstoename snel is geweest (5+ kg in 3 maanden zonder opzettelijke verandering)\n• Je diabetes, hoge bloeddruk of hoog cholesterol hebt naast overgewicht\n• Emotioneel eten of verstoorde eetpatronen je relatie met voedsel aanzienlijk beïnvloeden",
+    "limitations": "Deze quiz beoordeelt leefstijlgedrag, niet het werkelijke gewicht of BMI. Het is een screeningsinstrument voor gewoonten, geen medische beoordeling. Gewicht wordt beïnvloed door factoren buiten gedrag om, waaronder genetica, medicijnen, hormonale aandoeningen en medische geschiedenis. Interpreteer resultaten altijd in context met andere gezondheidsinformatie en medisch advies."
+  }
+}

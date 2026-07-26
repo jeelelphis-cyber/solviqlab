@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Angstniveau Quiz",
+    "description": "Begrijp hoe angst zich in jouw leven manifesteert — en hoeveel van je dagelijkse energie het stilletjes opslokt."
+  },
+  "yesnoOptions": [
+    "Ja",
+    "Nee"
+  ],
+  "questions": {
+    "anx1": {
+      "text": "Hoe vaak raast of spiraalt je geest in 'wat als'-gedachten die je niet kunt stoppen?",
+      "options": [
+        "Zelden — ik kan mijn gedachten meestal bijsturen",
+        "Soms — in stressvolle periodes",
+        "Vaak — de meeste dagen gebeurt het",
+        "Bijna constant — het is uitputtend"
+      ]
+    },
+    "anx2": {
+      "text": "Vermijd je bepaalde situaties of mensen omdat ze je angstig maken?"
+    },
+    "anx3": {
+      "text": "Hoe vaak voel je je fysiek gespannen — benauwdheid op de borst, oppervlakkige ademhaling, een knoop in je maag?",
+      "scaleLabels": {
+        "min": "Bijna nooit",
+        "max": "Zeer vaak"
+      }
+    },
+    "anx4": {
+      "text": "Beïnvloedt piekeren over de toekomst je vermogen om van het heden te genieten?"
+    },
+    "anx5": {
+      "text": "Hoe reageer je doorgaans wanneer er iets onverwachts gebeurt?",
+      "options": [
+        "Kalm — ik pas me redelijk goed aan",
+        "Een beetje van slag, maar ik herstel snel",
+        "Het gooit me voor een tijdje uit balans",
+        "Het stuurt me in een spiraal"
+      ]
+    },
+    "anx6": {
+      "text": "Vind je het moeilijk om te slapen omdat je gedachten niet tot rust komen?",
+      "options": [
+        "Nee — ik slaap prima",
+        "Af en toe — misschien één keer per week",
+        "Vaak — een paar nachten per week",
+        "Bijna elke nacht"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Lage angst",
+      "description": "Je gaat op een gezonde manier om met onzekerheid en stress. Je zenuwstelsel staat niet chronisch in alarmmodus.",
+      "actions": [
+        "Blijf je huidige stressmanagementgewoonten aanhouden — wat je doet, werkt",
+        "Oefen één keer per week een mindfulness-oefening om veerkracht op te bouwen voor moeilijkere periodes",
+        "Blijf in contact met mensen die je steunen — sociale steun is de sterkste buffer tegen angst"
+      ],
+      "miaHook": "Je angstniveau is gezond — laten we bespreken hoe je dat zo houdt wanneer het leven moeilijker wordt."
+    },
+    {
+      "label": "Matige angst",
+      "description": "Angst is aanwezig in je leven en beïnvloedt sommige van je keuzes en plezier. De patronen zijn beheersbaar, maar het is de moeite waard om ze aan te pakken.",
+      "actions": [
+        "Probeer een dagelijkse ademhalingsoefening van 5 minuten — box breathing (4-4-4-4) verlaagt meetbaar cortisol binnen enkele minuten",
+        "Identificeer één vermijdingsgedrag en zet deze week een kleine stap om het onder ogen te zien",
+        "Beperk cafeïne tot voor de middag — het versterkt de fysiologische angstreactie"
+      ],
+      "miaHook": "Ik merkte een paar duidelijke angstpatronen op in je antwoorden — ik heb gerichte hulpmiddelen die dit merkbaar kunnen verminderen."
+    },
+    {
+      "label": "Hoge angst",
+      "description": "Angst heeft een aanzienlijke invloed op je dagelijks leven. Dit niveau van aanhoudende alertheid is vermoeiend en verdient serieuze aandacht.",
+      "actions": [
+        "Praat met een therapeut of arts — CGT (Cognitieve Gedragstherapie) heeft de sterkste wetenschappelijke onderbouwing voor angst en levert vaak resultaten in 6–8 sessies",
+        "Verwijder onmiddellijk je grootste dagelijkse bron van cafeïne — zelfs deze ene verandering vermindert angst meetbaar",
+        "Vertel één persoon die je vertrouwt wat je doormaakt — isolatie versterkt angst"
+      ],
+      "miaHook": "Wat je ervaart is echt — hoge angst is uitputtend en isolerend. Laat me je laten zien waar je kunt beginnen om het te verminderen."
+    }
+  ],
+  "seoContent": {
+    "intro": "Angst is de meest voorkomende psychische aandoening ter wereld, met ongeveer 284 miljoen mensen wereldwijd (Our World in Data, 2019). Toch zoekt de meerderheid van de mensen met angst geen hulp — ofwel omdat ze het niet herkennen als zodanig, ofwel omdat ze de effecten ervan genormaliseerd hebben.\n\nDeze quiz beoordeelt zes kerndimensies van angst: cognitieve patronen (racende gedachten, piekeren), gedragspatronen (vermijding), fysieke symptomen (spanning, ademhaling), slaapimpact, emotionele reactiviteit en interferentie met het huidige moment. Je resultaten geven je een gepersonaliseerde kaart van hoe angst zich in jouw leven manifesteert.",
+    "faq": [
+      {
+        "q": "Wat is het verschil tussen normale zorgen en angst?",
+        "a": "Normale zorgen zijn evenredig aan een reële dreiging, tijdelijk en belemmeren het dagelijks functioneren niet significant. Angst omvat buitensporige zorgen die moeilijk te beheersen zijn, vaak onevenredig aan het werkelijke risico, en die aanhoudend het dagelijks leven, de slaap of relaties verstoren."
+      },
+      {
+        "q": "Kan angst fysieke symptomen veroorzaken?",
+        "a": "Ja. Angst activeert het sympathische zenuwstelsel (vecht-of-vluchtreactie), wat meetbare fysieke effecten veroorzaakt: verhoogde hartslag, oppervlakkige ademhaling, spierspanning, spijsverteringsproblemen en verhoogde cortisolspiegels. Chronische angst heeft langdurige fysieke gezondheidseffecten, waaronder een verhoogd cardiovasculair risico."
+      },
+      {
+        "q": "Welke behandelingen werken tegen angst?",
+        "a": "Cognitieve gedragstherapie (CGT) is de meest evidence-based behandeling en leidt bij 60–80% van de mensen tot significante verbetering. Exposuretherapie is effectief bij vermijdingsgerelateerde angst. Medicatie (SSRI's, SNRI's) is geschikt voor matige tot ernstige gevallen, vaak in combinatie met therapie."
+      },
+      {
+        "q": "Maakt cafeïne angst erger?",
+        "a": "Ja. Cafeïne blokkeert adenosinereceptoren en verhoogt cortisol en adrenaline — dezelfde fysiologische route die door angst wordt geactiveerd. Bij mensen die vatbaar zijn voor angst, verergert cafeïne de symptomen meetbaar. Het verminderen van cafeïne is een van de snelste veranderingen om angst te verlagen."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Angst is een natuurlijke menselijke emotie die een probleem wordt wanneer deze buitensporig, aanhoudend is en het dagelijks leven verstoort. In de kern is angst het verkeerd afgaan van het dreigingsdetectiesysteem van de hersenen — normale situaties als gevaarlijk beschouwen en het lichaam in een staat van fysiologische paraatheid houden die uitputtend en onhoudbaar is.\n\nAngst uit zich op drie manieren: cognitief (racende gedachten, catastroferen, piekerspiralen), fysiek (spierspanning, hartkloppingen, oppervlakkige ademhaling, spijsverteringsproblemen) en gedragsmatig (vermijding, geruststelling zoeken, dwangmatig gedrag). Deze quiz omvat alle drie de dimensies.",
+    "howScored": "Deze quiz beoordeelt zes evidence-based dimensies van angst: denkpatronen, gedragsmatige vermijding, fysieke spanningssymptomen, toekomstgerichte zorgen, reactiviteit op onverwachte gebeurtenissen en slaapimpact. Vragen gebruiken een mix van schaalantwoorden en ja/nee om zowel frequentie als impact vast te leggen.\n\nScores worden genormaliseerd naar 0–100. Boven de 70 duidt op lage angst met goede copingbronnen. 40–69 duidt op matige angstpatronen die aandacht verdienen. Onder de 40 duidt op hoge angst die het dagelijks functioneren aanzienlijk beïnvloedt.",
+    "whenToSeek": "Overweeg om met een professional in de geestelijke gezondheidszorg te praten als:\n• Je angst je slaap, werk of relaties beïnvloedt\n• Je situaties of mensen vermijdt vanwege angst\n• Fysieke angstsymptomen (hartkloppingen, benauwdheid op de borst) frequent voorkomen\n• Je alcohol of andere middelen gebruikt om angst te beheersen\n• Angst al meer dan 6 maanden aanwezig is\n\nEen GAD-7-score van 10+ (een klinische angstschaal) geeft aan dat een klinische evaluatie gerechtvaardigd is.",
+    "limitations": "Deze quiz is een screeningsinstrument, geen klinische beoordeling. Het maakt geen onderscheid tussen verschillende angststoornissen (gegeneraliseerde angststoornis, sociale angst, paniekstoornis, PTSS, OCD). Een klinische diagnose vereist evaluatie door een erkende professional in de geestelijke gezondheidszorg.\n\nAngstsymptomen overlappen ook aanzienlijk met depressie, ADHD, slaapstoornissen en bepaalde medische aandoeningen (schildklierproblemen, cardiovasculaire problemen). Een uitgebreide evaluatie sluit deze bijdragende factoren uit."
+  }
+}

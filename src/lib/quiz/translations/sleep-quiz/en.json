@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "title": "Sleep Quality Quiz (Epworth Sleepiness Scale)",
+    "description": "The Epworth Sleepiness Scale is the global clinical standard for measuring excessive daytime sleepiness. Used by sleep specialists worldwide to detect sleep disorders.",
+    "medicalNote": "A high score may indicate a sleep disorder such as sleep apnea or narcolepsy. Please consult a healthcare provider if concerned."
+  },
+
+  "likertOptions": [
+    "Would never doze",
+    "Slight chance of dozing",
+    "Moderate chance of dozing",
+    "High chance of dozing"
+  ],
+
+  "questions": {
+    "ess1": {
+      "text": "Sitting and reading",
+      "hint": "Falling asleep while reading is one of the earliest signs of chronic sleep deprivation."
+    },
+    "ess2": {
+      "text": "Watching TV",
+      "hint": "Even passive activities like TV should not cause sleepiness if you are getting adequate, quality sleep."
+    },
+    "ess3": {
+      "text": "Sitting inactive in a public place (e.g., a theater or meeting)",
+      "hint": "Struggling to stay awake in quiet public settings is a key diagnostic marker for excessive sleepiness."
+    },
+    "ess4": {
+      "text": "As a passenger in a car for an hour without a break",
+      "hint": "The steady motion of a car ride is a standard drowsiness trigger. High scores here indicate serious sleep debt."
+    },
+    "ess5": {
+      "text": "Lying down to rest in the afternoon when circumstances permit",
+      "hint": "The ability to fall asleep quickly during afternoon rest reflects your true sleep pressure level."
+    },
+    "ess6": {
+      "text": "Sitting and talking to someone",
+      "hint": "Falling asleep during a conversation is a clinically significant sign of excessive daytime sleepiness."
+    },
+    "ess7": {
+      "text": "Sitting quietly after a lunch without alcohol",
+      "hint": "Post-lunch dips are normal, but high dozing likelihood here without alcohol indicates a sleep disorder."
+    },
+    "ess8": {
+      "text": "In a car, while stopped for a few minutes in traffic",
+      "hint": "Drowsiness while driving or stopped in traffic is a direct safety risk and key clinical indicator."
+    }
+  },
+
+  "buckets": [
+    {
+      "label": "Normal Sleep",
+      "description": "Your daytime sleepiness is within the normal range. Your sleep appears to be adequately restoring you.",
+      "actions": [
+        "Maintain your current sleep schedule — consistency is the most powerful sleep protector",
+        "Keep your bedroom below 18°C (65°F) — the optimal temperature for deep sleep",
+        "Limit caffeine after 2 PM to protect sleep architecture"
+      ],
+      "miaHook": "Your sleep foundation is solid. I want to show you how to make it even more restorative — there is still a level above where you are now."
+    },
+    {
+      "label": "Mild Excessive Sleepiness",
+      "description": "Slightly elevated daytime sleepiness. May indicate mild sleep deprivation or early-stage sleep issues.",
+      "actions": [
+        "Add 30 minutes to your sleep window for the next 2 weeks and track energy levels",
+        "Audit your bedroom for light and noise — both fragment sleep without waking you fully",
+        "Avoid screens for 45 minutes before bed this week"
+      ],
+      "miaHook": "Your score is borderline — which means small changes make a big difference right now. I can show you exactly where your sleep is leaking."
+    },
+    {
+      "label": "Moderate Excessive Sleepiness",
+      "description": "Moderate excessive daytime sleepiness. This level is linked to impaired driving, reduced productivity, and metabolic issues.",
+      "actions": [
+        "See a doctor about a potential sleep disorder — at this score, sleep apnea screening is appropriate",
+        "Stop all alcohol 3 hours before bed — it fragments sleep architecture even if it helps you fall asleep",
+        "Set a non-negotiable bedtime for the next 30 days and protect it"
+      ],
+      "miaHook": "At this level, your sleep is affecting everything — your weight, your mood, your focus. I have a protocol that targets this specifically."
+    },
+    {
+      "label": "Severe Excessive Sleepiness",
+      "description": "Severe daytime sleepiness. This significantly increases accident risk and is associated with serious sleep disorders. Medical evaluation is strongly recommended.",
+      "actions": [
+        "Schedule a sleep study (polysomnography) with your doctor — this score warrants investigation",
+        "Do not drive if feeling drowsy — your reflexes are impaired at this sleepiness level",
+        "Avoid operating heavy machinery until evaluated by a specialist"
+      ],
+      "miaHook": "I want to be direct: a score this high needs medical attention, not just a sleep routine. Let me help you figure out the right first step."
+    }
+  ],
+
+  "seoContent": {
+    "intro": "The Epworth Sleepiness Scale (ESS) was developed by Dr. Murray Johns at Epworth Hospital in Melbourne, Australia in 1991. It has since become the global clinical standard for measuring excessive daytime sleepiness (EDS), used in sleep laboratories, hospitals, and research institutions worldwide.\n\nUnlike sleep diaries or subjective feeling assessments, the ESS measures your likelihood of dozing in 8 specific situations — providing an objective picture of how sleep-deprived you truly are. Scores range from 0 to 24. A score above 10 indicates excessive sleepiness that warrants clinical evaluation.\n\nSleep disorders affect 50–70 million people in the US alone (CDC, 2023). Untreated excessive daytime sleepiness increases the risk of road accidents by 2.5×, contributes to weight gain, depression, cardiovascular disease, and significantly reduces quality of life.",
+    "faq": [
+      {
+        "q": "What is the Epworth Sleepiness Scale?",
+        "a": "The ESS is a validated 8-item questionnaire that measures daytime sleepiness by asking how likely you are to doze off in common situations. It is the global standard used by sleep specialists and was published in the journal Sleep in 1991."
+      },
+      {
+        "q": "What is a normal Epworth score?",
+        "a": "A score of 0–7 is considered normal. Scores of 8–9 suggest mild excessive sleepiness; 10–15 moderate; and 16–24 severe. The majority of healthy adults score between 4 and 8."
+      },
+      {
+        "q": "What causes excessive daytime sleepiness?",
+        "a": "The most common causes include insufficient sleep duration, obstructive sleep apnea, narcolepsy, restless leg syndrome, poor sleep quality, medications, and depression."
+      },
+      {
+        "q": "Should I see a doctor if I scored above 10?",
+        "a": "Yes. A score of 10 or above warrants clinical evaluation. Your doctor may order a polysomnography (sleep study) to rule out sleep apnea or other disorders."
+      },
+      {
+        "q": "Can poor sleep quality cause weight gain?",
+        "a": "Yes. Sleep deprivation dysregulates ghrelin and leptin — the hunger hormones — increasing appetite and cravings for high-calorie foods. Studies show that sleeping fewer than 6 hours per night increases obesity risk by 23%."
+      }
+    ]
+  },
+
+  "content": {
+    "whatIs": "Excessive daytime sleepiness (EDS) is a condition in which a person feels drowsy during the day and struggles to stay awake in situations where alertness is expected. It affects approximately 20% of the global population and is distinct from normal tiredness — it is a persistent, pathological level of sleepiness that impairs functioning.\n\nEDS is a primary symptom of several sleep disorders, including obstructive sleep apnea (the most common cause), narcolepsy, idiopathic hypersomnia, and circadian rhythm disorders. It can also result from chronic insufficient sleep — the most preventable cause affecting millions of people.\n\nThe Epworth Sleepiness Scale was designed to measure EDS objectively by assessing dozing probability across 8 standardized situations. Unlike asking 'do you feel tired?', the ESS captures behavioral evidence of sleepiness that correlates strongly with physiological measures such as the Multiple Sleep Latency Test (MSLT).",
+
+    "clinicalBackground": "The Epworth Sleepiness Scale was developed by Dr. Murray Johns and published in the journal Sleep in 1991. Dr. Johns was a physician at Epworth Hospital in Melbourne who noticed that subjective assessments of sleepiness were unreliable. He designed the ESS to measure the likelihood of dozing in situations that vary systematically in their sleep-inducing properties.\n\nThe original validation study showed strong correlation with objective measures of sleepiness (MSLT, r = 0.51) and high test-retest reliability (r = 0.82). The ESS has since been validated in dozens of languages and patient populations.\n\nIt is now the most widely used clinical tool for sleep disorder screening globally, endorsed by the American Academy of Sleep Medicine (AASM), the British Sleep Society, and incorporated into clinical guidelines for sleep apnea, narcolepsy, and hypersomnia worldwide.",
+
+    "howScored": "The Epworth Sleepiness Scale asks how likely you are to doze off in 8 specific situations on a scale of 0–3:\n• 0: Would never doze\n• 1: Slight chance of dozing\n• 2: Moderate chance of dozing\n• 3: High chance of dozing\n\nTotal scores range from 0 to 24. Clinical thresholds:\n• 0–7: Normal range (average is 5–6 in healthy adults)\n• 8–9: Borderline/mild excessive sleepiness\n• 10–15: Moderate excessive daytime sleepiness — clinical evaluation warranted\n• 16–24: Severe excessive daytime sleepiness — urgent evaluation recommended\n\nA score of 10+ has a sensitivity of 78% and specificity of 79% for identifying clinically significant sleep disorders in general populations.",
+
+    "interpretation": "**Score 0–7 (Normal):** Your sleep is adequately restoring you. The average healthy adult scores 5–6. Focus on maintaining your sleep schedule and protecting sleep quality.\n\n**Score 8–9 (Mild/Borderline):** Slightly above normal. This may reflect accumulated sleep debt, irregular sleep timing, or early-stage sleep issues. Behavioral changes — consistent sleep times, sleep hygiene improvements — are usually sufficient at this level.\n\n**Score 10–15 (Moderate):** This range is clinically significant. Research shows that at this level, driving performance is impaired equivalently to a blood alcohol level of 0.05%. Cognitive function, mood, metabolism, and immune function are all measurably affected. Medical evaluation is appropriate, particularly to screen for sleep apnea.\n\n**Score 16–24 (Severe):** This level of sleepiness represents a serious safety and health concern. The risk of motor vehicle accidents is 2.5× higher than average. Immediate medical evaluation including a sleep study is strongly recommended.",
+
+    "whenToSeek": "Consult a healthcare provider if:\n\n• Your ESS score is 10 or higher\n• You have been told you snore loudly or stop breathing during sleep\n• You feel unrested after a full night of sleep\n• You fall asleep involuntarily during the day\n• Your sleepiness is affecting your work, driving, or relationships\n• A bed partner has observed unusual leg movements or gasping\n\nSeek urgent care if:\n• You have had a near-miss accident due to drowsiness while driving\n• You experience sudden muscle weakness triggered by emotions (cataplexy — a sign of narcolepsy)\n• You are unable to stay awake at work despite adequate sleep opportunity",
+
+    "limitations": "**1. Subjective recall:** The ESS measures perceived likelihood of dozing, which can be influenced by self-awareness and recall bias. People with severe sleep disorders sometimes underestimate their sleepiness because chronic fatigue has become their baseline.\n\n**2. Situational variation:** Not everyone encounters all 8 situations regularly. People who never drive, for example, may have difficulty answering item 8 accurately.\n\n**3. Does not identify the cause:** A high ESS score indicates excessive sleepiness but does not diagnose its cause. Sleep apnea, narcolepsy, medication effects, and simple sleep deprivation all produce similar scores.\n\n**4. Not validated for children under 12:** The ESS was developed and validated in adult populations. Pediatric sleepiness is assessed with different tools.\n\n**5. Point-in-time measurement:** The ESS reflects your recent sleep experience. Travel, illness, shift work, and life events can temporarily elevate scores without indicating a chronic disorder."
+  }
+}

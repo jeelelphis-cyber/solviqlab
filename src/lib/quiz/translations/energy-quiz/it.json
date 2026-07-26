@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Questionario sui Livelli di Energia Quotidiani",
+    "description": "La bassa energia non è solo stanchezza — è un segnale. Scopri cosa ti sta esaurendo e cosa potrebbe ripristinarti."
+  },
+  "questions": {
+    "en1": {
+      "text": "Come ti senti quando ti svegli al mattino?",
+      "options": [
+        "Pronto/a — mi sento riposato/a e lucido/a",
+        "Così così — ci vuole un caffè per partire",
+        "Stanco/a — vorrei poter dormire di più",
+        "Esaurito/a — le mattine sono una vera lotta"
+      ]
+    },
+    "en2": {
+      "text": "Con quanta costanza la tua energia si mantiene durante la giornata?",
+      "scaleLabels": {
+        "min": "Crolla pesantemente",
+        "max": "Stabile tutto il giorno"
+      }
+    },
+    "en3": {
+      "text": "Sperimenti un significativo calo di energia pomeridiano (intorno alle 14–16)?"
+    },
+    "en4": {
+      "text": "Come la tua dieta alimenta la tua giornata — mangi per energia o solo per fame?",
+      "options": [
+        "Intenzionalmente — mangio per alimentare la mia energia",
+        "Abbastanza — per lo più buone scelte",
+        "In modo incostante — prendo ciò che è disponibile",
+        "Male — zucchero, caffeina e soluzioni rapide"
+      ]
+    },
+    "en5": {
+      "text": "Quanto la bassa energia limita ciò che effettivamente fai in una giornata?",
+      "options": [
+        "Per niente — faccio tutto ciò che voglio",
+        "Un po' — do priorità ma non perdo molto",
+        "Notevolmente — salto cose che volevo fare",
+        "Significativamente — tutta la mia vita sembra ridotta"
+      ]
+    },
+    "en6": {
+      "text": "Dopo un fine settimana di riposo, ti senti tipicamente ricaricato — o ancora stanco?",
+      "options": [
+        "Ricaricato — i fine settimana mi ripristinano",
+        "Un po' meglio ma non completamente ristorato",
+        "Ancora stanco — il riposo non sembra aiutare molto",
+        "A volte peggio — il riposo mi rende più letargico"
+      ]
+    },
+    "en7": {
+      "text": "Fai affidamento sulla caffeina per funzionare — non per piacere, ma per superare la giornata?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Alta Energia",
+      "description": "La tua energia è ben supportata dal tuo stile di vita. Hai riserve e ti riprendi bene dallo sforzo.",
+      "actions": [
+        "Mantieni le tue attuali abitudini di sonno e alimentazione — queste sono le tue leve energetiche più importanti",
+        "Aggiungi una sessione di esercizio ad alta intensità a settimana — in realtà aumenta l'energia di base",
+        "Proteggi il tuo programma di sonno anche nei fine settimana — la costanza è ciò che mantiene stabile l'energia"
+      ],
+      "miaHook": "La tua base energetica è solida — parliamo di ottimizzarla ulteriormente per prestazioni di punta."
+    },
+    {
+      "label": "Perdite di Energia",
+      "description": "Hai energia, ma è inconsistente. Alcuni schemi causano cali che influenzano il tuo umore, la produttività e la motivazione.",
+      "actions": [
+        "Controlla i tuoi pasti per i picchi di zucchero nel sangue — gli alimenti ad alto indice glicemico causano i crolli che stai vivendo",
+        "Sposta la tua prima caffeina a 90 minuti dopo il risveglio — questo da solo migliora notevolmente l'energia sostenuta",
+        "Aggiungi 15 minuti di camminata dopo pranzo — riduce il crollo energetico pomeridiano del 30–40%"
+      ],
+      "miaHook": "La tua energia viene drenata da alcuni schemi specifici che posso vedere — risolverli spesso ha benefici a cascata su tutto il resto."
+    },
+    {
+      "label": "Energia Cronicamente Bassa",
+      "description": "La tua energia è significativamente ridotta e sta influenzando la tua qualità di vita. Di solito si tratta di un problema multifattoriale: sonno, alimentazione, stress e movimento giocano tutti un ruolo.",
+      "actions": [
+        "Consulta un medico per escludere cause mediche: disfunzioni tiroidee, anemia, apnea notturna e carenze vitaminiche si manifestano tutte con bassi livelli di energia.",
+        "Per i prossimi 30 giorni, dai priorità al sonno sopra ogni altra cosa: 7,5–9 ore non sono negoziabili.",
+        "Rimuovi immediatamente i maggiori drenaggi di energia dalla tua dieta: alimenti ultra-processati, alcol in eccesso o caffeina eccessiva."
+      ],
+      "miaHook": "Quello che stai vivendo non è pigrizia: è un sistema che non viene supportato adeguatamente. Lascia che ti aiuti a ricostruire dalle fondamenta."
+    }
+  ],
+  "seoContent": {
+    "intro": "La bassa energia è uno dei disturbi di salute più comuni a livello globale, eppure è anche uno dei più trattabili. La ricerca dimostra costantemente che l'affaticamento cronico e la bassa energia sono raramente causati da un singolo fattore. Invece, derivano dall'effetto cumulativo della qualità del sonno, dei modelli nutrizionali, dei livelli di attività fisica, del carico di stress e delle condizioni mediche sottostanti.\n\nQuesto quiz valuta i tuoi modelli energetici in sette dimensioni, aiutandoti a identificare se la tua bassa energia è strutturale (risolvibile attraverso cambiamenti nelle abitudini) o se richiede una valutazione medica.",
+    "faq": [
+      {
+        "q": "Cosa causa la bassa energia nelle persone sane?",
+        "a": "Nelle persone altrimenti sane, le cause più comuni di bassa energia sono: sonno insufficiente o di scarsa qualità, carenze nutrizionali (ferro, B12, vitamina D), disidratazione, dipendenza eccessiva da caffeina, elevato carico di stress, stile di vita sedentario (che paradossalmente riduce l'energia) e orari dei pasti irregolari che causano instabilità della glicemia."
+      },
+      {
+        "q": "Quando la bassa energia dovrebbe essere indagata dal punto di vista medico?",
+        "a": "Consulta un medico se: la bassa energia persiste per più di 4 settimane, dormi 7–9 ore ma ti senti ancora esausto, hai cambiamenti di peso inspiegabili o i problemi di energia sono accompagnati da altri sintomi (perdita di capelli, sensibilità al freddo, battito cardiaco accelerato). Le cause mediche comuni includono disturbi tiroidei, anemia, apnea notturna e diabete."
+      },
+      {
+        "q": "L'esercizio fisico aumenta l'energia o la consuma?",
+        "a": "L'esercizio fisico moderato e regolare aumenta l'energia di base. Questo è controintuitivo ma ben consolidato: l'esercizio aerobico aumenta la densità mitocondriale, migliora la qualità del sonno e regola il cortisolo, tutti fattori che aumentano l'energia sostenuta. La chiave è la regolarità: 3–5 sessioni a settimana di intensità moderata."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "L'energia è uno stato fisiologico complesso governato dall'interazione di sonno, alimentazione, movimento, ormoni dello stress, ritmo circadiano e funzione mitocondriale. La bassa energia cronica, distinta dalla stanchezza occasionale, indica che uno o più di questi sistemi non funziona in modo ottimale.\n\nI colpevoli più comuni sono il debito di sonno (accumulato nel corso di settimane), la disregolazione della glicemia dovuta a una cattiva alimentazione, il decondizionamento fisico, lo stress cronico (che eleva il cortisolo e sopprime gli ormoni riparatori) e la dipendenza da caffeina (che maschera l'affaticamento senza risolverlo).",
+    "howScored": "Questo quiz valuta sette dimensioni energetiche: il ripristino mattutino (indicatore della qualità del sonno), la consistenza intra-giornaliera, i modelli di crollo pomeridiano, la qualità del carburante nutrizionale, l'attività limitata dall'energia, il recupero dal riposo e la dipendenza da caffeina.\n\nPunteggi superiori a 70 indicano un'energia ben supportata con buone basi di stile di vita. 40–69 indica perdite di energia identificabili su cui vale la pena intervenire. Sotto 40 indica un'energia cronicamente esaurita che probabilmente richiede sia cambiamenti nello stile di vita che una valutazione medica.",
+    "whenToSeek": "Consulta un medico se:\n• La bassa energia persiste per più di 4 settimane nonostante un sonno adeguato\n• Dormi 8+ ore ma ti svegli esausto\n• I problemi di energia sono accompagnati da cambiamenti di peso inspiegabili, assottigliamento dei capelli, sensibilità al freddo o palpitazioni cardiache\n• Hai una storia di depressione o ansia (entrambe causano un significativo esaurimento energetico)\n• Sospetti un disturbo del sonno (russamento, respiro affannoso, risvegli frequenti)\n\nCause mediche comuni: ipotiroidismo, anemia da carenza di ferro, carenza di vitamina B12 o D, apnea ostruttiva del sonno, diabete di tipo 2.",
+    "limitations": "Questo quiz esamina i modelli energetici legati allo stile di vita. Non può diagnosticare condizioni mediche che causano affaticamento. I risultati riflettono percezioni auto-riferite e potrebbero non cogliere misure fisiologiche oggettive. Le linee di base energetiche individuali variano significativamente: ciò che è normale per una persona può indicare esaurimento in un'altra."
+  }
+}

@@ -119,5 +119,19 @@
   "registration.saved_subtitle": "Ваші результати синхронізовано. Перевірте свою електронну пошту для підтвердження.",
   "registration.mia_ready": "Mia готова",
   "registration.error.email_required": "Електронна пошта обов'язкова",
-  "registration.error.email_invalid": "Будь ласка, введіть дійсну електронну пошту"
+  "registration.error.email_invalid": "Будь ласка, введіть дійсну електронну пошту",
+  "quiz.start_btn": "Почати тест →",
+  "quiz.questions_count": "{{n}} запитань",
+  "quiz.free": "Безкоштовно",
+  "quiz.no_account": "Без реєстрації",
+  "quiz.clinically_validated": "Клінічно підтверджено",
+  "quiz.what_to_do": "Що робити далі",
+  "quiz.mia_coach": "Mia · Ваш коуч",
+  "quiz.get_plan": "Отримати персональний план від Mia →",
+  "quiz.retake": "Пройти тест знову",
+  "quiz.based_on": "На основі:",
+  "quiz.sources": "Джерела",
+  "quiz.question_of": "Запитання {{n}} з {{total}}",
+  "quiz.severity_label": "Ступінь {{severity}}",
+  "quiz.continue": "Продовжити →"
 }

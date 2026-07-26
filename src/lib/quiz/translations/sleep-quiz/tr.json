@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Uyku Kalitesi Testi (Epworth Uykululuk Ölçeği)",
+    "description": "Epworth Uykululuk Ölçeği, aşırı gündüz uykululuğunu ölçmek için dünya çapında kullanılan klinik standarttır. Uyku bozukluklarını tespit etmek için dünya genelindeki uyku uzmanları tarafından kullanılır.",
+    "medicalNote": "Yüksek bir puan, uyku apnesi veya narkolepsi gibi bir uyku bozukluğuna işaret edebilir. Endişeleniyorsanız lütfen bir sağlık uzmanına danışın."
+  },
+  "likertOptions": [
+    "Asla uyuklamam",
+    "Uyuklama ihtimalim düşük",
+    "Uyuklama ihtimalim orta",
+    "Uyuklama ihtimalim yüksek"
+  ],
+  "questions": {
+    "ess1": {
+      "text": "Oturup kitap okurken",
+      "hint": "Okurken uyuyakalmak, kronik uyku yoksunluğunun en erken belirtilerinden biridir."
+    },
+    "ess2": {
+      "text": "Televizyon izlerken",
+      "hint": "Televizyon gibi pasif aktiviteler bile, yeterli ve kaliteli uyku alıyorsanız uykululuk hissine neden olmamalıdır."
+    },
+    "ess3": {
+      "text": "Toplu taşımada hareketsiz otururken (örneğin, tiyatro veya toplantı)",
+      "hint": "Sessiz halka açık ortamlarda uyanık kalmakta zorlanmak, aşırı uykululuğun önemli bir tanısal belirtecidir."
+    },
+    "ess4": {
+      "text": "Araçta mola vermeden bir saat boyunca yolcu olarak seyahat ederken",
+      "hint": "Araba yolculuğunun sabit hareketi, standart bir uykululuk tetikleyicisidir. Burada yüksek puanlar ciddi uyku borcuna işaret eder."
+    },
+    "ess5": {
+      "text": "Öğleden sonra koşullar elverdiğinde dinlenmek için uzanırken",
+      "hint": "Öğleden sonra dinlenirken çabucak uykuya dalma yeteneği, gerçek uyku basıncı seviyenizi yansıtır."
+    },
+    "ess6": {
+      "text": "Biriyle oturup konuşurken",
+      "hint": "Bir konuşma sırasında uyuyakalmak, aşırı gündüz uykululuğunun klinik olarak anlamlı bir işaretidir."
+    },
+    "ess7": {
+      "text": "Öğle yemeğinden sonra alkol almadan sessizce otururken",
+      "hint": "Öğle yemeğinden sonraki uyku hali normaldir, ancak burada alkol olmadan yüksek uykuya dalma olasılığı bir uyku bozukluğuna işaret eder."
+    },
+    "ess8": {
+      "text": "Arabada, trafikte birkaç dakika durduğunuzda",
+      "hint": "Araba kullanırken veya trafikte dururken uyuklamak doğrudan bir güvenlik riski ve önemli bir klinik göstergedir."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Normal Uyku",
+      "description": "Gündüz uykululuk haliniz normal aralıktadır. Uykunuz sizi yeterince dinlendiriyor gibi görünüyor.",
+      "actions": [
+        "Mevcut uyku düzeninizi koruyun — tutarlılık en güçlü uyku koruyucusudur",
+        "Yatak odanızı 18°C (65°F) altında tutun — derin uyku için en uygun sıcaklık",
+        "Uyku yapısını korumak için öğleden sonra 2'den sonra kafein alımını sınırlayın"
+      ],
+      "miaHook": "Uyku temeliniz sağlam. Size bunu nasıl daha da dinlendirici hale getireceğinizi göstermek istiyorum — şu an bulunduğunuz seviyenin üzerinde hâlâ bir seviye var."
+    },
+    {
+      "label": "Hafif Aşırı Uykululuk",
+      "description": "Hafif derecede yüksek gündüz uykululuğu. Hafif uyku yoksunluğuna veya erken evre uyku sorunlarına işaret edebilir.",
+      "actions": [
+        "Önümüzdeki 2 hafta boyunca uyku sürenize 30 dakika ekleyin ve enerji seviyelerinizi takip edin",
+        "Yatak odanızı ışık ve gürültü açısından kontrol edin — ikisi de sizi tamamen uyandırmadan uykuyu böler",
+        "Bu hafta yatmadan 45 dakika önce ekranlardan uzak durun"
+      ],
+      "miaHook": "Puanınız sınırda — bu, küçük değişikliklerin şu anda büyük fark yarattığı anlamına gelir. Size uykunuzun tam olarak nerede sızdırdığını gösterebilirim."
+    },
+    {
+      "label": "Orta Derecede Aşırı Uykululuk",
+      "description": "Orta derecede aşırı gündüz uykululuğu. Bu seviye, bozulmuş sürüş yeteneği, azalmış üretkenlik ve metabolik sorunlarla ilişkilidir.",
+      "actions": [
+        "Olası bir uyku bozukluğu için bir doktora görünün — bu puanda uyku apnesi taraması uygundur",
+        "Yatmadan 3 saat önce tüm alkolü bırakın — uykuya dalmanıza yardımcı olsa bile uyku yapısını bozar",
+        "Önümüzdeki 30 gün boyunca tartışmasız bir yatma saati belirleyin ve buna bağlı kalın"
+      ],
+      "miaHook": "Bu seviyede, uykunuz her şeyi etkiliyor — kilonuzu, ruh halinizi, odaklanmanızı. Bu durumu hedef alan özel bir protokolüm var."
+    },
+    {
+      "label": "Şiddetli Aşırı Uykululuk",
+      "description": "Şiddetli gündüz uykululuğu. Bu durum kaza riskini önemli ölçüde artırır ve ciddi uyku bozukluklarıyla ilişkilidir. Tıbbi değerlendirme şiddetle önerilir.",
+      "actions": [
+        "Doktorunuzla bir uyku çalışması (polisomnografi) planlayın — bu puan araştırma gerektirir",
+        "Uykulu hissediyorsanız araç kullanmayın — bu uykululuk seviyesinde refleksleriniz bozulmuştur",
+        "Bir uzman tarafından değerlendirilene kadar ağır makine kullanmaktan kaçının"
+      ],
+      "miaHook": "Açık olmak istiyorum: bu kadar yüksek bir puan, sadece bir uyku rutininden daha fazlasını, tıbbi müdahaleyi gerektirir. Doğru ilk adımı bulmanıza yardımcı olayım."
+    }
+  ],
+  "seoContent": {
+    "intro": "Epworth Uykululuk Ölçeği (ESS), 1991 yılında Avustralya'nın Melbourne kentindeki Epworth Hastanesi'nden Dr. Murray Johns tarafından geliştirilmiştir. O zamandan beri, dünya çapında uyku laboratuvarlarında, hastanelerde ve araştırma kurumlarında kullanılan, aşırı gündüz uykululuğunu (EDS) ölçmek için küresel klinik standart haline gelmiştir.\n\nUyku günlükleri veya öznel his değerlendirmelerinin aksine, ESS, 8 spesifik durumda uykuya dalma olasılığınızı ölçer — gerçekte ne kadar uykusuz olduğunuza dair objektif bir tablo sunar. Puanlar 0 ile 24 arasında değişir. 10'un üzerindeki bir puan, klinik değerlendirme gerektiren aşırı uykululuğu gösterir.\n\nSadece ABD'de 50-70 milyon kişiyi uyku bozuklukları etkilemektedir (CDC, 2023). Tedavi edilmeyen aşırı gündüz uykululuğu, trafik kazası riskini 2,5 kat artırır, kilo alımına, depresyona, kardiyovasküler hastalıklara katkıda bulunur ve yaşam kalitesini önemli ölçüde düşürür.",
+    "faq": [
+      {
+        "q": "Epworth Uykululuk Ölçeği nedir?",
+        "a": "ESS, günlük durumlarda uykuya dalma olasılığınızı sorgulayarak gündüz uykululuğunu ölçen, geçerliliği kanıtlanmış 8 maddelik bir ankettir. Uyku uzmanları tarafından kullanılan küresel standarttır ve 1991 yılında Sleep dergisinde yayınlanmıştır."
+      },
+      {
+        "q": "Normal bir Epworth puanı nedir?",
+        "a": "0-7 arası bir puan normal kabul edilir. 8-9 puan hafif aşırı uykululuğu; 10-15 orta dereceyi; ve 16-24 şiddetliyi gösterir. Sağlıklı yetişkinlerin çoğu 4 ile 8 arasında puan alır."
+      },
+      {
+        "q": "Aşırı gündüz uykululuğuna ne sebep olur?",
+        "a": "En yaygın nedenler arasında yetersiz uyku süresi, obstrüktif uyku apnesi, narkolepsi, huzursuz bacak sendromu, kötü uyku kalitesi, ilaçlar ve depresyon bulunur."
+      },
+      {
+        "q": "Puanım 10'un üzerindeyse bir doktora görünmeli miyim?",
+        "a": "Evet. 10 veya üzeri bir puan klinik değerlendirme gerektirir. Doktorunuz, uyku apnesi veya diğer bozuklukları ekarte etmek için polisomnografi (uyku çalışması) isteyebilir."
+      },
+      {
+        "q": "Kötü uyku kalitesi kilo alımına neden olabilir mi?",
+        "a": "Evet. Uyku yoksunluğu, açlık hormonları olan ghrelin ve leptini düzensizleştirerek iştahı ve yüksek kalorili gıdalara olan isteği artırır. Çalışmalar, gecede 6 saatten az uyumanın obezite riskini %23 artırdığını göstermektedir."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Aşırı gündüz uykululuğu (EDS), kişinin gün içinde uykulu hissettiği ve uyanıklığın beklendiği durumlarda uyanık kalmakta zorlandığı bir durumdur. Küresel nüfusun yaklaşık %20'sini etkiler ve normal yorgunluktan farklıdır — işlevselliği bozan kalıcı, patolojik bir uykululuk seviyesidir.\n\nEDS, obstrüktif uyku apnesi (en yaygın neden), narkolepsi, idiyopatik hipersomni ve sirkadiyen ritim bozuklukları dahil olmak üzere birçok uyku bozukluğunun birincil semptomudur. Ayrıca, milyonlarca insanı etkileyen en önlenebilir neden olan kronik yetersiz uykudan da kaynaklanabilir.\n\nEpworth Uykululuk Ölçeği, 8 standart durumda uykuya dalma olasılığını değerlendirerek EDS'yi objektif olarak ölçmek için tasarlanmıştır. 'Yorgun hissediyor musunuz?' diye sormak yerine, ESS, Çoklu Uyku Gecikmesi Testi (MSLT) gibi fizyolojik ölçümlerle güçlü bir şekilde ilişkili olan uykululuğun davranışsal kanıtlarını yakalar.",
+    "clinicalBackground": "Epworth Uykululuk Ölçeği, Dr. Murray Johns tarafından geliştirilmiş ve 1991 yılında Sleep dergisinde yayınlanmıştır. Dr. Johns, Melbourne'deki Epworth Hastanesi'nde, uykululuğa ilişkin öznel değerlendirmelerin güvenilmez olduğunu fark eden bir doktordu. ESS'yi, uykuyu teşvik edici özellikleri sistematik olarak değişen durumlarda uykuya dalma olasılığını ölçmek için tasarladı.\n\nOrijinal geçerlilik çalışması, objektif uykululuk ölçümleriyle (MSLT, r = 0.51) güçlü bir korelasyon ve yüksek test-tekrar test güvenilirliği (r = 0.82) göstermiştir. ESS, o zamandan beri düzinelerce dilde ve hasta popülasyonunda geçerliliği kanıtlanmıştır.\n\nArtık küresel olarak uyku bozukluğu taraması için en yaygın kullanılan klinik araçtır; Amerikan Uyku Tıbbı Akademisi (AASM), İngiliz Uyku Derneği tarafından onaylanmış ve dünya çapında uyku apnesi, narkolepsi ve hipersomni için klinik kılavuzlara dahil edilmiştir.",
+    "howScored": "Epworth Uykululuk Ölçeği, 8 farklı durumda 0–3 arası bir ölçekte uykuya dalma olasılığınızı sorgular:\n• 0: Asla uyuklamam\n• 1: Hafif uyuklama ihtimali\n• 2: Orta derecede uyuklama ihtimali\n• 3: Yüksek uyuklama ihtimali\n\nToplam puanlar 0 ile 24 arasında değişir. Klinik eşik değerler:\n• 0–7: Normal aralık (sağlıklı yetişkinlerde ortalama 5–6'dır)\n• 8–9: Sınırda/hafif aşırı uykululuk\n• 10–15: Orta derecede aşırı gündüz uykululuğu — klinik değerlendirme önerilir\n• 16–24: Şiddetli aşırı gündüz uykululuğu — acil değerlendirme önerilir\n\n10 ve üzeri puan, genel popülasyonda klinik olarak anlamlı uyku bozukluklarını belirlemede %78 duyarlılık ve %79 özgüllüğe sahiptir.",
+    "interpretation": "**Puan 0–7 (Normal):** Uykunuz sizi yeterince dinlendiriyor. Sağlıklı bir yetişkinin ortalama puanı 5–6'dır. Uyku düzeninizi korumaya ve uyku kalitenizi iyileştirmeye odaklanın.\n\n**Puan 8–9 (Hafif/Sınırda):** Normalin biraz üzerinde. Bu durum, birikmiş uyku borcunu, düzensiz uyku saatlerini veya erken evre uyku sorunlarını yansıtabilir. Davranış değişiklikleri — tutarlı uyku saatleri, uyku hijyeni iyileştirmeleri — bu seviyede genellikle yeterlidir.\n\n**Puan 10–15 (Orta):** Bu aralık klinik olarak anlamlıdır. Araştırmalar, bu seviyede sürüş performansının, %0.05 kan alkol seviyesine eşdeğer şekilde bozulduğunu göstermektedir. Bilişsel işlev, ruh hali, metabolizma ve bağışıklık işlevi ölçülebilir şekilde etkilenir. Özellikle uyku apnesi taraması için tıbbi değerlendirme uygundur.\n\n**Puan 16–24 (Şiddetli):** Bu uykululuk seviyesi ciddi bir güvenlik ve sağlık sorununu temsil eder. Motorlu taşıt kazası riski ortalamaya göre 2,5 kat daha yüksektir. Uyku çalışması da dahil olmak üzere acil tıbbi değerlendirme şiddetle önerilir.",
+    "whenToSeek": "Aşağıdaki durumlarda bir sağlık uzmanına danışın:\n\n• ESS puanınız 10 veya daha yüksekse\n• Size yüksek sesle horladığınız veya uyurken nefesinizin durduğu söylendiyse\n• Tam bir gece uykusundan sonra dinlenmemiş hissediyorsanız\n• Gün içinde istemsiz olarak uykuya dalıyorsanız\n• Uykululuğunuz işinizi, araba kullanmanızı veya ilişkilerinizi etkiliyorsa\n• Yatak partneriniz olağandışı bacak hareketleri veya nefes nefese kalma gözlemlediyse\n\nAcil yardım alın:\n• Uykuluyken araba kullanırken ramak kala bir kaza geçirdiyseniz\n• Duygularla tetiklenen ani kas güçsüzlüğü yaşıyorsanız (katapleksi — narkolepsi belirtisi)\n• Yeterli uyku fırsatına rağmen işte uyanık kalamıyorsanız",
+    "limitations": "**1. Öznel hatırlama:** ESS, uyuklama olasılığını algılamayı ölçer; bu durum öz farkındalık ve hatırlama yanlılığından etkilenebilir. Şiddetli uyku bozukluğu olan kişiler, kronik yorgunluk temel seviyeleri haline geldiği için uykululuklarını bazen hafife alırlar.\n\n**2. Durumsal değişkenlik:** Herkes 8 durumun tümüyle düzenli olarak karşılaşmaz. Örneğin, hiç araba kullanmayan kişiler 8. maddeyi doğru yanıtlamakta zorlanabilir.\n\n**3. Nedeni belirlemez:** Yüksek bir ESS puanı aşırı uykululuğu gösterir ancak nedenini teşhis etmez. Uyku apnesi, narkolepsi, ilaç etkileri ve basit uyku yoksunluğu benzer puanlar üretebilir.\n\n**4. 12 yaş altı çocuklar için geçerli değildir:** ESS, yetişkin popülasyonlarda geliştirilmiş ve doğrulanmıştır. Pediatrik uykululuk farklı araçlarla değerlendirilir.\n\n**5. Anlık ölçüm:** ESS, yakın zamandaki uyku deneyiminizi yansıtır. Seyahat, hastalık, vardiyalı çalışma ve yaşam olayları, kronik bir bozukluğu göstermeden puanları geçici olarak yükseltebilir."
+  }
+}

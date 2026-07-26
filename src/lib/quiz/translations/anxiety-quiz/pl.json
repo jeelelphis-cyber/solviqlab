@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Test poziomu lęku",
+    "description": "Zrozum, jak lęk objawia się w Twoim życiu — i ile Twojej codziennej energii po cichu pochłania."
+  },
+  "yesnoOptions": [
+    "Tak",
+    "Nie"
+  ],
+  "questions": {
+    "anx1": {
+      "text": "Jak często Twój umysł przyspiesza lub wpada w spiralę myśli „a co jeśli”, których nie możesz zatrzymać?",
+      "options": [
+        "Rzadko — zazwyczaj potrafię przekierować myśli",
+        "Czasami — w stresujących okresach",
+        "Często — zdarza się to większość dni",
+        "Prawie stale — to wyczerpujące"
+      ]
+    },
+    "anx2": {
+      "text": "Czy unikasz pewnych sytuacji lub osób, ponieważ wywołują u Ciebie lęk?"
+    },
+    "anx3": {
+      "text": "Jak często odczuwasz fizyczne napięcie — ucisk w klatce piersiowej, płytki oddech, gulę w żołądku?",
+      "scaleLabels": {
+        "min": "Prawie nigdy",
+        "max": "Bardzo często"
+      }
+    },
+    "anx4": {
+      "text": "Czy martwienie się o przyszłość przeszkadza Ci w cieszeniu się teraźniejszością?"
+    },
+    "anx5": {
+      "text": "Jak zazwyczaj reagujesz, gdy wydarzy się coś niespodziewanego?",
+      "options": [
+        "Spokojnie — dość dobrze się dostosowuję",
+        "Jestem trochę wytrącony z równowagi, ale szybko wracam do siebie",
+        "Wytrąca mnie to z równowagi na dłuższy czas",
+        "Wpędza mnie to w spiralę"
+      ]
+    },
+    "anx6": {
+      "text": "Czy trudno Ci zasnąć, ponieważ Twoje myśli nie chcą się uspokoić?",
+      "options": [
+        "Nie — śpię dobrze",
+        "Sporadycznie — może raz w tygodniu",
+        "Często — kilka nocy w tygodniu",
+        "Prawie każdej nocy"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Niski poziom lęku",
+      "description": "Radzisz sobie z niepewnością i stresem w zdrowy sposób. Twój układ nerwowy nie jest w stanie chronicznego alarmu.",
+      "actions": [
+        "Utrzymuj obecne nawyki zarządzania stresem — to, co robisz, działa",
+        "Wykonuj jedną praktykę uważności tygodniowo, aby budować odporność na trudniejsze okresy",
+        "Utrzymuj kontakt z osobami, które Cię uziemiają — wsparcie społeczne jest najsilniejszym buforem przed lękiem"
+      ],
+      "miaHook": "Twój poziom lęku jest zdrowy — porozmawiajmy o tym, jak go utrzymać, gdy życie staje się trudniejsze."
+    },
+    {
+      "label": "Umiarkowany poziom lęku",
+      "description": "Lęk jest obecny w Twoim życiu i wpływa na niektóre Twoje wybory oraz przyjemność. Wzorce są do opanowania, ale warto się nimi zająć.",
+      "actions": [
+        "Spróbuj 5-minutowej codziennej praktyki oddechowej — oddychanie kwadratowe (4-4-4-4) mierzalnie obniża poziom kortyzolu w ciągu kilku minut",
+        "Zidentyfikuj jedno zachowanie unikowe i zrób jeden mały krok w kierunku zmierzenia się z nim w tym tygodniu",
+        "Ogranicz kofeinę do przed południem — wzmacnia ona fizjologiczną reakcję lękową"
+      ],
+      "miaHook": "Zauważyłem kilka wyraźnych wzorców lęku w Twoich odpowiedziach — mam kilka ukierunkowanych narzędzi, które mogą go zauważalnie zmniejszyć."
+    },
+    {
+      "label": "Wysoki poziom lęku",
+      "description": "Lęk znacząco wpływa na Twoje codzienne życie. Ten poziom ciągłej czujności jest męczący i wymaga poważnej uwagi.",
+      "actions": [
+        "Porozmawiaj z terapeutą lub lekarzem — CBT (terapia poznawczo-behawioralna) ma najsilniejsze podstawy naukowe w leczeniu lęku i często przynosi efekty w ciągu 6–8 sesji",
+        "Natychmiast usuń największe dzienne źródło kofeiny — nawet ta pojedyncza zmiana mierzalnie zmniejsza lęk",
+        "Powiedz jednej zaufanej osobie, przez co przechodzisz — izolacja nasila lęk"
+      ],
+      "miaHook": "To, z czym żyjesz, jest prawdziwe — silny lęk jest wyczerpujący i izolujący. Pokażę Ci, od czego zacząć go rozładowywać."
+    }
+  ],
+  "seoContent": {
+    "intro": "Lęk jest najpowszechniejszym zaburzeniem psychicznym na świecie, dotykającym około 284 milionów ludzi globalnie (Our World in Data, 2019). Mimo to większość osób żyjących z lękiem nie szuka pomocy — albo dlatego, że go nie rozpoznają, albo dlatego, że znormalizowali jego skutki.\n\nTen quiz ocenia sześć kluczowych wymiarów lęku: wzorce poznawcze (gonitwa myśli, zamartwianie się), wzorce behawioralne (unikanie), objawy fizyczne (napięcie, oddychanie), wpływ na sen, reaktywność emocjonalną oraz zakłócanie chwili obecnej. Twoje wyniki dadzą Ci spersonalizowaną mapę tego, jak lęk objawia się w Twoim życiu.",
+    "faq": [
+      {
+        "q": "Jaka jest różnica między normalnym zamartwianiem się a lękiem?",
+        "a": "Normalne zamartwianie się jest proporcjonalne do realnego zagrożenia, tymczasowe i nie upośledza znacząco codziennego funkcjonowania. Lęk obejmuje nadmierne zamartwianie się, które jest trudne do opanowania, często nieproporcjonalne do rzeczywistego ryzyka i trwale zakłóca codzienne życie, sen lub relacje."
+      },
+      {
+        "q": "Czy lęk może powodować objawy fizyczne?",
+        "a": "Tak. Lęk aktywuje współczulny układ nerwowy (reakcja walki lub ucieczki), powodując mierzalne skutki fizyczne: przyspieszone tętno, płytki oddech, napięcie mięśni, zaburzenia trawienia i podwyższony poziom kortyzolu. Przewlekły lęk prowadzi do długoterminowych skutków zdrowotnych, w tym zwiększonego ryzyka sercowo-naczyniowego."
+      },
+      {
+        "q": "Jakie metody leczenia lęku są skuteczne?",
+        "a": "Terapia poznawczo-behawioralna (CBT) jest najbardziej opartą na dowodach metodą leczenia, wykazując znaczną poprawę u 60–80% osób. Terapia ekspozycyjna jest skuteczna w przypadku lęku opartego na unikaniu. Leki (SSRI, SNRI) są odpowiednie w przypadkach umiarkowanych do ciężkich, często w połączeniu z terapią."
+      },
+      {
+        "q": "Czy kofeina nasila lęk?",
+        "a": "Tak. Kofeina blokuje receptory adenozyny i zwiększa poziom kortyzolu oraz adrenaliny — tę samą ścieżkę fizjologiczną, którą aktywuje lęk. U osób podatnych na lęk kofeina wyraźnie nasila objawy. Ograniczenie kofeiny to jedna z najszybszych pojedynczych zmian obniżających lęk."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Lęk jest naturalną ludzką emocją, która staje się problemem, gdy jest nadmierna, uporczywa i zakłóca codzienne życie. U podstaw lęku leży błędne działanie mózgowego systemu wykrywania zagrożeń — traktowanie normalnych sytuacji jako niebezpiecznych i utrzymywanie ciała w stanie fizjologicznej gotowości, który jest wyczerpujący i nie do utrzymania.\n\nLęk objawia się na trzy sposoby: poznawczo (gonitwa myśli, katastrofizacja, spirale zamartwiania się), fizycznie (napięcie mięśni, kołatanie serca, płytki oddech, problemy trawienne) i behawioralnie (unikanie, szukanie otuchy, zachowania kompulsywne). Ten quiz obejmuje wszystkie trzy wymiary.",
+    "howScored": "Ten quiz ocenia sześć opartych na dowodach wymiarów lęku: wzorce myślowe, unikanie behawioralne, objawy napięcia fizycznego, zamartwianie się przyszłością, reaktywność na nieoczekiwane zdarzenia oraz wpływ na sen. Pytania wykorzystują mieszankę odpowiedzi skalowanych i tak/nie, aby uchwycić zarówno częstotliwość, jak i wpływ.\n\nWyniki są normalizowane w skali 0–100. Powyżej 70 oznacza niski poziom lęku z dobrymi zasobami radzenia sobie. 40–69 oznacza umiarkowane wzorce lęku, które warto rozwiązać. Poniżej 40 oznacza wysoki poziom lęku, który znacząco wpływa na codzienne funkcjonowanie.",
+    "whenToSeek": "Rozważ rozmowę ze specjalistą zdrowia psychicznego, jeśli:\n• Lęk wpływa na Twój sen, pracę lub relacje\n• Unikasz sytuacji lub ludzi z powodu lęku\n• Fizyczne objawy lęku (przyspieszone bicie serca, ucisk w klatce piersiowej) są częste\n• Używasz alkoholu lub innych substancji, aby radzić sobie z lękiem\n• Lęk utrzymuje się dłużej niż 6 miesięcy\n\nWynik 10+ w skali GAD-7 (kliniczna skala lęku) wskazuje, że wskazana jest ocena kliniczna.",
+    "limitations": "Ten quiz jest narzędziem przesiewowym, a nie oceną kliniczną. Nie rozróżnia różnych zaburzeń lękowych (zaburzenie lękowe uogólnione, fobia społeczna, zaburzenie paniczne, PTSD, OCD). Diagnoza kliniczna wymaga oceny przez licencjonowanego specjalistę zdrowia psychicznego.\n\nObjawy lęku nakładają się również znacząco z depresją, ADHD, zaburzeniami snu i niektórymi schorzeniami (problemy z tarczycą, choroby układu krążenia). Kompleksowa ocena wyklucza te czynniki współwystępujące."
+  }
+}

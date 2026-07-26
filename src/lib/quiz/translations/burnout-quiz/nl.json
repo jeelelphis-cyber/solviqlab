@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Burnout Risico Quiz",
+    "description": "Burnout ontstaat niet van de ene op de andere dag. Controleer waar u zich op het spectrum bevindt voordat het moeilijker wordt om terug te keren."
+  },
+  "questions": {
+    "bu1": {
+      "text": "Voelt u zich emotioneel uitgeput door uw werk of dagelijkse verantwoordelijkheden — zelfs voordat de dag begint?",
+      "options": [
+        "Nee — ik voel me over het algemeen betrokken",
+        "Soms — in zware weken",
+        "Vaak — de meeste weken voelen zwaar",
+        "Bijna altijd — ik functioneer op mijn laatste reserves"
+      ]
+    },
+    "bu2": {
+      "text": "Bent u motivatie of enthousiasme verloren voor dingen waar u vroeger van genoot?"
+    },
+    "bu3": {
+      "text": "Hoe effectief voelt u zich de laatste tijd op het werk of in uw belangrijkste verantwoordelijkheden?",
+      "options": [
+        "Zeer effectief — ik lever mijn beste werk",
+        "Redelijk — ik krijg dingen gedaan",
+        "Onder mijn gebruikelijke niveau — ik merk de achteruitgang",
+        "Ik doe alleen de noodzakelijke handelingen"
+      ]
+    },
+    "bu4": {
+      "text": "Merkt u dat u cynischer of afstandelijker wordt tegenover mensen om u heen?"
+    },
+    "bu5": {
+      "text": "Hoe vaak neemt u gedurende de dag echte pauzes — niet alleen scrollen, maar daadwerkelijke rust?",
+      "scaleLabels": {
+        "min": "Nooit",
+        "max": "Meerdere keren per dag"
+      }
+    },
+    "bu6": {
+      "text": "Wanneer u aan uw komende week denkt, wat is dan uw eerste gevoel?",
+      "options": [
+        "Energiek — ik heb dingen waar ik naar uitkijk",
+        "Neutraal — gewoon weer een week",
+        "Dread — het voelt als te veel",
+        "Dread — ik zie er geen licht in"
+      ]
+    },
+    "bu7": {
+      "text": "Heb je het gevoel dat het nooit genoeg is, hoe veel je ook doet?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Laag risico op burn-out",
+      "description": "Je houdt je goed staande. Je energiereserves zijn intact en je hebt gezonde buffers opgebouwd.",
+      "actions": [
+        "Blijf je herstelgewoonten onderhouden — wat je nu beschermt, is het waard om te benoemen en te behouden",
+        "Bouw elke week één proactieve herstelpraktijk in (niet alleen reactieve rust)",
+        "Check maandelijks bij jezelf in — burn-out bouwt zich langzaam op en vroege bewustwording is alles"
+      ],
+      "miaHook": "Je bent in goede vorm — laten we nu bespreken hoe je dit zo kunt houden wanneer de druk toeneemt."
+    },
+    {
+      "label": "Vroege waarschuwingssignalen",
+      "description": "Je vertoont enkele vroege signalen van burn-out. Dit is het ideale moment om in te grijpen — voordat herstel moeilijker wordt.",
+      "actions": [
+        "Haal deze week één ding van je bord — burn-out reageert in dit stadium op vermindering, niet op optimalisatie",
+        "Voeg één oprechte herstelactiviteit toe die niets met productiviteit te maken heeft",
+        "Vertel iemand die je vertrouwt dat je de druk voelt — sociale steun vertraagt de voortgang van burn-out"
+      ],
+      "miaHook": "Ik zie vroege burn-outpatronen in je antwoorden — het goede nieuws is dat dit stadium goed te herstellen is met de juiste aanpassingen."
+    },
+    {
+      "label": "Burn-outzone",
+      "description": "Je antwoorden wijzen op een aanzienlijke burn-out. Dit heeft invloed op je gezondheid, relaties en productiviteit — het is geen zwakte, maar een echte fysiologische toestand.",
+      "actions": [
+        "Praat met een arts of therapeut — burn-out op dit niveau heeft meetbare fysiologische effecten en heeft baat bij professionele ondersteuning",
+        "Neem deze week minstens één volledige dag volledig vrij van alle werkgerelateerde activiteiten — geen 'zachte' dag, maar een volledige pauze",
+        "Identificeer de grootste energiebron die je uitput en begin met het proces om deze te verminderen of te verwijderen — zelfs als het onmogelijk lijkt"
+      ],
+      "miaHook": "Wat je ervaart is echt en serieus — ik wil je helpen een herstelpad uit te stippelen dat niet vereist dat je alles opgeeft."
+    }
+  ],
+  "seoContent": {
+    "intro": "Burn-out is een toestand van chronische werkstress die wordt gekenmerkt door drie dimensies: emotionele uitputting, depersonalisatie (cynisme en afstandelijkheid) en een verminderd gevoel van persoonlijke voldoening. Voor het eerst beschreven door psycholoog Herbert Freudenberger in 1974 en formeel erkend door de WHO in 2019, wordt burn-out nu geclassificeerd als een beroepsgebonden fenomeen dat naar schatting 67% van de werknemers op enig moment in hun carrière treft.\n\nBurn-out ontstaat niet plotseling — het ontwikkelt zich gedurende maanden via een progressieve cyclus van overmatige inzet, uitputting en terugtrekking. Deze quiz beoordeelt waar jij je op het spectrum bevindt, zodat je kunt handelen voordat herstel moeilijker wordt.",
+    "faq": [
+      {
+        "q": "Wat is het verschil tussen burn-out en depressie?",
+        "a": "Burn-out is voornamelijk werkcontext-specifiek en verbetert aanzienlijk met rust, vakantie en het wegnemen van stressoren. Depressie is doordringend in alle levensdomeinen en verdwijnt niet met rust alleen. Ernstige burn-out kan echter een klinische depressie uitlokken. Als symptomen aanhouden buiten werkcontexten, is klinische evaluatie aangewezen."
+      },
+      {
+        "q": "Kun je herstellen van een burn-out?",
+        "a": "Ja. Herstel van burn-out is mogelijk en goed gedocumenteerd. Vroege stadia van burn-out (milde waarschuwingssignalen) herstellen doorgaans binnen weken met passende rust en het stellen van grenzen. Ernstige burn-out kan 3–12 maanden van aanhoudend herstel vergen. De belangrijkste factoren zijn: het verminderen van eisen, het verhogen van herstelactiviteiten en het aanpakken van de onderliggende oorzaken."
+      },
+      {
+        "q": "Wat veroorzaakt burn-out?",
+        "a": "Onderzoek (Maslach & Leiter, 2016) identificeert zes werkgerelateerde mismatches die burn-out veroorzaken: overmatige werkdruk, gebrek aan controle, onvoldoende beloning, verstoorde gemeenschapszin, oneerlijkheid en conflicterende waarden. Persoonlijke factoren zoals perfectionisme, moeite met het stellen van grenzen en slechte herstelgewoonten dragen ook bij."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Burn-out is een syndroom dat voortkomt uit chronische werkstress die niet succesvol is aangepakt. De WHO (ICD-11, 2019) definieert het aan de hand van drie dimensies: gevoelens van energieverlies of uitputting, toegenomen mentale afstand tot het werk of gevoelens van negativisme of cynisme met betrekking tot het werk, en verminderde professionele effectiviteit.\n\nBurn-out ontwikkelt zich in progressieve stadia — van enthousiasme en overmatige inzet via stagnatie, frustratie en apathie — en duurt doorgaans 6–18 maanden om de volledig opgebrande toestand te bereiken. Herstel vergt dezelfde tijdsinvestering in omgekeerde richting.",
+    "howScored": "Deze quiz beoordeelt zeven burn-outindicatoren, ontleend aan de Maslach Burnout Inventory (het gouden standaard klinische instrument) en de Copenhagen Burnout Inventory: emotionele uitputting, verlies van motivatie, verminderde effectiviteit, depersonalisatie/cynisme, herstelgedrag, anticiperende angst en het 'nooit genoeg'-gevoel.\n\nScores boven de 70 duiden op een laag risico met gezonde buffers. 40–69 duidt op vroege waarschuwingssignalen die goed reageren op interventie. Onder de 40 duidt op significante burn-out die actief herstel vereist.",
+    "whenToSeek": "Zoek professionele ondersteuning als:\n• Je langer dan 4 weken in de burn-outzone zit\n• Lichamelijke symptomen zijn verschenen (chronische hoofdpijn, frequente ziektes, slaapverstoring)\n• Burn-out je persoonlijke relaties beïnvloedt, niet alleen werk\n• Je alcohol of middelen gebruikt om met werkdruk om te gaan\n• Je naast burn-out ook symptomen van depressie ervaart\n\nEen huisarts of therapeut gespecialiseerd in arbeidsgezondheid kan passende ondersteuning bieden.",
+    "limitations": "Deze quiz meet het risico op burn-out, niet een klinische burn-outdiagnose. De Maslach Burnout Inventory (MBI) is de klinische standaard en vereist professionele afname. Resultaten hier wijzen op patronen en risiconiveaus, niet op diagnostische conclusies.\n\nBurn-outsymptomen overlappen aanzienlijk met depressie, angststoornissen, ADHD en bepaalde medische aandoeningen (schildklierdisfunctie, bloedarmoede). Als symptomen ernstig zijn of aanhouden in meerdere levensdomeinen, wordt klinische evaluatie aanbevolen."
+  }
+}

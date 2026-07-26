@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "title": "Questionario sul livello di stress (PSS-10)",
+    "description": "La scala dello stress percepito è lo strumento di misurazione dello stress più utilizzato al mondo. Utilizzato nelle ricerche di Harvard, Stanford, CDC e NIH. Richiede 3 minuti.",
+    "medicalNote": "Questo misura lo stress percepito, non una diagnosi clinica. Lo stress cronico elevato rappresenta un serio rischio per la salute. Si prega di cercare supporto professionale se sopraffatti."
+  },
+  "likertOptions": [
+    "Mai",
+    "Quasi mai",
+    "A volte",
+    "Abbastanza spesso",
+    "Molto spesso"
+  ],
+  "reverseLikertOptions": [
+    "Mai",
+    "Quasi mai",
+    "A volte",
+    "Abbastanza spesso",
+    "Molto spesso"
+  ],
+  "questions": {
+    "pss1": {
+      "text": "Nell'ultimo mese, con quale frequenza ti sei sentito turbato a causa di qualcosa accaduto inaspettatamente?",
+      "hint": "La reattività emotiva a eventi imprevisti è uno degli indicatori più forti del carico di stress complessivo."
+    },
+    "pss2": {
+      "text": "Nell'ultimo mese, con quale frequenza hai sentito di non riuscire a controllare le cose importanti della tua vita?",
+      "hint": "La percezione di mancanza di controllo è il nucleo psicologico dello stress: attiva la risposta del cortisolo."
+    },
+    "pss3": {
+      "text": "Nell'ultimo mese, con quale frequenza ti sei sentito nervoso e stressato?",
+      "hint": "L'attivazione nervosa cronica mantiene il sistema nervoso simpatico in uno stato di allerta quasi costante."
+    },
+    "pss4": {
+      "text": "Nell'ultimo mese, con quale frequenza ti sei sentito sicuro della tua capacità di gestire i tuoi problemi personali?",
+      "hint": "L'autoefficacia è un fattore di protezione contro lo stress — questo elemento ha punteggio invertito. Maggiore fiducia = minore stress."
+    },
+    "pss5": {
+      "text": "Nell'ultimo mese, con quale frequenza hai sentito che le cose stavano andando per il verso giusto?",
+      "hint": "La valutazione positiva della direzione della propria vita è un fattore protettivo. Questo elemento ha punteggio invertito."
+    },
+    "pss6": {
+      "text": "Nell'ultimo mese, con quale frequenza hai scoperto di non riuscire a far fronte a tutte le cose che dovevi fare?",
+      "hint": "Sentirsi sopraffatti dal carico di compiti è un indicatore diretto di stress e un precursore del burnout."
+    },
+    "pss7": {
+      "text": "Nell'ultimo mese, con quale frequenza sei riuscito a controllare le irritazioni nella tua vita?",
+      "hint": "La regolazione delle irritazioni riflette la capacità di controllo emotivo — questo elemento ha punteggio invertito."
+    },
+    "pss8": {
+      "text": "Nell'ultimo mese, con quale frequenza ti sei sentito in controllo della situazione?",
+      "hint": "Un senso di padronanza sulle circostanze è una delle risorse fondamentali per contrastare lo stress."
+    },
+    "pss9": {
+      "text": "Nell'ultimo mese, con quale frequenza ti sei arrabbiato a causa di cose che erano al di fuori del tuo controllo?",
+      "hint": "La rabbia verso eventi incontrollabili attiva l'asse HPA e aumenta il cortisolo — un biomarcatore diretto dello stress."
+    },
+    "pss10": {
+      "text": "Nell'ultimo mese, con quale frequenza hai sentito che le difficoltà si accumulavano così tanto da non riuscire a superarle?",
+      "hint": "Il sovraccarico cognitivo — quando i problemi sembrano insormontabili — è il più forte predittore di burnout."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Stress Basso",
+      "description": "Il tuo stress percepito è basso. Hai buone risorse di coping e ti senti in gran parte in controllo della tua vita.",
+      "actions": [
+        "Mantieni le tue abitudini di gestione dello stress — la costanza conta più dell'intensità",
+        "Pratica un'attività di recupero proattiva a settimana (passeggiata nella natura, sauna, tempo sociale)",
+        "Documenta ciò che funziona per te ora — ti sarà utile tornare a questi appunti durante i periodi più difficili"
+      ],
+      "miaHook": "Il tuo stress è ben gestito in questo momento. Voglio aiutarti a costruire resilienza prima che arrivi il prossimo periodo difficile."
+    },
+    {
+      "label": "Stress Moderato",
+      "description": "Stress percepito moderato. Stai affrontando la situazione, ma senti la pressione. Senza interventi, questo può degenerare in esaurimento.",
+      "actions": [
+        "Aggiungi un rituale di decompressione quotidiano di 5 minuti dopo il lavoro: una passeggiata, un esercizio di respirazione o una pagina di diario.",
+        "Identifica i tuoi 3 principali fattori di stress questa settimana ed elimina o riduci uno di essi.",
+        "Il sonno è il tuo strumento più potente per il recupero dallo stress: dai priorità in modo non negoziabile a 7-8 ore."
+      ],
+      "miaHook": "Lo stress moderato è la condizione in cui la maggior parte delle persone vive senza rendersi conto che le sta lentamente esaurendo. Ho un protocollo che colpisce esattamente il punto in cui il tuo punteggio mostra il logoramento."
+    },
+    {
+      "label": "Stress Elevato",
+      "description": "Stress percepito elevato. A questo livello, lo stress sta danneggiando in modo significativo la tua salute fisica e mentale. La ricerca collega punteggi PSS superiori a 27 a un aumento del rischio di depressione, malattie cardiache e soppressione immunitaria.",
+      "actions": [
+        "Rimuovi un impegno importante dalla tua vita questa settimana, non tra un mese, ma questa settimana.",
+        "Parla oggi stesso con un terapeuta, un medico o una persona di fiducia del tuo carico di stress.",
+        "Smetti di assumere caffeina dopo mezzogiorno e alcol completamente: entrambi peggiorano la risposta del cortisolo."
+      ],
+      "miaHook": "Il tuo punteggio si trova in un intervallo in cui il tuo corpo sta subendo un danno fisiologico reale. Voglio aiutarti ad agire immediatamente, non con un piano di 30 giorni, ma oggi."
+    }
+  ],
+  "seoContent": {
+    "intro": "La Perceived Stress Scale (PSS-10) è stata sviluppata dal Dr. Sheldon Cohen presso la Carnegie Mellon University nel 1983. È lo strumento psicologico più utilizzato per misurare la percezione dello stress nella ricerca e in ambito clinico, impiegato da CDC, NIH, Harvard e Stanford in migliaia di studi.\n\nA differenza delle misure di stress che contano gli eventi stressanti, la PSS-10 misura quanto ti senti stressato: la tua valutazione psicologica della tua situazione. Questo la rende particolarmente accurata perché due persone possono vivere gli stessi eventi e avere risposte allo stress completamente diverse.\n\nI punteggi vanno da 0 a 40. L'americano medio ottiene un punteggio di 13 (Cohen et al., 2016). Punteggi superiori a 27 sono associati a un aumento significativo del rischio di depressione, malattie cardiovascolari e soppressione del sistema immunitario (APA Stress in America, 2023). Comprendere il tuo livello di stress è il primo passo per gestirlo.",
+    "faq": [
+      {
+        "q": "Cos'è la PSS-10?",
+        "a": "La Perceived Stress Scale (PSS-10) è un questionario validato di 10 item sviluppato dal Dr. Sheldon Cohen nel 1983. È lo strumento più utilizzato a livello globale nella ricerca sullo stress, misurando quanto ti senti stressato, sopraffatto e fuori controllo."
+      },
+      {
+        "q": "Qual è un punteggio normale per la PSS-10?",
+        "a": "Il punteggio medio americano per la PSS-10 è di circa 13. Punteggi 0–13 indicano stress basso, 14–26 stress moderato e 27–40 stress elevato. Le donne tendono a ottenere punteggi leggermente più alti degli uomini in tutte le fasce d'età."
+      },
+      {
+        "q": "Perché alcune domande hanno un punteggio invertito?",
+        "a": "Quattro item (4, 5, 7, 8) riguardano sentimenti positivi: fiducia e controllo. Questi vengono valutati in modo inverso perché sentirsi più fiduciosi o in controllo indica un livello di stress inferiore. Questa è una procedura standard della PSS-10 e viene gestita automaticamente in questo quiz."
+      },
+      {
+        "q": "Lo stress può causare problemi di salute fisica?",
+        "a": "Sì. Lo stress cronico elevato aumenta il cortisolo, sopprime il sistema immunitario, aumenta l'infiammazione e aumenta significativamente il rischio di malattie cardiache, diabete, depressione e obesità. Il punteggio PSS-10 superiore a 27 è associato a questi esiti in molteplici studi longitudinali."
+      },
+      {
+        "q": "Con quale frequenza dovrei ripetere questo quiz?",
+        "a": "Ripetere il test mensilmente ti consente di monitorare le tendenze. Lo stress tipicamente fluttua in base alle circostanze della vita, ma punteggi cronicamente alti (27+) per 2 o più mesi richiedono supporto professionale."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Lo stress è la risposta fisiologica e psicologica del corpo a richieste che superano le risorse di coping percepite. In brevi episodi, lo stress è adattivo — affina la concentrazione e mobilita energia. Lo stress cronico, tuttavia, è un serio pericolo per la salute.\n\nLa Perceived Stress Scale misura lo stress percepito — la tua esperienza soggettiva di sentirsi sopraffatto, fuori controllo e incapace di far fronte. Questo è distinto dal conteggio oggettivo degli stressor (quante cose negative sono successe) perché due persone che affrontano circostanze identiche possono avere risposte allo stress molto diverse in base alle loro risorse di coping, al supporto sociale e ai modelli di valutazione cognitiva.\n\nIl PSS-10 è lo standard di riferimento globale per misurare questa esperienza soggettiva. È stato validato su centinaia di migliaia di partecipanti in oltre 60 paesi ed è utilizzato nella ricerca clinica da ogni principale istituzione sanitaria.",
+    "clinicalBackground": "Il Dr. Sheldon Cohen ha sviluppato il PSS nel 1983 presso la Carnegie Mellon University come parte della ricerca sullo stress e la suscettibilità alle malattie infettive. La scala è stata progettata per misurare il grado in cui le situazioni della vita vengono valutate come stressanti.\n\nIl PSS-10 (versione a 10 item) è il formato più comunemente utilizzato. Consiste di 6 item formulati negativamente (risposte più alte = più stress) e 4 item formulati positivamente che vengono invertiti nel punteggio. Questo formato bidirezionale riduce il bias di acquiescenza e misura sia lo stress che le risorse di coping.\n\nIl PSS è stato tradotto in oltre 50 lingue ed è utilizzato in ricerche pubblicate da WHO, CDC, NIH, Harvard School of Public Health e importanti riviste mediche tra cui JAMA, Lancet e NEJM.",
+    "howScored": "Il PSS-10 utilizza una scala di frequenza a 5 punti per l'ultimo mese:\n• 0: Mai\n• 1: Quasi mai\n• 2: A volte\n• 3: Abbastanza spesso\n• 4: Molto spesso\n\nGli item 4, 5, 7 e 8 hanno punteggio invertito (0=4, 1=3, 2=2, 3=1, 4=0). I punteggi totali vanno da 0 a 40.\n\nSoglie cliniche:\n• 0–13: Stress percepito basso\n• 14–26: Stress percepito moderato\n• 27–40: Stress percepito alto\n\nLa media dell'adulto statunitense è di circa 13. Un cambiamento di 5 punti è considerato clinicamente significativo per monitorare la risposta al trattamento.",
+    "interpretation": "**Punteggio 0–13 (Stress Basso):** Ti senti in gran parte in controllo della tua vita e hai una buona capacità di coping. La ricerca mostra che punteggi PSS bassi sono associati a una migliore funzione immunitaria, un minor rischio cardiovascolare e una maggiore lunghezza dei telomeri (un marcatore biologico dell'invecchiamento). Concentrati sul mantenere ciò che funziona.\n\n**Punteggio 14–26 (Stress Moderato):** Stai gestendo ma sotto pressione. Questa è la fascia in cui vive la maggior parte degli adulti lavoratori, e molti la normalizzano senza rendersi conto del costo fisico cumulativo. Lo stress moderato sostenuto per mesi è associato a disturbi del sonno, aumento di peso, maggiore suscettibilità alle malattie e tensioni relazionali.\n\n**Punteggio 27–40 (Stress Alto):** A questo livello, lo stress cronico sta danneggiando in modo misurabile la tua salute. Punteggi PSS alti sono associati a: aumento del 40% del rischio di depressione, probabilità 2 volte maggiore di eventi cardiovascolari, riduzione del 50% della risposta immunitaria ai vaccini, invecchiamento cellulare accelerato e compromissione significativa del processo decisionale. Questo non è un problema di personalità — è uno stato fisiologico che richiede un intervento attivo.",
+    "whenToSeek": "Considera il supporto professionale se:\n\n• Il tuo punteggio PSS-10 è 27 o superiore\n• Il tuo punteggio è rimasto nella fascia da moderata ad alta per più di 6 settimane\n• Lo stress sta influenzando il sonno, l'appetito o la salute fisica\n• Stai usando alcol, cibo o altre sostanze per far fronte\n• Lo stress sta influenzando le prestazioni lavorative o le relazioni\n• Stai vivendo ansia, attacchi di panico o umore persistentemente basso insieme a stress elevato\n\nTipi di supporto professionale basati sull'evidenza per la gestione dello stress:\n• Terapia Cognitivo-Comportamentale (CBT) — riduce i punteggi PSS in media di 8–12 punti\n• Riduzione dello Stress Basata sulla Consapevolezza (MBSR) — programma di 8 settimane con solida base di evidenze\n• Farmaci (SSRI/SNRI) — appropriati quando lo stress è progredito in ansia o depressione clinica",
+    "limitations": "**1. Bias di autovalutazione:** Il PSS misura lo stress percepito, non il carico di stress oggettivo. Le persone che tendono a minimizzare i problemi possono ottenere punteggi più bassi di quanto suggerisca il loro effettivo livello di stress fisiologico.\n\n**2. Misurazione puntuale:** Il PSS chiede informazioni sull'ultimo mese. Un punteggio alto durante una crisi acuta (lutto, perdita del lavoro) potrebbe non riflettere il tuo livello di stress di base.\n\n**3. Non identifica gli stressor:** Il PSS misura l'esperienza dello stress, non la sua fonte. Identificare stressor specifici richiede una valutazione più dettagliata.\n\n**4. Variazione culturale:** L'espressione e l'accettabilità dello stress variano tra le culture. Alcune popolazioni mostrano punteggi sistematicamente più alti o più bassi che riflettono norme culturali riguardanti l'espressione del disagio psicologico piuttosto che reali differenze nei livelli di stress.\n\n**5. Non sostituisce una valutazione clinica:** Un punteggio PSS alto indica la necessità di attenzione, non una diagnosi di un disturbo d'ansia o da stress. Le condizioni cliniche richiedono una valutazione professionale."
+  }
+}

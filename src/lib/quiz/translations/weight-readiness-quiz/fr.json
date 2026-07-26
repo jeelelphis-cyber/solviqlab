@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Questionnaire de Préparation à la Perte de Poids",
+    "description": "Êtes-vous vraiment prêt(e) à perdre du poids — ou simplement en rêvez-vous ? Découvrez ce qui se dresse réellement sur votre chemin avant de commencer."
+  },
+  "questions": {
+    "wr1": {
+      "text": "Pourquoi souhaitez-vous perdre du poids maintenant ? Qu'est-ce qui vous motive vraiment ?",
+      "options": [
+        "Ma santé — je veux me sentir mieux sur le long terme",
+        "Énergie et confiance — qualité de vie quotidienne",
+        "Un événement à venir — j'ai une échéance",
+        "Pression extérieure — d'autres personnes le veulent pour moi"
+      ]
+    },
+    "wr2": {
+      "text": "Avez-vous déjà essayé de perdre du poids auparavant et avez-vous arrêté ? Que s'est-il passé ?",
+      "options": [
+        "J'ai bien maintenu mes succès passés",
+        "J'ai perdu et repris — je comprends maintenant pourquoi",
+        "J'ai arrêté parce que c'était trop restrictif",
+        "J'ai arrêté parce que je n'ai pas vu de résultats rapidement"
+      ]
+    },
+    "wr3": {
+      "text": "Avez-vous un plan spécifique et réaliste pour changer votre alimentation ?"
+    },
+    "wr4": {
+      "text": "À quel point vous sentez-vous prêt(e) à apporter des changements constants — pas un régime express, mais des ajustements de mode de vie ?",
+      "scaleLabels": {
+        "min": "Pas du tout prêt(e)",
+        "max": "Complètement prêt(e)"
+      }
+    },
+    "wr5": {
+      "text": "Dans quelle mesure le stress ou les émotions influencent-ils vos habitudes alimentaires ?",
+      "options": [
+        "Très peu — je mange en fonction de la faim",
+        "Parfois — les jours stressants affectent mes choix",
+        "Souvent — la nourriture est un réconfort pour moi",
+        "Toujours — l'alimentation émotionnelle est mon schéma"
+      ]
+    },
+    "wr6": {
+      "text": "Avez-vous du soutien — des personnes qui vous encourageront plutôt que de saboter vos objectifs ?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Prêt à commencer",
+      "description": "Vous avez l'état d'esprit, la motivation et la conscience nécessaires pour réaliser des progrès réels et durables. Il s'agit maintenant de la bonne stratégie.",
+      "actions": [
+        "Commencez cette semaine — votre fenêtre de préparation est réelle et doit être utilisée",
+        "Fixez-vous un objectif spécifique et mesurable sur 8 semaines (pas un chiffre à vie) — une perte de 4 à 6 kg en 8 semaines est réaliste et motivante",
+        "Informez votre réseau de soutien de votre plan — la responsabilisation augmente les taux de réussite de 65 %"
+      ],
+      "miaHook": "Vous êtes vraiment prêt — pas seulement en espérant. Laissez-moi vous donner un plan de départ personnalisé basé sur votre profil."
+    },
+    {
+      "label": "Presque prêt",
+      "description": "Vous êtes motivé, mais quelques éléments clés ne sont pas encore en place. Les aborder maintenant fera la différence entre un changement durable et un autre faux départ.",
+      "actions": [
+        "Identifiez la raison spécifique pour laquelle les tentatives précédentes ont échoué — traitez cette cause profonde avant de recommencer",
+        "Construisez d'abord votre système de soutien — identifiez 1 à 2 personnes qui encourageront activement votre parcours",
+        "Passez 2 semaines à améliorer votre sommeil pour atteindre 7 heures ou plus avant de commencer — le sommeil est le prédicteur numéro 1 de l'adhésion au régime"
+      ],
+      "miaHook": "Je peux voir ce qui manque dans votre tableau de préparation — comblons ces lacunes avant que vous ne commenciez, pour que cette fois-ci, cela tienne."
+    },
+    {
+      "label": "Pas encore tout à fait prêt",
+      "description": "Se lancer maintenant pourrait mener à la frustration et à un autre cycle d'arrêt-reprise. Construisons d'abord les bonnes bases.",
+      "actions": [
+        "Concentrez-vous sur la compréhension de votre pourquoi — la motivation liée à la santé a un taux de réussite 3 fois plus élevé que la motivation liée à un événement ou à une pression externe",
+        "Traitez l'alimentation émotionnelle avant de commencer un régime — sans cela, aucun plan alimentaire ne tiendra à long terme",
+        "Travaillez avec un coach, un thérapeute ou un diététicien pour construire les bonnes bases — essayer de le faire seul avec le tableau de préparation actuel est la recette pour un autre redémarrage"
+      ],
+      "miaHook": "Commencer sans traiter ce que je vois dans vos réponses est ce qui mène à l'abandon. Faisons cela correctement — et une seule fois."
+    }
+  ],
+  "seoContent": {
+    "intro": "Les recherches sur le changement de comportement montrent systématiquement que la motivation et l'intention seules sont des prédicteurs insuffisants de la réussite d'une perte de poids. Ce qui distingue les personnes qui parviennent à une perte de poids durable de celles qui enchaînent les tentatives répétées, c'est la préparation psychologique : la clarté de la motivation, des attentes réalistes, un plan concret et un soutien suffisant.\n\nCe questionnaire évalue six dimensions de la préparation à la perte de poids, issues des recherches sur le modèle transthéorique (Prochaska & DiClemente) et de la psychologie comportementale. Comprendre où vous en êtes réellement — et non où vous souhaiteriez être — est l'aperçu le plus précieux que vous puissiez obtenir avant de commencer.",
+    "faq": [
+      {
+        "q": "Quel est le prédicteur le plus fort de la réussite d'une perte de poids ?",
+        "a": "Les recherches identifient systématiquement la motivation intrinsèque (motivée par la santé plutôt que par l'apparence), l'auto-efficacité (confiance en sa capacité à effectuer des changements), le soutien social et des attentes réalistes comme les prédicteurs les plus forts d'une perte de poids durable. Les personnes qui perdent du poids pour des raisons de santé le maintiennent significativement plus longtemps que celles motivées par des événements ou une pression extérieure."
+      },
+      {
+        "q": "Pourquoi la plupart des régimes échouent-ils ?",
+        "a": "Les principales raisons sont : commencer avec un déficit calorique trop important (faim insoutenable), compter sur la volonté plutôt que sur la conception de l'environnement, ne pas traiter l'alimentation émotionnelle, le manque de soutien social, la pensée du tout ou rien (un mauvais jour conduit à l'abandon) et la fixation d'échéances irréalistes. Ces problèmes sont corrigeables — avec une bonne préparation."
+      },
+      {
+        "q": "Comment briser le cycle de la perte et de la reprise de poids ?",
+        "a": "Les recherches sur le 'cycle du poids' montrent que les facteurs clés pour briser ce schéma sont : passer d'un état d'esprit de régime à court terme à un changement de mode de vie permanent, traiter l'alimentation émotionnelle avec des outils comportementaux (et non la volonté), intégrer une phase de maintien dans le plan dès le départ, et choisir une approche suffisamment durable pour que vous puissiez imaginer la suivre pendant 5 ans."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "La préparation à la perte de poids est un concept psychologique développé à partir du modèle transthéorique du changement de comportement (Prochaska & DiClemente, 1983). Il décrit à quel point une personne est prête — cognitivement, motivationnellement et comportementalement — à effectuer et à maintenir des changements significatifs de mode de vie.\n\nLa préparation n'est pas un état fixe — elle fluctue en fonction des circonstances de la vie, des niveaux de stress et de l'environnement social. Tenter une perte de poids pendant des périodes de faible préparation augmente significativement la probabilité de rechute et contribue au cycle frustrant de tentatives répétées.",
+    "howScored": "Ce questionnaire évalue six dimensions de la préparation : la qualité de la motivation (intrinsèque vs. extrinsèque), les enseignements tirés des tentatives précédentes, la planification concrète, la confiance subjective dans la préparation, les schémas d'alimentation émotionnelle et la disponibilité du soutien social.\n\nLes scores supérieurs à 70 indiquent une préparation élevée — commencez maintenant. 40–69 indique une préparation partielle — des lacunes spécifiques doivent d'abord être comblées. En dessous de 40, les conditions fondamentales pour la réussite ne sont pas encore réunies — la préparation améliorera significativement les résultats.",
+    "whenToSeek": "Envisagez un soutien professionnel si :\n• Vous avez eu 3 tentatives significatives de perte de poids ou plus qui n'ont pas abouti à un changement durable\n• L'alimentation émotionnelle ou liée au stress est un schéma important qui semble hors de contrôle\n• Vous avez un IMC supérieur à 35 — une supervision médicale améliore significativement les résultats à ce niveau\n• Des crises de boulimie, des cycles de restriction ou d'autres schémas alimentaires désordonnés sont présents\n• Les préoccupations liées au poids affectent significativement la santé mentale ou la qualité de vie",
+    "limitations": "Ce questionnaire évalue la préparation psychologique, et non l'adéquation médicale à une perte de poids. Les conditions de santé individuelles, les médicaments et les facteurs métaboliques non pris en compte ici peuvent influencer significativement la capacité et l'approche de perte de poids. Consultez toujours un professionnel de santé avant de commencer un programme important de perte de poids, surtout en présence de problèmes de santé sous-jacents."
+  }
+}

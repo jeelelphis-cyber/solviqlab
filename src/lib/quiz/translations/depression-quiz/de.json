@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "title": "Depressions-Screening-Fragebogen (PHQ-9)",
+    "description": "Der PHQ-9 ist der Goldstandard für das Depressions-Screening und wird weltweit von Ärzten eingesetzt. Die Durchführung dauert 2 Minuten. Basierend auf über 20 Jahren klinischer Forschung.",
+    "medicalNote": "Dies ist ein Screening-Instrument, keine klinische Diagnose. Wenn Sie sich in einer Krise befinden, wenden Sie sich bitte umgehend an einen psychiatrischen Facharzt oder eine Krisenhotline."
+  },
+  "likertOptions": [
+    "Überhaupt nicht",
+    "An einzelnen Tagen",
+    "An mehr als der Hälfte der Tage",
+    "Beinahe jeden Tag"
+  ],
+  "questions": {
+    "phq1": {
+      "text": "Wenig Interesse oder Freude an Ihren Tätigkeiten",
+      "hint": "Anhedonie – der Verlust von Freude – ist eines der beiden Kernsymptome einer Depression."
+    },
+    "phq2": {
+      "text": "Niedergeschlagenheit, Schwermut oder Hoffnungslosigkeit",
+      "hint": "Anhaltend gedrückte Stimmung ist das zweite Kernkriterium für die Diagnose einer Major Depression."
+    },
+    "phq3": {
+      "text": "Schwierigkeiten, ein- oder durchzuschlafen, oder vermehrter Schlaf",
+      "hint": "Schlafstörungen treten bei über 90 % der Menschen mit Depression auf und verschlechtern die kognitive Funktion."
+    },
+    "phq4": {
+      "text": "Müdigkeit oder das Gefühl, wenig Energie zu haben",
+      "hint": "Depressionsbedingte Erschöpfung ist neurobiologisch bedingt – verursacht durch eine Dysregulation von Serotonin und Dopamin."
+    },
+    "phq5": {
+      "text": "Verminderter Appetit oder übermäßiges Essen",
+      "hint": "Appetitveränderungen betreffen 70–80 % der depressiven Menschen. Beide Extreme sind klinische Signale."
+    },
+    "phq6": {
+      "text": "Schlechtes Gefühl wegen sich selbst – oder das Gefühl, ein Versager zu sein oder sich selbst oder Ihrer Familie enttäuscht zu haben",
+      "hint": "Anhaltende Schuldgefühle und Gefühle der Wertlosigkeit gehören zu den stärksten Prädiktoren für den Schweregrad einer Depression."
+    },
+    "phq7": {
+      "text": "Schwierigkeiten, sich zu konzentrieren, z. B. beim Lesen oder Fernsehen",
+      "hint": "Depression reduziert die Aktivität des präfrontalen Kortex und beeinträchtigt dadurch direkt Aufmerksamkeit und Gedächtnis."
+    },
+    "phq8": {
+      "text": "Sich so langsam bewegen oder sprechen, dass es anderen Menschen aufgefallen sein könnte – oder das Gegenteil, so zappelig oder unruhig zu sein, dass Sie sich viel mehr als sonst bewegt haben",
+      "hint": "Psychomotorische Veränderungen sind für andere beobachtbar und ein wichtiger Schweregradmarker bei klinischer Depression."
+    },
+    "phq9": {
+      "text": "Gedanken, dass Sie ohne Ihren Tod besser dran wären, oder daran, sich auf irgendeine Weise zu verletzen",
+      "hint": "Wenn Sie solche Gedanken haben, wenden Sie sich bitte sofort an eine Krisenhotline oder einen Gesundheitsdienstleister."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Minimale oder keine Depression",
+      "description": "Ihr Ergebnis deutet auf keine signifikanten depressiven Symptome hin. Pflegen Sie weiterhin Ihr psychisches Wohlbefinden.",
+      "actions": [
+        "Halten Sie Ihren aktuellen Schlafrhythmus ein – regelmäßiger Schlaf ist der stärkste Schutzfaktor gegen Depressionen",
+        "Bleiben Sie in Bewegung: Schon 20 Minuten Gehen 3x/Woche senkt das Depressionsrisiko um 26 % (Harvard Health, 2018)",
+        "Führen Sie monatliche Checks durch – die Stimmung schwankt auf natürliche Weise, und frühes Bewusstsein ist Ihr bestes Werkzeug"
+      ],
+      "miaHook": "Ihr Ergebnis liegt im gesunden Bereich. Lassen Sie mich Ihnen zeigen, was die Forschung sagt, um dies zu erhalten."
+    },
+    {
+      "label": "Leichte Depression",
+      "description": "Leichte depressive Symptome sind vorhanden. Diese sind real und verdienen Aufmerksamkeit – sie können ohne Unterstützung fortschreiten.",
+      "actions": [
+        "Beginnen Sie ein 5-minütiges tägliches Stimmungstagebuch – Muster zu erkennen ist der erste Schritt zur Veränderung",
+        "Integrieren Sie strukturierte körperliche Aktivität: 30 Minuten moderate Bewegung hat bei leichten Fällen eine antidepressive Wirkung, die der von Medikamenten entspricht (Blumenthal et al., JAMA, 2007)",
+        "Sprechen Sie mit einer vertrauten Person oder erwägen Sie ein Gespräch mit einem Therapeuten – bereits 4–6 Sitzungen können leichte Symptome deutlich reduzieren"
+      ],
+      "miaHook": "Früh erkannte leichte Symptome sind am einfachsten zu behandeln. Hier ist, was bei Ihrem Ergebnis tatsächlich den Unterschied macht."
+    },
+    {
+      "label": "Mäßige Depression",
+      "description": "Eine mäßige Depression beeinträchtigt die tägliche Funktionsfähigkeit erheblich. Professionelle Unterstützung zusammen mit Lebensstiländerungen wird empfohlen.",
+      "actions": [
+        "Vereinbaren Sie diese Woche einen Termin mit Ihrem Arzt oder einem psychischen Gesundheitsfachmann – eine mäßige Depression spricht sehr gut auf Behandlung an.",
+        "Erzähle jemandem, dem du vertraust, wie du dich fühlst – Isolation verstärkt depressive Symptome.",
+        "Schütze deine grundlegenden Bedürfnisse: Schlafe 7–9 Stunden, iss regelmäßig und gehe täglich nach draußen – diese sind nicht optional, wenn du mit mittelschwerer Depression umgehst."
+      ],
+      "miaHook": "Auf diesem Niveau brauchst du mehr als Selbsthilfe-Werkzeuge. So machst du den richtigen nächsten Schritt."
+    },
+    {
+      "label": "Mittelschwere bis schwere Depression",
+      "description": "Deine Symptome beeinträchtigen dein Leben erheblich. Wirksame Behandlungen existieren – bitte suche bald einen Arzt auf.",
+      "actions": [
+        "Kontaktiere innerhalb der nächsten 48 Stunden einen Psychologen oder deinen Arzt – diese Form der Depression ist sehr gut behandelbar.",
+        "Wenn du in den USA bist, kannst du die SAMHSA-Hotline anrufen: 1-800-662-4357 (kostenlos, vertraulich, 24/7)",
+        "Bitte jemanden, dem du vertraust, dich bei der ersten Terminvereinbarung zu unterstützen – du musst das nicht allein bewältigen."
+      ],
+      "miaHook": "Deine Symptome verdienen professionelle Betreuung – und eine wirksame Behandlung funktioniert. Lass mich dir helfen, den ersten Schritt zu machen."
+    },
+    {
+      "label": "Schwere Depression",
+      "description": "Schwere Depression. Bitte suche sofort professionelle Hilfe. Du verdienst angemessene Betreuung, und wirksame Behandlungen existieren.",
+      "actions": [
+        "Bitte wende dich an eine Krisenhotline oder den Notdienst, wenn du in Gefahr bist: 988 Suicide & Crisis Lifeline (USA), Samaritans 116 123 (UK/IE)",
+        "Gehe in die nächste Notaufnahme oder rufe eine vertraute Person, die dich bringt – du solltest jetzt nicht allein sein.",
+        "Wisse, dass eine schwere Depression eine medizinische Erkrankung ist – sie ist keine Schwäche und nicht von Dauer. Behandlung wirkt."
+      ],
+      "miaHook": "Bitte suche jetzt Unterstützung. Du zählst, und wirksame Hilfe existiert."
+    }
+  ],
+  "seoContent": {
+    "intro": "Der PHQ-9 (Patient Health Questionnaire-9) ist das weltweit am häufigsten verwendete, klinisch validierte Depressions-Screening-Instrument. Entwickelt von Dr. Robert Spitzer, Dr. Janet Williams und Dr. Kurt Kroenke, wurde es in über 8.000 Studien in mehr als 80 Ländern validiert und wird von der WHO, dem NHS, der APA, der Mayo Clinic und dem CDC als primäres Screening-Instrument eingesetzt.\n\nIm Gegensatz zu allgemeinen Stimmungsquizzen bildet der PHQ-9 direkt die neun diagnostischen Kriterien für die Major Depressive Disorder (MDD) aus dem DSM-5 ab. Jede Frage entspricht einem Kernsymptom, das Kliniker in jeder Depressionsbewertung untersuchen. Dies macht ihn einzigartig genau: Dein Wert ist keine Persönlichkeitsbewertung – es ist eine standardisierte klinische Messung.\n\nDie Werte reichen von 0 bis 27. Ein Wert von 10 oder höher hat eine Sensitivität von 88% und eine Spezifität von 88% für die Major Depressive Disorder (Kroenke et al., JGIM 2001). Das bedeutet, dass er die Erkrankung bei fast 9 von 10 Personen korrekt identifiziert – die gleiche Genauigkeit wie die Blutdruckmessung bei Bluthochdruck.",
+    "faq": [
+      {
+        "q": "Was ist der PHQ-9 und wer hat ihn entwickelt?",
+        "a": "Der PHQ-9 (Patient Health Questionnaire-9) wurde von Dr. Robert Spitzer, Dr. Janet Williams und Dr. Kurt Kroenke an der Columbia University entwickelt, finanziert von Pfizer Inc. Er wurde erstmals 2001 im Journal of General Internal Medicine veröffentlicht (PMID: 11556941). Er ist gemeinfrei – das bedeutet, dass jeder Arzt, Forscher oder jede Plattform ihn frei nutzen kann. Er ist heute das weltweit am weitesten verbreitete Depressions-Screening-Instrument, das in der Primärversorgung, Psychiatrie, Forschung und digitalen Gesundheit eingesetzt wird."
+      },
+      {
+        "q": "Was bedeuten die PHQ-9-Werte?",
+        "a": "Die PHQ-9-Werte reichen von 0 bis 27. Die klinischen Schwellenwerte sind: 0–4 (keine oder minimale Depression), 5–9 (leichte Depression), 10–14 (mittelschwere Depression), 15–19 (mittelschwere bis schwere Depression) und 20–27 (schwere Depression). Ein Wert von 10 oder höher ist der standardmäßige klinische Grenzwert für die Diagnose einer Major Depressive Disorder, mit einer Sensitivität von 88% und einer Spezifität von 88%."
+      },
+      {
+        "q": "Ist dieses Quiz eine medizinische Diagnose?",
+        "a": "Nein. Der PHQ-9 ist ein Screening-Instrument – er identifiziert Personen, die wahrscheinlich an Depressionen leiden und einen Facharzt aufsuchen sollten. Er ist kein Ersatz für ein klinisches Gespräch, eine körperliche Untersuchung oder eine formelle Diagnose. Nur ein zugelassener Gesundheitsdienstleister (Arzt, Psychiater, Psychologe) kann eine Major Depressive Disorder diagnostizieren. Ein PHQ-9-Wert von 10 oder höher wird jedoch von allen großen medizinischen Einrichtungen ernst genommen und ist eine ausreichende Begründung, um eine Untersuchung anzustreben."
+      },
+      {
+        "q": "Wie genau ist der PHQ-9?",
+        "a": "Der PHQ-9 wurde in Hunderten von Studien validiert. Seine Genauigkeitskennzahlen sind: Sensitivität 88 %, Spezifität 88 %, positiver Vorhersagewert 71–85 %, negativer Vorhersagewert 95 % (Kroenke, Spitzer & Williams, JGIM 2001). Zum Vergleich: Eine Mammographie hat eine Sensitivität von etwa 87 %. Der PHQ-9 ist eines der am strengsten validierten Instrumente im gesamten Bereich des psychischen Gesundheits-Screenings."
+      },
+      {
+        "q": "Wie oft sollte ich den PHQ-9 wiederholen?",
+        "a": "Kliniker verabreichen den PHQ-9 in der Regel alle 2–4 Wochen neu, wenn sie das Ansprechen auf eine Behandlung überwachen, oder alle 3–6 Monate zur allgemeinen Gesundheitsüberwachung. Wenn Sie einen Wert von 10 oder höher erzielt haben, wiederholen Sie den Test nach 2 Wochen, nachdem Sie mit einer Intervention (Therapie, Lebensstiländerungen, Medikamente) begonnen haben, um zu messen, ob sich Ihr Wert verbessert. Ein Rückgang um 5 Punkte gilt als klinisch bedeutsame Verbesserung."
+      },
+      {
+        "q": "Was soll ich tun, wenn ich einen Wert von 10 oder höher erziele?",
+        "a": "Ein Wert von 10+ bedeutet, dass Symptome auf dem Niveau einer Depression vorliegen und Sie mit einem Gesundheitsdienstleister sprechen sollten. Sie können bei Ihrem Hausarzt beginnen – dieser ist geschult, PHQ-9-Ergebnisse zu besprechen, und kann Sie bei Bedarf an einen Spezialisten für psychische Gesundheit überweisen. Wenn Ihr Wert 20+ beträgt, suchen Sie bitte dringend ärztliche Hilfe auf. Wenn Sie Gedanken an Selbstverletzung haben (PHQ-9 Punkt 9), kontaktieren Sie bitte sofort eine Krisenhotline: 988 (USA), 116 123 Samaritans (UK) oder Ihren örtlichen Rettungsdienst."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Depression ist eine der häufigsten medizinischen Erkrankungen der Welt und betrifft weltweit etwa 280 Millionen Menschen (WHO, 2023). Es ist nicht Traurigkeit – es ist eine neurobiologische Störung, die durch anhaltende Veränderungen der Stimmung, Kognition, des Schlafs, des Appetits, der Energie und der Motivation gekennzeichnet ist, die mindestens zwei Wochen andauern und die tägliche Funktionsfähigkeit beeinträchtigen.\n\nEine Major Depressive Disorder (MDD) wird diagnostiziert, wenn fünf oder mehr der neun PHQ-9-Symptome fast jeden Tag über mindestens zwei Wochen hinweg vorhanden sind, wobei mindestens ein Symptom depressive Verstimmung oder Anhedonie (Verlust des Interesses) sein muss. Depression hat eine klare neurobiologische Grundlage: Sie beinhaltet eine Dysregulation von Serotonin, Noradrenalin, Dopamin und der HPA-Achse (Hypothalamus-Hypophysen-Nebennierenrinden-Stressachse).\n\nDepression ist gut behandelbar. Etwa 80–90 % der Menschen mit Depression sprechen positiv auf eine Behandlung an – typischerweise Psychotherapie, Medikamente oder eine Kombination. Der häufigste Grund für ein Scheitern der Behandlung ist, sie gar nicht erst zu beginnen.",
+    "clinicalBackground": "Der PHQ-9 wurde im Rahmen des PRIME-MD-Projekts (Primary Care Evaluation of Mental Disorders) entwickelt, einer großen Studie, die darauf abzielte, psychiatrische Diagnoseinstrumente in die Primärversorgung zu integrieren, wo die meisten psychischen Erkrankungen unentdeckt bleiben.\n\nDie neun Items entsprechen direkt den DSM-IV- (heute DSM-5-) Kriterien für eine Major Depressive Episode. Jedes Item verwendet eine 4-Punkte-Likert-Skala, die die Häufigkeit in den letzten zwei Wochen misst: 0 (Überhaupt nicht), 1 (An einzelnen Tagen), 2 (An mehr als der Hälfte der Tage), 3 (Fast jeden Tag).\n\nDie ursprüngliche Validierungsstudie (Kroenke, Spitzer & Williams, 2001) umfasste 6.000 Patienten in acht Hausarztpraxen. Der PHQ-9 wurde seitdem in über 8.000 Studien in mehr als 80 Ländern validiert, über Altersgruppen (Jugendliche, Erwachsene, Ältere), medizinische Populationen (Krebs, Herz-Kreislauf, Diabetes) und kulturelle Kontexte hinweg. Er wurde in über 100 Sprachen übersetzt.",
+    "howScored": "Der PHQ-9 wird bewertet, indem die numerischen Werte aller neun Antworten summiert werden: 0 (Überhaupt nicht), 1 (An einzelnen Tagen), 2 (An mehr als der Hälfte der Tage), 3 (Fast jeden Tag). Die Gesamtpunktzahl reicht von 0 bis 27.\n\nKlinische Schwellenwerte, festgelegt von Kroenke et al. (2001):\n• 0–4: Minimale oder keine Depression\n• 5–9: Leichte Depression\n• 10–14: Moderate Depression (Standard-Diagnosegrenzwert: ≥10)\n• 15–19: Mittelgradige Depression\n• 20–27: Schwere Depression\n\nPunkt 9 (Gedanken an Selbstverletzung) wird unabhängig von der Gesamtpunktzahl immer separat interpretiert – jeder Wert über 0 bei diesem Item erfordert klinische Aufmerksamkeit.\n\nFür die Behandlungsüberwachung gilt eine Veränderung um 5 Punkte als klinisch bedeutsam. Eine Remission wird typischerweise als ein Wert unter 5 definiert.",
+    "interpretation": "Ihren Wert im Kontext verstehen:\n\n**Wert 0–4 (Minimal):** Dieser Bereich spiegelt normale Stimmungsschwankungen wider. Die meisten Menschen erleben gelegentlich Niedergeschlagenheit, Müdigkeit oder Schlafveränderungen – dies deutet nicht auf eine Depression hin. Konzentrieren Sie sich auf die Erhaltung: Konsistenter Schlaf, regelmäßige Bewegung und soziale Verbundenheit sind die am besten erforschten Schutzfaktoren.\n\n**Wert 5–9 (Leicht):** Symptome sind vorhanden, erreichen aber noch nicht die diagnostische Schwelle. Dies ist der am besten beeinflussbare Bereich – leichte Depression spricht gut auf verhaltensbezogene Interventionen (Bewegung, Schlafhygiene, strukturierte soziale Aktivität) und kurze psychologische Therapie (CBT) an. Unbehandelt schreitet eine leichte Depression in etwa 30 % der Fälle zu einer moderaten oder schweren Depression fort.\n\n**Wert 10–14 (Moderat):** Die Symptome erreichen oder nähern sich den klinischen Diagnosekriterien an und beeinträchtigen wahrscheinlich die tägliche Funktionsfähigkeit. Dieser Bereich hat die stärkste Evidenzbasis für eine kombinierte Behandlung (Therapie + Lebensstil) und manchmal Medikamente. Ein Arzt oder Facharzt für psychische Gesundheit sollte Sie untersuchen.\n\n**Wert 15–19 (Mittelgradig):** Es liegt eine signifikante tägliche Beeinträchtigung vor. Dieser Bereich weist stark auf die Notwendigkeit einer professionellen Behandlung hin – typischerweise eine Kombination aus Psychotherapie (CBT, IPT) und Antidepressiva. Die Ansprechraten auf diesem Niveau liegen bei etwa 60–70 % mit Behandlung.\n\n**Wert 20–27 (Schwer):** Schwere Depression ist ein medizinischer Notfall, genauso wie eine diabetische Krise ein medizinischer Notfall ist. Sofortige professionelle Versorgung ist erforderlich. Wenn Sie Gedanken an Selbstverletzung haben, kontaktieren Sie bitte sofort den Rettungsdienst oder eine Krisenhotline.",
+    "whenToSeek": "Sie sollten einen Gesundheitsdienstleister kontaktieren, wenn:\n\n• Ihr PHQ-9-Wert 10 oder höher ist\n• Ihr Wert 5–9 beträgt und seit mehr als 4 Wochen konstant ist\n• Sie bei Frage 9 (Gedanken an Selbstverletzung) etwas über 0 geantwortet haben\n• Ihre Stimmung Ihre Arbeit, Beziehungen oder tägliche Funktionsfähigkeit erheblich beeinträchtigt\n• Sie Selbsthilfestrategien 4+ Wochen lang ohne Besserung ausprobiert haben\n\nSie sollten sofort den Rettungsdienst oder eine Krisenhotline kontaktieren, wenn:\n• Sie Gedanken an Selbstmord oder Selbstverletzung haben\n• Sie sich nicht in der Lage fühlen, sich selbst zu schützen\n• Ein Angehöriger in unmittelbarer Gefahr ist\n\nKrisenressourcen: 988 Suicide & Crisis Lifeline (USA, Anruf oder SMS), Samaritans 116 123 (UK/IE), Crisis Text Line: Senden Sie HOME an 741741 (USA/CA/UK).",
+    "limitations": "Der PHQ-9 ist ein Screening-Instrument mit wichtigen Einschränkungen, die jeder Benutzer verstehen sollte:\n\n**1. Es ist keine Diagnose.** Nur ein zugelassener Kliniker kann eine Major Depressive Disorder nach einer umfassenden Untersuchung diagnostizieren, die Anamnese, körperliche Untersuchung und klinisches Gespräch umfasst.\n\n**2. Somatische Erkrankungen können die Werte in die Höhe treiben.** Medizinische Zustände wie Hypothyreose, Anämie, chronische Schmerzen, Schlafapnoe und Diabetes verursachen Symptome (Müdigkeit, Schlafveränderungen, Appetitveränderungen), die sich mit Depressionen überschneiden. Ein Arzt kann zwischen diesen unterscheiden.\n\n**3. Es erfasst keinen Kontext.** Ein hoher Wert unmittelbar nach einer Trauer, einer Geburt oder einem großen Lebensereignis kann eine normale Anpassung widerspiegeln und keine klinische Depression. Das DSM-5 verlangt, dass die Symptome erhebliches Leiden oder eine Beeinträchtigung verursachen.\n\n**4. Kulturelle Unterschiede.** Obwohl der PHQ-9 kulturübergreifend validiert wurde, variiert der Ausdruck von Depression. Manche Kulturen drücken Depression mehr durch somatische Symptome (Schmerz, Müdigkeit) als durch emotionale aus. Ein Kliniker, der mit Ihrem Hintergrund vertraut ist, kann einen besseren Kontext bieten.\n\n**5. Erinnerungsverzerrung.** Der PHQ-9 fragt nach den letzten zwei Wochen. Ihr Wert spiegelt möglicherweise nicht Zeiträume von längerer Dauer oder schwankende Symptome wider, die ein längeres klinisches Gespräch erfassen würde."
+  }
+}

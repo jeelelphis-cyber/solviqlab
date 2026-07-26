@@ -126,5 +126,20 @@
   "registration.saved_subtitle": "Your results are synced. Check your email to verify.",
   "registration.mia_ready": "Mia is ready",
   "registration.error.email_required": "Email is required",
-  "registration.error.email_invalid": "Please enter a valid email"
+  "registration.error.email_invalid": "Please enter a valid email",
+
+  "quiz.start_btn": "Start Quiz →",
+  "quiz.questions_count": "{{n}} questions",
+  "quiz.free": "Free",
+  "quiz.no_account": "No account needed",
+  "quiz.clinically_validated": "Clinically validated",
+  "quiz.what_to_do": "What to do now",
+  "quiz.mia_coach": "Mia · Your Coach",
+  "quiz.get_plan": "Get Mia's personal plan →",
+  "quiz.retake": "Retake quiz",
+  "quiz.based_on": "Based on:",
+  "quiz.sources": "Sources",
+  "quiz.question_of": "Question {{n}} of {{total}}",
+  "quiz.severity_label": "{{severity}} severity",
+  "quiz.continue": "Continue →"
 }

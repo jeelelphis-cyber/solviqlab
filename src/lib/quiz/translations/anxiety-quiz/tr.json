@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Anksiyete Seviyesi Testi",
+    "description": "Kaygının hayatınızda nasıl kendini gösterdiğini ve günlük enerjinizin ne kadarını sessizce tükettiğini anlayın."
+  },
+  "yesnoOptions": [
+    "Evet",
+    "Hayır"
+  ],
+  "questions": {
+    "anx1": {
+      "text": "Zihniniz ne sıklıkla hızla döner veya durduramadığınız 'ya şöyle olursa' düşüncelerine dalar?",
+      "options": [
+        "Nadiren — genellikle düşüncelerimi yönlendirebilirim",
+        "Bazen — stresli dönemlerde",
+        "Sık sık — çoğu gün olur",
+        "Neredeyse sürekli — bu yorucu"
+      ]
+    },
+    "anx2": {
+      "text": "Sizi kaygılandırdıkları için belirli durumlardan veya kişilerden kaçınır mısınız?"
+    },
+    "anx3": {
+      "text": "Fiziksel olarak ne sıklıkla gergin hissediyorsunuz — göğüste sıkışma, yüzeysel nefes alma, midenizde bir düğüm?",
+      "scaleLabels": {
+        "min": "Neredeyse hiç",
+        "max": "Çok sık"
+      }
+    },
+    "anx4": {
+      "text": "Gelecek hakkında endişelenmek, şimdiki anın tadını çıkarma yeteneğinizi etkiliyor mu?"
+    },
+    "anx5": {
+      "text": "Beklenmedik bir şey olduğunda genellikle nasıl tepki verirsiniz?",
+      "options": [
+        "Sakin bir şekilde — oldukça iyi uyum sağlarım",
+        "Biraz sarsılırım ama çabuk toparlanırım",
+        "Beni bir süreliğine dengemi bozar",
+        "Beni bir çöküşe sürükler"
+      ]
+    },
+    "anx6": {
+      "text": "Düşünceleriniz sessizleşmediği için uyumakta zorluk çekiyor musunuz?",
+      "options": [
+        "Hayır — iyi uyuyorum",
+        "Ara sıra — haftada bir kez olabilir",
+        "Sık sık — haftada birkaç gece",
+        "Neredeyse her gece"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Düşük Anksiyete",
+      "description": "Belirsizlik ve stresi sağlıklı bir şekilde yönetiyorsunuz. Sinir sisteminiz kronik alarm modunda değil.",
+      "actions": [
+        "Mevcut stres yönetimi alışkanlıklarınızı sürdürün — yaptıklarınız işe yarıyor",
+        "Daha zorlu dönemlerde dayanıklılık kazanmak için haftada bir kez farkındalık egzersizi yapın",
+        "Sizi temellendiren insanlarla bağlantıda kalın — sosyal destek, anksiyeteye karşı en güçlü koruyucudur"
+      ],
+      "miaHook": "Anksiyete seviyeniz sağlıklı — hayat zorlaştığında bunu nasıl koruyacağınızı konuşalım."
+    },
+    {
+      "label": "Orta Düzey Anksiyete",
+      "description": "Anksiyete hayatınızda mevcut ve bazı seçimlerinizi ile keyfinizi etkiliyor. Bu örüntüler yönetilebilir ancak ele alınmayı hak ediyor.",
+      "actions": [
+        "Günde 5 dakikalık bir nefes egzersizi deneyin — kutu nefesi (4-4-4-4) dakikalar içinde kortizolü ölçülebilir şekilde azaltır",
+        "Bu hafta bir kaçınma davranışı belirleyin ve onunla yüzleşmek için küçük bir adım atın",
+        "Kafein alımını öğleden önceyle sınırlayın — fizyolojik anksiyete tepkisini artırır"
+      ],
+      "miaHook": "Yanıtlarınızda birkaç net anksiyete örüntüsü fark ettim — bunu gözle görülür şekilde azaltabilecek hedefe yönelik araçlarım var."
+    },
+    {
+      "label": "Yüksek Anksiyete",
+      "description": "Anksiyete günlük yaşamınızı önemli ölçüde etkiliyor. Bu düzeyde sürekli tetikte olmak yorucudur ve gerçekten ilgiyi hak eder.",
+      "actions": [
+        "Bir terapist veya doktorla konuşun — BDT (Bilişsel Davranışçı Terapi) anksiyete için en güçlü kanıt tabanına sahiptir ve genellikle 6–8 seansta sonuç verir",
+        "Günlük en büyük kafein kaynağınızı hemen ortadan kaldırın — bu tek değişiklik bile anksiyeteyi ölçülebilir şekilde azaltır",
+        "Güvendiğin bir kişiye yaşadıklarını anlat — yalnızlık kaygıyı artırır"
+      ],
+      "miaHook": "Yaşadığın şey gerçek — yüksek kaygı yorucu ve yalnızlaştırıcıdır. Bunu hafifletmeye nereden başlayacağını göstereyim."
+    }
+  ],
+  "seoContent": {
+    "intro": "Kaygı, dünyada en yaygın görülen ruh sağlığı durumudur ve küresel olarak yaklaşık 284 milyon insanı etkiler (Our World in Data, 2019). Yine de kaygı yaşayan çoğu kişi yardım aramaz — ya bunun ne olduğunu fark etmedikleri için ya da etkilerini normalleştirdikleri için.\n\nBu test, kaygının altı temel boyutunu değerlendirir: bilişsel kalıplar (hızlı düşünceler, endişe), davranışsal kalıplar (kaçınma), fiziksel belirtiler (gerginlik, nefes alma), uyku etkisi, duygusal tepkisellik ve anlık müdahale. Sonuçların, kaygının hayatında nasıl ortaya çıktığına dair kişiselleştirilmiş bir harita sunar.",
+    "faq": [
+      {
+        "q": "Normal endişe ile kaygı arasındaki fark nedir?",
+        "a": "Normal endişe, gerçek bir tehditle orantılıdır, geçicidir ve günlük işlevselliği önemli ölçüde bozmaz. Kaygı ise kontrol edilmesi zor, genellikle gerçek riskle orantısız olan aşırı endişeyi içerir ve günlük yaşamı, uykuyu veya ilişkileri sürekli olarak etkiler."
+      },
+      {
+        "q": "Kaygı fiziksel belirtilere neden olabilir mi?",
+        "a": "Evet. Kaygı, sempatik sinir sistemini (savaş ya da kaç) harekete geçirerek ölçülebilir fiziksel etkilere yol açar: yüksek kalp atış hızı, yüzeysel nefes alma, kas gerginliği, sindirim bozukluğu ve yüksek kortizol. Kronik kaygı, artan kardiyovasküler risk dahil olmak üzere uzun vadeli fiziksel sağlık etkilerine neden olur."
+      },
+      {
+        "q": "Kaygı için hangi tedaviler işe yarar?",
+        "a": "Bilişsel Davranışçı Terapi (CBT) en kanıta dayalı tedavidir ve insanların %60–80'inde önemli iyileşme gösterir. Maruz bırakma terapisi, kaçınma temelli kaygı için etkilidir. İlaç tedavisi (SSRI'lar, SNRI'lar), genellikle terapiyle birlikte, orta ila şiddetli vakalar için uygundur."
+      },
+      {
+        "q": "Kafein kaygıyı kötüleştirir mi?",
+        "a": "Evet. Kafein, adenosin reseptörlerini bloke eder ve kortizol ile adrenalin seviyelerini artırır — kaygı tarafından aktive edilen aynı fizyolojik yol. Kaygıya yatkın kişilerde kafein, belirtileri ölçülebilir şekilde kötüleştirir. Kafeini azaltmak, kaygıyı düşürmek için en hızlı tek değişikliklerden biridir."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Kaygı, doğal bir insan duygusudur; aşırı, kalıcı hale geldiğinde ve günlük yaşamı etkilediğinde sorun olur. Temelinde kaygı, beynin tehdit algılama sisteminin yanlış çalışmasıdır — normal durumları tehlikeli olarak değerlendirir ve vücudu yorucu ve sürdürülemez bir fizyolojik hazırlık durumunda tutar.\n\nKaygı üç şekilde ortaya çıkar: bilişsel (hızlı düşünceler, felaketleştirme, endişe sarmalları), fiziksel (kas gerginliği, kalp çarpıntısı, yüzeysel nefes alma, sindirim sorunları) ve davranışsal (kaçınma, güvence arama, zorlayıcı davranışlar). Bu test her üç boyutu da kapsar.",
+    "howScored": "Bu test, kaygının altı kanıta dayalı boyutunu değerlendirir: düşünce kalıpları, davranışsal kaçınma, fiziksel gerginlik belirtileri, geleceğe odaklı endişe, beklenmedik olaylara tepkisellik ve uyku etkisi. Sorular, hem sıklığı hem de etkiyi yakalamak için ölçekli yanıtlar ve evet/hayır karışımını kullanır.\n\nPuanlar 0–100 arasında normalize edilir. 70'in üzeri, iyi başa çıkma kaynaklarıyla düşük kaygıyı gösterir. 40–69, ele alınmaya değer orta düzey kaygı kalıplarını belirtir. 40'ın altı, günlük işlevselliği önemli ölçüde etkileyen yüksek kaygıyı gösterir.",
+    "whenToSeek": "Aşağıdaki durumlarda bir ruh sağlığı uzmanıyla görüşmeyi düşünün:\n• Kaygın uykunu, işini veya ilişkilerini etkiliyorsa\n• Kaygı nedeniyle durumlardan veya insanlardan kaçınıyorsan\n• Fiziksel kaygı belirtileri (kalp çarpıntısı, göğüs sıkışması) sık sık oluyorsa\n• Kaygıyı yönetmek için alkol veya başka maddeler kullanıyorsan\n• Kaygı 6 aydan uzun süredir devam ediyorsa\n\nGAD-7 puanı 10+ (klinik bir kaygı ölçeği) klinik değerlendirme gerektiğini gösterir.",
+    "limitations": "Bu test bir tarama aracıdır, klinik bir değerlendirme değildir. Farklı kaygı bozuklukları (Yaygın Kaygı Bozukluğu, Sosyal Kaygı, Panik Bozukluk, TSSB, OKB) arasında ayrım yapmaz. Klinik tanı, lisanslı bir ruh sağlığı uzmanı tarafından yapılan değerlendirme gerektirir.\n\nKaygı belirtileri ayrıca depresyon, DEHB, uyku bozuklukları ve belirli tıbbi durumlarla (tiroid sorunları, kardiyovasküler problemler) önemli ölçüde örtüşür. Kapsamlı bir değerlendirme, bu katkıda bulunan faktörleri dışlar."
+  }
+}

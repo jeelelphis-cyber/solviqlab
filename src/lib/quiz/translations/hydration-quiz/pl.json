@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Quiz o nawodnieniu",
+    "description": "Większość osób jest lekko odwodniona, nawet o tym nie wiedząc. Sprawdź, czy woda jest brakującym elementem Twojej układanki zdrowotnej."
+  },
+  "questions": {
+    "hyd1": {
+      "text": "Ile szklanek wody (250 ml) pijesz przeciętnie w ciągu dnia?",
+      "options": [
+        "8 lub więcej — piję regularnie",
+        "5–7 szklanek",
+        "3–4 szklanki",
+        "Mniej niż 3 — zapominam pić"
+      ]
+    },
+    "hyd2": {
+      "text": "Czy często odczuwasz pragnienie w ciągu dnia?"
+    },
+    "hyd3": {
+      "text": "Jaki kolor ma Twój mocz przez większość czasu? (Bądź szczery!)",
+      "options": [
+        "Bladożółty — prawie przezroczysty",
+        "Jasnożółty",
+        "Ciemnożółty lub bursztynowy",
+        "Bardzo ciemny — nie zwracam na to uwagi"
+      ]
+    },
+    "hyd4": {
+      "text": "Czy regularnie pijesz kawę, herbatę lub alkohol, nie równoważąc ich wodą?"
+    },
+    "hyd5": {
+      "text": "Czy regularnie doświadczasz bólów głowy, suchej skóry lub trudności z koncentracją?",
+      "options": [
+        "Żadne z tych — czuję się dobrze",
+        "Jedno z tych od czasu do czasu",
+        "Dwa z tych regularnie",
+        "Wszystkie trzy — prawie codziennie"
+      ]
+    },
+    "hyd6": {
+      "text": "Jak aktywny/a jesteś fizycznie? (Większa aktywność = większe zapotrzebowanie na wodę)",
+      "scaleLabels": {
+        "min": "Bardzo siedzący tryb życia",
+        "max": "Bardzo aktywny codziennie"
+      }
+    }
+  },
+  "buckets": [
+    {
+      "label": "Dobrze nawodniony",
+      "description": "Twoje nawyki związane z nawodnieniem są solidne. Twoje ciało otrzymuje wodę, której potrzebuje do optymalnego funkcjonowania.",
+      "actions": [
+        "Utrzymuj obecne spożycie — konsekwencja jest ważniejsza niż osiągnięcie konkretnej liczby",
+        "Zwiększ o 500 ml w dni z intensywnym wysiłkiem fizycznym lub upałem",
+        "Nadal unikaj słodkich napojów jako głównego źródła nawodnienia"
+      ],
+      "miaHook": "Twoje nawodnienie jest dobre — przyjrzyjmy się, co jeszcze może wpływać na Twoją energię i wydajność."
+    },
+    {
+      "label": "Lekko odwodniony",
+      "description": "Nie pijesz wystarczająco dużo. Łagodne odwodnienie wpływa na nastrój, koncentrację i metabolizm bardziej, niż większość ludzi zdaje sobie sprawę.",
+      "actions": [
+        "Dodaj jedną szklankę wody zaraz po przebudzeniu — Twoje ciało traci wodę w nocy",
+        "Ustaw przypomnienie co 2 godziny o piciu — wyrobienie nawyku to najszybsza droga do lepszego nawodnienia",
+        "Zastąp jedną codzienną kawę lub słodki napój wodą lub herbatą ziołową"
+      ],
+      "miaHook": "Łagodne odwodnienie po cichu wpływa na Twoją energię i kontrolę wagi — dodanie 3 szklanek dziennie może to szybko zmienić."
+    },
+    {
+      "label": "Odwodniony",
+      "description": "Twoje spożycie wody jest znacznie poniżej potrzeb Twojego organizmu. Prawdopodobnie wpływa to na koncentrację, skórę, nerki i energię.",
+      "actions": [
+        "Zacznij jutro od 500 ml wody przed jakimkolwiek jedzeniem lub kofeiną — uczyń to bezwzględnym priorytetem",
+        "Noś ze sobą butelkę wody o pojemności 1 litra i opróżnij ją dwukrotnie przed kolacją",
+        "Codziennie sprawdzaj kolor moczu — bladożółty to Twój cel i wskaźnik nawodnienia w czasie rzeczywistym"
+      ],
+      "miaHook": "Odwodnienie wyjaśnia wiele rzeczy, które możesz przypisywać innym przyczynom — pozwól, że pokażę Ci prosty sposób, aby to naprawić."
+    }
+  ],
+  "seoContent": {
+    "intro": "Łagodne odwodnienie – definiowane jako utrata zaledwie 1–2% wody w organizmie – upośledza funkcje poznawcze, wytrzymałość fizyczną, nastrój i metabolizm. Większość ludzi spędza znaczną część dnia w tym stanie, nie zdając sobie z tego sprawy, ponieważ pragnienie jest opóźnionym wskaźnikiem: zanim poczujesz pragnienie, jesteś już lekko odwodniony.\n\nNerki, mózg, skóra i układ sercowo-naczyniowy wymagają odpowiedniego nawodnienia, aby prawidłowo funkcjonować. Ten quiz ocenia Twoje nawyki związane z nawodnieniem w sześciu wymiarach, dając Ci jasny obraz tego, gdzie jesteś i co należy zmienić.",
+    "faq": [
+      {
+        "q": "Ile wody powinienem pić dziennie?",
+        "a": "Powszechnie cytowane 8 szklanek (2L) to rozsądna wartość wyjściowa dla osób prowadzących siedzący tryb życia w klimacie umiarkowanym. Bardziej precyzyjne wytyczne National Academies: 3,7L całkowitej ilości płynów dziennie dla mężczyzn i 2,7L dla kobiet (w tym woda pochodząca z pożywienia). Zwiększ o 0,5–1L na każdą godzinę ćwiczeń i w upalne dni."
+      },
+      {
+        "q": "Czy kawa wlicza się do dziennego spożycia płynów?",
+        "a": "Tak, do pewnego stopnia. Łagodne działanie moczopędne kofeiny jest równoważone przez płyn zawarty w napoju w umiarkowanych ilościach (do 3–4 filiżanek dziennie). Jednak nadmierne spożycie kofeiny (5+ filiżanek) powoduje netto utratę płynów. Alkohol ma znacznie silniejsze działanie moczopędne i nie powinien być wliczany do celów nawodnienia."
+      },
+      {
+        "q": "Jaki jest najlepszy wskaźnik stanu nawodnienia?",
+        "a": "Kolor moczu jest najbardziej praktycznym wskaźnikiem w czasie rzeczywistym. Jasnożółty (kolor lemoniady) wskazuje na dobre nawodnienie. Ciemnożółty lub bursztynowy wskazuje na odwodnienie. Przejrzysty mocz może wskazywać na przewodnienie. Poranny mocz jest zwykle ciemniejszy – liczy się kolor w ciągu dnia."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Woda stanowi około 60% masy ciała dorosłego człowieka i bierze udział w każdym procesie fizjologicznym: transporcie składników odżywczych, regulacji temperatury, smarowaniu stawów, eliminacji odpadów i funkcjonowaniu komórek. Nawet łagodne odwodnienie (utrata 1–2% masy ciała) w mierzalny sposób upośledza te procesy.\n\nBadania konsekwentnie pokazują, że łagodne odwodnienie zmniejsza pamięć roboczą o 7%, upośledza uwagę i szybkość psychomotoryczną, zwiększa zmęczenie i napięcie oraz obniża wydajność wytrzymałościową o 10–20%. Dla większości ludzi poprawa nawodnienia jest jedną z interwencji zdrowotnych o najwyższym zwrocie i najniższym koszcie.",
+    "howScored": "Ten quiz ocenia sześć wymiarów nawodnienia: dzienną objętość spożycia, częstotliwość pragnienia (opóźniony sygnał odwodnienia), kolor moczu (najbardziej wiarygodny wskaźnik w czasie rzeczywistym), nawyki związane z napojami moczopędnymi, objawy odwodnienia (bóle głowy, sucha skóra, słaba koncentracja) oraz poziom aktywności fizycznej (który determinuje zapotrzebowanie na wodę).\n\nWyniki powyżej 70 wskazują na dobre nawyki nawodnienia. 40–69 wskazuje na wzorce łagodnego odwodnienia, które warto skorygować. Poniżej 40 wskazuje na znaczne odwodnienie, które prawdopodobnie wpływa na codzienne funkcjonowanie.",
+    "whenToSeek": "Skonsultuj się z lekarzem, jeśli:\n• Pijesz odpowiednią ilość wody, ale nadal odczuwasz uporczywe pragnienie (możliwa cukrzyca lub problem z nerkami)\n• Masz trudności z zatrzymywaniem płynów (częste oddawanie moczu pomimo normalnego spożycia)\n• Objawy odwodnienia utrzymują się po zwiększeniu spożycia przez 2+ tygodnie\n• Występują u Ciebie zawroty głowy, przyspieszone bicie serca lub dezorientacja przy niskim spożyciu wody",
+    "limitations": "Ten quiz ocenia samodzielnie zgłaszane nawyki nawodnienia, a nie obiektywny stan nawodnienia. Rzeczywiste nawodnienie zależy od indywidualnych czynników, w tym masy ciała, czynności nerek, przyjmowanych leków, klimatu i poziomu aktywności. Quiz zapewnia użyteczną ocenę kierunkową, ale nie zastępuje pomiarów klinicznych (osmolalność krwi/moczu)."
+  }
+}

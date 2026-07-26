@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Kwestionariusz gotowości do utraty wagi",
+    "description": "Czy naprawdę jesteś gotowy, aby schudnąć — czy tylko masz nadzieję? Dowiedz się, co tak naprawdę stoi Ci na przeszkodzie, zanim zaczniesz."
+  },
+  "questions": {
+    "wr1": {
+      "text": "Dlaczego chcesz teraz schudnąć? Co tak naprawdę Cię motywuje?",
+      "options": [
+        "Moje zdrowie — chcę czuć się lepiej na dłuższą metę",
+        "Energia i pewność siebie — codzienna jakość życia",
+        "Nadchodzące wydarzenie — mam termin",
+        "Presja z zewnątrz — inni tego ode mnie oczekują"
+      ]
+    },
+    "wr2": {
+      "text": "Czy próbowałeś już wcześniej schudnąć i przerwałeś? Co się stało?",
+      "options": [
+        "Dobrze utrzymałem poprzednie sukcesy",
+        "Schudłem i przytyłem z powrotem — teraz rozumiem dlaczego",
+        "Przerwałem, ponieważ było to zbyt restrykcyjne",
+        "Przerwałem, ponieważ szybko nie widziałem rezultatów"
+      ]
+    },
+    "wr3": {
+      "text": "Czy masz konkretny, realistyczny plan dotyczący tego, jak zmienisz swoje odżywianie?"
+    },
+    "wr4": {
+      "text": "Jak bardzo jesteś gotowy na wprowadzenie trwałych zmian — nie diety cud, ale zmiany stylu życia?",
+      "scaleLabels": {
+        "min": "W ogóle nie jestem gotowy",
+        "max": "Całkowicie gotowy"
+      }
+    },
+    "wr5": {
+      "text": "W jakim stopniu stres lub emocje wpływają na Twoje nawyki żywieniowe?",
+      "options": [
+        "Bardzo mało — jem, gdy jestem głodny",
+        "Czasami — stresujące dni wpływają na moje wybory",
+        "Często — jedzenie jest dla mnie pocieszeniem",
+        "Zawsze — jedzenie emocjonalne to mój wzorzec"
+      ]
+    },
+    "wr6": {
+      "text": "Czy masz wsparcie — osoby, które będą zachęcać, a nie sabotować Twoje cele?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Gotowy do startu",
+      "description": "Masz odpowiednie nastawienie, motywację i świadomość, aby osiągnąć realny, trwały postęp. Teraz chodzi o właściwą strategię.",
+      "actions": [
+        "Zacznij w tym tygodniu — Twoje okno gotowości jest realne i warto je wykorzystać",
+        "Wyznacz konkretny, mierzalny cel na 8 tygodni (nie liczbę na całe życie) — utrata 4–6 kg w 8 tygodni jest realistyczna i motywująca",
+        "Poinformuj swoją sieć wsparcia o swoim planie — odpowiedzialność zwiększa wskaźniki sukcesu o 65%"
+      ],
+      "miaHook": "Jesteś naprawdę gotowy — nie tylko masz nadzieję. Pozwól, że przedstawię Ci spersonalizowany plan startowy oparty na Twoim profilu."
+    },
+    {
+      "label": "Prawie gotowy",
+      "description": "Jesteś zmotywowany, ale brakuje jeszcze kilku kluczowych elementów. Zajęcie się nimi teraz zadecyduje o różnicy między trwałą zmianą a kolejnym fałszywym startem.",
+      "actions": [
+        "Zidentyfikuj konkretny powód, dla którego poprzednie próby się nie powiodły — zajmij się tą przyczyną źródłową przed ponownym rozpoczęciem",
+        "Najpierw zbuduj system wsparcia — wskaż 1–2 osoby, które będą aktywnie zachęcać Cię w Twojej podróży",
+        "Poświęć 2 tygodnie na poprawę snu do 7+ godzin przed rozpoczęciem — sen jest najważniejszym predyktorem przestrzegania diety"
+      ],
+      "miaHook": "Widzę, czego brakuje w obrazie Twojej gotowości — zamknijmy te luki, zanim zaczniesz, aby tym razem się udało."
+    },
+    {
+      "label": "Jeszcze nie teraz",
+      "description": "Rozpoczęcie od razu może prowadzić do frustracji i kolejnego cyklu start-stop. Zbudujmy najpierw odpowiednie fundamenty.",
+      "actions": [
+        "Skoncentruj się na zrozumieniu swojego 'dlaczego' — motywacja zdrowotna ma 3× wyższy wskaźnik sukcesu niż motywacja oparta na wydarzeniach lub presji zewnętrznej",
+        "Zajmij się jedzeniem emocjonalnym przed rozpoczęciem diety — bez tego żaden plan żywieniowy nie utrzyma się na dłuższą metę",
+        "Współpracuj z coachem, terapeutą lub dietetykiem, aby zbudować odpowiednie fundamenty — próba zrobienia tego samemu przy obecnym obrazie gotowości to przepis na kolejny restart"
+      ],
+      "miaHook": "Rozpoczęcie bez zajęcia się tym, co widzę w Twoich odpowiedziach, prowadzi do poddania się. Zróbmy to dobrze — i tylko raz."
+    }
+  ],
+  "seoContent": {
+    "intro": "Badania nad zmianą zachowań konsekwentnie pokazują, że motywacja i intencje same w sobie są niewystarczającymi predyktorami sukcesu w odchudzaniu. To, co odróżnia osoby osiągające trwałą utratę wagi od tych, które przechodzą przez cykl wielokrotnych prób, to gotowość psychologiczna: jasność motywacji, realistyczne oczekiwania, konkretny plan i wystarczające wsparcie.\n\nTen quiz ocenia sześć wymiarów gotowości do utraty wagi, opartych na badaniach nad Modelem Transteoretycznym (Prochaska i DiClemente) oraz psychologii behawioralnej. Zrozumienie, gdzie naprawdę jesteś – a nie gdzie chciałbyś być – to najcenniejszy wgląd, jaki możesz uzyskać przed rozpoczęciem.",
+    "faq": [
+      {
+        "q": "Jaki jest najsilniejszy predyktor sukcesu w odchudzaniu?",
+        "a": "Badania konsekwentnie wskazują, że najsilniejszymi predyktorami trwałej utraty wagi są: motywacja wewnętrzna (zdrowotna vs. wyglądowa), poczucie własnej skuteczności (wiara w zdolność do wprowadzania zmian), wsparcie społeczne oraz realistyczne oczekiwania. Osoby, które chudną ze względów zdrowotnych, utrzymują wagę znacznie dłużej niż te motywowane wydarzeniami lub presją zewnętrzną."
+      },
+      {
+        "q": "Dlaczego większość diet kończy się niepowodzeniem?",
+        "a": "Główne przyczyny to: rozpoczęcie od zbyt dużego deficytu kalorycznego (niezaspokajający głód), poleganie na sile woli zamiast na projektowaniu otoczenia, nieadresowanie jedzenia emocjonalnego, brak wsparcia społecznego, myślenie typu 'wszystko albo nic' (jeden zły dzień prowadzi do rezygnacji) oraz wyznaczanie nierealistycznych terminów. To wszystko można naprawić – przy odpowiednim przygotowaniu."
+      },
+      {
+        "q": "Jak przerwać cykl chudnięcia i ponownego przybierania na wadze?",
+        "a": "Badania nad 'cyklowaniem wagi' pokazują, że kluczowymi czynnikami do przerwania tego wzorca są: przejście z krótkoterminowego myślenia dietetycznego na trwałą zmianę stylu życia, adresowanie jedzenia emocjonalnego za pomocą narzędzi behawioralnych (a nie siły woli), wbudowanie fazy utrzymania wagi w plan od samego początku oraz wybór podejścia na tyle zrównoważonego, że możesz sobie wyobrazić stosowanie go przez 5 lat."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Gotowość do utraty wagi to koncepcja psychologiczna wywodząca się z Transteoretycznego Modelu zmiany zachowania (Prochaska i DiClemente, 1983). Opisuje ona, jak bardzo dana osoba jest przygotowana – poznawczo, motywacyjnie i behawioralnie – do wprowadzenia i utrzymania znaczących zmian w stylu życia.\n\nGotowość nie jest stanem stałym – zmienia się w zależności od okoliczności życiowych, poziomu stresu i otoczenia społecznego. Próba odchudzania w okresach niskiej gotowości znacząco zwiększa prawdopodobieństwo nawrotu i przyczynia się do frustrującego cyklu wielokrotnych prób.",
+    "howScored": "Ten quiz ocenia sześć wymiarów gotowości: jakość motywacji (wewnętrzna vs. zewnętrzna), wnioski z poprzednich prób, konkretne planowanie, subiektywną pewność gotowości, wzorce jedzenia emocjonalnego oraz dostępność wsparcia społecznego.\n\nWyniki powyżej 70 wskazują na wysoką gotowość – zacznij teraz. 40–69 oznacza częściową gotowość – należy najpierw zająć się konkretnymi lukami. Poniżej 40 oznacza, że podstawowe warunki sukcesu nie są jeszcze spełnione – przygotowanie znacząco poprawi wyniki.",
+    "whenToSeek": "Rozważ profesjonalne wsparcie, jeśli:\n• Miałeś 3 lub więcej znaczących prób odchudzania, które nie przyniosły trwałej zmiany\n• Jedzenie emocjonalne lub pod wpływem stresu jest znaczącym wzorcem, który wydaje się wymykać spod kontroli\n• Twoje BMI przekracza 35 – nadzór medyczny znacząco poprawia wyniki na tym poziomie\n• Występują epizody objadania się, cykle restrykcji lub inne zaburzone wzorce odżywiania\n• Problemy z wagą znacząco wpływają na zdrowie psychiczne lub jakość życia",
+    "limitations": "Ten quiz ocenia gotowość psychologiczną, a nie medyczną odpowiedniość do utraty wagi. Indywidualne schorzenia, leki i czynniki metaboliczne, które nie są tu uwzględnione, mogą znacząco wpływać na zdolność i podejście do odchudzania. Zawsze skonsultuj się z lekarzem przed rozpoczęciem znaczącego programu odchudzania, szczególnie w przypadku współistniejących schorzeń."
+  }
+}

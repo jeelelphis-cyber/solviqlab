@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "title": "Depression Screening Quiz (PHQ-9)",
+    "description": "The PHQ-9 is the gold-standard depression screening tool used by doctors worldwide. Takes 2 minutes. Based on 20+ years of clinical research.",
+    "medicalNote": "This is a screening tool, not a clinical diagnosis. If you are in crisis, please contact a mental health professional or a crisis line immediately."
+  },
+
+  "likertOptions": [
+    "Not at all",
+    "Several days",
+    "More than half the days",
+    "Nearly every day"
+  ],
+
+  "questions": {
+    "phq1": {
+      "text": "Little interest or pleasure in doing things",
+      "hint": "Anhedonia — loss of enjoyment — is one of two core symptoms of depression."
+    },
+    "phq2": {
+      "text": "Feeling down, depressed, or hopeless",
+      "hint": "Persistent low mood is the second core diagnostic criterion for major depressive disorder."
+    },
+    "phq3": {
+      "text": "Trouble falling or staying asleep, or sleeping too much",
+      "hint": "Sleep disturbances occur in over 90% of people with depression and worsen cognitive function."
+    },
+    "phq4": {
+      "text": "Feeling tired or having little energy",
+      "hint": "Depression-related fatigue is neurobiological — caused by dysregulated serotonin and dopamine."
+    },
+    "phq5": {
+      "text": "Poor appetite or overeating",
+      "hint": "Appetite changes affect 70–80% of depressed individuals. Both extremes are clinical signals."
+    },
+    "phq6": {
+      "text": "Feeling bad about yourself — or that you are a failure or have let yourself or your family down",
+      "hint": "Persistent guilt and worthlessness are among the strongest predictors of depression severity."
+    },
+    "phq7": {
+      "text": "Trouble concentrating on things, such as reading or watching television",
+      "hint": "Depression reduces prefrontal cortex activity, directly impairing attention and memory."
+    },
+    "phq8": {
+      "text": "Moving or speaking so slowly that other people could have noticed — or the opposite, being so fidgety or restless that you have been moving around a lot more than usual",
+      "hint": "Psychomotor changes are observable by others and are a key severity marker in clinical depression."
+    },
+    "phq9": {
+      "text": "Thoughts that you would be better off dead, or of hurting yourself in some way",
+      "hint": "If you are having these thoughts, please reach out to a crisis line or healthcare provider immediately."
+    }
+  },
+
+  "buckets": [
+    {
+      "label": "Minimal or No Depression",
+      "description": "Your score suggests no significant depressive symptoms. Continue maintaining your mental wellbeing.",
+      "actions": [
+        "Maintain your current sleep schedule — consistent sleep is the strongest protective factor against depression",
+        "Keep moving: even 20 minutes of walking 3x/week reduces depression risk by 26% (Harvard Health, 2018)",
+        "Check in monthly — mood naturally fluctuates and early awareness is your best tool"
+      ],
+      "miaHook": "Your score is in the healthy range. Let me show you what the research says keeps it there."
+    },
+    {
+      "label": "Mild Depression",
+      "description": "Mild depressive symptoms are present. These are real and deserve attention — they can progress without support.",
+      "actions": [
+        "Start a 5-minute daily mood log — tracking patterns is the first step toward change",
+        "Add structured physical activity: 30 minutes of moderate exercise has antidepressant effects equivalent to medication for mild cases (Blumenthal et al., JAMA, 2007)",
+        "Talk to someone you trust or consider speaking with a therapist — even 4–6 sessions can significantly reduce mild symptoms"
+      ],
+      "miaHook": "Mild symptoms caught early are the easiest to address. Here's what actually moves the needle at your score."
+    },
+    {
+      "label": "Moderate Depression",
+      "description": "Moderate depression is significantly affecting daily functioning. Professional support alongside lifestyle changes is recommended.",
+      "actions": [
+        "Schedule an appointment with your doctor or a mental health professional this week — moderate depression responds very well to treatment",
+        "Tell someone you trust how you've been feeling — isolation amplifies depressive symptoms",
+        "Protect your basic foundations: sleep 7–9 hours, eat regularly, and get outside daily — these are not optional when dealing with moderate depression"
+      ],
+      "miaHook": "At this level, you need more than self-help tools. Here's how to take the right next step."
+    },
+    {
+      "label": "Moderately Severe Depression",
+      "description": "Your symptoms are significantly impacting your life. Effective treatments exist — please reach out to a healthcare provider soon.",
+      "actions": [
+        "Contact a mental health professional or your doctor within the next 48 hours — this level of depression is very treatable",
+        "If you are in the US, you can call SAMHSA's helpline: 1-800-662-4357 (free, confidential, 24/7)",
+        "Ask someone you trust to support you in making that first appointment — you do not have to navigate this alone"
+      ],
+      "miaHook": "Your symptoms deserve professional care — and effective treatment works. Let me help you take the first step."
+    },
+    {
+      "label": "Severe Depression",
+      "description": "Severe depression. Please seek professional help immediately. You deserve proper care and effective treatments exist.",
+      "actions": [
+        "Please reach out to a crisis line or emergency services if you are in danger: 988 Suicide & Crisis Lifeline (US), Samaritans 116 123 (UK/IE)",
+        "Go to your nearest emergency room or call a trusted person to take you — you should not be alone right now",
+        "Know that severe depression is a medical condition — it is not weakness and it is not permanent. Treatment works."
+      ],
+      "miaHook": "Please reach out for support right now. You matter and effective help exists."
+    }
+  ],
+
+  "seoContent": {
+    "intro": "The PHQ-9 (Patient Health Questionnaire-9) is the most widely used, clinically validated depression screening tool in the world. Developed by Drs. Robert Spitzer, Janet Williams, and Kurt Kroenke, it has been validated in over 8,000 studies across 80+ countries and is used by the WHO, NHS, APA, Mayo Clinic, and CDC as a primary screening instrument.\n\nUnlike general mood quizzes, the PHQ-9 directly maps to the nine diagnostic criteria for Major Depressive Disorder (MDD) from the DSM-5. Each question corresponds to a core symptom that clinicians evaluate in every depression assessment. This makes it uniquely accurate: your score is not a personality assessment — it is a standardized clinical measurement.\n\nScores range from 0 to 27. A score of 10 or higher has 88% sensitivity and 88% specificity for Major Depressive Disorder (Kroenke et al., JGIM 2001). This means it correctly identifies the condition in nearly 9 out of 10 people — the same accuracy as blood pressure measurement for hypertension.",
+    "faq": [
+      {
+        "q": "What is the PHQ-9 and who developed it?",
+        "a": "The PHQ-9 (Patient Health Questionnaire-9) was developed by Drs. Robert Spitzer, Janet Williams, and Kurt Kroenke at Columbia University, funded by Pfizer Inc. It was first published in 2001 in the Journal of General Internal Medicine (PMID: 11556941). It is in the public domain — meaning any doctor, researcher, or platform can use it freely. It is now the most widely adopted depression screening tool globally, used in primary care, psychiatry, research, and digital health."
+      },
+      {
+        "q": "What do PHQ-9 scores mean?",
+        "a": "PHQ-9 scores range from 0 to 27. The clinical thresholds are: 0–4 (minimal or no depression), 5–9 (mild depression), 10–14 (moderate depression), 15–19 (moderately severe depression), and 20–27 (severe depression). A score of 10 or higher is the standard clinical cutoff for diagnosing Major Depressive Disorder, with 88% sensitivity and 88% specificity."
+      },
+      {
+        "q": "Is this quiz a medical diagnosis?",
+        "a": "No. The PHQ-9 is a screening tool — it identifies who is likely to have depression and should see a professional. It is not a substitute for a clinical interview, physical exam, or formal diagnosis. Only a licensed healthcare provider (doctor, psychiatrist, psychologist) can diagnose Major Depressive Disorder. However, a PHQ-9 score of 10+ is taken seriously by every major medical institution and is sufficient justification to seek an evaluation."
+      },
+      {
+        "q": "How accurate is the PHQ-9?",
+        "a": "The PHQ-9 has been validated in hundreds of studies. Its accuracy metrics are: sensitivity 88%, specificity 88%, positive predictive value 71–85%, negative predictive value 95% (Kroenke, Spitzer & Williams, JGIM 2001). For comparison, a mammogram has approximately 87% sensitivity. The PHQ-9 is one of the most rigorously validated tools in all of mental health screening."
+      },
+      {
+        "q": "How often should I retake the PHQ-9?",
+        "a": "Clinicians typically re-administer the PHQ-9 every 2–4 weeks when monitoring treatment response, or every 3–6 months for general wellness monitoring. If you scored 10+, retake it in 2 weeks after starting any intervention (therapy, lifestyle changes, medication) to measure whether your score is improving. A 5-point drop is considered a clinically meaningful improvement."
+      },
+      {
+        "q": "What should I do if I score 10 or higher?",
+        "a": "A score of 10+ means depression-level symptoms are present and you should speak with a healthcare provider. You can start with your primary care doctor — they are trained to discuss PHQ-9 results and can refer you to a mental health specialist if needed. If your score is 20+, please seek care urgently. If you are experiencing thoughts of self-harm (PHQ-9 item 9), please contact a crisis line immediately: 988 (US), 116 123 Samaritans (UK), or your local emergency services."
+      }
+    ]
+  },
+
+  "content": {
+    "whatIs": "Depression is one of the most common medical conditions in the world, affecting approximately 280 million people globally (WHO, 2023). It is not sadness — it is a neurobiological disorder characterized by persistent changes in mood, cognition, sleep, appetite, energy, and motivation that last at least two weeks and impair daily functioning.\n\nMajor Depressive Disorder (MDD) is diagnosed when five or more of the nine PHQ-9 symptoms are present nearly every day for at least two weeks, with at least one symptom being depressed mood or anhedonia (loss of interest). Depression has a clear neurobiological basis: it involves dysregulation of serotonin, norepinephrine, dopamine, and the HPA (hypothalamic-pituitary-adrenal) stress axis.\n\nDepression is highly treatable. Approximately 80–90% of people with depression respond positively to treatment — typically psychotherapy, medication, or a combination. The most common reason treatment fails is not starting it.",
+
+    "clinicalBackground": "The PHQ-9 was developed as part of the PRIME-MD (Primary Care Evaluation of Mental Disorders) project, a large study designed to bring psychiatric diagnostic tools into primary care settings where most mental health goes undetected.\n\nThe nine items correspond directly to the DSM-IV (now DSM-5) criteria for Major Depressive Episode. Each item uses a 4-point Likert scale measuring frequency over the past two weeks: 0 (Not at all), 1 (Several days), 2 (More than half the days), 3 (Nearly every day).\n\nThe original validation study (Kroenke, Spitzer & Williams, 2001) enrolled 6,000 patients across eight primary care clinics. The PHQ-9 has since been validated in over 8,000 studies in more than 80 countries, across age groups (adolescents, adults, elderly), medical populations (cancer, cardiac, diabetes), and cultural contexts. It has been translated into over 100 languages.",
+
+    "howScored": "The PHQ-9 is scored by summing the numeric values of all nine responses: 0 (Not at all), 1 (Several days), 2 (More than half the days), 3 (Nearly every day). The total ranges from 0 to 27.\n\nClinical thresholds established by Kroenke et al. (2001):\n• 0–4: Minimal or no depression\n• 5–9: Mild depression\n• 10–14: Moderate depression (standard diagnostic cutoff: ≥10)\n• 15–19: Moderately severe depression\n• 20–27: Severe depression\n\nItem 9 (thoughts of self-harm) is always interpreted separately regardless of total score — any score above 0 on this item warrants clinical attention.\n\nFor treatment monitoring, a 5-point change is considered clinically meaningful. Remission is typically defined as a score below 5.",
+
+    "interpretation": "Understanding your score in context:\n\n**Score 0–4 (Minimal):** This range reflects normal mood variation. Most people experience occasional low mood, tiredness, or sleep changes — this does not indicate depression. Focus on maintenance: consistent sleep, regular movement, and social connection are the most research-backed protective factors.\n\n**Score 5–9 (Mild):** Symptoms are present but not yet at diagnostic threshold. This is the most actionable range — mild depression responds well to behavioral interventions (exercise, sleep hygiene, structured social activity) and brief psychological therapy (CBT). Left unaddressed, mild depression progresses to moderate or severe in approximately 30% of cases.\n\n**Score 10–14 (Moderate):** Symptoms are meeting or approaching clinical diagnostic criteria and are likely affecting daily functioning. This range has the strongest evidence base for combined treatment (therapy + lifestyle) and sometimes medication. A physician or mental health professional should evaluate you.\n\n**Score 15–19 (Moderately Severe):** Significant daily impairment is present. This range strongly indicates the need for professional treatment — typically a combination of psychotherapy (CBT, IPT) and antidepressant medication. Response rates at this level are approximately 60–70% with treatment.\n\n**Score 20–27 (Severe):** Severe depression is a medical emergency in the same way a diabetic crisis is a medical emergency. Immediate professional care is required. If you are having thoughts of self-harm, please contact emergency services or a crisis line now.",
+
+    "whenToSeek": "You should contact a healthcare provider if:\n\n• Your PHQ-9 score is 10 or higher\n• Your score is 5–9 and has been consistent for more than 4 weeks\n• You answered anything above 0 on Question 9 (thoughts of self-harm)\n• Your mood is significantly affecting your work, relationships, or daily functioning\n• You have tried self-help strategies for 4+ weeks without improvement\n\nYou should contact emergency services or a crisis line immediately if:\n• You are having thoughts of suicide or self-harm\n• You feel unable to keep yourself safe\n• A loved one is in immediate danger\n\nCrisis resources: 988 Suicide & Crisis Lifeline (US, call or text), Samaritans 116 123 (UK/IE), Crisis Text Line: text HOME to 741741 (US/CA/UK).",
+
+    "limitations": "The PHQ-9 is a screening tool with important limitations that every user should understand:\n\n**1. It is not a diagnosis.** Only a licensed clinician can diagnose Major Depressive Disorder after a comprehensive evaluation including medical history, physical exam, and clinical interview.\n\n**2. Somatic conditions can inflate scores.** Medical conditions such as hypothyroidism, anemia, chronic pain, sleep apnea, and diabetes cause symptoms (fatigue, sleep changes, appetite changes) that overlap with depression. A doctor can distinguish between these.\n\n**3. It does not capture context.** A high score immediately after bereavement, childbirth, or a major life event may reflect normal adjustment rather than clinical depression. The DSM-5 requires symptoms to cause significant distress or impairment.\n\n**4. Cultural variation.** While the PHQ-9 has been validated across cultures, the expression of depression varies. Some cultures express depression more through somatic symptoms (pain, fatigue) than emotional ones. A clinician familiar with your background can provide better context.\n\n**5. Recall bias.** The PHQ-9 asks about the past two weeks. Your score may not reflect periods of longer duration or fluctuating symptoms that a longer clinical interview would capture."
+  }
+}

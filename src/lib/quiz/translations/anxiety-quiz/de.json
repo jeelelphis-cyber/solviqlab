@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Angst-Level-Test",
+    "description": "Verstehen Sie, wie sich Angst in Ihrem Leben zeigt – und wie viel Ihrer täglichen Energie sie leise verbraucht."
+  },
+  "yesnoOptions": [
+    "Ja",
+    "Nein"
+  ],
+  "questions": {
+    "anx1": {
+      "text": "Wie oft rast oder kreist Ihr Gedanken in unkontrollierbare „Was wäre, wenn“-Gedanken?",
+      "options": [
+        "Selten – ich kann meine Gedanken normalerweise umlenken",
+        "Manchmal – in stressigen Phasen",
+        "Oft – an den meisten Tagen passiert es",
+        "Fast ständig – es ist erschöpfend"
+      ]
+    },
+    "anx2": {
+      "text": "Vermeiden Sie bestimmte Situationen oder Menschen, weil sie Ihnen Angst machen?"
+    },
+    "anx3": {
+      "text": "Wie oft fühlen Sie sich körperlich angespannt – Engegefühl in der Brust, flache Atmung, ein Knoten im Magen?",
+      "scaleLabels": {
+        "min": "Fast nie",
+        "max": "Sehr häufig"
+      }
+    },
+    "anx4": {
+      "text": "Beeinträchtigt die Sorge um die Zukunft Ihre Fähigkeit, den gegenwärtigen Moment zu genießen?"
+    },
+    "anx5": {
+      "text": "Wie reagieren Sie typischerweise, wenn etwas Unerwartetes passiert?",
+      "options": [
+        "Gelassen – ich passe mich recht gut an",
+        "Ein wenig aus der Fassung, aber ich erhole mich schnell",
+        "Es wirft mich für eine Weile aus der Bahn",
+        "Es stürzt mich in eine Abwärtsspirale"
+      ]
+    },
+    "anx6": {
+      "text": "Fällt es Ihnen schwer zu schlafen, weil Ihre Gedanken nicht zur Ruhe kommen?",
+      "options": [
+        "Nein – ich schlafe gut",
+        "Gelegentlich – etwa einmal pro Woche",
+        "Häufig – ein paar Nächte pro Woche",
+        "Fast jede Nacht"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Niedrige Angst",
+      "description": "Sie gehen mit Unsicherheit und Stress auf gesunde Weise um. Ihr Nervensystem befindet sich nicht in einem chronischen Alarmzustand.",
+      "actions": [
+        "Behalten Sie Ihre aktuellen Stressbewältigungsgewohnheiten bei – was Sie tun, funktioniert",
+        "Üben Sie einmal pro Woche eine Achtsamkeitsübung, um für schwierigere Zeiten Resilienz aufzubauen",
+        "Bleiben Sie mit Menschen verbunden, die Ihnen Halt geben – soziale Unterstützung ist der stärkste Puffer gegen Angst"
+      ],
+      "miaHook": "Ihr Angst-Grundwert ist gesund – lassen Sie uns darüber sprechen, wie das auch bleibt, wenn das Leben härter wird."
+    },
+    {
+      "label": "Mäßige Angst",
+      "description": "Angst ist in Ihrem Leben präsent und beeinflusst einige Ihrer Entscheidungen und Ihr Wohlbefinden. Die Muster sind handhabbar, aber es lohnt sich, sie anzugehen.",
+      "actions": [
+        "Versuchen Sie eine tägliche 5-minütige Atemübung – die Kastenatmung (4-4-4-4) senkt nachweislich innerhalb von Minuten den Cortisolspiegel",
+        "Identifizieren Sie ein Vermeidungsverhalten und machen Sie diese Woche einen kleinen Schritt, um sich ihm zu stellen",
+        "Begrenzen Sie Koffein auf die Zeit vor dem Mittag – es verstärkt die physiologische Angstreaktion"
+      ],
+      "miaHook": "Mir sind in Ihren Antworten einige klare Angstdynamiken aufgefallen – ich habe gezielte Werkzeuge, die diese spürbar reduzieren können."
+    },
+    {
+      "label": "Hohe Angst",
+      "description": "Angst beeinträchtigt Ihren Alltag erheblich. Dieses Maß an anhaltender Wachsamkeit ist ermüdend und verdient echte Aufmerksamkeit.",
+      "actions": [
+        "Sprechen Sie mit einem Therapeuten oder Arzt – die kognitive Verhaltenstherapie (CBT) hat die stärkste Evidenzbasis bei Angst und zeigt oft innerhalb von 6–8 Sitzungen Ergebnisse",
+        "Entfernen Sie sofort Ihre größte tägliche Koffeinquelle – selbst diese einzelne Veränderung reduziert die Angst messbar",
+        "Erzähle einer vertrauten Person, was du durchmachst – Isolation verstärkt Angstgefühle."
+      ],
+      "miaHook": "Was du erlebst, ist real – starke Angst ist erschöpfend und isolierend. Lass mich dir zeigen, wo du anfangen kannst, sie zu lösen."
+    }
+  ],
+  "seoContent": {
+    "intro": "Angst ist die weltweit häufigste psychische Erkrankung und betrifft etwa 284 Millionen Menschen (Our World in Data, 2019). Dennoch suchen die meisten Betroffenen keine Hilfe – entweder, weil sie die Symptome nicht erkennen oder ihre Auswirkungen normalisiert haben.\n\nDieser Test erfasst sechs Kernbereiche von Angst: kognitive Muster (rasende Gedanken, Sorgen), Verhaltensmuster (Vermeidung), körperliche Symptome (Anspannung, Atmung), Auswirkungen auf den Schlaf, emotionale Reaktivität und Beeinträchtigung im gegenwärtigen Moment. Deine Ergebnisse zeigen dir eine persönliche Karte, wie sich Angst in deinem Leben äußert.",
+    "faq": [
+      {
+        "q": "Was ist der Unterschied zwischen normaler Sorge und Angst?",
+        "a": "Normale Sorge steht in einem angemessenen Verhältnis zu einer realen Bedrohung, ist vorübergehend und beeinträchtigt den Alltag nicht wesentlich. Angst hingegen beinhaltet übermäßige, schwer kontrollierbare Sorgen, die oft in keinem Verhältnis zur tatsächlichen Gefahr stehen und dauerhaft den Alltag, Schlaf oder Beziehungen beeinträchtigen."
+      },
+      {
+        "q": "Kann Angst körperliche Symptome verursachen?",
+        "a": "Ja. Angst aktiviert das sympathische Nervensystem (Kampf-oder-Flucht-Reaktion) und verursacht messbare körperliche Effekte: erhöhte Herzfrequenz, flache Atmung, Muskelverspannungen, Verdauungsstörungen und erhöhtes Cortisol. Chronische Angst hat langfristige körperliche Auswirkungen, darunter ein erhöhtes kardiovaskuläres Risiko."
+      },
+      {
+        "q": "Welche Behandlungen helfen bei Angst?",
+        "a": "Die kognitive Verhaltenstherapie (CBT) ist die am besten evidenzbasierte Behandlung und zeigt bei 60–80 % der Betroffenen eine deutliche Verbesserung. Expositionstherapie ist wirksam bei vermeidungsbasierter Angst. Medikamente (SSRIs, SNRIs) sind bei mittelschweren bis schweren Fällen geeignet, oft in Kombination mit Therapie."
+      },
+      {
+        "q": "Verschlimmert Koffein Angst?",
+        "a": "Ja. Koffein blockiert Adenosinrezeptoren und erhöht Cortisol und Adrenalin – denselben physiologischen Weg, den auch Angst aktiviert. Bei Menschen, die zu Angst neigen, verschlimmert Koffein die Symptome messbar. Die Reduzierung von Koffein ist eine der schnellsten Einzelmaßnahmen zur Verringerung von Angst."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Angst ist eine natürliche menschliche Emotion, die dann zum Problem wird, wenn sie übermäßig, anhaltend und den Alltag beeinträchtigend ist. Im Kern ist Angst ein fehlgeleitetes Bedrohungserkennungssystem des Gehirns – es behandelt normale Situationen als gefährlich und hält den Körper in einem Zustand physiologischer Alarmbereitschaft, der erschöpfend und nicht nachhaltig ist.\n\nAngst äußert sich auf drei Arten: kognitiv (rasende Gedanken, Katastrophisieren, Gedankenspiralen), körperlich (Muskelverspannungen, Herzklopfen, flache Atmung, Verdauungsprobleme) und verhaltensbezogen (Vermeidung, Suche nach Bestätigung, zwanghafte Verhaltensweisen). Dieser Test erfasst alle drei Dimensionen.",
+    "howScored": "Dieser Test erfasst sechs evidenzbasierte Dimensionen von Angst: Gedankenmuster, Verhaltensvermeidung, körperliche Anspannungssymptome, zukunftsgerichtete Sorgen, Reaktivität auf unerwartete Ereignisse und Auswirkungen auf den Schlaf. Die Fragen verwenden eine Mischung aus Skalenantworten und Ja/Nein-Antworten, um sowohl Häufigkeit als auch Auswirkung zu erfassen.\n\nDie Werte werden auf 0–100 normiert. Über 70 deutet auf geringe Angst mit guten Bewältigungsressourcen hin. 40–69 weist auf moderate Angstdynamiken hin, die es wert sind, angegangen zu werden. Unter 40 zeigt starke Angst an, die die tägliche Funktionsfähigkeit erheblich beeinträchtigt.",
+    "whenToSeek": "Ziehe ein Gespräch mit einem Psychotherapeuten in Betracht, wenn:\n• Deine Angst deinen Schlaf, deine Arbeit oder deine Beziehungen beeinträchtigt\n• Du Situationen oder Menschen aus Angst vermeidest\n• Körperliche Angstsymptome (Herzrasen, Engegefühl in der Brust) häufig auftreten\n• Du Alkohol oder andere Substanzen zur Bewältigung der Angst verwendest\n• Die Angst seit mehr als 6 Monaten anhält\n\nEin GAD-7-Wert von 10+ (eine klinische Angetskala) deutet darauf hin, dass eine klinische Abklärung angebracht ist.",
+    "limitations": "Dieser Test ist ein Screening-Instrument, keine klinische Beurteilung. Er unterscheidet nicht zwischen verschiedenen Angststörungen (Generalisierte Angststörung, Soziale Angst, Panikstörung, PTBS, Zwangsstörung). Eine klinische Diagnose erfordert eine Bewertung durch einen zugelassenen Psychotherapeuten.\n\nAngstsymptome überschneiden sich zudem erheblich mit Depression, ADHS, Schlafstörungen und bestimmten medizinischen Erkrankungen (Schilddrüsenprobleme, Herz-Kreislauf-Erkrankungen). Eine umfassende Abklärung schließt diese beitragenden Faktoren aus."
+  }
+}

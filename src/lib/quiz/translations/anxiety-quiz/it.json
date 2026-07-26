@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Quiz sul livello di ansia",
+    "description": "Comprendi come l'ansia si manifesta nella tua vita — e quanta della tua energia quotidiana sta consumando silenziosamente."
+  },
+  "yesnoOptions": [
+    "Sì",
+    "No"
+  ],
+  "questions": {
+    "anx1": {
+      "text": "Con quale frequenza la tua mente corre o cade in pensieri del tipo \"e se\" che non riesci a fermare?",
+      "options": [
+        "Raramente — di solito riesco a reindirizzare i miei pensieri",
+        "A volte — nei periodi di stress",
+        "Spesso — la maggior parte dei giorni accade",
+        "Quasi costantemente — è estenuante"
+      ]
+    },
+    "anx2": {
+      "text": "Eviti certe situazioni o persone perché ti rendono ansioso?"
+    },
+    "anx3": {
+      "text": "Con quale frequenza ti senti fisicamente teso — oppressione al petto, respiro superficiale, un nodo allo stomaco?",
+      "scaleLabels": {
+        "min": "Quasi mai",
+        "max": "Molto frequentemente"
+      }
+    },
+    "anx4": {
+      "text": "Preoccuparti per il futuro interferisce con la tua capacità di goderti il presente?"
+    },
+    "anx5": {
+      "text": "Come reagisci di solito quando accade qualcosa di inaspettato?",
+      "options": [
+        "Con calma — mi adatto abbastanza bene",
+        "Un po' scosso, ma mi riprendo rapidamente",
+        "Mi destabilizza per un po'",
+        "Mi manda in una spirale"
+      ]
+    },
+    "anx6": {
+      "text": "Trovi difficile dormire perché i tuoi pensieri non si zittiscono?",
+      "options": [
+        "No — dormo bene",
+        "Occasionalmente — forse una volta a settimana",
+        "Spesso — qualche notte a settimana",
+        "Quasi ogni notte"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Ansia Bassa",
+      "description": "Gestisci l'incertezza e lo stress in modo sano. Il tuo sistema nervoso non è in modalità di allarme cronico.",
+      "actions": [
+        "Mantieni le tue attuali abitudini di gestione dello stress — ciò che fai funziona",
+        "Pratica un esercizio di mindfulness a settimana per costruire resilienza nei periodi più difficili",
+        "Rimani in contatto con persone che ti danno stabilità — il supporto sociale è il più forte fattore protettivo contro l'ansia"
+      ],
+      "miaHook": "Il tuo livello di ansia è sano — parliamo di come mantenerlo tale quando la vita si fa più dura."
+    },
+    {
+      "label": "Ansia Moderata",
+      "description": "L'ansia è presente nella tua vita e influenza alcune tue scelte e il tuo benessere. I pattern sono gestibili ma meritano attenzione.",
+      "actions": [
+        "Prova una pratica di respirazione quotidiana di 5 minuti — la respirazione a scatola (4-4-4-4) riduce misurabilmente il cortisolo in pochi minuti",
+        "Identifica un comportamento di evitamento e fai un piccolo passo verso affrontarlo questa settimana",
+        "Limita la caffeina a prima di mezzogiorno — amplifica la risposta fisiologica all'ansia"
+      ],
+      "miaHook": "Ho notato alcuni chiari pattern di ansia nelle tue risposte — ho strumenti mirati che possono ridurla in modo evidente."
+    },
+    {
+      "label": "Ansia Alta",
+      "description": "L'ansia sta influenzando significativamente la tua vita quotidiana. Questo livello di allerta costante è stancante e merita seria attenzione.",
+      "actions": [
+        "Parla con un terapeuta o un medico — la CBT (Terapia Cognitivo-Comportamentale) ha la più solida base di evidenze per l'ansia e spesso mostra risultati in 6–8 sedute",
+        "Rimuovi immediatamente la tua principale fonte giornaliera di caffeina — anche questo singolo cambiamento riduce l'ansia in modo misurabile",
+        "Racconta a una persona di cui ti fidi cosa stai vivendo — l'isolamento amplifica l'ansia"
+      ],
+      "miaHook": "Quello che stai vivendo è reale — l'ansia alta è estenuante e isolante. Lascia che ti mostri da dove iniziare per scioglierla."
+    }
+  ],
+  "seoContent": {
+    "intro": "L'ansia è la condizione di salute mentale più diffusa al mondo, colpendo circa 284 milioni di persone a livello globale (Our World in Data, 2019). Eppure la maggior parte delle persone che vivono con l'ansia non cerca aiuto — o perché non la riconoscono per ciò che è, o perché ne hanno normalizzato gli effetti.\n\nQuesto quiz valuta sei dimensioni fondamentali dell'ansia: schemi cognitivi (pensieri accelerati, preoccupazione), schemi comportamentali (evitamento), sintomi fisici (tensione, respirazione), impatto sul sonno, reattività emotiva e interferenza con il momento presente. I tuoi risultati ti offrono una mappa personalizzata di come l'ansia si manifesta nella tua vita.",
+    "faq": [
+      {
+        "q": "Qual è la differenza tra preoccupazione normale e ansia?",
+        "a": "La preoccupazione normale è proporzionale a una minaccia reale, temporanea e non compromette significativamente il funzionamento quotidiano. L'ansia comporta una preoccupazione eccessiva, difficile da controllare, spesso sproporzionata rispetto al rischio reale, e interferisce persistentemente con la vita quotidiana, il sonno o le relazioni."
+      },
+      {
+        "q": "L'ansia può causare sintomi fisici?",
+        "a": "Sì. L'ansia attiva il sistema nervoso simpatico (risposta di lotta o fuga), causando effetti fisici misurabili: aumento della frequenza cardiaca, respirazione superficiale, tensione muscolare, disturbi digestivi e aumento del cortisolo. L'ansia cronica provoca effetti fisici a lungo termine, tra cui un aumento del rischio cardiovascolare."
+      },
+      {
+        "q": "Quali trattamenti funzionano per l'ansia?",
+        "a": "La Terapia Cognitivo-Comportamentale (CBT) è il trattamento più basato sull'evidenza, mostrando un miglioramento significativo nel 60–80% delle persone. La terapia espositiva è efficace per l'ansia basata sull'evitamento. I farmaci (SSRI, SNRI) sono appropriati per casi da moderati a gravi, spesso in combinazione con la terapia."
+      },
+      {
+        "q": "La caffeina peggiora l'ansia?",
+        "a": "Sì. La caffeina blocca i recettori dell'adenosina e aumenta cortisolo e adrenalina — lo stesso percorso fisiologico attivato dall'ansia. Nelle persone predisposte all'ansia, la caffeina peggiora i sintomi in modo misurabile. Ridurre la caffeina è uno dei cambiamenti più rapidi per abbassare l'ansia."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "L'ansia è un'emozione umana naturale che diventa un problema quando è eccessiva, persistente e interferisce con la vita quotidiana. Alla base, l'ansia è un malfunzionamento del sistema di rilevamento delle minacce del cervello — che tratta situazioni normali come pericolose e mantiene il corpo in uno stato di prontezza fisiologica estenuante e insostenibile.\n\nL'ansia si manifesta in tre modi: cognitivo (pensieri accelerati, catastrofizzazione, spirali di preoccupazione), fisico (tensione muscolare, palpitazioni, respirazione superficiale, problemi digestivi) e comportamentale (evitamento, ricerca di rassicurazione, comportamenti compulsivi). Questo quiz cattura tutte e tre le dimensioni.",
+    "howScored": "Questo quiz valuta sei dimensioni dell'ansia basate sull'evidenza: schemi di pensiero, evitamento comportamentale, sintomi di tensione fisica, preoccupazione focalizzata sul futuro, reattività a eventi imprevisti e impatto sul sonno. Le domande utilizzano un mix di risposte su scala e sì/no per catturare sia la frequenza che l'impatto.\n\nI punteggi sono normalizzati da 0 a 100. Sopra 70 indica ansia bassa con buone risorse di coping. 40–69 indica schemi di ansia moderata che vale la pena affrontare. Sotto 40 indica ansia alta che influisce significativamente sul funzionamento quotidiano.",
+    "whenToSeek": "Considera di parlare con un professionista della salute mentale se:\n• La tua ansia sta influenzando il sonno, il lavoro o le relazioni\n• Stai evitando situazioni o persone a causa dell'ansia\n• I sintomi fisici dell'ansia (cuore che batte forte, oppressione al petto) sono frequenti\n• Stai usando alcol o altre sostanze per gestire l'ansia\n• L'ansia è presente da più di 6 mesi\n\nUn punteggio GAD-7 di 10+ (una scala clinica per l'ansia) indica che è opportuna una valutazione clinica.",
+    "limitations": "Questo quiz è uno strumento di screening, non una valutazione clinica. Non distingue tra diversi disturbi d'ansia (Disturbo d'Ansia Generalizzata, Ansia Sociale, Disturbo di Panico, PTSD, DOC). Una diagnosi clinica richiede una valutazione da parte di un professionista della salute mentale autorizzato.\n\nI sintomi dell'ansia si sovrappongono anche significativamente con depressione, ADHD, disturbi del sonno e alcune condizioni mediche (problemi tiroidei, problemi cardiovascolari). Una valutazione completa esclude questi fattori contribuenti."
+  }
+}

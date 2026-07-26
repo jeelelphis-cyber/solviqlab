@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Questionario sul Punteggio di Salute dello Stile di Vita",
+    "description": "Ottieni un'istantanea onesta di come le tue abitudini quotidiane — sonno, movimento, alimentazione, stress — contribuiscono alla tua salute generale."
+  },
+  "questions": {
+    "ls1": {
+      "text": "Come descriveresti la tua alimentazione in un tipico giorno feriale?",
+      "options": [
+        "Principalmente cibi integrali — cucino e pianifico in anticipo",
+        "Un mix — alcuni sani, altri no",
+        "Spesso cibi pronti o fast food — non ho tempo",
+        "Principalmente cibi processati — non ne vado fiero"
+      ]
+    },
+    "ls2": {
+      "text": "Quanti giorni alla settimana pratichi una qualche forma di attività fisica intenzionale?",
+      "scaleLabels": {
+        "min": "0 giorni",
+        "max": "7 giorni"
+      }
+    },
+    "ls3": {
+      "text": "Come dormi la maggior parte delle notti?",
+      "options": [
+        "Bene — 7–9 ore, mi sveglio riposato",
+        "Così così — a volte agitato",
+        "Male — meno di 6 ore o sonno interrotto",
+        "Molto male — è un problema costante"
+      ]
+    },
+    "ls4": {
+      "text": "Hai ogni giorno un momento di pausa — tempo che è veramente tuo, senza obblighi?"
+    },
+    "ls5": {
+      "text": "Con quale frequenza consumi alcol o fumi?",
+      "options": [
+        "Mai o molto raramente",
+        "Occasionalmente — in contesti sociali",
+        "Diverse volte a settimana",
+        "Ogni giorno"
+      ]
+    },
+    "ls6": {
+      "text": "Quando pensi alla tua salute in generale, come ti senti?",
+      "options": [
+        "Bene — mi prendo cura di me stesso per lo più",
+        "Così così — ma so che potrei fare meglio",
+        "Non bene — ho trascurato alcune cose",
+        "Preoccupato — sento di aver deluso me stesso"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Fondamenta di stile di vita solide",
+      "description": "Stai costruendo buone abitudini nelle aree chiave. Le tue scelte quotidiane lavorano a tuo favore.",
+      "actions": [
+        "Identifica il tuo pilastro più debole (sonno, alimentazione, movimento o stress) e ottimizzalo ulteriormente",
+        "Monitora un parametro di salute per 30 giorni — ciò che viene misurato viene gestito",
+        "Condividi le tue abitudini con qualcuno — la responsabilità sociale raddoppia i tassi di costanza"
+      ],
+      "miaHook": "Stai facendo molte cose giuste — voglio aiutarti a identificare l'area in cui un'attenzione mirata ti darà il massimo ritorno."
+    },
+    {
+      "label": "Spazio per crescere",
+      "description": "Il tuo stile di vita ha elementi solidi, ma ci sono lacune che probabilmente ti costano energia e salute senza che tu te ne accorga.",
+      "actions": [
+        "Scegli un'abitudine da sistemare questo mese — non tutto in una volta. Inizia dal sonno se è inferiore a 7 ore",
+        "Prepara i pasti un giorno alla settimana — questa singola abitudine è il più forte predittore di un miglioramento della qualità nutrizionale",
+        "Aggiungi 20 minuti di camminata al giorno — è l'intervento più accessibile con benefici comprovati su tutta la salute"
+      ],
+      "miaHook": "Vedo quali abitudini specifiche stanno minando i tuoi progressi — parliamo di dare priorità al cambiamento di maggior impatto."
+    },
+    {
+      "label": "Necessaria una revisione dello stile di vita",
+      "description": "Molte aree del tuo stile di vita richiedono attenzione. Ma non devi cambiare tutto in una volta — un cambiamento alla volta crea un risultato duraturo.",
+      "actions": [
+        "Inizia dal sonno: è il fondamento su cui tutto il resto si costruisce. Dai priorità a 7,5 ore prima di modificare qualsiasi altra cosa.",
+        "Sostituisci un pasto processato al giorno con un'alternativa cucinata in casa: questo è l'intervento nutrizionale più rapido in assoluto.",
+        "Parla con un medico per un controllo generale della salute: i modelli di stile di vita a questo livello hanno spesso effetti fisiologici misurabili che vale la pena valutare."
+      ],
+      "miaHook": "Stai portando più di quanto dovresti: le tue abitudini attuali stanno lavorando contro di te in modi che potresti non vedere ancora completamente."
+    }
+  ],
+  "seoContent": {
+    "intro": "I quattro pilastri della salute legata allo stile di vita — alimentazione, attività fisica, sonno e gestione dello stress — interagiscono continuamente. Una debolezza in un qualsiasi pilastro mette ulteriore pressione sugli altri: un sonno scarso aumenta il cortisolo (peggiorando lo stress e favorendo l'aumento di peso), uno stress elevato compromette la qualità del sonno e porta a scelte alimentari sbagliate, l'inattività fisica riduce la qualità del sonno e la salute metabolica.\n\nQuesto quiz ti fornisce un punteggio composito onesto su tutti e quattro i pilastri più due fattori aggiuntivi: l'uso di alcol/tabacco e la percezione autovalutata della salute. Capire dove ti trovi è il primo passo verso un cambiamento mirato e di grande impatto.",
+    "faq": [
+      {
+        "q": "Quale fattore dello stile di vita ha il maggiore impatto sulla salute?",
+        "a": "La ricerca mostra costantemente che il sonno è il fondamento: regola gli ormoni dell'appetito, la funzione cognitiva, la risposta immunitaria e la regolazione emotiva. Tuttavia, i pilastri si combinano: l'esercizio fisico regolare migliora notevolmente la qualità del sonno, un'alimentazione sana stabilizza l'umore e l'energia, e la gestione dello stress rende più facili da mantenere tutti gli altri comportamenti."
+      },
+      {
+        "q": "Quanto velocemente i cambiamenti nello stile di vita possono migliorare la salute?",
+        "a": "La pressione sanguigna e la glicemia rispondono in pochi giorni ai cambiamenti nella dieta. La qualità del sonno migliora entro 1-2 settimane con una routine di sonno costante. La forma cardiovascolare migliora in modo misurabile entro 4 settimane di esercizio fisico regolare. I marcatori della salute mentale migliorano entro 2-4 settimane di esercizio fisico moderato regolare. Cambiamenti significativi nella composizione corporea richiedono 8-12 settimane di impegno costante."
+      },
+      {
+        "q": "È meglio cambiare un'abitudine alla volta o più contemporaneamente?",
+        "a": "La ricerca sul cambiamento comportamentale (Fogg, Stanford) e gli studi clinici supportano entrambi l'iniziare con un'abitudine alla volta. La forza di volontà è una risorsa limitata: tentare più cambiamenti simultanei riduce drasticamente l'aderenza. Tuttavia, il concetto di 'abitudine chiave di volta' mostra che alcuni cambiamenti (sonno costante, esercizio fisico quotidiano) innescano un miglioramento automatico in altre aree."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "La medicina dello stile di vita è un campo medico in rapida crescita che utilizza interventi comportamentali basati sull'evidenza — dieta, attività fisica, sonno, gestione dello stress e astensione da sostanze — come trattamento primario per la prevenzione e la gestione delle malattie croniche.\n\nI quattro pilastri fondamentali dello stile di vita rappresentano circa l'80% del carico di malattie croniche (CDC, 2023). Le malattie cardiovascolari, il diabete di tipo 2, molti tumori e i disturbi della salute mentale sono fortemente influenzati da fattori di stile di vita modificabili. Ciò significa che il più grande determinante singolare della tua salute a lungo termine non è la genetica, ma le tue abitudini quotidiane.",
+    "howScored": "Questo quiz valuta sei dimensioni: qualità nutrizionale (cibi integrali vs. processati), frequenza dell'attività fisica, qualità e durata del sonno, tempo di recupero quotidiano, uso di alcol/tabacco e percezione soggettiva della salute.\n\nPunteggi superiori a 70 indicano solide basi di stile di vita con la maggior parte dei pilastri ben supportati. 40-69 indica uno stile di vita misto con lacune identificabili su cui vale la pena concentrarsi. Sotto 40 indica molteplici pilastri dello stile di vita che sono significativamente al di sotto delle linee guida sanitarie raccomandate.",
+    "whenToSeek": "Consulta un operatore sanitario se:\n• Hai ottenuto un punteggio nella fascia più bassa per 3+ mesi senza miglioramenti\n• Hai una condizione cronica (diabete, ipertensione, obesità) e i cambiamenti nello stile di vita si sono bloccati\n• Hai bisogno di supporto professionale per cambiare abitudini che sembrano fuori controllo (alimentazione eccessiva, uso di alcol, inattività fisica)\n• Manifesti sintomi insieme a problemi di stile di vita: stanchezza, dolore, problemi di umore o cambiamenti di peso inspiegabili",
+    "limitations": "Questo quiz valuta le abitudini di stile di vita auto-riferite, che sono soggette a bias di richiamo ed effetti di desiderabilità sociale (le persone tendono a riportare abitudini leggermente migliori di quelle che effettivamente mantengono). I risultati riflettono un'istantanea nel tempo e potrebbero non catturare variazioni stagionali o cambiamenti recenti. Questo è uno strumento di screening, non una valutazione medica."
+  }
+}

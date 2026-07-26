@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "title": "Stressniveau Quiz (PSS-10)",
+    "description": "De Perceived Stress Scale is de meest gebruikte stressmeetmethode ter wereld. Gebruikt door Harvard, Stanford, CDC en NIH-onderzoek. Duurt 3 minuten.",
+    "medicalNote": "Dit meet ervaren stress, geen klinische diagnose. Chronische hoge stress is een ernstig gezondheidsrisico. Zoek professionele ondersteuning als u overweldigd raakt."
+  },
+  "likertOptions": [
+    "Nooit",
+    "Bijna nooit",
+    "Soms",
+    "Vrij vaak",
+    "Zeer vaak"
+  ],
+  "reverseLikertOptions": [
+    "Nooit",
+    "Bijna nooit",
+    "Soms",
+    "Vrij vaak",
+    "Zeer vaak"
+  ],
+  "questions": {
+    "pss1": {
+      "text": "Hoe vaak was u de afgelopen maand van streek door iets dat onverwachts gebeurde?",
+      "hint": "Emotionele reactiviteit op onverwachte gebeurtenissen is een van de sterkste indicatoren van de totale stressbelasting."
+    },
+    "pss2": {
+      "text": "Hoe vaak had u de afgelopen maand het gevoel dat u de belangrijke dingen in uw leven niet onder controle had?",
+      "hint": "Ervaren gebrek aan controle is de psychologische kern van stress — het activeert de cortisolrespons."
+    },
+    "pss3": {
+      "text": "Hoe vaak voelde u zich de afgelopen maand nerveus en gestrest?",
+      "hint": "Chronische nerveuze activering houdt het sympathische zenuwstelsel in een bijna constante staat van alertheid."
+    },
+    "pss4": {
+      "text": "Hoe vaak voelde u zich de afgelopen maand zelfverzekerd over uw vermogen om uw persoonlijke problemen aan te pakken?",
+      "hint": "Self-efficacy is een buffer tegen stress — dit item wordt omgekeerd gescoord. Meer vertrouwen = minder stress."
+    },
+    "pss5": {
+      "text": "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat de dingen uw kant op gingen?",
+      "hint": "Positieve beoordeling van de levensrichting is een beschermende factor. Dit item wordt omgekeerd gescoord."
+    },
+    "pss6": {
+      "text": "Hoe vaak heeft u de afgelopen maand gemerkt dat u niet kon omgaan met alle dingen die u moest doen?",
+      "hint": "Overweldigd voelen door de takenlast is een directe stressindicator en een voorloper van burn-out."
+    },
+    "pss7": {
+      "text": "Hoe vaak heeft u de afgelopen maand irritaties in uw leven kunnen beheersen?",
+      "hint": "Regulatie van irritaties weerspiegelt het vermogen tot emotionele controle — dit item wordt omgekeerd gescoord."
+    },
+    "pss8": {
+      "text": "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat u de zaken onder controle had?",
+      "hint": "Een gevoel van meesterschap over omstandigheden is een van de kernbronnen die stress bufferen."
+    },
+    "pss9": {
+      "text": "Hoe vaak bent u de afgelopen maand boos geworden door dingen die buiten uw controle lagen?",
+      "hint": "Boosheid over oncontroleerbare gebeurtenissen activeert de HPA-as en verhoogt cortisol — een directe stressbiomarker."
+    },
+    "pss10": {
+      "text": "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat problemen zich zo hoog opstapelden dat u ze niet kon overwinnen?",
+      "hint": "Cognitieve overbelasting — waarbij problemen onoverkomelijk lijken — is de sterkste voorspeller van burn-out."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Lage stress",
+      "description": "Uw ervaren stress is laag. U beschikt over goede copingbronnen en voelt u grotendeels in controle over uw leven.",
+      "actions": [
+        "Houd uw stressmanagementgewoonten in stand — consistentie is belangrijker dan intensiteit",
+        "Doe één keer per week een proactieve herstelactiviteit (natuurwandeling, sauna, sociale tijd)",
+        "Leg vast wat nu voor u werkt — u wilt hierop terugkomen tijdens moeilijkere periodes"
+      ],
+      "miaHook": "Uw stress is op dit moment goed beheerd. Ik wil u helpen veerkracht op te bouwen voordat de volgende moeilijke periode aanbreekt."
+    },
+    {
+      "label": "Matige stress",
+      "description": "Matige ervaren stress. Je redt je wel, maar voelt de druk. Zonder ingrijpen kan dit escaleren naar een burn-out.",
+      "actions": [
+        "Voeg dagelijks een decompressieritueel van 5 minuten toe na het werk — een wandeling, ademhalingsoefening of journaling.",
+        "Identificeer deze week je top 3 stressoren en elimineer of verminder er één.",
+        "Slaap is je krachtigste hulpmiddel voor stressherstel — geef prioriteit aan 7-8 uur, zonder onderhandeling."
+      ],
+      "miaHook": "Matige stress is waar de meeste mensen leven zonder te beseffen dat het hen langzaam uitput. Ik heb een protocol dat precies aanpakt waar jouw score de uitputting laat zien."
+    },
+    {
+      "label": "Hoge stress",
+      "description": "Hoge ervaren stress. Op dit niveau beschadigt stress je fysieke en mentale gezondheid aanzienlijk. Onderzoek koppelt PSS-scores boven 27 aan een verhoogd risico op depressie, hartziekten en immuunsuppressie.",
+      "actions": [
+        "Schrap deze week één grote verplichting uit je leven — niet over een tijdje, maar deze week.",
+        "Praat vandaag nog met een therapeut, arts of vertrouwd persoon over je stressbelasting.",
+        "Stop met cafeïne na de middag en vermijd alcohol volledig — beide verergeren de cortisolrespons."
+      ],
+      "miaHook": "Je score bevindt zich in een bereik waarin je lichaam echte fysiologische schade oploopt. Ik wil je helpen om direct actie te ondernemen — geen 30-dagenplan, maar vandaag."
+    }
+  ],
+  "seoContent": {
+    "intro": "De Perceived Stress Scale (PSS-10) is ontwikkeld door Dr. Sheldon Cohen aan de Carnegie Mellon University in 1983. Het is het meest gebruikte psychologische instrument voor het meten van stressperceptie in onderzoek en klinische settings, gebruikt door de CDC, NIH, Harvard en Stanford in duizenden studies.\n\nIn tegenstelling tot stressmetingen die stressvolle gebeurtenissen tellen, meet de PSS-10 hoe gestrest je je voelt — je psychologische beoordeling van je eigen situatie. Dit maakt het uniek accuraat omdat twee mensen dezelfde gebeurtenissen kunnen meemaken en totaal verschillende stressreacties kunnen hebben.\n\nScores variëren van 0 tot 40. De gemiddelde Amerikaan scoort 13 (Cohen et al., 2016). Scores boven de 27 worden geassocieerd met een aanzienlijk verhoogd risico op depressie, hart- en vaatziekten en onderdrukking van het immuunsysteem (APA Stress in America, 2023). Inzicht in je stressniveau is de eerste stap naar het beheersen ervan.",
+    "faq": [
+      {
+        "q": "Wat is de PSS-10?",
+        "a": "De Perceived Stress Scale (PSS-10) is een gevalideerde vragenlijst van 10 items, ontwikkeld door Dr. Sheldon Cohen in 1983. Het is wereldwijd het meest gebruikte instrument in stressonderzoek en meet hoe gestrest, overweldigd en de controle kwijt je je voelt."
+      },
+      {
+        "q": "Wat is een normale PSS-10-score?",
+        "a": "De gemiddelde Amerikaanse PSS-10-score is ongeveer 13. Scores van 0–13 duiden op lage stress, 14–26 op matige stress en 27–40 op hoge stress. Vrouwen scoren over het algemeen iets hoger dan mannen in alle leeftijdsgroepen."
+      },
+      {
+        "q": "Waarom worden sommige vragen omgekeerd gescoord?",
+        "a": "Vier items (4, 5, 7, 8) vragen naar positieve gevoelens — vertrouwen en controle. Deze worden omgekeerd gescoord omdat meer vertrouwen of controle voelen wijst op lagere stress. Dit is standaard PSS-10-protocol en wordt in deze quiz automatisch afgehandeld."
+      },
+      {
+        "q": "Kan stress lichamelijke gezondheidsproblemen veroorzaken?",
+        "a": "Ja. Chronische hoge stress verhoogt cortisol, onderdrukt het immuunsysteem, verhoogt ontstekingen en verhoogt het risico op hartziekten, diabetes, depressie en obesitas aanzienlijk. De PSS-10-score boven de 27 wordt in meerdere longitudinale studies in verband gebracht met deze uitkomsten."
+      },
+      {
+        "q": "Hoe vaak moet ik deze quiz opnieuw doen?",
+        "a": "Maandelijks opnieuw testen stelt je in staat trends te volgen. Stress fluctueert doorgaans met levensomstandigheden, maar chronisch hoge scores (27+) gedurende 2+ maanden rechtvaardigen professionele ondersteuning."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Stress is de fysiologische en psychologische reactie van het lichaam op eisen die de waargenomen copingbronnen overschrijden. In korte uitbarstingen is stress adaptief – het verscherpt de focus en mobiliseert energie. Chronische stress is echter een ernstig gezondheidsrisico.\n\nDe Perceived Stress Scale meet waargenomen stress – jouw subjectieve ervaring van overweldigd zijn, geen controle hebben en niet kunnen omgaan met situaties. Dit verschilt van objectieve stressor-tellingen (hoeveel erge dingen er zijn gebeurd) omdat twee mensen met identieke omstandigheden heel verschillende stressreacties kunnen hebben op basis van hun copingbronnen, sociale steun en cognitieve beoordelingspatronen.\n\nDe PSS-10 is wereldwijd de gouden standaard voor het meten van deze subjectieve ervaring. Het is gevalideerd bij honderdduizenden deelnemers in meer dan 60 landen en wordt gebruikt in klinisch onderzoek door elke grote gezondheidsinstelling.",
+    "clinicalBackground": "Dr. Sheldon Cohen ontwikkelde de PSS in 1983 aan de Carnegie Mellon University als onderdeel van onderzoek naar stress en vatbaarheid voor infectieziekten. De schaal is ontworpen om de mate te meten waarin situaties in iemands leven als stressvol worden beoordeeld.\n\nDe PSS-10 (10-item versie) is de meest gebruikte vorm. Het bestaat uit 6 negatief geformuleerde items (hogere antwoorden = meer stress) en 4 positief geformuleerde items die omgekeerd worden gescoord. Dit bidirectionele formaat vermindert instemmingsbias en meet zowel stress als copingbronnen.\n\nDe PSS is vertaald in meer dan 50 talen en wordt gebruikt in onderzoek gepubliceerd door de WHO, CDC, NIH, Harvard School of Public Health en grote medische tijdschriften zoals JAMA, Lancet en NEJM.",
+    "howScored": "De PSS-10 gebruikt een 5-punts frequentieschaal voor de afgelopen maand:\n• 0: Nooit\n• 1: Bijna nooit\n• 2: Soms\n• 3: Vrij vaak\n• 4: Heel vaak\n\nItems 4, 5, 7 en 8 worden omgekeerd gescoord (0=4, 1=3, 2=2, 3=1, 4=0). Totaalscores variëren van 0 tot 40.\n\nKlinische drempelwaarden:\n• 0–13: Lage waargenomen stress\n• 14–26: Matige waargenomen stress\n• 27–40: Hoge waargenomen stress\n\nDe gemiddelde Amerikaanse volwassene scoort ongeveer 13. Een verandering van 5 punten wordt als klinisch betekenisvol beschouwd voor het volgen van behandelingsrespons.",
+    "interpretation": "**Score 0–13 (Lage stress):** Je voelt je grotendeels in controle over je leven en hebt een goed copingvermogen. Onderzoek toont aan dat lage PSS-scores geassocieerd zijn met een betere immuunfunctie, een lager cardiovasculair risico en een langere telomeerlengte (een biologische marker van veroudering). Focus op het behouden van wat werkt.\n\n**Score 14–26 (Matige stress):** Je redt het, maar staat onder druk. Dit bereik is waar de meeste werkende volwassenen zich bevinden, en velen normaliseren het zonder zich de cumulatieve fysieke tol te realiseren. Matige stress die maanden aanhoudt, wordt geassocieerd met slaapverstoring, gewichtstoename, verhoogde vatbaarheid voor ziekten en relatieproblemen.\n\n**Score 27–40 (Hoge stress):** Op dit niveau beschadigt chronische stress meetbaar je gezondheid. Hoge PSS-scores worden geassocieerd met: 40% verhoogd risico op depressie, 2× hogere kans op cardiovasculaire gebeurtenissen, 50% verminderde immuunrespons op vaccins, versnelde cellulaire veroudering en aanzienlijk verminderde besluitvorming. Dit is geen persoonlijkheidskwestie – het is een fysiologische toestand die actieve interventie vereist.",
+    "whenToSeek": "Overweeg professionele ondersteuning als:\n\n• Je PSS-10-score 27 of hoger is\n• Je score al meer dan 6 weken in het matige tot hoge bereik ligt\n• Stress je slaap, eetlust of fysieke gezondheid beïnvloedt\n• Je alcohol, voedsel of andere middelen gebruikt om ermee om te gaan\n• Stress je werkprestaties of relaties beïnvloedt\n• Je angst, paniekaanvallen of aanhoudende somberheid ervaart naast hoge stress\n\nSoorten professionele ondersteuning die evidence-based zijn voor stressmanagement:\n• Cognitieve Gedragstherapie (CGT) – verlaagt PSS-scores gemiddeld met 8–12 punten\n• Mindfulness-Based Stress Reduction (MBSR) – 8-weken programma met sterke wetenschappelijke onderbouwing\n• Medicatie (SSRI's/SNRI's) – geschikt wanneer stress is overgegaan in klinische angst of depressie",
+    "limitations": "**1. Zelfrapportagebias:** De PSS meet waargenomen stress, niet de objectieve stressbelasting. Mensen die de neiging hebben problemen te minimaliseren, kunnen lager scoren dan hun werkelijke fysiologische stressniveau suggereert.\n\n**2. Momentopname:** De PSS vraagt naar de afgelopen maand. Een hoge score tijdens een acute crisis (rouw, baanverlies) weerspiegelt mogelijk niet je basale stressniveau.\n\n**3. Identificeert geen stressoren:** De PSS meet de ervaring van stress, niet de bron ervan. Het identificeren van specifieke stressoren vereist een gedetailleerdere beoordeling.\n\n**4. Culturele variatie:** De uiting en aanvaardbaarheid van stress varieert per cultuur. Sommige populaties vertonen systematisch hogere of lagere scores die culturele normen rond het uiten van psychisch leed weerspiegelen in plaats van werkelijke verschillen in stressniveaus.\n\n**5. Geen vervanging voor klinische beoordeling:** Een hoge PSS-score geeft aan dat aandacht nodig is, niet een diagnose van een angst- of stressstoornis. Klinische aandoeningen vereisen professionele evaluatie."
+  }
+}

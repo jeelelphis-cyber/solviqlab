@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "title": "Questionario di Screening per la Depressione (PHQ-9)",
+    "description": "Il PHQ-9 è lo strumento di screening per la depressione considerato il gold standard, utilizzato dai medici in tutto il mondo. Richiede 2 minuti. Basato su oltre 20 anni di ricerca clinica.",
+    "medicalNote": "Questo è uno strumento di screening, non una diagnosi clinica. Se ti trovi in una situazione di crisi, contatta immediatamente un professionista della salute mentale o una linea di emergenza."
+  },
+  "likertOptions": [
+    "Per niente",
+    "Diversi giorni",
+    "Più della metà dei giorni",
+    "Quasi ogni giorno"
+  ],
+  "questions": {
+    "phq1": {
+      "text": "Scarso interesse o piacere nel fare le cose",
+      "hint": "Anedonia — perdita del piacere — è uno dei due sintomi principali della depressione."
+    },
+    "phq2": {
+      "text": "Sentirsi giù, depresso o senza speranza",
+      "hint": "L'umore persistentemente basso è il secondo criterio diagnostico fondamentale per il disturbo depressivo maggiore."
+    },
+    "phq3": {
+      "text": "Difficoltà ad addormentarsi o a rimanere addormentato, o dormire troppo",
+      "hint": "I disturbi del sonno si verificano in oltre il 90% delle persone con depressione e peggiorano la funzione cognitiva."
+    },
+    "phq4": {
+      "text": "Sentirsi stanco o con poca energia",
+      "hint": "L'affaticamento correlato alla depressione è di natura neurobiologica — causato da una disregolazione della serotonina e della dopamina."
+    },
+    "phq5": {
+      "text": "Scarso appetito o eccesso di cibo",
+      "hint": "I cambiamenti dell'appetito colpiscono il 70–80% delle persone depresse. Entrambi gli estremi sono segnali clinici."
+    },
+    "phq6": {
+      "text": "Sentirsi male con te stesso — o sentirti un fallito o di aver deluso te stesso o la tua famiglia",
+      "hint": "Il senso di colpa persistente e l'inutilità sono tra i più forti predittori della gravità della depressione."
+    },
+    "phq7": {
+      "text": "Difficoltà a concentrarsi sulle cose, come leggere o guardare la televisione",
+      "hint": "La depressione riduce l'attività della corteccia prefrontale, compromettendo direttamente attenzione e memoria."
+    },
+    "phq8": {
+      "text": "Muoversi o parlare così lentamente che altre persone potrebbero averlo notato — o l'opposto, essere così irrequieti o agitati da essersi mossi molto più del solito",
+      "hint": "I cambiamenti psicomotori sono osservabili da altri e rappresentano un indicatore chiave di gravità nella depressione clinica."
+    },
+    "phq9": {
+      "text": "Pensieri che sarebbe meglio essere morti, o di farsi del male in qualche modo",
+      "hint": "Se stai avendo questi pensieri, contatta immediatamente una linea di crisi o un operatore sanitario."
+    }
+  },
+  "buckets": [
+    {
+      "label": "Depressione Minima o Assente",
+      "description": "Il tuo punteggio non suggerisce sintomi depressivi significativi. Continua a mantenere il tuo benessere mentale.",
+      "actions": [
+        "Mantieni il tuo attuale programma di sonno — un sonno costante è il fattore protettivo più forte contro la depressione",
+        "Continua a muoverti: anche 20 minuti di camminata 3 volte a settimana riducono il rischio di depressione del 26% (Harvard Health, 2018)",
+        "Fai un controllo mensile — l'umore fluttua naturalmente e la consapevolezza precoce è il tuo strumento migliore"
+      ],
+      "miaHook": "Il tuo punteggio è nella fascia sana. Lascia che ti mostri cosa dice la ricerca per mantenerlo tale."
+    },
+    {
+      "label": "Depressione Lieve",
+      "description": "Sono presenti sintomi depressivi lievi. Sono reali e meritano attenzione — possono progredire senza supporto.",
+      "actions": [
+        "Inizia un diario dell'umore quotidiano di 5 minuti — monitorare i modelli è il primo passo verso il cambiamento",
+        "Aggiungi attività fisica strutturata: 30 minuti di esercizio moderato hanno effetti antidepressivi equivalenti ai farmaci per i casi lievi (Blumenthal et al., JAMA, 2007)",
+        "Parla con qualcuno di cui ti fidi o considera di parlare con un terapeuta — anche 4–6 sedute possono ridurre significativamente i sintomi lievi"
+      ],
+      "miaHook": "I sintomi lievi individuati precocemente sono i più facili da affrontare. Ecco cosa realmente fa la differenza con il tuo punteggio."
+    },
+    {
+      "label": "Depressione Moderata",
+      "description": "La depressione moderata sta influenzando significativamente il funzionamento quotidiano. Si raccomanda un supporto professionale insieme a cambiamenti nello stile di vita.",
+      "actions": [
+        "Fissa un appuntamento con il tuo medico o un professionista della salute mentale questa settimana — la depressione moderata risponde molto bene al trattamento",
+        "Racconta a qualcuno di cui ti fidi come ti sei sentito — l'isolamento amplifica i sintomi depressivi",
+        "Proteggi le tue basi fondamentali: dormi 7–9 ore, mangia regolarmente ed esci all'aperto ogni giorno — queste non sono opzioni quando si affronta una depressione moderata"
+      ],
+      "miaHook": "A questo livello, hai bisogno di più di strumenti di auto-aiuto. Ecco come fare il passo giusto successivo."
+    },
+    {
+      "label": "Depressione Moderatamente Grave",
+      "description": "I tuoi sintomi stanno influenzando significativamente la tua vita. Esistono trattamenti efficaci — contatta presto un operatore sanitario.",
+      "actions": [
+        "Contatta un professionista della salute mentale o il tuo medico entro le prossime 48 ore — questo livello di depressione è molto curabile",
+        "Se sei negli Stati Uniti, puoi chiamare la linea di assistenza SAMHSA: 1-800-662-4357 (gratuita, riservata, 24/7)",
+        "Chiedi a qualcuno di cui ti fidi di supportarti nel fissare quel primo appuntamento — non devi affrontare tutto questo da solo"
+      ],
+      "miaHook": "I tuoi sintomi meritano cure professionali — e un trattamento efficace funziona. Lascia che ti aiuti a fare il primo passo."
+    },
+    {
+      "label": "Depressione Grave",
+      "description": "Depressione grave. Cerca immediatamente aiuto professionale. Meriti cure adeguate e esistono trattamenti efficaci.",
+      "actions": [
+        "Contatta una linea di crisi o i servizi di emergenza se sei in pericolo: 988 Suicide & Crisis Lifeline (USA), Samaritans 116 123 (UK/IE)",
+        "Vai al pronto soccorso più vicino o chiama una persona di fiducia che ti accompagni — non dovresti essere solo in questo momento",
+        "Sappi che la depressione grave è una condizione medica — non è debolezza e non è permanente. Il trattamento funziona."
+      ],
+      "miaHook": "Cerca supporto ora. Tu conti e esiste un aiuto efficace."
+    }
+  ],
+  "seoContent": {
+    "intro": "Il PHQ-9 (Patient Health Questionnaire-9) è lo strumento di screening per la depressione più utilizzato e clinicamente validato al mondo. Sviluppato dai Dr. Robert Spitzer, Janet Williams e Kurt Kroenke, è stato validato in oltre 8.000 studi in più di 80 paesi ed è utilizzato da OMS, NHS, APA, Mayo Clinic e CDC come strumento di screening primario.\n\nA differenza dei quiz generali sull'umore, il PHQ-9 si mappa direttamente sui nove criteri diagnostici per il Disturbo Depressivo Maggiore (MDD) del DSM-5. Ogni domanda corrisponde a un sintomo centrale che i clinici valutano in ogni valutazione della depressione. Questo lo rende unicamente accurato: il tuo punteggio non è una valutazione della personalità — è una misurazione clinica standardizzata.\n\nI punteggi vanno da 0 a 27. Un punteggio di 10 o superiore ha una sensibilità dell'88% e una specificità dell'88% per il Disturbo Depressivo Maggiore (Kroenke et al., JGIM 2001). Ciò significa che identifica correttamente la condizione in quasi 9 persone su 10 — la stessa accuratezza della misurazione della pressione sanguigna per l'ipertensione.",
+    "faq": [
+      {
+        "q": "Cos'è il PHQ-9 e chi lo ha sviluppato?",
+        "a": "Il PHQ-9 (Patient Health Questionnaire-9) è stato sviluppato dai Dr. Robert Spitzer, Janet Williams e Kurt Kroenke alla Columbia University, finanziato da Pfizer Inc. È stato pubblicato per la prima volta nel 2001 sul Journal of General Internal Medicine (PMID: 11556941). È di pubblico dominio — il che significa che qualsiasi medico, ricercatore o piattaforma può usarlo liberamente. È ora lo strumento di screening per la depressione più adottato a livello globale, utilizzato in medicina primaria, psichiatria, ricerca e salute digitale."
+      },
+      {
+        "q": "Cosa significano i punteggi del PHQ-9?",
+        "a": "I punteggi del PHQ-9 vanno da 0 a 27. Le soglie cliniche sono: 0–4 (depressione minima o assente), 5–9 (depressione lieve), 10–14 (depressione moderata), 15–19 (depressione moderatamente grave) e 20–27 (depressione grave). Un punteggio di 10 o superiore è il cutoff clinico standard per diagnosticare il Disturbo Depressivo Maggiore, con una sensibilità dell'88% e una specificità dell'88%."
+      },
+      {
+        "q": "Questo quiz è una diagnosi medica?",
+        "a": "No. Il PHQ-9 è uno strumento di screening — identifica chi è probabile che soffra di depressione e dovrebbe consultare un professionista. Non sostituisce un colloquio clinico, un esame fisico o una diagnosi formale. Solo un operatore sanitario autorizzato (medico, psichiatra, psicologo) può diagnosticare il Disturbo Depressivo Maggiore. Tuttavia, un punteggio PHQ-9 di 10 o superiore viene preso seriamente da ogni importante istituzione medica ed è una giustificazione sufficiente per cercare una valutazione."
+      },
+      {
+        "q": "Quanto è accurato il PHQ-9?",
+        "a": "Il PHQ-9 è stato validato in centinaia di studi. Le sue metriche di accuratezza sono: sensibilità 88%, specificità 88%, valore predittivo positivo 71–85%, valore predittivo negativo 95% (Kroenke, Spitzer & Williams, JGIM 2001). Per confronto, una mammografia ha circa l'87% di sensibilità. Il PHQ-9 è uno degli strumenti più rigorosamente validati in tutto lo screening della salute mentale."
+      },
+      {
+        "q": "Con quale frequenza dovrei ripetere il PHQ-9?",
+        "a": "I clinici di solito ri-somministrano il PHQ-9 ogni 2–4 settimane quando monitorano la risposta al trattamento, o ogni 3–6 mesi per il monitoraggio generale del benessere. Se hai ottenuto un punteggio di 10 o superiore, ripetilo dopo 2 settimane dall'inizio di qualsiasi intervento (terapia, cambiamenti nello stile di vita, farmaci) per misurare se il tuo punteggio sta migliorando. Una diminuzione di 5 punti è considerata un miglioramento clinicamente significativo."
+      },
+      {
+        "q": "Cosa dovrei fare se ottengo un punteggio di 10 o superiore?",
+        "a": "Un punteggio di 10 o superiore significa che sono presenti sintomi a livello depressivo e dovresti parlare con un operatore sanitario. Puoi iniziare dal tuo medico di base — è formato per discutere i risultati del PHQ-9 e può indirizzarti a uno specialista della salute mentale se necessario. Se il tuo punteggio è 20 o superiore, cerca assistenza urgentemente. Se stai vivendo pensieri di autolesionismo (item 9 del PHQ-9), contatta immediatamente una linea di crisi: 988 (USA), 116 123 Samaritans (Regno Unito), o i servizi di emergenza locali."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "La depressione è una delle condizioni mediche più comuni al mondo, colpendo circa 280 milioni di persone a livello globale (OMS, 2023). Non è tristezza — è un disturbo neurobiologico caratterizzato da cambiamenti persistenti nell'umore, nella cognizione, nel sonno, nell'appetito, nell'energia e nella motivazione che durano almeno due settimane e compromettono il funzionamento quotidiano.\n\nIl Disturbo Depressivo Maggiore (MDD) viene diagnosticato quando cinque o più dei nove sintomi del PHQ-9 sono presenti quasi ogni giorno per almeno due settimane, con almeno un sintomo che sia umore depresso o anedonia (perdita di interesse). La depressione ha una chiara base neurobiologica: coinvolge la disregolazione di serotonina, norepinefrina, dopamina e dell'asse HPA (ipotalamo-ipofisi-surrene) dello stress.\n\nLa depressione è altamente curabile. Circa l'80–90% delle persone con depressione risponde positivamente al trattamento — tipicamente psicoterapia, farmaci o una combinazione. Il motivo più comune per cui il trattamento fallisce è non iniziarlo.",
+    "clinicalBackground": "Il PHQ-9 è stato sviluppato come parte del progetto PRIME-MD (Primary Care Evaluation of Mental Disorders), un ampio studio progettato per portare strumenti diagnostici psichiatrici negli ambienti di cure primarie dove la maggior parte dei problemi di salute mentale non viene rilevata.\n\nI nove item corrispondono direttamente ai criteri del DSM-IV (ora DSM-5) per l'Episodio Depressivo Maggiore. Ogni item utilizza una scala Likert a 4 punti che misura la frequenza nelle ultime due settimane: 0 (Per niente), 1 (Diversi giorni), 2 (Più della metà dei giorni), 3 (Quasi ogni giorno).\n\nLo studio di validazione originale (Kroenke, Spitzer & Williams, 2001) ha arruolato 6.000 pazienti in otto cliniche di cure primarie. Il PHQ-9 è stato successivamente validato in oltre 8.000 studi in più di 80 paesi, attraverso gruppi di età (adolescenti, adulti, anziani), popolazioni mediche (cancro, cardiopatie, diabete) e contesti culturali. È stato tradotto in oltre 100 lingue.",
+    "howScored": "Il PHQ-9 viene valutato sommando i valori numerici di tutte e nove le risposte: 0 (Per niente), 1 (Diversi giorni), 2 (Più della metà dei giorni), 3 (Quasi ogni giorno). Il totale varia da 0 a 27.\n\nSoglie cliniche stabilite da Kroenke et al. (2001):\n• 0–4: Depressione minima o assente\n• 5–9: Depressione lieve\n• 10–14: Depressione moderata (cut-off diagnostico standard: ≥10)\n• 15–19: Depressione moderatamente grave\n• 20–27: Depressione grave\n\nL'item 9 (pensieri di autolesionismo) viene sempre interpretato separatamente indipendentemente dal punteggio totale — qualsiasi punteggio superiore a 0 su questo item richiede attenzione clinica.\n\nPer il monitoraggio del trattamento, un cambiamento di 5 punti è considerato clinicamente significativo. La remissione è tipicamente definita come un punteggio inferiore a 5.",
+    "interpretation": "Comprendere il tuo punteggio nel contesto:\n\n**Punteggio 0–4 (Minimo):** Questo intervallo riflette una normale variazione dell'umore. La maggior parte delle persone sperimenta occasionalmente umore basso, stanchezza o cambiamenti del sonno — questo non indica depressione. Concentrati sul mantenimento: sonno costante, movimento regolare e connessione sociale sono i fattori protettivi più supportati dalla ricerca.\n\n**Punteggio 5–9 (Lieve):** I sintomi sono presenti ma non ancora alla soglia diagnostica. Questo è l'intervallo più attuabile — la depressione lieve risponde bene agli interventi comportamentali (esercizio fisico, igiene del sonno, attività sociale strutturata) e alla terapia psicologica breve (CBT). Se non affrontata, la depressione lieve progredisce a moderata o grave in circa il 30% dei casi.\n\n**Punteggio 10–14 (Moderato):** I sintomi stanno raggiungendo o avvicinandosi ai criteri diagnostici clinici e probabilmente influenzano il funzionamento quotidiano. Questo intervallo ha la più forte base di prove per il trattamento combinato (terapia + stile di vita) e talvolta farmaci. Un medico o un professionista della salute mentale dovrebbe valutarti.\n\n**Punteggio 15–19 (Moderatamente Grave):** È presente una compromissione significativa quotidiana. Questo intervallo indica fortemente la necessità di un trattamento professionale — tipicamente una combinazione di psicoterapia (CBT, IPT) e farmaci antidepressivi. I tassi di risposta a questo livello sono circa il 60–70% con il trattamento.\n\n**Punteggio 20–27 (Grave):** La depressione grave è un'emergenza medica allo stesso modo in cui una crisi diabetica è un'emergenza medica. È necessaria assistenza professionale immediata. Se hai pensieri di autolesionismo, contatta i servizi di emergenza o una linea di crisi ora.",
+    "whenToSeek": "Dovresti contattare un operatore sanitario se:\n\n• Il tuo punteggio PHQ-9 è 10 o superiore\n• Il tuo punteggio è 5–9 ed è stato costante per più di 4 settimane\n• Hai risposto con qualsiasi valore superiore a 0 alla Domanda 9 (pensieri di autolesionismo)\n• Il tuo umore sta influenzando significativamente il tuo lavoro, le relazioni o il funzionamento quotidiano\n• Hai provato strategie di auto-aiuto per 4 o più settimane senza miglioramenti\n\nDovresti contattare i servizi di emergenza o una linea di crisi immediatamente se:\n• Hai pensieri di suicidio o autolesionismo\n• Ti senti incapace di mantenerti al sicuro\n• Una persona cara è in pericolo immediato\n\nRisorse di crisi: 988 Suicide & Crisis Lifeline (USA, chiama o invia un SMS), Samaritans 116 123 (Regno Unito/Irlanda), Crisis Text Line: invia HOME al 741741 (USA/Canada/Regno Unito).",
+    "limitations": "Il PHQ-9 è uno strumento di screening con importanti limitazioni che ogni utente dovrebbe comprendere:\n\n**1. Non è una diagnosi.** Solo un clinico autorizzato può diagnosticare il Disturbo Depressivo Maggiore dopo una valutazione completa che includa storia medica, esame fisico e colloquio clinico.\n\n**2. Le condizioni somatiche possono gonfiare i punteggi.** Condizioni mediche come ipotiroidismo, anemia, dolore cronico, apnea notturna e diabete causano sintomi (affaticamento, cambiamenti del sonno, cambiamenti dell'appetito) che si sovrappongono alla depressione. Un medico può distinguere tra questi.\n\n**3. Non cattura il contesto.** Un punteggio alto subito dopo un lutto, un parto o un evento di vita importante può riflettere un adattamento normale piuttosto che una depressione clinica. Il DSM-5 richiede che i sintomi causino disagio o compromissione significativi.\n\n**4. Variazione culturale.** Sebbene il PHQ-9 sia stato validato in diverse culture, l'espressione della depressione varia. Alcune culture esprimono la depressione più attraverso sintomi somatici (dolore, affaticamento) che emotivi. Un clinico che conosce il tuo background può fornire un contesto migliore.\n\n**5. Bias di richiamo.** Il PHQ-9 chiede informazioni sulle ultime due settimane. Il tuo punteggio potrebbe non riflettere periodi di durata più lunga o sintomi fluttuanti che un colloquio clinico più lungo catturerebbe."
+  }
+}

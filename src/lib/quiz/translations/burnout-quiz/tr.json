@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Tükenmişlik Risk Testi",
+    "description": "Tükenmişlik bir gecede olmaz. Geri dönüşü daha zor olmadan önce spektrumda nerede olduğunuzu kontrol edin."
+  },
+  "questions": {
+    "bu1": {
+      "text": "İşinizden veya günlük sorumluluklarınızdan duygusal olarak tükenmiş hissediyor musunuz — gün daha başlamadan önce bile?",
+      "options": [
+        "Hayır — genellikle ilgili hissediyorum",
+        "Bazen — zorlu haftalarda",
+        "Sık sık — çoğu hafta ağır geçiyor",
+        "Neredeyse her zaman — son nefesimle gidiyorum"
+      ]
+    },
+    "bu2": {
+      "text": "Eskiden keyif aldığınız şeylere karşı motivasyonunuzu veya hevesinizi kaybettiniz mi?"
+    },
+    "bu3": {
+      "text": "Son zamanlarda işte veya ana sorumluluklarınızda kendinizi ne kadar etkili hissediyorsunuz?",
+      "options": [
+        "Oldukça etkili — en iyi işimi yapıyorum",
+        "İdare ediyor — işleri hallediyorum",
+        "Normal standardımın altında — düşüşü fark ediyorum",
+        "Sadece işleri yürütüyorum"
+      ]
+    },
+    "bu4": {
+      "text": "Kendinizi çevrenizdeki insanlara karşı daha alaycı veya kopmuş buluyor musunuz?"
+    },
+    "bu5": {
+      "text": "Gün içinde gerçekten ne sıklıkla mola veriyorsunuz — sadece kaydırarak değil, gerçek dinlenme?",
+      "scaleLabels": {
+        "min": "Hiçbir zaman",
+        "max": "Günde birkaç kez"
+      }
+    },
+    "bu6": {
+      "text": "Önünüzdeki haftayı hayal ettiğinizde, ilk hissiniz nedir?",
+      "options": [
+        "Enerjik — dört gözle beklediğim şeyler var",
+        "Nötr — sadece başka bir hafta",
+        "Dread — çok fazla gibi geliyor",
+        "Dread — içinde hiçbir ışık göremiyorum"
+      ]
+    },
+    "bu7": {
+      "text": "Ne kadar yaparsan yap, hiçbir zaman yeterli olmadığını mı hissediyorsun?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Düşük Tükenmişlik Riski",
+      "description": "İyi durumdasın. Enerji rezervlerin sağlam ve sağlıklı tamponların yerinde.",
+      "actions": [
+        "İyileşme alışkanlıklarını sürdür — seni koruyan şeyleri adlandırmak ve sürdürmek değerli",
+        "Her hafta proaktif bir iyileşme pratiği oluştur (sadece tepkisel dinlenme değil)",
+        "Kendini aylık olarak kontrol et — tükenmişlik yavaşça birikir ve erken farkındalık her şeydir"
+      ],
+      "miaHook": "İyi durumdasın — şimdi baskı arttığında bu şekilde nasıl kalacağını konuşalım."
+    },
+    {
+      "label": "Erken Uyarı İşaretleri",
+      "description": "Tükenmişliğin bazı erken sinyallerini gösteriyorsun. Harekete geçmek için ideal zaman — iyileşmesi zorlaşmadan önce.",
+      "actions": [
+        "Bu hafta yapılacaklar listenden bir şey çıkar — tükenmişlik bu aşamada optimizasyona değil, azaltmaya yanıt verir",
+        "Üretkenlikle hiçbir ilgisi olmayan gerçek bir iyileşme aktivitesi ekle",
+        "Baskı hissettiğini güvendiğin birine söyle — sosyal destek tükenmişliğin ilerlemesini geciktirir"
+      ],
+      "miaHook": "Cevaplarında erken tükenmişlik örüntüleri görüyorum — iyi haber şu ki bu aşama doğru değişikliklerle oldukça iyileştirilebilir."
+    },
+    {
+      "label": "Tükenmişlik Bölgesi",
+      "description": "Cevapların önemli düzeyde tükenmişlik olduğunu gösteriyor. Bu durum sağlığını, ilişkilerini ve üretkenliğini etkiler — zayıflık değil, gerçek bir fizyolojik durumdur.",
+      "actions": [
+        "Bir doktor veya terapistle görüş — bu seviyedeki tükenmişliğin ölçülebilir fizyolojik etkileri vardır ve profesyonel destekten fayda sağlar",
+        "Bu hafta işle ilgili tüm aktivitelerden tamamen uzak en az bir tam gün geçir — 'yumuşak' bir gün değil, tam bir mola",
+        "Enerjini tüketen en büyük kaynağı belirle ve onu azaltma veya ortadan kaldırma sürecine başla — imkansız gibi görünse bile"
+      ],
+      "miaHook": "Yaşadıklarınız gerçek ve ciddi — size her şeyi bırakmanızı gerektirmeyen bir iyileşme yolu haritalamanıza yardımcı olmak istiyorum."
+    }
+  ],
+  "seoContent": {
+    "intro": "Tükenmişlik, üç boyutu olan kronik iş yeri stresinin bir durumudur: duygusal tükenme, duyarsızlaşma (sinizm ve kopma) ve azalmış kişisel başarı hissi. İlk olarak 1974'te psikolog Herbert Freudenberger tarafından tanımlanan ve 2019'da WHO tarafından resmen tanınan tükenmişlik, artık çalışanların tahmini %67'sini kariyerlerinin bir noktasında etkileyen mesleki bir olgu olarak sınıflandırılmaktadır.\n\nTükenmişlik aniden olmaz — aylar içinde aşırı bağlılık, tükenme ve geri çekilmenin ilerleyici bir döngüsüyle gelişir. Bu test, iyileşmesi zorlaşmadan harekete geçebilmeniz için spektrumda nerede olduğunuzu değerlendirir.",
+    "faq": [
+      {
+        "q": "Tükenmişlik ve depresyon arasındaki fark nedir?",
+        "a": "Tükenmişlik öncelikle iş bağlamına özgüdür ve dinlenme, tatil ve stres faktörlerinden uzaklaşma ile önemli ölçüde iyileşir. Depresyon ise tüm yaşam alanlarında yaygındır ve yalnızca dinlenmeyle geçmez. Ancak şiddetli tükenmişlik klinik depresyonu tetikleyebilir. Belirtiler iş dışı bağlamlarda da devam ediyorsa, klinik değerlendirme önerilir."
+      },
+      {
+        "q": "Tükenmişlikten kurtulmak mümkün mü?",
+        "a": "Evet. Tükenmişlikten kurtulmak mümkündür ve iyi belgelenmiştir. Erken evre tükenmişlik (hafif uyarı işaretleri) genellikle uygun dinlenme ve sınır koyma ile haftalar içinde iyileşir. Şiddetli tükenmişlik, sürekli bir iyileşme için 3–12 ay sürebilir. Anahtar faktörler şunlardır: talepleri azaltmak, iyileşme aktivitelerini artırmak ve temel nedenleri ele almak."
+      },
+      {
+        "q": "Tükenmişliğe ne sebep olur?",
+        "a": "Araştırma (Maslach & Leiter, 2016) tükenmişliğe neden olan altı iş yeri uyumsuzluğunu tanımlar: aşırı iş yükü, kontrol eksikliği, yetersiz ödül, topluluk çöküşü, adaletsizlik ve değer çatışması. Mükemmeliyetçilik, sınır koymada zorluk ve zayıf iyileşme alışkanlıkları gibi kişisel faktörler de katkıda bulunur."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Tükenmişlik, başarıyla yönetilmemiş kronik iş yeri stresinden kaynaklanan bir sendromdur. WHO (ICD-11, 2019) bunu üç boyutla tanımlar: enerji tükenmesi veya bitkinlik hissi, kişinin işine karşı artan zihinsel mesafe veya işiyle ilgili olumsuzluk ya da sinizm duyguları ve azalmış mesleki verimlilik.\n\nTükenmişlik, coşku ve aşırı bağlılıktan durgunluk, hayal kırıklığı ve ilgisizliğe kadar ilerleyici aşamalardan geçerek gelişir — tamamen tükenmiş duruma ulaşması genellikle 6–18 ay sürer. İyileşme, aynı zaman yatırımını tersine gerektirir.",
+    "howScored": "Bu test, Maslach Tükenmişlik Envanteri (altın standart klinik araç) ve Kopenhag Tükenmişlik Envanteri'nden alınan yedi tükenmişlik göstergesini değerlendirir: duygusal tükenme, motivasyon kaybı, verimlilik azalması, duyarsızlaşma/sinizm, iyileşme davranışları, beklenti korkusu ve 'asla yeterli değil' hissi.\n\n70'in üzerindeki puanlar, sağlıklı tamponlarla düşük riski gösterir. 40–69, müdahaleye iyi yanıt veren erken uyarı işaretlerini gösterir. 40'ın altı, aktif iyileşme gerektiren önemli tükenmişliği gösterir.",
+    "whenToSeek": "Aşağıdaki durumlarda profesyonel destek alın:\n• 4 haftadan uzun süredir tükenmişlik bölgesindeyseniz\n• Fiziksel belirtiler ortaya çıktıysa (kronik baş ağrıları, sık hastalanma, uyku bozukluğu)\n• Tükenmişlik yalnızca işi değil, kişisel ilişkilerinizi de etkiliyorsa\n• İş talepleriyle başa çıkmak için alkol veya madde kullanıyorsanız\n• Tükenmişliğin yanı sıra depresyon belirtileri yaşıyorsanız\n\nBirinci basamak doktoru veya iş sağlığı konusunda uzmanlaşmış bir terapist uygun desteği sağlayabilir.",
+    "limitations": "Bu test, klinik bir tükenmişlik teşhisi değil, tükenmişlik riskini ölçer. Maslach Tükenmişlik Envanteri (MBI) klinik standarttır ve profesyonel uygulama gerektirir. Buradaki sonuçlar, teşhis sonuçları değil, kalıpları ve risk seviyelerini gösterir.\n\nTükenmişlik belirtileri, depresyon, anksiyete bozuklukları, DEHB ve belirli tıbbi durumlarla (tiroid disfonksiyonu, anemi) önemli ölçüde örtüşür. Belirtiler şiddetliyse veya birden çok yaşam alanında devam ediyorsa, klinik değerlendirme önerilir."
+  }
+}

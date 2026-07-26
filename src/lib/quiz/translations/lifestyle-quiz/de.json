@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Lifestyle Health Score Quiz",
+    "description": "Erhalten Sie eine ehrliche Momentaufnahme davon, wie sich Ihre täglichen Gewohnheiten – Schlaf, Bewegung, Ernährung, Stress – auf Ihre allgemeine Gesundheit auswirken."
+  },
+  "questions": {
+    "ls1": {
+      "text": "Wie würden Sie Ihre Ernährung an einem typischen Werktag beschreiben?",
+      "options": [
+        "Hauptsächlich vollwertige Lebensmittel – ich koche und plane voraus",
+        "Eine Mischung – teils gesund, teils nicht",
+        "Oft bequem oder Fast Food – ich habe keine Zeit",
+        "Hauptsächlich verarbeitet – darauf bin ich nicht stolz"
+      ]
+    },
+    "ls2": {
+      "text": "An wie vielen Tagen pro Woche betreiben Sie bewusst körperliche Aktivität?",
+      "scaleLabels": {
+        "min": "0 Tage",
+        "max": "7 Tage"
+      }
+    },
+    "ls3": {
+      "text": "Wie gut schlafen Sie in den meisten Nächten?",
+      "options": [
+        "Gut – 7–9 Stunden, ich wache erholt auf",
+        "In Ordnung – manchmal unruhig",
+        "Schlecht – weniger als 6 Stunden oder unterbrochen",
+        "Sehr schlecht – es ist ein anhaltendes Problem"
+      ]
+    },
+    "ls4": {
+      "text": "Haben Sie jeden Tag Zeit für sich – Zeit, die wirklich Ihnen gehört und ohne Verpflichtungen ist?"
+    },
+    "ls5": {
+      "text": "Wie oft trinken Sie Alkohol oder rauchen Sie?",
+      "options": [
+        "Nie oder sehr selten",
+        "Gelegentlich – in geselliger Runde",
+        "Mehrmals pro Woche",
+        "Täglich"
+      ]
+    },
+    "ls6": {
+      "text": "Wenn Sie an Ihre allgemeine Gesundheit denken, wie fühlen Sie sich?",
+      "options": [
+        "Gut – ich kümmere mich größtenteils um mich selbst",
+        "In Ordnung – aber ich weiß, dass ich besser sein könnte",
+        "Nicht gut – ich habe Dinge vernachlässigt",
+        "Besorgt – ich habe das Gefühl, mich selbst enttäuscht zu haben"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Starke Lebensstil-Grundlage",
+      "description": "Sie bauen gute Gewohnheiten in den Schlüsselbereichen auf. Ihre täglichen Entscheidungen wirken zu Ihren Gunsten.",
+      "actions": [
+        "Identifizieren Sie Ihre schwächste Säule (Schlaf, Ernährung, Bewegung oder Stress) und optimieren Sie sie weiter",
+        "Verfolgen Sie einen Gesundheitsindikator 30 Tage lang – was gemessen wird, wird auch verbessert",
+        "Teilen Sie Ihre Gewohnheiten mit jemandem – soziale Verantwortung verdoppelt die Beständigkeitsrate"
+      ],
+      "miaHook": "Sie machen schon vieles richtig – ich möchte Ihnen helfen, den einen Bereich zu identifizieren, in dem gezielte Aufmerksamkeit den größten Ertrag bringt."
+    },
+    {
+      "label": "Raum für Verbesserungen",
+      "description": "Ihr Lebensstil hat solide Elemente, aber es gibt Lücken, die Ihnen wahrscheinlich Energie und Gesundheit kosten, ohne dass Sie es merken.",
+      "actions": [
+        "Wählen Sie diesen Monat eine Gewohnheit, die Sie verbessern möchten – nicht alles auf einmal. Beginnen Sie mit Schlaf, wenn dieser unter 7 Stunden liegt",
+        "Bereiten Sie einmal pro Woche Mahlzeiten vor – diese einzelne Gewohnheit ist der stärkste Prädiktor für eine verbesserte Ernährungsqualität",
+        "Fügen Sie täglich 20 Minuten Gehen hinzu – dies ist die zugänglichste Maßnahme mit nachweislich umfassenden gesundheitlichen Vorteilen"
+      ],
+      "miaHook": "Ich kann erkennen, welche spezifischen Gewohnheiten Ihren Fortschritt untergraben – lassen Sie uns darüber sprechen, wie wir die Veränderung mit der größten Wirkung priorisieren."
+    },
+    {
+      "label": "Lebensstil-Überholung erforderlich",
+      "description": "Mehrere Bereiche Ihres Lebensstils benötigen Aufmerksamkeit. Aber Sie müssen nicht alles auf einmal ändern – eine Veränderung nach der anderen schafft dauerhafte Verbesserungen.",
+      "actions": [
+        "Beginnen Sie mit dem Schlaf – er ist die Grundlage, auf der alles andere aufbaut. Priorisieren Sie 7,5 Stunden, bevor Sie etwas anderes ändern.",
+        "Ersetzen Sie eine verarbeitete Mahlzeit pro Tag durch eine selbst zubereitete Alternative – dies ist die schnellste Ernährungsumstellung überhaupt.",
+        "Sprechen Sie mit einem Arzt über einen allgemeinen Gesundheitscheck – Lebensstilmuster auf diesem Niveau haben oft messbare physiologische Auswirkungen, die eine Untersuchung wert sind."
+      ],
+      "miaHook": "Sie tragen mehr, als Sie sollten – Ihre derzeitigen Gewohnheiten arbeiten gegen Sie, auf eine Weise, die Sie vielleicht noch nicht vollständig erkennen."
+    }
+  ],
+  "seoContent": {
+    "intro": "Die vier Säulen der Lebensstilgesundheit – Ernährung, körperliche Aktivität, Schlaf und Stressmanagement – interagieren kontinuierlich. Eine Schwäche in einer Säule belastet die anderen zusätzlich: Schlechter Schlaf erhöht Cortisol (verschlimmert Stress und fördert Gewichtszunahme), hoher Stress beeinträchtigt die Schlafqualität und führt zu schlechten Essensentscheidungen, körperliche Inaktivität reduziert die Schlafqualität und die Stoffwechselgesundheit.\n\nDieser Quiz gibt Ihnen eine ehrliche Gesamtpunktzahl über alle vier Säulen hinweg plus zwei zusätzliche Faktoren: Alkohol-/Tabakkonsum und selbst eingeschätzte Gesundheitswahrnehmung. Zu verstehen, wo Sie stehen, ist der erste Schritt zu gezielten, wirkungsvollen Veränderungen.",
+    "faq": [
+      {
+        "q": "Welcher Lebensstilfaktor hat den größten Einfluss auf die Gesundheit?",
+        "a": "Die Forschung zeigt durchgängig, dass Schlaf die Grundlage ist – er reguliert Appetithormone, kognitive Funktion, Immunantwort und emotionale Regulation. Allerdings verstärken sich die Säulen gegenseitig: Regelmäßige Bewegung verbessert die Schlafqualität erheblich, gesunde Ernährung stabilisiert Stimmung und Energie, und Stressmanagement erleichtert die Aufrechterhaltung aller anderen Verhaltensweisen."
+      },
+      {
+        "q": "Wie schnell können Lebensstiländerungen die Gesundheit verbessern?",
+        "a": "Blutdruck und Blutzucker reagieren innerhalb von Tagen auf Ernährungsumstellungen. Die Schlafqualität verbessert sich innerhalb von 1–2 Wochen bei gleichbleibenden Schlafenszeiten. Die kardiovaskuläre Fitness verbessert sich messbar innerhalb von 4 Wochen regelmäßiger Bewegung. Psychische Gesundheitsmarker verbessern sich innerhalb von 2–4 Wochen regelmäßiger moderater Bewegung. Signifikante Veränderungen der Körperzusammensetzung erfordern 8–12 Wochen anhaltender Anstrengung."
+      },
+      {
+        "q": "Ist es besser, eine Gewohnheit nach der anderen oder mehrere gleichzeitig zu ändern?",
+        "a": "Die Forschung zur Verhaltensänderung (Fogg, Stanford) und klinische Studien unterstützen beide den Ansatz, mit einer Gewohnheit nach der anderen zu beginnen. Willenskraft ist eine begrenzte Ressource – der Versuch mehrerer gleichzeitiger Änderungen reduziert die Einhaltung drastisch. Das Konzept der 'Schlüsselgewohnheit' zeigt jedoch, dass einige Änderungen (gleichmäßiger Schlaf, tägliche Bewegung) automatische Verbesserungen in anderen Bereichen auslösen."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Die Lebensstilmedizin ist ein schnell wachsendes medizinisches Fachgebiet, das evidenzbasierte Verhaltensinterventionen – Ernährung, körperliche Aktivität, Schlaf, Stressmanagement und Substanzvermeidung – als primäre Behandlung zur Prävention und Behandlung chronischer Krankheiten einsetzt.\n\nDie vier Kernpfeiler des Lebensstils sind für etwa 80 % der chronischen Krankheitslast verantwortlich (CDC, 2023). Herz-Kreislauf-Erkrankungen, Typ-2-Diabetes, viele Krebsarten und psychische Störungen werden stark durch veränderbare Lebensstilfaktoren beeinflusst. Das bedeutet, dass der größte einzelne Faktor für Ihre langfristige Gesundheit nicht die Genetik ist – es sind Ihre täglichen Gewohnheiten.",
+    "howScored": "Dieser Quiz bewertet sechs Dimensionen: Ernährungsqualität (vollwertige vs. verarbeitete Lebensmittel), Häufigkeit körperlicher Aktivität, Schlafqualität und -dauer, tägliche Erholungszeit, Alkohol-/Tabakkonsum und subjektive Gesundheitswahrnehmung.\n\nWerte über 70 deuten auf eine starke Lebensstilbasis hin, bei der die meisten Säulen gut unterstützt werden. 40–69 weist auf einen gemischten Lebensstil mit identifizierbaren Lücken hin, die es zu schließen gilt. Unter 40 zeigt an, dass mehrere Lebensstilsäulen deutlich unter den empfohlenen Gesundheitsrichtlinien liegen.",
+    "whenToSeek": "Konsultieren Sie einen Arzt, wenn:\n• Sie seit 3+ Monaten ohne Verbesserung im niedrigsten Bereich punkten\n• Sie an einer chronischen Erkrankung (Diabetes, Bluthochdruck, Fettleibigkeit) leiden und Lebensstiländerungen ins Stocken geraten sind\n• Sie professionelle Unterstützung benötigen, um Gewohnheiten zu ändern, die sich außer Kontrolle anfühlen (übermäßiges Essen, Alkoholkonsum, körperliche Inaktivität)\n• Sie neben Lebensstilproblemen Symptome wie Müdigkeit, Schmerzen, Stimmungsprobleme oder unerklärliche Gewichtsveränderungen erleben",
+    "limitations": "Dieser Quiz bewertet selbstberichtete Lebensstilgewohnheiten, die anfällig für Erinnerungsverzerrungen und soziale Erwünschtheitseffekte sind (Menschen neigen dazu, etwas bessere Gewohnheiten zu berichten, als sie tatsächlich haben). Die Ergebnisse spiegeln eine Momentaufnahme wider und erfassen möglicherweise keine saisonalen Schwankungen oder kürzliche Veränderungen. Dies ist ein Screening-Instrument, keine medizinische Beurteilung."
+  }
+}

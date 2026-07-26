@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "BMI ve Kilo Sağlığı Testi",
+    "description": "Mevcut kilonuzun, alışkanlıklarınızın ve yaşam tarzınızın sağlığınızı nasıl etkilediğini öğrenin — 5 samimi soruda."
+  },
+  "questions": {
+    "bq1": {
+      "text": "Mevcut kilonuzu, vücudunuz için doğru hissettiren duruma kıyasla nasıl tanımlarsınız?",
+      "options": [
+        "Hemen hemen doğru — rahat hissediyorum",
+        "Biraz farklı — birkaç kilo fazla ya da eksik",
+        "Olmak istediğim yerin belirgin şekilde üstünde veya altında",
+        "Olmam gereken yerden çok uzakta"
+      ]
+    },
+    "bq2": {
+      "text": "Kalp atış hızınızı artıracak şekilde ne sıklıkla hareket ediyorsunuz?",
+      "options": [
+        "Çoğu gün — rutinimin bir parçası",
+        "Haftada 2–3 kez",
+        "Haftada bir veya daha az",
+        "Nadiren veya hiç"
+      ]
+    },
+    "bq3": {
+      "text": "Tipik günlük beslenmeniz ne kadar dengeli?",
+      "scaleLabels": {
+        "min": "Çoğunlukla işlenmiş gıdalar",
+        "max": "Çoğunlukla doğal besinler"
+      }
+    },
+    "bq4": {
+      "text": "Stresli veya sıkıldığınızda, aç olmasanız bile yemek yeme eğiliminiz var mı?"
+    },
+    "bq5": {
+      "text": "Ne sıklıkla ne yediğinizi takip eder veya düşünürsünüz?",
+      "options": [
+        "Düzenli olarak — seçimlerimin farkındayım",
+        "Bazen — aklıma geldiğinde",
+        "Nadiren — düşünmeden yerim",
+        "Hiç takip etmedim"
+      ]
+    },
+    "bq6": {
+      "text": "Gün içinde enerji seviyenizi nasıl değerlendirirsiniz?",
+      "options": [
+        "Dengeli — Günün çoğunda kendimi iyi hissediyorum",
+        "Değişken — inişler ve çıkışlar var",
+        "Sık sık yorgun, özellikle öğleden sonraları",
+        "Çoğu zaman bitkin"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Sağlıklı Kilo Aralığı",
+      "description": "Alışkanlıklarınız iyi bir yerde olduğunuzu gösteriyor. Küçük, tutarlı ayarlamalar sizi uzun vadede burada tutabilir.",
+      "actions": [
+        "Mevcut beslenme ve hareket alışkanlıklarınızı koruyun — tutarlılık en hafife alınan araçtır",
+        "Haftada bir kuvvet antrenmanı ekleyin — kas kütlesi, sağlıklı yaşlanma ve metabolizmanın en güçlü göstergesidir",
+        "Kilonuzu haftalık olarak takip edin (aynı saat, aynı gün) — erken eğilim tespiti kademeli kaymayı önler"
+      ],
+      "miaHook": "Puanınız sağlam temeller olduğunu gösteriyor — sizin için halihazırda işe yarayan şeylerin üzerine inşa etmek istiyorum."
+    },
+    {
+      "label": "Geliştirilebilir Alan",
+      "description": "Sağlığınızın farkındasınız ancak birkaç temel alışkanlık sizi geride tutuyor. İyi haber: küçük değişiklikler büyük fark yaratır.",
+      "actions": [
+        "Bu hafta ultra işlenmiş gıda tüketimini %50 azaltın — bu tek değişiklik, kilo ve metabolik belirteçlerde önemli iyileşmelerle ilişkilidir",
+        "Günde 7.000 adımı temel seviye olarak ekleyin — bu eşiğin altında kilo yönetimi önemli ölçüde zorlaşır",
+        "Varsa duygusal yemeyi ele alın — bu irade meselesi değil, yapılandırılmış stratejilere iyi yanıt veren bir örüntüdür"
+      ],
+      "miaHook": "Değiştirilmesi halinde kilo eğiliminizi 4 hafta içinde değiştirecek 2–3 spesifik şey görüyorum."
+    },
+    {
+      "label": "Dikkat Gerekli",
+      "description": "Mevcut alışkanlıklarınız sağlık hedeflerinize ters düşüyor olabilir. Ancak farkındalık ilk adımdır ve siz zaten buradasınız.",
+      "actions": [
+        "Temel kalori seviyenizi anlayarak başlayın — bir haftalık kabataslak bir besin günlüğü bile şu anda görmediğiniz kalıpları ortaya çıkarır.",
+        "Her gün 20 dakika hareket edin — belirli aktivitelerden çok günlük tutarlılık önemlidir.",
+        "Kayıtlı bir diyetisyenle görüşmeyi düşünün — kişiselleştirilmiş rehberlik, önemli kilo hedefleri için genel tavsiyelerden çok daha etkilidir."
+      ],
+      "miaHook": "Sizinle tam olarak aynı durumda olan insanların işleri tamamen tersine çevirdiğini gördüm — nereden başlayacağınızı göstereyim."
+    }
+  ],
+  "seoContent": {
+    "intro": "BMI (Vücut Kitle İndeksi) yaygın olarak kullanılan bir tarama aracıdır, ancak sağlığın tam bir resmi değil, yalnızca bir veri noktasıdır. Kilonuz; aktivite seviyeniz, beslenme kaliteniz, stresiniz, uykunuz ve vücut kompozisyonunuzla etkileşime girerek gerçek sağlık sonuçlarını belirler.\n\nBu test, BMI'ın ötesine geçerek kilonuzun sağlığa doğru mu yoksa sağlıktan uzaklaşmaya mı eğilimli olduğunu belirleyen davranışsal ve yaşam tarzı faktörlerini değerlendirir — size yalnızca bir sayı değil, uygulanabilir içgörüler sunar.",
+    "faq": [
+      {
+        "q": "BMI doğru bir sağlık ölçütü müdür?",
+        "a": "BMI, popülasyon düzeyinde yararlı bir tarama aracıdır ancak bireysel düzeyde önemli sınırlamaları vardır. Kas ve yağ kütlesini ayırt etmez (sporcular genellikle 'fazla kilolu' olarak kaydedilir), yağ dağılımını (iç organ yağına karşı deri altı yağı) hesaba katmaz ve etnik kökenlere göre doğruluğu değişir. Bel çevresi ve bel-boy oranı, metabolik sağlık riskini tahmin etmede genellikle daha başarılıdır."
+      },
+      {
+        "q": "Sağlıklı kilo nedir?",
+        "a": "Sağlıklı kilo, metabolik belirteçlerinizin (kan basıncı, kan şekeri, kolesterol) normal aralıklarda olduğu ve yeterli enerji ile fiziksel işlevselliğe sahip olduğunuz kilo olarak tanımlanır. Çoğu insan için bu, 18.5–24.9 kg/m² BMI aralığına denk gelir, ancak bireysel sağlıklı aralıklar yaş, cinsiyet, etnik köken ve kas kütlesine göre değişir."
+      },
+      {
+        "q": "Kilo yönetiminde en etkili yöntem nedir?",
+        "a": "Araştırmalar, sürdürülebilir kilo yönetiminin ılımlı bir kalori açığı (300–500 kcal/gün), kas kütlesini korumak için yüksek protein alımı (1.6–2 g/kg vücut ağırlığı), düzenli direnç antrenmanı, yeterli uyku (kötü uyku ghrelin seviyesini %28 artırır) ve stres yönetimi (yüksek kortizol yağ depolanmasını teşvik eder) gerektirdiğini tutarlı bir şekilde göstermektedir."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Kilo sağlığı; vücut kütlesi, vücut kompozisyonu, metabolik işlev ve yaşam tarzı davranışının kesişim noktasıdır. Özellikle karın organları çevresinde depolanan iç organ yağı olmak üzere aşırı yağ dokusu, insülin direncinin, sistemik inflamasyonun, kardiyovasküler hastalıkların ve tip 2 diyabetin doğrudan bir itici gücüdür.\n\nAncak kilo, tamamen davranışsal bir seçim değildir. Genetik, BMI varyansının %40–70'ini oluşturur. Uyku yoksunluğu, stres hormonları, bağırsak mikrobiyom bileşimi ve bazı ilaçlar kilo düzenlemesini önemli ölçüde etkiler. Bu test, kontrol edilebilir davranışsal faktörleri değerlendirir.",
+    "howScored": "Bu test, kilo ile ilgili altı boyutu değerlendirir: subjektif kilo memnuniyeti, kardiyovasküler aktivite sıklığı, beslenme kalitesi, duygusal yeme alışkanlıkları, beslenme bilinci ve enerji seviyeleri (önemli bir metabolik gösterge).\n\n70'in üzerindeki puanlar, kilo yönetimini destekleyen sağlıklı alışkanlıkları gösterir. 40–69 arası, iyileştirilmeye değer belirlenebilir kalıpları işaret eder. 40'ın altı, kilo ve metabolik sağlık hedeflerine ters düşen birden fazla alışkanlığın varlığını gösterir.",
+    "whenToSeek": "Aşağıdaki durumlarda bir sağlık uzmanına danışın:\n• BMI'ınız 30'un üzerindeyse (obezite aralığı) — tıbbi değerlendirme ve kişiselleştirilmiş rehberlik uygundur\n• Birden fazla kilo verme yöntemini başarısız bir şekilde denediyseniz\n• Kilo alımı hızlıysa (kasıtlı bir değişiklik olmaksızın 3 ayda 5+ kg)\n• Aşırı kilonun yanı sıra diyabet, yüksek tansiyon veya yüksek kolesterolünüz varsa\n• Duygusal yeme veya düzensiz yeme alışkanlıkları, yemekle olan ilişkinizi önemli ölçüde etkiliyorsa",
+    "limitations": "Bu test, gerçek kilo veya BMI'ı değil, yaşam tarzı davranışlarını değerlendirir. Alışkanlıklar için bir tarama aracıdır, tıbbi bir değerlendirme değildir. Kilo; genetik, ilaçlar, hormonal durumlar ve tıbbi geçmiş dahil olmak üzere davranışın ötesindeki faktörlerden etkilenir. Sonuçları her zaman diğer sağlık bilgileri ve tıbbi tavsiyeler bağlamında yorumlayın."
+  }
+}

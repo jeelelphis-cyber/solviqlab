@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "title": "Burnout Risk Quiz",
+    "description": "Burnout doesn't happen overnight. Check where you are on the spectrum before it gets harder to come back."
+  },
+
+  "questions": {
+    "bu1": {
+      "text": "Do you feel emotionally drained by your work or daily responsibilities — even before the day begins?",
+      "options": [
+        "No — I generally feel engaged",
+        "Sometimes — on hard weeks",
+        "Often — most weeks feel heavy",
+        "Almost always — I'm running on fumes"
+      ]
+    },
+    "bu2": {
+      "text": "Have you lost motivation or enthusiasm for things you used to enjoy?"
+    },
+    "bu3": {
+      "text": "How effective do you feel at work or in your main responsibilities lately?",
+      "options": [
+        "Highly effective — I'm doing my best work",
+        "Okay — getting things done",
+        "Below my usual standard — I notice the drop",
+        "Just going through the motions"
+      ]
+    },
+    "bu4": {
+      "text": "Do you find yourself becoming more cynical or detached from people around you?"
+    },
+    "bu5": {
+      "text": "How often do you take genuine breaks during the day — not just scrolling, but actual rest?",
+      "scaleLabels": { "min": "Never", "max": "Multiple times a day" }
+    },
+    "bu6": {
+      "text": "When you imagine your week ahead, what's your first feeling?",
+      "options": [
+        "Energized — I have things I'm looking forward to",
+        "Neutral — just another week",
+        "Dread — it feels like too much",
+        "Dread — I can't see any light in it"
+      ]
+    },
+    "bu7": {
+      "text": "Do you feel like no matter how much you do, it's never enough?"
+    }
+  },
+
+  "buckets": [
+    {
+      "label": "Low Burnout Risk",
+      "description": "You're holding up well. Your energy reserves are intact and you have healthy buffers in place.",
+      "actions": [
+        "Maintain your recovery habits — what's protecting you now is worth naming and keeping",
+        "Build one proactive recovery practice into each week (not just reactive rest)",
+        "Check in with yourself monthly — burnout builds slowly and early awareness is everything"
+      ],
+      "miaHook": "You're in good shape — now let's talk about how to stay this way when pressure builds."
+    },
+    {
+      "label": "Early Warning Signs",
+      "description": "You're showing some of the early signals of burnout. This is the ideal time to act — before it becomes harder to recover.",
+      "actions": [
+        "Take one thing off your plate this week — burnout at this stage responds to reduction, not optimization",
+        "Add one genuine recovery activity that has nothing to do with productivity",
+        "Tell someone you trust that you're feeling the pressure — social support delays burnout progression"
+      ],
+      "miaHook": "I see early burnout patterns in your answers — the good news is this stage is very recoverable with the right shifts."
+    },
+    {
+      "label": "Burnout Zone",
+      "description": "Your answers suggest significant burnout. This affects your health, relationships, and productivity — it's not weakness, it's a real physiological state.",
+      "actions": [
+        "Speak with a doctor or therapist — burnout at this level has measurable physiological effects and benefits from professional support",
+        "Take at least one full day completely off from all work-related activities this week — not a \"soft\" day, a complete break",
+        "Identify the single largest drain on your energy and begin the process of reducing or removing it — even if it feels impossible"
+      ],
+      "miaHook": "What you're experiencing is real and serious — I want to help you map a recovery path that doesn't require you to quit everything."
+    }
+  ],
+
+  "seoContent": {
+    "intro": "Burnout is a state of chronic workplace stress characterized by three dimensions: emotional exhaustion, depersonalization (cynicism and detachment), and a reduced sense of personal accomplishment. First described by psychologist Herbert Freudenberger in 1974 and formally recognized by the WHO in 2019, burnout is now classified as an occupational phenomenon affecting an estimated 67% of workers at some point in their careers.\n\nBurnout does not happen suddenly — it develops over months through a progressive cycle of overcommitment, exhaustion, and withdrawal. This quiz assesses where you are on the spectrum so you can act before it becomes harder to recover.",
+    "faq": [
+      {
+        "q": "What is the difference between burnout and depression?",
+        "a": "Burnout is primarily work-context-specific and improves significantly with rest, vacation, and removal from stressors. Depression is pervasive across all life domains and does not resolve with rest alone. However, severe burnout can trigger clinical depression. If symptoms persist outside of work contexts, clinical evaluation is warranted."
+      },
+      {
+        "q": "Can you recover from burnout?",
+        "a": "Yes. Recovery from burnout is possible and well-documented. Early-stage burnout (mild warning signs) typically recovers within weeks with appropriate rest and boundary-setting. Severe burnout may take 3–12 months of sustained recovery. The key factors are: reducing demands, increasing recovery activities, and addressing the root causes."
+      },
+      {
+        "q": "What causes burnout?",
+        "a": "Research (Maslach & Leiter, 2016) identifies six workplace mismatches that cause burnout: excessive workload, lack of control, insufficient reward, community breakdown, unfairness, and values conflict. Personal factors like perfectionism, difficulty setting limits, and poor recovery habits also contribute."
+      }
+    ]
+  },
+
+  "content": {
+    "whatIs": "Burnout is a syndrome resulting from chronic workplace stress that has not been successfully managed. The WHO (ICD-11, 2019) defines it by three dimensions: feelings of energy depletion or exhaustion, increased mental distance from one's job or feelings of negativism or cynicism related to one's job, and reduced professional efficacy.\n\nBurnout develops through progressive stages — from enthusiasm and overcommitment through stagnation, frustration, and apathy — typically taking 6–18 months to reach the fully burned-out state. Recovery requires the same time investment in reverse.",
+
+    "howScored": "This quiz assesses seven burnout indicators drawn from the Maslach Burnout Inventory (the gold-standard clinical tool) and the Copenhagen Burnout Inventory: emotional exhaustion, motivation loss, efficacy reduction, depersonalization/cynicism, recovery behaviors, anticipatory dread, and the 'never enough' feeling.\n\nScores above 70 indicate low risk with healthy buffers. 40–69 indicates early warning signs that respond well to intervention. Below 40 indicates significant burnout requiring active recovery.",
+
+    "whenToSeek": "Seek professional support if:\n• You have been in the burnout zone for more than 4 weeks\n• Physical symptoms have appeared (chronic headaches, frequent illness, sleep disruption)\n• Burnout is affecting your personal relationships, not just work\n• You are using alcohol or substances to cope with work demands\n• You are experiencing symptoms of depression alongside burnout\n\nA primary care doctor or therapist specializing in occupational health can provide appropriate support.",
+
+    "limitations": "This quiz measures burnout risk, not a clinical burnout diagnosis. The Maslach Burnout Inventory (MBI) is the clinical standard and requires professional administration. Results here indicate patterns and risk levels, not diagnostic conclusions.\n\nBurnout symptoms overlap significantly with depression, anxiety disorders, ADHD, and certain medical conditions (thyroid dysfunction, anemia). If symptoms are severe or persist across multiple life domains, a clinical evaluation is recommended."
+  }
+}

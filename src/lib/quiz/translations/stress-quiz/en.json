@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "title": "Stress Level Quiz (PSS-10)",
+    "description": "The Perceived Stress Scale is the most widely used stress measurement tool in the world. Used by Harvard, Stanford, CDC, and NIH research. Takes 3 minutes.",
+    "medicalNote": "This measures perceived stress, not a clinical diagnosis. Chronic high stress is a serious health risk. Please seek professional support if overwhelmed."
+  },
+
+  "likertOptions": ["Never", "Almost never", "Sometimes", "Fairly often", "Very often"],
+
+  "reverseLikertOptions": ["Never", "Almost never", "Sometimes", "Fairly often", "Very often"],
+
+  "questions": {
+    "pss1": {
+      "text": "In the last month, how often have you been upset because of something that happened unexpectedly?",
+      "hint": "Emotional reactivity to unexpected events is one of the strongest indicators of overall stress load."
+    },
+    "pss2": {
+      "text": "In the last month, how often have you felt that you were unable to control the important things in your life?",
+      "hint": "Perceived lack of control is the psychological core of stress — it activates the cortisol response."
+    },
+    "pss3": {
+      "text": "In the last month, how often have you felt nervous and stressed?",
+      "hint": "Chronic nervous activation keeps the sympathetic nervous system in a near-constant alert state."
+    },
+    "pss4": {
+      "text": "In the last month, how often have you felt confident about your ability to handle your personal problems?",
+      "hint": "Self-efficacy is a buffer against stress — this item is reverse-scored. Higher confidence = lower stress."
+    },
+    "pss5": {
+      "text": "In the last month, how often have you felt that things were going your way?",
+      "hint": "Positive appraisal of life direction is a protective factor. This item is reverse-scored."
+    },
+    "pss6": {
+      "text": "In the last month, how often have you found that you could not cope with all the things that you had to do?",
+      "hint": "Feeling overwhelmed by task load is a direct stress indicator and precursor to burnout."
+    },
+    "pss7": {
+      "text": "In the last month, how often have you been able to control irritations in your life?",
+      "hint": "Regulation of irritations reflects emotional control capacity — this item is reverse-scored."
+    },
+    "pss8": {
+      "text": "In the last month, how often have you felt that you were on top of things?",
+      "hint": "A sense of mastery over circumstances is one of the core stress-buffering resources."
+    },
+    "pss9": {
+      "text": "In the last month, how often have you been angered because of things that were outside of your control?",
+      "hint": "Anger at uncontrollable events activates the HPA axis and elevates cortisol — a direct stress biomarker."
+    },
+    "pss10": {
+      "text": "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?",
+      "hint": "Cognitive overwhelm — where problems feel insurmountable — is the strongest predictor of burnout."
+    }
+  },
+
+  "buckets": [
+    {
+      "label": "Low Stress",
+      "description": "Your perceived stress is low. You have good coping resources and feel largely in control of your life.",
+      "actions": [
+        "Maintain your stress management habits — consistency matters more than intensity",
+        "Practice one proactive recovery activity per week (nature walk, sauna, social time)",
+        "Document what is working for you now — you will want to return to this during harder periods"
+      ],
+      "miaHook": "Your stress is well-managed right now. I want to help you build resilience before the next difficult period arrives."
+    },
+    {
+      "label": "Moderate Stress",
+      "description": "Moderate perceived stress. You are coping but feeling the pressure. Without intervention, this can escalate to burnout.",
+      "actions": [
+        "Add a 5-minute daily decompression ritual after work — a walk, breathing exercise, or journal entry",
+        "Identify your top 3 stressors this week and eliminate or reduce one of them",
+        "Sleep is your most powerful stress recovery tool — prioritize 7-8 hours non-negotiably"
+      ],
+      "miaHook": "Moderate stress is where most people live without realizing it is slowly draining them. I have a protocol that targets exactly where your score shows the drain."
+    },
+    {
+      "label": "High Stress",
+      "description": "High perceived stress. At this level, stress is significantly damaging your physical and mental health. Research links PSS scores above 27 to increased risk of depression, heart disease, and immune suppression.",
+      "actions": [
+        "Remove one major commitment from your life this week — not eventually, this week",
+        "Talk to a therapist, doctor, or trusted person today about your stress load",
+        "Stop caffeine after noon and alcohol completely — both worsen the cortisol response"
+      ],
+      "miaHook": "Your score is in a range where your body is taking real physiological damage. I want to help you take immediate action — not a 30-day plan, but today."
+    }
+  ],
+
+  "seoContent": {
+    "intro": "The Perceived Stress Scale (PSS-10) was developed by Dr. Sheldon Cohen at Carnegie Mellon University in 1983. It is the most widely used psychological instrument for measuring stress perception in research and clinical settings, used by the CDC, NIH, Harvard, and Stanford in thousands of studies.\n\nUnlike stress measures that count stressful events, the PSS-10 measures how stressed you feel — your psychological appraisal of your own situation. This makes it uniquely accurate because two people can experience the same events and have completely different stress responses.\n\nScores range from 0 to 40. The average American scores 13 (Cohen et al., 2016). Scores above 27 are associated with significantly increased risk of depression, cardiovascular disease, and immune system suppression (APA Stress in America, 2023). Understanding your stress level is the first step toward managing it.",
+    "faq": [
+      {
+        "q": "What is the PSS-10?",
+        "a": "The Perceived Stress Scale (PSS-10) is a 10-item validated questionnaire developed by Dr. Sheldon Cohen in 1983. It is the most widely used tool in stress research globally, measuring how stressed, overwhelmed, and out of control you feel."
+      },
+      {
+        "q": "What is a normal PSS-10 score?",
+        "a": "The average American PSS-10 score is approximately 13. Scores 0–13 indicate low stress, 14–26 moderate stress, and 27–40 high stress. Women tend to score slightly higher than men across all age groups."
+      },
+      {
+        "q": "Why are some questions reverse-scored?",
+        "a": "Four items (4, 5, 7, 8) ask about positive feelings — confidence and control. These are scored in reverse because feeling more confident or in control indicates lower stress. This is standard PSS-10 protocol and is handled automatically in this quiz."
+      },
+      {
+        "q": "Can stress cause physical health problems?",
+        "a": "Yes. Chronic high stress elevates cortisol, suppresses the immune system, increases inflammation, and significantly raises risk of heart disease, diabetes, depression, and obesity. The PSS-10 score above 27 is associated with these outcomes in multiple longitudinal studies."
+      },
+      {
+        "q": "How often should I retake this quiz?",
+        "a": "Monthly retesting lets you track trends. Stress typically fluctuates with life circumstances, but chronic high scores (27+) for 2+ months warrant professional support."
+      }
+    ]
+  },
+
+  "content": {
+    "whatIs": "Stress is the body's physiological and psychological response to demands that exceed perceived coping resources. In short bursts, stress is adaptive — it sharpens focus and mobilizes energy. Chronic stress, however, is a serious health hazard.\n\nThe Perceived Stress Scale measures perceived stress — your subjective experience of feeling overwhelmed, out of control, and unable to cope. This is distinct from objective stressor counts (how many bad things happened) because two people facing identical circumstances can have very different stress responses based on their coping resources, social support, and cognitive appraisal patterns.\n\nThe PSS-10 is the global gold standard for measuring this subjective experience. It has been validated in hundreds of thousands of participants across 60+ countries and is used in clinical research by every major health institution.",
+
+    "clinicalBackground": "Dr. Sheldon Cohen developed the PSS in 1983 at Carnegie Mellon University as part of research on stress and susceptibility to infectious disease. The scale was designed to measure the degree to which situations in one's life are appraised as stressful.\n\nThe PSS-10 (10-item version) is the most commonly used format. It consists of 6 negatively-worded items (higher responses = more stress) and 4 positively-worded items that are reverse-scored. This bidirectional format reduces acquiescence bias and measures both stress and coping resources.\n\nThe PSS has been translated into over 50 languages and is used in research published by the WHO, CDC, NIH, Harvard School of Public Health, and major medical journals including JAMA, Lancet, and NEJM.",
+
+    "howScored": "The PSS-10 uses a 5-point frequency scale for the past month:\n• 0: Never\n• 1: Almost never\n• 2: Sometimes\n• 3: Fairly often\n• 4: Very often\n\nItems 4, 5, 7, and 8 are reverse-scored (0=4, 1=3, 2=2, 3=1, 4=0). Total scores range from 0 to 40.\n\nClinical thresholds:\n• 0–13: Low perceived stress\n• 14–26: Moderate perceived stress\n• 27–40: High perceived stress\n\nThe average US adult scores approximately 13. A 5-point change is considered clinically meaningful for tracking treatment response.",
+
+    "interpretation": "**Score 0–13 (Low Stress):** You feel largely in control of your life and have good coping capacity. Research shows low PSS scores are associated with better immune function, lower cardiovascular risk, and longer telomere length (a biological marker of aging). Focus on maintaining what is working.\n\n**Score 14–26 (Moderate Stress):** You are managing but under pressure. This range is where most working adults live, and many normalize it without realizing the cumulative physical toll. Moderate stress sustained over months is associated with sleep disruption, weight gain, increased illness susceptibility, and relationship strain.\n\n**Score 27–40 (High Stress):** At this level, chronic stress is measurably damaging your health. High PSS scores are associated with: 40% increased risk of depression, 2× higher likelihood of cardiovascular events, 50% reduced immune response to vaccines, accelerated cellular aging, and significantly impaired decision-making. This is not a personality issue — it is a physiological state requiring active intervention.",
+
+    "whenToSeek": "Consider professional support if:\n\n• Your PSS-10 score is 27 or higher\n• Your score has been in the moderate-to-high range for more than 6 weeks\n• Stress is affecting your sleep, appetite, or physical health\n• You are using alcohol, food, or other substances to cope\n• Stress is impacting your work performance or relationships\n• You are experiencing anxiety, panic attacks, or persistent low mood alongside high stress\n\nTypes of professional support that are evidence-based for stress management:\n• Cognitive Behavioral Therapy (CBT) — reduces PSS scores by an average of 8–12 points\n• Mindfulness-Based Stress Reduction (MBSR) — 8-week program with strong evidence base\n• Medication (SSRIs/SNRIs) — appropriate when stress has progressed to clinical anxiety or depression",
+
+    "limitations": "**1. Self-report bias:** The PSS measures perceived stress, not objective stress load. People who tend to minimize problems may score lower than their actual physiological stress level suggests.\n\n**2. Point-in-time measurement:** The PSS asks about the past month. A high score during an acute crisis (bereavement, job loss) may not reflect your baseline stress level.\n\n**3. Does not identify stressors:** The PSS measures the experience of stress, not its source. Identifying specific stressors requires a more detailed assessment.\n\n**4. Cultural variation:** The expression and acceptability of stress varies across cultures. Some populations show systematically higher or lower scores that reflect cultural norms around expressing psychological distress rather than true differences in stress levels.\n\n**5. Not a replacement for clinical assessment:** A high PSS score indicates the need for attention, not a diagnosis of an anxiety or stress disorder. Clinical conditions require professional evaluation."
+  }
+}

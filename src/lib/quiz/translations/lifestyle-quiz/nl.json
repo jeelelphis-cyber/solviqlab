@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Leefstijl Gezondheidsscore Quiz",
+    "description": "Krijg een eerlijk beeld van hoe uw dagelijkse gewoonten — slaap, beweging, voeding, stress — bijdragen aan uw algehele gezondheid."
+  },
+  "questions": {
+    "ls1": {
+      "text": "Hoe zou u uw voeding op een typische werkdag omschrijven?",
+      "options": [
+        "Voornamelijk onbewerkte voeding — ik kook en plan vooruit",
+        "Een mix — deels gezond, deels niet",
+        "Vaak gemaks- of fastfood — ik heb geen tijd",
+        "Voornamelijk bewerkt — daar ben ik niet trots op"
+      ]
+    },
+    "ls2": {
+      "text": "Hoeveel dagen per week doet u aan bewuste fysieke activiteit?",
+      "scaleLabels": {
+        "min": "0 dagen",
+        "max": "7 dagen"
+      }
+    },
+    "ls3": {
+      "text": "Hoe goed slaapt u de meeste nachten?",
+      "options": [
+        "Goed — 7–9 uur, ik word uitgerust wakker",
+        "Redelijk — soms onrustig",
+        "Slecht — minder dan 6 uur of onderbroken",
+        "Zeer slecht — het is een aanhoudend probleem"
+      ]
+    },
+    "ls4": {
+      "text": "Heeft u elke dag tijd voor uzelf — tijd die echt van u is zonder verplichtingen?"
+    },
+    "ls5": {
+      "text": "Hoe vaak drinkt u alcohol of rookt u?",
+      "options": [
+        "Nooit of zeer zelden",
+        "Af en toe — in gezelschap",
+        "Meerdere keren per week",
+        "Dagelijks"
+      ]
+    },
+    "ls6": {
+      "text": "Als u aan uw algehele gezondheid denkt, hoe voelt u zich dan?",
+      "options": [
+        "Goed — ik zorg meestal goed voor mezelf",
+        "Redelijk — maar ik weet dat het beter kan",
+        "Niet geweldig — ik heb dingen verwaarloosd",
+        "Bezorgd — ik heb het gevoel dat ik mezelf in de steek heb gelaten"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Sterke Levensstijlbasis",
+      "description": "U bouwt goede gewoonten op in de belangrijkste gebieden. Uw dagelijkse keuzes werken in uw voordeel.",
+      "actions": [
+        "Identificeer uw zwakste pijler (slaap, voeding, beweging of stress) en optimaliseer deze verder",
+        "Volg één gezondheidsmetriek gedurende 30 dagen — wat wordt gemeten, wordt beheerd",
+        "Deel uw gewoonten met iemand — sociale verantwoording verdubbelt consistentiepercentages"
+      ],
+      "miaHook": "U doet veel dingen goed — ik wil u helpen het ene gebied te identificeren waar gerichte aandacht u het meeste rendement oplevert."
+    },
+    {
+      "label": "Ruimte voor Groei",
+      "description": "Uw levensstijl heeft solide elementen, maar er zijn hiaten die u waarschijnlijk energie en gezondheid kosten zonder dat u het beseft.",
+      "actions": [
+        "Kies deze maand één gewoonte om aan te werken — niet alles tegelijk. Begin met slaap als deze onder de 7 uur is",
+        "Bereid één dag per week maaltijden voor — deze ene gewoonte is de sterkste voorspeller van verbeterde voedingskwaliteit",
+        "Voeg dagelijks 20 minuten wandelen toe — het is de meest toegankelijke interventie met bewezen algemene gezondheidsvoordelen"
+      ],
+      "miaHook": "Ik kan zien welke specifieke gewoonten uw vooruitgang ondermijnen — laten we praten over het prioriteren van de verandering met de hoogste impact."
+    },
+    {
+      "label": "Levensstijlvernieuwing Nodig",
+      "description": "Meerdere gebieden van uw levensstijl hebben aandacht nodig. Maar u hoeft niet alles tegelijk te veranderen — één verschuiving tegelijk creëert blijvende verandering.",
+      "actions": [
+        "Begin met slaap — het is de basis waarop al het andere is gebouwd. Geef prioriteit aan 7,5 uur voordat je iets anders verandert.",
+        "Vervang één bewerkte maaltijd per dag door een zelfgekookt alternatief — dit is de snelste voedingsinterventie.",
+        "Praat met een arts over een algemene gezondheidscheck — leefstijlpatronen op dit niveau hebben vaak meetbare fysiologische effecten die het waard zijn om te beoordelen."
+      ],
+      "miaHook": "Je draagt meer dan je zou moeten — je huidige gewoonten werken tegen je op manieren die je misschien nog niet volledig ziet."
+    }
+  ],
+  "seoContent": {
+    "intro": "De vier pijlers van leefstijlgezondheid — voeding, lichaamsbeweging, slaap en stressmanagement — werken continu op elkaar in. Zwakte in één pijler legt extra druk op de andere: slechte slaap verhoogt cortisol (wat stress verergert en gewichtstoename bevordert), hoge stress verslechtert de slaapkwaliteit en leidt tot slechte voedingskeuzes, lichamelijke inactiviteit vermindert de slaapkwaliteit en metabole gezondheid.\n\nDeze quiz geeft je een eerlijke totaalscore over alle vier de pijlers plus twee extra factoren: alcohol-/tabaksgebruik en zelfbeoordeelde gezondheidsbeleving. Begrijpen waar je staat is de eerste stap naar gerichte, impactvolle verandering.",
+    "faq": [
+      {
+        "q": "Welke leefstijlfactor heeft de grootste invloed op gezondheid?",
+        "a": "Onderzoek toont consistent aan dat slaap de basis is — het reguleert eetlusthormonen, cognitieve functie, immuunrespons en emotionele regulatie. De pijlers versterken elkaar echter: regelmatige lichaamsbeweging verbetert de slaapkwaliteit aanzienlijk, gezonde voeding stabiliseert stemming en energie, en stressmanagement maakt alle andere gedragingen gemakkelijker vol te houden."
+      },
+      {
+        "q": "Hoe snel kunnen leefstijlveranderingen de gezondheid verbeteren?",
+        "a": "Bloeddruk en bloedsuikerspiegel reageren binnen dagen op veranderingen in voeding. Slaapkwaliteit verbetert binnen 1–2 weken bij een consistent slaapritme. Cardiovasculaire conditie verbetert meetbaar binnen 4 weken bij regelmatige lichaamsbeweging. Mentale gezondheidsmarkers verbeteren binnen 2–4 weken bij regelmatige matige inspanning. Significante veranderingen in lichaamssamenstelling vergen 8–12 weken van aanhoudende inspanning."
+      },
+      {
+        "q": "Is het beter om één gewoonte tegelijk te veranderen of meerdere tegelijk?",
+        "a": "Onderzoek naar gedragsverandering (Fogg, Stanford) en klinische studies ondersteunen beide het starten met één gewoonte tegelijk. Wilskracht is een beperkte hulpbron — het tegelijkertijd proberen van meerdere veranderingen vermindert de naleving aanzienlijk. Het concept van de 'hoeksteengewoonte' laat echter zien dat sommige veranderingen (consistent slapen, dagelijks bewegen) automatische verbeteringen in andere gebieden teweegbrengen."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Leefstijlgeneeskunde is een snelgroeiend medisch veld dat evidence-based gedragsinterventies gebruikt — voeding, lichaamsbeweging, slaap, stressmanagement en middelengebruik — als primaire behandeling voor preventie en beheer van chronische ziekten.\n\nDe vier kernpijlers van leefstijl zijn verantwoordelijk voor ongeveer 80% van de chronische ziektelast (CDC, 2023). Hart- en vaatziekten, diabetes type 2, veel vormen van kanker en psychische stoornissen worden sterk beïnvloed door aanpasbare leefstijlfactoren. Dit betekent dat de grootste enkele bepalende factor voor je gezondheid op lange termijn niet genetica is — het zijn je dagelijkse gewoonten.",
+    "howScored": "Deze quiz evalueert zes dimensies: voedingskwaliteit (volwaardig versus bewerkt), frequentie van lichaamsbeweging, slaapkwaliteit en -duur, dagelijkse hersteltijd, alcohol-/tabaksgebruik en subjectieve gezondheidsbeleving.\n\nScores boven de 70 duiden op een sterke leefstijlbasis met de meeste pijlers goed ondersteund. 40–69 wijst op een gemengde leefstijl met identificeerbare hiaten die het aanpakken waard zijn. Onder de 40 duidt op meerdere leefstijlspijlers die aanzienlijk onder de aanbevolen gezondheidsrichtlijnen liggen.",
+    "whenToSeek": "Raadpleeg een zorgverlener als:\n• Je gedurende 3+ maanden in de laagste scorecategorie zit zonder verbetering\n• Je een chronische aandoening hebt (diabetes, hypertensie, obesitas) en leefstijlveranderingen zijn gestagneerd\n• Je professionele ondersteuning nodig hebt om gewoonten te veranderen die uit de hand lijken te lopen (overeten, alcoholgebruik, lichamelijke inactiviteit)\n• Je symptomen ervaart naast leefstijlproblemen: vermoeidheid, pijn, stemmingsproblemen of onverklaarbare gewichtsveranderingen",
+    "limitations": "Deze quiz beoordeelt zelfgerapporteerde leefstijlgewoonten, die onderhevig zijn aan herinneringsbias en sociale wenselijkheidseffecten (mensen rapporteren doorgaans iets betere gewoonten dan ze daadwerkelijk hebben). Resultaten weerspiegelen een momentopname en kunnen seizoensvariatie of recente veranderingen mogelijk niet weergeven. Dit is een screeningsinstrument, geen medische beoordeling."
+  }
+}

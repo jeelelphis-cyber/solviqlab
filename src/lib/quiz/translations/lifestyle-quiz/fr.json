@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Questionnaire sur le score de santé lié au mode de vie",
+    "description": "Obtenez un aperçu honnête de la façon dont vos habitudes quotidiennes — sommeil, activité physique, nutrition, stress — contribuent à votre santé globale."
+  },
+  "questions": {
+    "ls1": {
+      "text": "Comment décririez-vous votre alimentation un jour de semaine typique ?",
+      "options": [
+        "Principalement des aliments complets — je cuisine et je planifie à l'avance",
+        "Un mélange — certains sains, d'autres moins",
+        "Souvent pratique ou rapide — je n'ai pas le temps",
+        "Principalement transformée — je n'en suis pas fier"
+      ]
+    },
+    "ls2": {
+      "text": "Combien de jours par semaine pratiquez-vous une activité physique intentionnelle ?",
+      "scaleLabels": {
+        "min": "0 jour",
+        "max": "7 jours"
+      }
+    },
+    "ls3": {
+      "text": "Comment dormez-vous la plupart des nuits ?",
+      "options": [
+        "Bien — 7 à 9 heures, je me réveille reposé",
+        "Correct — parfois agité",
+        "Mal — moins de 6 heures ou sommeil interrompu",
+        "Très mal — c'est un problème constant"
+      ]
+    },
+    "ls4": {
+      "text": "Avez-vous chaque jour un moment de repos — un temps qui vous appartient vraiment, sans obligations ?"
+    },
+    "ls5": {
+      "text": "À quelle fréquence consommez-vous de l'alcool ou fumez-vous ?",
+      "options": [
+        "Jamais ou très rarement",
+        "Occasionnellement — en société",
+        "Plusieurs fois par semaine",
+        "Quotidien"
+      ]
+    },
+    "ls6": {
+      "text": "Lorsque vous pensez à votre santé en général, comment vous sentez-vous ?",
+      "options": [
+        "Bien — je prends globalement soin de moi",
+        "Correct — mais je sais que je pourrais faire mieux",
+        "Pas très bien — j'ai négligé certaines choses",
+        "Inquiet — j'ai l'impression de m'être laissé aller"
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "label": "Base de mode de vie solide",
+      "description": "Vous construisez de bonnes habitudes dans les domaines clés. Vos choix quotidiens jouent en votre faveur.",
+      "actions": [
+        "Identifiez votre pilier le plus faible (sommeil, nutrition, mouvement ou stress) et optimisez-le davantage",
+        "Suivez un indicateur de santé pendant 30 jours — ce qui se mesure se gère",
+        "Partagez vos habitudes avec quelqu'un — la responsabilité sociale double les taux de régularité"
+      ],
+      "miaHook": "Vous faites beaucoup de choses correctement — je veux vous aider à identifier le domaine où une attention ciblée vous apportera le plus de bénéfices."
+    },
+    {
+      "label": "Marge de progression",
+      "description": "Votre mode de vie comporte des éléments solides, mais il y a des lacunes qui vous coûtent probablement de l'énergie et de la santé sans que vous le réalisiez.",
+      "actions": [
+        "Choisissez une habitude à corriger ce mois-ci — pas tout à la fois. Commencez par le sommeil s'il est inférieur à 7 heures",
+        "Préparez vos repas un jour par semaine — cette seule habitude est le prédicteur le plus fort d'une amélioration de la qualité nutritionnelle",
+        "Ajoutez 20 minutes de marche par jour — c'est l'intervention la plus accessible avec des bienfaits prouvés sur l'ensemble de la santé"
+      ],
+      "miaHook": "Je peux voir quelles habitudes spécifiques entravent vos progrès — parlons de prioriser le changement à plus fort impact."
+    },
+    {
+      "label": "Refonte du mode de vie nécessaire",
+      "description": "Plusieurs domaines de votre mode de vie nécessitent une attention particulière. Mais vous n'avez pas à tout changer d'un coup — un changement à la fois crée une transformation durable.",
+      "actions": [
+        "Commencez par le sommeil — c'est le fondement sur lequel tout le reste repose. Priorisez 7,5 heures avant de modifier quoi que ce soit d'autre.",
+        "Remplacez un repas transformé par jour par une alternative faite maison — c'est l'intervention nutritionnelle la plus rapide qui soit.",
+        "Parlez à un médecin d'un bilan de santé général — les schémas de mode de vie à ce niveau ont souvent des effets physiologiques mesurables qui méritent d'être évalués."
+      ],
+      "miaHook": "Vous portez plus que vous ne le devriez — vos habitudes actuelles jouent contre vous d'une manière que vous ne voyez peut-être pas encore pleinement."
+    }
+  ],
+  "seoContent": {
+    "intro": "Les quatre piliers de la santé liée au mode de vie — nutrition, activité physique, sommeil et gestion du stress — interagissent en continu. Une faiblesse dans un pilier exerce une pression supplémentaire sur les autres : un mauvais sommeil augmente le cortisol (aggravant le stress et favorisant la prise de poids), un stress élevé altère la qualité du sommeil et conduit à de mauvais choix alimentaires, l'inactivité physique réduit la qualité du sommeil et la santé métabolique.\n\nCe quiz vous donne un score composite honnête sur les quatre piliers, plus deux facteurs supplémentaires : la consommation d'alcool/tabac et la perception subjective de la santé. Comprendre où vous en êtes est la première étape vers un changement ciblé et à fort impact.",
+    "faq": [
+      {
+        "q": "Quel facteur lié au mode de vie a le plus grand impact sur la santé ?",
+        "a": "Les recherches montrent systématiquement que le sommeil est le fondement — il régule les hormones de l'appétit, les fonctions cognitives, la réponse immunitaire et la régulation émotionnelle. Cependant, les piliers se renforcent mutuellement : l'exercice régulier améliore considérablement la qualité du sommeil, une nutrition saine stabilise l'humeur et l'énergie, et la gestion du stress facilite le maintien de tous les autres comportements."
+      },
+      {
+        "q": "À quelle vitesse les changements de mode de vie peuvent-ils améliorer la santé ?",
+        "a": "La pression artérielle et la glycémie répondent en quelques jours aux changements alimentaires. La qualité du sommeil s'améliore en 1 à 2 semaines avec un horaire de sommeil régulier. La condition cardiovasculaire s'améliore de manière mesurable en 4 semaines d'exercice régulier. Les marqueurs de santé mentale s'améliorent en 2 à 4 semaines d'exercice modéré régulier. Les changements significatifs de composition corporelle prennent 8 à 12 semaines d'effort soutenu."
+      },
+      {
+        "q": "Vaut-il mieux changer une habitude à la fois ou plusieurs à la fois ?",
+        "a": "Les recherches sur le changement de comportement (Fogg, Stanford) et les essais cliniques soutiennent tous deux le fait de commencer par une habitude à la fois. La volonté est une ressource limitée — tenter plusieurs changements simultanés réduit considérablement l'adhésion. Cependant, le concept d'« habitude clé de voûte » montre que certains changements (sommeil régulier, exercice quotidien) déclenchent une amélioration automatique dans d'autres domaines."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "La médecine du mode de vie est un domaine médical en pleine croissance qui utilise des interventions comportementales fondées sur des preuves — alimentation, activité physique, sommeil, gestion du stress et évitement de substances — comme traitement principal pour la prévention et la gestion des maladies chroniques.\n\nLes quatre piliers fondamentaux du mode de vie représentent environ 80 % du fardeau des maladies chroniques (CDC, 2023). Les maladies cardiovasculaires, le diabète de type 2, de nombreux cancers et les troubles de santé mentale sont fortement influencés par des facteurs de mode de vie modifiables. Cela signifie que le plus grand déterminant unique de votre santé à long terme n'est pas la génétique — ce sont vos habitudes quotidiennes.",
+    "howScored": "Ce quiz évalue six dimensions : la qualité nutritionnelle (aliments complets vs. transformés), la fréquence de l'activité physique, la qualité et la durée du sommeil, le temps de récupération quotidien, la consommation d'alcool/tabac et la perception subjective de la santé.\n\nLes scores supérieurs à 70 indiquent des bases de mode de vie solides avec la plupart des piliers bien soutenus. 40–69 indique un mode de vie mixte avec des lacunes identifiables qui méritent d'être ciblées. En dessous de 40 indique que plusieurs piliers du mode de vie sont significativement en dessous des recommandations sanitaires.",
+    "whenToSeek": "Consultez un professionnel de santé si :\n• Vous avez obtenu un score dans la fourchette la plus basse pendant 3 mois ou plus sans amélioration\n• Vous avez une maladie chronique (diabète, hypertension, obésité) et les changements de mode de vie ont stagné\n• Vous avez besoin d'un soutien professionnel pour modifier des habitudes qui semblent hors de contrôle (hyperphagie, consommation d'alcool, inactivité physique)\n• Vous ressentez des symptômes en parallèle de problèmes de mode de vie : fatigue, douleur, problèmes d'humeur ou changements de poids inexpliqués",
+    "limitations": "Ce quiz évalue les habitudes de mode de vie auto-déclarées, qui sont sujettes à un biais de rappel et à des effets de désirabilité sociale (les gens ont tendance à déclarer des habitudes légèrement meilleures que celles qu'ils maintiennent réellement). Les résultats reflètent un instantané dans le temps et peuvent ne pas capturer les variations saisonnières ou les changements récents. Il s'agit d'un outil de dépistage, pas d'une évaluation médicale."
+  }
+}

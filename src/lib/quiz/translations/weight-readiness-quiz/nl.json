@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Gewichtsverlies Gereedheidsquiz",
+    "description": "Ben je echt klaar om af te vallen — of hoop je het alleen maar? Ontdek wat er werkelijk in de weg staat voordat je begint."
+  },
+  "questions": {
+    "wr1": {
+      "text": "Waarom wil je nu afvallen? Wat drijft je echt?",
+      "options": [
+        "Mijn gezondheid — ik wil me op lange termijn beter voelen",
+        "Energie en zelfvertrouwen — dagelijkse kwaliteit van leven",
+        "Een aanstaande gebeurtenis — ik heb een deadline",
+        "Externe druk — anderen willen dat ik afval"
+      ]
+    },
+    "wr2": {
+      "text": "Heb je eerder geprobeerd af te vallen en ben je gestopt? Wat gebeurde er?",
+      "options": [
+        "Ik heb eerder succes goed weten te behouden",
+        "Ik ben afgevallen en weer aangekomen — ik begrijp nu waarom",
+        "Ik stopte omdat het te beperkend was",
+        "Ik stopte omdat ik niet snel resultaten zag"
+      ]
+    },
+    "wr3": {
+      "text": "Heb je een specifiek, realistisch plan voor hoe je anders gaat eten?"
+    },
+    "wr4": {
+      "text": "Hoe klaar voel je je om consistente veranderingen door te voeren — geen crashdieet, maar levensstijlaanpassingen?",
+      "scaleLabels": {
+        "min": "Helemaal niet klaar",
+        "max": "Volledig klaar"
+      }
+    },
+    "wr5": {
+      "text": "In hoeverre beïnvloeden stress of emoties je eetgewoonten?",
+      "options": [
+        "Zeer weinig — ik eet op basis van honger",
+        "Soms — stressvolle dagen beïnvloeden mijn keuzes",
+        "Vaak — eten is troost voor mij",
+        "Altijd — emotioneel eten is mijn patroon"
+      ]
+    },
+    "wr6": {
+      "text": "Heb je steun — mensen die je aanmoedigen in plaats van je doelen saboteren?"
+    }
+  },
+  "buckets": [
+    {
+      "label": "Klaar om te beginnen",
+      "description": "Je hebt de mindset, motivatie en het bewustzijn om echte, duurzame vooruitgang te boeken. Nu gaat het om de juiste strategie.",
+      "actions": [
+        "Begin deze week — je venster van gereedheid is echt en moet worden benut",
+        "Stel een specifiek, meetbaar doel voor 8 weken (geen levenslang getal) — 4–6 kg verlies in 8 weken is realistisch en motiverend",
+        "Vertel je steunnetwerk over je plan — verantwoordelijkheid verhoogt de succeskans met 65%"
+      ],
+      "miaHook": "Je bent oprecht klaar — niet alleen hopend. Laat me je een gepersonaliseerd startplan geven op basis van je profiel."
+    },
+    {
+      "label": "Bijna klaar",
+      "description": "Je bent gemotiveerd, maar een paar belangrijke onderdelen zijn nog niet op hun plaats. Deze nu aanpakken maakt het verschil tussen blijvende verandering en een nieuwe valse start.",
+      "actions": [
+        "Identificeer de specifieke reden waarom eerdere pogingen stopten — pak die onderliggende oorzaak aan voordat je opnieuw begint",
+        "Bouw eerst je steunsysteem op — identificeer 1–2 mensen die je reis actief zullen aanmoedigen",
+        "Besteed 2 weken aan het verbeteren van je slaap naar 7+ uur voordat je begint — slaap is de #1 voorspeller van dieettrouw"
+      ],
+      "miaHook": "Ik kan zien wat er ontbreekt in je gereedheidsbeeld — laten we die hiaten dichten voordat je begint, zodat het deze keer blijft plakken."
+    },
+    {
+      "label": "Nog niet helemaal klaar",
+      "description": "Nu meteen beginnen kan leiden tot frustratie en een nieuwe stop-start cyclus. Laten we eerst de juiste basis leggen.",
+      "actions": [
+        "Focus op het begrijpen van je waarom — gezondheidsgedreven motivatie heeft een 3× hogere succeskans dan evenementgedreven of externe-drukmotivatie",
+        "Pak emotioneel eten aan voordat je met een dieet begint — zonder dit zal geen enkel eetplan op lange termijn blijven plakken",
+        "Werk samen met een coach, therapeut of diëtist om de juiste basis te leggen — proberen dit alleen te doen met het huidige gereedheidsbeeld is het recept voor een nieuwe herstart"
+      ],
+      "miaHook": "Beginnen zonder aan te pakken wat ik in je antwoorden zie, is wat leidt tot opgeven. Laten we dit goed doen — en maar één keer."
+    }
+  ],
+  "seoContent": {
+    "intro": "Onderzoek naar gedragsverandering toont consistent aan dat motivatie en intentie alleen onvoldoende voorspellers zijn van succes bij gewichtsverlies. Wat mensen die blijvend gewichtsverlies bereiken onderscheidt van degenen die in herhaalde pogingen vastlopen, is psychologische gereedheid: helderheid van motivatie, realistische verwachtingen, een concreet plan en voldoende ondersteuning.\n\nDeze quiz beoordeelt zes dimensies van gereedheid voor gewichtsverlies, gebaseerd op onderzoek naar het Transtheoretisch Model (Prochaska & DiClemente) en gedragspsychologie. Inzicht in waar je werkelijk staat — niet waar je wilt zijn — is de meest waardevolle informatie die je kunt hebben voordat je begint.",
+    "faq": [
+      {
+        "q": "Wat is de sterkste voorspeller van succes bij gewichtsverlies?",
+        "a": "Onderzoek wijst consequent uit dat intrinsieke motivatie (gezondheidsgedreven versus uiterlijkgedreven), zelfeffectiviteit (vertrouwen in het eigen vermogen om veranderingen door te voeren), sociale steun en realistische verwachtingen de sterkste voorspellers zijn van blijvend gewichtsverlies. Mensen die afvallen om gezondheidsredenen behouden hun gewicht significant langer dan degenen die gemotiveerd worden door gebeurtenissen of externe druk."
+      },
+      {
+        "q": "Waarom mislukken de meeste diëten?",
+        "a": "De belangrijkste redenen zijn: beginnen met een te groot calorietekort (onhoudbare honger), vertrouwen op wilskracht in plaats van omgevingsontwerp, het niet aanpakken van emotie-eten, gebrek aan sociale steun, alles-of-niets-denken (één slechte dag leidt tot opgeven) en het stellen van onrealistische tijdslijnen. Dit zijn oplosbare problemen — met de juiste voorbereiding."
+      },
+      {
+        "q": "Hoe doorbreek ik de cyclus van afvallen en aankomen?",
+        "a": "Onderzoek naar 'gewichtscycli' toont aan dat de sleutelfactoren voor het doorbreken van het patroon zijn: verschuiven van een kortetermijndieetmentaliteit naar een permanente levensstijlverandering, het aanpakken van emotie-eten met gedragsinstrumenten (niet wilskracht), het vanaf het begin inbouwen van een onderhoudsfase in het plan, en het kiezen van een aanpak die duurzaam genoeg is dat je je kunt voorstellen deze 5 jaar vol te houden."
+      }
+    ]
+  },
+  "content": {
+    "whatIs": "Gereedheid voor gewichtsverlies is een psychologisch concept dat is ontwikkeld uit het Transtheoretisch Model van gedragsverandering (Prochaska & DiClemente, 1983). Het beschrijft hoe voorbereid een persoon is — cognitief, motivationeel en gedragsmatig — om significante levensstijlveranderingen door te voeren en vol te houden.\n\nGereedheid is geen vaste toestand — het fluctueert met levensomstandigheden, stressniveaus en sociale omgeving. Pogingen tot gewichtsverlies tijdens perioden van lage gereedheid verhogen de kans op terugval aanzienlijk en dragen bij aan de frustrerende cyclus van herhaalde pogingen.",
+    "howScored": "Deze quiz evalueert zes gereedheidsdimensies: kwaliteit van motivatie (intrinsiek versus extrinsiek), inzicht uit eerdere pogingen, concrete planning, subjectief vertrouwen in gereedheid, emotie-eten patronen en beschikbaarheid van sociale steun.\n\nScores boven 70 duiden op hoge gereedheid — begin nu. 40–69 duidt op gedeeltelijke gereedheid — specifieke hiaten moeten eerst worden aangepakt. Onder 40 geeft aan dat de fundamentele voorwaarden voor succes nog niet aanwezig zijn — voorbereiding zal de uitkomsten aanzienlijk verbeteren.",
+    "whenToSeek": "Overweeg professionele ondersteuning als:\n• Je 3 of meer significante pogingen tot gewichtsverlies hebt gedaan die niet leidden tot blijvende verandering\n• Emotie-eten of stress-eten een significant patroon is dat uit de hand lijkt te lopen\n• Je een BMI boven 35 hebt — medisch toezicht verbetert de uitkomsten aanzienlijk op dit niveau\n• Eetbuien, restrictiecycli of andere verstoorde eetpatronen aanwezig zijn\n• Gewichtsproblemen een significante invloed hebben op de mentale gezondheid of kwaliteit van leven",
+    "limitations": "Deze quiz beoordeelt psychologische gereedheid, niet de medische geschiktheid voor gewichtsverlies. Individuele gezondheidsomstandigheden, medicijnen en metabole factoren die hier niet worden meegenomen, kunnen het vermogen om af te vallen en de aanpak aanzienlijk beïnvloeden. Raadpleeg altijd een zorgverlener voordat je begint met een significant gewichtsverliesprogramma, vooral bij onderliggende gezondheidsproblemen."
+  }
+}
