@@ -1,5 +1,5 @@
 'use client'
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 
 // ── Commitment steps ──────────────────────────────────────────────────────────
@@ -81,18 +81,68 @@ function NameStage({ onDone }: { onDone: (name: string) => void }) {
   )
 }
 
+// ── Graph context helper ──────────────────────────────────────────────────────
+
+function readGraphContext(): string {
+  try {
+    const keys = Object.keys(localStorage).filter(k => k.startsWith('graph:'))
+    if (!keys.length) return ''
+    const graph = JSON.parse(localStorage.getItem(keys[0]) ?? '{}')
+    const parts: string[] = []
+
+    const assessments: Array<{ clusterId: string; score: number }> = graph?.assessments?.items ?? []
+    if (assessments.length) {
+      parts.push('Quiz results: ' + assessments.map((a: { clusterId: string; score: number }) => `${a.clusterId}=${a.score}`).join(', '))
+    }
+    const goals: Array<{ text: string }> = graph?.goals?.items ?? []
+    if (goals.length) {
+      parts.push('Goals: ' + goals.map((g: { text: string }) => g.text).join('; '))
+    }
+    if (graph?.identity?.age) parts.push(`Age: ${graph.identity.age}`)
+
+    return parts.join('. ')
+  } catch {
+    return ''
+  }
+}
+
 // ── Chat stage ────────────────────────────────────────────────────────────────
+
+type Message = { from: 'mia' | 'user'; text: string }
+
+const MAX_TURNS = 5
+
+function buildSystemPrompt(name: string, graphContext: string): string {
+  return `You are Mia, a warm and direct personal health coach. You are talking with ${name}.
+
+${graphContext ? `What you already know about ${name}: ${graphContext}` : ''}
+
+Your approach:
+- Respond directly to what ${name} shares — acknowledge their specific pain, do not give generic advice
+- Ask ONE focused follow-up question per message to go deeper
+- Be warm but concise — 3-5 sentences max per reply
+- After ${MAX_TURNS} exchanges you will offer to build their personal plan
+- Never mention you are an AI — you are Mia, their coach
+- Write in plain conversational English, no bullet points or headers`
+}
 
 function ChatStage({ name }: { name: string }) {
   const [input, setInput] = useState('')
-  const [messages, setMessages] = useState([
+  const [messages, setMessages] = useState<Message[]>([
     {
       from: 'mia',
-      text: `Hi ${name}. Let us start.\n\nOne question — and I want you to be specific:\n\nWhat is taking the most out of you right now, ${name}? Not what you think you should say. What is actually draining you.`,
+      text: `Hi ${name}. Let us start.\n\nOne question — and I want you to be specific:\n\nWhat is taking the most out of you right now? Not what you think you should say. What is actually draining you.`,
     },
   ])
-  const [sent, setSent] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [userTurns, setUserTurns] = useState(0)
+  const [showPlan, setShowPlan] = useState(false)
   const bottomRef = useRef<HTMLDivElement>(null)
+  const graphContext = useRef('')
+
+  useEffect(() => {
+    graphContext.current = readGraphContext()
+  }, [])
 
   useEffect(() => {
     if (messages.length > 1) {
@@ -100,18 +150,84 @@ function ChatStage({ name }: { name: string }) {
     }
   }, [messages])
 
-  function handleSend() {
-    if (!input.trim() || sent) return
-    setMessages(m => [
-      ...m,
-      { from: 'user', text: input.trim() },
-      {
-        from: 'mia',
-        text: `I hear you, ${name}. That is important — and it tells me a lot.\n\nI am going to ask you a few more questions so I can build your plan. This will take about 5 minutes.\n\nLet us keep going.`,
-      },
-    ])
-    setSent(true)
+  const sendMessage = useCallback(async (userText: string) => {
+    if (!userText.trim() || loading) return
+
+    const userMsg: Message = { from: 'user', text: userText.trim() }
+    const newTurns = userTurns + 1
+    setUserTurns(newTurns)
+    setMessages(m => [...m, userMsg])
     setInput('')
+    setLoading(true)
+
+    if (newTurns >= MAX_TURNS) {
+      setTimeout(() => {
+        setMessages(m => [...m, {
+          from: 'mia',
+          text: `I have heard enough to build your plan, ${name}.\n\nLet me put it together for you.`,
+        }])
+        setLoading(false)
+        setShowPlan(true)
+      }, 800)
+      return
+    }
+
+    // Build message history for DeepSeek
+    const history = [...messages, userMsg]
+    const apiMessages = [
+      { role: 'system', content: buildSystemPrompt(name, graphContext.current) },
+      ...history.map(m => ({
+        role: m.from === 'mia' ? 'assistant' : 'user',
+        content: m.text,
+      })),
+    ]
+
+    // Stream response
+    const placeholder: Message = { from: 'mia', text: '' }
+    setMessages(m => [...m, placeholder])
+
+    try {
+      const res = await fetch('/api/llm/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: apiMessages, stream: true, provider: 'deepseek' }),
+      })
+
+      const reader = res.body?.getReader()
+      const decoder = new TextDecoder()
+      let full = ''
+
+      if (reader) {
+        while (true) {
+          const { done, value } = await reader.read()
+          if (done) break
+          const chunk = decoder.decode(value)
+          for (const line of chunk.split('\n')) {
+            if (!line.startsWith('data: ')) continue
+            const data = line.slice(6).trim()
+            if (data === '[DONE]') break
+            try {
+              const parsed = JSON.parse(data)
+              if (parsed.delta) {
+                full += parsed.delta
+                setMessages(m => [...m.slice(0, -1), { from: 'mia', text: full }])
+              }
+            } catch { /* ignore parse errors */ }
+          }
+        }
+      }
+    } catch {
+      setMessages(m => [...m.slice(0, -1), {
+        from: 'mia',
+        text: 'I am having trouble connecting right now. Please try again in a moment.',
+      }])
+    } finally {
+      setLoading(false)
+    }
+  }, [loading, messages, name, userTurns])
+
+  function handleSend() {
+    sendMessage(input)
   }
 
   return (
@@ -129,14 +245,31 @@ function ChatStage({ name }: { name: string }) {
                 ? 'bg-slate-800 text-slate-100 rounded-tl-sm'
                 : 'bg-gradient-to-r from-rose-500 to-purple-600 text-white rounded-tr-sm'
             }`}>
-              {msg.text}
+              {msg.text || (
+                <span className="flex gap-1 items-center h-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce" style={{ animationDelay: '0ms' }} />
+                  <span className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce" style={{ animationDelay: '150ms' }} />
+                  <span className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce" style={{ animationDelay: '300ms' }} />
+                </span>
+              )}
             </div>
           </div>
         ))}
         <div ref={bottomRef} />
       </div>
 
-      {!sent ? (
+      {showPlan ? (
+        <div className="mt-2 p-5 rounded-2xl bg-slate-800 border border-slate-700 text-center">
+          <p className="text-white font-semibold mb-1">Your plan is ready, {name}</p>
+          <p className="text-slate-400 text-sm mb-5">Based on everything you shared with me</p>
+          <Link
+            href={`/en/assessment/weight`}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-rose-500 to-purple-600 text-white font-semibold text-sm hover:opacity-90 transition-opacity"
+          >
+            See your plan →
+          </Link>
+        </div>
+      ) : (
         <div className="pt-4 flex gap-2 border-t border-slate-800">
           <textarea
             value={input}
@@ -145,28 +278,16 @@ function ChatStage({ name }: { name: string }) {
             placeholder="Write honestly..."
             rows={3}
             autoFocus
-            className="flex-1 px-4 py-3 rounded-2xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-purple-500"
+            disabled={loading}
+            className="flex-1 px-4 py-3 rounded-2xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-60"
           />
           <button
             onClick={handleSend}
-            disabled={!input.trim()}
+            disabled={!input.trim() || loading}
             className="px-5 py-3 rounded-2xl bg-gradient-to-r from-rose-500 to-purple-600 text-white font-semibold text-sm disabled:opacity-40 hover:opacity-90 transition-opacity self-end"
           >
             Send
           </button>
-        </div>
-      ) : (
-        <div className="mt-4 p-4 rounded-2xl bg-slate-800 border border-slate-700 text-center">
-          <p className="text-slate-300 text-sm font-medium mb-1">
-            Building your plan, {name}...
-          </p>
-          <p className="text-slate-500 text-xs mb-4">Full intake conversation coming soon</p>
-          <Link
-            href={`/en/assessment/weight`}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-rose-500 to-purple-600 text-white font-semibold text-sm hover:opacity-90 transition-opacity"
-          >
-            Continue with assessment →
-          </Link>
         </div>
       )}
     </div>
@@ -203,9 +324,9 @@ export function CoachEntryClient({ lang }: { lang: string }) {
   }
 
   return (
-    <div className="bg-slate-950 text-white flex flex-col">
+    <div className="fixed inset-0 z-50 bg-slate-950 text-white flex flex-col overflow-hidden">
       {/* Top bar */}
-      <div className="flex items-center justify-between px-5 py-4 border-b border-slate-800">
+      <div className="flex items-center justify-between px-5 py-4 border-b border-slate-800 shrink-0">
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-full bg-gradient-to-br from-rose-400 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
             M
@@ -224,7 +345,7 @@ export function CoachEntryClient({ lang }: { lang: string }) {
       </div>
 
       {/* Main content */}
-      <div className="flex-1 flex flex-col max-w-xl mx-auto w-full px-5 py-8">
+      <div className="flex-1 flex flex-col max-w-xl mx-auto w-full px-5 py-8 overflow-y-auto">
 
         {isCommitment && (
           <div className={`flex flex-col gap-6 transition-all duration-300 ${animating ? 'opacity-0 translate-y-3' : 'opacity-100 translate-y-0'}`}>
