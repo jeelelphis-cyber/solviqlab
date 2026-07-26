@@ -104,6 +104,7 @@ function ChatStage({ name, lang }: { name: string; lang: string }) {
     setLoading(true)
 
     if (newTurns >= MAX_TURNS) {
+      try { localStorage.setItem('mia_user_name', name) } catch { /* ignore */ }
       setTimeout(() => {
         setMessages(m => [...m, { from: 'mia', text: `${t('coach.plan.ready', { name })}\n\n${t('coach.plan.subtitle')}` }])
         setLoading(false)
@@ -180,7 +181,7 @@ function ChatStage({ name, lang }: { name: string; lang: string }) {
           <p className="text-white font-semibold mb-1">{t('coach.plan.ready', { name })}</p>
           <p className="text-slate-400 text-sm mb-5">{t('coach.plan.subtitle')}</p>
           <Link
-            href={`/${lang}/assessment/weight`}
+            href={`/${lang}/coach/plan`}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-rose-500 to-purple-600 text-white font-semibold text-sm hover:opacity-90 transition-opacity"
           >
             {t('coach.plan.cta')}
