@@ -14,6 +14,7 @@ import { localizeJourney } from '../../../../lib/journey/localize'
 import { getJourneyStrings } from '../../../../lib/journey/strings'
 import { MiaCoachBlock } from '../../../../components/coach/MiaCoachBlock'
 import { AlexCoachBlock } from '../../../../components/coach/AlexCoachBlock'
+import { FavoriteButton } from '../../../../components/account/FavoriteButton'
 
 interface PageProps {
   params: { lang: string; slug: string }
@@ -338,6 +339,9 @@ export default function InstrumentPage({ params }: PageProps) {
               {pageDescription}
             </p>
           )}
+          <div className="mt-4">
+            <FavoriteButton slug={slug} name={pageTitle.split(' — ')[0]!} cluster={instrument.category} />
+          </div>
         </div>
 
         {/* Calculator Card */}

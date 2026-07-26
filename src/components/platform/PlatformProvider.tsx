@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { getBrowserRuntime } from '@/lib/runtime'
 import { productRegistry } from '@/lib/products/registry'
 import { createStorageProvider } from '@/lib/user/storage'
+import { AccountAutoSave } from '@/components/account/AccountAutoSave'
 import '@/lib/products/catalog'
 
 // PlatformProvider — initializes the EventBus and ProductRegistry at app level.
@@ -17,5 +18,5 @@ export function PlatformProvider({ children }: { readonly children: React.ReactN
     return disconnect
   }, [])
 
-  return <>{children}</>
+  return <><AccountAutoSave />{children}</>
 }

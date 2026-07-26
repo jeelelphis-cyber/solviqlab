@@ -316,15 +316,15 @@ function UserMenu({ lang }: { lang: string }) {
 
   if (!ready) return null
 
-  // Anonymous user — show "Sign In" shortcut
+  // Anonymous user — link to account cabinet
   if (!user || user.type === 'anonymous') {
     return (
       <Link
-        href={`/${lang}/register`}
+        href={`/${lang}/account`}
         className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-600 dark:text-slate-300 hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
       >
         <span>👤</span>
-        <span>{s.signIn}</span>
+        <span>My Account</span>
       </Link>
     )
   }
