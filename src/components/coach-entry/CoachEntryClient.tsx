@@ -163,7 +163,6 @@ function ChatStage({ name, lang, persona }: { name: string; lang: string; person
             onKeyDown={e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(input) } }}
             placeholder={t(`${persona.id}.chat.placeholder`)}
             rows={3}
-            autoFocus
             disabled={loading}
             className="flex-1 px-4 py-3 rounded-2xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-60"
           />
@@ -188,7 +187,10 @@ function NameStage({ onDone, lang, persona }: { onDone: (name: string) => void; 
   const inputRef = useRef<HTMLInputElement>(null)
   const pid = persona.id
 
-  useEffect(() => { setTimeout(() => inputRef.current?.focus(), 100) }, [])
+  useEffect(() => {
+    // Don't auto-focus on mobile — keyboard popup shifts fixed overlay on iOS
+    if (window.innerWidth >= 768) setTimeout(() => inputRef.current?.focus(), 100)
+  }, [])
 
   function handleSubmit() {
     const trimmed = name.trim()
@@ -261,7 +263,7 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
   }
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-950 text-white flex flex-col overflow-hidden">
+    <div className="fixed inset-0 z-50 bg-slate-950 text-white flex flex-col" style={{ height: '100dvh' }}>
       {/* Top bar */}
       <div className="flex items-center justify-between px-5 py-4 border-b border-slate-800 shrink-0">
         <div className="flex items-center gap-3">

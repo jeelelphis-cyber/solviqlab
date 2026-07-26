@@ -107,7 +107,7 @@ export function CoachPlanClient({ lang, personaId }: { lang: string; personaId: 
   const FREE_ITEMS = 2
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-950 text-white flex flex-col overflow-hidden">
+    <div className="fixed inset-0 z-50 bg-slate-950 text-white flex flex-col" style={{ height: '100dvh' }}>
       {/* Header */}
       <div className="flex items-center justify-between px-5 py-4 border-b border-slate-800 shrink-0">
         <div className="flex items-center gap-3">
