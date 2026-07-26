@@ -23,7 +23,13 @@
     "q4": "Co oznacza 'Łączne wpłaty' w wynikach?",
     "a4": "Łączne wpłaty to suma początkowej kwoty głównej i wszystkich miesięcznych wpłat dokonanych w okresie inwestycji. Na przykład, jeśli zaczynasz od 10 000 $ i dodajesz 100 $ miesięcznie przez 10 lat, łączne wpłaty = 10 000 $ + (100 $ × 120) = 22 000 $.",
     "q5": "Czy istnieje standardowa instytucja dla obliczeń procentu składanego?",
-    "a5": "Wzór na procent składany jest powszechnie akceptowany w finansach i matematyce. Amerykańska Komisja Papierów Wartościowych i Giełd (SEC) udostępnia materiały edukacyjne na temat kapitalizacji, a wzór jest używany przez banki i instytucje finansowe na całym świecie."
+    "a5": "Wzór na procent składany jest powszechnie akceptowany w finansach i matematyce. Amerykańska Komisja Papierów Wartościowych i Giełd (SEC) udostępnia materiały edukacyjne na temat kapitalizacji, a wzór jest używany przez banki i instytucje finansowe na całym świecie.",
+    "q6": "Jak bardzo wpływa rozpoczęcie 10 lat wcześniej na końcowy wynik?",
+    "a6": "200 $ miesięcznie przy 7%: zaczynając w wieku 25 lat, do 65. roku życia zgromadzisz około 525 000 $. Zaczynając w wieku 35 lat, zgromadzisz około 243 000 $ – to mniej niż połowa, mimo że inwestujesz tylko o 10 lat krócej. Te pierwsze 10 lat kapitalizacji tworzy więcej bogactwa niż kolejne 30 lat składek razem wzięte. To najsilniejszy argument za rozpoczęciem jak najwcześniej, niezależnie od tego, jak mała jest początkowa inwestycja.",
+    "q7": "Czy procent składany uwzględnia inflację?",
+    "a7": "Nie — ten kalkulator pokazuje nominalne (przed inflacją) stopy zwrotu. W realnych kategoriach siły nabywczej zyski są pomniejszane o roczną stopę inflacji. Aby uzyskać prognozy skorygowane o inflację, odejmij oczekiwaną inflację od wprowadzonej stopy procentowej (np. wpisz 4% zamiast 7%, jeśli oczekujesz 3% inflacji). W przypadku horyzontów planowania wynoszących 20+ lat zawsze myśl w kategoriach realnych stóp zwrotu, a nie nominalnych.",
+    "q8": "Jaka jest różnica między APY a APR?",
+    "a8": "APR (Annual Percentage Rate) to podana roczna stopa przed uwzględnieniem efektów kapitalizacji. APY (Annual Percentage Yield) to rzeczywisty roczny zwrot po zastosowaniu kapitalizacji — jest zawsze równy lub wyższy od APR. APR wynoszący 5% kapitalizowany miesięcznie daje APY na poziomie 5,116%. W przypadku inwestycji i oszczędności, APY jest liczbą, która ma znaczenie przy porównywaniu ofert."
   },
   "unit_years": "lat",
   "freq_annually": "Rocznie",

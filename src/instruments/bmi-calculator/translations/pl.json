@@ -63,7 +63,13 @@
     "q4": "Jak obliczany jest szacowany procent tkanki tłuszczowej?",
     "a4": "Szacowany procent tkanki tłuszczowej oblicza się za pomocą wzoru Deurenberga: % tkanki tłuszczowej = 1.20 × BMI + 0.23 × Wiek - 10.8 × Płeć - 5.4, gdzie Płeć = 1 dla mężczyzn, 0 dla kobiet. Wzór ten jest zweryfikowany dla dorosłych w wieku 18–80 lat.",
     "q5": "Jakie są kategorie BMI według WHO?",
-    "a5": "Światowa Organizacja Zdrowia definiuje: niedowaga (<18.5), prawidłowa waga (18.5–24.9), nadwaga (25–29.9) oraz otyłość I stopnia (30–34.9), II stopnia (35–39.9), III stopnia (≥40). Opierają się one na ryzyku zdrowotnym populacji."
+    "a5": "Światowa Organizacja Zdrowia definiuje: niedowaga (<18.5), prawidłowa waga (18.5–24.9), nadwaga (25–29.9) oraz otyłość I stopnia (30–34.9), II stopnia (35–39.9), III stopnia (≥40). Opierają się one na ryzyku zdrowotnym populacji.",
+    "q6": "Czy zakres BMI jest taki sam dla mężczyzn i kobiet?",
+    "a6": "Zakresy BMI według WHO (18.5–24.9 dla normy) odnoszą się jednakowo do mężczyzn i kobiet. Jednak przy tym samym BMI kobiety naturalnie mają 8–10% więcej tkanki tłuszczowej niż mężczyźni z powodu różnic hormonalnych i reprodukcyjnych. Dlatego niektórzy badacze argumentują za wprowadzeniem progów BMI specyficznych dla płci, choć WHO ich nie przyjęła. Aby uzyskać ocenę bardziej uwzględniającą płeć, używaj procentowej zawartości tkanki tłuszczowej obok BMI.",
+    "q7": "Jak często powinienem sprawdzać swoje BMI?",
+    "a7": "Dla większości dorosłych obliczanie BMI co 3–6 miesięcy jest wystarczające do monitorowania długoterminowych trendów. Waga waha się o 1–3 kg dziennie z powodu nawodnienia, jedzenia i cykli hormonalnych, więc unikaj interpretowania pojedynczych pomiarów. Jeśli aktywnie kontrolujesz wagę, comiesięczne śledzenie jest rozsądne. Najważniejszy jest kierunek trendu w czasie, a nie pojedynczy odczyt.",
+    "q8": "Czy normalne BMI może oznaczać, że nadal jestem niezdrowy?",
+    "a8": "Tak. Stan zwany 'otyłością przy prawidłowej masie ciała' lub 'skinny fat' występuje, gdy ktoś ma prawidłowe BMI, ale wysoki procent tkanki tłuszczowej i niską masę mięśniową. Niesie to podobne zagrożenia metaboliczne jak nadwaga. Z drugiej strony, niektóre osoby z BMI w zakresie nadwagi (25–27,9) są metabolicznie zdrowe. Dlatego BMI powinno być zawsze interpretowane wraz z innymi wskaźnikami: obwodem talii, ciśnieniem krwi, glukozą we krwi i cholesterolem."
   },
   "aria": {
     "result_announcement": "Wynik: BMI {bmi}. Kategoria: {category}. {summary}.",
