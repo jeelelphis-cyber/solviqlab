@@ -13,9 +13,9 @@
   "faq": {
     "title": "Perguntas Frequentes",
     "q1": "Como a taxa de juros mensal é derivada da taxa anual?",
-    "a1": "A taxa de juros mensal é a taxa anual dividida por 12. Por exemplo, uma taxa anual de 6% torna-se 0,5% ao mês (0,06/12 = 0,005). Essa taxa mensal é usada na fórmula de amortização para calcular os pagamentos.",
-    "q2": "O que 'Juros Totais' representa?",
-    "a2": "Juros Totais é o valor total de juros que você pagará durante todo o prazo do empréstimo. É calculado como Pagamento Total menos o Principal. Para um empréstimo de $10.000 a 5% por 36 meses, os juros totais são $789,56.",
+    "a1": "A taxa de juros mensal é a taxa anual dividida por 12. Uma taxa anual de 6% se torna 0,5% ao mês (0,06 ÷ 12 = 0,005). Essa taxa mensal é utilizada na fórmula de amortização. Observe que isso gera uma taxa anual efetiva ligeiramente acima de 6% devido à capitalização mensal — especificamente 6,168% APY —, motivo pelo qual a APR e a APY diferem em empréstimos parcelados.",
+    "q2": "O que os juros totais representam e como posso reduzi-los?",
+    "a2": "Os juros totais são a soma cumulativa de todos os pagamentos de juros ao longo do prazo do empréstimo — calculados como (pagamento mensal × número de meses) menos o principal. Em um financiamento de automóvel de $15.000 a 7% por 60 meses, os juros totais são de $2.799. Para reduzi-los: escolha um prazo de empréstimo mais curto, faça um pagamento inicial maior para reduzir o principal, ou faça pagamentos extras direcionados ao principal. Mesmo um pagamento extra por ano reduz significativamente os juros totais.",
     "q3": "Esta calculadora pode ser usada para hipotecas ou empréstimos estudantis?",
     "a3": "Esta calculadora é projetada para empréstimos de taxa fixa. Para hipotecas, custos adicionais como impostos sobre a propriedade e seguros não estão incluídos. Para empréstimos estudantis, funciona se a taxa de juros for fixa e os pagamentos forem constantes. Empréstimos com taxa variável exigem uma abordagem diferente.",
     "q4": "O que o resultado 'Pagamento Mensal' inclui?",
