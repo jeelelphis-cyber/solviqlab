@@ -19,7 +19,7 @@
     "q2": "Jak częstotliwość kapitalizacji wpływa na kwotę końcową?",
     "a2": "Częstsza kapitalizacja skutkuje wyższymi zwrotami, ponieważ odsetki są dodawane częściej. Dla 10 000 $ przy 5% przez 10 lat: rocznie daje 16 288,95 $, kwartalnie 16 453,09 $, miesięcznie 16 470,09 $, a dziennie 16 474,61 $.",
     "q3": "Czy mogę używać tego kalkulatora zarówno do kredytów, jak i inwestycji?",
-    "a3": "Tak, ten sam wzór dotyczy kredytów z kapitalizacją odsetek. Jednak w przypadku kredytów wynik reprezentuje całkowitą kwotę do spłaty. Ten kalkulator nie uwzględnia spłat kredytu; zakłada brak wypłat.",
+    "a3": "Reguła 72 pozwala oszacować, po ilu latach podwoisz swoje pieniądze: podziel 72 przez swoją roczną stopę procentową. Przy 6% pieniądze podwajają się w 12 lat. Przy 8% – w 9 lat. Przy 4% – w 18 lat. Ta reguła pokazuje, dlaczego nawet 2% różnica w rocznej stopie zwrotu prowadzi do radykalnie różnych wyników długoterminowego bogactwa – i dlaczego opłaty, które obniżają efektywną stopę zwrotu o 1%, są tak kosztowne.",
     "q4": "Co oznacza 'Łączne wpłaty' w wynikach?",
     "a4": "Łączne wpłaty to suma początkowej kwoty głównej i wszystkich miesięcznych wpłat dokonanych w okresie inwestycji. Na przykład, jeśli zaczynasz od 10 000 $ i dodajesz 100 $ miesięcznie przez 10 lat, łączne wpłaty = 10 000 $ + (100 $ × 120) = 22 000 $.",
     "q5": "Czy istnieje standardowa instytucja dla obliczeń procentu składanego?",

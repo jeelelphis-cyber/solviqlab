@@ -63,7 +63,7 @@
     "q4": "Jak obliczany jest szacowany procent tkanki tłuszczowej?",
     "a4": "Szacowany procent tkanki tłuszczowej oblicza się za pomocą wzoru Deurenberga: % tkanki tłuszczowej = 1.20 × BMI + 0.23 × Wiek - 10.8 × Płeć - 5.4, gdzie Płeć = 1 dla mężczyzn, 0 dla kobiet. Wzór ten jest zweryfikowany dla dorosłych w wieku 18–80 lat.",
     "q5": "Jakie są kategorie BMI według WHO?",
-    "a5": "Światowa Organizacja Zdrowia definiuje: niedowaga (<18.5), prawidłowa waga (18.5–24.9), nadwaga (25–29.9) oraz otyłość I stopnia (30–34.9), II stopnia (35–39.9), III stopnia (≥40). Opierają się one na ryzyku zdrowotnym populacji.",
+    "a5": "Światowa Organizacja Zdrowia (WHO) definiuje: Skrajna niedowaga (<16,0), Umiarkowana niedowaga (16,0–16,9), Lekka niedowaga (17,0–18,4), Prawidłowa masa ciała (18,5–24,9), Nadwaga (25,0–29,9), Otyłość I stopnia (30,0–34,9), Otyłość II stopnia (35,0–39,9) oraz Otyłość III stopnia / Otyłość olbrzymia (≥40,0). Kategorie te opierają się na danych dotyczących ryzyka chorób na poziomie populacji, pochodzących z badań przeprowadzonych w wielu krajach.",
     "q6": "Czy zakres BMI jest taki sam dla mężczyzn i kobiet?",
     "a6": "Zakresy BMI według WHO (18.5–24.9 dla normy) odnoszą się jednakowo do mężczyzn i kobiet. Jednak przy tym samym BMI kobiety naturalnie mają 8–10% więcej tkanki tłuszczowej niż mężczyźni z powodu różnic hormonalnych i reprodukcyjnych. Dlatego niektórzy badacze argumentują za wprowadzeniem progów BMI specyficznych dla płci, choć WHO ich nie przyjęła. Aby uzyskać ocenę bardziej uwzględniającą płeć, używaj procentowej zawartości tkanki tłuszczowej obok BMI.",
     "q7": "Jak często powinienem sprawdzać swoje BMI?",

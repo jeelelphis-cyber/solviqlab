@@ -13,9 +13,9 @@
   "faq": {
     "title": "Najczęściej zadawane pytania",
     "q1": "Jak obliczana jest miesięczna stopa procentowa z rocznej stopy?",
-    "a1": "Miesięczna stopa procentowa to roczna stopa podzielona przez 12. Na przykład 6% rocznie to 0,5% miesięcznie (0,06/12 = 0,005). Ta miesięczna stopa jest używana we wzorze amortyzacji do obliczania rat.",
-    "q2": "Co oznacza 'Całkowite odsetki'?",
-    "a2": "Całkowite odsetki to suma odsetek zapłaconych przez cały okres kredytu. Oblicza się je jako całkowitą płatność minus kwota kredytu. Dla kredytu 10 000 USD przy 5% na 36 miesięcy całkowite odsetki wynoszą 789,56 USD.",
+    "a1": "Miesięczna stopa procentowa to roczna stopa podzielona przez 12. Roczna stopa 6% staje się 0,5% miesięcznie (0,06 ÷ 12 = 0,005). Ta miesięczna stopa jest używana we wzorze amortyzacji. Należy zauważyć, że w wyniku miesięcznej kapitalizacji daje to efektywną roczną stopę nieco powyżej 6% — dokładnie 6,168% APY — co wyjaśnia, dlaczego APR i APY różnią się w przypadku kredytów ratalnych.",
+    "q2": "Co reprezentują całkowite odsetki i jak mogę je zmniejszyć?",
+    "a2": "Całkowite odsetki to suma wszystkich płatności odsetkowych w okresie kredytu — obliczana jako (miesięczna rata × liczba miesięcy) minus kwota główna. Dla kredytu samochodowego w wysokości 15 000 USD przy oprocentowaniu 7% na 60 miesięcy, całkowite odsetki wynoszą 2 799 USD. Aby je zmniejszyć: wybierz krótszy okres kredytu, wpłać wyższą zaliczkę, aby obniżyć kwotę główną, lub dokonuj dodatkowych wpłat na poczet kwoty głównej. Nawet jedna dodatkowa wpłata rocznie znacząco obniża całkowite odsetki.",
     "q3": "Czy ten kalkulator może być używany do kredytów hipotecznych lub studenckich?",
     "a3": "Ten kalkulator jest przeznaczony dla kredytów o stałym oprocentowaniu i równych ratach. W przypadku kredytów hipotecznych nie uwzględnia dodatkowych kosztów, takich jak podatki od nieruchomości i ubezpieczenie. W przypadku kredytów studenckich działa, jeśli oprocentowanie jest stałe, a raty równe. Kredyty o zmiennym oprocentowaniu wymagają innego podejścia.",
     "q4": "Co zawiera miesięczna rata?",
