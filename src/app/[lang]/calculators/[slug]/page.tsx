@@ -6,12 +6,11 @@ import { getInstrument, getTranslations, getAllSlugs, SUPPORTED_LANGS, getAllIns
 import { getJourneyNextSteps, getJourneysForSlug, NAV_CATEGORIES } from '../../../../lib/navigation'
 import { t, tr } from '../../../../lib/ui-strings'
 import { InstrumentUI } from '../../../../components/instruments/InstrumentUI'
-import { JourneyExperience, StickyCTA, JourneyAnalyticsObserver } from '../../../../components/journey'
+import { JourneyExperience, JourneyAnalyticsObserver } from '../../../../components/journey'
 import { getNextStep, getJourneyPosition } from '../../../../lib/journey/config'
 import { buildCTA } from '../../../../lib/journey/cta'
 import { getClusterForSlug } from '../../../../lib/catalog/slug-cluster'
-import { localizeJourney } from '../../../../lib/journey/localize'
-import { getJourneyStrings } from '../../../../lib/journey/strings'
+
 import { MiaCoachBlock } from '../../../../components/coach/MiaCoachBlock'
 import { AlexCoachBlock } from '../../../../components/coach/AlexCoachBlock'
 import { FavoriteButton } from '../../../../components/account/FavoriteButton'
@@ -356,13 +355,11 @@ export default function InstrumentPage({ params }: PageProps) {
         {/* Alex AI Coach — appears after finance calculator result */}
         <AlexCoachBlock lang={lang} />
 
-        {/* V4-1 First Journey Experience — reads live IntentState, animates in after result */}
+        {/* Journey Experience — related next steps (SEO internal links, no sticky CTA) */}
         {(() => {
           const ns  = getNextStep(slug, lang)
           const pos = ns ? getJourneyPosition(slug) : null
-          const localizedPos = pos ? { ...pos, journey: localizeJourney(pos.journey, lang) } : null
-          const cta = localizedPos && ns ? buildCTA(localizedPos, ns.nextName, ns.estimatedMinutes, lang) : null
-          const sj  = getJourneyStrings(lang)
+          const cta = pos && ns ? buildCTA(pos, ns.nextName, ns.estimatedMinutes, lang) : null
           return (
             <>
               <JourneyExperience
@@ -373,23 +370,12 @@ export default function InstrumentPage({ params }: PageProps) {
                 suggestedName={ns?.nextName ?? null}
               />
               {ns && cta && (
-                <>
-                  <StickyCTA
-                    href={`/${lang}/calculators/${ns.nextSlug}`}
-                    text={cta.text}
-                    subtext={cta.subtext}
-                    urgency={cta.urgency}
-                    trackingLabel={cta.trackingLabel}
-                    nextName={ns.nextName}
-                    recommendedLabel={sj.recommendedNextStep}
-                  />
-                  <JourneyAnalyticsObserver
-                    slug={slug}
-                    journeyId={pos?.journey.id ?? null}
-                    trackingLabel={cta.trackingLabel}
-                    nextSlug={ns.nextSlug}
-                  />
-                </>
+                <JourneyAnalyticsObserver
+                  slug={slug}
+                  journeyId={pos?.journey.id ?? null}
+                  trackingLabel={cta.trackingLabel}
+                  nextSlug={ns.nextSlug}
+                />
               )}
             </>
           )
