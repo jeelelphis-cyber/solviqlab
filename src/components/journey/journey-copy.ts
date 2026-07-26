@@ -1,5 +1,6 @@
 import type { IntentPhase, IntentState } from '@/lib/domain/intent-state'
 import type { IntentCluster } from '@/lib/assessment/types'
+import { getT } from '@/lib/i18n/ui'
 
 // ── Phase identity ────────────────────────────────────────────────────────────
 
@@ -330,5 +331,64 @@ const UK_COPY: JourneyCopySet = {
 
 export function getJourneyCopy(lang: string): JourneyCopySet {
   if (lang === 'uk') return UK_COPY
-  return EN_COPY
+  if (lang === 'en') return EN_COPY
+
+  const t = getT(lang)
+  return {
+    phaseLabel: {
+      discovery:  t('journey.phase.discovery'),
+      assessment: t('journey.phase.assessment'),
+      planning:   t('journey.phase.planning'),
+      execution:  t('journey.phase.execution'),
+      habit:      t('journey.phase.habit'),
+    },
+    phaseHero: {
+      discovery:  t('journey.hero.discovery'),
+      assessment: t('journey.hero.assessment'),
+      planning:   t('journey.hero.planning'),
+      execution:  t('journey.hero.execution'),
+      habit:      t('journey.hero.habit'),
+    },
+    ctaPrimary: {
+      discovery:  t('journey.cta.discovery'),
+      assessment: t('journey.cta.assessment'),
+      planning:   t('journey.cta.planning'),
+      execution:  t('journey.cta.execution'),
+      habit:      t('journey.cta.habit'),
+    },
+    whyNow: {
+      discovery:  t('journey.why_now.discovery'),
+      assessment: t('journey.why_now.assessment'),
+      planning:   t('journey.why_now.planning'),
+      execution:  t('journey.why_now.execution'),
+      habit:      t('journey.why_now.habit'),
+    },
+    phaseUnlock: {
+      discovery:  [t('journey.unlock.assessment'), t('journey.unlock.strategy'), t('journey.unlock.personal_plan'), t('journey.unlock.ai_coach')],
+      assessment: [t('journey.unlock.strategy'), t('journey.unlock.personal_plan'), t('journey.unlock.ai_coach')],
+      planning:   [t('journey.unlock.personal_plan'), t('journey.unlock.ai_coach')],
+      execution:  [t('journey.unlock.weekly_checkins'), t('journey.unlock.ai_coach'), t('journey.unlock.new_goal')],
+      habit:      [t('journey.unlock.new_goal')],
+    },
+    clusterAssessmentName: {
+      weight:         t('journey.cluster.weight'),
+      sleep:          t('journey.cluster.sleep'),
+      finance:        t('journey.cluster.finance'),
+      pregnancy:      t('journey.cluster.pregnancy'),
+      nutrition:      t('journey.cluster.nutrition'),
+      fitness:        t('journey.cluster.fitness'),
+      mental_health:  t('journey.cluster.mental_health'),
+      cardiovascular: t('journey.cluster.cardiovascular'),
+    },
+    buildHeroSub,
+    buildWhyThis,
+    progressText: (step, total) => {
+      const pct = Math.min(Math.round((step / total) * 100), 100)
+      if (pct === 0) return t('journey.progress_start')
+      if (pct === 100) return t('journey.progress_complete')
+      return t('journey.progress_pct', { pct })
+    },
+    stepsCompleted: (n) => n === 1 ? t('journey.steps_completed_one', { n }) : t('journey.steps_completed_other', { n }),
+    afterThis: t('journey.after_this'),
+  }
 }

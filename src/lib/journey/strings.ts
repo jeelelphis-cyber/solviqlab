@@ -1,6 +1,7 @@
 // Journey Engine — i18n strings for the journey UI
 // Covers all 10 supported languages.
 // Per-instrument reasons (in config.ts) are English-only in V3 Sprint 01.
+import { getT } from '@/lib/i18n/ui'
 
 export interface JourneyStrings {
   // NextStepCard
@@ -504,5 +505,29 @@ const STRINGS: Record<Lang, JourneyStrings> = {
 }
 
 export function getJourneyStrings(lang: string): JourneyStrings {
-  return STRINGS[(lang as Lang)] ?? STRINGS.en
+  const base = STRINGS[(lang as Lang)] ?? STRINGS.en
+  const t = getT(lang)
+  return {
+    ...base,
+    signIn:             t('nav.sign_in'),
+    nextStepBadge:      t('journey.next_step'),
+    veryHighImpact:     t('journey.impact.very_high'),
+    highImpact:         t('journey.impact.high'),
+    mediumImpact:       t('journey.impact.medium'),
+    lowImpact:          t('journey.impact.low'),
+    aiConsultationLabel: t('journey.ai_consultation'),
+    saveHealthProfile:  t('registration.title'),
+    nameOptional:       t('registration.name_placeholder'),
+    emailRequired:      t('registration.email_placeholder'),
+    saveProfileBtn:     t('registration.save_btn'),
+    savingBtn:          t('registration.saving_btn'),
+    freeForever:        t('registration.free_forever'),
+    regBenefit1:        t('registration.benefit_1'),
+    regBenefit2:        t('registration.benefit_2'),
+    regBenefit3:        t('registration.benefit_3'),
+    regBenefit4:        t('registration.benefit_4'),
+    profileSavedTitle:   t('registration.saved_title'),
+    profileSavedSubtitle: t('registration.saved_subtitle'),
+    miaIsReady:         t('registration.mia_ready'),
+  }
 }

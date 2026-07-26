@@ -25,6 +25,8 @@ import { AssessmentGraphSync } from '@/lib/graph/sync-service'
 import { GraphRepository }    from '@/lib/graph/repository'
 import { GraphUpdater }       from '@/lib/graph/updater'
 import { LocalStorageProvider } from '@/lib/user/storage'
+import { resolveString } from '@/lib/assessment/strings'
+import { getT } from '@/lib/i18n/ui'
 
 // ── Sub-components ────────────────────────────────────────────────────────────
 
@@ -92,27 +94,28 @@ function ScoreBadge({ score }: { score: number }) {
 
 function GateScreen({ gate, lang }: { gate: GateResult; lang: string }) {
   const remaining = gate.missing_instruments.length
+  const t = getT(lang)
 
   return (
     <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-8">
       <div className="mb-5">
         <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-widest mb-3">
-          Building Your Profile
+          {t('assessment.gate.building_profile')}
         </p>
         <h2 className="text-xl font-bold text-slate-900 dark:text-white leading-snug mb-2">
           {remaining === 1
-            ? 'One more data point and your assessment is ready.'
-            : `We need ${remaining} more data points to build something personal for you.`}
+            ? t('assessment.gate.one_more')
+            : t('assessment.gate.need_more', { remaining })}
         </h2>
         <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-          The more we know about your starting point, the more accurate your personalized strategy will be.
+          {t('assessment.gate.more_data')}
         </p>
       </div>
 
       {gate.missing_instruments.length > 0 && (
         <div className="space-y-2">
           <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-widest mb-3">
-            Add this to unlock your assessment:
+            {t('assessment.gate.add_this')}
           </p>
           {gate.missing_instruments.slice(0, 3).map(slug => (
             <a
@@ -124,7 +127,7 @@ function GateScreen({ gate, lang }: { gate: GateResult; lang: string }) {
                          hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20
                          transition-colors"
             >
-              <span>Add {slug.replace(/-calculator$/, '').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())} Data</span>
+              <span>{t('assessment.gate.add_data', { name: slug.replace(/-calculator$/, '').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) })}</span>
               <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-500 transition-colors" fill="none" viewBox="0 0 16 16" aria-hidden="true">
                 <path d="M6 12l4-4-4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -141,11 +144,14 @@ function GateScreen({ gate, lang }: { gate: GateResult; lang: string }) {
 function GapQuestionsForm({
   questions,
   onSubmit,
+  lang,
 }: {
   questions: readonly AssessmentQuestion[]
   onSubmit: (answers: QuestionAnswers) => void
+  lang: string
 }) {
   const [answers, setAnswers] = useState<Record<string, string | number | boolean>>({})
+  const t = getT(lang)
 
   const allRequired = questions.filter(q => q.required)
   const canSubmit = allRequired.every(q => answers[q.id] !== undefined)
@@ -154,18 +160,18 @@ function GapQuestionsForm({
     <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 space-y-6">
       <div>
         <h2 className="text-lg font-bold text-slate-900 dark:text-white">
-          A couple of quick questions
+          {t('assessment.questions.title')}
         </h2>
         <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-          This helps personalize your assessment.
+          {t('assessment.questions.subtitle')}
         </p>
       </div>
 
       {questions.map(q => (
         <div key={q.id}>
           <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
-            {q.label_key}
-            {!q.required && <span className="text-slate-400 font-normal ml-1">(optional)</span>}
+            {resolveString(q.label_key)}
+            {!q.required && <span className="text-slate-400 font-normal ml-1">{t('assessment.questions.optional')}</span>}
           </label>
           {q.type === 'select' && q.options && (
             <div className="space-y-2">
@@ -179,7 +185,7 @@ function GapQuestionsForm({
                       : 'border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-slate-300'
                   }`}
                 >
-                  {opt.label_key}
+                  {resolveString(opt.label_key)}
                 </button>
               ))}
             </div>
@@ -191,7 +197,7 @@ function GapQuestionsForm({
               max={q.max}
               onChange={e => setAnswers(prev => ({ ...prev, [q.id]: Number(e.target.value) }))}
               className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder={q.unit ? `Enter ${q.unit}` : ''}
+              placeholder={q.unit ? t('assessment.questions.enter_unit', { unit: q.unit }) : ''}
             />
           )}
         </div>
@@ -202,7 +208,7 @@ function GapQuestionsForm({
         disabled={!canSubmit}
         className="w-full py-3 px-6 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold text-sm transition-colors"
       >
-        Run My Assessment →
+        {t('assessment.questions.cta')}
       </button>
     </div>
   )
@@ -233,11 +239,12 @@ function ResultScreen({ result, lang, cluster, userId }: { result: AssessmentRes
     } catch { /* non-critical */ }
   }, [coachMessage?.message_id, result.cluster])
 
+  const t = getT(lang)
   const confidenceLabel = {
-    insufficient: 'Preliminary',
-    preliminary: 'Preliminary',
-    established: 'Established',
-    comprehensive: 'Comprehensive',
+    insufficient: t('assessment.confidence.preliminary'),
+    preliminary:  t('assessment.confidence.preliminary'),
+    established:  t('assessment.confidence.established'),
+    comprehensive: t('assessment.confidence.comprehensive'),
   }[result.confidence]
 
   const confidenceColor = {
@@ -254,7 +261,7 @@ function ResultScreen({ result, lang, cluster, userId }: { result: AssessmentRes
         <div className="flex items-start justify-between gap-4 mb-4">
           <div>
             <p className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-1">
-              {result.cluster.charAt(0).toUpperCase() + result.cluster.slice(1)} Assessment
+              {t('assessment.result.cluster_label', { cluster: result.cluster.charAt(0).toUpperCase() + result.cluster.slice(1) })}
             </p>
             <h2 className="text-xl font-bold text-slate-900 dark:text-white leading-snug">
               {result.narrative.headline}
@@ -266,7 +273,7 @@ function ResultScreen({ result, lang, cluster, userId }: { result: AssessmentRes
         {result.narrative.profile_type && (
           <div className="mt-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50">
             <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">
-              Your profile
+              {t('assessment.result.your_profile')}
             </p>
             <p className="text-sm font-bold text-slate-800 dark:text-slate-100">
               {result.narrative.profile_type}
@@ -280,7 +287,7 @@ function ResultScreen({ result, lang, cluster, userId }: { result: AssessmentRes
         )}
 
         <div className="flex items-center gap-1 mt-3">
-          <span className="text-xs text-slate-400">Data confidence:</span>
+          <span className="text-xs text-slate-400">{t('assessment.result.data_confidence')}</span>
           <span className={`text-xs font-semibold ${confidenceColor}`}>{confidenceLabel}</span>
         </div>
       </div>
@@ -289,7 +296,7 @@ function ResultScreen({ result, lang, cluster, userId }: { result: AssessmentRes
       {result.dimension_scores.length > 0 && (
         <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6">
           <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-4">
-            Breakdown
+            {t('assessment.result.breakdown')}
           </h3>
           <div className="space-y-4">
             {result.dimension_scores.map(dim => (
@@ -303,7 +310,7 @@ function ResultScreen({ result, lang, cluster, userId }: { result: AssessmentRes
       {result.narrative.key_points.length > 0 && (
         <div className="space-y-3">
           <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide">
-            Key insights
+            {t('assessment.result.key_insights')}
           </h3>
           {result.narrative.key_points.map(insight => (
             <InsightChip key={insight.id} insight={insight} />
@@ -317,7 +324,7 @@ function ResultScreen({ result, lang, cluster, userId }: { result: AssessmentRes
       ) : (
         <div className="rounded-2xl border border-blue-100 dark:border-blue-900/30 bg-blue-50 dark:bg-blue-950/30 p-6">
           <p className="text-sm text-blue-700 dark:text-blue-300 font-medium mb-3">
-            Next recommended step
+            {t('assessment.result.next_step')}
           </p>
           <a
             href={`/${lang}/calculators/${result.narrative.cta_product_id}`}
@@ -341,7 +348,7 @@ function ResultScreen({ result, lang, cluster, userId }: { result: AssessmentRes
         href={`/${lang}/dashboard`}
         className="block w-full text-center py-2 text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors"
       >
-        View my dashboard →
+        {t('assessment.result.dashboard')}
       </a>
     </div>
   )
@@ -476,7 +483,7 @@ export function AssessmentClient({ cluster, lang }: { cluster: string; lang: str
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" aria-hidden="true" />
             <p className="text-sm font-medium text-slate-700 dark:text-slate-300">
-              Building your personal assessment...
+              {getT(lang)('assessment.result.loading')}
             </p>
           </div>
           <div className="space-y-2">
@@ -494,7 +501,7 @@ export function AssessmentClient({ cluster, lang }: { cluster: string; lang: str
   }
 
   if (questions.length > 0) {
-    return <GapQuestionsForm questions={questions} onSubmit={runAssessment} />
+    return <GapQuestionsForm questions={questions} onSubmit={runAssessment} lang={lang} />
   }
 
   return (
