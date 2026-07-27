@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SUPPORTED_LANGS } from '../../../lib/instruments'
 import { t } from '../../../lib/ui-strings'
+import { getContactTopics } from '../../../lib/legal-strings'
 
 const BASE = 'https://solviqlab.com'
 
@@ -23,17 +24,10 @@ export function generateMetadata({ params }: PageProps): Metadata {
   }
 }
 
-const CONTACT_TOPICS = [
-  { icon: '🐛', label: 'Bug Report', email: 'support@solviqlab.com', desc: "Found something broken? Tell us and we'll fix it fast." },
-  { icon: '💡', label: 'Feature Request', email: 'support@solviqlab.com', desc: "Have an idea for a new calculator or quiz? We'd love to hear it." },
-  { icon: '🤝', label: 'Partnership', email: 'hello@solviqlab.com', desc: 'Interested in integrating SolviqLab into your platform or product?' },
-  { icon: '🔒', label: 'Privacy & Data', email: 'privacy@solviqlab.com', desc: 'Questions about how we handle your data.' },
-  { icon: '⚖️', label: 'Legal', email: 'legal@solviqlab.com', desc: 'Legal inquiries, licensing, or DMCA requests.' },
-]
-
 export default function ContactPage({ params }: PageProps) {
   const { lang } = params
   const s = t(lang)
+  const topics = getContactTopics(lang)
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900">
@@ -54,7 +48,7 @@ export default function ContactPage({ params }: PageProps) {
 
         {/* Contact topics */}
         <div className="space-y-3 mb-12">
-          {CONTACT_TOPICS.map(topic => (
+          {topics.map(topic => (
             <a
               key={topic.label}
               href={`mailto:${topic.email}?subject=${encodeURIComponent(topic.label + ' — SolviqLab')}`}
