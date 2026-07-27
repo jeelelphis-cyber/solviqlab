@@ -40,11 +40,7 @@ type PlannerState =
 
 const REFRESH_EVENTS = ['platform:intent_state_updated'] as const
 
-const CLUSTER_LABELS: Record<string, string> = {
-  weight:  'Weight Loss',
-  sleep:   'Sleep Quality',
-  finance: 'Financial Health',
-}
+import { getT } from '@/lib/i18n/ui'
 
 const ASSESSMENT_HREF: Record<string, string> = {
   weight:  'assessment/weight',
@@ -205,24 +201,24 @@ export function PlannerClient({ cluster, lang }: Props) {
 // ── NoPlanState ───────────────────────────────────────────────────────────────
 
 function NoPlanState({ cluster, lang }: { cluster: string; lang: string }) {
-  const label = CLUSTER_LABELS[cluster] ?? cluster
+  const t     = getT(lang)
+  const label = t(`plan.cluster.${cluster}`) || cluster
   const href  = `/${lang}/${ASSESSMENT_HREF[cluster] ?? `assessment/${cluster}`}`
 
   return (
     <div className="text-center py-16 space-y-6">
       <div className="text-5xl">🎯</div>
       <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-        Your {label} Plan Awaits
+        {t('plan.no_plan.title', { label })}
       </h2>
       <p className="text-slate-600 dark:text-slate-400 max-w-md mx-auto">
-        Complete your {label} Assessment first. It takes 3 minutes and gives us
-        the data to build a truly personalized plan.
+        {t('plan.no_plan.body', { label })}
       </p>
       <a
         href={href}
         className="inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-xl hover:bg-blue-700 transition-colors"
       >
-        Start {label} Assessment →
+        {t('plan.no_plan.cta', { label })}
       </a>
     </div>
   )
@@ -231,20 +227,19 @@ function NoPlanState({ cluster, lang }: { cluster: string; lang: string }) {
 // ── CompletedState ────────────────────────────────────────────────────────────
 
 function CompletedState({ plan, lang, cluster }: { plan: ActivePlan; lang: string; cluster: string }) {
+  const t = getT(lang)
   return (
     <div className="rounded-2xl border border-emerald-200 dark:border-emerald-800 bg-emerald-50 dark:bg-emerald-950/30 p-8 space-y-5">
 
       <div className="space-y-2">
         <p className="text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">
-          Goal Achieved
+          {t('plan.completed.badge')}
         </p>
         <h2 className="text-[22px] font-bold text-slate-900 dark:text-white leading-snug">
-          You did it.
+          {t('plan.completed.title')}
         </h2>
         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-          {plan.goal} — that took consistency and effort.
-          {plan.check_ins.length > 0 && ` ${plan.check_ins.length} weeks of check-ins.`}
-          {' '}Your next journey is ready whenever you are.
+          {plan.goal} — {t('plan.completed.body')}
         </p>
       </div>
 
@@ -256,7 +251,7 @@ function CompletedState({ plan, lang, cluster }: { plan: ActivePlan; lang: strin
                    text-sm font-semibold rounded-xl
                    active:scale-[0.98] transition-all duration-150"
       >
-        Start My Next Journey
+        {t('plan.completed.cta')}
         <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-150" fill="none" viewBox="0 0 16 16" aria-hidden="true">
           <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
