@@ -178,13 +178,10 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
 
   // ── Generating — Mia is working ────────────────────────────────────────────
   if (state === 'generating') {
+    const s = t(lang)
     const name = data.name ?? ''
-    const genText = lang === 'uk'
-      ? `Міа готує твоє особисте відео${name ? `, ${name}` : ''}…`
-      : `Mia is preparing your personal video${name ? `, ${name}` : ''}…`
-    const genSub = lang === 'uk'
-      ? 'Зазвичай це займає 1–2 хвилини. Залишайтесь на сторінці.'
-      : 'This usually takes 1–2 minutes. Stay on this page.'
+    const genText = s.miaGenerating(name)
+    const genSub  = s.miaGeneratingSub
     return (
       <div className="flex flex-col items-center justify-center gap-6 py-10 px-4 text-center">
         <div className="relative w-20 h-20 shrink-0">
@@ -269,34 +266,15 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
 
   // ── Return Tomorrow — emotional landing ───────────────────────────────────
   if (state === 'premium' || state === 'return_tomorrow') {
+    const s       = t(lang)
     const name    = data.name ?? ''
     const cluster = data.cluster ?? 'weight'
 
-    const clusterLabel = lang === 'uk'
-      ? (cluster === 'sleep' ? 'якість сну' : 'схуднення')
-      : (cluster === 'sleep' ? 'sleep quality' : 'weight loss')
-
-    const title = lang === 'uk'
-      ? `Твій план вже в роботі${name ? `, ${name}` : ''}.`
-      : `Your plan is in motion${name ? `, ${name}` : ''}.`
-
-    const items = lang === 'uk'
-      ? [
-          `7-денний протокол для ${clusterLabel} — готовий завтра`,
-          'Персональні цілі на основі твоїх даних',
-          'Щоденний чекін з Міа',
-        ]
-      : [
-          `Your 7-day ${clusterLabel} protocol — ready tomorrow`,
-          'Personalized targets based on your data',
-          'Daily check-in with Mia',
-        ]
-
-    const footer = lang === 'uk'
-      ? 'Міа вже має твої дані. Вона не забуває.'
-      : "Mia already has your data. She doesn't forget."
-
-    const rewatch = lang === 'uk' ? 'Переглянути відео ще раз' : "Rewatch Mia's message"
+    const clusterLabel = cluster === 'sleep' ? s.miaClusterSleep : s.miaClusterWeight
+    const title        = s.miaPlanInMotion(name)
+    const items        = [s.miaPlanItem1(clusterLabel), s.miaPlanItem2, s.miaPlanItem3]
+    const footer       = s.miaPlanFooter
+    const rewatch      = s.miaRewatch
 
     return (
       <div className="flex flex-col items-center gap-6 py-8 px-4 text-center">
