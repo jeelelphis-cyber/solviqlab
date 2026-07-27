@@ -83,18 +83,98 @@ export function MiaCoachExperience({ userId, score = null, cluster = 'weight', l
     onUpgrade?.()
   }
 
-  // ── Intro — emotional bridge from assessment ───────────────────────────────
+  // ── Intro — emotional bridge from assessment OR cold-start greeting ──────────
   if (state === 'mia_intro') {
+    const isCold = score === null
+
+    // Cold start: no calculator context — Mia asks what the user needs
+    if (isCold) {
+      const coldTitle = lang === 'uk'
+        ? 'Привіт! Я Міа — твій тренер зі здоров\'я.'
+        : 'Hi! I\'m Mia — your personal health coach.'
+      const coldSub = lang === 'uk'
+        ? 'Чим я можу тобі допомогти сьогодні? Розкажи про свою проблему або мету.'
+        : 'What would you like help with today? Tell me your problem or goal.'
+      const coldBtn = lang === 'uk' ? 'Розпочати →' : 'Get Started →'
+      const coldFree = lang === 'uk' ? 'Безкоштовно · Без реєстрації' : 'Free · No account needed'
+
+      const topics = lang === 'uk'
+        ? [
+            { icon: '😴', label: 'Якість сну', cluster: 'sleep' },
+            { icon: '⚖️', label: 'Схуднення', cluster: 'weight' },
+            { icon: '😰', label: 'Стрес', cluster: 'stress' },
+            { icon: '⚡', label: 'Енергія', cluster: 'energy' },
+          ]
+        : [
+            { icon: '😴', label: 'Sleep quality', cluster: 'sleep' },
+            { icon: '⚖️', label: 'Weight loss', cluster: 'weight' },
+            { icon: '😰', label: 'Stress', cluster: 'stress' },
+            { icon: '⚡', label: 'Energy', cluster: 'energy' },
+          ]
+
+      return (
+        <div className="flex flex-col items-center gap-5 py-8 px-4 text-center">
+          <div className="relative">
+            <img
+              src="https://files2.heygen.ai/avatar/v3/1ad51ab9fee24ae88af067206e14a1d8_44250/preview_target.webp"
+              alt="Mia"
+              className="w-16 h-16 rounded-full object-cover object-top border-2 border-violet-300 shadow-lg"
+              onError={e => {
+                const el = e.currentTarget as HTMLImageElement
+                el.style.display = 'none'
+                const fb = el.nextElementSibling as HTMLElement | null
+                if (fb) fb.style.display = 'flex'
+              }}
+            />
+            <div
+              style={{ display: 'none' }}
+              className="w-16 h-16 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 items-center justify-center text-white text-xl font-bold shadow-lg"
+            >
+              M
+            </div>
+            <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-400 border-2 border-white dark:border-gray-900" />
+          </div>
+
+          <div>
+            <p className="text-sm font-semibold text-gray-900 dark:text-white">{coldTitle}</p>
+            <p className="text-sm text-gray-400 mt-1 leading-relaxed">{coldSub}</p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-2 w-full max-w-xs">
+            {topics.map(topic => (
+              <button
+                key={topic.cluster}
+                onClick={() => {
+                  actions.goto('mia_intro', { cluster: topic.cluster, assessmentScore: null })
+                  actions.advance()
+                }}
+                className="flex items-center gap-2 px-4 py-3 rounded-xl border border-violet-200 dark:border-violet-800 bg-white dark:bg-slate-800 text-sm font-medium text-gray-700 dark:text-gray-200 hover:border-violet-400 hover:bg-violet-50 dark:hover:bg-violet-900/30 transition-all"
+              >
+                <span>{topic.icon}</span>
+                <span>{topic.label}</span>
+              </button>
+            ))}
+          </div>
+
+          <button
+            onClick={() => actions.advance()}
+            className="rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white text-sm font-medium px-6 py-3 hover:opacity-90 transition-opacity"
+          >
+            {coldBtn}
+          </button>
+
+          <p className="text-xs text-gray-300 dark:text-gray-600">{coldFree}</p>
+        </div>
+      )
+    }
+
+    // With context: arriving from assessment — show results bridge
     const introTitle = lang === 'uk'
       ? 'Міа переглянула твої результати.'
       : 'Mia has reviewed your results.'
     const introSub = lang === 'uk'
-      ? (score !== null
-          ? `Вона вже аналізує що означає твій результат ${score} балів саме для тебе.`
-          : 'Вона вже аналізує що означають твої результати саме для тебе.')
-      : (score !== null
-          ? `She's already looking at what your ${score}-point score means for you specifically.`
-          : "She's already looking at what your results mean for you specifically.")
+      ? `Вона вже аналізує що означає твій результат ${score} балів саме для тебе.`
+      : `She's already looking at what your ${score}-point score means for you specifically.`
     const introBtn  = lang === 'uk' ? 'Познайомитись з Міа →' : 'Meet Mia →'
     const introFree = lang === 'uk' ? 'Безкоштовно · Без реєстрації' : 'Free · No account needed'
 
