@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SUPPORTED_LANGS } from '../../../lib/instruments'
+import { t } from '../../../lib/ui-strings'
 
 const BASE = 'https://solviqlab.com'
 
@@ -63,6 +64,7 @@ const SECTIONS = [
 
 export default function PrivacyPage({ params }: PageProps) {
   const { lang } = params
+  const s = t(lang)
   const lastUpdated = 'July 27, 2026'
 
   return (
@@ -73,12 +75,12 @@ export default function PrivacyPage({ params }: PageProps) {
         <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
           <Link href={`/${lang}`} className="hover:text-blue-600 transition-colors">SolviqLab</Link>
           <span>›</span>
-          <span className="text-slate-900 dark:text-white">Privacy Policy</span>
+          <span className="text-slate-900 dark:text-white">{s.privacyBreadcrumb}</span>
         </nav>
 
         {/* Header */}
         <div className="mb-10">
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-3">Privacy Policy</h1>
+          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-3">{s.privacyTitle}</h1>
           <p className="text-sm text-slate-500 dark:text-slate-400">Last updated: {lastUpdated}</p>
           <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 rounded-xl">
             <p className="text-sm text-blue-800 dark:text-blue-300 font-medium">
@@ -101,9 +103,9 @@ export default function PrivacyPage({ params }: PageProps) {
 
         {/* Footer nav */}
         <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-4 text-sm">
-          <Link href={`/${lang}/terms`} className="text-blue-600 dark:text-blue-400 hover:underline">Terms of Service</Link>
-          <Link href={`/${lang}/contact`} className="text-blue-600 dark:text-blue-400 hover:underline">Contact Us</Link>
-          <Link href={`/${lang}`} className="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">← Back to SolviqLab</Link>
+          <Link href={`/${lang}/terms`} className="text-blue-600 dark:text-blue-400 hover:underline">{s.footerTerms}</Link>
+          <Link href={`/${lang}/contact`} className="text-blue-600 dark:text-blue-400 hover:underline">{s.footerContact}</Link>
+          <Link href={`/${lang}`} className="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">← SolviqLab</Link>
         </div>
       </div>
     </div>

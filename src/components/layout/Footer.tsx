@@ -97,15 +97,15 @@ export function Footer({ lang }: { lang: string }) {
 
           {/* Company column */}
           <div>
-            <p className="font-semibold text-white mb-3 text-sm">Company</p>
+            <p className="font-semibold text-white mb-3 text-sm">{s.footerCompany}</p>
             <ul className="space-y-2">
-              <li><Link href={`/${lang}/about`} className="text-xs text-slate-400 hover:text-white transition-colors">About</Link></li>
-              <li><Link href={`/${lang}/quiz`} className="text-xs text-slate-400 hover:text-white transition-colors">🧠 Quizzes</Link></li>
-              <li><Link href={`/${lang}/coach/mia`} className="text-xs text-slate-400 hover:text-white transition-colors">Coach Mia</Link></li>
-              <li><Link href={`/${lang}/coach/alex`} className="text-xs text-slate-400 hover:text-white transition-colors">Coach Alex</Link></li>
-              <li><Link href={`/${lang}/contact`} className="text-xs text-slate-400 hover:text-white transition-colors">Contact</Link></li>
-              <li><Link href={`/${lang}/privacy`} className="text-xs text-slate-400 hover:text-white transition-colors">Privacy Policy</Link></li>
-              <li><Link href={`/${lang}/terms`} className="text-xs text-slate-400 hover:text-white transition-colors">Terms of Service</Link></li>
+              <li><Link href={`/${lang}/about`} className="text-xs text-slate-400 hover:text-white transition-colors">{s.footerAbout}</Link></li>
+              <li><Link href={`/${lang}/quiz`} className="text-xs text-slate-400 hover:text-white transition-colors">{s.navQuizzes}</Link></li>
+              <li><Link href={`/${lang}/coach/mia`} className="text-xs text-slate-400 hover:text-white transition-colors">{s.footerCoachMia}</Link></li>
+              <li><Link href={`/${lang}/coach/alex`} className="text-xs text-slate-400 hover:text-white transition-colors">{s.footerCoachAlex}</Link></li>
+              <li><Link href={`/${lang}/contact`} className="text-xs text-slate-400 hover:text-white transition-colors">{s.footerContact}</Link></li>
+              <li><Link href={`/${lang}/privacy`} className="text-xs text-slate-400 hover:text-white transition-colors">{s.footerPrivacy}</Link></li>
+              <li><Link href={`/${lang}/terms`} className="text-xs text-slate-400 hover:text-white transition-colors">{s.footerTerms}</Link></li>
             </ul>
           </div>
         </div>
@@ -116,9 +116,9 @@ export function Footer({ lang }: { lang: string }) {
             {s.footerCopyright(year)}
           </p>
           <div className="flex items-center gap-4 flex-wrap justify-center">
-            <Link href={`/${lang}/privacy`} className="text-xs text-slate-500 hover:text-slate-300 transition-colors">Privacy</Link>
-            <Link href={`/${lang}/terms`} className="text-xs text-slate-500 hover:text-slate-300 transition-colors">Terms</Link>
-            <Link href={`/${lang}/contact`} className="text-xs text-slate-500 hover:text-slate-300 transition-colors">Contact</Link>
+            <Link href={`/${lang}/privacy`} className="text-xs text-slate-500 hover:text-slate-300 transition-colors">{s.footerPrivacy}</Link>
+            <Link href={`/${lang}/terms`} className="text-xs text-slate-500 hover:text-slate-300 transition-colors">{s.footerTerms}</Link>
+            <Link href={`/${lang}/contact`} className="text-xs text-slate-500 hover:text-slate-300 transition-colors">{s.footerContact}</Link>
             <p className="text-xs text-slate-500 hidden sm:block">{s.footerSources}</p>
             <CookieSettingsButton lang={lang} />
           </div>

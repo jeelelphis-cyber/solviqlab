@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SUPPORTED_LANGS } from '../../../lib/instruments'
+import { t } from '../../../lib/ui-strings'
 
 const BASE = 'https://solviqlab.com'
 
@@ -32,6 +33,7 @@ const CONTACT_TOPICS = [
 
 export default function ContactPage({ params }: PageProps) {
   const { lang } = params
+  const s = t(lang)
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900">
@@ -41,15 +43,13 @@ export default function ContactPage({ params }: PageProps) {
         <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
           <Link href={`/${lang}`} className="hover:text-blue-600 transition-colors">SolviqLab</Link>
           <span>›</span>
-          <span className="text-slate-900 dark:text-white">Contact</span>
+          <span className="text-slate-900 dark:text-white">{s.contactBreadcrumb}</span>
         </nav>
 
         {/* Header */}
         <div className="mb-10">
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-3">Get in Touch</h1>
-          <p className="text-slate-500 dark:text-slate-400">
-            We're a small team and we read every message. We typically respond within 24–48 hours.
-          </p>
+          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-3">{s.contactTitle}</h1>
+          <p className="text-slate-500 dark:text-slate-400">{s.contactSubtitle}</p>
         </div>
 
         {/* Contact topics */}
@@ -75,16 +75,14 @@ export default function ContactPage({ params }: PageProps) {
 
         {/* Response time */}
         <div className="p-5 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 text-center">
-          <p className="text-sm text-slate-600 dark:text-slate-400">
-            ⏱ We respond to all emails within <strong className="text-slate-900 dark:text-white">24–48 hours</strong> on business days.
-          </p>
+          <p className="text-sm text-slate-600 dark:text-slate-400">{s.contactResponseNote}</p>
         </div>
 
         {/* Footer nav */}
         <div className="mt-10 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-4 text-sm">
-          <Link href={`/${lang}/about`} className="text-blue-600 dark:text-blue-400 hover:underline">About SolviqLab</Link>
-          <Link href={`/${lang}/privacy`} className="text-blue-600 dark:text-blue-400 hover:underline">Privacy Policy</Link>
-          <Link href={`/${lang}/terms`} className="text-blue-600 dark:text-blue-400 hover:underline">Terms of Service</Link>
+          <Link href={`/${lang}/about`} className="text-blue-600 dark:text-blue-400 hover:underline">{s.footerAbout}</Link>
+          <Link href={`/${lang}/privacy`} className="text-blue-600 dark:text-blue-400 hover:underline">{s.footerPrivacy}</Link>
+          <Link href={`/${lang}/terms`} className="text-blue-600 dark:text-blue-400 hover:underline">{s.footerTerms}</Link>
         </div>
       </div>
     </div>
