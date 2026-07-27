@@ -94,13 +94,13 @@ export function HomeClient({ instruments, lang }: { instruments: InstrumentMeta[
 
           {/* Feature pills — clickable links */}
           <div className="flex flex-wrap gap-2 justify-center mb-8">
-            <Link
-              href={`/${lang}/calculators`}
-              className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-blue-600/25 border border-blue-400/30 text-blue-200 text-xs font-medium hover:bg-blue-600/40 hover:border-blue-400/60 transition-all"
+            <button
+              onClick={() => gridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+              className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-blue-600/25 border border-blue-400/30 text-blue-200 text-xs font-medium hover:bg-blue-600/40 hover:border-blue-400/60 transition-all cursor-pointer"
             >
               <BarChart2 className="w-3.5 h-3.5" />
               {instruments.length}+ {s.heroPillCalc}
-            </Link>
+            </button>
             <Link
               href={`/${lang}/quiz`}
               className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-violet-600/25 border border-violet-400/30 text-violet-200 text-xs font-medium hover:bg-violet-600/40 hover:border-violet-400/60 transition-all"
