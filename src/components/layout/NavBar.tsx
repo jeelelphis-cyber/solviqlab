@@ -7,6 +7,7 @@ import type { SolviqUser } from '@/lib/user'
 import { getNavCategories } from '../../lib/navigation'
 import type { NavCategory } from '../../lib/navigation'
 import { getJourneyStrings } from '@/lib/journey/strings'
+import { t } from '@/lib/ui-strings'
 
 // ── All supported languages (single source of truth) ─────────────────────────
 export const LANGUAGES = [
@@ -236,8 +237,17 @@ function NavCategoryBtn({ category, lang, slugToName }: { category: NavCategory;
 function MobileMenu({ lang, onClose, slugToName }: { lang: string; onClose: () => void; slugToName: Record<string, string> }) {
   const [openCat, setOpenCat] = useState<string | null>(null)
   const categories = getNavCategories(lang)
+  const s = t(lang)
   return (
     <div className="md:hidden border-t border-slate-100 dark:border-slate-800 pb-4">
+      {/* Quizzes direct link */}
+      <Link
+        href={`/${lang}/quiz`}
+        onClick={onClose}
+        className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-violet-600 dark:text-violet-400 hover:bg-slate-50 dark:hover:bg-slate-800"
+      >
+        {s.navQuizzes}
+      </Link>
       {categories.map(cat => {
         const product = getProductSegment(cat.id)
         return (
@@ -391,6 +401,8 @@ export function NavBar({ lang, slugToName = {} }: { lang: string; slugToName?: R
   const pathname = usePathname()
   const parts = pathname.split('/').filter(Boolean)
   const slug: string | undefined = parts.length >= 2 ? parts[1] : undefined
+  const s = t(lang)
+  const isQuizActive = pathname.includes('/quiz')
 
   return (
     <nav className="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700">
@@ -409,6 +421,16 @@ export function NavBar({ lang, slugToName = {} }: { lang: string; slugToName?: R
             {getNavCategories(lang).map(cat => (
               <NavCategoryBtn key={cat.id} category={cat} lang={lang} slugToName={slugToName} />
             ))}
+            <Link
+              href={`/${lang}/quiz`}
+              className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                isQuizActive
+                  ? 'bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400'
+                  : 'text-slate-600 dark:text-slate-300 hover:text-violet-600 dark:hover:text-violet-400 hover:bg-slate-50 dark:hover:bg-slate-800'
+              }`}
+            >
+              {s.navQuizzes}
+            </Link>
           </div>
 
           {/* Right controls */}

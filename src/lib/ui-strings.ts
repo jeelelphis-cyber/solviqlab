@@ -1,5 +1,9 @@
 const strings = {
   en: {
+    navQuizzes: '🧠 Quizzes',
+    quizSectionTitle: 'Know Your Health Score',
+    quizSectionSubtitle: 'Free science-backed quizzes · Under 3 min · No account needed',
+    quizCta: 'See All Quizzes →',
     heroTitle1: 'Calculate Anything.', heroTitle2: ' Instantly.',
     heroSubtitle: (n: number) => `${n}+ free professional calculators for health, finance, math, and unit conversions. No registration. No ads. Just answers.`,
     heroSources: 'Formulas sourced from:', heroCta1: 'Try BMI Calculator →', heroCta2: 'Mortgage Calculator',
@@ -43,6 +47,10 @@ const strings = {
     faqTitle: 'Frequently Asked Questions',
   },
   uk: {
+    navQuizzes: '🧠 Тести',
+    quizSectionTitle: "Дізнайся свій рівень здоров'я",
+    quizSectionSubtitle: 'Безкоштовні наукові тести · До 3 хвилин · Без реєстрації',
+    quizCta: 'Всі тести →',
     heroTitle1: 'Рахуйте будь-що.', heroTitle2: ' Миттєво.',
     heroSubtitle: (n: number) => `${n}+ безкоштовних професійних калькуляторів для здоров'я, фінансів, математики та одиниць виміру. Без реєстрації. Без реклами. Тільки відповіді.`,
     heroSources: 'Формули з джерел:', heroCta1: 'Спробувати BMI →', heroCta2: 'Іпотечний калькулятор',
@@ -86,6 +94,10 @@ const strings = {
     faqTitle: 'Часті запитання',
   },
   es: {
+    navQuizzes: '🧠 Tests',
+    quizSectionTitle: 'Descubre Tu Puntuación de Salud',
+    quizSectionSubtitle: 'Tests científicos gratuitos · Menos de 3 min · Sin cuenta',
+    quizCta: 'Ver todos los tests →',
     heroTitle1: 'Calcula Cualquier Cosa.', heroTitle2: ' Instantáneamente.',
     heroSubtitle: (n: number) => `${n}+ calculadoras profesionales gratuitas para salud, finanzas, matemáticas y conversiones. Sin registro. Sin anuncios. Solo respuestas.`,
     heroSources: 'Fórmulas obtenidas de:', heroCta1: 'Probar Calculadora de IMC →', heroCta2: 'Calculadora de Hipoteca',
@@ -129,6 +141,10 @@ const strings = {
     faqTitle: 'Preguntas Frecuentes',
   },
   pt: {
+    navQuizzes: '🧠 Testes',
+    quizSectionTitle: 'Descubra Sua Pontuação de Saúde',
+    quizSectionSubtitle: 'Testes científicos gratuitos · Menos de 3 min · Sem conta',
+    quizCta: 'Ver todos os testes →',
     heroTitle1: 'Calcule Qualquer Coisa.', heroTitle2: ' Instantaneamente.',
     heroSubtitle: (n: number) => `${n}+ calculadoras profissionais gratuitas para saúde, finanças, matemática e conversões. Sem registro. Sem anúncios. Só respostas.`,
     heroSources: 'Fórmulas obtidas de:', heroCta1: 'Experimentar Calculadora de IMC →', heroCta2: 'Calculadora de Hipoteca',
@@ -172,6 +188,10 @@ const strings = {
     faqTitle: 'Perguntas Frequentes',
   },
   fr: {
+    navQuizzes: '🧠 Tests',
+    quizSectionTitle: 'Découvrez Votre Score Santé',
+    quizSectionSubtitle: 'Tests scientifiques gratuits · Moins de 3 min · Sans compte',
+    quizCta: 'Voir tous les tests →',
     heroTitle1: 'Calculez Tout.', heroTitle2: ' Instantanément.',
     heroSubtitle: (n: number) => `${n}+ calculatrices professionnelles gratuites pour la santé, les finances, les maths et les conversions. Sans inscription. Sans pub. Juste des réponses.`,
     heroSources: 'Formules issues de :', heroCta1: 'Essayer la calculatrice IMC →', heroCta2: 'Calculatrice Hypothèque',
@@ -215,6 +235,10 @@ const strings = {
     faqTitle: 'Questions Fréquentes',
   },
   de: {
+    navQuizzes: '🧠 Tests',
+    quizSectionTitle: 'Entdecke Deinen Gesundheitsscore',
+    quizSectionSubtitle: 'Kostenlose wissenschaftliche Tests · Unter 3 Min · Kein Konto nötig',
+    quizCta: 'Alle Tests ansehen →',
     heroTitle1: 'Alles Berechnen.', heroTitle2: ' Sofort.',
     heroSubtitle: (n: number) => `${n}+ kostenlose professionelle Rechner für Gesundheit, Finanzen, Mathematik und Einheitenumrechnung. Keine Anmeldung. Keine Werbung. Nur Antworten.`,
     heroSources: 'Formeln aus:', heroCta1: 'BMI-Rechner ausprobieren →', heroCta2: 'Hypothekenrechner',
@@ -258,6 +282,10 @@ const strings = {
     faqTitle: 'Häufige Fragen',
   },
   pl: {
+    navQuizzes: '🧠 Testy',
+    quizSectionTitle: 'Poznaj Swój Wynik Zdrowia',
+    quizSectionSubtitle: 'Bezpłatne testy naukowe · Poniżej 3 min · Bez konta',
+    quizCta: 'Zobacz wszystkie testy →',
     heroTitle1: 'Oblicz Wszystko.', heroTitle2: ' Natychmiast.',
     heroSubtitle: (n: number) => `${n}+ darmowych profesjonalnych kalkulatorów do zdrowia, finansów, matematyki i przeliczania jednostek. Bez rejestracji. Bez reklam. Tylko odpowiedzi.`,
     heroSources: 'Wzory z:', heroCta1: 'Wypróbuj Kalkulator BMI →', heroCta2: 'Kalkulator Kredytu Hipotecznego',
@@ -301,6 +329,10 @@ const strings = {
     faqTitle: 'Często zadawane pytania',
   },
   tr: {
+    navQuizzes: '🧠 Testler',
+    quizSectionTitle: 'Sağlık Skorunu Keşfet',
+    quizSectionSubtitle: 'Ücretsiz bilimsel testler · 3 dakikadan az · Hesap gerektirmez',
+    quizCta: 'Tüm testleri gör →',
     heroTitle1: 'Her Şeyi Hesapla.', heroTitle2: ' Anında.',
     heroSubtitle: (n: number) => `Sağlık, finans, matematik ve birim dönüşümleri için ${n}+ ücretsiz profesyonel hesap makinesi. Kayıt yok. Reklam yok. Sadece cevaplar.`,
     heroSources: 'Formüller kaynakları:', heroCta1: 'VKİ Hesaplayıcısını Dene →', heroCta2: 'Mortgage Hesaplayıcısı',
@@ -344,6 +376,10 @@ const strings = {
     faqTitle: 'Sıkça Sorulan Sorular',
   },
   it: {
+    navQuizzes: '🧠 Test',
+    quizSectionTitle: 'Scopri il Tuo Punteggio di Salute',
+    quizSectionSubtitle: 'Test scientifici gratuiti · Meno di 3 min · Nessun account',
+    quizCta: 'Vedi tutti i test →',
     heroTitle1: 'Calcola Tutto.', heroTitle2: ' Istantaneamente.',
     heroSubtitle: (n: number) => `${n}+ calcolatori professionali gratuiti per salute, finanza, matematica e conversioni. Nessuna registrazione. Nessuna pubblicità. Solo risposte.`,
     heroSources: 'Formule tratte da:', heroCta1: 'Prova il Calcolatore IMC →', heroCta2: 'Calcolatore Mutuo',
@@ -387,6 +423,10 @@ const strings = {
     faqTitle: 'Domande Frequenti',
   },
   nl: {
+    navQuizzes: '🧠 Testen',
+    quizSectionTitle: 'Ontdek Jouw Gezondheidsscore',
+    quizSectionSubtitle: 'Gratis wetenschappelijke testen · Onder 3 min · Geen account nodig',
+    quizCta: 'Bekijk alle testen →',
     heroTitle1: 'Bereken Alles.', heroTitle2: ' Direct.',
     heroSubtitle: (n: number) => `${n}+ gratis professionele rekenmachines voor gezondheid, financiën, wiskunde en eenheidsconversies. Geen registratie. Geen advertenties. Gewoon antwoorden.`,
     heroSources: 'Formules afkomstig van:', heroCta1: 'Probeer BMI-calculator →', heroCta2: 'Hypotheekcalculator',

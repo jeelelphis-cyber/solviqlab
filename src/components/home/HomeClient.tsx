@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { CalculatorCard } from './CalculatorCard'
 import { t } from '../../lib/ui-strings'
 import type { InstrumentMeta } from '../../lib/instruments'
+import { QUIZ_REGISTRY } from '@/lib/quiz/registry'
 
 const CATEGORY_CONFIG = [
   { id: 'all',        icon: '✦',  label_key: 'tabAll' },
@@ -12,6 +13,8 @@ const CATEGORY_CONFIG = [
   { id: 'math',       icon: '🧮', label_key: 'tabMath' },
   { id: 'conversion', icon: '🔄', label_key: 'tabConversion' },
 ] as const
+
+const FEATURED_QUIZ_SLUGS = ['sleep-quiz', 'stress-quiz', 'burnout-quiz', 'energy-quiz']
 
 const POPULAR_FIRST = [
   'bmi-calculator',
@@ -114,6 +117,48 @@ export function HomeClient({
                 </button>
               )
             })}
+          </div>
+        </div>
+      </div>
+
+      {/* ── Quiz Strip ────────────────────────────────────── */}
+      <div className="bg-slate-50 dark:bg-slate-900/60 border-y border-slate-200 dark:border-slate-800 py-8 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between mb-5">
+            <div>
+              <h2 className="text-lg font-bold text-slate-900 dark:text-white">{s.quizSectionTitle}</h2>
+              <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">{s.quizSectionSubtitle}</p>
+            </div>
+            <Link
+              href={`/${lang}/quiz`}
+              className="hidden sm:block text-sm font-semibold text-violet-600 dark:text-violet-400 hover:underline shrink-0"
+            >
+              {s.quizCta}
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {FEATURED_QUIZ_SLUGS.map(slug => {
+              const quiz = QUIZ_REGISTRY[slug]
+              if (!quiz) return null
+              return (
+                <Link
+                  key={slug}
+                  href={`/${lang}/quiz/${slug}`}
+                  className="flex flex-col gap-2 p-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-violet-300 dark:hover:border-violet-600 hover:shadow-sm transition-all group"
+                >
+                  <span className="text-2xl">{quiz.icon}</span>
+                  <p className="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 leading-snug transition-colors">
+                    {quiz.title}
+                  </p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">{quiz.questions.length} questions · Free</p>
+                </Link>
+              )
+            })}
+          </div>
+          <div className="sm:hidden mt-4 text-center">
+            <Link href={`/${lang}/quiz`} className="text-sm font-semibold text-violet-600 dark:text-violet-400 hover:underline">
+              {s.quizCta}
+            </Link>
           </div>
         </div>
       </div>
