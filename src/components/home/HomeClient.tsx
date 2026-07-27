@@ -129,9 +129,9 @@ export function HomeClient({ instruments, lang }: { instruments: InstrumentMeta[
                 </div>
                 {/* Photo */}
                 <img
-                  src="https://api.dicebear.com/9.x/lorelei/svg?seed=MiaHealthCoach&backgroundColor=f43f5e,a855f7&backgroundType=gradientLinear&scale=110"
+                  src="https://files2.heygen.ai/avatar/v3/1f58c0f60faa4cb5bf6c465615e3fb18_39260/preview_target.webp"
                   alt="Mia"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                   loading="lazy"
                 />
               </div>
@@ -166,9 +166,9 @@ export function HomeClient({ instruments, lang }: { instruments: InstrumentMeta[
                 </div>
                 {/* Photo */}
                 <img
-                  src="https://api.dicebear.com/9.x/lorelei/svg?seed=AlexFinanceCoach&backgroundColor=3b82f6,06b6d4&backgroundType=gradientLinear&scale=110"
+                  src="https://files2.heygen.ai/avatar/v3/25ef6c86b1e946969d9a684870c47dfe_14947/preview_talk_1.webp"
                   alt="Alex"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                   loading="lazy"
                 />
               </div>
