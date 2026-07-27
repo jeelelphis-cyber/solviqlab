@@ -296,6 +296,7 @@ function MobileMenu({ lang, onClose, slugToName }: { lang: string; onClose: () =
 
 function UserMenu({ lang }: { lang: string }) {
   const s = getJourneyStrings(lang)
+  const ui = t(lang)
   const [user, setUser]     = useState<SolviqUser | null>(null)
   const [open, setOpen]     = useState(false)
   const [ready, setReady]   = useState(false)
@@ -334,7 +335,7 @@ function UserMenu({ lang }: { lang: string }) {
         className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-600 dark:text-slate-300 hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
       >
         <span>👤</span>
-        <span>My Account</span>
+        <span>{ui.navMyAccount}</span>
       </Link>
     )
   }
@@ -360,7 +361,7 @@ function UserMenu({ lang }: { lang: string }) {
         <div className="absolute top-full right-0 mt-2 w-52 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-xl z-50 overflow-hidden py-1">
           <div className="px-4 py-3 border-b border-slate-100 dark:border-slate-800">
             <p className="text-xs font-semibold text-slate-900 dark:text-white truncate">
-              {(user as { display_name?: string | null }).display_name ?? 'My Account'}
+              {(user as { display_name?: string | null }).display_name ?? ui.navMyAccount}
             </p>
             <p className="text-xs text-slate-400 truncate">
               {(user as { email?: string }).email ?? ''}

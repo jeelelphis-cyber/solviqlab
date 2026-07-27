@@ -1,6 +1,7 @@
 const strings = {
   en: {
-    navQuizzes: '🧠 Quizzes',
+    navQuizzes: '🧠 Quizzes', navMyAccount: 'My Account',
+    quizNames: { 'sleep-quiz': 'Sleep Quality Quiz', 'stress-quiz': 'Stress Level Quiz', 'burnout-quiz': 'Burnout Risk Quiz', 'energy-quiz': 'Daily Energy Levels Quiz', 'bmi-quiz': 'BMI Assessment', 'depression-quiz': 'Depression Screening', 'anxiety-quiz': 'Anxiety Assessment', 'hydration-quiz': 'Hydration Check', 'lifestyle-quiz': 'Lifestyle Score', 'weight-readiness-quiz': 'Weight Loss Readiness' } as Record<string, string>,
     quizSectionTitle: 'Know Your Health Score',
     quizSectionSubtitle: 'Free science-backed quizzes · Under 3 min · No account needed',
     quizCta: 'See All Quizzes →',
@@ -54,7 +55,8 @@ const strings = {
     faqTitle: 'Frequently Asked Questions',
   },
   uk: {
-    navQuizzes: '🧠 Тести',
+    navQuizzes: '🧠 Тести', navMyAccount: 'Мій кабінет',
+    quizNames: { 'sleep-quiz': 'Тест якості сну', 'stress-quiz': 'Тест рівня стресу', 'burnout-quiz': 'Тест на вигорання', 'energy-quiz': 'Тест рівня енергії', 'bmi-quiz': 'Оцінка ІМТ', 'depression-quiz': 'Скринінг депресії', 'anxiety-quiz': 'Оцінка тривожності', 'hydration-quiz': 'Рівень гідратації', 'lifestyle-quiz': 'Оцінка способу життя', 'weight-readiness-quiz': 'Готовність до схуднення' } as Record<string, string>,
     quizSectionTitle: "Дізнайся свій рівень здоров'я",
     quizSectionSubtitle: 'Безкоштовні наукові тести · До 3 хвилин · Без реєстрації',
     quizCta: 'Всі тести →',
@@ -108,7 +110,8 @@ const strings = {
     faqTitle: 'Часті запитання',
   },
   es: {
-    navQuizzes: '🧠 Tests',
+    navQuizzes: '🧠 Tests', navMyAccount: 'Mi Cuenta',
+    quizNames: { 'sleep-quiz': 'Test de Calidad del Sueño', 'stress-quiz': 'Test de Nivel de Estrés', 'burnout-quiz': 'Test de Riesgo de Burnout', 'energy-quiz': 'Test de Niveles de Energía', 'bmi-quiz': 'Evaluación del IMC', 'depression-quiz': 'Detección de Depresión', 'anxiety-quiz': 'Evaluación de Ansiedad', 'hydration-quiz': 'Control de Hidratación', 'lifestyle-quiz': 'Puntuación de Estilo de Vida', 'weight-readiness-quiz': 'Preparación para Perder Peso' } as Record<string, string>,
     quizSectionTitle: 'Descubre Tu Puntuación de Salud',
     quizSectionSubtitle: 'Tests científicos gratuitos · Menos de 3 min · Sin cuenta',
     quizCta: 'Ver todos los tests →',
@@ -162,7 +165,8 @@ const strings = {
     faqTitle: 'Preguntas Frecuentes',
   },
   pt: {
-    navQuizzes: '🧠 Testes',
+    navQuizzes: '🧠 Testes', navMyAccount: 'Minha Conta',
+    quizNames: { 'sleep-quiz': 'Teste de Qualidade do Sono', 'stress-quiz': 'Teste de Nível de Estresse', 'burnout-quiz': 'Teste de Risco de Burnout', 'energy-quiz': 'Teste de Níveis de Energia', 'bmi-quiz': 'Avaliação do IMC', 'depression-quiz': 'Rastreamento de Depressão', 'anxiety-quiz': 'Avaliação de Ansiedade', 'hydration-quiz': 'Verificação de Hidratação', 'lifestyle-quiz': 'Pontuação de Estilo de Vida', 'weight-readiness-quiz': 'Prontidão para Perda de Peso' } as Record<string, string>,
     quizSectionTitle: 'Descubra Sua Pontuação de Saúde',
     quizSectionSubtitle: 'Testes científicos gratuitos · Menos de 3 min · Sem conta',
     quizCta: 'Ver todos os testes →',
@@ -216,7 +220,8 @@ const strings = {
     faqTitle: 'Perguntas Frequentes',
   },
   fr: {
-    navQuizzes: '🧠 Tests',
+    navQuizzes: '🧠 Tests', navMyAccount: 'Mon Compte',
+    quizNames: { 'sleep-quiz': 'Test de Qualité du Sommeil', 'stress-quiz': 'Test de Niveau de Stress', 'burnout-quiz': 'Test de Risque de Burnout', 'energy-quiz': "Test de Niveaux d'Énergie", 'bmi-quiz': "Évaluation de l'IMC", 'depression-quiz': 'Dépistage de la Dépression', 'anxiety-quiz': "Évaluation de l'Anxiété", 'hydration-quiz': "Contrôle de l'Hydratation", 'lifestyle-quiz': 'Score de Style de Vie', 'weight-readiness-quiz': 'Préparation à la Perte de Poids' } as Record<string, string>,
     quizSectionTitle: 'Découvrez Votre Score Santé',
     quizSectionSubtitle: 'Tests scientifiques gratuits · Moins de 3 min · Sans compte',
     quizCta: 'Voir tous les tests →',
@@ -270,7 +275,8 @@ const strings = {
     faqTitle: 'Questions Fréquentes',
   },
   de: {
-    navQuizzes: '🧠 Tests',
+    navQuizzes: '🧠 Tests', navMyAccount: 'Mein Konto',
+    quizNames: { 'sleep-quiz': 'Schlafqualitätstest', 'stress-quiz': 'Stresslevel-Test', 'burnout-quiz': 'Burnout-Risiko-Test', 'energy-quiz': 'Energielevel-Test', 'bmi-quiz': 'BMI-Bewertung', 'depression-quiz': 'Depressions-Screening', 'anxiety-quiz': 'Angst-Bewertung', 'hydration-quiz': 'Hydrations-Check', 'lifestyle-quiz': 'Lebensstil-Score', 'weight-readiness-quiz': 'Gewichtsabnahme-Bereitschaft' } as Record<string, string>,
     quizSectionTitle: 'Entdecke Deinen Gesundheitsscore',
     quizSectionSubtitle: 'Kostenlose wissenschaftliche Tests · Unter 3 Min · Kein Konto nötig',
     quizCta: 'Alle Tests ansehen →',
@@ -324,7 +330,8 @@ const strings = {
     faqTitle: 'Häufige Fragen',
   },
   pl: {
-    navQuizzes: '🧠 Testy',
+    navQuizzes: '🧠 Testy', navMyAccount: 'Moje Konto',
+    quizNames: { 'sleep-quiz': 'Test Jakości Snu', 'stress-quiz': 'Test Poziomu Stresu', 'burnout-quiz': 'Test Ryzyka Wypalenia', 'energy-quiz': 'Test Poziomów Energii', 'bmi-quiz': 'Ocena BMI', 'depression-quiz': 'Badanie Depresji', 'anxiety-quiz': 'Ocena Lęku', 'hydration-quiz': 'Kontrola Nawodnienia', 'lifestyle-quiz': 'Wynik Stylu Życia', 'weight-readiness-quiz': 'Gotowość do Odchudzania' } as Record<string, string>,
     quizSectionTitle: 'Poznaj Swój Wynik Zdrowia',
     quizSectionSubtitle: 'Bezpłatne testy naukowe · Poniżej 3 min · Bez konta',
     quizCta: 'Zobacz wszystkie testy →',
@@ -378,7 +385,8 @@ const strings = {
     faqTitle: 'Często zadawane pytania',
   },
   tr: {
-    navQuizzes: '🧠 Testler',
+    navQuizzes: '🧠 Testler', navMyAccount: 'Hesabım',
+    quizNames: { 'sleep-quiz': 'Uyku Kalitesi Testi', 'stress-quiz': 'Stres Seviyesi Testi', 'burnout-quiz': 'Tükenmişlik Risk Testi', 'energy-quiz': 'Enerji Seviyesi Testi', 'bmi-quiz': 'VKİ Değerlendirmesi', 'depression-quiz': 'Depresyon Taraması', 'anxiety-quiz': 'Anksiyete Değerlendirmesi', 'hydration-quiz': 'Hidrasyon Kontrolü', 'lifestyle-quiz': 'Yaşam Tarzı Skoru', 'weight-readiness-quiz': 'Kilo Vermeye Hazırlık' } as Record<string, string>,
     quizSectionTitle: 'Sağlık Skorunu Keşfet',
     quizSectionSubtitle: 'Ücretsiz bilimsel testler · 3 dakikadan az · Hesap gerektirmez',
     quizCta: 'Tüm testleri gör →',
@@ -432,7 +440,8 @@ const strings = {
     faqTitle: 'Sıkça Sorulan Sorular',
   },
   it: {
-    navQuizzes: '🧠 Test',
+    navQuizzes: '🧠 Test', navMyAccount: 'Il Mio Account',
+    quizNames: { 'sleep-quiz': 'Test di Qualità del Sonno', 'stress-quiz': 'Test del Livello di Stress', 'burnout-quiz': 'Test di Rischio Burnout', 'energy-quiz': 'Test dei Livelli di Energia', 'bmi-quiz': 'Valutazione IMC', 'depression-quiz': 'Screening della Depressione', 'anxiety-quiz': "Valutazione dell'Ansia", 'hydration-quiz': "Controllo dell'Idratazione", 'lifestyle-quiz': 'Punteggio Stile di Vita', 'weight-readiness-quiz': 'Preparazione alla Perdita di Peso' } as Record<string, string>,
     quizSectionTitle: 'Scopri il Tuo Punteggio di Salute',
     quizSectionSubtitle: 'Test scientifici gratuiti · Meno di 3 min · Nessun account',
     quizCta: 'Vedi tutti i test →',
@@ -486,7 +495,8 @@ const strings = {
     faqTitle: 'Domande Frequenti',
   },
   nl: {
-    navQuizzes: '🧠 Testen',
+    navQuizzes: '🧠 Testen', navMyAccount: 'Mijn Account',
+    quizNames: { 'sleep-quiz': 'Slaapkwaliteitstest', 'stress-quiz': 'Stressniveautest', 'burnout-quiz': 'Burnoutrisico Test', 'energy-quiz': 'Energieniveautest', 'bmi-quiz': 'BMI-beoordeling', 'depression-quiz': 'Depressiescreening', 'anxiety-quiz': 'Angstbeoordeling', 'hydration-quiz': 'Hydratatie Check', 'lifestyle-quiz': 'Leefstijlscore', 'weight-readiness-quiz': 'Afvallen Gereedheid' } as Record<string, string>,
     quizSectionTitle: 'Ontdek Jouw Gezondheidsscore',
     quizSectionSubtitle: 'Gratis wetenschappelijke testen · Onder 3 min · Geen account nodig',
     quizCta: 'Bekijk alle testen →',
