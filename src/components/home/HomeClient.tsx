@@ -92,20 +92,30 @@ export function HomeClient({ instruments, lang }: { instruments: InstrumentMeta[
             {s.heroSubtitle(instruments.length)}
           </p>
 
-          {/* Feature pills — Lucide icons, no emoji */}
+          {/* Feature pills — clickable links */}
           <div className="flex flex-wrap gap-2 justify-center mb-8">
-            <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-600/25 border border-blue-400/30 text-blue-200 text-xs font-medium">
+            <Link
+              href={`/${lang}/calculators`}
+              className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-blue-600/25 border border-blue-400/30 text-blue-200 text-xs font-medium hover:bg-blue-600/40 hover:border-blue-400/60 transition-all"
+            >
               <BarChart2 className="w-3.5 h-3.5" />
               {instruments.length}+ {s.heroPillCalc}
-            </span>
-            <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-violet-600/25 border border-violet-400/30 text-violet-200 text-xs font-medium">
+            </Link>
+            <Link
+              href={`/${lang}/quiz`}
+              className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-violet-600/25 border border-violet-400/30 text-violet-200 text-xs font-medium hover:bg-violet-600/40 hover:border-violet-400/60 transition-all"
+            >
               <Lightbulb className="w-3.5 h-3.5" />
               {s.heroPillQuiz}
-            </span>
-            <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-600/25 border border-emerald-400/30 text-emerald-200 text-xs font-medium">
+            </Link>
+            <Link
+              href={`/${lang}/coach/mia`}
+              className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-emerald-600/35 border border-emerald-400/50 text-emerald-200 text-xs font-medium hover:bg-emerald-600/55 hover:border-emerald-400/80 transition-all"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
               <MessageSquare className="w-3.5 h-3.5" />
               {s.heroPillCoach}
-            </span>
+            </Link>
           </div>
 
           {/* Search bar — Lucide Search icon */}
