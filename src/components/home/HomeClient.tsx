@@ -81,9 +81,20 @@ export function HomeClient({
             {s.heroTitle1}
             <span className="text-blue-400">{s.heroTitle2}</span>
           </h1>
-          <p className="text-slate-300 text-base mb-8">
-            {s.heroSources} <span className="text-slate-200">WHO · CFPB · NIST · ISO</span>
+          <p className="text-slate-300 text-sm mb-5 max-w-xl mx-auto">
+            {s.heroSubtitle(instruments.length)}
           </p>
+          <div className="flex flex-wrap gap-2 justify-center mb-8">
+            <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-600/25 border border-blue-400/30 text-blue-200 text-xs font-medium">
+              📊 {instruments.length}+ {s.heroPillCalc}
+            </span>
+            <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-violet-600/25 border border-violet-400/30 text-violet-200 text-xs font-medium">
+              🧠 {s.heroPillQuiz}
+            </span>
+            <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-600/25 border border-emerald-400/30 text-emerald-200 text-xs font-medium">
+              🤖 {s.heroPillCoach}
+            </span>
+          </div>
 
           {/* Search bar */}
           <div className="relative max-w-xl mx-auto mb-6">
