@@ -92,8 +92,8 @@ export function HomeClient({ instruments, lang }: { instruments: InstrumentMeta[
             {s.heroSubtitle(instruments.length)}
           </p>
 
-          {/* Feature pills — clickable links */}
-          <div className="flex flex-wrap gap-2 justify-center mb-8">
+          {/* Feature pills */}
+          <div className="flex flex-wrap gap-2 justify-center mb-6">
             <button
               onClick={() => gridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
               className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-blue-600/25 border border-blue-400/30 text-blue-200 text-xs font-medium hover:bg-blue-600/40 hover:border-blue-400/60 transition-all cursor-pointer"
@@ -108,13 +108,76 @@ export function HomeClient({ instruments, lang }: { instruments: InstrumentMeta[
               <Lightbulb className="w-3.5 h-3.5" />
               {s.heroPillQuiz}
             </Link>
+          </div>
+
+          {/* AI Coach Cards — premium feature */}
+          <div className="grid grid-cols-2 gap-3 max-w-xl mx-auto mb-8">
+            {/* Mia — Health Coach */}
             <Link
               href={`/${lang}/coach/mia`}
-              className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-emerald-600/35 border border-emerald-400/50 text-emerald-200 text-xs font-medium hover:bg-emerald-600/55 hover:border-emerald-400/80 transition-all"
+              className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-rose-400/40 transition-all duration-300"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-              <MessageSquare className="w-3.5 h-3.5" />
-              {s.heroPillCoach}
+              {/* Online badge */}
+              <div className="absolute top-3 left-3 flex items-center gap-1.5 z-10">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-emerald-300 text-[10px] font-semibold tracking-wide uppercase">{s.coachOnlineNow}</span>
+              </div>
+              <div className="absolute top-3 right-3 z-10">
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-white/10 text-white/70">{s.coachFreeSession}</span>
+              </div>
+
+              {/* Avatar area */}
+              <div className="flex justify-center pt-12 pb-4 bg-gradient-to-b from-rose-500/20 to-purple-600/20">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-rose-400 to-purple-600 flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-rose-500/30">
+                  M
+                </div>
+              </div>
+
+              {/* Info */}
+              <div className="flex flex-col items-center gap-1 px-3 py-3">
+                <p className="text-white font-bold text-sm">Mia</p>
+                <p className="text-rose-300 text-[11px] font-medium">{s.coachMiaRole}</p>
+                <p className="text-white/40 text-[10px] text-center leading-tight mt-1">{s.coachMiaSpec}</p>
+              </div>
+
+              {/* CTA */}
+              <div className="mx-3 mb-3 py-2 rounded-xl bg-gradient-to-r from-rose-500 to-purple-600 text-white text-xs font-bold text-center group-hover:opacity-90 transition-opacity">
+                {s.coachTalkTo('Mia')}
+              </div>
+            </Link>
+
+            {/* Alex — Finance Coach */}
+            <Link
+              href={`/${lang}/coach/alex`}
+              className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-blue-400/40 transition-all duration-300"
+            >
+              {/* Online badge */}
+              <div className="absolute top-3 left-3 flex items-center gap-1.5 z-10">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-emerald-300 text-[10px] font-semibold tracking-wide uppercase">{s.coachOnlineNow}</span>
+              </div>
+              <div className="absolute top-3 right-3 z-10">
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-white/10 text-white/70">{s.coachFreeSession}</span>
+              </div>
+
+              {/* Avatar area */}
+              <div className="flex justify-center pt-12 pb-4 bg-gradient-to-b from-blue-500/20 to-cyan-600/20">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-cyan-600 flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-blue-500/30">
+                  A
+                </div>
+              </div>
+
+              {/* Info */}
+              <div className="flex flex-col items-center gap-1 px-3 py-3">
+                <p className="text-white font-bold text-sm">Alex</p>
+                <p className="text-blue-300 text-[11px] font-medium">{s.coachAlexRole}</p>
+                <p className="text-white/40 text-[10px] text-center leading-tight mt-1">{s.coachAlexSpec}</p>
+              </div>
+
+              {/* CTA */}
+              <div className="mx-3 mb-3 py-2 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-600 text-white text-xs font-bold text-center group-hover:opacity-90 transition-opacity">
+                {s.coachTalkTo('Alex')}
+              </div>
             </Link>
           </div>
 
