@@ -1,63 +1,56 @@
 import type { IntentPhase, IntentState } from '@/lib/domain/intent-state'
 import type { ActivePlan } from '@/lib/domain/active-plan'
-import type { AssessmentResult } from '@/lib/assessment/types'
+import { getT } from '@/lib/i18n/ui'
 
 // ── Time-of-day greeting ───────────────────────────────────────────────────────
 
-export function greeting(): string {
+export function greeting(lang: string): string {
+  const t = getT(lang)
   const h = new Date().getHours()
-  if (h >= 6  && h < 12) return 'Good morning.'
-  if (h >= 12 && h < 17) return 'Good afternoon.'
-  if (h >= 17 && h < 22) return 'Good evening.'
-  return 'Good night.'
+  if (h >= 6  && h < 12) return t('dashboard.greeting.morning')
+  if (h >= 12 && h < 17) return t('dashboard.greeting.afternoon')
+  if (h >= 17 && h < 22) return t('dashboard.greeting.evening')
+  return t('dashboard.greeting.night')
 }
 
 // ── Hero sub-statement — phase-aware ─────────────────────────────────────────
 
-export function heroSubStatement(intent: IntentState): string {
+export function heroSubStatement(intent: IntentState, lang: string): string {
+  const t = getT(lang)
   const { currentPhase, activePlan, completedInstruments } = intent
   const count = completedInstruments.length
 
   if (currentPhase === 'habit' && activePlan) {
-    return `Goal achieved — ${activePlan.goal}. Ready for the next challenge.`
+    return t('dashboard.hero.habit', { goal: activePlan.goal })
   }
   if (currentPhase === 'execution' && activePlan) {
     const lastCheckIn = activePlan.check_ins[activePlan.check_ins.length - 1]
-    if (lastCheckIn?.on_track) return `You're on track. Week ${lastCheckIn.week} logged.`
-    if (lastCheckIn) return `Week ${lastCheckIn.week} logged. Your plan is adapting.`
-    return `Your plan is active. First check-in unlocks adaptive coaching.`
+    if (lastCheckIn?.on_track) return t('dashboard.hero.execution.ontrack', { week: String(lastCheckIn.week) })
+    if (lastCheckIn) return t('dashboard.hero.execution.adapting', { week: String(lastCheckIn.week) })
+    return t('dashboard.hero.execution.start')
   }
   if (currentPhase === 'planning') {
-    return `Your strategy is ready. Set your goal to start your personalized plan.`
+    return t('dashboard.hero.planning')
   }
   if (currentPhase === 'assessment') {
-    return `${count} data points collected. Your assessment is ready — 3 minutes.`
+    return t('dashboard.hero.assessment', { count: String(count) })
   }
-  if (count === 1) return `First step done. ${3 - count} more to unlock your assessment.`
-  if (count === 2) return `${count} metrics collected. One more to unlock your assessment.`
-  return `${count} metrics in your profile. Your journey is taking shape.`
+  if (count === 1) return t('dashboard.hero.discovery1', { remaining: String(3 - count) })
+  if (count === 2) return t('dashboard.hero.discovery2', { count: String(count) })
+  return t('dashboard.hero.discovery3', { count: String(count) })
 }
 
-// ── Next action label — per UX Bible CTA formula ──────────────────────────────
+// ── Next action label / why — per UX Bible CTA formula ───────────────────────
 
-export const PHASE_ACTION_LABEL: Record<IntentPhase, string> = {
-  discovery:  'Continue My Journey',
-  assessment: 'Start My Assessment',
-  planning:   'Build My Plan',
-  execution:  'Log My Check-In',
-  habit:      'Start My Next Goal',
+export function getPhaseActionLabel(phase: IntentPhase, lang: string): string {
+  return getT(lang)(`dashboard.action.${phase}`)
 }
 
-export const PHASE_ACTION_WHY: Record<IntentPhase, string> = {
-  discovery:  'Your data is ready — personalization takes 3 minutes.',
-  assessment: "Your data is ready. Don't let it sit unused.",
-  planning:   'Your strategy is waiting. Setting your goal takes 1 minute.',
-  execution:  'Week checkpoint reached. Log your progress to keep the plan adapting.',
-  habit:      'Your journey is complete. The next challenge is ready.',
+export function getPhaseActionWhy(phase: IntentPhase, lang: string): string {
+  return getT(lang)(`dashboard.why.${phase}`)
 }
 
 // ── Coach insight — derived from data, no LLM ─────────────────────────────────
-// Per UX Bible Part VII — Trust Mechanics: always from user's own data
 
 export interface CoachInsight {
   readonly title: string
@@ -65,61 +58,58 @@ export interface CoachInsight {
   readonly type: 'success' | 'focus' | 'info'
 }
 
-export function buildCoachInsight(intent: IntentState): CoachInsight | null {
+export function buildCoachInsight(intent: IntentState, lang: string = 'en'): CoachInsight | null {
+  const t = getT(lang)
   const { currentPhase, latestAssessment, activePlan, completedInstruments } = intent
   const count = completedInstruments.length
 
-  // Execution — check-in based insight
   if (currentPhase === 'execution' && activePlan && activePlan.check_ins.length > 0) {
     const last = activePlan.check_ins[activePlan.check_ins.length - 1]
     if (last.on_track) {
       return {
-        title: 'You\'re ahead of schedule.',
-        body: `Week ${last.week} results show you're progressing faster than your plan expected. Keep the pace.`,
-        type: 'success',
+        title: t('dashboard.insight.ahead_title'),
+        body:  t('dashboard.insight.ahead_body', { week: String(last.week) }),
+        type:  'success',
       }
     }
     return {
-      title: 'Small adjustment recommended.',
-      body: `Your last check-in shows a ${Math.round(Math.abs(last.deviation_percent))}% gap from your milestone. Your plan will adapt — stay consistent.`,
-      type: 'focus',
+      title: t('dashboard.insight.adjust_title'),
+      body:  t('dashboard.insight.adjust_body', { pct: String(Math.round(Math.abs(last.deviation_percent))) }),
+      type:  'focus',
     }
   }
 
-  // Assessment insights — use top priority insight if available
   if (latestAssessment && latestAssessment.insights.length > 0) {
     const top = latestAssessment.insights[0]
     return {
       title: top.title,
-      body: top.body,
-      type: top.type === 'warning' ? 'focus' : 'info',
+      body:  top.body,
+      type:  top.type === 'warning' ? 'focus' : 'info',
     }
   }
 
-  // Assessment score
   if (latestAssessment) {
     const score = latestAssessment.overall_score
     const dimLowest = [...latestAssessment.dimension_scores].sort((a, b) => a.score - b.score)[0]
     if (dimLowest) {
       return {
-        title: `${score}/100 — biggest opportunity: ${dimLowest.label}`,
-        body: `Your assessment reveals the highest-impact area to address first. Your plan will prioritize this.`,
-        type: score >= 60 ? 'success' : 'focus',
+        title: t('dashboard.insight.score_title', { score: String(score), dim: dimLowest.label }),
+        body:  t('dashboard.insight.score_body'),
+        type:  score >= 60 ? 'success' : 'focus',
       }
     }
     return {
-      title: `Assessment score: ${score}/100`,
-      body: `Your profile is complete. Your strategy is built around this specific score.`,
-      type: score >= 60 ? 'success' : 'focus',
+      title: t('dashboard.insight.score_simple_title', { score: String(score) }),
+      body:  t('dashboard.insight.score_simple_body'),
+      type:  score >= 60 ? 'success' : 'focus',
     }
   }
 
-  // Discovery — sunk cost + next unlock
   if (count >= 2) {
     return {
-      title: `${count} steps completed — you've already done the hard part.`,
-      body: `One more data point unlocks your personalized assessment — built entirely around your specific metrics.`,
-      type: 'info',
+      title: t('dashboard.insight.steps_title', { count: String(count) }),
+      body:  t('dashboard.insight.steps_body'),
+      type:  'info',
     }
   }
 

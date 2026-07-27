@@ -2,10 +2,8 @@ import type { IntentPhase } from '@/lib/domain/intent-state'
 import type { IntentCluster } from '@/lib/assessment/types'
 import { ASSESSMENT_SLUGS }  from '@/lib/domain/intent-state'
 import { CLUSTER_ASSESSMENT_NAME, TIME_ESTIMATE } from '@/components/journey/journey-copy'
-import { PHASE_ACTION_LABEL, PHASE_ACTION_WHY }   from './dashboard-copy'
-
-// Per UX Bible Part III — Single Next Step Principle:
-// The most important element on the dashboard. ONE action, always.
+import { getPhaseActionLabel, getPhaseActionWhy } from './dashboard-copy'
+import { getT } from '@/lib/i18n/ui'
 
 interface Props {
   readonly phase: IntentPhase
@@ -33,29 +31,30 @@ function resolveStepName(
   cluster: IntentCluster,
   slug: string | null,
   name: string | null,
+  lang: string,
 ): string {
+  const t = getT(lang)
   if (phase === 'assessment') return CLUSTER_ASSESSMENT_NAME[cluster]
-  if (phase === 'planning')   return 'Set Your Goal'
+  if (phase === 'planning')   return t('dashboard.set_goal')
   if (!slug) return CLUSTER_ASSESSMENT_NAME[cluster]
   return name ?? slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 }
 
 export function DashboardNextAction({ phase, cluster, lang, nextSlug, nextName }: Props) {
+  const t        = getT(lang)
   const href     = resolveHref(phase, cluster, nextSlug, lang)
-  const stepName = resolveStepName(phase, cluster, nextSlug, nextName)
+  const stepName = resolveStepName(phase, cluster, nextSlug, nextName, lang)
   const time     = TIME_ESTIMATE[nextSlug ?? ''] ?? TIME_ESTIMATE[`${cluster}-assessment`] ?? '3 min'
-  const ctaLabel = PHASE_ACTION_LABEL[phase]
-  const whyNow   = PHASE_ACTION_WHY[phase]
+  const ctaLabel = getPhaseActionLabel(phase, lang)
+  const whyNow   = getPhaseActionWhy(phase, lang)
 
   return (
     <div className="rounded-2xl bg-blue-600 text-white p-5 space-y-4">
 
-      {/* Label */}
       <p className="text-[10px] font-semibold uppercase tracking-widest text-blue-200">
-        Today's Action
+        {t('dashboard.today_action')}
       </p>
 
-      {/* Step name + time */}
       <div className="flex items-start justify-between gap-3">
         <p className="text-xl font-bold leading-snug">
           {stepName}
@@ -65,12 +64,10 @@ export function DashboardNextAction({ phase, cluster, lang, nextSlug, nextName }
         </span>
       </div>
 
-      {/* Why now */}
       <p className="text-[11px] text-blue-100 leading-relaxed">
         {whyNow}
       </p>
 
-      {/* CTA */}
       <a
         href={href}
         className="group flex items-center justify-center gap-2 w-full

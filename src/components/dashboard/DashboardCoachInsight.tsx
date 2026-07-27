@@ -1,8 +1,5 @@
 import type { CoachInsight } from './dashboard-copy'
-
-// Per UX Bible Part VII — Trust Mechanics:
-// "Why This?" — every recommendation from the user's own data.
-// AI Coach MVP: runtime data explained in human language, no LLM.
+import { getT } from '@/lib/i18n/ui'
 
 const STYLE: Record<CoachInsight['type'], { border: string; bg: string; icon: string; iconColor: string }> = {
   success: {
@@ -27,9 +24,11 @@ const STYLE: Record<CoachInsight['type'], { border: string; bg: string; icon: st
 
 interface Props {
   readonly insight: CoachInsight
+  readonly lang: string
 }
 
-export function DashboardCoachInsight({ insight }: Props) {
+export function DashboardCoachInsight({ insight, lang }: Props) {
+  const t = getT(lang)
   const s = STYLE[insight.type]
 
   return (
@@ -40,7 +39,7 @@ export function DashboardCoachInsight({ insight }: Props) {
         </span>
         <div className="space-y-1.5 min-w-0">
           <p className="text-[10px] font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
-            Coach Insight
+            {t('dashboard.insight.label')}
           </p>
           <p className="text-sm font-bold text-slate-900 dark:text-white leading-snug">
             {insight.title}

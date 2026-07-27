@@ -15,17 +15,15 @@ export function DashboardHero({ intent, lang }: Props) {
 
   return (
     <div className="space-y-4">
-      {/* Greeting */}
       <div className="space-y-1">
         <h1 className="text-[26px] font-bold text-slate-900 dark:text-white leading-tight">
-          {greeting()}
+          {greeting(lang)}
         </h1>
         <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-          {heroSubStatement(intent)}
+          {heroSubStatement(intent, lang)}
         </p>
       </div>
 
-      {/* Phase badge + step count */}
       <JourneyBadge
         phase={currentPhase}
         label={copy.phaseLabel[currentPhase]}

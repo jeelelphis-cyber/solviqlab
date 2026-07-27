@@ -1,12 +1,10 @@
 import type { ResultRecord } from '@/lib/user/types'
-
-// Shows the last N completed instruments.
-// Per UX Bible Part III — Sunk Cost Advantage:
-// "Always remind the user of what they've already invested."
+import { getT } from '@/lib/i18n/ui'
 
 interface Props {
   readonly instruments: readonly ResultRecord[]
   readonly limit?: number
+  readonly lang: string
 }
 
 function formatValue(record: ResultRecord): string | null {
@@ -15,17 +13,19 @@ function formatValue(record: ResultRecord): string | null {
   return record.unit ? `${val} ${record.unit}` : val
 }
 
-function formatDate(iso: string): string {
+function formatDate(iso: string, lang: string): string {
+  const t = getT(lang)
   const d = new Date(iso)
   const now = new Date()
   const diffDays = Math.floor((now.getTime() - d.getTime()) / (1000 * 60 * 60 * 24))
-  if (diffDays === 0) return 'Today'
-  if (diffDays === 1) return 'Yesterday'
-  if (diffDays < 7)  return `${diffDays} days ago`
-  return d.toLocaleDateString('en', { month: 'short', day: 'numeric' })
+  if (diffDays === 0) return t('dashboard.achievements.today')
+  if (diffDays === 1) return t('dashboard.achievements.yesterday')
+  if (diffDays < 7)  return t('dashboard.achievements.days_ago', { n: String(diffDays) })
+  return d.toLocaleDateString(lang, { month: 'short', day: 'numeric' })
 }
 
-export function DashboardAchievements({ instruments, limit = 5 }: Props) {
+export function DashboardAchievements({ instruments, limit = 5, lang }: Props) {
+  const t = getT(lang)
   const recent = [...instruments].reverse().slice(0, limit)
 
   if (recent.length === 0) return null
@@ -35,7 +35,7 @@ export function DashboardAchievements({ instruments, limit = 5 }: Props) {
 
       <div className="px-5 py-3 border-b border-slate-100 dark:border-slate-800">
         <p className="text-[10px] font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
-          What You've Done
+          {t('dashboard.achievements.title')}
         </p>
       </div>
 
@@ -61,7 +61,7 @@ export function DashboardAchievements({ instruments, limit = 5 }: Props) {
               </div>
             </div>
             <span className="shrink-0 text-[11px] text-slate-400 dark:text-slate-500">
-              {formatDate(record.completed_at)}
+              {formatDate(record.completed_at, lang)}
             </span>
           </li>
         ))}
