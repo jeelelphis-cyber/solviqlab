@@ -250,5 +250,13 @@
   "alex.block.role": "Alex · Twój coach finansowy",
   "alex.block.message": "Przejrzałem Twoje liczby. Pozwól, że stworzę plan finansowy dla Ciebie.",
   "alex.block.cta": "Pobierz plan Alexa →",
-  "alex.block.free": "Bezpłatnie · Bez rejestracji"
+  "alex.block.free": "Bezpłatnie · Bez rejestracji",
+  "favorite.save": "Zapisz",
+  "favorite.saved": "Zapisano",
+  "favorite.add": "Dodaj do ulubionych",
+  "favorite.remove": "Usuń z ulubionych",
+  "favorite.added": "Dodano do ulubionych!",
+  "coach.priority.high": "Wysoki",
+  "coach.priority.medium": "Średni",
+  "coach.priority.low": "Niski"
 }

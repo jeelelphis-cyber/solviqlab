@@ -68,15 +68,19 @@ async function generatePlan(
 
 // ── Priority badge ────────────────────────────────────────────────────────────
 
-function PriorityBadge({ priority }: { priority: string }) {
+function PriorityBadge({ priority, lang }: { priority: string; lang: string }) {
+  const t = getT(lang)
   const colors = {
     high: 'bg-rose-500/20 text-rose-400 border-rose-500/30',
     medium: 'bg-amber-500/20 text-amber-400 border-amber-500/30',
     low: 'bg-slate-700 text-slate-400 border-slate-600',
   }
+  const label = priority === 'high' ? t('coach.priority.high')
+    : priority === 'medium' ? t('coach.priority.medium')
+    : t('coach.priority.low')
   return (
     <span className={`text-xs px-2 py-0.5 rounded-full border font-medium ${colors[priority as keyof typeof colors] ?? colors.low}`}>
-      {priority}
+      {label}
     </span>
   )
 }
@@ -200,7 +204,7 @@ export function CoachPlanClient({ lang, personaId }: { lang: string; personaId: 
                           <p className={`font-semibold text-sm ${isLocked ? 'text-slate-500' : 'text-white'}`}>
                             {isLocked ? '••••••••••' : item.title}
                           </p>
-                          {!isLocked && <PriorityBadge priority={item.priority} />}
+                          {!isLocked && <PriorityBadge priority={item.priority} lang={lang} />}
                         </div>
                         <p className={`text-sm leading-relaxed ${isLocked ? 'text-slate-600' : 'text-slate-300'}`}>
                           {isLocked ? t('coach.plan.locked') : item.description}

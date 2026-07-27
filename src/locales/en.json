@@ -250,5 +250,13 @@
   "alex.block.role": "Alex · Your Finance Coach",
   "alex.block.message": "I reviewed your numbers. Let me build a financial action plan for you.",
   "alex.block.cta": "Get Alex's financial plan →",
-  "alex.block.free": "Free · No account needed"
+  "alex.block.free": "Free · No account needed",
+  "favorite.save": "Save",
+  "favorite.saved": "Saved",
+  "favorite.add": "Add to favorites",
+  "favorite.remove": "Remove from favorites",
+  "favorite.added": "Added to favorites!",
+  "coach.priority.high": "High",
+  "coach.priority.medium": "Medium",
+  "coach.priority.low": "Low"
 }

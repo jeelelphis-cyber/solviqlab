@@ -250,5 +250,13 @@
   "alex.block.role": "Alex · Uw financiële coach",
   "alex.block.message": "Ik heb uw cijfers bekeken. Laat me een financieel plan voor u maken.",
   "alex.block.cta": "Alex's financieel plan →",
-  "alex.block.free": "Gratis · Geen account nodig"
+  "alex.block.free": "Gratis · Geen account nodig",
+  "favorite.save": "Opslaan",
+  "favorite.saved": "Opgeslagen",
+  "favorite.add": "Toevoegen aan favorieten",
+  "favorite.remove": "Verwijderen uit favorieten",
+  "favorite.added": "Toegevoegd aan favorieten!",
+  "coach.priority.high": "Hoog",
+  "coach.priority.medium": "Gemiddeld",
+  "coach.priority.low": "Laag"
 }

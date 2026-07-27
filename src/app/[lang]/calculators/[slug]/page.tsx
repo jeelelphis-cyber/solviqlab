@@ -339,7 +339,7 @@ export default function InstrumentPage({ params }: PageProps) {
             </p>
           )}
           <div className="mt-4">
-            <FavoriteButton slug={slug} name={pageTitle.split(' — ')[0]!} cluster={instrument.category} />
+            <FavoriteButton slug={slug} name={pageTitle.split(' — ')[0]!} cluster={instrument.category} lang={lang} />
           </div>
         </div>
 

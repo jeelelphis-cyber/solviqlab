@@ -250,5 +250,13 @@
   "alex.block.role": "Alex · Ваш фінансовий тренер",
   "alex.block.message": "Я переглянув ваші цифри. Дозвольте скласти фінансовий план для вас.",
   "alex.block.cta": "Отримати план Alex →",
-  "alex.block.free": "Безкоштовно · Без реєстрації"
+  "alex.block.free": "Безкоштовно · Без реєстрації",
+  "favorite.save": "Зберегти",
+  "favorite.saved": "Збережено",
+  "favorite.add": "Додати до обраного",
+  "favorite.remove": "Видалити з обраного",
+  "favorite.added": "Додано до обраного!",
+  "coach.priority.high": "Високий",
+  "coach.priority.medium": "Середній",
+  "coach.priority.low": "Низький"
 }

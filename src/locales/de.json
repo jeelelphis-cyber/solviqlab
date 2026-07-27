@@ -250,5 +250,13 @@
   "alex.block.role": "Alex · Ihr Finanz-Coach",
   "alex.block.message": "Ich habe Ihre Zahlen überprüft. Lassen Sie mich einen Finanzplan für Sie erstellen.",
   "alex.block.cta": "Alexs Finanzplan holen →",
-  "alex.block.free": "Kostenlos · Ohne Registrierung"
+  "alex.block.free": "Kostenlos · Ohne Registrierung",
+  "favorite.save": "Speichern",
+  "favorite.saved": "Gespeichert",
+  "favorite.add": "Zu Favoriten hinzufügen",
+  "favorite.remove": "Aus Favoriten entfernen",
+  "favorite.added": "Zu Favoriten hinzugefügt!",
+  "coach.priority.high": "Hoch",
+  "coach.priority.medium": "Mittel",
+  "coach.priority.low": "Niedrig"
 }
