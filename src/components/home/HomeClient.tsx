@@ -117,32 +117,35 @@ export function HomeClient({ instruments, lang }: { instruments: InstrumentMeta[
               href={`/${lang}/coach/mia`}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-rose-400/40 transition-all duration-300"
             >
-              {/* Online badge */}
-              <div className="absolute top-3 left-3 flex items-center gap-1.5 z-10">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-emerald-300 text-[10px] font-semibold tracking-wide uppercase">{s.coachOnlineNow}</span>
-              </div>
-              <div className="absolute top-3 right-3 z-10">
-                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-white/10 text-white/70">{s.coachFreeSession}</span>
-              </div>
-
-              {/* Avatar area */}
-              <div className="flex justify-center pt-12 pb-4 bg-gradient-to-b from-rose-500/20 to-purple-600/20">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-rose-400 to-purple-600 flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-rose-500/30">
-                  M
+              {/* Square photo area */}
+              <div className="relative w-full aspect-square bg-gradient-to-br from-rose-500/30 to-purple-700/30 overflow-hidden">
+                {/* Online badge */}
+                <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5 z-10 bg-black/40 backdrop-blur-sm px-2 py-1 rounded-full">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-emerald-300 text-[10px] font-semibold tracking-wide uppercase">{s.coachOnlineNow}</span>
                 </div>
+                <div className="absolute top-2.5 right-2.5 z-10">
+                  <span className="text-[10px] font-semibold px-2 py-1 rounded-full bg-black/40 backdrop-blur-sm text-white/80">{s.coachFreeSession}</span>
+                </div>
+                {/* Photo */}
+                <img
+                  src="https://api.dicebear.com/9.x/lorelei/svg?seed=MiaHealthCoach&backgroundColor=f43f5e,a855f7&backgroundType=gradientLinear&scale=110"
+                  alt="Mia"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
 
-              {/* Info */}
-              <div className="flex flex-col items-center gap-1 px-3 py-3">
+              {/* Info + CTA */}
+              <div className="flex flex-col flex-1 px-3 pt-2.5 pb-3 gap-1">
                 <p className="text-white font-bold text-sm">Mia</p>
                 <p className="text-rose-300 text-[11px] font-medium">{s.coachMiaRole}</p>
-                <p className="text-white/40 text-[10px] text-center leading-tight mt-1">{s.coachMiaSpec}</p>
-              </div>
-
-              {/* CTA */}
-              <div className="mx-3 mb-3 py-2 rounded-xl bg-gradient-to-r from-rose-500 to-purple-600 text-white text-xs font-bold text-center group-hover:opacity-90 transition-opacity">
-                {s.coachTalkTo('Mia')}
+                <p className="text-white/40 text-[10px] leading-tight">{s.coachMiaSpec}</p>
+                <div className="mt-auto pt-2">
+                  <div className="w-full py-2 rounded-xl bg-gradient-to-r from-rose-500 to-purple-600 text-white text-xs font-bold text-center group-hover:opacity-90 transition-opacity">
+                    {s.coachTalkTo('Mia')}
+                  </div>
+                </div>
               </div>
             </Link>
 
@@ -151,32 +154,35 @@ export function HomeClient({ instruments, lang }: { instruments: InstrumentMeta[
               href={`/${lang}/coach/alex`}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-blue-400/40 transition-all duration-300"
             >
-              {/* Online badge */}
-              <div className="absolute top-3 left-3 flex items-center gap-1.5 z-10">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-emerald-300 text-[10px] font-semibold tracking-wide uppercase">{s.coachOnlineNow}</span>
-              </div>
-              <div className="absolute top-3 right-3 z-10">
-                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-white/10 text-white/70">{s.coachFreeSession}</span>
-              </div>
-
-              {/* Avatar area */}
-              <div className="flex justify-center pt-12 pb-4 bg-gradient-to-b from-blue-500/20 to-cyan-600/20">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-cyan-600 flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-blue-500/30">
-                  A
+              {/* Square photo area */}
+              <div className="relative w-full aspect-square bg-gradient-to-br from-blue-500/30 to-cyan-700/30 overflow-hidden">
+                {/* Online badge */}
+                <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5 z-10 bg-black/40 backdrop-blur-sm px-2 py-1 rounded-full">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-emerald-300 text-[10px] font-semibold tracking-wide uppercase">{s.coachOnlineNow}</span>
                 </div>
+                <div className="absolute top-2.5 right-2.5 z-10">
+                  <span className="text-[10px] font-semibold px-2 py-1 rounded-full bg-black/40 backdrop-blur-sm text-white/80">{s.coachFreeSession}</span>
+                </div>
+                {/* Photo */}
+                <img
+                  src="https://api.dicebear.com/9.x/lorelei/svg?seed=AlexFinanceCoach&backgroundColor=3b82f6,06b6d4&backgroundType=gradientLinear&scale=110"
+                  alt="Alex"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
 
-              {/* Info */}
-              <div className="flex flex-col items-center gap-1 px-3 py-3">
+              {/* Info + CTA */}
+              <div className="flex flex-col flex-1 px-3 pt-2.5 pb-3 gap-1">
                 <p className="text-white font-bold text-sm">Alex</p>
                 <p className="text-blue-300 text-[11px] font-medium">{s.coachAlexRole}</p>
-                <p className="text-white/40 text-[10px] text-center leading-tight mt-1">{s.coachAlexSpec}</p>
-              </div>
-
-              {/* CTA */}
-              <div className="mx-3 mb-3 py-2 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-600 text-white text-xs font-bold text-center group-hover:opacity-90 transition-opacity">
-                {s.coachTalkTo('Alex')}
+                <p className="text-white/40 text-[10px] leading-tight">{s.coachAlexSpec}</p>
+                <div className="mt-auto pt-2">
+                  <div className="w-full py-2 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-600 text-white text-xs font-bold text-center group-hover:opacity-90 transition-opacity">
+                    {s.coachTalkTo('Alex')}
+                  </div>
+                </div>
               </div>
             </Link>
           </div>
