@@ -2,12 +2,18 @@
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useState, useEffect, useRef } from 'react'
-import { getEngine } from '@/lib/user'
-import type { SolviqUser } from '@/lib/user'
+import { Heart, TrendingUp, Calculator, ArrowLeftRight, type LucideIcon } from 'lucide-react'
+import { useSession, signIn, signOut } from 'next-auth/react'
 import { getNavCategories } from '../../lib/navigation'
 import type { NavCategory } from '../../lib/navigation'
-import { getJourneyStrings } from '@/lib/journey/strings'
 import { t } from '@/lib/ui-strings'
+
+const NAV_ICONS: Record<string, LucideIcon> = {
+  health:     Heart,
+  finance:    TrendingUp,
+  math:       Calculator,
+  conversion: ArrowLeftRight,
+}
 
 // ── All supported languages (single source of truth) ─────────────────────────
 export const LANGUAGES = [
@@ -162,7 +168,7 @@ function MegaMenu({ category, lang, onClose, slugToName }: { category: NavCatego
   return (
     <div className="absolute top-full left-0 mt-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-2xl p-6 min-w-[320px] z-50 max-h-[80vh] overflow-y-auto">
       <div className="flex items-center gap-2 mb-4 pb-3 border-b border-slate-100 dark:border-slate-800">
-        <span className="text-xl">{category.icon}</span>
+        {(() => { const Icon = NAV_ICONS[category.id]; return Icon ? <Icon className="w-4 h-4 text-slate-500 dark:text-slate-400" /> : null })()}
         <span className="font-bold text-slate-900 dark:text-white">{category.label}</span>
       </div>
       <div className="space-y-5">
@@ -224,7 +230,7 @@ function NavCategoryBtn({ category, lang, slugToName }: { category: NavCategory;
         aria-expanded={open}
         aria-haspopup="true"
       >
-        <span>{category.icon}</span>
+        {(() => { const Icon = NAV_ICONS[category.id]; return Icon ? <Icon className="w-3.5 h-3.5" /> : null })()}
         {category.label}
         <span className={`text-xs transition-transform ${open ? 'rotate-180' : ''}`}>▾</span>
       </button>
@@ -256,7 +262,7 @@ function MobileMenu({ lang, onClose, slugToName }: { lang: string; onClose: () =
             onClick={() => setOpenCat(o => o === cat.id ? null : cat.id)}
             className="w-full flex items-center justify-between px-4 py-3 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800"
           >
-            <span className="flex items-center gap-2"><span>{cat.icon}</span>{cat.label}</span>
+            <span className="flex items-center gap-2">{(() => { const Icon = NAV_ICONS[cat.id]; return Icon ? <Icon className="w-3.5 h-3.5" /> : null })()}{cat.label}</span>
             <span className={`text-xs transition-transform ${openCat === cat.id ? 'rotate-180' : ''}`}>▾</span>
           </button>
           {openCat === cat.id && (
@@ -295,20 +301,10 @@ function MobileMenu({ lang, onClose, slugToName }: { lang: string; onClose: () =
 // ── User Menu ─────────────────────────────────────────────────────────────────
 
 function UserMenu({ lang }: { lang: string }) {
-  const s = getJourneyStrings(lang)
   const ui = t(lang)
-  const [user, setUser]     = useState<SolviqUser | null>(null)
-  const [open, setOpen]     = useState(false)
-  const [ready, setReady]   = useState(false)
+  const { data: session, status } = useSession()
+  const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const engine = getEngine()
-    if (!engine) { setReady(true); return }
-    const u = engine.getUser()
-    setUser(u)
-    setReady(true)
-  }, [])
 
   useEffect(() => {
     function handler(e: MouseEvent) {
@@ -318,54 +314,47 @@ function UserMenu({ lang }: { lang: string }) {
     return () => document.removeEventListener('mousedown', handler)
   }, [])
 
-  function handleSignOut() {
-    const engine = getEngine()
-    engine?.clearUser()
-    setUser(null)
-    setOpen(false)
-  }
+  if (status === 'loading') return null
 
-  if (!ready) return null
-
-  // Anonymous user — link to account cabinet
-  if (!user || user.type === 'anonymous') {
+  // Not signed in — show Sign In button
+  if (!session) {
     return (
-      <Link
-        href={`/${lang}/account`}
+      <button
+        onClick={() => signIn('google', { callbackUrl: `/${lang}/dashboard` })}
         className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-600 dark:text-slate-300 hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
       >
         <span>👤</span>
         <span>{ui.navMyAccount}</span>
-      </Link>
+      </button>
     )
   }
 
-  // Authenticated user — avatar + dropdown
-  const initial = ((user as { display_name?: string | null }).display_name?.[0] ?? user.email?.[0] ?? '?').toUpperCase()
+  // Signed in — avatar + dropdown
+  const name  = session.user?.name ?? 'User'
+  const email = session.user?.email ?? ''
+  const image = session.user?.image
 
   return (
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(o => !o)}
         aria-label="User menu"
-        className={`flex items-center justify-center w-9 h-9 rounded-full text-sm font-bold transition-colors ${
-          open
-            ? 'bg-blue-600 text-white'
-            : 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800'
-        }`}
+        className="flex items-center justify-center w-9 h-9 rounded-full overflow-hidden border-2 border-transparent hover:border-blue-400 transition-colors"
       >
-        {initial}
+        {image ? (
+          <img src={image} alt={name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+        ) : (
+          <span className="w-full h-full flex items-center justify-center bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-sm font-bold">
+            {name[0]?.toUpperCase() ?? '?'}
+          </span>
+        )}
       </button>
 
       {open && (
-        <div className="absolute top-full right-0 mt-2 w-52 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-xl z-50 overflow-hidden py-1">
+        <div className="absolute top-full right-0 mt-2 w-56 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-xl z-50 overflow-hidden py-1">
           <div className="px-4 py-3 border-b border-slate-100 dark:border-slate-800">
-            <p className="text-xs font-semibold text-slate-900 dark:text-white truncate">
-              {(user as { display_name?: string | null }).display_name ?? ui.navMyAccount}
-            </p>
-            <p className="text-xs text-slate-400 truncate">
-              {(user as { email?: string }).email ?? ''}
-            </p>
+            <p className="text-xs font-semibold text-slate-900 dark:text-white truncate">{name}</p>
+            <p className="text-xs text-slate-400 truncate">{email}</p>
           </div>
 
           <Link
@@ -376,16 +365,16 @@ function UserMenu({ lang }: { lang: string }) {
             <span>📊</span> Dashboard
           </Link>
           <Link
-            href={`/${lang}/calculators/bmi-calculator`}
+            href={`/${lang}/account`}
             onClick={() => setOpen(false)}
             className="flex items-center gap-2.5 w-full px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
           >
-            <span>🧮</span> Calculators
+            <span>🧮</span> {ui.navMyAccount}
           </Link>
 
           <div className="border-t border-slate-100 dark:border-slate-800 my-1" />
           <button
-            onClick={handleSignOut}
+            onClick={() => { setOpen(false); signOut({ callbackUrl: `/${lang}` }) }}
             className="flex items-center gap-2.5 w-full px-4 py-2.5 text-sm text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
           >
             <span>↩</span> Sign Out

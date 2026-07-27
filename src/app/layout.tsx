@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { AnalyticsScripts } from '../components/analytics/AnalyticsScripts'
+import { SessionProvider } from '@/components/auth/SessionProvider'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -52,7 +53,7 @@ export default function RootLayout({
         <AnalyticsScripts />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
-        {children}
+        <SessionProvider>{children}</SessionProvider>
       </body>
     </html>
   )
