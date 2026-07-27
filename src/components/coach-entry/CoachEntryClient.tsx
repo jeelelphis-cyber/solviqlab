@@ -240,6 +240,18 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
   const [step, setStep] = useState(0)
   const [animating, setAnimating] = useState(false)
   const [name, setName] = useState('')
+  const [hasResults, setHasResults] = useState(false)
+
+  useEffect(() => {
+    try {
+      const keys = Object.keys(localStorage).filter(k => k.startsWith('graph:'))
+      if (keys.length) {
+        const graph = JSON.parse(localStorage.getItem(keys[0]) ?? '{}')
+        const assessments: unknown[] = graph?.assessments?.items ?? []
+        setHasResults(assessments.length > 0)
+      }
+    } catch { /* ignore */ }
+  }, [])
 
   const STEPS = persona.steps.map(s => ({
     question: t(s.questionKey),
@@ -297,7 +309,7 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
               <Avatar gradient={persona.avatarGradient} letter={persona.avatarLetter} size={48} />
               <div>
                 <p className="text-white font-semibold">{persona.name}</p>
-                <p className="text-slate-400 text-xs">{t(`${pid}.step.reviewed`)}</p>
+                <p className="text-slate-400 text-xs">{hasResults ? t(`${pid}.step.reviewed`) : t(`${pid}.header.subtitle`)}</p>
               </div>
             </div>
             <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5">
