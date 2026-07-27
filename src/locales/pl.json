@@ -258,5 +258,7 @@
   "favorite.added": "Dodano do ulubionych!",
   "coach.priority.high": "Wysoki",
   "coach.priority.medium": "Średni",
-  "coach.priority.low": "Niski"
+  "coach.priority.low": "Niski",
+  "mia.chat.opening_data": "Cześć {{name}}. Widzę, że już skorzystałeś/aś z niektórych naszych narzędzi — {{data}}. To prawdziwe dane o Tobie. Pracujmy z nimi. Co było ostatnio najtrudniejsze?",
+  "alex.chat.opening_data": "Cześć {{name}}. Już obliczyłeś/aś kilka ważnych rzeczy — {{data}}. To dobry punkt wyjścia. Co teraz najbardziej Cię martwi finansowo?"
 }

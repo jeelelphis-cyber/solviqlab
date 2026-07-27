@@ -13,6 +13,10 @@ export const MIA_PERSONA: CoachPersonaConfig = {
   avatarLetter: 'M',
   accentColor: 'rose',
   clusters: ['weight', 'sleep', 'pregnancy'],
+  relevantSlugs: [
+    'bmi-calculator', 'bmr-calculator', 'tdee-calculator', 'calorie-calculator',
+    'body-fat-calculator', 'sleep-calculator', 'calorie-deficit-calculator', 'ideal-weight-calculator',
+  ],
   steps: [
     { questionKey: 'mia.step1.question', contextKey: 'mia.step1.context', yesKey: 'mia.step1.yes' },
     { questionKey: 'mia.step2.question', contextKey: 'mia.step2.context', yesKey: 'mia.step2.yes' },

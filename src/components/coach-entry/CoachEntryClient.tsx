@@ -5,6 +5,7 @@ import { getT } from '@/lib/i18n/ui'
 import { PERSONAS } from '@/lib/coach-personas'
 import type { PersonaId } from '@/lib/coach-personas'
 import type { CoachPersonaConfig } from '@/lib/coach-personas/types'
+import { buildPersonalizedOpening } from '@/lib/coach/coach-utils'
 
 // ── Graph context ─────────────────────────────────────────────────────────────
 
@@ -55,7 +56,7 @@ function ChatStage({ name, lang, persona }: { name: string; lang: string; person
   const t = getT(lang)
   const [input, setInput] = useState('')
   const [messages, setMessages] = useState<Message[]>([
-    { from: 'coach', text: t(persona.openingKey, { name }) },
+    { from: 'coach', text: buildPersonalizedOpening(name, lang, persona, t) },
   ])
   const [loading, setLoading] = useState(false)
   const [userTurns, setUserTurns] = useState(0)

@@ -258,5 +258,7 @@
   "favorite.added": "Added to favorites!",
   "coach.priority.high": "High",
   "coach.priority.medium": "Medium",
-  "coach.priority.low": "Low"
+  "coach.priority.low": "Low",
+  "mia.chat.opening_data": "Hi {{name}}. I can see you've already used some of our health tools — {{data}}. That's real data about you. Let's work with it. What's been the hardest part lately?",
+  "alex.chat.opening_data": "Hi {{name}}. I can see you've already run some numbers — {{data}}. That gives us a real starting point. What's your biggest financial concern right now?"
 }

@@ -258,5 +258,7 @@
   "favorite.added": "Ajouté aux favoris!",
   "coach.priority.high": "Élevé",
   "coach.priority.medium": "Moyen",
-  "coach.priority.low": "Faible"
+  "coach.priority.low": "Faible",
+  "mia.chat.opening_data": "Bonjour {{name}}. Je vois que vous avez déjà utilisé certains de nos outils — {{data}}. Ce sont des données réelles sur vous. Travaillons avec elles. Qu'est-ce qui a été le plus difficile dernièrement?",
+  "alex.chat.opening_data": "Bonjour {{name}}. Vous avez déjà fait quelques calculs — {{data}}. C'est un bon point de départ. Quelle est votre principale préoccupation financière en ce moment?"
 }

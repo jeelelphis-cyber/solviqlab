@@ -6,6 +6,7 @@ export interface CoachPersonaConfig {
   avatarLetter: string
   accentColor: string           // Tailwind color name e.g. 'blue', 'rose'
   clusters: string[]            // which result clusters trigger this coach
+  relevantSlugs: string[]       // calculator slugs whose facts this coach highlights
   steps: Array<{
     questionKey: string
     contextKey: string

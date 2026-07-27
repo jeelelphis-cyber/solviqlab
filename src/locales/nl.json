@@ -258,5 +258,7 @@
   "favorite.added": "Toegevoegd aan favorieten!",
   "coach.priority.high": "Hoog",
   "coach.priority.medium": "Gemiddeld",
-  "coach.priority.low": "Laag"
+  "coach.priority.low": "Laag",
+  "mia.chat.opening_data": "Hoi {{name}}. Ik zie dat je al enkele van onze tools hebt gebruikt — {{data}}. Dat zijn echte gegevens over jou. Laten we daarmee werken. Wat was de laatste tijd het moeilijkst?",
+  "alex.chat.opening_data": "Hoi {{name}}. Je hebt al enkele berekeningen gemaakt — {{data}}. Dat is een goed startpunt. Wat is nu je grootste financiële zorg?"
 }

@@ -258,5 +258,7 @@
   "favorite.added": "Favorilere eklendi!",
   "coach.priority.high": "Yüksek",
   "coach.priority.medium": "Orta",
-  "coach.priority.low": "Düşük"
+  "coach.priority.low": "Düşük",
+  "mia.chat.opening_data": "Merhaba {{name}}. Araçlarımızdan bazılarını zaten kullandığını görüyorum — {{data}}. Bunlar senin hakkında gerçek veriler. Onlarla çalışalım. Son zamanlarda en zor olan ne?",
+  "alex.chat.opening_data": "Merhaba {{name}}. Zaten bazı hesaplamalar yaptın — {{data}}. Bu iyi bir başlangıç noktası. Şu an mali açıdan en çok ne seni endişelendiriyor?"
 }

@@ -13,6 +13,10 @@ export const ALEX_PERSONA: CoachPersonaConfig = {
   avatarLetter: 'A',
   accentColor: 'blue',
   clusters: ['finance'],
+  relevantSlugs: [
+    'mortgage-calculator', 'loan-calculator', 'compound-interest-calculator', 'savings-calculator',
+    'investment-calculator', 'salary-calculator', 'tax-calculator', 'retirement-calculator',
+  ],
   steps: [
     { questionKey: 'alex.step1.question', contextKey: 'alex.step1.context', yesKey: 'alex.step1.yes' },
     { questionKey: 'alex.step2.question', contextKey: 'alex.step2.context', yesKey: 'alex.step2.yes' },
