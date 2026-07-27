@@ -117,17 +117,8 @@ export function HomeClient({ instruments, lang }: { instruments: InstrumentMeta[
               href={`/${lang}/coach/mia`}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-rose-400/40 transition-all duration-300"
             >
-              {/* Square photo area */}
+              {/* Square photo area — clean, no overlays */}
               <div className="relative w-full aspect-square bg-gradient-to-br from-rose-500/30 to-purple-700/30 overflow-hidden">
-                {/* Online badge */}
-                <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5 z-10 bg-black/40 backdrop-blur-sm px-2 py-1 rounded-full">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-emerald-300 text-[10px] font-semibold tracking-wide uppercase">{s.coachOnlineNow}</span>
-                </div>
-                <div className="absolute top-2.5 right-2.5 z-10">
-                  <span className="text-[10px] font-semibold px-2 py-1 rounded-full bg-black/40 backdrop-blur-sm text-white/80">{s.coachFreeSession}</span>
-                </div>
-                {/* Photo */}
                 <img
                   src="https://files2.heygen.ai/avatar/v3/1f58c0f60faa4cb5bf6c465615e3fb18_39260/preview_target.webp"
                   alt="Mia"
@@ -138,13 +129,20 @@ export function HomeClient({ instruments, lang }: { instruments: InstrumentMeta[
 
               {/* Info + CTA */}
               <div className="flex flex-col flex-1 px-3 pt-2.5 pb-3 gap-1">
-                <p className="text-white font-bold text-sm">Mia</p>
+                <div className="flex items-center justify-between">
+                  <p className="text-white font-bold text-sm">Mia</p>
+                  <div className="flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                    <span className="text-emerald-400 text-[9px] font-semibold uppercase tracking-wide">{s.coachOnlineNow}</span>
+                  </div>
+                </div>
                 <p className="text-rose-300 text-[11px] font-medium">{s.coachMiaRole}</p>
                 <p className="text-white/40 text-[10px] leading-tight">{s.coachMiaSpec}</p>
                 <div className="mt-auto pt-2">
                   <div className="w-full py-2 rounded-xl bg-gradient-to-r from-rose-500 to-purple-600 text-white text-xs font-bold text-center group-hover:opacity-90 transition-opacity">
                     {s.coachTalkTo('Mia')}
                   </div>
+                  <p className="text-center text-[9px] text-white/30 mt-1">{s.coachFreeSession}</p>
                 </div>
               </div>
             </Link>
@@ -154,17 +152,8 @@ export function HomeClient({ instruments, lang }: { instruments: InstrumentMeta[
               href={`/${lang}/coach/alex`}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-blue-400/40 transition-all duration-300"
             >
-              {/* Square photo area */}
+              {/* Square photo area — clean, no overlays */}
               <div className="relative w-full aspect-square bg-gradient-to-br from-blue-500/30 to-cyan-700/30 overflow-hidden">
-                {/* Online badge */}
-                <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5 z-10 bg-black/40 backdrop-blur-sm px-2 py-1 rounded-full">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-emerald-300 text-[10px] font-semibold tracking-wide uppercase">{s.coachOnlineNow}</span>
-                </div>
-                <div className="absolute top-2.5 right-2.5 z-10">
-                  <span className="text-[10px] font-semibold px-2 py-1 rounded-full bg-black/40 backdrop-blur-sm text-white/80">{s.coachFreeSession}</span>
-                </div>
-                {/* Photo */}
                 <img
                   src="https://files2.heygen.ai/avatar/v3/25ef6c86b1e946969d9a684870c47dfe_14947/preview_talk_1.webp"
                   alt="Alex"
@@ -175,13 +164,20 @@ export function HomeClient({ instruments, lang }: { instruments: InstrumentMeta[
 
               {/* Info + CTA */}
               <div className="flex flex-col flex-1 px-3 pt-2.5 pb-3 gap-1">
-                <p className="text-white font-bold text-sm">Alex</p>
+                <div className="flex items-center justify-between">
+                  <p className="text-white font-bold text-sm">Alex</p>
+                  <div className="flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                    <span className="text-emerald-400 text-[9px] font-semibold uppercase tracking-wide">{s.coachOnlineNow}</span>
+                  </div>
+                </div>
                 <p className="text-blue-300 text-[11px] font-medium">{s.coachAlexRole}</p>
                 <p className="text-white/40 text-[10px] leading-tight">{s.coachAlexSpec}</p>
                 <div className="mt-auto pt-2">
                   <div className="w-full py-2 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-600 text-white text-xs font-bold text-center group-hover:opacity-90 transition-opacity">
                     {s.coachTalkTo('Alex')}
                   </div>
+                  <p className="text-center text-[9px] text-white/30 mt-1">{s.coachFreeSession}</p>
                 </div>
               </div>
             </Link>
