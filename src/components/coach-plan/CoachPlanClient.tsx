@@ -1,10 +1,34 @@
 'use client'
 import { useState, useEffect, useCallback } from 'react'
-import Link from 'next/link'
 import { getT } from '@/lib/i18n/ui'
+
 import { PERSONAS } from '@/lib/coach-personas'
 import type { PersonaId } from '@/lib/coach-personas'
 import type { CoachPersonaConfig } from '@/lib/coach-personas/types'
+
+const PROMO_END = new Date('2026-08-26T23:59:59')
+const PROMO_KEY = 'solviq_promo_activated'
+
+function getPromoUnlocked(): boolean {
+  try { return localStorage.getItem(PROMO_KEY) === '1' } catch { return false }
+}
+
+function activatePromo(): void {
+  try { localStorage.setItem(PROMO_KEY, '1') } catch {}
+}
+
+function useCountdown() {
+  const [diff, setDiff] = useState(PROMO_END.getTime() - Date.now())
+  useEffect(() => {
+    const id = setInterval(() => setDiff(PROMO_END.getTime() - Date.now()), 1000)
+    return () => clearInterval(id)
+  }, [])
+  const days = Math.floor(diff / 86400000)
+  const hours = Math.floor((diff % 86400000) / 3600000)
+  const mins = Math.floor((diff % 3600000) / 60000)
+  const secs = Math.floor((diff % 60000) / 1000)
+  return { days, hours, mins, secs, expired: diff <= 0 }
+}
 
 // ── Read graph + name from localStorage ──────────────────────────────────────
 
@@ -108,7 +132,17 @@ export function CoachPlanClient({ lang, personaId }: { lang: string; personaId: 
 
   useEffect(() => { load() }, [load])
 
-  const FREE_ITEMS = 2
+  const [promoUnlocked, setPromoUnlocked] = useState(false)
+  const countdown = useCountdown()
+
+  useEffect(() => { setPromoUnlocked(getPromoUnlocked()) }, [])
+
+  function handleActivatePromo() {
+    activatePromo()
+    setPromoUnlocked(true)
+  }
+
+  const FREE_ITEMS = promoUnlocked ? Infinity : 2
 
   return (
     <div className="fixed inset-0 z-50 bg-slate-950 text-white flex flex-col" style={{ height: '100dvh' }}>
@@ -218,24 +252,46 @@ export function CoachPlanClient({ lang, personaId }: { lang: string; personaId: 
                 )
               })}
 
-              {/* Freemium gate CTA */}
-              <div className="mt-4 bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 rounded-2xl p-6 text-center">
-                <p className="text-white font-bold text-lg mb-1">{t('coach.plan.unlock.title')}</p>
-                <p className="text-slate-400 text-sm mb-2">{t(`${pid}.plan.unlock.subtitle`)}</p>
-                <div className="flex items-center justify-center gap-2 mb-5">
-                  <span className="text-emerald-400 text-xs font-semibold bg-emerald-400/10 border border-emerald-400/20 px-3 py-1 rounded-full">
-                    {t('coach.plan.trial')}
-                  </span>
-                  <span className="text-slate-500 text-xs">{t('coach.plan.price')}</span>
+              {/* Promo gate / activated banner */}
+              {!promoUnlocked ? (
+                <div className="mt-4 bg-gradient-to-br from-amber-950/60 to-slate-900 border border-amber-500/30 rounded-2xl p-6 text-center">
+                  <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wide">
+                    🎁 Launch Offer
+                  </div>
+                  <p className="text-white font-bold text-xl mb-1">30 Days Free</p>
+                  <p className="text-slate-400 text-sm mb-4">{t(`${pid}.plan.unlock.subtitle`)}</p>
+
+                  {/* Countdown */}
+                  {!countdown.expired && (
+                    <div className="flex items-center justify-center gap-3 mb-5">
+                      {[
+                        { v: countdown.days, l: 'days' },
+                        { v: countdown.hours, l: 'hrs' },
+                        { v: countdown.mins, l: 'min' },
+                        { v: countdown.secs, l: 'sec' },
+                      ].map(({ v, l }) => (
+                        <div key={l} className="flex flex-col items-center bg-slate-800 rounded-xl px-3 py-2 min-w-[52px]">
+                          <span className="text-white font-bold text-lg leading-none">{String(v).padStart(2, '0')}</span>
+                          <span className="text-slate-500 text-xs mt-0.5">{l}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  <button
+                    onClick={handleActivatePromo}
+                    className={`w-full py-4 rounded-2xl bg-gradient-to-r ${persona.avatarGradient} text-white font-bold text-base shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200`}
+                  >
+                    Activate 30 Days Free →
+                  </button>
+                  <p className="text-slate-600 text-xs mt-3">No credit card · No account required · Offer ends Aug 26</p>
                 </div>
-                <Link
-                  href={`/${lang}/register`}
-                  className={`block w-full py-4 rounded-2xl bg-gradient-to-r ${persona.avatarGradient} text-white font-bold text-base shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200`}
-                >
-                  {t('coach.plan.start')}
-                </Link>
-                <p className="text-slate-600 text-xs mt-3">{t('coach.plan.nocard')}</p>
-              </div>
+              ) : (
+                <div className="mt-4 bg-emerald-950/40 border border-emerald-500/30 rounded-2xl p-5 text-center">
+                  <p className="text-emerald-400 font-bold text-sm mb-1">✓ Full access activated</p>
+                  <p className="text-slate-500 text-xs">Your 30-day free plan is active until Aug 26, 2026</p>
+                </div>
+              )}
             </div>
           )}
 
