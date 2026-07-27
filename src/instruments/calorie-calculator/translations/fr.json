@@ -66,5 +66,7 @@
     "tips_2": "Ne descendez jamais en dessous de votre MB, même pour une perte de poids rapide. Manger en dessous du MB déclenche une dégradation musculaire, une fatigue chronique et une adaptation métabolique. L'option de perte « extrême » dans ce calculateur (−1 000 kcal/jour) ne devrait être maintenue qu'avec une supervision médicale et une alimentation très riche en protéines pour minimiser la perte de masse musculaire.",
     "tips_3": "Pour la prise de masse, commencez par un surplus modeste de 200 à 300 kcal au-dessus de la maintenance plutôt qu'un surplus agressif de 500+ kcal. Des études montrent que les gains musculaires sont similaires avec des surplus de 200 à 500 kcal, mais l'accumulation de graisse augmente considérablement avec des surplus plus importants. Une approche de surplus minimal permet de maximiser les gains musculaires tout en minimisant la prise de graisse.",
     "tips_4": "Les protéines méritent une attention particulière quel que soit votre objectif calorique. Viser 1,6 à 2,2 g de protéines par kg de poids corporel préserve la masse musculaire en déficit calorique et maximise la synthèse protéique musculaire en excédent. Les protéines augmentent également la satiété — un apport protéique plus élevé vous aide à vous sentir rassasié avec moins de calories totales. Considérez votre apport en protéines comme non négociable, puis répartissez les calories restantes entre lipides et glucides selon vos préférences et tolérances individuelles."
-  }
+  },
+  "section_weight_loss": "Perte de poids",
+  "section_weight_gain": "Prise de poids"
 }

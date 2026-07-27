@@ -41,5 +41,11 @@
     "tips_2": "Jedna temperatura jest identyczna w obu skalach Celsjusza i Fahrenheita: −40°. Obie skale przecinają się w −40°C = −40°F. To przydatny punkt kontrolny: jeśli obliczasz przeliczenie C na F i wynik równa się wartości wejściowej, pracujesz blisko tego skrzyżowania. W praktyce −40° to temperatura notowana w czasie ostrych zim w Syberii i Kanadzie — pamiętana przez meteorologów i podróżników jako punkt referencyjny.",
     "tips_3": "W pieczeniu zbuduj mentalną mapę trzech kluczowych temperatur: 160°C/320°F (niska i długa — musy, bezy, delikatne ciasta), 180°C/356°F (standardowa — ciasta, ciasteczka, chleb), 220°C/428°F (wysoka temperatura — pizza, przypieczenie mięs, chrupiące skórki). Większość anglosaskich przepisów które podają 350°F oznacza 175–180°C. Jeśli piekarnik pokazuje tylko °C i przepis mówi 375°F, użyj 190°C. Europejskie piekarniki są skalowane w Celsjuszach — żaden piekarnik sprzedawany w Polsce nie używa Fahrenheita.",
     "tips_4": "Dla bezpieczeństwa żywności zapamiętaj 'strefę niebezpieczną': wzrost bakterii przyspiesza między 4°C (40°F) a 60°C (140°F). Żywność nie powinna pozostawać w tym zakresie przez łącznie więcej niż 2 godziny. Lodówki powinny być poniżej 4°C (40°F); zamrażarki w temperaturze −18°C (0°F) lub niżej. Wewnętrzne temperatury gotowania: drób 74°C (165°F), wołowina mielona 71°C (160°F), wieprzowina i cielęcina 63°C (145°F). W Polsce sanepid określa te standardy dla gastronomii — w warunkach domowych te same zasady eliminują salmonellę i inne patogeny."
-  }
+  },
+  "label_from": "Z",
+  "label_to": "Do",
+  "label_result": "Wynik",
+  "unit_celsius": "Celsius",
+  "unit_fahrenheit": "Fahrenheit",
+  "unit_kelvin": "Kelvin"
 }

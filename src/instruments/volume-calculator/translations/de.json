@@ -46,5 +46,15 @@
     "tips_2": "Bei unregelmäßigen Behältern (einem Pool mit einer Stufenablage, einem Raum mit einem Schrank) unterteilen Sie den Raum in regelmäßige Formen und addieren Sie die Volumina. Ein Pool, der am flachen Ende 1,0 m tief und am tiefen Ende 2,0 m tief ist, mit einem allmählichen Gefälle über 8 m, kann als rechteckiges Prisma in jeder Tiefe plus einem Keil (dreieckiges Prisma) für den geneigten Abschnitt angenähert werden. Das Volumen jedes Abschnitts wird separat berechnet und summiert.",
     "tips_3": "Das Volumen skaliert mit der dritten Potenz der linearen Abmessungen. Das bedeutet, dass wenn man die Abmessungen eines Behälters verdoppelt, sein Volumen um 2³ = 8 Mal zunimmt — nicht um das 2-fache. Wenn man jede Abmessung um 10% erhöht, steigt das Volumen um 1,1³ = 1,331, also um 33,1%. Dieses Skalierungsgesetz hat praktische Auswirkungen auf die Verpackung: Ein Karton, der in allen Abmessungen 10% größer ist, fasst 33% mehr Produkt und kostet etwa 33% mehr Material — eine potenziell günstige Wirtschaftlichkeit, je nach Anwendungsfall.",
     "tips_4": "Für die Einrichtung eines Aquariums gilt eine hilfreiche Faustregel: 1 Liter Wasser pro 1 cm erwachsener Fischkörperlänge (oder 1 Gallone pro Zoll in US-amerikanischen Aquaristik-Richtlinien). Ein 100-Liter-Aquarium (26,4 Gallonen) kann etwa 100 cm Fisch unterstützen – zum Beispiel 10 Fische mit einer durchschnittlichen adulten Größe von 10 cm. Dies ist eine grobe Richtlinie, die auch von der Filterkapazität und der Art abhängt. Berechnen Sie Ihr Tankvolumen genau (Innenmaße, abzüglich des Kiesvolumens), um Filter, Heizungen und Medikamentendosen korrekt zu dimensionieren."
-  }
+  },
+  "label_length": "Länge",
+  "label_width": "Breite",
+  "label_height": "Höhe",
+  "label_radius": "Radius",
+  "shape_cube": "Würfel",
+  "shape_rectangular_prism": "Quader",
+  "shape_sphere": "Kugel",
+  "shape_cylinder": "Zylinder",
+  "shape_cone": "Kegel",
+  "shape_pyramid": "Pyramide"
 }

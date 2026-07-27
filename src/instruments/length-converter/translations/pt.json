@@ -45,5 +45,8 @@
     "tips_2": "Ao converter pés e polegadas para pés decimais para cálculo, use: pés decimais = pés + (polegadas / 12). Em seguida, converta para metros: metros = pés decimais × 0.3048. Exemplo: 5'9\" = 5 + 9/12 = 5.75 pés = 5.75 × 0.3048 = 1.7526 metros. No sentido inverso: 1.80 m / 0.3048 = 5.906 pés = 5 pés + 0.906 × 12 = 5 pés 10.87 polegadas.",
     "tips_3": "Para compras internacionais de roupas e calçados, crie uma referência pessoal: saiba sua altura em centímetros (multiplique feet×30.48 + inches×2.54), seu comprimento da costura interna em centímetros, e o comprimento do seu pé em centímetros. A numeração europeia usa centímetros diretamente para altura e comprimento do pé. Ter essas medidas convertidas prontas evita o erro mais comum em numeração internacional.",
     "tips_4": "Na construção civil, sempre verifique se os desenhos usam pés-polegadas ou pés decimais antes de realizar cálculos. Desenhos arquitetônicos nos EUA normalmente usam a notação de pés-polegadas (5'-6\"), enquanto desenhos de engenharia frequentemente usam pés decimais (5.5'). Misturar esses sistemas sem conversão é uma fonte muito comum de erros de medição em canteiros de obras. Em caso de dúvida, converta tudo para milímetros — o padrão internacional de construção usado em todos os lugares, exceto nos EUA."
-  }
+  },
+  "label_from": "De",
+  "label_to": "Para",
+  "label_result": "Resultado"
 }

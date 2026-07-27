@@ -43,5 +43,6 @@
     "tips_2": "Oceniając wydajność klasy, zespołu lub dowolny wskaźnik efektywności, raportuj rozstęp obok średniej. Średnia 80% z rozstępem 20 (70–90%) mówi zupełnie inną historię niż średnia 80% z rozstępem 60 (50–110%). Rozstęp ujawnia, czy grupa jest jednorodna czy bardzo zróżnicowana — co określa, czy 'przeciętna wydajność' jest przydatnym opisem.",
     "tips_3": "Uśredniając stopy, średnie lub procenty, uważaj: arytmetyczna średnia procentów jest poprawna tylko wtedy, gdy wielkości bazowe są równe. Jeśli Sklep A miał 10% wzrost przy obrocie 100 000 zł a Sklep B miał 20% wzrost przy obrocie 1 000 000 zł, prawidłowy zagregowany wzrost to średnia ważona, a nie prosta średnia — ponieważ sklep B miał 10× większą bazę i jego wzrost ma 10× większy wpływ.",
     "tips_4": "Dla zbiorów danych z wyraźną wartością odstającą, którą podejrzewasz o błąd danych (a nie faktyczną wartość skrajną), oblicz średnią zarówno z, jak i bez wartości odstającej. Jeśli różnica jest drastyczna, zbadaj wartość odstającą przed raportowaniem średniej. Raportowanie średniej z uszkodzonych danych pewnie jest gorsze niż przyznanie się do niepewności. W badaniach standardową praktyką jest raportowanie zarówno pełnych statystyk zbioru, jak i 'przyciętej średniej' (po wykluczeniu górnych i dolnych 5% wartości)."
-  }
+  },
+  "placeholder_numbers": "e.g. 4, 8, 15, 16, 23, 42"
 }

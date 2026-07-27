@@ -47,5 +47,15 @@
     "tips_2": "Para calcular cuánta pintura necesitas para una habitación (que es un problema de área de superficie, no de volumen), usa la calculadora de área para cada pared y el techo, suma las superficies, resta las ventanas y puertas, y divide por la cobertura por litro del fabricante. El volumen de pintura no se relaciona directamente con el volumen de la habitación.",
     "tips_3": "Al calcular el volumen de piscinas y tanques de agua para determinar los tiempos de llenado o las necesidades de productos químicos: el cálculo del volumen te da el número en m³ o L (1 m³ = 1000 L). La tasa de llenado de la manguera (litros/minuto) dividida en el volumen total en litros da el tiempo de llenado. Para las piscinas, los niveles de productos químicos (cloro, pH) se basan en el volumen total en litros o galones.",
     "tips_4": "Para los cálculos de embalaje y envío: el volumen del paquete (largo × ancho × alto en cm) dividido entre 5000 da el peso dimensional en kg (el factor 5000 es el factor de divisor estándar de la industria de la aviación, aunque algunos transportistas usan 4000 para el transporte marítimo). Si el peso dimensional supera el peso físico, los transportistas cobran por el peso dimensional, lo que hace que los embalajes compactos sean más rentables."
-  }
+  },
+  "label_length": "Longitud",
+  "label_width": "Ancho",
+  "label_height": "Altura",
+  "label_radius": "Radio",
+  "shape_cube": "Cubo",
+  "shape_rectangular_prism": "Prisma rectangular",
+  "shape_sphere": "Esfera",
+  "shape_cylinder": "Cilindro",
+  "shape_cone": "Cono",
+  "shape_pyramid": "Pirámide"
 }

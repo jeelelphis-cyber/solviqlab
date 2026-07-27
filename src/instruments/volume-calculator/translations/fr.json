@@ -40,5 +40,15 @@
     "tips_2": "Pour les contenants irréguliers (une piscine avec un gradin, une pièce avec un placard), décomposez l'espace en formes régulières et additionnez les volumes. Une piscine qui mesure 1,0 m de profondeur dans la partie peu profonde et 2,0 m dans la partie profonde, avec une pente progressive sur 8 m, peut être approximée comme un prisme rectangulaire à chaque profondeur plus un coin (prisme triangulaire) pour la section en pente. Le volume de chaque section est calculé séparément et additionné.",
     "tips_3": "Le volume varie avec le cube des dimensions linéaires. Cela signifie que si vous doublez les dimensions d'un contenant, son volume augmente de 2³ = 8 fois — pas 2 fois. Si vous augmentez chaque dimension de 10 %, le volume augmente de 1,1³ = 1,331, soit 33,1 %. Cette loi d'échelle a des implications pratiques pour l'emballage : une boîte 10 % plus grande dans toutes les dimensions contient 33 % de produit en plus et coûte approximativement 33 % de matériau en plus — une économie potentiellement favorable selon le cas d'usage.",
     "tips_4": "Pour l'installation d'aquarium, une règle utile : 1 litre d'eau par 1 cm de longueur corporelle adulte du poisson (ou 1 gallon par pouce selon les directives américaines d'aquariophilie). Un aquarium de 100 litres peut accueillir environ 100 cm de poissons — par exemple, 10 poissons d'une taille adulte moyenne de 10 cm. C'est une ligne directrice approximative qui dépend aussi de la capacité de filtration et des espèces. Calculez le volume précis de votre aquarium (dimensions intérieures, soustrayez le volume du gravier) pour dimensionner correctement les filtres, chauffages et doses de médicaments."
-  }
+  },
+  "label_length": "Longueur",
+  "label_width": "Largeur",
+  "label_height": "Hauteur",
+  "label_radius": "Rayon",
+  "shape_cube": "Cube",
+  "shape_rectangular_prism": "Prisme rectangulaire",
+  "shape_sphere": "Sphère",
+  "shape_cylinder": "Cylindre",
+  "shape_cone": "Cône",
+  "shape_pyramid": "Pyramide"
 }

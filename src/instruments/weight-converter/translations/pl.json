@@ -43,5 +43,8 @@
     "tips_2": "W gotowaniu i pieczeniu używaj wagi (gramy) zamiast miar objętości dla suchych składników i lepkich substancji. Mąka jest znana z niespójności: jedna filiżanka może ważyć 120g lub 165g zależnie od tego, czy była przesiana, wsypana łyżką czy ubita. Przepis z gramami daje spójne wyniki niezależnie od tego, kto mierzy. Wagi kuchenne z rozdzielczością 1g kosztują ok. 30–80 zł i są jedną z najlepszych inwestycji dla regularnie piekących.",
     "tips_3": "Przy obliczaniu wskaźnika masy ciała (BMI) potrzebujesz masy w kilogramach i wzrostu w metrach: BMI = kg/m². Jeśli znasz wagę w funtach i wzrost w calach: BMI = (lbs ÷ in²) × 703. Najpierw przelicz funty na kilogramy (podziel przez 2,2046) i wzrost w calach na metry (pomnóż przez 0,0254). Obliczony BMI jest taki sam niezależnie od jednostek wejściowych — błąd pojawia się tylko przy mieszaniu jednostek bez przeliczenia.",
     "tips_4": "Dla wysyłki, zawsze sprawdź czy przewoźnik stosuje wagę wolumetryczną (dimensional weight) dodatkowo do wagi rzeczywistej. Główni przewoźnicy (FedEx, UPS, DHL, InPost) naliczają opłatę według wyższej z dwóch: waga rzeczywista lub waga wolumetryczna = (D×Ś×W cm) ÷ 5 000 dla większości usług. Lekka, ale objętościowa paczka może być obciążona na podstawie jej rozmiaru, nie masy. Przed wysłaniem dużych, lekkich opakowań sprawdź obie wartości i porównaj oferty różnych przewoźników."
-  }
+  },
+  "label_from": "Z",
+  "label_to": "Do",
+  "label_result": "Wynik"
 }

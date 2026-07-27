@@ -72,5 +72,7 @@
     "tips_2": "Priorytetyzuj białko przy każdym posiłku, szczególnie podczas ograniczenia kalorii. Minimalna ilość białka dla zachowania mięśni przy utracie tłuszczu to 1,6 g na kg masy ciała dziennie — więcej jest lepiej, do około 2,4 g/kg dla sportowców. Białko jest też bardziej sycące niż węglowodany czy tłuszcze na kalorię, co ułatwia utrzymanie deficytu bez ciągłego głodu. Praktyczny cel: 25–40 g białka na posiłek.",
     "tips_3": "Nie stosuj 'ekstremalnego deficytu' (−1000 kcal/dzień) przez więcej niż 1–2 tygodnie bez nadzoru profesjonalisty. Choć gwałtowna początkowa utrata wagi wydaje się motywująca, długotrwałe ekstremalne deficyty powodują nieproporcjonalną utratę mięśni, znaczną adaptację metaboliczną, niedobory składników odżywczych i obniżoną wydolność treningową. Umiarkowane deficyty 300–500 kcal utrzymywane konsekwentnie dają lepsze długoterminowe efekty składu ciała.",
     "tips_4": "Co 4–6 tygodni przeliczaj zapotrzebowanie kaloryczne podczas aktywnych faz utraty lub przyrostu masy. Wraz ze zmianą masy ciała zmienia się BMR i TDEE. Osoba, która schudła 10 kg, potrzebuje mniej kalorii do utrzymania nowej wagi niż na początku. Brak dostosowania celów kalorycznych wraz ze zmianą wagi jest jednym z najczęstszych powodów plateau w utracie tłuszczu."
-  }
+  },
+  "section_weight_loss": "Utrata wagi",
+  "section_weight_gain": "Przyrost masy"
 }

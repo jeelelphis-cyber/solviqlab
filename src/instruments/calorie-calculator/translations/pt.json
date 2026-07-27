@@ -73,5 +73,7 @@
     "tips_2": "Priorize proteína em todas as refeições, especialmente durante a restrição calórica. O limite mínimo para preservar músculo enquanto perde gordura é 1.6g de proteína por kg de peso corporal por dia — mais é melhor, até cerca de 2.4g/kg para atletas. A proteína também é mais saciante do que carboidratos ou gordura por caloria, facilitando a manutenção de um déficit sem fome constante. Alvo prático: busque 25–40g de proteína por refeição.",
     "tips_3": "Não use metas de déficit calórico 'extremo' (−1,000 kcal/dia) por mais de 1–2 semanas seguidas sem supervisão profissional. Embora a perda de peso inicial rápida seja motivadora, déficits extremos sustentados causam perda muscular desproporcional, adaptação metabólica significativa, deficiências nutricionais e baixo desempenho nos treinos. Déficits moderados de 300–500 kcal mantidos consistentemente produzem melhores resultados de composição corporal a longo prazo do que restrições agressivas de curto prazo.",
     "tips_4": "Recalcule suas necessidades calóricas a cada 4–6 semanas durante fases ativas de perda ou ganho de peso. Conforme seu peso corporal muda, sua TMB e TDEE também mudam. Uma pessoa que perdeu 10 kg precisa de menos calorias para manter o novo peso do que no início. Não ajustar as metas calóricas à medida que o peso muda é uma das razões mais comuns para platôs na perda de gordura — a meta antiga já não representa mais um déficit em relação à nova TDEE, mais baixa."
-  }
+  },
+  "section_weight_loss": "Perda de peso",
+  "section_weight_gain": "Ganho de peso"
 }

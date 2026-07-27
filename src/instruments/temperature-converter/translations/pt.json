@@ -42,5 +42,11 @@
     "tips_2": "Uma temperatura é a mesma nas escalas Celsius e Fahrenheit: −40°. Ambas as escalas se cruzam em −40°C = −40°F. Este é um teste de verificação útil: se você calcular uma conversão de Celsius para Fahrenheit e sua resposta for igual ao seu valor de entrada, você está trabalhando próximo a esse ponto de cruzamento. Para contextos de clima extremamente frio (norte do Canadá, Sibéria no inverno), −40° é uma temperatura significativa que não requer conversão.",
     "tips_3": "Para assar, crie um mapa mental de três temperaturas-chave: 160°C/320°F (baixo e lento — cremes, merengues, doces delicados), 180°C/356°F (padrão — bolos, biscoitos, pães), 220°C/428°F (alta temperatura — pizza, selar carnes, crostas de pão). A maioria das receitas que pedem 350°F significa 175–180°C. Se o seu forno só mostra Celsius e uma receita diz 375°F, use 190°C.",
     "tips_4": "Para segurança alimentar, conheça a 'zona de perigo': o crescimento bacteriano acelera entre 4°C (40°F) e 60°C (140°F). Os alimentos não devem permanecer nessa faixa de temperatura por mais de 2 horas cumulativamente. Os refrigeradores devem estar em ou abaixo de 4°C (40°F); os freezers a −18°C (0°F) ou abaixo. Temperaturas internas de cozimento para segurança alimentar: 74°C (165°F) para aves, 63°C (145°F) para cortes inteiros de carne bovina/suína, 71°C (160°F) para carne moída."
-  }
+  },
+  "label_from": "De",
+  "label_to": "Para",
+  "label_result": "Resultado",
+  "unit_celsius": "Celsius",
+  "unit_fahrenheit": "Fahrenheit",
+  "unit_kelvin": "Kelvin"
 }

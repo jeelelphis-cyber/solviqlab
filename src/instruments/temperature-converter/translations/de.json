@@ -41,5 +41,11 @@
     "tips_2": "Eine Temperatur ist sowohl auf der Celsius- als auch auf der Fahrenheit-Skala gleich: −40°. Beide Skalen treffen sich bei −40°C = −40°F. Dies ist eine nützliche Plausibilitätsprüfung: Wenn Sie eine Umrechnung von Celsius in Fahrenheit berechnen und Ihr Ergebnis Ihrer Eingabe entspricht, arbeiten Sie nahe diesem Kreuzungspunkt. Für extreme Kältekontexte (Norden Kanadas, Sibirien im Winter) ist −40° eine bedeutungsvolle Temperatur, die keiner Umrechnung bedarf.",
     "tips_3": "Erstelle dir fürs Backen eine gedankliche Karte von drei wichtigen Temperaturen: 160°C/320°F (niedrig und langsam — Pudding, Baiser, empfindliches Gebäck), 180°C/356°F (Standard — Kuchen, Kekse, Brot), 220°C/428°F (hohe Hitze — Pizza, scharfes Anbraten, Brotkrusten). Die meisten Rezepte, die 350°F verlangen, meinen 175–180°C. Wenn dein Ofen nur Celsius anzeigt und ein Rezept 375°F angibt, verwende 190°C.",
     "tips_4": "Für die Lebensmittelsicherheit ist die „Gefahrenzone\" zu beachten: Zwischen 4°C (40°F) und 60°C (140°F) beschleunigt sich das Bakterienwachstum. Lebensmittel sollten sich kumulativ nicht länger als 2 Stunden in diesem Temperaturbereich befinden. Kühlschränke sollten auf höchstens 4°C (40°F) eingestellt sein, Gefriergeräte auf −18°C (0°F) oder darunter. Interne Garantemperaturen für die Lebensmittelsicherheit: 74°C (165°F) für Geflügel, 63°C (145°F) für ganze Fleischstücke von Rind/Schwein, 71°C (160°F) für Hackfleisch."
-  }
+  },
+  "label_from": "Von",
+  "label_to": "Nach",
+  "label_result": "Ergebnis",
+  "unit_celsius": "Celsius",
+  "unit_fahrenheit": "Fahrenheit",
+  "unit_kelvin": "Kelvin"
 }

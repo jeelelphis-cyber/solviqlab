@@ -72,5 +72,7 @@
     "tips_2": "Özellikle kalori kısıtlaması sırasında her öğünde proteine öncelik verin. Yağ kaybederken kas korumak için minimum eşik, günde vücut ağırlığının kg'ı başına 1,6 g proteindir; sporcular için 2,4 g/kg'a kadar daha fazlası daha iyidir. Protein aynı zamanda kalori başına karbonhidrat veya yağdan daha doyurucudur, bu da sürekli açlık hissetmeden açık sürdürmeyi kolaylaştırır. Pratik hedef: öğün başına 25-40 g protein hedefleyin.",
     "tips_3": "Profesyonel denetim olmadan \"aşırı kayıp\" kalori hedeflerini (günde -1.000 kcal) 1-2 haftadan fazla kullanmayın. Başlangıçtaki hızlı kilo kaybı motive edici hissettirse de sürekli aşırı açıklar orantısız kas kaybına, önemli metabolik adaptasyona, besin eksikliklerine ve kötü antrenman performansına yol açar. 300-500 kcal'lik ılımlı açıklar, agresif kısa vadeli kısıtlamadan daha iyi uzun vadeli vücut kompozisyonu sonuçları üretir.",
     "tips_4": "Aktif kilo verme veya alma aşamalarında her 4-6 haftada bir kalori ihtiyaçlarınızı yeniden hesaplayın. Vücut ağırlığınız değiştikçe BMR ve TDEE'niz de değişir. 10 kg veren bir kişi, başlangıçtakinden daha az kalori ile yeni ağırlığını koruyabilir. Kilo değiştikçe kalori hedeflerini ayarlamamak, yağ kaybı platolarının en yaygın nedenlerinden biridir."
-  }
+  },
+  "section_weight_loss": "Kilo kaybı",
+  "section_weight_gain": "Kilo alımı"
 }

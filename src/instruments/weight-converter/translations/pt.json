@@ -44,5 +44,8 @@
     "tips_2": "Em culinária e confeitaria, use uma balança de cozinha em gramas em vez de medidas por volume para precisão. A farinha é notoriamente inconsistente: um copo (cup) pode ter 120g ou 165g, dependendo se foi peneirada, colherada ou compactada. Uma receita que especifica 250g de farinha produzirá resultados consistentes independentemente de quem está medindo; uma receita que especifica 2 xícaras pode falhar para padeiros com uma técnica de colherada mais pesada. Por esse motivo, receitas profissionais e de ciência dos alimentos são sempre baseadas em peso.",
     "tips_3": "Ao calcular o índice de massa corporal (IMC), você precisa do peso em quilogramas e altura em metros: IMC = kg/m². Se você souber seu peso em libras e altura em polegadas: IMC = (lbs / in²) × 703. Primeiro converta libras para quilogramas (divida por 2.2046) e altura em polegadas para metros (multiplique por 0.0254). Alternativamente: lbs × 0.453592 = kg, e altura em pés/polegadas para metros = (pés × 0.3048) + (polegadas × 0.0254).",
     "tips_4": "Para remessas, sempre confirme se a transportadora utiliza peso volumétrico (peso dimensional) além do peso real. As principais transportadoras (FedEx, UPS, DHL) cobram o maior valor entre o peso real e o peso dimensional = (C × L × A cm) / 5.000 para a maioria dos serviços. Um pacote leve, porém volumoso, pode ser cobrado com base no volume, não na massa. Converta o peso dimensional para a mesma unidade do peso real e compare — o valor maior determina o custo do frete."
-  }
+  },
+  "label_from": "De",
+  "label_to": "Para",
+  "label_result": "Resultado"
 }

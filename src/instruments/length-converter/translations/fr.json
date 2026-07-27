@@ -38,5 +38,8 @@
     "tips_2": "Pour convertir des pieds et pouces en mètres, utilisez : pieds décimaux = pieds + (pouces / 12), puis mètres = pieds décimaux × 0,3048. Exemple : 5'9\" = 5 + 9/12 = 5,75 pieds = 5,75 × 0,3048 = 1,7526 mètres. Dans l'autre sens : 1,80 m / 0,3048 = 5,906 pieds = 5 pieds + 0,906 × 12 = 5 pieds 10,87 pouces.",
     "tips_3": "Pour les achats internationaux de vêtements et chaussures, constituez votre référence personnelle en centimètres : votre taille, votre entrejambe et la longueur de votre pied. Les tailles européennes utilisent directement les centimètres pour la taille et la longueur du pied. Avoir ces mesures converties à portée de main prévient les erreurs de taille les plus courantes lors d'achats en ligne dans des boutiques étrangères.",
     "tips_4": "En construction et rénovation, vérifiez toujours si les plans utilisent des pieds-pouces ou des pieds décimaux avant d'effectuer des calculs. Les plans architecturaux utilisent généralement la notation pieds-pouces, tandis que les plans d'ingénierie utilisent souvent des pieds décimaux. Mélanger ces notations sans conversion est une source très courante d'erreurs de mesure. En cas de doute, convertissez tout en millimètres — la norme de construction internationale utilisée partout sauf aux États-Unis."
-  }
+  },
+  "label_from": "De",
+  "label_to": "En",
+  "label_result": "Résultat"
 }

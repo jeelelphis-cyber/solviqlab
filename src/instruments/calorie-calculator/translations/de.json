@@ -72,5 +72,7 @@
     "tips_2": "Priorisieren Sie Protein bei jeder Mahlzeit, insbesondere während einer Kalorienreduktion. Die Mindestschwelle für den Muskelerhalt während der Fettabnahme liegt bei 1,6 g Protein pro kg Körpergewicht pro Tag — mehr ist besser, bis zu etwa 2,4 g/kg für Sportler. Protein ist zudem pro Kalorie sättigender als Kohlenhydrate oder Fett, was es einfacher macht, ein Kaloriendefizit ohne ständigen Hunger aufrechtzuerhalten. Praktisches Ziel: Streben Sie 25–40 g Protein pro Mahlzeit an.",
     "tips_3": "Verwenden Sie Kalorienziele für 'extremen Verlust' (−1.000 kcal/Tag) nicht länger als 1–2 Wochen am Stück ohne professionelle Aufsicht. Während ein schneller anfänglicher Gewichtsverlust motivierend wirkt, verursachen anhaltende extreme Defizite übermäßigen Muskelabbau, erhebliche metabolische Anpassung, Nährstoffmängel und schlechte Trainingsleistung. Moderate Defizite von 300–500 kcal, die konstant eingehalten werden, führen zu besseren langfristigen Körperzusammensetzungsergebnissen als aggressive kurzfristige Restriktion.",
     "tips_4": "Berechnen Sie Ihren Kalorienbedarf während aktiver Gewichtsabnahme- oder -zunahmephasen alle 4–6 Wochen neu. Mit einer Veränderung Ihres Körpergewichts ändern sich auch Ihr BMR und TDEE. Eine Person, die 10 kg verloren hat, benötigt weniger Kalorien, um ihr neues Gewicht zu halten, als zu Beginn. Werden die Kalorienziele nicht an die Gewichtsveränderung angepasst, ist dies einer der häufigsten Gründe für Plateaus bei der Fettverbrennung – das alte Ziel stellt kein Kaloriendefizit mehr im Verhältnis zum neuen, niedrigeren TDEE dar."
-  }
+  },
+  "section_weight_loss": "Gewichtsverlust",
+  "section_weight_gain": "Gewichtszunahme"
 }

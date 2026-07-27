@@ -42,5 +42,11 @@
     "tips_2": "En cocina, las conversiones de temperatura del horno son críticas. Los errores comunes: confundir 180°C (moderado, 356°F) con 180°F (muy bajo, 82°C). Las recetas de repostería americanas generalmente usan Fahrenheit; las recetas europeas usan Celsius. Para hornos de ventilador/convección, reduce la temperatura en 20°C (o 25°F) respecto a los tiempos de receta para hornos convencionales.",
     "tips_3": "Para los viajeros, memoriza estos equivalentes climáticos clave: 10°C (50°F) = necesitas abrigo, 20°C (68°F) = temperatura agradable con ropa ligera, 30°C (86°F) = calor del verano, 40°C (104°F) = calor extremo peligroso. Estos puntos de referencia hacen que los pronósticos meteorológicos en el extranjero sean intuitivos sin necesidad de calculadora.",
     "tips_4": "En ciencias y termodinámica, siempre convierte a Kelvin antes de usar temperaturas en fórmulas físicas (ley de los gases ideales, ley de Stefan-Boltzmann, ley de Wien). Las temperaturas en Celsius o Fahrenheit en las ecuaciones físicas producen resultados incorrectos porque estas escalas tienen ceros arbitrarios. Recuerda: K = °C + 273,15. Esta conversión es el primer paso en cualquier cálculo termodinámico."
-  }
+  },
+  "label_from": "De",
+  "label_to": "A",
+  "label_result": "Resultado",
+  "unit_celsius": "Celsius",
+  "unit_fahrenheit": "Fahrenheit",
+  "unit_kelvin": "Kelvin"
 }

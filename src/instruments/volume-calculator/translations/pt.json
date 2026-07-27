@@ -47,5 +47,15 @@
     "tips_2": "Para recipientes irregulares (uma piscina com prateleira de degrau, um cômodo com armário), divida o espaço em formas regulares e some os volumes. Uma piscina que tem 1.0 m de profundidade na parte rasa e 2.0 m na parte funda, com uma inclinação gradual ao longo de 8 m, pode ser aproximada como um prisma retangular em cada profundidade mais uma cunha (prisma triangular) para a seção inclinada. O volume de cada seção é calculado separadamente e somado.",
     "tips_3": "O volume escala com o cubo das dimensões lineares. Isso significa que, se você dobrar as dimensões de um recipiente, seu volume aumenta por 2³ = 8 vezes — e não 2 vezes. Se você aumentar cada dimensão em 10%, o volume aumenta por 1,1³ = 1,331, ou 33,1%. Essa lei de escala tem implicações práticas para embalagens: uma caixa que é 10% maior em todas as dimensões comporta 33% mais produto e custa aproximadamente 33% mais material — uma economia potencialmente favorável dependendo do caso de uso.",
     "tips_4": "Para configuração de aquário, uma regra útil: 1 litro de água para cada 1 cm de comprimento corporal do peixe adulto (ou 1 galão por polegada nas diretrizes de aquariofilia dos EUA). Um aquário de 100 litros (26,4 galões) pode suportar aproximadamente 100 cm de peixes — por exemplo, 10 peixes com tamanho adulto médio de 10 cm. Esta é uma diretriz aproximada que também depende da capacidade de filtragem e da espécie. Calcule o volume do seu tanque precisamente (dimensões internas, subtraia o volume do cascalho) para dimensionar filtros, aquecedores e doses de medicação corretamente."
-  }
+  },
+  "label_length": "Comprimento",
+  "label_width": "Largura",
+  "label_height": "Altura",
+  "label_radius": "Raio",
+  "shape_cube": "Cubo",
+  "shape_rectangular_prism": "Prisma retangular",
+  "shape_sphere": "Esfera",
+  "shape_cylinder": "Cilindro",
+  "shape_cone": "Cone",
+  "shape_pyramid": "Pirâmide"
 }

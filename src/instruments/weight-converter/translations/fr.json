@@ -37,5 +37,8 @@
     "tips_2": "En cuisine et pâtisserie, utilisez une balance de cuisine en grammes plutôt que des mesures volumiques pour la précision. La farine est notoirement inconsistante : une tasse peut faire 120 g ou 165 g selon qu'elle a été tamisée, versée à la cuillère ou tassée. Une recette qui spécifie 250 g de farine produira des résultats cohérents peu importe qui mesure ; une recette qui spécifie 2 tasses peut échouer pour les boulangers qui ont une technique de dosage plus lourde. Les recettes professionnelles et de science alimentaire sont toujours basées sur le poids pour cette raison.",
     "tips_3": "Pour calculer l'indice de masse corporelle (IMC), vous avez besoin du poids en kilogrammes et de la taille en mètres : IMC = kg/m². Si vous connaissez votre poids en livres et votre taille en pouces : IMC = (lbs / in²) × 703. Convertissez d'abord les livres en kilogrammes (divisez par 2,2046) et la taille en pouces en mètres (multipliez par 0,0254). En France, les seuils cliniques sont : insuffisance pondérale < 18,5, poids normal 18,5 à 24,9, surpoids 25 à 29,9, obésité ≥ 30.",
     "tips_4": "Pour l'expédition, confirmez toujours si le transporteur utilise le poids volumétrique (poids dimensionnel) en plus du poids réel. Les grands transporteurs (FedEx, UPS, DHL, La Poste) facturent le plus élevé entre le poids réel et le poids volumétrique = (L × l × H en cm) / 5 000 pour la plupart des services. Un colis léger mais volumineux peut être facturé selon son volume plutôt que sa masse. Convertissez le poids dimensionnel dans la même unité que le poids réel et comparez — la valeur la plus élevée détermine le tarif d'expédition."
-  }
+  },
+  "label_from": "De",
+  "label_to": "En",
+  "label_result": "Résultat"
 }

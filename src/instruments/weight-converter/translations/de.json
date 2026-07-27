@@ -43,5 +43,8 @@
     "tips_2": "Beim Kochen und Backen sollte man für Präzision eine Küchenwaage in Gramm anstelle von Volumenmaßen verwenden. Mehl ist berüchtigt für seine Inkonsistenz: Eine Tasse kann je nachdem, ob es gesiebt, gelöffelt oder festgedrückt wurde, 120g oder 165g wiegen. Ein Rezept mit 250g Mehl liefert konsistente Ergebnisse, unabhängig davon, wer misst; ein Rezept mit 2 Tassen kann für Bäcker mit einer schwereren Schöpftechnik scheitern. Aus diesem Grund basieren professionelle und lebensmittelwissenschaftliche Rezepte immer auf Gewichtsangaben.",
     "tips_3": "Bei der Berechnung des Body-Mass-Index (BMI) benötigen Sie das Gewicht in Kilogramm und die Körpergröße in Metern: BMI = kg/m². Wenn Sie Ihr Gewicht in Pfund und Ihre Körpergröße in Zoll kennen: BMI = (lbs / in²) × 703. Rechnen Sie zuerst Pfund in Kilogramm um (teilen Sie durch 2,2046) und die Körpergröße in Zoll in Meter (multiplizieren Sie mit 0,0254). Alternativ: lbs × 0,453592 = kg, und die Körpergröße in Fuß/Zoll in Meter = (Fuß × 0,3048) + (Zoll × 0,0254).",
     "tips_4": "Beim Versand sollten Sie stets prüfen, ob der Spediteur zusätzlich zum tatsächlichen Gewicht auch das Volumengewicht (dimensionsgewicht) berechnet. Große Anbieter (FedEx, UPS, DHL) berechnen für die meisten Dienstleistungen den höheren Wert aus tatsächlichem Gewicht oder Volumengewicht = (L × B × H cm) / 5.000. Ein leichtes, aber sperriges Paket kann daher nach seinem Volumen statt nach seiner Masse abgerechnet werden. Rechnen Sie das Volumengewicht in die gleiche Einheit wie das tatsächliche Gewicht um und vergleichen Sie – der höhere Wert bestimmt die Versandkosten."
-  }
+  },
+  "label_from": "Von",
+  "label_to": "Nach",
+  "label_result": "Ergebnis"
 }

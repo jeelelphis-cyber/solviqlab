@@ -44,5 +44,8 @@
     "tips_2": "Bei der Umrechnung von Fuß und Zoll in Dezimalfuß für Berechnungen verwenden Sie: Dezimalfuß = Fuß + (Zoll / 12). Anschließend in Meter umrechnen: Meter = Dezimalfuß × 0,3048. Beispiel: 5'9\" = 5 + 9/12 = 5,75 Fuß = 5,75 × 0,3048 = 1,7526 Meter. Umgekehrt: 1,80 m / 0,3048 = 5,906 Fuß = 5 Fuß + 0,906 × 12 = 5 Fuß 10,87 Zoll.",
     "tips_3": "Erstellen Sie für internationale Kleidungs- und Schuhkäufe eine persönliche Referenz: Notieren Sie Ihre Körpergröße in Zentimetern (Multiplikation Fuß×30,48 + Zoll×2,54), Ihre Beininnenlänge in Zentimetern und Ihre Fußlänge in Zentimetern. Die europäische Größentabelle verwendet Zentimeter direkt für Körpergröße und Fußlänge. Wenn Sie diese umgerechneten Maße bereithalten, vermeiden Sie den häufigsten Fehler bei internationalen Größenangaben.",
     "tips_4": "Im Bauwesen ist es wichtig, vor der Durchführung von Berechnungen zu prüfen, ob die Zeichnungen in Fuß-Zoll oder Dezimalfuß angegeben sind. Architekturzeichnungen in den USA verwenden in der Regel die Fuß-Zoll-Notation (5'-6\"), während Ingenieurzeichnungen oft Dezimalfuß (5.5') verwenden. Das Mischen dieser ohne Umrechnung ist eine sehr häufige Fehlerquelle auf Baustellen. Im Zweifelsfall sollte alles in Millimeter umgerechnet werden – den internationalen Baustandard, der überall außer in den USA verwendet wird."
-  }
+  },
+  "label_from": "Von",
+  "label_to": "Nach",
+  "label_result": "Ergebnis"
 }

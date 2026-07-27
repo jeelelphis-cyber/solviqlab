@@ -35,5 +35,11 @@
     "tips_2": "Il existe une température identique sur les deux échelles Celsius et Fahrenheit : −40°. Les deux échelles se croisent à −40 °C = −40 °F. C'est une vérification utile : si vous calculez une conversion Celsius-Fahrenheit et que votre réponse correspond à votre entrée, vous travaillez près de ce point de croisement. Pour les contextes de grand froid (nord du Canada, Sibérie en hiver), −40° est une température significative qui ne nécessite aucune conversion.",
     "tips_3": "Pour la cuisine, construisez une carte mentale de trois températures clés : 160 °C/320 °F (doux et lent — crèmes, meringues, pâtisseries délicates), 180 °C/356 °F (standard — gâteaux, biscuits, pains), 220 °C/428 °F (forte chaleur — pizza, saisie, croûtes de pain). La plupart des recettes qui indiquent 350 °F signifient 175 à 180 °C. Si votre four n'affiche que Celsius et qu'une recette indique 375 °F, utilisez 190 °C.",
     "tips_4": "Pour la sécurité alimentaire, connaissez la « zone de danger » : la croissance bactérienne s'accélère entre 4 °C (40 °F) et 60 °C (140 °F). Les aliments ne doivent pas rester dans cette plage de température pendant plus de 2 heures au total. Les réfrigérateurs doivent être à 4 °C (40 °F) ou en dessous ; les congélateurs à −18 °C (0 °F) ou en dessous. Températures de cuisson internes pour la sécurité : 74 °C (165 °F) pour la volaille, 63 °C (145 °F) pour les viandes entières de bœuf et porc, 71 °C (160 °F) pour la viande hachée."
-  }
+  },
+  "label_from": "De",
+  "label_to": "En",
+  "label_result": "Résultat",
+  "unit_celsius": "Celsius",
+  "unit_fahrenheit": "Fahrenheit",
+  "unit_kelvin": "Kelvin"
 }

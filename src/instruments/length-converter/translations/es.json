@@ -45,5 +45,8 @@
     "tips_2": "Al convertir pies y pulgadas a pies decimales para cálculos, usa: pies decimales = pies + (pulgadas / 12). Luego convierte a metros: metros = pies decimales × 0,3048. Ejemplo: 5'9\" = 5 + 9/12 = 5,75 pies = 5,75 × 0,3048 = 1,7526 metros.",
     "tips_3": "Para compras internacionales de ropa y calzado, anota tus medidas personales en centímetros: tu altura en cm (pies×30,48 + pulgadas×2,54), tu entrepié en cm y la longitud de tu pie en cm. Las tallas europeas usan centímetros directamente para la altura y la longitud del pie.",
     "tips_4": "En construcción, verifica siempre si los planos usan pies-pulgadas o pies decimales antes de realizar cálculos. Los planos arquitectónicos en EE. UU. típicamente usan la notación pies-pulgadas (5'-6\"), mientras que los planos de ingeniería a menudo usan pies decimales (5,5'). Mezclarlos sin conversión es una fuente muy común de error de medición en las obras."
-  }
+  },
+  "label_from": "De",
+  "label_to": "A",
+  "label_result": "Resultado"
 }

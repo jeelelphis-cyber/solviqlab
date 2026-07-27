@@ -72,5 +72,7 @@
     "tips_2": "Dai priorità alle proteine ad ogni pasto, specialmente durante la restrizione calorica. La soglia minima per preservare i muscoli mentre si perde grasso è 1,6g di proteine per kg di peso corporeo al giorno — di più è meglio, fino a circa 2,4g/kg per gli atleti. Le proteine sono anche più sazianti dei carboidrati o dei grassi per caloria, rendendo più facile mantenere un deficit senza fame costante. Obiettivo pratico: punta a 25–40g di proteine per pasto.",
     "tips_3": "Non usare obiettivi calorici di 'perdita estrema' (−1.000 kcal/giorno) per più di 1–2 settimane alla volta senza supervisione professionale. Sebbene la rapida perdita di peso iniziale sia motivante, i deficit estremi sostenuti causano perdita muscolare sproporzionata, adattamento metabolico significativo, carenze nutrizionali e scarse prestazioni in allenamento. I deficit moderati di 300–500 kcal mantenuti costantemente producono risultati di composizione corporea a lungo termine migliori rispetto alla restrizione aggressiva a breve termine.",
     "tips_4": "Ricalcola il tuo fabbisogno calorico ogni 4–6 settimane durante le fasi attive di perdita o aumento di peso. Man mano che il tuo peso corporeo cambia, cambia anche il tuo BMR e TDEE. Una persona che ha perso 10 kg ha bisogno di meno calorie per mantenere il suo nuovo peso rispetto all'inizio. Non riuscire ad adeguare gli obiettivi calorici man mano che il peso cambia è una delle ragioni più comuni per cui la perdita di grasso si blocca — il vecchio obiettivo non è più un deficit rispetto al nuovo TDEE inferiore."
-  }
+  },
+  "section_weight_loss": "Perdita di peso",
+  "section_weight_gain": "Aumento di peso"
 }

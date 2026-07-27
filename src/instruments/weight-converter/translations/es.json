@@ -44,5 +44,8 @@
     "tips_2": "Para el dosificación de medicamentos en niños, confirma siempre si el peso del paciente está en kg o libras antes de calcular la dosis en mg/kg. En EE. UU., los padres a menudo dan el peso de los niños en libras; el software médico y las dosis generalmente usan kg. Una confusión no detectada produce una dosis más de 2 veces mayor que la correcta cuando se usa libras en lugar de kg.",
     "tips_3": "Al comprar carnes o mariscos en mercados de diferentes países, conoce los equivalentes de peso clave: 1 lb (libra) = 454 g ≈ 0,5 kg. Para porciones prácticas: 100 g de carne ≈ una porción pequeña de proteína. 200–250 g = una porción estándar de filete. 500 g = 1,1 lb. Si una receta especifica las carnes en libras y compras en un mercado con precios en kilogramos, usa la conversión × 0,454 para las libras a kilogramos.",
     "tips_4": "Los metales preciosos siempre se cotizan en onzas troy en los mercados internacionales. Al comprar oro o plata, confirma si el precio cotizado es por onza troy (31,1 g) o gramo. Una oferta de '60 USD por onza' en oro se refiere a onzas troy: el precio por gramo equivalente sería 60/31,1 = 1,93 USD/g. El símbolo de mercado internacional para el oro es 'XAU', con precios siempre en onzas troy."
-  }
+  },
+  "label_from": "De",
+  "label_to": "A",
+  "label_result": "Resultado"
 }

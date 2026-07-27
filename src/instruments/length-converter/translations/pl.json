@@ -44,5 +44,8 @@
     "tips_2": "Przy przeliczaniu stóp i cali na dziesiętne stopy do obliczeń: stopy dziesiętne = stopy + (cale / 12). Następnie na metry: metry = stopy dziesiętne × 0,3048. Przykład: 5'9\" = 5 + 9/12 = 5,75 stopy = 5,75 × 0,3048 = 1,7526 m. W drugą stronę: 1,80 m / 0,3048 = 5,906 stopy = 5 stóp 10,87 cala.",
     "tips_3": "Przy zakupach odzieży i obuwia z zagranicy warto znać swoje wymiary w cm: wzrost (stopy × 30,48 + cale × 2,54), długość kroku w cm, długość stopy w cm. Europejskie rozmiary używają cm dla wzrostu i długości stopy. Posiadanie tych przeliczeń pod ręką zapobiega najczęstszemu błędowi przy zakupach z rynku anglosaskiego.",
     "tips_4": "W budownictwie zawsze weryfikuj, czy rysunki używają notacji stopy-cale czy stóp dziesiętnych przed wykonaniem obliczeń. Rysunki architektoniczne z USA używają notacji stopy-cale (5'-6\"), rysunki inżynierskie często używają stóp dziesiętnych (5,5'). W Polsce dokumentacja budowlana jest wyłącznie metryczna — przy projektach z dokumentacją anglosaską konwertuj wszystko do milimetrów, które są standardem w polskich specyfikacjach budowlanych."
-  }
+  },
+  "label_from": "Z",
+  "label_to": "Do",
+  "label_result": "Wynik"
 }

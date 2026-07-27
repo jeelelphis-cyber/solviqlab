@@ -46,5 +46,15 @@
     "tips_2": "Dla nieregularnych pojemników (basen ze stopniem, pomieszczenie z wnęką), podziel przestrzeń na regularne kształty i zsumuj objętości. Basen o głębokości 1,0 m w części płytkiej i 2,0 m w głębokiej, z łagodnym spadem przez 8 m, można przybliżyć jako: prostopadłościan przy głębokości 1,0 m + klin (graniastosłup trójkątny) dla sekcji ze spadem. Dokładność zależy od regularności kształtu — im bardziej skomplikowany profil, tym więcej sekcji należy wyróżnić.",
     "tips_3": "Objętość rośnie proporcjonalnie do sześcianu wymiarów liniowych. Podwojenie wymiarów pojemnika zwiększa objętość 2³ = 8× — nie 2×. Jeśli każdy wymiar wzrośnie o 10%, objętość rośnie o 1,1³ = 1,331, czyli o 33,1%. Ta zależność ma praktyczne znaczenie przy projektowaniu opakowań: pudełko o 10% większe we wszystkich wymiarach pomieści o 33% więcej produktu — ważne przy optymalizacji kosztów logistycznych.",
     "tips_4": "Dla projektowania akwarium, pomocna zasada orientacyjna: 1 litr wody na 1 cm długości ciała dorosłej ryby (lub 1 galon na cal w wytycznych USA). Akwarium 100-litrowe może utrzymać ok. 100 cm ryb — np. 10 ryb o dorosłej długości ok. 10 cm. To przybliżona wskazówka zależna też od wydajności filtracji, gatunku ryb i ich zachowań terytorialnych. Rośliny akwatyczne i napowietrzanie zwiększają efektywną pojemność obsady."
-  }
+  },
+  "label_length": "Długość",
+  "label_width": "Szerokość",
+  "label_height": "Wysokość",
+  "label_radius": "Promień",
+  "shape_cube": "Sześcian",
+  "shape_rectangular_prism": "Graniastosłup prostokątny",
+  "shape_sphere": "Sfera",
+  "shape_cylinder": "Walec",
+  "shape_cone": "Stożek",
+  "shape_pyramid": "Piramida"
 }

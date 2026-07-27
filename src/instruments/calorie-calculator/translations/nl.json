@@ -72,5 +72,7 @@
     "tips_2": "Geef prioriteit aan eiwitten bij elke maaltijd, vooral tijdens caloriebeperking. De minimale drempel voor het behouden van spieren tijdens het verliezen van vet is 1.6g eiwit per kg lichaamsgewicht per dag — hoger is beter, tot ongeveer 2.4g/kg voor atleten. Eiwitten zijn ook meer verzadigend dan koolhydraten of vet per calorie, wat het makkelijker maakt om een tekort te behouden zonder constante honger. Praktisch doel: streef naar 25–40g eiwit per maaltijd.",
     "tips_3": "Gebruik geen 'extreem verlies' caloriedoelen (−1,000 kcal/dag) gedurende meer dan 1–2 weken achter elkaar zonder professioneel toezicht. Hoewel snel initieel gewichtsverlies motiverend aanvoelt, veroorzaken aanhoudende extreme tekorten onevenredig spierverlies, significante metabole adaptatie, voedingstekorten en slechte trainingsprestaties. Gematigde tekorten van 300–500 kcal die consistent worden volgehouden, leveren op de lange termijn betere resultaten op voor de lichaamssamenstelling dan agressieve kortetermijnbeperking.",
     "tips_4": "Herbereken elke 4 tot 6 weken je caloriebehoefte tijdens actieve fasen van gewichtsverlies of -toename. Naarmate je lichaamsgewicht verandert, verandert ook je BMR en TDEE. Iemand die 10 kg is afgevallen, heeft minder calorieën nodig om het nieuwe gewicht te behouden dan aan het begin. Het niet aanpassen van de caloriedoelen bij gewichtsverandering is een van de meest voorkomende redenen voor een plateau in vetverlies — het oude doel is geen tekort meer ten opzichte van de nieuwe, lagere TDEE."
-  }
+  },
+  "section_weight_loss": "Gewichtsverlies",
+  "section_weight_gain": "Gewichtstoename"
 }
