@@ -1,30 +1,44 @@
 'use client'
 import { useState, useRef } from 'react'
 import Link from 'next/link'
+import {
+  Search, LayoutGrid, Heart, TrendingUp, Calculator, ArrowLeftRight,
+  BarChart2, Lightbulb, MessageSquare,
+  Moon, Activity, Flame, Zap,
+  type LucideIcon,
+} from 'lucide-react'
 import { CalculatorCard } from './CalculatorCard'
 import { t } from '../../lib/ui-strings'
 import type { InstrumentMeta } from '../../lib/instruments'
 import { QUIZ_REGISTRY } from '@/lib/quiz/registry'
 
-const CATEGORY_CONFIG = [
-  { id: 'all',        icon: '✦',  label_key: 'tabAll' },
-  { id: 'health',     icon: '❤️', label_key: 'tabHealth' },
-  { id: 'finance',    icon: '💰', label_key: 'tabFinance' },
-  { id: 'math',       icon: '🧮', label_key: 'tabMath' },
-  { id: 'conversion', icon: '🔄', label_key: 'tabConversion' },
-] as const
+const CATEGORY_CONFIG: { id: string; Icon: LucideIcon; label_key: string }[] = [
+  { id: 'all',        Icon: LayoutGrid,     label_key: 'tabAll' },
+  { id: 'health',     Icon: Heart,          label_key: 'tabHealth' },
+  { id: 'finance',    Icon: TrendingUp,     label_key: 'tabFinance' },
+  { id: 'math',       Icon: Calculator,     label_key: 'tabMath' },
+  { id: 'conversion', Icon: ArrowLeftRight, label_key: 'tabConversion' },
+]
+
+const QUIZ_ICONS: Record<string, LucideIcon> = {
+  'sleep-quiz':   Moon,
+  'stress-quiz':  Activity,
+  'burnout-quiz': Flame,
+  'energy-quiz':  Zap,
+}
+
+const QUIZ_ICON_COLORS: Record<string, string> = {
+  'sleep-quiz':   'bg-indigo-50 dark:bg-indigo-900/20 text-indigo-500 dark:text-indigo-400',
+  'stress-quiz':  'bg-amber-50 dark:bg-amber-900/20 text-amber-500 dark:text-amber-400',
+  'burnout-quiz': 'bg-red-50 dark:bg-red-900/20 text-red-500 dark:text-red-400',
+  'energy-quiz':  'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-500 dark:text-emerald-400',
+}
 
 const FEATURED_QUIZ_SLUGS = ['sleep-quiz', 'stress-quiz', 'burnout-quiz', 'energy-quiz']
 
 const POPULAR_FIRST = [
-  'bmi-calculator',
-  'mortgage-calculator',
-  'percentage-calculator',
-  'loan-calculator',
-  'salary-calculator',
-  'tdee-calculator',
-  'tax-calculator',
-  'compound-interest-calculator',
+  'bmi-calculator', 'mortgage-calculator', 'percentage-calculator', 'loan-calculator',
+  'salary-calculator', 'tdee-calculator', 'tax-calculator', 'compound-interest-calculator',
 ]
 
 function sortByPopularity(instruments: InstrumentMeta[]) {
@@ -38,20 +52,13 @@ function sortByPopularity(instruments: InstrumentMeta[]) {
   })
 }
 
-export function HomeClient({
-  instruments,
-  lang,
-}: {
-  instruments: InstrumentMeta[]
-  lang: string
-}) {
+export function HomeClient({ instruments, lang }: { instruments: InstrumentMeta[]; lang: string }) {
   const s = t(lang)
   const [search, setSearch] = useState('')
   const [category, setCategory] = useState('all')
   const gridRef = useRef<HTMLDivElement>(null)
 
   const sorted = sortByPopularity(instruments)
-
   const filtered = sorted.filter(inst => {
     const matchesCategory = category === 'all' || inst.category === category
     const matchesSearch =
@@ -84,21 +91,26 @@ export function HomeClient({
           <p className="text-slate-300 text-sm mb-5 max-w-xl mx-auto">
             {s.heroSubtitle(instruments.length)}
           </p>
+
+          {/* Feature pills — Lucide icons, no emoji */}
           <div className="flex flex-wrap gap-2 justify-center mb-8">
             <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-600/25 border border-blue-400/30 text-blue-200 text-xs font-medium">
-              📊 {instruments.length}+ {s.heroPillCalc}
+              <BarChart2 className="w-3.5 h-3.5" />
+              {instruments.length}+ {s.heroPillCalc}
             </span>
             <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-violet-600/25 border border-violet-400/30 text-violet-200 text-xs font-medium">
-              🧠 {s.heroPillQuiz}
+              <Lightbulb className="w-3.5 h-3.5" />
+              {s.heroPillQuiz}
             </span>
             <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-600/25 border border-emerald-400/30 text-emerald-200 text-xs font-medium">
-              🤖 {s.heroPillCoach}
+              <MessageSquare className="w-3.5 h-3.5" />
+              {s.heroPillCoach}
             </span>
           </div>
 
-          {/* Search bar */}
+          {/* Search bar — Lucide Search icon */}
           <div className="relative max-w-xl mx-auto mb-6">
-            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg pointer-events-none">🔍</span>
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
             <input
               type="search"
               placeholder={s.searchPlaceholder}
@@ -108,7 +120,7 @@ export function HomeClient({
             />
           </div>
 
-          {/* Category tabs */}
+          {/* Category tabs — Lucide icons, clean labels */}
           <div className="flex flex-wrap gap-2 justify-center">
             {CATEGORY_CONFIG.map(cat => {
               const label = s[cat.label_key as keyof typeof s] as string
@@ -123,7 +135,7 @@ export function HomeClient({
                       : 'bg-white/10 text-slate-300 hover:bg-white/20 border border-white/10'
                   }`}
                 >
-                  <span>{cat.icon}</span>
+                  <cat.Icon className="w-3.5 h-3.5" />
                   <span>{label}</span>
                 </button>
               )
@@ -151,17 +163,23 @@ export function HomeClient({
             {FEATURED_QUIZ_SLUGS.map(slug => {
               const quiz = QUIZ_REGISTRY[slug]
               if (!quiz) return null
+              const QuizIcon = QUIZ_ICONS[slug] ?? Lightbulb
+              const iconColor = QUIZ_ICON_COLORS[slug] ?? 'bg-violet-50 dark:bg-violet-900/20 text-violet-500'
               return (
                 <Link
                   key={slug}
                   href={`/${lang}/quiz/${slug}`}
-                  className="flex flex-col gap-2 p-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-violet-300 dark:hover:border-violet-600 hover:shadow-sm transition-all group"
+                  className="flex flex-col gap-3 p-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-violet-300 dark:hover:border-violet-600 hover:shadow-sm transition-all group"
                 >
-                  <span className="text-2xl">{quiz.icon}</span>
+                  <div className={`w-9 h-9 rounded-xl flex items-center justify-center ${iconColor}`}>
+                    <QuizIcon className="w-4.5 h-4.5 w-[18px] h-[18px]" />
+                  </div>
                   <p className="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 leading-snug transition-colors">
                     {s.quizNames[slug] ?? quiz.title}
                   </p>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">{quiz.questions.length} questions · Free</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">
+                    {s.quizQuestionsLabel(quiz.questions.length)} · {s.quizFreeLabel}
+                  </p>
                 </Link>
               )
             })}
@@ -178,19 +196,16 @@ export function HomeClient({
       <div ref={gridRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <h2 className="sr-only">{s.featuredTitle}</h2>
 
-        {/* Result count + active filter */}
         <div className="flex items-center justify-between mb-6">
           <p className="text-sm text-slate-500 dark:text-slate-400">
-            {filtered.length === 1
-              ? s.countSingle(filtered.length)
-              : s.countPlural(filtered.length)}
+            {filtered.length === 1 ? s.countSingle(filtered.length) : s.countPlural(filtered.length)}
           </p>
           {search && (
             <button
               onClick={() => handleSearch('')}
-              className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+              className="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
             >
-              ✕ {search}
+              <span>×</span> {search}
             </button>
           )}
         </div>
@@ -207,7 +222,7 @@ export function HomeClient({
           </div>
         )}
 
-        {/* Trust bar — compact, after grid */}
+        {/* Trust bar */}
         <div className="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center gap-2 justify-center text-sm text-slate-400 dark:text-slate-500">
           <span>{s.sourcesLabel}</span>
           {['WHO', 'Mayo Clinic', 'CFPB', 'NIST', 'ISO'].map(src => (
