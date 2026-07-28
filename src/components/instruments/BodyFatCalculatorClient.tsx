@@ -101,7 +101,7 @@ export function BodyFatCalculatorClient({ translations, lang }: Props) {
 
         <div>
           <label className="block text-sm font-medium text-content-secondary mb-1">
-            {t('label_hip') ?? 'Hip Circumference'} <span className="text-content-tertiary">(cm, {t('label_women_only') ?? 'women only'})</span>
+            {t('label_hip') ?? 'Hip Circumference (women only)'} <span className="text-content-tertiary">(cm)</span>
           </label>
           <input type="number" value={hip} onChange={e => setHip(e.target.value)} min={40} max={200}
             placeholder="e.g. 95"
@@ -147,7 +147,9 @@ export function BodyFatCalculatorClient({ translations, lang }: Props) {
             </div>
             <div className="bg-surface-elevated rounded-lg p-3">
               <div className="text-xs text-content-tertiary mb-1">{t('label_category') ?? 'Category'}</div>
-              <div className="text-lg font-semibold text-content-primary">{result.category}</div>
+              <div className="text-lg font-semibold text-content-primary">
+                {t('cat_' + result.category.toLowerCase().replace(' ', '_')) ?? result.category}
+              </div>
             </div>
             {result.fatMass != null && (
               <div className="bg-surface-elevated rounded-lg p-3">
