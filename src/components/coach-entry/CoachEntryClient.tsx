@@ -47,10 +47,72 @@ function TypingDots() {
   )
 }
 
+// ── PRO Gate ──────────────────────────────────────────────────────────────────
+
+const PROMO_KEY = 'solviq_promo_activated'
+
+function isPro(): boolean {
+  try { return !!localStorage.getItem(PROMO_KEY) } catch { return false }
+}
+
+function ProGate({ name, lang, persona, onUnlock }: {
+  name: string; lang: string; persona: CoachPersonaConfig; onUnlock: () => void
+}) {
+  const [loading, setLoading] = useState(false)
+
+  function activate() {
+    setLoading(true)
+    setTimeout(() => {
+      try { localStorage.setItem(PROMO_KEY, '1') } catch { /* ignore */ }
+      onUnlock()
+    }, 800)
+  }
+
+  return (
+    <div className="rounded-2xl border border-violet-500/40 bg-slate-900 p-6 space-y-5 text-center">
+      <div className="space-y-1">
+        <p className="text-xs font-semibold text-violet-400 uppercase tracking-widest">SolviqLab PRO</p>
+        <p className="text-lg font-bold text-white leading-snug">
+          You've used your 3 free messages
+        </p>
+        <p className="text-sm text-slate-400">
+          Upgrade to keep chatting with {persona.name} and unlock your full plan.
+        </p>
+      </div>
+
+      <ul className="text-left space-y-2">
+        {[
+          `Unlimited messages with ${persona.name}`,
+          'Adaptive plan that updates weekly',
+          'Check-in reminders by email',
+          'Priority access to new features',
+        ].map(item => (
+          <li key={item} className="flex items-center gap-2 text-sm text-slate-300">
+            <span className="text-emerald-400 shrink-0">✓</span>
+            {item}
+          </li>
+        ))}
+      </ul>
+
+      <div className="space-y-2">
+        <button
+          onClick={activate}
+          disabled={loading}
+          className="w-full py-3 px-5 rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 text-white font-bold text-sm hover:opacity-90 active:scale-[0.98] transition-all disabled:opacity-60"
+        >
+          {loading ? 'Activating…' : 'Start 30 Days Free →'}
+        </button>
+        <p className="text-xs text-slate-500">No credit card required · Cancel anytime</p>
+      </div>
+    </div>
+  )
+}
+
 // ── Chat stage ────────────────────────────────────────────────────────────────
 
 type Message = { from: 'coach' | 'user'; text: string }
-const MAX_TURNS = 5
+const FREE_TURNS = 3
+const MAX_TURNS  = 5
 
 function ChatStage({ name, lang, persona }: { name: string; lang: string; persona: CoachPersonaConfig }) {
   const t = getT(lang)
@@ -58,11 +120,14 @@ function ChatStage({ name, lang, persona }: { name: string; lang: string; person
   const [messages, setMessages] = useState<Message[]>([
     { from: 'coach', text: buildPersonalizedOpening(name, lang, persona, t) },
   ])
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading]   = useState(false)
   const [userTurns, setUserTurns] = useState(0)
   const [showPlan, setShowPlan] = useState(false)
-  const bottomRef = useRef<HTMLDivElement>(null)
+  const [proUnlocked, setProUnlocked] = useState(() => isPro())
+  const bottomRef   = useRef<HTMLDivElement>(null)
   const graphContext = useRef('')
+
+  const limitReached = !proUnlocked && userTurns >= FREE_TURNS
 
   useEffect(() => { graphContext.current = readGraphContext() }, [])
 
@@ -71,7 +136,7 @@ function ChatStage({ name, lang, persona }: { name: string; lang: string; person
   }, [messages])
 
   const sendMessage = useCallback(async (userText: string) => {
-    if (!userText.trim() || loading) return
+    if (!userText.trim() || loading || limitReached) return
 
     const userMsg: Message = { from: 'user', text: userText.trim() }
     const newTurns = userTurns + 1
@@ -125,7 +190,7 @@ function ChatStage({ name, lang, persona }: { name: string; lang: string; person
     } catch {
       setMessages(m => [...m.slice(0, -1), { from: 'coach', text: t(`${persona.id}.chat.error`) }])
     } finally { setLoading(false) }
-  }, [loading, messages, name, lang, persona, userTurns, t])
+  }, [loading, limitReached, messages, name, lang, persona, userTurns, t])
 
   const planHref = `/${lang}/coach/${persona.id}/plan`
 
@@ -151,11 +216,17 @@ function ChatStage({ name, lang, persona }: { name: string; lang: string; person
         <div className="mt-2 p-5 rounded-2xl bg-slate-800 border border-slate-700 text-center">
           <p className="text-white font-semibold mb-1">{t(`${persona.id}.plan.ready`, { name })}</p>
           <p className="text-slate-400 text-sm mb-5">{t(`${persona.id}.plan.subtitle`)}</p>
-          <Link href={planHref} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-slate-500 to-slate-700 text-white font-semibold text-sm hover:opacity-90 transition-opacity"
-            style={{ background: `linear-gradient(to right, var(--tw-gradient-stops))` }}>
+          <Link href={planHref} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-slate-500 to-slate-700 text-white font-semibold text-sm hover:opacity-90 transition-opacity">
             {t(`${persona.id}.plan.cta`)}
           </Link>
         </div>
+      ) : limitReached ? (
+        <ProGate
+          name={name}
+          lang={lang}
+          persona={persona}
+          onUnlock={() => setProUnlocked(true)}
+        />
       ) : (
         <div className="pt-4 flex gap-2 border-t border-slate-800">
           <textarea
