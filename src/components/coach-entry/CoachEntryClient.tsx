@@ -435,10 +435,20 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
   const persona: CoachPersonaConfig = PERSONAS[personaId]
   const t = getT(lang)
   const pid = persona.id
-  const [step, setStep] = useState(0)
+  const STATE_KEY = `coach_state_${pid}`
+
+  const [step, setStep] = useState(() => {
+    try { return Number(JSON.parse(localStorage.getItem(STATE_KEY) ?? '{}').step ?? 0) } catch { return 0 }
+  })
   const [animating, setAnimating] = useState(false)
-  const [name, setName] = useState('')
+  const [name, setName] = useState(() => {
+    try { return JSON.parse(localStorage.getItem(STATE_KEY) ?? '{}').name ?? '' } catch { return '' }
+  })
   const [hasResults, setHasResults] = useState(false)
+
+  function persistState(newStep: number, newName: string) {
+    try { localStorage.setItem(STATE_KEY, JSON.stringify({ step: newStep, name: newName })) } catch { /* ignore */ }
+  }
 
   useEffect(() => {
     try {
@@ -463,13 +473,19 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
 
   function handleYes() {
     setAnimating(true)
-    setTimeout(() => { setStep(s => s + 1); setAnimating(false) }, 400)
+    setTimeout(() => {
+      setStep(s => { const next = s + 1; persistState(next, name); return next })
+      setAnimating(false)
+    }, 400)
   }
 
   function handleName(n: string) {
     setName(n)
     setAnimating(true)
-    setTimeout(() => { setStep(s => s + 1); setAnimating(false) }, 300)
+    setTimeout(() => {
+      setStep(s => { const next = s + 1; persistState(next, n); return next })
+      setAnimating(false)
+    }, 300)
   }
 
   return (
