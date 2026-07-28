@@ -35,11 +35,30 @@ function readGraphContext(): string {
 
 // ── Shared sub-components ─────────────────────────────────────────────────────
 
-function Avatar({ gradient, letter, size = 36 }: { gradient: string; letter: string; size?: number }) {
+const GRADIENT_MAP: Record<string, string> = {
+  'from-rose-400 to-purple-600':  'linear-gradient(135deg, #fb7185, #9333ea)',
+  'from-blue-400 to-cyan-600':    'linear-gradient(135deg, #60a5fa, #0891b2)',
+  'from-emerald-400 to-teal-600': 'linear-gradient(135deg, #34d399, #0d9488)',
+  'from-amber-400 to-orange-600': 'linear-gradient(135deg, #fbbf24, #ea580c)',
+  'from-violet-400 to-purple-600':'linear-gradient(135deg, #a78bfa, #9333ea)',
+}
+
+function Avatar({ gradient, letter, photoUrl, size = 36 }: {
+  gradient: string; letter: string; photoUrl?: string; size?: number
+}) {
+  const bg = GRADIENT_MAP[gradient] ?? 'linear-gradient(135deg, #fb7185, #9333ea)'
+  if (photoUrl) {
+    return (
+      <div className="rounded-full overflow-hidden shrink-0 bg-slate-700"
+        style={{ width: size, height: size }}>
+        <img src={photoUrl} alt={letter} className="w-full h-full object-cover" />
+      </div>
+    )
+  }
   return (
     <div
-      className={`rounded-full bg-gradient-to-br ${gradient} flex items-center justify-center text-white font-bold shrink-0`}
-      style={{ width: size, height: size, fontSize: size * 0.4 }}
+      className="rounded-full flex items-center justify-center text-white font-bold shrink-0"
+      style={{ width: size, height: size, fontSize: size * 0.42, background: bg }}
     >
       {letter}
     </div>
@@ -299,15 +318,19 @@ function ChatStage({ name, lang, persona }: { name: string; lang: string; person
           <span className="ml-2">{persona.name} is thinking…</span>
         </div>
       )}
-      <div className="flex flex-col gap-4 pb-2">
+      <div className="flex flex-col gap-3 pb-2">
         {messages.map((msg, i) => (
-          <div key={i} className={`flex ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}>
-            {msg.from === 'coach' && <Avatar gradient={persona.avatarGradient} letter={persona.avatarLetter} size={32} />}
-            <div className={`max-w-[80%] px-4 py-3 rounded-2xl text-sm leading-relaxed whitespace-pre-line ${
+          <div key={i} className={`flex items-end gap-2 ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}>
+            {msg.from === 'coach' && (
+              <div className="shrink-0 self-end mb-0.5">
+                <Avatar gradient={persona.avatarGradient} letter={persona.avatarLetter} photoUrl={persona.photoUrl} size={28} />
+              </div>
+            )}
+            <div className={`max-w-[78%] px-4 py-2.5 text-sm leading-relaxed whitespace-pre-line ${
               msg.from === 'coach'
-                ? 'bg-slate-800 text-slate-100 rounded-tl-sm ml-2'
-                : 'bg-gradient-to-r from-slate-600 to-slate-700 text-white rounded-tr-sm'
-            }`} style={msg.from === 'user' ? {} : {}}>
+                ? 'bg-slate-800 text-slate-100 rounded-2xl rounded-bl-sm'
+                : 'bg-violet-600 text-white rounded-2xl rounded-br-sm'
+            }`}>
               {msg.text || <TypingDots />}
             </div>
           </div>
@@ -376,7 +399,7 @@ function NameStage({ onDone, lang, persona }: { onDone: (name: string) => void; 
   return (
     <div className="flex flex-col gap-6">
       <div className="flex items-center gap-3">
-        <Avatar gradient={persona.avatarGradient} letter={persona.avatarLetter} size={48} />
+        <Avatar gradient={persona.avatarGradient} letter={persona.avatarLetter} photoUrl={persona.photoUrl} size={48} />
         <div>
           <p className="text-white font-semibold">{persona.name}</p>
           <p className="text-slate-400 text-xs">{t(`${pid}.name.subtitle`)}</p>
@@ -452,9 +475,20 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
   return (
     <div className="fixed inset-0 z-50 bg-slate-950 text-white flex flex-col" style={{ height: '100dvh' }}>
       {/* Top bar */}
-      <div className="flex items-center justify-between px-5 py-4 border-b border-slate-800 shrink-0">
+      <div className="flex items-center justify-between px-4 py-3 border-b border-slate-800 shrink-0">
         <div className="flex items-center gap-3">
-          <Avatar gradient={persona.avatarGradient} letter={persona.avatarLetter} size={36} />
+          {isChatStep && (
+            <button
+              onClick={() => window.history.length > 1 ? window.history.back() : window.location.assign(`/${lang}/dashboard`)}
+              className="flex items-center justify-center w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors shrink-0"
+              aria-label="Go back"
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          )}
+          <Avatar gradient={persona.avatarGradient} letter={persona.avatarLetter} photoUrl={persona.photoUrl} size={36} />
           <div>
             <p className="text-white font-semibold text-sm">
               {name ? `${persona.name} — ${name}` : persona.name}
@@ -481,7 +515,7 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
               ))}
             </div>
             <div className="flex items-center gap-3">
-              <Avatar gradient={persona.avatarGradient} letter={persona.avatarLetter} size={48} />
+              <Avatar gradient={persona.avatarGradient} letter={persona.avatarLetter} photoUrl={persona.photoUrl} size={48} />
               <div>
                 <p className="text-white font-semibold">{persona.name}</p>
                 <p className="text-slate-400 text-xs">{hasResults ? t(`${pid}.step.reviewed`) : t(`${pid}.header.subtitle`)}</p>
