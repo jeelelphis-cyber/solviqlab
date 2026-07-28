@@ -359,5 +359,14 @@
   "dashboard.coach.mia.role": "Health Coach",
   "dashboard.coach.mia.body": "I reviewed your data. Ready to build a personalized health plan together.",
   "dashboard.coach.alex.role": "Finance Coach",
-  "dashboard.coach.alex.body": "I've looked at your numbers. Ready to build a financial strategy that actually works."
+  "dashboard.coach.alex.body": "I've looked at your numbers. Ready to build a financial strategy that actually works.",
+  "coach.pro.used_free": "You've used your 3 free messages",
+  "coach.pro.upgrade_desc": "Upgrade to keep chatting with {{name}} and unlock your full plan.",
+  "coach.pro.unlimited": "Unlimited messages with {{name}}",
+  "coach.pro.adaptive_plan": "Adaptive plan that updates weekly",
+  "coach.pro.reminders": "Check-in reminders by email",
+  "coach.pro.priority": "Priority access to new features",
+  "coach.pro.cta": "Start 30 Days Free →",
+  "coach.pro.activating": "Activating…",
+  "coach.pro.no_cc": "No credit card required · Cancel anytime"
 }

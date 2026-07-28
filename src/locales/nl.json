@@ -359,5 +359,14 @@
   "dashboard.coach.mia.role": "Gezondheidscoach",
   "dashboard.coach.mia.body": "Ik heb je gegevens bekeken. Klaar om samen een persoonlijk gezondheidsplan te bouwen.",
   "dashboard.coach.alex.role": "Financieel coach",
-  "dashboard.coach.alex.body": "Ik heb je cijfers bekeken. Klaar om een financiële strategie te bouwen die echt werkt."
+  "dashboard.coach.alex.body": "Ik heb je cijfers bekeken. Klaar om een financiële strategie te bouwen die echt werkt.",
+  "coach.pro.used_free": "Je hebt je 3 gratis berichten gebruikt",
+  "coach.pro.upgrade_desc": "Upgrade om door te gaan met chatten met {{name}} en je volledige plan te ontgrendelen.",
+  "coach.pro.unlimited": "Onbeperkte berichten met {{name}}",
+  "coach.pro.adaptive_plan": "Adaptief plan dat wekelijks wordt bijgewerkt",
+  "coach.pro.reminders": "Incheckerherinneringen per e-mail",
+  "coach.pro.priority": "Prioriteitstoegang tot nieuwe functies",
+  "coach.pro.cta": "Start 30 dagen gratis →",
+  "coach.pro.activating": "Activeren…",
+  "coach.pro.no_cc": "Geen creditcard vereist · Annuleer wanneer je wilt"
 }

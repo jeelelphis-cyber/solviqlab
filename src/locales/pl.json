@@ -359,5 +359,14 @@
   "dashboard.coach.mia.role": "Coach zdrowia",
   "dashboard.coach.mia.body": "Przejrzałam Twoje dane. Gotowa wspólnie zbudować spersonalizowany plan zdrowotny.",
   "dashboard.coach.alex.role": "Coach finansowy",
-  "dashboard.coach.alex.body": "Przejrzałem Twoje liczby. Gotowy zbudować strategię finansową, która naprawdę działa."
+  "dashboard.coach.alex.body": "Przejrzałem Twoje liczby. Gotowy zbudować strategię finansową, która naprawdę działa.",
+  "coach.pro.used_free": "Wykorzystałeś 3 darmowe wiadomości",
+  "coach.pro.upgrade_desc": "Uaktualnij, aby kontynuować rozmowę z {{name}} i odblokować pełny plan.",
+  "coach.pro.unlimited": "Nieograniczone wiadomości z {{name}}",
+  "coach.pro.adaptive_plan": "Adaptacyjny plan aktualizowany co tydzień",
+  "coach.pro.reminders": "Przypomnienia o odprawie e-mailem",
+  "coach.pro.priority": "Priorytetowy dostęp do nowych funkcji",
+  "coach.pro.cta": "Zacznij 30 dni za darmo →",
+  "coach.pro.activating": "Aktywacja…",
+  "coach.pro.no_cc": "Bez karty kredytowej · Anuluj w dowolnym momencie"
 }

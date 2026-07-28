@@ -86,6 +86,7 @@ function isPro(): boolean {
 function ProGate({ name, lang, persona, onUnlock }: {
   name: string; lang: string; persona: CoachPersonaConfig; onUnlock: () => void
 }) {
+  const t = getT(lang)
   const [loading, setLoading] = useState(false)
 
   function activate() {
@@ -96,25 +97,27 @@ function ProGate({ name, lang, persona, onUnlock }: {
     }, 800)
   }
 
+  const features = [
+    t('coach.pro.unlimited', { name: persona.name }),
+    t('coach.pro.adaptive_plan'),
+    t('coach.pro.reminders'),
+    t('coach.pro.priority'),
+  ].filter(Boolean) as string[]
+
   return (
     <div className="rounded-2xl border border-violet-500/40 bg-slate-900 p-6 space-y-5 text-center">
       <div className="space-y-1">
         <p className="text-xs font-semibold text-violet-400 uppercase tracking-widest">SolviqLab PRO</p>
         <p className="text-lg font-bold text-white leading-snug">
-          You've used your 3 free messages
+          {t('coach.pro.used_free')}
         </p>
         <p className="text-sm text-slate-400">
-          Upgrade to keep chatting with {persona.name} and unlock your full plan.
+          {t('coach.pro.upgrade_desc', { name: persona.name })}
         </p>
       </div>
 
       <ul className="text-left space-y-2">
-        {[
-          `Unlimited messages with ${persona.name}`,
-          'Adaptive plan that updates weekly',
-          'Check-in reminders by email',
-          'Priority access to new features',
-        ].map(item => (
+        {features.map(item => (
           <li key={item} className="flex items-center gap-2 text-sm text-slate-300">
             <span className="text-emerald-400 shrink-0">✓</span>
             {item}
@@ -128,9 +131,9 @@ function ProGate({ name, lang, persona, onUnlock }: {
           disabled={loading}
           className="w-full py-3 px-5 rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 text-white font-bold text-sm hover:opacity-90 active:scale-[0.98] transition-all disabled:opacity-60"
         >
-          {loading ? 'Activating…' : 'Start 30 Days Free →'}
+          {loading ? t('coach.pro.activating') : t('coach.pro.cta')}
         </button>
-        <p className="text-xs text-slate-500">No credit card required · Cancel anytime</p>
+        <p className="text-xs text-slate-500">{t('coach.pro.no_cc')}</p>
       </div>
     </div>
   )
@@ -437,13 +440,21 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
   const pid = persona.id
   const STATE_KEY = `coach_state_${pid}`
 
-  const [step, setStep] = useState(() => {
-    try { return Number(JSON.parse(localStorage.getItem(STATE_KEY) ?? '{}').step ?? 0) } catch { return 0 }
-  })
+  const [step, setStep] = useState(0)
   const [animating, setAnimating] = useState(false)
-  const [name, setName] = useState(() => {
-    try { return JSON.parse(localStorage.getItem(STATE_KEY) ?? '{}').name ?? '' } catch { return '' }
-  })
+  const [name, setName] = useState('')
+  const [stateLoaded, setStateLoaded] = useState(false)
+
+  // Load persisted state from localStorage after mount (avoids SSR hydration mismatch)
+  useEffect(() => {
+    try {
+      const saved = JSON.parse(localStorage.getItem(STATE_KEY) ?? '{}')
+      if (saved.step) setStep(Number(saved.step))
+      if (saved.name) setName(saved.name)
+    } catch { /* ignore */ }
+    setStateLoaded(true)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
   const [hasResults, setHasResults] = useState(false)
 
   function persistState(newStep: number, newName: string) {
@@ -488,14 +499,34 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
     }, 300)
   }
 
+  if (!stateLoaded) {
+    return (
+      <div className="fixed inset-0 z-50 bg-slate-950 flex items-center justify-center">
+        <TypingDots />
+      </div>
+    )
+  }
+
   return (
     <div className="fixed inset-0 z-50 bg-slate-950 text-white flex flex-col" style={{ height: '100dvh' }}>
       {/* Top bar */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-slate-800 shrink-0">
         <div className="flex items-center gap-3">
-          {isChatStep && (
             <button
-              onClick={() => window.history.length > 1 ? window.history.back() : window.location.assign(`/${lang}/dashboard`)}
+              onClick={() => {
+                if (isChatStep) {
+                  // In chat: go back to previous page
+                  window.history.length > 1 ? window.history.back() : window.location.assign(`/${lang}/dashboard`)
+                } else if (step > 0) {
+                  // In steps: go back one step
+                  const prev = step - 1
+                  setStep(prev)
+                  persistState(prev, name)
+                } else {
+                  // At step 0: go back to calculator
+                  window.history.length > 1 ? window.history.back() : window.location.assign(`/${lang}`)
+                }
+              }}
               className="flex items-center justify-center w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors shrink-0"
               aria-label="Go back"
             >
@@ -503,7 +534,6 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
                 <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
-          )}
           <Avatar gradient={persona.avatarGradient} letter={persona.avatarLetter} photoUrl={persona.photoUrl} size={36} />
           <div>
             <p className="text-white font-semibold text-sm">

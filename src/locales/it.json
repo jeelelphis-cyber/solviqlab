@@ -359,5 +359,14 @@
   "dashboard.coach.mia.role": "Coach della salute",
   "dashboard.coach.mia.body": "Ho esaminato i tuoi dati. Pronta a costruire insieme un piano di salute personalizzato.",
   "dashboard.coach.alex.role": "Coach finanziario",
-  "dashboard.coach.alex.body": "Ho esaminato i tuoi numeri. Pronto a costruire una strategia finanziaria che funzioni davvero."
+  "dashboard.coach.alex.body": "Ho esaminato i tuoi numeri. Pronto a costruire una strategia finanziaria che funzioni davvero.",
+  "coach.pro.used_free": "Hai usato i tuoi 3 messaggi gratuiti",
+  "coach.pro.upgrade_desc": "Aggiorna per continuare a chattare con {{name}} e sbloccare il tuo piano completo.",
+  "coach.pro.unlimited": "Messaggi illimitati con {{name}}",
+  "coach.pro.adaptive_plan": "Piano adattivo aggiornato settimanalmente",
+  "coach.pro.reminders": "Promemoria di check-in via email",
+  "coach.pro.priority": "Accesso prioritario alle nuove funzionalità",
+  "coach.pro.cta": "Inizia 30 giorni gratis →",
+  "coach.pro.activating": "Attivazione…",
+  "coach.pro.no_cc": "Nessuna carta di credito · Annulla quando vuoi"
 }

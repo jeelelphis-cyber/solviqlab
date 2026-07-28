@@ -359,5 +359,14 @@
   "dashboard.coach.mia.role": "Sağlık koçu",
   "dashboard.coach.mia.body": "Verilerini inceledim. Birlikte kişisel bir sağlık planı oluşturmaya hazırım.",
   "dashboard.coach.alex.role": "Finans koçu",
-  "dashboard.coach.alex.body": "Rakamlarını inceledim. Gerçekten işe yarayan bir finansal strateji oluşturmaya hazırım."
+  "dashboard.coach.alex.body": "Rakamlarını inceledim. Gerçekten işe yarayan bir finansal strateji oluşturmaya hazırım.",
+  "coach.pro.used_free": "3 ücretsiz mesajınızı kullandınız",
+  "coach.pro.upgrade_desc": "{{name}} ile sohbet etmeye devam etmek ve tam planınızı açmak için yükseltin.",
+  "coach.pro.unlimited": "{{name}} ile sınırsız mesaj",
+  "coach.pro.adaptive_plan": "Haftalık güncellenen uyarlanabilir plan",
+  "coach.pro.reminders": "E-posta ile kontrol hatırlatıcıları",
+  "coach.pro.priority": "Yeni özelliklere öncelikli erişim",
+  "coach.pro.cta": "30 Gün Ücretsiz Başlat →",
+  "coach.pro.activating": "Etkinleştiriliyor…",
+  "coach.pro.no_cc": "Kredi kartı gerekmez · İstediğiniz zaman iptal edin"
 }
