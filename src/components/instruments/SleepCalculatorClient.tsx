@@ -116,8 +116,10 @@ export function SleepCalculatorClient({ translations, lang }: Props) {
     setTimeout(() => setCopied(false), 2000)
   }
 
-  const timeLabel = mode === 'waketime' ? 'Wake-up Time' : 'Bedtime'
-  const resultLabel = mode === 'waketime' ? 'Go to sleep at:' : 'Wake up at:'
+  const timeLabel = t('label_targetTime') ?? (mode === 'waketime' ? 'Wake-up Time' : 'Bedtime')
+  const resultLabel = mode === 'waketime'
+    ? (t('label_result_go_sleep') ?? 'Go to sleep at:')
+    : (t('label_result_wake_up') ?? 'Wake up at:')
 
   return (
     <div className="space-y-6">
@@ -191,11 +193,11 @@ export function SleepCalculatorClient({ translations, lang }: Props) {
           <div className="bg-green-50 dark:bg-green-950/40 border border-green-300 dark:border-green-700 rounded-xl p-5">
             <div className="flex items-center gap-2 mb-1">
               <span className="text-xl">😴</span>
-              <span className="text-sm font-semibold uppercase tracking-wide text-green-700 dark:text-green-400">Best Option</span>
+              <span className="text-sm font-semibold uppercase tracking-wide text-green-700 dark:text-green-400">{t('label_best_option') ?? 'Best Option'}</span>
             </div>
             <div className="text-3xl font-bold text-green-700 dark:text-green-300">{result.cycle5Time}</div>
             <div className="text-sm text-green-600 dark:text-green-400 mt-1">
-              {resultLabel.replace(':', '')} — 5 cycles (7.5 hours)
+              {resultLabel.replace(':', '')} — {t('label_cycle5') ?? '5 Cycles — 7.5 hours'}
             </div>
             <SleepCycleBar mode={mode} />
           </div>
@@ -237,9 +239,9 @@ export function SleepCalculatorClient({ translations, lang }: Props) {
           {/* Interpretation */}
           <div className="bg-surface-card border border-border-default rounded-xl p-5">
             <p className="text-sm text-content-secondary mb-2">
-              Each sleep cycle lasts 90 minutes and includes light sleep, deep sleep (NREM), and REM. Waking mid-cycle causes grogginess — timing your alarm to cycle boundaries is the key to waking up refreshed.
+              {t('label_cycle_explanation') ?? 'Each sleep cycle lasts 90 minutes and includes light sleep, deep sleep (NREM), and REM. Waking mid-cycle causes grogginess — timing your alarm to cycle boundaries is the key to waking up refreshed.'}
             </p>
-            <p className="text-xs text-content-tertiary italic">{result.recommendation}</p>
+            <p className="text-xs text-content-tertiary italic">{t('label_recommendation') ?? result.recommendation}</p>
           </div>
 
           {/* Actions */}
@@ -254,7 +256,7 @@ export function SleepCalculatorClient({ translations, lang }: Props) {
               onClick={() => window.print()}
               className="flex items-center gap-1.5 px-4 py-2 text-sm border border-border-default rounded-lg text-content-secondary hover:text-content-primary hover:border-border-hover transition-colors"
             >
-              ⎙ Print
+              {s.print}
             </button>
           </div>
           <ShareButtons text={`My optimal sleep time: ${result.cycle5Time} (5 cycles) — calculated free at SolviqLab`} className="mt-2" />
