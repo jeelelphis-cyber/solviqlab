@@ -17,6 +17,7 @@
     "sex_label": "Płeć (opcjonalnie)",
     "sex_male": "Mężczyzna",
     "sex_female": "Kobieta",
+    "sex_select": "— Wybierz —",
     "sex_other": "Inna / Wolę nie podawać",
     "unit_metric": "Metryczne (cm, kg)",
     "unit_imperial": "Imperialne (stopy, funty)",

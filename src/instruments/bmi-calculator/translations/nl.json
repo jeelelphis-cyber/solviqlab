@@ -17,6 +17,7 @@
     "sex_label": "Geslacht (optioneel)",
     "sex_male": "Man",
     "sex_female": "Vrouw",
+    "sex_select": "— Selecteer —",
     "sex_other": "Anders / Zeg ik liever niet",
     "unit_metric": "Metrisch (cm, kg)",
     "unit_imperial": "Imperiaal (ft, lb)",

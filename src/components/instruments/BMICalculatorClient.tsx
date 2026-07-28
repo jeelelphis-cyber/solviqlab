@@ -402,7 +402,7 @@ export function BMICalculatorClient({ translations, lang }: Props) {
               value={heightCm}
               onChange={e => setHeightCm(e.target.value)}
               onBlur={() => setTouched(t => ({ ...t, height_cm: true }))}
-              placeholder="e.g. 175 cm"
+              placeholder={form['height_placeholder_cm'] ?? 'e.g. 175'}
               min={50} max={250}
               aria-label="Height in centimeters"
               aria-invalid={!!errors['height_cm']}
@@ -467,7 +467,7 @@ export function BMICalculatorClient({ translations, lang }: Props) {
         {/* Age (optional) */}
         <div>
           <label className="flex items-center text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">
-            {form['age_label'] ?? 'Age'} <span className="text-slate-400 dark:text-slate-500 font-normal ml-1">({s.optional})</span>
+            {form['age_label'] ?? 'Age (optional)'}
             <Tooltip text="Used to estimate body fat % via the Deurenberg formula. Not required for BMI." />
           </label>
           <input
@@ -475,7 +475,7 @@ export function BMICalculatorClient({ translations, lang }: Props) {
             inputMode="numeric"
             value={age}
             onChange={e => setAge(e.target.value)}
-            placeholder="e.g. 30"
+            placeholder={form['age_placeholder'] ?? 'e.g. 30'}
             min={18} max={120}
             aria-label="Age in years (optional)"
             className={fieldClass('age', age)}
@@ -485,7 +485,7 @@ export function BMICalculatorClient({ translations, lang }: Props) {
         {/* Sex (optional) */}
         <div>
           <label className="flex items-center text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">
-            {form['sex_label'] ?? 'Sex'} <span className="text-slate-400 dark:text-slate-500 font-normal ml-1">({s.optional})</span>
+            {form['sex_label'] ?? 'Sex (optional)'}
             <Tooltip text="Used together with age to estimate body fat %. Not used in BMI calculation itself." />
           </label>
           <select
@@ -494,7 +494,7 @@ export function BMICalculatorClient({ translations, lang }: Props) {
             aria-label="Biological sex (optional)"
             className="w-full px-3 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors text-base min-h-[44px]"
           >
-            <option value="">— Select —</option>
+            <option value="">{form['sex_select'] ?? '— Select —'}</option>
             <option value="male">{form['sex_male'] ?? 'Male'}</option>
             <option value="female">{form['sex_female'] ?? 'Female'}</option>
             <option value="other">{form['sex_other'] ?? 'Other / Prefer not to say'}</option>
