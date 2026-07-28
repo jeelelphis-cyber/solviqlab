@@ -57,3 +57,41 @@ create policy "favorites_own" on public.favorites
 create index if not exists results_user_id_idx   on public.results(user_id);
 create index if not exists results_cluster_idx   on public.results(cluster);
 create index if not exists favorites_user_id_idx on public.favorites(user_id);
+
+-- Coach conversations (persistent memory)
+create table if not exists public.conversations (
+  id          uuid primary key default gen_random_uuid(),
+  user_id     uuid references public.users(id) on delete cascade,
+  coach_id    text not null,
+  role        text not null check (role in ('coach', 'user')),
+  content     text not null,
+  created_at  timestamptz default now()
+);
+
+-- User's coach selections (who they chose)
+create table if not exists public.user_coach_selections (
+  user_id     uuid references public.users(id) on delete cascade,
+  coach_id    text not null,
+  cluster     text,
+  selected_at timestamptz default now(),
+  primary key (user_id, coach_id)
+);
+
+-- RLS for new tables
+alter table public.conversations          enable row level security;
+alter table public.user_coach_selections  enable row level security;
+
+create policy "conversations_own" on public.conversations
+  for all using (
+    user_id = (select id from public.users where google_id = current_setting('app.google_id', true))
+  );
+
+create policy "coach_selections_own" on public.user_coach_selections
+  for all using (
+    user_id = (select id from public.users where google_id = current_setting('app.google_id', true))
+  );
+
+-- Indexes
+create index if not exists conversations_user_coach_idx on public.conversations(user_id, coach_id);
+create index if not exists conversations_created_at_idx on public.conversations(created_at);
+create index if not exists coach_selections_user_idx    on public.user_coach_selections(user_id);

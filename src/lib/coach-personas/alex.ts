@@ -12,6 +12,10 @@ export const ALEX_PERSONA: CoachPersonaConfig = {
   avatarGradient: 'from-blue-400 to-cyan-600',
   avatarLetter: 'A',
   accentColor: 'blue',
+  shortBio: 'Finance strategist with 10 years helping people take control of their money. Practical, non-judgmental, focused on what works for your life.',
+  personalityTags: ['analytical', 'direct', 'non-judgmental', 'practical'],
+  specialties: ['budgeting', 'debt freedom', 'savings goals', 'investment basics'],
+  communicationStyle: 'analytical',
   clusters: ['finance'],
   relevantSlugs: [
     'mortgage-calculator', 'loan-calculator', 'compound-interest-calculator', 'savings-calculator',
@@ -23,7 +27,7 @@ export const ALEX_PERSONA: CoachPersonaConfig = {
     { questionKey: 'alex.step3.question', contextKey: 'alex.step3.context', yesKey: 'alex.step3.yes' },
   ],
   openingKey: 'alex.chat.opening',
-  systemPromptTemplate: (name, lang, graphContext) => {
+  systemPromptTemplate: (name, lang, graphContext, _memory) => {
     const language = LANG_NAMES[lang] ?? 'English'
     return `LANGUAGE RULE: You MUST respond ONLY in ${language}. Every single word must be in ${language}. Never use English or any other language.
 

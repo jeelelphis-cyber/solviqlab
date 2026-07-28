@@ -1,11 +1,20 @@
 'use client'
 import { useState, useRef, useEffect, useCallback } from 'react'
 import Link from 'next/link'
+import { useSession } from 'next-auth/react'
 import { getT } from '@/lib/i18n/ui'
 import { PERSONAS } from '@/lib/coach-personas'
 import type { PersonaId } from '@/lib/coach-personas'
-import type { CoachPersonaConfig } from '@/lib/coach-personas/types'
+import type { CoachPersonaConfig, CoachMemory } from '@/lib/coach-personas/types'
 import { buildPersonalizedOpening } from '@/lib/coach/coach-utils'
+import {
+  loadConversation,
+  saveMessage,
+  saveMessages,
+  getDaysSinceLastConversation,
+  getRecentTopics,
+  saveCoachSelection,
+} from '@/lib/supabase/conversations'
 
 // ── Graph context ─────────────────────────────────────────────────────────────
 
@@ -108,6 +117,19 @@ function ProGate({ name, lang, persona, onUnlock }: {
   )
 }
 
+// ── Detect source from URL ────────────────────────────────────────────────────
+
+function detectSource(): CoachMemory['source'] {
+  try {
+    const params = new URLSearchParams(window.location.search)
+    const src = params.get('source')
+    if (src === 'email_day3')  return 'email_day3'
+    if (src === 'email_day7')  return 'email_day7'
+    if (src === 'email_day30') return 'email_day30'
+  } catch { /* ignore */ }
+  return 'direct'
+}
+
 // ── Chat stage ────────────────────────────────────────────────────────────────
 
 type Message = { from: 'coach' | 'user'; text: string }
@@ -116,20 +138,75 @@ const MAX_TURNS  = 5
 
 function ChatStage({ name, lang, persona }: { name: string; lang: string; persona: CoachPersonaConfig }) {
   const t = getT(lang)
+  const { data: session } = useSession()
   const [input, setInput] = useState('')
-  const [messages, setMessages] = useState<Message[]>([
-    { from: 'coach', text: buildPersonalizedOpening(name, lang, persona, t) },
-  ])
+  const [messages, setMessages] = useState<Message[]>([])
   const [loading, setLoading]   = useState(false)
   const [userTurns, setUserTurns] = useState(0)
   const [showPlan, setShowPlan] = useState(false)
   const [proUnlocked, setProUnlocked] = useState(() => isPro())
-  const bottomRef   = useRef<HTMLDivElement>(null)
+  const [historyLoaded, setHistoryLoaded] = useState(false)
+  const bottomRef    = useRef<HTMLDivElement>(null)
   const graphContext = useRef('')
+  const coachMemory  = useRef<CoachMemory | null>(null)
+  const userId       = useRef<string | null>(null)
 
   const limitReached = !proUnlocked && userTurns >= FREE_TURNS
 
   useEffect(() => { graphContext.current = readGraphContext() }, [])
+
+  // Load conversation history from Supabase (logged-in users)
+  useEffect(() => {
+    if (historyLoaded) return
+
+    async function init() {
+      const user = session?.user as { id?: string } | undefined
+      const uid = user?.id ?? null
+      userId.current = uid
+
+      if (uid) {
+        // Save coach selection
+        await saveCoachSelection({ user_id: uid, coach_id: persona.id, cluster: persona.clusters[0] })
+
+        // Build memory context
+        const [days, topics] = await Promise.all([
+          getDaysSinceLastConversation(uid, persona.id),
+          getRecentTopics(uid, persona.id),
+        ])
+
+        coachMemory.current = {
+          daysSinceLastVisit: days,
+          previousTopics: topics,
+          activePlan: null,
+          source: detectSource(),
+        }
+
+        // Load history
+        const history = await loadConversation(uid, persona.id)
+
+        if (history.length > 0) {
+          setMessages(history.map(m => ({ from: m.role, text: m.content })))
+          const userCount = history.filter(m => m.role === 'user').length
+          setUserTurns(userCount)
+        } else {
+          // First visit — personalized opening
+          const opening = buildPersonalizedOpening(name, lang, persona, t)
+          setMessages([{ from: 'coach', text: opening }])
+          // Save Mia's opening to history
+          await saveMessage({ user_id: uid, coach_id: persona.id, role: 'coach', content: opening })
+        }
+      } else {
+        // Anonymous user — local opening only
+        coachMemory.current = { daysSinceLastVisit: null, previousTopics: [], activePlan: null, source: detectSource() }
+        setMessages([{ from: 'coach', text: buildPersonalizedOpening(name, lang, persona, t) }])
+      }
+
+      setHistoryLoaded(true)
+    }
+
+    init()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [session, historyLoaded])
 
   useEffect(() => {
     if (messages.length > 1) bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -145,24 +222,34 @@ function ChatStage({ name, lang, persona }: { name: string; lang: string; person
     setInput('')
     setLoading(true)
 
+    // Save user message to Supabase
+    if (userId.current) {
+      await saveMessage({ user_id: userId.current, coach_id: persona.id, role: 'user', content: userText.trim() })
+    }
+
     if (newTurns >= MAX_TURNS) {
       try { localStorage.setItem(`${persona.id}_user_name`, name) } catch { /* ignore */ }
-      setTimeout(() => {
-        setMessages(m => [...m, { from: 'coach', text: `${t(`${persona.id}.plan.ready`, { name })}\n\n${t(`${persona.id}.plan.subtitle`)}` }])
+      const planText = `${t(`${persona.id}.plan.ready`, { name })}\n\n${t(`${persona.id}.plan.subtitle`)}`
+      setTimeout(async () => {
+        setMessages(m => [...m, { from: 'coach', text: planText }])
         setLoading(false)
         setShowPlan(true)
+        if (userId.current) {
+          await saveMessage({ user_id: userId.current, coach_id: persona.id, role: 'coach', content: planText })
+        }
       }, 800)
       return
     }
 
     const history = [...messages, userMsg]
     const apiMessages = [
-      { role: 'system', content: persona.systemPromptTemplate(name, lang, graphContext.current) },
+      { role: 'system', content: persona.systemPromptTemplate(name, lang, graphContext.current, coachMemory.current ?? undefined) },
       ...history.map(m => ({ role: m.from === 'coach' ? 'assistant' : 'user', content: m.text })),
     ]
 
     setMessages(m => [...m, { from: 'coach', text: '' }])
 
+    let coachReply = ''
     try {
       const res = await fetch('/api/llm/chat', {
         method: 'POST',
@@ -171,7 +258,6 @@ function ChatStage({ name, lang, persona }: { name: string; lang: string; person
       })
       const reader = res.body?.getReader()
       const decoder = new TextDecoder()
-      let full = ''
       if (reader) {
         while (true) {
           const { done, value } = await reader.read()
@@ -182,10 +268,21 @@ function ChatStage({ name, lang, persona }: { name: string; lang: string; person
             if (data === '[DONE]') break
             try {
               const parsed = JSON.parse(data)
-              if (parsed.delta) { full += parsed.delta; setMessages(m => [...m.slice(0, -1), { from: 'coach', text: full }]) }
+              if (parsed.delta) {
+                coachReply += parsed.delta
+                setMessages(m => [...m.slice(0, -1), { from: 'coach', text: coachReply }])
+              }
             } catch { /* ignore */ }
           }
         }
+      }
+      // Save Mia's reply to Supabase
+      if (coachReply && userId.current) {
+        await saveMessage({ user_id: userId.current, coach_id: persona.id, role: 'coach', content: coachReply })
+      }
+      // After first reply, clear memory source (don't repeat email context on next message)
+      if (coachMemory.current) {
+        coachMemory.current = { ...coachMemory.current, source: 'direct' }
       }
     } catch {
       setMessages(m => [...m.slice(0, -1), { from: 'coach', text: t(`${persona.id}.chat.error`) }])
@@ -196,6 +293,12 @@ function ChatStage({ name, lang, persona }: { name: string; lang: string; person
 
   return (
     <div className="flex flex-col gap-4">
+      {!historyLoaded && (
+        <div className="flex items-center gap-2 text-slate-400 text-sm py-4">
+          <TypingDots />
+          <span className="ml-2">{persona.name} is thinking…</span>
+        </div>
+      )}
       <div className="flex flex-col gap-4 pb-2">
         {messages.map((msg, i) => (
           <div key={i} className={`flex ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}>
