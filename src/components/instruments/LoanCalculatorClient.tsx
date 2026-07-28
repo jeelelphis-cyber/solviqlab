@@ -75,7 +75,7 @@ export function LoanCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={principal}
             onChange={e => setPrincipal(e.target.value)} min={100} max={10000000}
-            placeholder="Loan Amount"
+            placeholder={t('label_principal') ?? 'Loan Amount'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -88,20 +88,20 @@ export function LoanCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={annualRate}
             onChange={e => setAnnualRate(e.target.value)} min={0} max={50}
-            placeholder="Annual Interest Rate"
+            placeholder={t('label_annualRate') ?? 'Annual Interest Rate'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
 
         <div>
           <label className="block text-sm font-medium text-content-secondary mb-1">
-            {t('label_termMonths') ?? 'Loan Term'} <span className="text-content-tertiary">(months)</span>
+            {t('label_termMonths') ?? 'Loan Term'} <span className="text-content-tertiary">({t('unit_months') ?? 'months'})</span>
           </label>
           <input
             type="number"
             value={termMonths}
             onChange={e => setTermMonths(e.target.value)} min={1} max={600}
-            placeholder="Loan Term"
+            placeholder={t('label_termMonths') ?? 'Loan Term'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>

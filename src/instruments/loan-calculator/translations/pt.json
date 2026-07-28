@@ -10,6 +10,7 @@
   "label_monthlyPayment": "Pagamento Mensal",
   "label_totalPayment": "Pagamento Total",
   "label_totalInterest": "Juros Totais",
+  "unit_months": "meses",
   "faq": {
     "title": "Perguntas Frequentes",
     "q1": "Como a taxa de juros mensal é derivada da taxa anual?",

@@ -10,6 +10,7 @@
   "label_monthlyPayment": "Aylık Ödeme",
   "label_totalPayment": "Toplam Ödeme",
   "label_totalInterest": "Toplam Faiz",
+  "unit_months": "ay",
   "faq": {
     "title": "Sıkça Sorulan Sorular",
     "q1": "Aylık faiz oranı yıllık orana göre nasıl türetilir?",

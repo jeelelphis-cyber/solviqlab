@@ -10,6 +10,7 @@
   "label_monthlyPayment": "Monthly Payment",
   "label_totalPayment": "Total Payment",
   "label_totalInterest": "Total Interest",
+  "unit_months": "months",
   "faq": {
     "title": "Frequently Asked Questions",
     "q1": "How is the monthly interest rate derived from the annual rate?",

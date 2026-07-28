@@ -10,6 +10,7 @@
   "label_monthlyPayment": "Paiement mensuel",
   "label_totalPayment": "Paiement total",
   "label_totalInterest": "Intérêts totaux",
+  "unit_months": "mois",
   "faq": {
     "title": "Questions fréquemment posées",
     "q1": "Comment le taux d'intérêt mensuel est-il dérivé du taux annuel ?",

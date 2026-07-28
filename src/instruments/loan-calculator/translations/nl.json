@@ -10,6 +10,7 @@
   "label_monthlyPayment": "Monthly Payment",
   "label_totalPayment": "Total Payment",
   "label_totalInterest": "Total Interest",
+  "unit_months": "maanden",
   "faq": {
     "title": "Veelgestelde Vragen",
     "q1": "Hoe wordt de maandelijkse rente afgeleid van de jaarlijkse rente?",

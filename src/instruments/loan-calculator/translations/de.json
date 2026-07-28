@@ -10,6 +10,7 @@
   "label_monthlyPayment": "Monatliche Rate",
   "label_totalPayment": "Gesamtzahlung",
   "label_totalInterest": "Gesamtzinsen",
+  "unit_months": "Monate",
   "faq": {
     "title": "Häufig gestellte Fragen",
     "q1": "Wie wird der monatliche Zinssatz aus dem jährlichen Zinssatz abgeleitet?",

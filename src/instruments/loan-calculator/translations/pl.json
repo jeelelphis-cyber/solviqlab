@@ -10,6 +10,7 @@
   "label_monthlyPayment": "Miesięczna rata",
   "label_totalPayment": "Całkowita płatność",
   "label_totalInterest": "Całkowite odsetki",
+  "unit_months": "miesięcy",
   "faq": {
     "title": "Najczęściej zadawane pytania",
     "q1": "Jak obliczana jest miesięczna stopa procentowa z rocznej stopy?",

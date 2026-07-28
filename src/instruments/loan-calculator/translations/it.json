@@ -10,6 +10,7 @@
   "label_monthlyPayment": "Monthly Payment",
   "label_totalPayment": "Total Payment",
   "label_totalInterest": "Total Interest",
+  "unit_months": "mesi",
   "faq": {
     "title": "Domande Frequenti",
     "q1": "Come viene derivato il tasso di interesse mensile dal tasso annuo?",

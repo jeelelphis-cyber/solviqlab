@@ -10,6 +10,7 @@
   "label_monthlyPayment": "Pago Mensual",
   "label_totalPayment": "Pago Total",
   "label_totalInterest": "Interés Total",
+  "unit_months": "meses",
   "faq": {
     "title": "Preguntas Frecuentes",
     "q1": "¿Cómo se deriva la tasa de interés mensual de la tasa anual?",
