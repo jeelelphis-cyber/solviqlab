@@ -578,7 +578,7 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
               {STEPS[step].yes}
             </button>
             <button
-              onClick={() => setStep(STEPS.length + 1)}
+              onClick={() => { const s = STEPS.length; setStep(s); persistState(s, name) }}
               className="text-slate-600 text-xs text-center hover:text-slate-500 transition-colors"
             >
               {t(`${pid}.skip`)}
