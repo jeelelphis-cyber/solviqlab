@@ -3,6 +3,7 @@ import { notFound }     from 'next/navigation'
 import { QUIZ_SLUGS, QUIZ_REGISTRY } from '@/lib/quiz/registry'
 import { loadQuizTranslation }        from '@/lib/quiz/translation-loader'
 import { getT }                       from '@/lib/i18n/ui'
+import { t as uiT }                  from '@/lib/ui-strings'
 import { QuizClient }                 from '@/components/quiz/QuizClient'
 
 const SUPPORTED_LANGS = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl', 'tr', 'it', 'nl']
@@ -56,6 +57,7 @@ export default function QuizPage({ params }: PageProps) {
 
   const tr = loadQuizTranslation(slug, lang)
   const t  = getT(lang)
+  const s  = uiT(lang)
 
   const introParagraphs = tr.seoContent.intro?.split('\n\n') ?? []
 
@@ -109,9 +111,9 @@ export default function QuizPage({ params }: PageProps) {
       <div className="max-w-2xl mx-auto px-4 py-10">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500 mb-6">
-          <a href={`/${lang}`} className="hover:text-violet-600 transition-colors">Home</a>
+          <a href={`/${lang}`} className="hover:text-violet-600 transition-colors">{s.breadcrumbHome}</a>
           <span>›</span>
-          <a href={`/${lang}/quiz`} className="hover:text-violet-600 transition-colors">Quizzes</a>
+          <a href={`/${lang}/quiz`} className="hover:text-violet-600 transition-colors">{s.navQuizzes}</a>
           <span>›</span>
           <span className="text-slate-600 dark:text-slate-300">{tr.meta.title}</span>
         </nav>
@@ -215,7 +217,7 @@ export default function QuizPage({ params }: PageProps) {
         {tr.seoContent.faq && tr.seoContent.faq.length > 0 && (
           <div className="mb-10">
             <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-5">
-              Frequently Asked Questions
+              {s.faqTitle}
             </h2>
             <div className="space-y-5">
               {tr.seoContent.faq.map((item, i) => (
