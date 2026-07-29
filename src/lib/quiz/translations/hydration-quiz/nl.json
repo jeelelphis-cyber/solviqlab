@@ -3,6 +3,10 @@
     "title": "Hydratatie Gezondheidsquiz",
     "description": "De meeste mensen zijn licht uitgedroogd zonder het te weten. Ontdek of water een ontbrekend stukje van jouw gezondheidspuzzel is."
   },
+  "yesnoOptions": [
+    "Ja",
+    "Nee"
+  ],
   "questions": {
     "hyd1": {
       "text": "Hoeveel glazen water (250 ml) drink je op een gemiddelde dag?",

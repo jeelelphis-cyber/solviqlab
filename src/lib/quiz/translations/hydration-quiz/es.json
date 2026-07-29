@@ -3,6 +3,10 @@
     "title": "Cuestionario de Salud sobre Hidratación",
     "description": "La mayoría de las personas están ligeramente deshidratadas sin saberlo. Descubra si el agua es una pieza faltante en su rompecabezas de salud."
   },
+  "yesnoOptions": [
+    "Sí",
+    "No"
+  ],
   "questions": {
     "hyd1": {
       "text": "¿Cuántos vasos de agua (250 ml) bebe en un día típico?",

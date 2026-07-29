@@ -3,6 +3,10 @@
     "title": "Quiz su BMI e Salute del Peso",
     "description": "Scopri in 5 domande sincere come il tuo peso attuale, le tue abitudini e il tuo stile di vita influenzano la tua salute."
   },
+  "yesnoOptions": [
+    "Sì",
+    "No"
+  ],
   "questions": {
     "bq1": {
       "text": "Come descriveresti il tuo peso attuale rispetto a ciò che ritieni giusto per il tuo corpo?",

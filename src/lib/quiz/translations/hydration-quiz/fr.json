@@ -3,6 +3,10 @@
     "title": "Quiz sur l'hydratation et la santé",
     "description": "La plupart des gens sont légèrement déshydratés sans le savoir. Découvrez si l'eau est un élément manquant de votre équilibre santé."
   },
+  "yesnoOptions": [
+    "Oui",
+    "Non"
+  ],
   "questions": {
     "hyd1": {
       "text": "Combien de verres d'eau (250 ml) buvez-vous par jour en moyenne ?",

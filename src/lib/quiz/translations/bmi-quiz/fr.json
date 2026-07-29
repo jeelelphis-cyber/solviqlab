@@ -3,6 +3,10 @@
     "title": "Quiz sur l'IMC et la santé du poids",
     "description": "Découvrez comment votre poids actuel, vos habitudes et votre mode de vie affectent votre santé — en 5 questions honnêtes."
   },
+  "yesnoOptions": [
+    "Oui",
+    "Non"
+  ],
   "questions": {
     "bq1": {
       "text": "Comment décririez-vous votre poids actuel par rapport à ce qui vous semble juste pour votre corps ?",

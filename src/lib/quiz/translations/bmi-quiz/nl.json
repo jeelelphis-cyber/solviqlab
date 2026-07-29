@@ -3,6 +3,10 @@
     "title": "BMI & Gewicht Gezondheidsquiz",
     "description": "Ontdek hoe uw huidige gewicht, gewoonten en levensstijl uw gezondheid beïnvloeden — in 5 eerlijke vragen."
   },
+  "yesnoOptions": [
+    "Ja",
+    "Nee"
+  ],
   "questions": {
     "bq1": {
       "text": "Hoe zou u uw huidige gewicht omschrijven in vergelijking met wat voor uw lichaam goed voelt?",

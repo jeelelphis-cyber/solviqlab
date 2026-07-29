@@ -3,6 +3,10 @@
     "title": "Quiz o BMI i zdrowiu wagi",
     "description": "Dowiedz się, jak Twoja aktualna waga, nawyki i styl życia wpływają na Twoje zdrowie — w 5 szczerych pytaniach."
   },
+  "yesnoOptions": [
+    "Tak",
+    "Nie"
+  ],
   "questions": {
     "bq1": {
       "text": "Jak opisałbyś/opisałabyś swoją obecną wagę w porównaniu z tym, co wydaje Ci się odpowiednie dla Twojego ciała?",

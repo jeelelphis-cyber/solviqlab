@@ -3,6 +3,10 @@
     "title": "Hydrations-Gesundheitsquiz",
     "description": "Die meisten Menschen sind leicht dehydriert, ohne es zu wissen. Finden Sie heraus, ob Wasser ein fehlender Teil Ihres Gesundheitspuzzles ist."
   },
+  "yesnoOptions": [
+    "Ja",
+    "Nein"
+  ],
   "questions": {
     "hyd1": {
       "text": "Wie viele Gläser Wasser (250 ml) trinken Sie an einem typischen Tag?",

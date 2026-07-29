@@ -3,6 +3,10 @@
     "title": "BMI & Gewichtsgesundheits-Quiz",
     "description": "Finden Sie heraus, wie Ihr aktuelles Gewicht, Ihre Gewohnheiten und Ihr Lebensstil Ihre Gesundheit beeinflussen – in 5 ehrlichen Fragen."
   },
+  "yesnoOptions": [
+    "Ja",
+    "Nein"
+  ],
   "questions": {
     "bq1": {
       "text": "Wie würden Sie Ihr aktuelles Gewicht im Vergleich zu dem beschreiben, was sich für Ihren Körper richtig anfühlt?",

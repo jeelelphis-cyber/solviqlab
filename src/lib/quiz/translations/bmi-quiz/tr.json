@@ -3,6 +3,10 @@
     "title": "BMI ve Kilo Sağlığı Testi",
     "description": "Mevcut kilonuzun, alışkanlıklarınızın ve yaşam tarzınızın sağlığınızı nasıl etkilediğini öğrenin — 5 samimi soruda."
   },
+  "yesnoOptions": [
+    "Evet",
+    "Hayır"
+  ],
   "questions": {
     "bq1": {
       "text": "Mevcut kilonuzu, vücudunuz için doğru hissettiren duruma kıyasla nasıl tanımlarsınız?",

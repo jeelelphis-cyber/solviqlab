@@ -3,6 +3,10 @@
     "title": "Hidrasyon Sağlık Testi",
     "description": "Çoğu insan farkında olmadan hafif derecede susuz kalır. Suyun sağlık bulmacanızın eksik bir parçası olup olmadığını keşfedin."
   },
+  "yesnoOptions": [
+    "Evet",
+    "Hayır"
+  ],
   "questions": {
     "hyd1": {
       "text": "Tipik bir günde kaç bardak su (250ml) içiyorsunuz?",

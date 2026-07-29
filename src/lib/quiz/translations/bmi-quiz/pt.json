@@ -3,6 +3,10 @@
     "title": "Questionário de Peso e Saúde (IMC)",
     "description": "Descubra como seu peso atual, hábitos e estilo de vida afetam sua saúde — em 5 perguntas sinceras."
   },
+  "yesnoOptions": [
+    "Sim",
+    "Não"
+  ],
   "questions": {
     "bq1": {
       "text": "Como você descreveria seu peso atual em comparação com o que parece ideal para o seu corpo?",

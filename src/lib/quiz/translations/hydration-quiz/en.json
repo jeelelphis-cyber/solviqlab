@@ -3,7 +3,10 @@
     "title": "Hydration Health Quiz",
     "description": "Most people are mildly dehydrated without knowing it. Find out if water is a missing piece of your health puzzle."
   },
-
+  "yesnoOptions": [
+    "Yes",
+    "No"
+  ],
   "questions": {
     "hyd1": {
       "text": "How many glasses of water (250ml) do you drink on a typical day?",
@@ -40,10 +43,12 @@
     },
     "hyd6": {
       "text": "How active are you physically? (More activity = higher water needs)",
-      "scaleLabels": { "min": "Very sedentary", "max": "Very active daily" }
+      "scaleLabels": {
+        "min": "Very sedentary",
+        "max": "Very active daily"
+      }
     }
   },
-
   "buckets": [
     {
       "label": "Well Hydrated",
@@ -76,7 +81,6 @@
       "miaHook": "Dehydration explains a lot of what you might be blaming on other things — let me show you an easy way to fix this."
     }
   ],
-
   "seoContent": {
     "intro": "Mild dehydration — defined as losing just 1–2% of body water — impairs cognitive performance, physical endurance, mood, and metabolism. Most people spend significant portions of their day in this state without realizing it, because thirst is a lagging indicator: by the time you feel thirsty, you are already mildly dehydrated.\n\nThe kidneys, brain, skin, and cardiovascular system all depend on adequate hydration to function. This quiz evaluates your hydration habits across six dimensions to give you a clear picture of where you stand and what to change.",
     "faq": [
@@ -94,14 +98,10 @@
       }
     ]
   },
-
   "content": {
     "whatIs": "Water comprises approximately 60% of adult body weight and is involved in every physiological process: nutrient transport, temperature regulation, joint lubrication, waste elimination, and cellular function. Even mild dehydration (1–2% body weight loss) measurably impairs these processes.\n\nStudies consistently show that mild dehydration reduces working memory by 7%, impairs attention and psychomotor speed, increases fatigue and tension, and reduces endurance performance by 10–20%. For most people, improving hydration is one of the highest-return, lowest-cost health interventions available.",
-
     "howScored": "This quiz evaluates six hydration dimensions: daily intake volume, thirst frequency (a lagging dehydration signal), urine color (the most reliable real-time indicator), diuretic beverage habits, dehydration symptoms (headaches, dry skin, poor concentration), and physical activity level (which determines water needs).\n\nScores above 70 indicate well-hydrated habits. 40–69 indicates mild dehydration patterns worth correcting. Below 40 indicates significant dehydration that is likely affecting daily functioning.",
-
     "whenToSeek": "See a doctor if:\n• You are drinking adequate water but remain persistently thirsty (possible diabetes or kidney issue)\n• You have difficulty retaining fluids (frequent urination despite normal intake)\n• Dehydration symptoms persist after increasing intake for 2+ weeks\n• You experience dizziness, rapid heartbeat, or confusion alongside low water intake",
-
     "limitations": "This quiz assesses self-reported hydration habits, not objective hydration status. Actual hydration depends on individual factors including body weight, kidney function, medication use, climate, and activity level. The quiz provides a useful directional assessment but does not replace clinical measurement (blood/urine osmolality)."
   }
 }

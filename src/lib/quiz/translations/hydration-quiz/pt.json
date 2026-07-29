@@ -3,6 +3,10 @@
     "title": "Questionário de Saúde sobre Hidratação",
     "description": "A maioria das pessoas está levemente desidratada sem saber. Descubra se a água é uma peça que falta no seu quebra-cabeça de saúde."
   },
+  "yesnoOptions": [
+    "Sim",
+    "Não"
+  ],
   "questions": {
     "hyd1": {
       "text": "Quantos copos de água (250ml) você bebe em um dia típico?",

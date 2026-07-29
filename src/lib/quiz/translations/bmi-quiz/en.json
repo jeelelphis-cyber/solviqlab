@@ -3,7 +3,10 @@
     "title": "BMI & Weight Health Quiz",
     "description": "Find out how your current weight, habits, and lifestyle affect your health — in 5 honest questions."
   },
-
+  "yesnoOptions": [
+    "Yes",
+    "No"
+  ],
   "questions": {
     "bq1": {
       "text": "How would you describe your current weight compared to what feels right for your body?",
@@ -25,7 +28,10 @@
     },
     "bq3": {
       "text": "How balanced is your typical daily diet?",
-      "scaleLabels": { "min": "Mostly processed", "max": "Mostly whole foods" }
+      "scaleLabels": {
+        "min": "Mostly processed",
+        "max": "Mostly whole foods"
+      }
     },
     "bq4": {
       "text": "Do you tend to eat when stressed or bored, even when you're not hungry?"
@@ -49,7 +55,6 @@
       ]
     }
   },
-
   "buckets": [
     {
       "label": "Healthy Weight Zone",
@@ -82,7 +87,6 @@
       "miaHook": "I've seen people in your exact situation turn things around completely — let me show you where to start."
     }
   ],
-
   "seoContent": {
     "intro": "BMI (Body Mass Index) is a widely used screening tool, but it is one data point, not a complete picture of health. Your weight interacts with your activity level, diet quality, stress, sleep, and body composition to determine actual health outcomes.\n\nThis quiz goes beyond BMI to assess the behavioral and lifestyle factors that determine whether your weight is trending toward health or away from it — giving you actionable insights rather than just a number.",
     "faq": [
@@ -100,14 +104,10 @@
       }
     ]
   },
-
   "content": {
     "whatIs": "Weight health is the intersection of body mass, body composition, metabolic function, and lifestyle behavior. Excess adipose tissue — particularly visceral fat stored around abdominal organs — is a direct driver of insulin resistance, systemic inflammation, cardiovascular disease, and type 2 diabetes.\n\nHowever, weight is not purely a behavioral choice. Genetics account for 40–70% of BMI variance. Sleep deprivation, stress hormones, gut microbiome composition, and certain medications all significantly affect weight regulation. This quiz assesses the controllable behavioral factors.",
-
     "howScored": "This quiz evaluates six weight-relevant dimensions: subjective weight satisfaction, cardiovascular activity frequency, dietary quality, emotional eating patterns, nutritional awareness, and energy levels (a key metabolic indicator).\n\nScores above 70 indicate healthy habits supporting weight management. 40–69 indicates identifiable patterns worth improving. Below 40 indicates multiple habits that are working against weight and metabolic health goals.",
-
     "whenToSeek": "Consult a healthcare provider if:\n• Your BMI is above 30 (obesity range) — medical evaluation and personalized guidance are appropriate\n• You have tried multiple weight loss approaches without success\n• Weight gain has been rapid (5+ kg in 3 months without intentional change)\n• You have diabetes, high blood pressure, or high cholesterol alongside excess weight\n• Emotional eating or disordered eating patterns are significantly affecting your relationship with food",
-
     "limitations": "This quiz assesses lifestyle behaviors, not actual weight or BMI. It is a screening tool for habits, not a medical assessment. Weight is influenced by factors beyond behavior including genetics, medications, hormonal conditions, and medical history. Always interpret results in context with other health information and medical advice."
   }
 }

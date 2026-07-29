@@ -3,6 +3,10 @@
     "title": "Quiz o nawodnieniu",
     "description": "Większość osób jest lekko odwodniona, nawet o tym nie wiedząc. Sprawdź, czy woda jest brakującym elementem Twojej układanki zdrowotnej."
   },
+  "yesnoOptions": [
+    "Tak",
+    "Nie"
+  ],
   "questions": {
     "hyd1": {
       "text": "Ile szklanek wody (250 ml) pijesz przeciętnie w ciągu dnia?",

@@ -3,6 +3,10 @@
     "title": "Quiz sull'Idratazione",
     "description": "Molte persone sono leggermente disidratate senza saperlo. Scopri se l'acqua è un tassello mancante del tuo benessere."
   },
+  "yesnoOptions": [
+    "Sì",
+    "No"
+  ],
   "questions": {
     "hyd1": {
       "text": "Quanti bicchieri d'acqua (250 ml) bevi in una giornata tipica?",
