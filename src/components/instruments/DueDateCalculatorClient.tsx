@@ -77,7 +77,7 @@ export function DueDateCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'due-date-calculator', name: 'Due Date Calculator', value: result.daysRemaining, label: `Trimester ${result.trimester}`, unit: 'days', metadata: result }
+      detail: { slug: 'due-date-calculator', name: tr('calculator_name') ?? 'Due Date Calculator', value: result.daysRemaining, label: `Trimester ${result.trimester}`, unit: 'days', metadata: result }
     }))
   }, [result])
 

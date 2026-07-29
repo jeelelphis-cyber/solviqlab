@@ -32,7 +32,7 @@ export function VatCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'vat-calculator', name: 'VAT Calculator', value: result.vatAmount, label: 'VAT Amount', unit: '', metadata: result }
+      detail: { slug: 'vat-calculator', name: t('calculator_name') ?? 'VAT Calculator', value: result.vatAmount, label: 'VAT Amount', unit: '', metadata: result }
     }))
   }, [result])
 
@@ -75,7 +75,7 @@ export function VatCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={amount}
             onChange={e => setAmount(e.target.value)} min={0} max={1000000000}
-            placeholder="Amount"
+            placeholder={t('label_amount') ?? 'Amount'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -88,7 +88,7 @@ export function VatCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={vatRate}
             onChange={e => setVatRate(e.target.value)} min={0} max={100}
-            placeholder="VAT Rate"
+            placeholder={t('label_vatRate') ?? 'VAT Rate'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>

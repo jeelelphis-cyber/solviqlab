@@ -28,7 +28,7 @@ export function IdealWeightCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'ideal-weight-calculator', name: 'Ideal Weight Calculator', value: result.average, label: 'Ideal Weight', unit: 'kg', miaFact: `Ideal weight: ${result.average.toFixed(1)} kg`, metadata: result }
+      detail: { slug: 'ideal-weight-calculator', name: t('calculator_name') ?? 'Ideal Weight Calculator', value: result.average, label: 'Ideal Weight', unit: 'kg', miaFact: `Ideal weight: ${result.average.toFixed(1)} kg`, metadata: result }
     }))
   }, [result])
 
@@ -66,7 +66,7 @@ export function IdealWeightCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={height}
             onChange={e => setHeight(e.target.value)} min={100} max={250}
-            placeholder="Height"
+            placeholder={t('label_height') ?? 'Height'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>

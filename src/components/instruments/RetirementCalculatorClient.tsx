@@ -135,7 +135,7 @@ export function RetirementCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'retirement-calculator', name: 'Retirement Calculator', value: result.projectedSavings, label: 'Projected Savings', unit: 'USD', metadata: result }
+      detail: { slug: 'retirement-calculator', name: t('calculator_name') ?? 'Retirement Calculator', value: result.projectedSavings, label: 'Projected Savings', unit: 'USD', metadata: result }
     }))
   }, [result])
 

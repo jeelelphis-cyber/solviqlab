@@ -29,7 +29,7 @@ export function RatioCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'ratio-calculator', name: 'Ratio Calculator', value: result.decimal, label: 'Ratio', unit: '', metadata: result }
+      detail: { slug: 'ratio-calculator', name: t('calculator_name') ?? 'Ratio Calculator', value: result.decimal, label: 'Ratio', unit: '', metadata: result }
     }))
   }, [result])
 
@@ -96,7 +96,7 @@ export function RatioCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={c}
             onChange={e => setC(e.target.value)} min={-1000000000} max={1000000000}
-            placeholder="C (optional, solve for D)"
+            placeholder={t('label_ratioC') ?? 'C (optional, solve for D)'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>

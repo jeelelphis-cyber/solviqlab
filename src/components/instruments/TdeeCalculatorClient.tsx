@@ -31,7 +31,7 @@ export function TdeeCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'tdee-calculator', name: 'TDEE Calculator', value: result.tdee, label: 'TDEE', unit: 'kcal/day', miaFact: `TDEE: ${Math.round(result.tdee)} kcal/day — BMR: ${Math.round(result.bmr)} kcal`, metadata: result }
+      detail: { slug: 'tdee-calculator', name: t('calculator_name') ?? 'TDEE Calculator', value: result.tdee, label: 'TDEE', unit: 'kcal/day', miaFact: `TDEE: ${Math.round(result.tdee)} kcal/day — BMR: ${Math.round(result.bmr)} kcal`, metadata: result }
     }))
   }, [result])
 
@@ -75,7 +75,7 @@ export function TdeeCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={weight}
             onChange={e => setWeight(e.target.value)} min={20} max={300}
-            placeholder="Weight"
+            placeholder={t('label_weight') ?? 'Weight'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -88,7 +88,7 @@ export function TdeeCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={height}
             onChange={e => setHeight(e.target.value)} min={100} max={250}
-            placeholder="Height"
+            placeholder={t('label_height') ?? 'Height'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -101,7 +101,7 @@ export function TdeeCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={age}
             onChange={e => setAge(e.target.value)} min={15} max={100}
-            placeholder="Age"
+            placeholder={t('label_age') ?? 'Age'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>

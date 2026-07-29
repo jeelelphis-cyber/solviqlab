@@ -31,7 +31,7 @@ export function FractionCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'fraction-calculator', name: 'Fraction Calculator', value: result.decimal, label: 'Result', unit: '', metadata: result }
+      detail: { slug: 'fraction-calculator', name: t('calculator_name') ?? 'Fraction Calculator', value: result.decimal, label: 'Result', unit: '', metadata: result }
     }))
   }, [result])
 
@@ -75,7 +75,7 @@ export function FractionCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={numerator1}
             onChange={e => setNumerator1(e.target.value)} min={-10000} max={10000}
-            placeholder="Numerator 1"
+            placeholder={t('label_numerator1') ?? 'Numerator 1'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -88,7 +88,7 @@ export function FractionCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={denominator1}
             onChange={e => setDenominator1(e.target.value)} min={-10000} max={10000}
-            placeholder="Denominator 1"
+            placeholder={t('label_denominator1') ?? 'Denominator 1'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -115,7 +115,7 @@ export function FractionCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={numerator2}
             onChange={e => setNumerator2(e.target.value)} min={-10000} max={10000}
-            placeholder="Numerator 2"
+            placeholder={t('label_numerator2') ?? 'Numerator 2'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -128,7 +128,7 @@ export function FractionCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={denominator2}
             onChange={e => setDenominator2(e.target.value)} min={-10000} max={10000}
-            placeholder="Denominator 2"
+            placeholder={t('label_denominator2') ?? 'Denominator 2'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>

@@ -30,7 +30,7 @@ export function BmrCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'bmr-calculator', name: 'BMR Calculator', value: result.bmr, label: 'BMR', unit: 'kcal/day', miaFact: `BMR: ${Math.round(result.bmr)} kcal/day`, metadata: result }
+      detail: { slug: 'bmr-calculator', name: t('calculator_name') ?? 'BMR Calculator', value: result.bmr, label: 'BMR', unit: 'kcal/day', miaFact: `BMR: ${Math.round(result.bmr)} kcal/day`, metadata: result }
     }))
   }, [result])
 
@@ -72,7 +72,7 @@ export function BmrCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={weight}
             onChange={e => setWeight(e.target.value)} min={20} max={300}
-            placeholder="Weight"
+            placeholder={t('label_weight') ?? 'Weight'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -85,7 +85,7 @@ export function BmrCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={height}
             onChange={e => setHeight(e.target.value)} min={100} max={250}
-            placeholder="Height"
+            placeholder={t('label_height') ?? 'Height'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -98,7 +98,7 @@ export function BmrCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={age}
             onChange={e => setAge(e.target.value)} min={15} max={100}
-            placeholder="Age"
+            placeholder={t('label_age') ?? 'Age'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>

@@ -31,7 +31,7 @@ export function DiscountCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'discount-calculator', name: 'Discount Calculator', value: result.finalPrice, label: 'Final Price', unit: '', metadata: result }
+      detail: { slug: 'discount-calculator', name: t('calculator_name') ?? 'Discount Calculator', value: result.finalPrice, label: 'Final Price', unit: '', metadata: result }
     }))
   }, [result])
 
@@ -72,7 +72,7 @@ export function DiscountCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={originalPrice}
             onChange={e => setOriginalPrice(e.target.value)} min={0} max={1000000000}
-            placeholder="Original Price"
+            placeholder={t('label_originalPrice') ?? 'Original Price'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -85,7 +85,7 @@ export function DiscountCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={discountPercent}
             onChange={e => setDiscountPercent(e.target.value)} min={0} max={100}
-            placeholder="Discount"
+            placeholder={t('label_discount') ?? 'Discount'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>

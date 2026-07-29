@@ -29,7 +29,7 @@ export function AreaCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'area-calculator', name: 'Area Calculator', value: result.area, label: 'Area', unit: 'm²', metadata: result }
+      detail: { slug: 'area-calculator', name: t('calculator_name') ?? 'Area Calculator', value: result.area, label: 'Area', unit: 'm²', metadata: result }
     }))
   }, [result])
 

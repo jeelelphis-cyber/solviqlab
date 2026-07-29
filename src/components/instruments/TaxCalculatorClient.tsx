@@ -145,7 +145,7 @@ export function TaxCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'tax-calculator', name: 'Tax Calculator', value: result.takeHomePay, label: 'Take Home Pay', unit: 'USD', metadata: result }
+      detail: { slug: 'tax-calculator', name: t('calculator_name') ?? 'Tax Calculator', value: result.takeHomePay, label: 'Take Home Pay', unit: 'USD', metadata: result }
     }))
   }, [result])
 

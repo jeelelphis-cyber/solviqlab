@@ -141,7 +141,7 @@ export function SalaryCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'salary-calculator', name: 'Salary Calculator', value: result.annual, label: 'Annual Salary', unit: 'USD', metadata: result }
+      detail: { slug: 'salary-calculator', name: t('calculator_name') ?? 'Salary Calculator', value: result.annual, label: 'Annual Salary', unit: 'USD', metadata: result }
     }))
   }, [result])
 

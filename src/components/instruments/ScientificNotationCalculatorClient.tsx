@@ -27,7 +27,7 @@ export function ScientificNotationCalculatorClient({ translations, lang }: Props
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'scientific-notation-calculator', name: 'Scientific Notation Calculator', value: result.coefficient, label: 'Scientific Notation', unit: '', metadata: result }
+      detail: { slug: 'scientific-notation-calculator', name: t('calculator_name') ?? 'Scientific Notation Calculator', value: result.coefficient, label: 'Scientific Notation', unit: '', metadata: result }
     }))
   }, [result])
 
@@ -63,7 +63,7 @@ export function ScientificNotationCalculatorClient({ translations, lang }: Props
             type="number"
             value={value}
             onChange={e => setValue(e.target.value)} min={-1e+300} max={1e+300}
-            placeholder="Number"
+            placeholder={t('label_number') ?? 'Number'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>

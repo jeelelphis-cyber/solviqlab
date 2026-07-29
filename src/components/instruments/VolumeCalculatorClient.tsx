@@ -30,7 +30,7 @@ export function VolumeCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'volume-calculator', name: 'Volume Calculator', value: result.volume, label: 'Volume', unit: 'm³', metadata: result }
+      detail: { slug: 'volume-calculator', name: t('calculator_name') ?? 'Volume Calculator', value: result.volume, label: 'Volume', unit: 'm³', metadata: result }
     }))
   }, [result])
 
@@ -89,7 +89,7 @@ export function VolumeCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={a}
             onChange={e => setA(e.target.value)} min={0} max={1000000000}
-            placeholder="Length / Radius / Side"
+            placeholder={t('label_dimension1') ?? 'Length / Radius / Side'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -102,7 +102,7 @@ export function VolumeCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={b}
             onChange={e => setB(e.target.value)} min={0} max={1000000000}
-            placeholder="Width (if needed)"
+            placeholder={t('label_dimension2') ?? 'Width (if needed)'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -115,7 +115,7 @@ export function VolumeCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={h}
             onChange={e => setH(e.target.value)} min={0} max={1000000000}
-            placeholder="Height (if needed)"
+            placeholder={t('label_dimension3') ?? 'Height (if needed)'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>

@@ -98,7 +98,7 @@ export function CalorieCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'calorie-calculator', name: 'Calorie Calculator', value: result.maintenance, label: 'Maintenance Calories', unit: 'kcal/day', miaFact: `Maintenance: ${Math.round(result.maintenance)} kcal/day — Loss: ${Math.round(result.weightLoss)} kcal`, metadata: result }
+      detail: { slug: 'calorie-calculator', name: t('calculator_name') ?? 'Calorie Calculator', value: result.maintenance, label: 'Maintenance Calories', unit: 'kcal/day', miaFact: `Maintenance: ${Math.round(result.maintenance)} kcal/day — Loss: ${Math.round(result.weightLoss)} kcal`, metadata: result }
     }))
   }, [result])
 

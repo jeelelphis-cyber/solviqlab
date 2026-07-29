@@ -31,7 +31,7 @@ export function BodyFatCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'body-fat-calculator', name: 'Body Fat Calculator', value: result.bodyFat, label: result.category, unit: '%', miaFact: `Body fat: ${result.bodyFat.toFixed(1)}% — ${result.category}`, metadata: result }
+      detail: { slug: 'body-fat-calculator', name: t('calculator_name') ?? 'Body Fat Calculator', value: result.bodyFat, label: result.category, unit: '%', miaFact: `Body fat: ${result.bodyFat.toFixed(1)}% — ${result.category}`, metadata: result }
     }))
   }, [result])
 

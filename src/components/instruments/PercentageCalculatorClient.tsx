@@ -57,7 +57,7 @@ export function PercentageCalculatorClient({ translations, lang }: Props) {
     track('calculate_click', { slug: 'percentage-calculator', category: 'math', lang })
     track('result_shown', { slug: 'percentage-calculator', category: 'math' })
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'percentage-calculator', name: 'Percentage Calculator', value: result.result, label: 'Result', unit: '%', metadata: result }
+      detail: { slug: 'percentage-calculator', name: (translations.calculator_name as string | undefined) ?? 'Percentage Calculator', value: result.result, label: 'Result', unit: '%', metadata: result }
     }))
   }, [result, lang])
 

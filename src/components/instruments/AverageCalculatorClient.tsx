@@ -27,7 +27,7 @@ export function AverageCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'average-calculator', name: 'Average Calculator', value: result.mean, label: 'Mean', unit: '', metadata: result }
+      detail: { slug: 'average-calculator', name: t('calculator_name') ?? 'Average Calculator', value: result.mean, label: 'Mean', unit: '', metadata: result }
     }))
   }, [result])
 

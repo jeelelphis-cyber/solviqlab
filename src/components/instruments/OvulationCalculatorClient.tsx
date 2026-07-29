@@ -81,7 +81,7 @@ export function OvulationCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'ovulation-calculator', name: 'Ovulation Calculator', value: result.daysUntilOvulation, label: 'Ovulation', unit: 'days', metadata: result }
+      detail: { slug: 'ovulation-calculator', name: t('calculator_name') ?? 'Ovulation Calculator', value: result.daysUntilOvulation, label: 'Ovulation', unit: 'days', metadata: result }
     }))
   }, [result])
 

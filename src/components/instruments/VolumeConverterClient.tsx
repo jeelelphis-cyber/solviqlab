@@ -59,7 +59,7 @@ export function VolumeConverterClient({ translations, lang }: Props) {
             type="number"
             value={value}
             onChange={e => setValue(e.target.value)} min={0} max={1000000000000}
-            placeholder="Value"
+            placeholder={t('label_value') ?? 'Value'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>

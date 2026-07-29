@@ -38,7 +38,7 @@ export function TipCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'tip-calculator', name: 'Tip Calculator', value: result.totalBill, label: 'Total Bill', unit: '', metadata: result }
+      detail: { slug: 'tip-calculator', name: t('calculator_name') ?? 'Tip Calculator', value: result.totalBill, label: 'Total Bill', unit: '', metadata: result }
     }))
   }, [result])
 

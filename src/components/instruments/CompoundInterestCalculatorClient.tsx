@@ -34,7 +34,7 @@ export function CompoundInterestCalculatorClient({ translations, lang }: Props) 
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'compound-interest-calculator', name: 'Compound Interest Calculator', value: result.finalAmount, label: 'Compound Growth', unit: 'USD', metadata: result }
+      detail: { slug: 'compound-interest-calculator', name: t('calculator_name') ?? 'Compound Interest Calculator', value: result.finalAmount, label: 'Compound Growth', unit: 'USD', metadata: result }
     }))
   }, [result])
 
@@ -82,7 +82,7 @@ export function CompoundInterestCalculatorClient({ translations, lang }: Props) 
             type="number"
             value={principal}
             onChange={e => setPrincipal(e.target.value)} min={0} max={100000000}
-            placeholder="Initial Investment"
+            placeholder={t('label_initialInvestment') ?? 'Initial Investment'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -95,7 +95,7 @@ export function CompoundInterestCalculatorClient({ translations, lang }: Props) 
             type="number"
             value={annualRate}
             onChange={e => setAnnualRate(e.target.value)} min={0} max={100}
-            placeholder="Annual Interest Rate"
+            placeholder={t('label_annualRate') ?? 'Annual Interest Rate'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -108,7 +108,7 @@ export function CompoundInterestCalculatorClient({ translations, lang }: Props) 
             type="number"
             value={years}
             onChange={e => setYears(e.target.value)} min={1} max={100}
-            placeholder="Time Period"
+            placeholder={t('label_timePeriod') ?? 'Time Period'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -121,7 +121,7 @@ export function CompoundInterestCalculatorClient({ translations, lang }: Props) 
             type="number"
             value={monthlyContribution}
             onChange={e => setMonthlyContribution(e.target.value)} min={0} max={1000000}
-            placeholder="Monthly Contribution"
+            placeholder={t('label_monthlyContribution') ?? 'Monthly Contribution'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>

@@ -33,7 +33,7 @@ export function MortgageCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'mortgage-calculator', name: 'Mortgage Calculator', value: result.monthlyPayment, label: 'Monthly Payment', unit: 'USD', metadata: result }
+      detail: { slug: 'mortgage-calculator', name: t('calculator_name') ?? 'Mortgage Calculator', value: result.monthlyPayment, label: 'Monthly Payment', unit: 'USD', metadata: result }
     }))
   }, [result])
 
@@ -78,7 +78,7 @@ export function MortgageCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={homePrice}
             onChange={e => setHomePrice(e.target.value)} min={10000} max={10000000}
-            placeholder="Home Price"
+            placeholder={t('label_homePrice') ?? 'Home Price'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -91,7 +91,7 @@ export function MortgageCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={downPayment}
             onChange={e => setDownPayment(e.target.value)} min={0} max={10000000}
-            placeholder="Down Payment"
+            placeholder={t('label_downPayment') ?? 'Down Payment'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -104,7 +104,7 @@ export function MortgageCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={annualRate}
             onChange={e => setAnnualRate(e.target.value)} min={0} max={30}
-            placeholder="Interest Rate"
+            placeholder={t('label_interestRate') ?? 'Interest Rate'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>

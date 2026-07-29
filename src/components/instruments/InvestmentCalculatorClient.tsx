@@ -132,7 +132,7 @@ export function InvestmentCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'investment-calculator', name: 'Investment Calculator', value: result.finalValue, label: 'Investment Return', unit: 'USD', metadata: result }
+      detail: { slug: 'investment-calculator', name: t('calculator_name') ?? 'Investment Calculator', value: result.finalValue, label: 'Investment Return', unit: 'USD', metadata: result }
     }))
   }, [result])
 

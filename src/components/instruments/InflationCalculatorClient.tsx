@@ -122,7 +122,7 @@ export function InflationCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'inflation-calculator', name: 'Inflation Calculator', value: result.adjustedAmount, label: 'Adjusted Amount', unit: 'USD', metadata: result }
+      detail: { slug: 'inflation-calculator', name: t('calculator_name') ?? 'Inflation Calculator', value: result.adjustedAmount, label: 'Adjusted Amount', unit: 'USD', metadata: result }
     }))
   }, [result])
 

@@ -59,7 +59,7 @@ export function TemperatureConverterClient({ translations, lang }: Props) {
             type="number"
             value={value}
             onChange={e => setValue(e.target.value)} min={-1000} max={100000}
-            placeholder="Temperature"
+            placeholder={t('label_temperature') ?? 'Temperature'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>

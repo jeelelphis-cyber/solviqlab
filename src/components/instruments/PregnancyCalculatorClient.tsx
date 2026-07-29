@@ -49,7 +49,7 @@ export function PregnancyCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'pregnancy-calculator', name: 'Pregnancy Calculator', value: result.weeksPregnant, label: result.trimesterLabel, unit: 'weeks', metadata: result }
+      detail: { slug: 'pregnancy-calculator', name: t('calculator_name') ?? 'Pregnancy Calculator', value: result.weeksPregnant, label: result.trimesterLabel, unit: 'weeks', metadata: result }
     }))
   }, [result])
 

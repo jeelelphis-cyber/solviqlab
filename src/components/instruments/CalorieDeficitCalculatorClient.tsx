@@ -30,7 +30,7 @@ export function CalorieDeficitCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'calorie-deficit-calculator', name: 'Calorie Deficit Calculator', value: result.dailyTarget, label: 'Daily Target', unit: 'kcal', miaFact: `Daily target: ${Math.round(result.dailyTarget)} kcal — goal in ${result.weeksToGoal} weeks`, metadata: result }
+      detail: { slug: 'calorie-deficit-calculator', name: t('calculator_name') ?? 'Calorie Deficit Calculator', value: result.dailyTarget, label: 'Daily Target', unit: 'kcal', miaFact: `Daily target: ${Math.round(result.dailyTarget)} kcal — goal in ${result.weeksToGoal} weeks`, metadata: result }
     }))
   }, [result])
 
@@ -72,7 +72,7 @@ export function CalorieDeficitCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={currentWeight}
             onChange={e => setCurrentWeight(e.target.value)} min={30} max={300}
-            placeholder="Current Weight"
+            placeholder={t('label_currentWeight') ?? 'Current Weight'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -85,7 +85,7 @@ export function CalorieDeficitCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={targetWeight}
             onChange={e => setTargetWeight(e.target.value)} min={30} max={300}
-            placeholder="Target Weight"
+            placeholder={t('label_targetWeight') ?? 'Target Weight'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>
@@ -98,7 +98,7 @@ export function CalorieDeficitCalculatorClient({ translations, lang }: Props) {
             type="number"
             value={tdee}
             onChange={e => setTdee(e.target.value)} min={800} max={6000}
-            placeholder="Daily Calorie Needs (TDEE)"
+            placeholder={t('label_tdee') ?? 'Daily Calorie Needs (TDEE)'}
             className="w-full bg-surface-input border border-border-default rounded-lg px-3 py-2 text-content-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
           />
         </div>

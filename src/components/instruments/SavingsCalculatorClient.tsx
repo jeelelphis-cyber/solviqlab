@@ -38,7 +38,7 @@ export function SavingsCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'savings-calculator', name: 'Savings Calculator', value: result.finalBalance, label: 'Savings Goal', unit: 'USD', metadata: result }
+      detail: { slug: 'savings-calculator', name: t('calculator_name') ?? 'Savings Calculator', value: result.finalBalance, label: 'Savings Goal', unit: 'USD', metadata: result }
     }))
   }, [result])
 
