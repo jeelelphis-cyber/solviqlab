@@ -35,13 +35,13 @@ function persistQuizResult(result: QuizResult): void {
   } catch {}
 }
 
-function dispatchResultEvent(result: QuizResult): void {
+function dispatchResultEvent(result: QuizResult, name?: string): void {
   if (typeof window === 'undefined') return
   const ts = Date.now()
   window.dispatchEvent(new CustomEvent('solviqlab:result', {
     detail: {
       type: 'solviqlab:result', eventId: `quiz:${result.slug}:${ts}`,
-      slug: result.slug, name: result.slug, value: result.score,
+      slug: result.slug, name: name ?? result.slug, value: result.score,
       label: result.bucket, category: 'quiz', unit: null,
       metadata: { miaHook: result.miaHook, bucket: result.bucket, severity: result.severity },
       timestamp: ts,
@@ -115,7 +115,7 @@ export function QuizClient({ config, translation: tr, lang }: Props) {
       setResult(translated)
       setPhase('result')
       persistQuizResult(translated)
-      dispatchResultEvent(translated)
+      dispatchResultEvent(translated, tr.meta?.title)
       analytics.track('quiz_completed', { slug: computed.slug, score: computed.score, bucket: computed.bucket })
     } else {
       setCurrentQ(next)

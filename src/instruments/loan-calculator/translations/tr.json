@@ -44,5 +44,6 @@
     "tips_2": "Rahatça karşılayabileceğiniz en kısa kredi vadesini seçin. Her ekstra ay, azalan bakiye üzerinde faiz yükünü uzatır. Toplam faiz etkisini görmek için bu hesaplayıcıyı farklı vadelerle çalıştırın; %7 ile 25.000 $'lık kredide 48 ay ile 72 ay vadesi arasındaki fark, aynı miktar borç için 2.400 $'dan fazla ekstra faizdir.",
     "tips_3": "Mümkün olduğunca ekstra anapara ödemesi yapın. Kredide aylık 50 $ ekstra ödeme bile geri ödemeyi hızlandırır ve toplam faizi önemli ölçüde azaltır. Ekstra ödemelerin gelecekteki faize değil, doğrudan anapara üzerine uygulandığını borç verenle teyit edin; çoğu borç veren buna izin verir ancak özellikle araç kredilerinde teyit edilmelidir.",
     "tips_4": "Herhangi bir teklifi kabul etmeden önce en az üç rakip kredi teklifi alın. Bankalar, kredi birlikleri, çevrimiçi borç verenler ve P2P platformlar riski farklı şekilde fiyatlandırır. Özellikle kredi birlikleri, üyelerine ticari bankalardan %1-2 daha düşük oran sunur. Karar vermeden önce tüm tekliflerde APR'yi (yalnızca faiz oranını değil), kredi ücretlerini ve erken ödeme cezası koşullarını karşılaştırın."
-  }
+  },
+  "calculator_name": "Kredi Hesaplayıcı"
 }

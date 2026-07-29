@@ -53,5 +53,6 @@
     "tips_2": "Wyeliminuj ekspozycję na niebieskie światło (ekrany, jasne oświetlenie sufitowe) na 60–90 minut przed docelową godziną snu. Niebieskie światło tłumi melatoninę nawet o 50% przez kilka godzin, opóźniając zasypianie i redukując łączny sen REM. Używaj trybu nocnego na urządzeniach, przyciemnionych żółtych żarówek lub okularów blokujących niebieskie światło wieczorami. Nawet częściowe ograniczenie ekspozycji na ekrany po godz. 21:00 ma mierzalny wpływ na łatwość zasypiania.",
     "tips_3": "Utrzymuj sypialnię w chłodnej temperaturze — 18–20°C to optymalna temperatura snu dla większości dorosłych. Temperatura rdzenia ciała naturalnie spada podczas zasypiania jako część procesu dobowego. Chłodne pomieszczenie ułatwia ten spadek, skracając czas zasypiania i poprawiając jakość snu głębokiego. Ciepły prysznic 1–2 godziny przed snem paradoksalnie pomaga — szybkie obniżenie temperatury skóry po prysznicu sygnalizuje organizmowi czas na sen.",
     "tips_4": "Jeśli musisz skrócić nocny sen, chroń koniec okna snu, a nie jego początek. Pierwsze cykle nocy są bogate w sen głęboki wolnofalowy (N3); ostatnie cykle (wczesny ranek) są bogate w sen REM — kluczowy dla uczenia się, pamięci emocjonalnej i kreatywności. Skracając koniec snu (budząc się wcześniej), tracisz proporcjonalnie więcej REM. Dla intensywnego uczenia się lub kreatywnej pracy, ochrona ostatnich godzin snu jest priorytetem."
-  }
+  },
+  "calculator_name": "Kalkulator Snu"
 }

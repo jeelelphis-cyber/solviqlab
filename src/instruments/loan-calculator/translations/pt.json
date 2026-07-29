@@ -44,5 +44,6 @@
     "tips_2": "Escolha o menor prazo de empréstimo que você pode pagar confortavelmente. Cada mês extra aumenta os encargos de juros sobre o saldo decrescente. Use esta calculadora com diferentes prazos para ver o impacto total dos juros — a diferença entre um prazo de 48 meses e 72 meses para um empréstimo de $25.000 a 7% é de mais de $2.400 em juros extras para o mesmo valor emprestado.",
     "tips_3": "Faça pagamentos extras de principal sempre que possível. Mesmo $50 extras por mês em um empréstimo acelera o pagamento e reduz significativamente os juros totais. Entre em contato com seu credor para confirmar que os pagamentos extras são aplicados diretamente ao principal, e não a juros futuros — a maioria dos credores permite isso, mas deve ser confirmado, especialmente para empréstimos de veículos.",
     "tips_4": "Obtenha pelo menos três cotações de empréstimos concorrentes antes de aceitar qualquer oferta. Bancos, cooperativas de crédito, credores online e plataformas peer-to-peer cada um precifica o risco de forma diferente. Cooperativas de crédito, em particular, costumam oferecer taxas 1–2% menores do que os bancos comerciais para seus membros. Compare a APR (não apenas a taxa de juros), as taxas do empréstimo e as condições de multa por pagamento antecipado em todas as cotações antes de decidir."
-  }
+  },
+  "calculator_name": "Calculadora de Empréstimo"
 }

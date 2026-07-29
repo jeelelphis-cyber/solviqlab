@@ -368,5 +368,10 @@
   "coach.pro.priority": "Yeni özelliklere öncelikli erişim",
   "coach.pro.cta": "30 Gün Ücretsiz Başlat →",
   "coach.pro.activating": "Etkinleştiriliyor…",
-  "coach.pro.no_cc": "Kredi kartı gerekmez · İstediğiniz zaman iptal edin"
+  "coach.pro.no_cc": "Kredi kartı gerekmez · İstediğiniz zaman iptal edin",
+  "dashboard.phase.discovery": "keşif",
+  "dashboard.phase.assessment": "değerlendirme",
+  "dashboard.phase.planning": "planlama",
+  "dashboard.phase.execution": "uygulama",
+  "dashboard.phase.habit": "alışkanlık"
 }

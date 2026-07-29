@@ -44,5 +44,6 @@
     "tips_2": "Choose the shortest loan term you can comfortably afford. Every extra month extends interest charges on the declining balance. Run this calculator with different terms to see the total interest impact — the difference between a 48-month and 72-month term on a $25,000 loan at 7% is over $2,400 in extra interest for the same amount borrowed.",
     "tips_3": "Make extra principal payments whenever possible. Even $50 extra per month on a loan accelerates payoff and reduces total interest significantly. Contact your lender to confirm that extra payments are applied directly to principal, not future interest — most lenders allow this but it should be confirmed, especially for auto loans.",
     "tips_4": "Get at least three competing loan quotes before accepting any offer. Banks, credit unions, online lenders, and peer-to-peer platforms each price risk differently. Credit unions in particular often offer rates 1–2% lower than commercial banks for members. Compare APR (not just interest rate), loan fees, and prepayment penalty terms across all quotes before deciding."
-  }
+  },
+  "calculator_name": "Loan Calculator"
 }

@@ -44,5 +44,6 @@
     "tips_2": "Wybieraj najkrótszy okres kredytu, na jaki możesz sobie wygodnie pozwolić. Każdy dodatkowy miesiąc wydłuża naliczanie odsetek od malejącego salda. Różnica między 48 a 72-miesięcznym okresem na 25 000 zł przy 7% to ponad 2 400 zł dodatkowych odsetek za tę samą pożyczoną kwotę.",
     "tips_3": "Dokonuj dodatkowych spłat kapitału, gdy to możliwe. Nawet 50–100 zł miesięcznie extra przyspiesza spłatę i znacząco redukuje łączne odsetki. Sprawdź u kredytodawcy, że dodatkowe płatności są zaliczane bezpośrednio na poczet kapitału, nie przyszłych odsetek — większość banków w Polsce na to zezwala, ale warto potwierdzić.",
     "tips_4": "Uzyskaj co najmniej trzy konkurencyjne oferty przed przyjęciem jakiejkolwiek propozycji. Banki komercyjne, SKOK-i (Spółdzielcze Kasy Oszczędnościowo-Kredytowe), banki spółdzielcze i platformy pożyczek online różnie wyceniają ryzyko. SKOK-i często oferują stawki 1–2% niższe dla swoich członków. Porównuj RRSO (nie tylko nominalną stopę), opłaty i warunki wcześniejszej spłaty."
-  }
+  },
+  "calculator_name": "Kalkulator Kredytowy"
 }

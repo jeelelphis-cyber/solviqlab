@@ -44,5 +44,6 @@
     "tips_2": "Wählen Sie die kürzeste Kreditlaufzeit, die Sie sich bequem leisten können. Jeder zusätzliche Monat verlängert die Zinsbelastungen auf den abnehmenden Saldo. Führen Sie diesen Rechner mit verschiedenen Laufzeiten aus, um die Gesamtauswirkung der Zinsen zu sehen – der Unterschied zwischen einer 48‑monatigen und einer 72‑monatigen Laufzeit bei einem Kredit von 25.000 $ zu 7 % beträgt über 2.400 $ an zusätzlichen Zinsen für denselben geliehenen Betrag.",
     "tips_3": "Leisten Sie wann immer möglich zusätzliche Tilgungszahlungen. Schon 50 $ extra pro Monat bei einem Kredit beschleunigt die Rückzahlung und reduziert die Gesamtzinsen erheblich. Kontaktieren Sie Ihren Kreditgeber, um zu bestätigen, dass zusätzliche Zahlungen direkt auf den Kapitalbetrag (Principal) angerechnet werden und nicht auf zukünftige Zinsen – die meisten Kreditgeber erlauben dies, aber es sollte bestätigt werden, insbesondere bei Autokrediten.",
     "tips_4": "Hol dir mindestens drei konkurrierende Kreditangebote ein, bevor du ein Angebot annimmst. Banken, Kreditgenossenschaften, Online-Kreditgeber und Peer-to-Peer-Plattformen bewerten Risiken jeweils unterschiedlich. Besonders Kreditgenossenschaften bieten Mitgliedern oft Zinssätze an, die 1–2 % niedriger sind als bei Geschäftsbanken. Vergleiche den effektiven Jahreszins (APR, nicht nur den Nominalzins), Kreditgebühren und Vorfälligkeitsentschädigungen bei allen Angeboten, bevor du dich entscheidest."
-  }
+  },
+  "calculator_name": "Kreditrechner"
 }

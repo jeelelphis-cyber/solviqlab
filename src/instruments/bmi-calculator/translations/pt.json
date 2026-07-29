@@ -91,5 +91,6 @@
     "tips_2": "Acompanhe a tendência do seu BMI ao longo do tempo, não instantâneos individuais. Uma única leitura tem valor limitado. O que importa é a direção ao longo de semanas e meses — se você está se aproximando ou se afastando da faixa saudável. O acompanhamento mensal durante mudanças ativas no estilo de vida é o ideal.",
     "tips_3": "Se seu IMC está entre 25–27,9 (sobrepeso leve), concentre-se em mudanças sustentáveis no estilo de vida antes de considerar intervenções médicas: uma dieta de estilo mediterrâneo, 150+ minutos de cardio moderado por semana, treino de força 2× por semana e 7–9 horas de sono. Esses quatro hábitos por si só podem reduzir o IMC em 1–3 unidades em 3–6 meses.",
     "tips_4": "Se seu IMC indica obesidade (30+) ou baixo peso grave (abaixo de 16), consulte um profissional de saúde antes de iniciar qualquer programa intensivo de dieta ou exercícios. Essas faixas apresentam riscos clínicos elevados — incluindo estresse cardíaco durante o exercício e síndrome de realimentação em casos de baixo peso grave — que exigem orientação profissional."
-  }
+  },
+  "calculator_name": "Calculadora de IMC"
 }

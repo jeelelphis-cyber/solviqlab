@@ -368,5 +368,10 @@
   "coach.pro.priority": "Пріоритетний доступ до нових функцій",
   "coach.pro.cta": "Спробувати 30 днів безкоштовно →",
   "coach.pro.activating": "Активація…",
-  "coach.pro.no_cc": "Без кредитної картки · Скасуйте будь-коли"
+  "coach.pro.no_cc": "Без кредитної картки · Скасуйте будь-коли",
+  "dashboard.phase.discovery": "відкриття",
+  "dashboard.phase.assessment": "оцінка",
+  "dashboard.phase.planning": "планування",
+  "dashboard.phase.execution": "виконання",
+  "dashboard.phase.habit": "звичка"
 }

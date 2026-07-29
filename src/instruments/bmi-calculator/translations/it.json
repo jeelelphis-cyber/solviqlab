@@ -77,5 +77,6 @@
   "title": "Calcolatore IMC (Indice di Massa Corporea)",
   "description": "Calcola il tuo IMC (Indice di Massa Corporea) con le categorie OMS. Ottieni stima del grasso corporeo, IMC Prime e analisi personalizzata.",
   "calculate": "Calcola",
-  "reset": "Azzera"
+  "reset": "Azzera",
+  "calculator_name": "Calcolatore BMI"
 }

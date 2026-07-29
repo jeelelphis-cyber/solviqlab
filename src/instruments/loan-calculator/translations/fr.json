@@ -38,5 +38,6 @@
     "tips_2": "Choisissez la durée de prêt la plus courte que vous pouvez confortablement vous permettre. Chaque mois supplémentaire étend les charges d'intérêts sur le solde décroissant. Exécutez cette calculatrice avec différentes durées pour voir l'impact sur les intérêts totaux — la différence entre 48 et 72 mois sur un prêt de 20 000 € à 5 % représente plus de 1 500 € d'intérêts supplémentaires pour le même montant emprunté.",
     "tips_3": "Effectuez des remboursements anticipés partiels quand c'est possible. Même 50 € de plus par mois sur un prêt accélère le remboursement et réduit significativement les intérêts totaux. Confirmez avec votre prêteur que les paiements supplémentaires sont imputés sur le capital. Attention : les indemnités de remboursement anticipé (IRA) plafonnées légalement à 0,5 % du capital remboursé en France peuvent s'appliquer — calculez si l'économie d'intérêts dépasse ces frais avant de rembourser par anticipation.",
     "tips_4": "Obtenez au moins trois devis de prêt concurrents avant d'accepter toute offre. Banques traditionnelles, banques en ligne, courtiers en crédit et établissements spécialisés fixent le risque différemment. Les banques en ligne (Boursorama, Hello Bank, ING) proposent souvent des taux inférieurs aux banques de réseau. Comparez toujours le TAEG total (pas seulement le taux nominal), les frais de dossier et les conditions de remboursement anticipé avant de décider — le TAEG intègre tous les frais et permet une comparaison objective."
-  }
+  },
+  "calculator_name": "Calculateur de Prêt"
 }

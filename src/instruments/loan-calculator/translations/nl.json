@@ -44,5 +44,6 @@
     "tips_2": "Kies de kortste leentermijn die u comfortabel kunt betalen. Elke extra maand verlengt de rentelasten over het afnemende saldo. Voer deze calculator uit met verschillende termijnen om de totale rente-impact te zien — het verschil tussen een looptijd van 48 maanden en 72 maanden voor een lening van $25.000 tegen 7% is meer dan $2.400 aan extra rente voor hetzelfde geleende bedrag.",
     "tips_3": "Doe waar mogelijk extra aflossingen op de hoofdsom. Zelfs €50 extra per maand op een lening versnelt de aflossing en vermindert de totale rente aanzienlijk. Neem contact op met uw geldverstrekker om te bevestigen dat extra betalingen rechtstreeks op de hoofdsom worden toegepast, niet op toekomstige rente — de meeste geldverstrekkers staan dit toe, maar het moet worden bevestigd, vooral bij autoleningen.",
     "tips_4": "Vraag ten minste drie concurrerende leenaanbiedingen op voordat u een aanbod accepteert. Banken, kredietverenigingen, online geldschieters en peer-to-peerplatforms berekenen risico's elk anders. Kredietverenigingen bieden leden vaak rentetarieven die 1–2% lager liggen dan commerciële banken. Vergelijk het JKP (niet alleen de rentevoet), leningkosten en boetes voor vervroegde aflossing bij alle aanbiedingen voordat u beslist."
-  }
+  },
+  "calculator_name": "Leningcalculator"
 }

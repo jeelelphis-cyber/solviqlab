@@ -368,5 +368,10 @@
   "coach.pro.priority": "Acceso prioritario a nuevas funciones",
   "coach.pro.cta": "Comenzar 30 días gratis →",
   "coach.pro.activating": "Activando…",
-  "coach.pro.no_cc": "Sin tarjeta de crédito · Cancela cuando quieras"
+  "coach.pro.no_cc": "Sin tarjeta de crédito · Cancela cuando quieras",
+  "dashboard.phase.discovery": "descubrimiento",
+  "dashboard.phase.assessment": "evaluación",
+  "dashboard.phase.planning": "planificación",
+  "dashboard.phase.execution": "ejecución",
+  "dashboard.phase.habit": "hábito"
 }

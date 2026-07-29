@@ -307,7 +307,7 @@ export function BMICalculatorClient({ translations, lang }: Props) {
     track('result_shown', { slug: 'bmi-calculator', category: 'health', result_bucket: getBMIBucket(output.bmi) })
     window.dispatchEvent(new CustomEvent('solviqlab:result', { detail: {
       slug:     'bmi-calculator',
-      name:     'BMI Calculator',
+      name:     (translations.calculator_name as string | undefined) ?? 'BMI Calculator',
       value:    output.bmi,
       label:    categoryLabel(output.category),
       category: output.category,

@@ -95,5 +95,6 @@
   "title": "BMI Calculator — Body Mass Index",
   "description": "Bereken uw BMI met WHO-categorieën. Krijg een schatting van lichaamsvet, BMI Prime en gepersonaliseerde analyse.",
   "calculate": "Bereken",
-  "reset": "Wissen"
+  "reset": "Wissen",
+  "calculator_name": "BMI Calculator"
 }

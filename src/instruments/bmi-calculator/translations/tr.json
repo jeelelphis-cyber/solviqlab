@@ -75,5 +75,6 @@
     "tips_4": "VKİ'niz obeziteyi (30+) veya ciddi düşük kiloyu (16'nın altı) gösteriyorsa, yoğun bir diyet veya egzersiz programına başlamadan önce bir sağlık profesyoneline danışın. Bu aralıklar, profesyonel rehberlik gerektiren yüksek klinik riskleri beraberinde getirir: egzersiz sırasında kardiyak stres ve şiddetli düşük kiloda beslenmeye yeniden başlama sendromu."
   },
   "title": "VKİ Hesaplayıcısı — Vücut Kitle İndeksi (Boy ve Kilodan)",
-  "description": "Boy ve kilonuza göre Vücut Kitle İndeksinizi (VKİ) hesaplayın. WHO standartlarına göre kategoriler: zayıf, normal, fazla kilolu, obez."
+  "description": "Boy ve kilonuza göre Vücut Kitle İndeksinizi (VKİ) hesaplayın. WHO standartlarına göre kategoriler: zayıf, normal, fazla kilolu, obez.",
+  "calculator_name": "VKİ Hesaplayıcı"
 }

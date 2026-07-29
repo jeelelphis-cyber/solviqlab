@@ -91,5 +91,6 @@
     "tips_2": "Verfolgen Sie Ihren BMI-Trend im Laufe der Zeit, nicht einzelne Momentaufnahmen. Ein einzelner Messwert hat nur begrenzte Aussagekraft. Entscheidend ist die Richtung über Wochen und Monate hinweg – ob Sie sich dem gesunden Bereich annähern oder sich davon entfernen. Bei aktiven Veränderungen des Lebensstils ist eine monatliche Verfolgung ideal.",
     "tips_3": "Wenn Ihr BMI 25–27,9 beträgt (leichtes Übergewicht), konzentrieren Sie sich auf nachhaltige Lebensstiländerungen, bevor Sie medizinische Maßnahmen in Betracht ziehen: eine mediterrane Ernährung, 150+ Minuten moderates Ausdauertraining pro Woche, Krafttraining 2× pro Woche und 7–9 Stunden Schlaf. Diese vier Gewohnheiten allein können den BMI in 3–6 Monaten um 1–3 Einheiten senken.",
     "tips_4": "Wenn Ihr BMI auf Fettleibigkeit (30+) oder starkes Untergewicht (unter 16) hinweist, konsultieren Sie vor Beginn eines intensiven Diät- oder Trainingsprogramms einen Arzt oder ein medizinisches Fachpersonal. Diese Bereiche bergen erhöhte klinische Risiken — einschließlich Herzbelastung während des Trainings und Refeeding-Syndrom bei starkem Untergewicht — die eine professionelle Anleitung erfordern."
-  }
+  },
+  "calculator_name": "BMI-Rechner"
 }

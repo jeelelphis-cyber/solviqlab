@@ -32,7 +32,7 @@ export function LoanCalculatorClient({ translations, lang }: Props) {
   useEffect(() => {
     if (!result) return
     window.dispatchEvent(new CustomEvent('solviqlab:result', {
-      detail: { slug: 'loan-calculator', name: 'Loan Calculator', value: result.monthlyPayment, label: 'Monthly Payment', unit: 'USD', metadata: result }
+      detail: { slug: 'loan-calculator', name: t('calculator_name') ?? 'Loan Calculator', value: result.monthlyPayment, label: t('label_monthlyPayment') ?? 'Monthly Payment', unit: currency.code, metadata: result }
     }))
   }, [result])
 

@@ -44,5 +44,6 @@
     "tips_2": "Scegli il termine del prestito più breve che puoi permetterti comodamente. Ogni mese extra prolunga gli addebiti di interessi sul saldo in diminuzione. Esegui questo calcolatore con diversi termini per vedere l'impatto sugli interessi totali — la differenza tra un termine di 48 e 72 mesi su un prestito di €25.000 al 7% è oltre €2.400 in interessi extra per lo stesso importo preso in prestito.",
     "tips_3": "Effettua pagamenti extra sul capitale quando possibile. Anche €50 extra al mese su un prestito accelera l'estinzione e riduce significativamente gli interessi totali. Contatta il tuo prestatore per confermare che i pagamenti extra vengano applicati direttamente al capitale, non agli interessi futuri — la maggior parte dei prestatori lo consente ma dovrebbe essere confermato, specialmente per i prestiti auto.",
     "tips_4": "Ottieni almeno tre preventivi di prestito concorrenti prima di accettare qualsiasi offerta. Banche, cooperative di credito, prestatori online e piattaforme peer-to-peer valutano il rischio in modo diverso. Le cooperative di credito in particolare spesso offrono tassi dell'1–2% inferiori rispetto alle banche commerciali per i soci. Confronta il TAEG (non solo il tasso di interesse), le commissioni del prestito e i termini di penale per il rimborso anticipato tra tutti i preventivi prima di decidere."
-  }
+  },
+  "calculator_name": "Calcolatore del Prestito"
 }

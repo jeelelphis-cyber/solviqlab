@@ -227,12 +227,12 @@ export function JourneyDashboard({ lang }: Props) {
                   >
                     <div>
                       <p className="text-sm font-medium text-slate-800 dark:text-slate-200">
-                        {t('dashboard.cluster_journey', { cluster })}
+                        {t('dashboard.cluster_journey', { cluster: t('assessment.banner.cluster.' + cluster) || cluster })}
                       </p>
                       <p className="text-[11px] text-slate-500 dark:text-slate-400">
                         {t('dashboard.steps_phase', {
                           steps: String(ci.completedInstruments.length),
-                          phase: ci.currentPhase,
+                          phase: t('dashboard.phase.' + ci.currentPhase) || ci.currentPhase,
                         })}
                       </p>
                     </div>

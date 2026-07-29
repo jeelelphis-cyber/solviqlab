@@ -44,5 +44,6 @@
     "tips_2": "Elige el plazo de préstamo más corto que puedas pagar cómodamente. Cada mes adicional extiende los cargos por intereses sobre el saldo decreciente. Usa esta calculadora con diferentes plazos para ver el impacto del interés total: la diferencia entre un plazo de 48 y 72 meses en un préstamo de 25 000 USD al 7% es de más de 2400 USD en interés adicional.",
     "tips_3": "Realiza pagos adicionales al principal siempre que sea posible. Incluso 50 USD extra al mes en un préstamo acelera el pago y reduce significativamente el interés total. Contacta a tu prestamista para confirmar que los pagos adicionales se aplican directamente al principal, no a los intereses futuros.",
     "tips_4": "Obtén al menos tres cotizaciones de préstamo competidoras antes de aceptar cualquier oferta. Los bancos, las cooperativas de crédito, los prestamistas online y las plataformas entre particulares valoran el riesgo de manera diferente. Las cooperativas de crédito en particular a menudo ofrecen tasas un 1–2% más bajas que los bancos comerciales para sus miembros. Compara el TAE (no solo la tasa de interés), las comisiones del préstamo y los términos de penalización por pago anticipado."
-  }
+  },
+  "calculator_name": "Calculadora de Préstamos"
 }

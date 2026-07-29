@@ -368,5 +368,10 @@
   "coach.pro.priority": "Prioriteitstoegang tot nieuwe functies",
   "coach.pro.cta": "Start 30 dagen gratis →",
   "coach.pro.activating": "Activeren…",
-  "coach.pro.no_cc": "Geen creditcard vereist · Annuleer wanneer je wilt"
+  "coach.pro.no_cc": "Geen creditcard vereist · Annuleer wanneer je wilt",
+  "dashboard.phase.discovery": "ontdekking",
+  "dashboard.phase.assessment": "beoordeling",
+  "dashboard.phase.planning": "planning",
+  "dashboard.phase.execution": "uitvoering",
+  "dashboard.phase.habit": "gewoonte"
 }

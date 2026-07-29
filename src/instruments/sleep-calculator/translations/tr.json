@@ -53,5 +53,6 @@
     "tips_2": "Hedef uyku saatinizden 60-90 dakika önce mavi ışık maruziyetini (ekranlar, parlak tavan aydınlatması) ortadan kaldırın. Mavi dalga boyundaki ışık melatonini saatlerce %50'ye kadar baskılar; uyku başlangıcını geciktirir ve toplam REM uykusunu azaltır. Cihazlarda gece modunu, loş amber aydınlatmayı veya saat 21:00'dan sonra mavi ışık engelleyen gözlük kullanın.",
     "tips_3": "Yatak odanızı serin tutun; 18-20°C çoğu yetişkin için optimal uyku sıcaklığıdır. Çekirdek vücut sıcaklığı, sirkadiyen sürecin bir parçası olarak uyku başlangıcında doğal olarak 0,5-1°C düşer. Serin bir oda bu düşüşü kolaylaştırır ve derin uyku kalitesini iyileştirir. Yatmadan 1-2 saat önce sıcak duş veya banyo paradoks biçimde uykuyu iyileştirir.",
     "tips_4": "Tam 5 döngülük bir gece yapamıyorsanız, uyku pencerenizin başı yerine sonuna öncelik verin. Gecenin ilk döngüleri derin yavaş dalga uykusu (N3) açısından zengindir; son döngüler (erken sabah) REM açısından zengindir. Uykuyu kısaltmak zorundaysanız, başlangıcı kesmek (geç yatma) bir miktar N3'ü feda eder ancak REM'i korur. Erken alarm saatleri, aynı toplam uyku kısaltması için geç uyuma saatlerinden bilişsel ve duygusal olarak daha maliyetlidir."
-  }
+  },
+  "calculator_name": "Uyku Hesaplayıcı"
 }
