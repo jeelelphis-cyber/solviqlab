@@ -11,8 +11,7 @@ import { getNextStep, getJourneyPosition } from '../../../../lib/journey/config'
 import { buildCTA } from '../../../../lib/journey/cta'
 import { getClusterForSlug } from '../../../../lib/catalog/slug-cluster'
 
-import { MiaCoachBlock } from '../../../../components/coach/MiaCoachBlock'
-import { AlexCoachBlock } from '../../../../components/coach/AlexCoachBlock'
+import { CoachBlock } from '../../../../components/coach/CoachBlock'
 import { FavoriteButton } from '../../../../components/account/FavoriteButton'
 
 interface PageProps {
@@ -349,11 +348,8 @@ export default function InstrumentPage({ params }: PageProps) {
           <InstrumentUI slug={slug} lang={lang} translations={translations} />
         </div>
 
-        {/* Mia AI Coach — appears after health calculator result */}
-        <MiaCoachBlock lang={lang} />
-
-        {/* Alex AI Coach — appears after finance calculator result */}
-        <AlexCoachBlock lang={lang} />
+        {/* AI Coach — appears after result, auto-selects coach by topic */}
+        <CoachBlock lang={lang} />
 
         {/* Journey Experience — related next steps (SEO internal links, no sticky CTA) */}
         {(() => {
