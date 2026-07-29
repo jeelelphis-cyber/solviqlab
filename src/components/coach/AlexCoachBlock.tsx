@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import { getBrowserRuntime } from '@/lib/runtime'
-import { getT } from '@/lib/i18n/ui'
+import { t as uiT } from '@/lib/ui-strings'
 import type { InstrumentResult } from '@/lib/products/types'
 
 const FINANCE_CLUSTERS = new Set(['finance'])
@@ -26,7 +26,7 @@ interface AlexCoachBlockProps {
 export function AlexCoachBlock({ lang = 'en' }: AlexCoachBlockProps) {
   const [visible, setVisible] = useState(false)
   const blockRef = useRef<HTMLDivElement>(null)
-  const t = getT(lang)
+  const s = uiT(lang)
 
   useEffect(() => {
     getBrowserRuntime()
@@ -51,44 +51,41 @@ export function AlexCoachBlock({ lang = 'en' }: AlexCoachBlockProps) {
   return (
     <div
       ref={blockRef}
-      className="mt-4 rounded-2xl overflow-hidden border border-blue-900/30 bg-slate-900 animate-fade-in"
+      className="mt-4 rounded-2xl overflow-hidden border border-white/10 bg-slate-900 animate-fade-in"
     >
       <div className="flex">
-        {/* Photo */}
-        <div className="relative w-32 sm:w-40 shrink-0 bg-gradient-to-b from-blue-950 to-cyan-950">
+        {/* Photo — same as homepage card */}
+        <div className="relative w-28 sm:w-36 shrink-0 bg-gradient-to-br from-blue-500/30 to-cyan-700/30 overflow-hidden">
           <img
             src={ALEX_PHOTO}
             alt="Alex"
             className="w-full h-full object-cover object-top"
-            style={{ minHeight: '180px' }}
+            style={{ minHeight: '170px' }}
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-slate-900/40" />
         </div>
 
-        {/* Content */}
-        <div className="flex flex-col justify-between p-4 flex-1 min-w-0">
-          <div>
-            <div className="flex items-center gap-1.5 mb-2">
+        {/* Content — same fields as homepage */}
+        <div className="flex flex-col flex-1 px-4 pt-3 pb-3">
+          <div className="flex items-center justify-between mb-1">
+            <p className="text-white font-bold text-sm">Alex</p>
+            <div className="flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-              <span className="text-[10px] font-semibold text-emerald-400 tracking-wide uppercase">
-                {t('alex.block.ready')}
-              </span>
+              <span className="text-emerald-400 text-[9px] font-semibold uppercase tracking-wide">{s.coachOnlineNow}</span>
             </div>
-            <p className="text-white font-bold text-sm leading-tight mb-0.5">Alex</p>
-            <p className="text-blue-300 text-[11px] font-medium mb-2">{t('alex.block.role')}</p>
-            <p className="text-slate-300 text-xs leading-relaxed line-clamp-3">
-              {t('alex.block.message')}
-            </p>
           </div>
+          <p className="text-blue-300 text-[11px] font-medium mb-0.5">{s.coachAlexRole}</p>
+          <p className="text-white/40 text-[10px] leading-tight mb-2">{s.coachAlexSpec}</p>
 
-          <Link
-            href={`/${lang}/coach/alex`}
-            className="mt-3 block w-full py-2.5 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-bold text-xs text-center hover:opacity-90 active:scale-[0.98] transition-all"
-          >
-            {t('alex.block.cta')}
-          </Link>
-          <p className="text-[10px] text-slate-500 text-center mt-1.5">{t('alex.block.free')}</p>
+          <div className="mt-auto pt-1">
+            <Link
+              href={`/${lang}/coach/alex`}
+              className="block w-full py-2 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-600 text-white text-xs font-bold text-center hover:opacity-90 active:scale-[0.98] transition-all"
+            >
+              {s.coachTalkTo('Alex')}
+            </Link>
+            <p className="text-center text-[9px] text-white/30 mt-1">{s.coachFreeSession}</p>
+          </div>
         </div>
       </div>
     </div>
