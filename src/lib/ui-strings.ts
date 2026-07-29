@@ -71,6 +71,7 @@ const strings = {
     miaPlanItem2: 'Personalized targets based on your data',
     miaPlanItem3: 'Daily check-in with Mia',
     miaRewatch: "Rewatch Mia's message",
+    coachMeetOthers: 'Also on SolviqLab',
     embedTitle: 'Embed this calculator on your site', embedCode: 'Embed Code', embedFree: 'Free to embed on any website. No registration required. The calculator stays updated automatically.',
   },
   uk: {
@@ -145,6 +146,7 @@ const strings = {
     miaPlanItem2: 'Персональні цілі на основі твоїх даних',
     miaPlanItem3: 'Щоденний чекін з Міа',
     miaRewatch: 'Переглянути відео ще раз',
+    coachMeetOthers: 'Також на SolviqLab',
     embedTitle: 'Вставте калькулятор на свій сайт', embedCode: 'Код для вставки', embedFree: 'Безкоштовно для будь-якого сайту. Без реєстрації. Калькулятор оновлюється автоматично.',
   },
   es: {
@@ -219,6 +221,7 @@ const strings = {
     miaPlanItem2: 'Objetivos personalizados basados en tus datos',
     miaPlanItem3: 'Check-in diario con Mia',
     miaRewatch: 'Volver a ver el mensaje de Mia',
+    coachMeetOthers: 'También en SolviqLab',
     embedTitle: 'Integra esta calculadora en tu sitio', embedCode: 'Código de integración', embedFree: 'Integración gratuita en cualquier sitio. Sin registro. La calculadora se actualiza automáticamente.',
   },
   pt: {
@@ -293,6 +296,7 @@ const strings = {
     miaPlanItem2: 'Metas personalizadas com base nos seus dados',
     miaPlanItem3: 'Check-in diário com Mia',
     miaRewatch: 'Assistir novamente à mensagem da Mia',
+    coachMeetOthers: 'Também no SolviqLab',
     embedTitle: 'Incorpore esta calculadora no seu site', embedCode: 'Código de incorporação', embedFree: 'Grátis para incorporar em qualquier site. Sem registro. A calculadora é atualizada automaticamente.',
   },
   fr: {
@@ -367,6 +371,7 @@ const strings = {
     miaPlanItem2: 'Objectifs personnalisés basés sur vos données',
     miaPlanItem3: 'Check-in quotidien avec Mia',
     miaRewatch: 'Revoir le message de Mia',
+    coachMeetOthers: 'Aussi sur SolviqLab',
     embedTitle: 'Intégrez cette calculatrice sur votre site', embedCode: 'Code d\'intégration', embedFree: 'Intégration gratuite sur tout site. Sans inscription. La calculatrice est mise à jour automatiquement.',
   },
   de: {
@@ -441,6 +446,7 @@ const strings = {
     miaPlanItem2: 'Personalisierte Ziele basierend auf deinen Daten',
     miaPlanItem3: 'Tägliches Check-in mit Mia',
     miaRewatch: 'Mias Nachricht nochmal ansehen',
+    coachMeetOthers: 'Auch auf SolviqLab',
     embedTitle: 'Rechner auf Ihrer Website einbetten', embedCode: 'Einbettungscode', embedFree: 'Kostenlos auf jeder Website einbettbar. Keine Registrierung. Der Rechner wird automatisch aktualisiert.',
   },
   pl: {
@@ -515,6 +521,7 @@ const strings = {
     miaPlanItem2: 'Spersonalizowane cele oparte na Twoich danych',
     miaPlanItem3: 'Codzienne check-in z Mią',
     miaRewatch: 'Obejrzyj wiadomość Mii ponownie',
+    coachMeetOthers: 'Również na SolviqLab',
     embedTitle: 'Osadź ten kalkulator na swojej stronie', embedCode: 'Kod osadzania', embedFree: 'Bezpłatne osadzanie na każdej stronie. Bez rejestracji. Kalkulator aktualizuje się automatycznie.',
   },
   tr: {
@@ -589,6 +596,7 @@ const strings = {
     miaPlanItem2: 'Verilerinize dayalı kişiselleştirilmiş hedefler',
     miaPlanItem3: "Mia ile günlük check-in",
     miaRewatch: "Mia'nın mesajını tekrar izle",
+    coachMeetOthers: 'SolviqLab\'da ayrıca',
     embedTitle: 'Bu hesap makinesini sitenize ekleyin', embedCode: 'Gömme kodu', embedFree: 'Herhangi bir siteye ücretsiz ekleyin. Kayıt gerekmez. Hesap makinesi otomatik olarak güncellenir.',
   },
   it: {
@@ -663,6 +671,7 @@ const strings = {
     miaPlanItem2: 'Obiettivi personalizzati basati sui tuoi dati',
     miaPlanItem3: 'Check-in quotidiano con Mia',
     miaRewatch: 'Rivedi il messaggio di Mia',
+    coachMeetOthers: 'Anche su SolviqLab',
     embedTitle: 'Incorpora questa calcolatrice nel tuo sito', embedCode: 'Codice di incorporazione', embedFree: 'Gratis da incorporare su qualsiasi sito. Senza registrazione. La calcolatrice si aggiorna automaticamente.',
   },
   nl: {
@@ -737,6 +746,7 @@ const strings = {
     miaPlanItem2: 'Gepersonaliseerde doelen op basis van jouw gegevens',
     miaPlanItem3: 'Dagelijkse check-in met Mia',
     miaRewatch: "Bekijk Mia's bericht opnieuw",
+    coachMeetOthers: 'Ook op SolviqLab',
     embedTitle: 'Sluit deze rekenmachine in op uw website', embedCode: 'Insluitcode', embedFree: 'Gratis in te sluiten op elke website. Geen registratie vereist. De rekenmachine wordt automatisch bijgewerkt.',
   },
 }
