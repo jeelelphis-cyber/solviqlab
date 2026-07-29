@@ -54,5 +54,7 @@
     "tips_3": "Keep your bedroom cool — 65–68°F (18–20°C) is the optimal sleep temperature for most adults. Core body temperature naturally drops 1–2°F during sleep onset as part of the circadian process. A cool room facilitates this drop, reducing time to fall asleep and improving deep sleep quality. A warm shower or bath 1–2 hours before bed (not immediately before) paradoxically improves sleep by causing peripheral vasodilation that accelerates core temperature drop after exiting the bath.",
     "tips_4": "If you cannot get a full 5-cycle night, prioritize the end of your sleep window over the beginning. The first cycles of the night are rich in deep slow-wave sleep (N3), which occurs regardless of when you sleep; the final cycles (early morning) are rich in REM. If you must cut sleep short, cutting from the beginning (later bedtime) sacrifices some N3 but preserves REM. Cutting from the end (earlier wake time) disproportionately reduces REM — which is why early alarm clocks are more cognitively and emotionally costly than late bedtimes for the same total sleep reduction."
   },
-  "calculator_name": "Sleep Calculator"
+  "calculator_name": "Sleep Calculator",
+  "label_cycle_bar_waketime": "Each time = ideal bedtime for complete sleep cycles",
+  "label_cycle_bar_bedtime": "Each time = ideal wake-up time after complete sleep cycles"
 }

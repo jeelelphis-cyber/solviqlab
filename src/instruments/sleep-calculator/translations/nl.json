@@ -54,5 +54,7 @@
     "tips_3": "Houd je slaapkamer koel — 65–68°F (18–20°C) is de optimale slaaptemperatuur voor de meeste volwassenen. De kerntemperatuur van het lichaam daalt van nature met 1–2°F tijdens het in slaap vallen als onderdeel van het circadiaanse proces. Een koele kamer bevordert deze daling, verkort de tijd om in slaap te vallen en verbetert de kwaliteit van de diepe slaap. Een warme douche of bad 1–2 uur voor het slapengaan (niet vlak ervoor) verbetert paradoxaal genoeg de slaap door perifere vasodilatatie te veroorzaken, die de daling van de kerntemperatuur versnelt nadat je uit bad komt.",
     "tips_4": "Als je geen volledige nacht van 5 cycli kunt krijgen, geef dan prioriteit aan het einde van je slaapvenster boven het begin. De eerste cycli van de nacht zijn rijk aan diepe slow-wave slaap (N3), die optreedt ongeacht wanneer je slaapt; de laatste cycli (vroege ochtend) zijn rijk aan REM. Als je je slaap moet inkorten, dan offer je bij inkorting vanaf het begin (later naar bed gaan) wat N3 op, maar behoud je REM. Inkorting vanaf het einde (vroeger wakker worden) vermindert onevenredig veel REM — daarom zijn vroege wekkers cognitief en emotioneel kostbaarder dan laat naar bed gaan voor dezelfde totale slaapvermindering."
   },
-  "calculator_name": "Slaap Calculator"
+  "calculator_name": "Slaap Calculator",
+  "label_cycle_bar_waketime": "Elk tijdstip = ideale bedtijd voor complete slaapcycli",
+  "label_cycle_bar_bedtime": "Elk tijdstip = ideale ontwaaktijd na complete slaapcycli"
 }

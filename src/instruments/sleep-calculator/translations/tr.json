@@ -54,5 +54,7 @@
     "tips_3": "Yatak odanızı serin tutun; 18-20°C çoğu yetişkin için optimal uyku sıcaklığıdır. Çekirdek vücut sıcaklığı, sirkadiyen sürecin bir parçası olarak uyku başlangıcında doğal olarak 0,5-1°C düşer. Serin bir oda bu düşüşü kolaylaştırır ve derin uyku kalitesini iyileştirir. Yatmadan 1-2 saat önce sıcak duş veya banyo paradoks biçimde uykuyu iyileştirir.",
     "tips_4": "Tam 5 döngülük bir gece yapamıyorsanız, uyku pencerenizin başı yerine sonuna öncelik verin. Gecenin ilk döngüleri derin yavaş dalga uykusu (N3) açısından zengindir; son döngüler (erken sabah) REM açısından zengindir. Uykuyu kısaltmak zorundaysanız, başlangıcı kesmek (geç yatma) bir miktar N3'ü feda eder ancak REM'i korur. Erken alarm saatleri, aynı toplam uyku kısaltması için geç uyuma saatlerinden bilişsel ve duygusal olarak daha maliyetlidir."
   },
-  "calculator_name": "Uyku Hesaplayıcı"
+  "calculator_name": "Uyku Hesaplayıcı",
+  "label_cycle_bar_waketime": "Her saat = tam uyku döngüleri için ideal yatış saati",
+  "label_cycle_bar_bedtime": "Her saat = tam uyku döngülerinden sonra ideal uyanış saati"
 }

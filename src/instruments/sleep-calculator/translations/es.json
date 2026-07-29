@@ -55,5 +55,7 @@
     "tips_3": "Evita la cafeína durante las 8–10 horas previas a la hora de acostarte. La cafeína tiene una vida media de 5–6 horas, lo que significa que el 50% del café de las 3 PM sigue activo a las 9 PM. Para los consumidores habituales, la sensibilidad a la cafeína varía, pero el estudio de Matthew Walker muestra que la cafeína consumida incluso 6 horas antes de acostarse reduce el tiempo de sueño de ondas lentas mensurable en un 20%.",
     "tips_4": "Si no puedes evitar una noche corta de sueño, una siesta estratégica de 20 minutos (antes de las 3 PM) puede restaurar parcialmente el rendimiento cognitivo sin causar inercia del sueño (la somnolencia que sientes después de dormir demasiado). Evita las siestas de más de 30 minutos durante el día, ya que comienzan el sueño profundo de ondas lentas y hacen que sea mucho más difícil despertarse y sentirse alerta."
   },
-  "calculator_name": "Calculadora de Sueño"
+  "calculator_name": "Calculadora de Sueño",
+  "label_cycle_bar_waketime": "Cada hora = hora de dormir ideal para ciclos completos de sueño",
+  "label_cycle_bar_bedtime": "Cada hora = hora ideal de despertar después de ciclos completos de sueño"
 }

@@ -54,5 +54,7 @@
     "tips_3": "Utrzymuj sypialnię w chłodnej temperaturze — 18–20°C to optymalna temperatura snu dla większości dorosłych. Temperatura rdzenia ciała naturalnie spada podczas zasypiania jako część procesu dobowego. Chłodne pomieszczenie ułatwia ten spadek, skracając czas zasypiania i poprawiając jakość snu głębokiego. Ciepły prysznic 1–2 godziny przed snem paradoksalnie pomaga — szybkie obniżenie temperatury skóry po prysznicu sygnalizuje organizmowi czas na sen.",
     "tips_4": "Jeśli musisz skrócić nocny sen, chroń koniec okna snu, a nie jego początek. Pierwsze cykle nocy są bogate w sen głęboki wolnofalowy (N3); ostatnie cykle (wczesny ranek) są bogate w sen REM — kluczowy dla uczenia się, pamięci emocjonalnej i kreatywności. Skracając koniec snu (budząc się wcześniej), tracisz proporcjonalnie więcej REM. Dla intensywnego uczenia się lub kreatywnej pracy, ochrona ostatnich godzin snu jest priorytetem."
   },
-  "calculator_name": "Kalkulator Snu"
+  "calculator_name": "Kalkulator Snu",
+  "label_cycle_bar_waketime": "Każda godzina = idealna pora snu dla pełnych cykli snu",
+  "label_cycle_bar_bedtime": "Każda godzina = idealny czas przebudzenia po pełnych cyklach snu"
 }

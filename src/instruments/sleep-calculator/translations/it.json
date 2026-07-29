@@ -54,5 +54,7 @@
     "tips_3": "Mantieni la camera da letto fresca — 18-20°C è la temperatura ottimale per il sonno per la maggior parte degli adulti. La temperatura corporea centrale scende naturalmente di 1-2°C all'inizio del sonno come parte del processo circadiano. Una stanza fresca facilita questa diminuzione, riducendo il tempo per addormentarsi e migliorando la qualità del sonno profondo. Una doccia o un bagno caldi 1-2 ore prima di dormire (non immediatamente prima) migliorano paradossalmente il sonno causando una vasodilatazione periferica che accelera il calo della temperatura corporea centrale dopo essere usciti dal bagno.",
     "tips_4": "Se non riesci a fare una notte completa di 5 cicli, dai priorità alla fine della tua finestra di sonno rispetto all'inizio. I primi cicli della notte sono ricchi di sonno profondo a onde lente (N3), che si verifica indipendentemente da quando dormi; i cicli finali (nelle prime ore del mattino) sono ricchi di REM. Se devi accorciare il sonno, tagliare dall'inizio (ora di andare a letto più tarda) sacrifica parte dell'N3 ma preserva il REM. Tagliare dalla fine (ora di risveglio più anticipata) riduce in modo sproporzionato il REM — motivo per cui le sveglie anticipate sono cognitivamente ed emotivamente più costose di un'ora di andare a letto tardiva per la stessa riduzione totale del sonno."
   },
-  "calculator_name": "Calcolatore del Sonno"
+  "calculator_name": "Calcolatore del Sonno",
+  "label_cycle_bar_waketime": "Ogni ora = ora di andare a letto ideale per cicli di sonno completi",
+  "label_cycle_bar_bedtime": "Ogni ora = ora di risveglio ideale dopo cicli di sonno completi"
 }

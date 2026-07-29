@@ -55,5 +55,7 @@
     "tips_3": "Mantenha seu quarto fresco — 65–68°F (18–20°C) é a temperatura ideal para o sono da maioria dos adultos. A temperatura corporal central cai naturalmente de 1 a 2°F durante o início do sono como parte do processo circadiano. Um ambiente fresco facilita essa queda, reduzindo o tempo para adormecer e melhorando a qualidade do sono profundo. Um banho ou chuveiro quente 1–2 horas antes de dormir (não imediatamente antes) paradoxalmente melhora o sono ao causar vasodilatação periférica que acelera a queda da temperatura central após sair do banho.",
     "tips_4": "Se você não conseguir uma noite completa de 5 ciclos, priorize o final da sua janela de sono em vez do início. Os primeiros ciclos da noite são ricos em sono de ondas lentas profundas (N3), que ocorre independentemente de quando você dorme; os ciclos finais (início da manhã) são ricos em REM. Se você precisar encurtar o sono, cortar do início (hora de dormir mais tarde) sacrifica um pouco de N3, mas preserva o REM. Cortar do final (hora de acordar mais cedo) reduz desproporcionalmente o REM — razão pela qual despertadores matinais são mais custosos cognitiva e emocionalmente do que horários de dormir tardios para a mesma redução total de sono."
   },
-  "calculator_name": "Calculadora de Sono"
+  "calculator_name": "Calculadora de Sono",
+  "label_cycle_bar_waketime": "Cada hora = hora de dormir ideal para ciclos de sono completos",
+  "label_cycle_bar_bedtime": "Cada hora = hora de acordar ideal após ciclos de sono completos"
 }

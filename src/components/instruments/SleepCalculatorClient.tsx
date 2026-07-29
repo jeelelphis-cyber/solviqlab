@@ -39,7 +39,7 @@ function CycleCard({ label, time, tag, tagColor, isOptimal }: CycleCardProps) {
   )
 }
 
-function SleepCycleBar({ mode }: { mode: 'waketime' | 'bedtime' }) {
+function SleepCycleBar({ mode, t }: { mode: 'waketime' | 'bedtime'; t: (key: string) => string | undefined }) {
   const cycles = [
     { label: '4 cycles', hours: 6, color: '#EAB308', quality: 'Light' },
     { label: '5 cycles', hours: 7.5, color: '#22C55E', quality: 'Optimal' },
@@ -65,7 +65,7 @@ function SleepCycleBar({ mode }: { mode: 'waketime' | 'bedtime' }) {
         <span>10.5h</span>
       </div>
       <p className="text-xs text-content-tertiary mt-2 text-center">
-        {mode === 'waketime' ? 'Each time = ideal bedtime for complete sleep cycles' : 'Each time = ideal wake-up time after complete sleep cycles'}
+        {mode === 'waketime' ? (t('label_cycle_bar_waketime') ?? 'Each time = ideal bedtime for complete sleep cycles') : (t('label_cycle_bar_bedtime') ?? 'Each time = ideal wake-up time after complete sleep cycles')}
       </p>
     </div>
   )
@@ -199,7 +199,7 @@ export function SleepCalculatorClient({ translations, lang }: Props) {
             <div className="text-sm text-green-600 dark:text-green-400 mt-1">
               {resultLabel.replace(':', '')} — {t('label_cycle5') ?? '5 Cycles — 7.5 hours'}
             </div>
-            <SleepCycleBar mode={mode} />
+            <SleepCycleBar mode={mode} t={t} />
           </div>
 
           {/* Cycle Cards */}

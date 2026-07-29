@@ -48,5 +48,7 @@
     "tips_3": "Maintenez votre chambre fraîche — 18 à 20 °C est la température de sommeil optimale pour la plupart des adultes. La température corporelle centrale baisse naturellement de 0,5 à 1 °C lors de l'endormissement dans le cadre du processus circadien. Une chambre fraîche facilite cette baisse, réduisant le temps d'endormissement et améliorant la qualité du sommeil profond. Un bain ou une douche chaude 1 à 2 heures avant le coucher (pas immédiatement avant) améliore paradoxalement le sommeil en provoquant une vasodilatation périphérique qui accélère la chute de la température centrale après être sorti.",
     "tips_4": "Si vous ne pouvez pas avoir une nuit complète de 5 cycles, priorisez la fin de votre fenêtre de sommeil plutôt que le début. Les premiers cycles de la nuit sont riches en sommeil profond à ondes lentes (N3), qui se produit indépendamment de l'heure à laquelle vous dormez ; les derniers cycles (tôt le matin) sont riches en REM. Si vous devez raccourcir votre sommeil, couper depuis le début (coucher plus tardif) sacrifie une partie du N3 mais préserve le REM. Couper depuis la fin (réveil plus précoce) réduit disproportionnellement le REM — c'est pourquoi les alarmes matinales précoces sont plus coûteuses cognitivement et émotionnellement qu'un coucher tardif pour la même réduction totale de sommeil."
   },
-  "calculator_name": "Calculateur de Sommeil"
+  "calculator_name": "Calculateur de Sommeil",
+  "label_cycle_bar_waketime": "Chaque heure = heure de coucher idéale pour des cycles de sommeil complets",
+  "label_cycle_bar_bedtime": "Chaque heure = heure de réveil idéale après des cycles de sommeil complets"
 }
