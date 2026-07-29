@@ -73,5 +73,9 @@
   "label_dimension1": "Lunghezza / Raggio / Lato",
   "label_dimension2": "Larghezza (se necessario)",
   "label_dimension3": "Altezza (se necessario)",
-  "label_ratioC": "C (opzionale, calcola D)"
+  "label_ratioC": "C (opzionale, calcola D)",
+  "label_invested": "Investito",
+  "label_returns": "Rendimenti",
+  "label_principal": "Capitale",
+  "label_compound_returns": "Rendimenti Composti"
 }

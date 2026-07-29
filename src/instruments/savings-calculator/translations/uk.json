@@ -89,5 +89,6 @@
   "label_dimension1": "Довжина / Радіус / Сторона",
   "label_dimension2": "Ширина (якщо потрібно)",
   "label_dimension3": "Висота (якщо потрібно)",
-  "label_ratioC": "C (необов'язково, знайти D)"
+  "label_ratioC": "C (необов'язково, знайти D)",
+  "label_growth_breakdown": "Розподіл зростання"
 }

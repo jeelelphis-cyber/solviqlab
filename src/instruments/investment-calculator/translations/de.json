@@ -73,5 +73,9 @@
   "label_dimension1": "Länge / Radius / Seite",
   "label_dimension2": "Breite (falls benötigt)",
   "label_dimension3": "Höhe (falls benötigt)",
-  "label_ratioC": "C (optional, D berechnen)"
+  "label_ratioC": "C (optional, D berechnen)",
+  "label_invested": "Investiert",
+  "label_returns": "Renditen",
+  "label_principal": "Kapital",
+  "label_compound_returns": "Zinseszinsrenditen"
 }

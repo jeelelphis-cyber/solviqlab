@@ -72,5 +72,7 @@
   "label_dimension1": "Uzunluk / Yarıçap / Kenar",
   "label_dimension2": "Genişlik (gerekirse)",
   "label_dimension3": "Yükseklik (gerekirse)",
-  "label_ratioC": "C (isteğe bağlı, D'yi çöz)"
+  "label_ratioC": "C (isteğe bağlı, D'yi çöz)",
+  "label_original_amount": "Orijinal miktar",
+  "label_equivalent_today": "Bugünkü eşdeğeri"
 }

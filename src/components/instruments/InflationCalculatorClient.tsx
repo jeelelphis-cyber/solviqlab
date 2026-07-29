@@ -80,7 +80,7 @@ function getImpactTier(purchasingPowerLoss: number): ImpactTier {
   return 'severe'
 }
 
-function PurchasingPowerBar({ original, adjusted }: { original: number; adjusted: number }) {
+function PurchasingPowerBar({ original, adjusted, t }: { original: number; adjusted: number; t: (key: string) => string | undefined }) {
   const max = Math.max(original, adjusted)
   const origPct = max > 0 ? (original / max) * 100 : 100
   const adjPct = max > 0 ? (adjusted / max) * 100 : 100
@@ -88,14 +88,14 @@ function PurchasingPowerBar({ original, adjusted }: { original: number; adjusted
   return (
     <div className="mt-4 space-y-2">
       <div>
-        <div className="text-xs text-content-tertiary mb-1">Original amount</div>
+        <div className="text-xs text-content-tertiary mb-1">{t('label_original_amount') ?? 'Original amount'}</div>
         <div className="flex items-center gap-2">
           <div className="flex-1 h-4 bg-blue-400 rounded-full" style={{ width: `${origPct}%` }} />
           <span className="text-xs font-medium text-content-primary w-16 text-right">{original.toFixed(0)}</span>
         </div>
       </div>
       <div>
-        <div className="text-xs text-content-tertiary mb-1">Equivalent today</div>
+        <div className="text-xs text-content-tertiary mb-1">{t('label_equivalent_today') ?? 'Equivalent today'}</div>
         <div className="flex items-center gap-2">
           <div className="flex-1 h-4 bg-orange-400 rounded-full" style={{ width: `${adjPct}%` }} />
           <span className="text-xs font-medium text-content-primary w-16 text-right">{adjusted.toFixed(0)}</span>
@@ -244,7 +244,7 @@ export function InflationCalculatorClient({ translations, lang }: Props) {
               {formatAmount(result.adjustedAmount, currency, lang)}
             </div>
             <div className="text-sm text-content-secondary mt-1">equivalent in {toYear}</div>
-            <PurchasingPowerBar original={parseFloat(amount)} adjusted={result.adjustedAmount} />
+            <PurchasingPowerBar original={parseFloat(amount)} adjusted={result.adjustedAmount} t={t} />
           </div>
 
           {/* Stats */}

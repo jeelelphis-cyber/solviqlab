@@ -74,5 +74,9 @@
   "label_dimension1": "Lunghezza / Raggio / Lato",
   "label_dimension2": "Larghezza (se necessario)",
   "label_dimension3": "Altezza (se necessario)",
-  "label_ratioC": "C (opzionale, calcola D)"
+  "label_ratioC": "C (opzionale, calcola D)",
+  "label_in_fertile_window": "Nella Finestra Fertile",
+  "label_ovulation_upcoming": "Ovulazione Imminente",
+  "label_ovulation_passed": "Ovulazione Passata",
+  "label_fertile_window": "Finestra Fertile"
 }

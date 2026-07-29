@@ -88,5 +88,6 @@
   "label_dimension1": "Lengte / Straal / Zijde",
   "label_dimension2": "Breedte (indien nodig)",
   "label_dimension3": "Hoogte (indien nodig)",
-  "label_ratioC": "C (optioneel, bereken D)"
+  "label_ratioC": "C (optioneel, bereken D)",
+  "label_growth_breakdown": "Groeiverdeling"
 }

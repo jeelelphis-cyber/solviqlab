@@ -73,5 +73,9 @@
   "label_dimension1": "Uzunluk / Yarıçap / Kenar",
   "label_dimension2": "Genişlik (gerekirse)",
   "label_dimension3": "Yükseklik (gerekirse)",
-  "label_ratioC": "C (isteğe bağlı, D'yi çöz)"
+  "label_ratioC": "C (isteğe bağlı, D'yi çöz)",
+  "label_invested": "Yatırılan",
+  "label_returns": "Getiriler",
+  "label_principal": "Anapara",
+  "label_compound_returns": "Bileşik Getiriler"
 }

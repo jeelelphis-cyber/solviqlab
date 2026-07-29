@@ -74,5 +74,9 @@
   "label_dimension1": "Length / Radius / Side",
   "label_dimension2": "Width (if needed)",
   "label_dimension3": "Height (if needed)",
-  "label_ratioC": "C (optional, solve for D)"
+  "label_ratioC": "C (optional, solve for D)",
+  "label_in_fertile_window": "In Fertile Window",
+  "label_ovulation_upcoming": "Ovulation Upcoming",
+  "label_ovulation_passed": "Ovulation Passed",
+  "label_fertile_window": "Fertile Window"
 }

@@ -170,7 +170,7 @@ export function OvulationCalculatorClient({ translations, lang }: Props) {
             <div className="flex items-center gap-2 mb-1">
               <span className="text-xl">{inFertileWindow ? '🌸' : isUpcoming ? '📅' : '📊'}</span>
               <span className={`text-sm font-semibold uppercase tracking-wide ${inFertileWindow ? 'text-green-700 dark:text-green-400' : isUpcoming ? 'text-pink-700 dark:text-pink-400' : 'text-content-secondary'}`}>
-                {inFertileWindow ? 'In Fertile Window' : isUpcoming ? 'Ovulation Upcoming' : 'Ovulation Passed'}
+                {inFertileWindow ? (t('label_in_fertile_window') ?? 'In Fertile Window') : isUpcoming ? (t('label_ovulation_upcoming') ?? 'Ovulation Upcoming') : (t('label_ovulation_passed') ?? 'Ovulation Passed')}
               </span>
             </div>
             <div className={`text-2xl font-bold mb-1 ${inFertileWindow ? 'text-green-700 dark:text-green-300' : isUpcoming ? 'text-pink-700 dark:text-pink-300' : 'text-content-primary'}`}>
@@ -187,7 +187,7 @@ export function OvulationCalculatorClient({ translations, lang }: Props) {
             <h3 className="text-sm font-medium text-content-secondary mb-3">{t('result') ?? 'Your Cycle Details'}</h3>
 
             <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-lg p-4 mb-3">
-              <div className="text-xs font-medium text-green-600 dark:text-green-400 mb-2">Fertile Window</div>
+              <div className="text-xs font-medium text-green-600 dark:text-green-400 mb-2">{t('label_fertile_window') ?? 'Fertile Window'}</div>
               <div className="flex items-center gap-2">
                 <span className="text-base font-semibold text-green-700 dark:text-green-300">{formatShortDate(result.fertileWindowStart)}</span>
                 <span className="text-content-tertiary">→</span>

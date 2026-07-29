@@ -71,6 +71,7 @@ const strings = {
     miaPlanItem2: 'Personalized targets based on your data',
     miaPlanItem3: 'Daily check-in with Mia',
     miaRewatch: "Rewatch Mia's message",
+    embedTitle: 'Embed this calculator on your site', embedCode: 'Embed Code', embedFree: 'Free to embed on any website. No registration required. The calculator stays updated automatically.',
   },
   uk: {
     navQuizzes: 'Тести', navMyAccount: 'Мій кабінет',
@@ -144,6 +145,7 @@ const strings = {
     miaPlanItem2: 'Персональні цілі на основі твоїх даних',
     miaPlanItem3: 'Щоденний чекін з Міа',
     miaRewatch: 'Переглянути відео ще раз',
+    embedTitle: 'Вставте калькулятор на свій сайт', embedCode: 'Код для вставки', embedFree: 'Безкоштовно для будь-якого сайту. Без реєстрації. Калькулятор оновлюється автоматично.',
   },
   es: {
     navQuizzes: 'Tests', navMyAccount: 'Mi Cuenta',
@@ -217,6 +219,7 @@ const strings = {
     miaPlanItem2: 'Objetivos personalizados basados en tus datos',
     miaPlanItem3: 'Check-in diario con Mia',
     miaRewatch: 'Volver a ver el mensaje de Mia',
+    embedTitle: 'Integra esta calculadora en tu sitio', embedCode: 'Código de integración', embedFree: 'Integración gratuita en cualquier sitio. Sin registro. La calculadora se actualiza automáticamente.',
   },
   pt: {
     navQuizzes: 'Testes', navMyAccount: 'Minha Conta',
@@ -290,6 +293,7 @@ const strings = {
     miaPlanItem2: 'Metas personalizadas com base nos seus dados',
     miaPlanItem3: 'Check-in diário com Mia',
     miaRewatch: 'Assistir novamente à mensagem da Mia',
+    embedTitle: 'Incorpore esta calculadora no seu site', embedCode: 'Código de incorporação', embedFree: 'Grátis para incorporar em qualquier site. Sem registro. A calculadora é atualizada automaticamente.',
   },
   fr: {
     navQuizzes: 'Tests', navMyAccount: 'Mon Compte',
@@ -363,6 +367,7 @@ const strings = {
     miaPlanItem2: 'Objectifs personnalisés basés sur vos données',
     miaPlanItem3: 'Check-in quotidien avec Mia',
     miaRewatch: 'Revoir le message de Mia',
+    embedTitle: 'Intégrez cette calculatrice sur votre site', embedCode: 'Code d\'intégration', embedFree: 'Intégration gratuite sur tout site. Sans inscription. La calculatrice est mise à jour automatiquement.',
   },
   de: {
     navQuizzes: 'Tests', navMyAccount: 'Mein Konto',
@@ -436,6 +441,7 @@ const strings = {
     miaPlanItem2: 'Personalisierte Ziele basierend auf deinen Daten',
     miaPlanItem3: 'Tägliches Check-in mit Mia',
     miaRewatch: 'Mias Nachricht nochmal ansehen',
+    embedTitle: 'Rechner auf Ihrer Website einbetten', embedCode: 'Einbettungscode', embedFree: 'Kostenlos auf jeder Website einbettbar. Keine Registrierung. Der Rechner wird automatisch aktualisiert.',
   },
   pl: {
     navQuizzes: 'Testy', navMyAccount: 'Moje Konto',
@@ -509,6 +515,7 @@ const strings = {
     miaPlanItem2: 'Spersonalizowane cele oparte na Twoich danych',
     miaPlanItem3: 'Codzienne check-in z Mią',
     miaRewatch: 'Obejrzyj wiadomość Mii ponownie',
+    embedTitle: 'Osadź ten kalkulator na swojej stronie', embedCode: 'Kod osadzania', embedFree: 'Bezpłatne osadzanie na każdej stronie. Bez rejestracji. Kalkulator aktualizuje się automatycznie.',
   },
   tr: {
     navQuizzes: 'Testler', navMyAccount: 'Hesabım',
@@ -582,6 +589,7 @@ const strings = {
     miaPlanItem2: 'Verilerinize dayalı kişiselleştirilmiş hedefler',
     miaPlanItem3: "Mia ile günlük check-in",
     miaRewatch: "Mia'nın mesajını tekrar izle",
+    embedTitle: 'Bu hesap makinesini sitenize ekleyin', embedCode: 'Gömme kodu', embedFree: 'Herhangi bir siteye ücretsiz ekleyin. Kayıt gerekmez. Hesap makinesi otomatik olarak güncellenir.',
   },
   it: {
     navQuizzes: 'Test', navMyAccount: 'Il Mio Account',
@@ -655,6 +663,7 @@ const strings = {
     miaPlanItem2: 'Obiettivi personalizzati basati sui tuoi dati',
     miaPlanItem3: 'Check-in quotidiano con Mia',
     miaRewatch: 'Rivedi il messaggio di Mia',
+    embedTitle: 'Incorpora questa calcolatrice nel tuo sito', embedCode: 'Codice di incorporazione', embedFree: 'Gratis da incorporare su qualsiasi sito. Senza registrazione. La calcolatrice si aggiorna automaticamente.',
   },
   nl: {
     navQuizzes: 'Testen', navMyAccount: 'Mijn Account',
@@ -728,6 +737,7 @@ const strings = {
     miaPlanItem2: 'Gepersonaliseerde doelen op basis van jouw gegevens',
     miaPlanItem3: 'Dagelijkse check-in met Mia',
     miaRewatch: "Bekijk Mia's bericht opnieuw",
+    embedTitle: 'Sluit deze rekenmachine in op uw website', embedCode: 'Insluitcode', embedFree: 'Gratis in te sluiten op elke website. Geen registratie vereist. De rekenmachine wordt automatisch bijgewerkt.',
   },
 }
 

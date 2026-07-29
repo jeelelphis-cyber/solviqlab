@@ -74,5 +74,9 @@
   "label_dimension1": "Długość / Promień / Bok",
   "label_dimension2": "Szerokość (jeśli potrzebna)",
   "label_dimension3": "Wysokość (jeśli potrzebna)",
-  "label_ratioC": "C (opcjonalnie, oblicz D)"
+  "label_ratioC": "C (opcjonalnie, oblicz D)",
+  "label_in_fertile_window": "W Oknie Płodności",
+  "label_ovulation_upcoming": "Owulacja nadchodzi",
+  "label_ovulation_passed": "Owulacja minęła",
+  "label_fertile_window": "Okno Płodności"
 }

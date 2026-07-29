@@ -382,7 +382,7 @@ export default function InstrumentPage({ params }: PageProps) {
         })()}
 
         {/* Embed Widget */}
-        <EmbedSection slug={slug} title={pageTitle} />
+        <EmbedSection slug={slug} title={pageTitle} lang={lang} />
 
         {/* SEO Content Blocks */}
         <ContentSection translations={translations} primaryKeyword={pageTitle.split(' — ')[0]!} lang={lang} />

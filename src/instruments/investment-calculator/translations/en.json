@@ -73,5 +73,9 @@
   "label_dimension1": "Length / Radius / Side",
   "label_dimension2": "Width (if needed)",
   "label_dimension3": "Height (if needed)",
-  "label_ratioC": "C (optional, solve for D)"
+  "label_ratioC": "C (optional, solve for D)",
+  "label_invested": "Invested",
+  "label_returns": "Returns",
+  "label_principal": "Principal",
+  "label_compound_returns": "Compound Returns"
 }

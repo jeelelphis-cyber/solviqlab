@@ -82,7 +82,7 @@ function getGrowthTier(finalValue: number, totalContributions: number): GrowthTi
   return 'outstanding'
 }
 
-function GrowthBar({ totalContributions, totalInterest }: { totalContributions: number; totalInterest: number }) {
+function GrowthBar({ totalContributions, totalInterest, t }: { totalContributions: number; totalInterest: number; t: (key: string) => string | undefined }) {
   const total = totalContributions + totalInterest
   const principalPct = total > 0 ? (totalContributions / total) * 100 : 100
   const returnPct = 100 - principalPct
@@ -90,8 +90,8 @@ function GrowthBar({ totalContributions, totalInterest }: { totalContributions: 
   return (
     <div className="mt-4">
       <div className="flex justify-between text-xs text-content-tertiary mb-1">
-        <span>Invested</span>
-        <span>Returns</span>
+        <span>{t('label_invested') ?? 'Invested'}</span>
+        <span>{t('label_returns') ?? 'Returns'}</span>
       </div>
       <div className="flex h-5 rounded-full overflow-hidden">
         <div
@@ -108,8 +108,8 @@ function GrowthBar({ totalContributions, totalInterest }: { totalContributions: 
         </div>
       </div>
       <div className="flex justify-between text-xs font-medium mt-1">
-        <span className="text-blue-600 dark:text-blue-400">Principal</span>
-        <span className="text-green-600 dark:text-green-400">Compound Returns</span>
+        <span className="text-blue-600 dark:text-blue-400">{t('label_principal') ?? 'Principal'}</span>
+        <span className="text-green-600 dark:text-green-400">{t('label_compound_returns') ?? 'Compound Returns'}</span>
       </div>
     </div>
   )
@@ -254,7 +254,7 @@ export function InvestmentCalculatorClient({ translations, lang }: Props) {
               {formatAmount(result.finalValue, currency, lang)}
             </div>
             <div className="text-sm text-content-secondary mt-1">final value after {years} years</div>
-            <GrowthBar totalContributions={result.totalContributions} totalInterest={result.totalInterest} />
+            <GrowthBar totalContributions={result.totalContributions} totalInterest={result.totalInterest} t={t} />
           </div>
 
           {/* Stats */}

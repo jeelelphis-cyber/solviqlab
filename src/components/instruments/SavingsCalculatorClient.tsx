@@ -282,7 +282,7 @@ export function SavingsCalculatorClient({ translations, lang }: Props) {
 
           {/* Growth Bar */}
           <div className="bg-surface-card border border-border-default rounded-xl p-5">
-            <div className="text-sm font-medium text-content-secondary mb-3">Growth Breakdown</div>
+            <div className="text-sm font-medium text-content-secondary mb-3">{t('label_growth_breakdown') ?? 'Growth Breakdown'}</div>
             <div className="flex h-4 rounded-full overflow-hidden">
               <div
                 className="bg-blue-500 transition-all"

@@ -1,12 +1,15 @@
 'use client'
 import { useState } from 'react'
+import { t as uiT } from '../lib/ui-strings'
 
 interface Props {
   slug: string
   title: string
+  lang: string
 }
 
-export function EmbedSection({ slug, title }: Props) {
+export function EmbedSection({ slug, title, lang }: Props) {
+  const s = uiT(lang)
   const [open, setOpen] = useState(false)
   const [copied, setCopied] = useState(false)
 
@@ -26,14 +29,14 @@ export function EmbedSection({ slug, title }: Props) {
         className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
       >
         <span className="text-base">{'</>'}</span>
-        <span>Embed this calculator on your site</span>
+        <span>{s.embedTitle}</span>
         <span className={`text-xs transition-transform ${open ? 'rotate-180' : ''}`}>▾</span>
       </button>
 
       {open && (
         <div className="mt-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 overflow-hidden">
           <div className="flex items-center justify-between px-4 py-2 border-b border-slate-200 dark:border-slate-700">
-            <span className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Embed Code</span>
+            <span className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">{s.embedCode}</span>
             <button
               onClick={copy}
               className={`text-xs font-semibold px-3 py-1 rounded-lg transition-all ${
@@ -42,7 +45,7 @@ export function EmbedSection({ slug, title }: Props) {
                   : 'bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-slate-600 border border-slate-200 dark:border-slate-600'
               }`}
             >
-              {copied ? '✓ Copied!' : 'Copy'}
+              {copied ? s.calcCopied : s.calcCopy}
             </button>
           </div>
           <pre className="px-4 py-3 text-xs font-mono text-slate-700 dark:text-slate-300 overflow-x-auto whitespace-pre leading-relaxed">
@@ -50,7 +53,7 @@ export function EmbedSection({ slug, title }: Props) {
           </pre>
           <div className="px-4 py-2.5 bg-blue-50 dark:bg-blue-950/40 border-t border-slate-200 dark:border-slate-700">
             <p className="text-xs text-slate-500 dark:text-slate-400">
-              Free to embed on any website. No registration required. The calculator stays updated automatically.
+              {s.embedFree}
             </p>
           </div>
         </div>

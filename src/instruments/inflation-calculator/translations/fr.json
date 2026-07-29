@@ -66,5 +66,7 @@
   "label_dimension1": "Longueur / Rayon / Côté",
   "label_dimension2": "Largeur (si nécessaire)",
   "label_dimension3": "Hauteur (si nécessaire)",
-  "label_ratioC": "C (optionnel, résoudre D)"
+  "label_ratioC": "C (optionnel, résoudre D)",
+  "label_original_amount": "Montant original",
+  "label_equivalent_today": "Équivalent aujourd'hui"
 }

@@ -74,5 +74,9 @@
   "label_dimension1": "Uzunluk / Yarıçap / Kenar",
   "label_dimension2": "Genişlik (gerekirse)",
   "label_dimension3": "Yükseklik (gerekirse)",
-  "label_ratioC": "C (isteğe bağlı, D'yi çöz)"
+  "label_ratioC": "C (isteğe bağlı, D'yi çöz)",
+  "label_in_fertile_window": "Verimli Pencerede",
+  "label_ovulation_upcoming": "Yumurtlama Yaklaşıyor",
+  "label_ovulation_passed": "Yumurtlama Geçti",
+  "label_fertile_window": "Verimli Pencere"
 }

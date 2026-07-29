@@ -73,5 +73,7 @@
   "label_dimension1": "Longitud / Radio / Lado",
   "label_dimension2": "Ancho (si es necesario)",
   "label_dimension3": "Altura (si es necesario)",
-  "label_ratioC": "C (opcional, resolver D)"
+  "label_ratioC": "C (opcional, resolver D)",
+  "label_original_amount": "Cantidad original",
+  "label_equivalent_today": "Equivalente hoy"
 }

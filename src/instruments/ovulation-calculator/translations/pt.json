@@ -75,5 +75,9 @@
   "label_dimension1": "Comprimento / Raio / Lado",
   "label_dimension2": "Largura (se necessário)",
   "label_dimension3": "Altura (se necessário)",
-  "label_ratioC": "C (opcional, calcular D)"
+  "label_ratioC": "C (opcional, calcular D)",
+  "label_in_fertile_window": "Na Janela Fértil",
+  "label_ovulation_upcoming": "Ovulação Próxima",
+  "label_ovulation_passed": "Ovulação Passou",
+  "label_fertile_window": "Janela Fértil"
 }

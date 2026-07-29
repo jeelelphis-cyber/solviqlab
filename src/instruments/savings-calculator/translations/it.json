@@ -88,5 +88,6 @@
   "label_dimension1": "Lunghezza / Raggio / Lato",
   "label_dimension2": "Larghezza (se necessario)",
   "label_dimension3": "Altezza (se necessario)",
-  "label_ratioC": "C (opzionale, calcola D)"
+  "label_ratioC": "C (opzionale, calcola D)",
+  "label_growth_breakdown": "Ripartizione della Crescita"
 }

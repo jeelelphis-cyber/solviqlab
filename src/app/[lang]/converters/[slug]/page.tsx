@@ -338,7 +338,7 @@ export default async function InstrumentPage({ params }: PageProps) {
         </div>
 
         {/* Embed Widget */}
-        <EmbedSection slug={slug} title={pageTitle} />
+        <EmbedSection slug={slug} title={pageTitle} lang={lang} />
 
         {/* SEO Content Blocks */}
         <ContentSection translations={translations} primaryKeyword={pageTitle.split(' — ')[0]!} lang={lang} />

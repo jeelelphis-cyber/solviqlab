@@ -74,5 +74,9 @@
   "label_dimension1": "Longitud / Radio / Lado",
   "label_dimension2": "Ancho (si es necesario)",
   "label_dimension3": "Altura (si es necesario)",
-  "label_ratioC": "C (opcional, resolver D)"
+  "label_ratioC": "C (opcional, resolver D)",
+  "label_invested": "Invertido",
+  "label_returns": "Retornos",
+  "label_principal": "Capital",
+  "label_compound_returns": "Retornos Compuestos"
 }

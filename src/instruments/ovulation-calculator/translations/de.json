@@ -74,5 +74,9 @@
   "label_dimension1": "Länge / Radius / Seite",
   "label_dimension2": "Breite (falls benötigt)",
   "label_dimension3": "Höhe (falls benötigt)",
-  "label_ratioC": "C (optional, D berechnen)"
+  "label_ratioC": "C (optional, D berechnen)",
+  "label_in_fertile_window": "Im Fruchtbarkeitsfenster",
+  "label_ovulation_upcoming": "Eisprung steht bevor",
+  "label_ovulation_passed": "Eisprung vorbei",
+  "label_fertile_window": "Fruchtbarkeitsfenster"
 }

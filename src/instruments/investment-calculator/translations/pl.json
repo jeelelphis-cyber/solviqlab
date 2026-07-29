@@ -73,5 +73,9 @@
   "label_dimension1": "Długość / Promień / Bok",
   "label_dimension2": "Szerokość (jeśli potrzebna)",
   "label_dimension3": "Wysokość (jeśli potrzebna)",
-  "label_ratioC": "C (opcjonalnie, oblicz D)"
+  "label_ratioC": "C (opcjonalnie, oblicz D)",
+  "label_invested": "Zainwestowano",
+  "label_returns": "Zwroty",
+  "label_principal": "Kapitał",
+  "label_compound_returns": "Zwroty złożone"
 }
