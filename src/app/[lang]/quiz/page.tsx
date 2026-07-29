@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { QUIZ_REGISTRY } from '@/lib/quiz/registry'
 import { t } from '@/lib/ui-strings'
+import { loadQuizTranslation } from '@/lib/quiz/translation-loader'
 
 const SUPPORTED_LANGS = ['en', 'uk', 'es', 'pt', 'fr', 'de', 'pl', 'tr', 'it', 'nl']
 const BASE_URL = 'https://solviqlab.com'
@@ -55,7 +56,9 @@ export default function QuizIndexPage({ params }: PageProps) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {quizzes.map(quiz => {
-            const name = s.quizNames[quiz.slug] ?? quiz.title
+            const tr = loadQuizTranslation(quiz.slug, lang)
+            const name = tr.meta?.title ?? s.quizNames[quiz.slug] ?? quiz.title
+            const description = tr.meta?.description ?? quiz.description
             const clusterLabel = s.quizClusterLabels[quiz.cluster] ?? quiz.cluster
             return (
               <Link
@@ -69,7 +72,7 @@ export default function QuizIndexPage({ params }: PageProps) {
                     {name}
                   </div>
                   <div className="text-xs text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mb-2">
-                    {quiz.description}
+                    {description}
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="inline-flex items-center gap-1 text-xs text-violet-600 dark:text-violet-400 font-medium">
