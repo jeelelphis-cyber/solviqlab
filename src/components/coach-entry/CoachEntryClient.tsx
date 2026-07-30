@@ -1,7 +1,7 @@
 'use client'
 import { useState, useRef, useEffect, useCallback } from 'react'
 import Link from 'next/link'
-import { useSession } from 'next-auth/react'
+import { useSession, signIn } from 'next-auth/react'
 import { getT } from '@/lib/i18n/ui'
 import { PERSONAS } from '@/lib/coach-personas'
 import type { PersonaId } from '@/lib/coach-personas'
@@ -91,10 +91,7 @@ function ProGate({ name, lang, persona, onUnlock }: {
 
   function activate() {
     setLoading(true)
-    setTimeout(() => {
-      try { localStorage.setItem(PROMO_KEY, '1') } catch { /* ignore */ }
-      onUnlock()
-    }, 800)
+    signIn('google', { callbackUrl: typeof window !== 'undefined' ? window.location.href : '/' })
   }
 
   const features = [
@@ -174,6 +171,21 @@ function ChatStage({ name, lang, persona }: { name: string; lang: string; person
   const userId       = useRef<string | null>(null)
 
   const limitReached = !proUnlocked && userTurns >= FREE_TURNS
+
+  // When user logs in — verify PRO status from DB and unlock if valid
+  useEffect(() => {
+    const user = session?.user as { id?: string } | undefined
+    if (!user?.id) return
+    fetch('/api/auth/subscription-status')
+      .then(r => r.json())
+      .then((s: { isPro?: boolean }) => {
+        if (s.isPro) {
+          try { localStorage.setItem(PROMO_KEY, '1') } catch { /* ignore */ }
+          setProUnlocked(true)
+        }
+      })
+      .catch(() => { /* silent */ })
+  }, [session])
 
   useEffect(() => { graphContext.current = readGraphContext() }, [])
 
