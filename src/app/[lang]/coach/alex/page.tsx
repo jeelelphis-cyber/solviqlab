@@ -9,7 +9,7 @@ export function generateStaticParams() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: 'Meet Alex — Your Personal Finance Coach | SolviqLab',
+    title: { absolute: 'Meet Alex — Your Personal Finance Coach | SolviqLab' },
     description: 'Alex has reviewed your results. Get your personal financial plan.',
     robots: { index: false, follow: false },
   }

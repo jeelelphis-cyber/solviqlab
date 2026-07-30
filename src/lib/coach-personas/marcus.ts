@@ -16,6 +16,7 @@ export const MARCUS_PERSONA: CoachPersonaConfig = {
   personalityTags: ['analytical', 'patient', 'strategic', 'clear-headed'],
   specialties: ['investment strategy', 'compound growth', 'retirement planning', 'wealth building'],
   communicationStyle: 'analytical',
+  photoUrl: 'https://files2.heygen.ai/avatar/v3/e2ebd7fc67994cf9870c8a2226ea2fef_45270/preview_talk_1.webp',
   clusters: ['investment', 'savings', 'retirement'],
   relevantSlugs: ['compound-interest-calculator', 'investment-calculator', 'savings-calculator', 'retirement-calculator'],
   introVideoUrl: '/coach-intros/marcus-en.mp4',

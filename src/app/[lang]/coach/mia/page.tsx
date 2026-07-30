@@ -9,7 +9,7 @@ export function generateStaticParams() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: 'Meet Mia — Your Personal Health Coach | SolviqLab',
+    title: { absolute: 'Meet Mia — Your Personal Health Coach | SolviqLab' },
     description: 'Mia has reviewed your results. Get your personal health plan.',
     robots: { index: false, follow: false },
   }

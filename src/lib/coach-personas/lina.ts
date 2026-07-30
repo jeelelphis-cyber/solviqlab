@@ -16,6 +16,7 @@ export const LINA_PERSONA: CoachPersonaConfig = {
   personalityTags: ['practical', 'science-based', 'encouraging', 'realistic'],
   specialties: ['calorie balance', 'meal planning', 'eating habits', 'sustainable diet'],
   communicationStyle: 'nurturing',
+  photoUrl: 'https://files2.heygen.ai/avatar/v3/f362f513eb5241d795aa555d47e02db5_48370/preview_talk_2.webp',
   clusters: ['nutrition', 'diet', 'lifestyle'],
   relevantSlugs: ['calorie-calculator', 'calorie-deficit-calculator', 'tdee-calculator', 'bmr-calculator', 'hydration-quiz', 'lifestyle-quiz'],
   steps: [

@@ -16,6 +16,7 @@ export const SCARLETT_PERSONA: CoachPersonaConfig = {
   personalityTags: ['empathetic', 'gentle', 'evidence-based', 'non-judgmental'],
   specialties: ['stress management', 'anxiety reduction', 'burnout recovery', 'mental resilience'],
   communicationStyle: 'supportive',
+  photoUrl: 'https://files2.heygen.ai/avatar/v3/946f804908de47fda0b9bb71fc266e9e_39070/preview_talk_7.webp',
   clusters: ['mental', 'stress', 'anxiety'],
   relevantSlugs: ['stress-quiz', 'burnout-quiz', 'anxiety-quiz', 'depression-quiz', 'lifestyle-quiz'],
   steps: [

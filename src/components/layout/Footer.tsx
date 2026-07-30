@@ -101,8 +101,16 @@ export function Footer({ lang }: { lang: string }) {
             <ul className="space-y-2">
               <li><Link href={`/${lang}/about`} className="text-xs text-slate-400 hover:text-white transition-colors">{s.footerAbout}</Link></li>
               <li><Link href={`/${lang}/quiz`} className="text-xs text-slate-400 hover:text-white transition-colors">{s.navQuizzes}</Link></li>
-              <li><Link href={`/${lang}/coach/mia`} className="text-xs text-slate-400 hover:text-white transition-colors">{s.footerCoachMia}</Link></li>
-              <li><Link href={`/${lang}/coach/alex`} className="text-xs text-slate-400 hover:text-white transition-colors">{s.footerCoachAlex}</Link></li>
+              {[
+                { id: 'mia',      name: 'Coach Mia' },
+                { id: 'alex',     name: 'Coach Alex' },
+                { id: 'scarlett', name: 'Coach Scarlett' },
+                { id: 'lina',     name: 'Coach Lina' },
+                { id: 'emilia',   name: 'Coach Emilia' },
+                { id: 'marcus',   name: 'Coach Marcus' },
+              ].map(c => (
+                <li key={c.id}><Link href={`/${lang}/coach/${c.id}`} className="text-xs text-slate-400 hover:text-white transition-colors">{c.name}</Link></li>
+              ))}
               <li><Link href={`/${lang}/contact`} className="text-xs text-slate-400 hover:text-white transition-colors">{s.footerContact}</Link></li>
               <li><Link href={`/${lang}/privacy`} className="text-xs text-slate-400 hover:text-white transition-colors">{s.footerPrivacy}</Link></li>
               <li><Link href={`/${lang}/terms`} className="text-xs text-slate-400 hover:text-white transition-colors">{s.footerTerms}</Link></li>

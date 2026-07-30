@@ -16,6 +16,7 @@ export const EMILIA_PERSONA: CoachPersonaConfig = {
   personalityTags: ['motivating', 'energetic', 'data-driven', 'results-focused'],
   specialties: ['energy levels', 'fitness habits', 'body composition', 'daily movement'],
   communicationStyle: 'motivating',
+  photoUrl: 'https://files2.heygen.ai/avatar/v3/137d2a33e1d246fd8d528b3040f25714_38470/preview_target.webp',
   clusters: ['energy', 'fitness', 'body'],
   relevantSlugs: ['body-fat-calculator', 'ideal-weight-calculator', 'energy-quiz', 'bmi-quiz', 'weight-readiness-quiz'],
   steps: [

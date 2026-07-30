@@ -9,7 +9,7 @@ export function generateStaticParams() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: 'Your Personal Health Plan | Mia — SolviqLab',
+    title: { absolute: 'Your Personal Health Plan | Mia — SolviqLab' },
     description: 'Mia built your personalized health plan.',
     robots: { index: false, follow: false },
   }
