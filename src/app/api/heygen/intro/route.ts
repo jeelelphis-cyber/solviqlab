@@ -5,10 +5,28 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { HeyGenService } from '@/lib/heygen/service'
 
+const MIA_VOICE    = 'M2WosQ2Ju3f2b7jdddsj'          // Mia — warm female EN voice
+const MARCUS_VOICE = '828b59f834fd4c7188da322b6d9b6c75' // David Castlemore — male EN voice
+
 const COACH_INTROS: Record<string, { avatarId: string; voiceId: string; script: string }> = {
+  mia: {
+    avatarId: 'Abigail_expressive_2024112501',
+    voiceId:  MIA_VOICE,
+    script: `Most people know what they need to do for their health. Eat better. Move more. Sleep longer. They've known for years.
+
+The problem has never been information. The problem is that nobody built a system around your actual life — your schedule, your stress, your body, your specific starting point.
+
+I'm Mia. I've worked with thousands of people on their health journey. The ones who actually changed? They didn't have more willpower. They had a better system.
+
+What I do is find that system for you. We look at what's actually happening in your body, in your day, in your habits — and we build something that fits. Not a plan you'll follow for two weeks. A shift that lasts.
+
+You're not starting over. You're starting smarter.
+
+What's your name?`,
+  },
   marcus: {
-    avatarId: 'e2ebd7fc67994cf9870c8a2226ea2fef_45270',
-    voiceId:  'M2WosQ2Ju3f2b7jdddsj', // reuse Mia voice as fallback — swap with male voice ID
+    avatarId: 'Marcus_Suit_Front_public',
+    voiceId:  MARCUS_VOICE,
     script: `Most people think investing is complicated. It's not. It's one decision — made consistently over time. And that decision compounds.
 
 Every month without a strategy isn't neutral. It's a cost. Money that could be growing is sitting still instead. And that gap compounds too — just in the wrong direction.
@@ -22,11 +40,11 @@ The best time to start was ten years ago. The second best time is the next five 
 What's your name?`,
   },
   scarlett: {
-    avatarId: '946f804908de47fda0b9bb71fc266e9e_39070',
-    voiceId:  'M2WosQ2Ju3f2b7jdddsj',
-    script: `Those numbers you just saw — they're not just data. They're your nervous system asking for help.
+    avatarId: 'Scarlett_sitting_yoga_front',
+    voiceId:  MIA_VOICE,
+    script: `Stress isn't the problem. The problem is that nobody has ever shown you what's actually triggering it — and how to interrupt it at the root.
 
-And here's what I've learned working with hundreds of people in exactly this moment: the problem isn't that you're weak, or that you need to manage stress better. The problem is that nobody has ever shown you what's actually triggering your anxiety — and how to interrupt it at the root.
+Most advice tells you to breathe, take breaks, do yoga. And you've tried it. It helps for a moment. Then Monday comes, and you're back where you started.
 
 I'm Scarlett. I work with CBT and mindfulness techniques — but not the generic kind. I find your specific patterns — your triggers, your thought loops, your recovery gaps — and I build something custom around your actual life.
 
@@ -37,11 +55,11 @@ In the next few minutes I'm going to ask you three questions nobody has asked yo
 What's your name?`,
   },
   lina: {
-    avatarId: 'f362f513eb5241d795aa555d47e02db5_48370',
-    voiceId:  'M2WosQ2Ju3f2b7jdddsj',
-    script: `You've seen your numbers. And if you're being honest — you've probably seen numbers before. Tracked calories. Started a diet. Lost some weight. Then gained it back.
+    avatarId: 'Lina_Casual_Front_public',
+    voiceId:  MIA_VOICE,
+    script: `If you've ever tracked calories, started a diet, lost some weight — and then gained it back — that cycle isn't your failure. It's a design flaw in how most nutrition advice works.
 
-That cycle isn't your failure. It's a design flaw in how most nutrition advice is built — for the average person, not for you.
+It's built for the average person. Not for you.
 
 I'm Lina. And the difference in how I work is this: I don't start with what you should eat. I start with why you eat the way you do — the habits, the triggers, the patterns that no calorie tracker can see.
 
