@@ -1,6 +1,9 @@
 import { createServiceClient } from './server'
 import { supabase } from './client'
 
+// All writes use service client (bypasses RLS, safe server-side only)
+// All reads use anon client (sufficient for user-scoped queries with userId param)
+
 export interface ConversationMessage {
   id?: string
   user_id: string
@@ -37,14 +40,14 @@ export async function loadConversation(
 
 // Save a single message
 export async function saveMessage(msg: Omit<ConversationMessage, 'id' | 'created_at'>): Promise<void> {
-  const { error } = await supabase.from('conversations').insert(msg)
+  const { error } = await createServiceClient().from('conversations').insert(msg)
   if (error) console.error('saveMessage:', error.message)
 }
 
 // Save multiple messages at once (bulk insert for history migration)
 export async function saveMessages(msgs: Omit<ConversationMessage, 'id' | 'created_at'>[]): Promise<void> {
   if (!msgs.length) return
-  const { error } = await supabase.from('conversations').insert(msgs)
+  const { error } = await createServiceClient().from('conversations').insert(msgs)
   if (error) console.error('saveMessages:', error.message)
 }
 
@@ -66,7 +69,7 @@ export async function getDaysSinceLastConversation(userId: string, coachId: stri
 
 // Save/update coach selection
 export async function saveCoachSelection(selection: CoachSelection): Promise<void> {
-  const { error } = await supabase
+  const { error } = await createServiceClient()
     .from('user_coach_selections')
     .upsert(selection, { onConflict: 'user_id,coach_id' })
   if (error) console.error('saveCoachSelection:', error.message)

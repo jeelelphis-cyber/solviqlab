@@ -1,10 +1,16 @@
-import { supabase } from './client'
+import { createServiceClient } from './server'
 import type { Session } from 'next-auth'
 
-// Upsert user after Google sign-in
+const TRIAL_DAYS = 30
+
+// Upsert user after Google sign-in — sets trial on first registration
 export async function syncUser(session: Session): Promise<string | null> {
   const googleId = (session.user as { googleId?: string }).googleId
   if (!googleId) return null
+
+  const supabase = createServiceClient()
+  const now = new Date()
+  const trialExpiresAt = new Date(now.getTime() + TRIAL_DAYS * 24 * 60 * 60 * 1000)
 
   const { data, error } = await supabase
     .from('users')
@@ -13,12 +19,21 @@ export async function syncUser(session: Session): Promise<string | null> {
       email:      session.user?.email ?? '',
       name:       session.user?.name ?? null,
       avatar_url: session.user?.image ?? null,
-      updated_at: new Date().toISOString(),
-    }, { onConflict: 'google_id' })
-    .select('id')
+      updated_at: now.toISOString(),
+    }, { onConflict: 'google_id', ignoreDuplicates: false })
+    .select('id, trial_expires_at')
     .single()
 
-  if (error) { console.error('syncUser:', error.message); return null }
+  if (error) { console.error('syncUser upsert:', error.message); return null }
+
+  // Set trial only on first registration (trial_expires_at is null)
+  if (data && !data.trial_expires_at) {
+    await supabase
+      .from('users')
+      .update({ trial_expires_at: trialExpiresAt.toISOString(), is_pro: true })
+      .eq('id', data.id)
+  }
+
   return data?.id ?? null
 }
 
@@ -26,7 +41,6 @@ export async function syncUser(session: Session): Promise<string | null> {
 export async function migrateLocalData(userId: string): Promise<void> {
   if (typeof window === 'undefined') return
 
-  // Check if already migrated
   const migrated = localStorage.getItem(`migrated_${userId}`)
   if (migrated) return
 
@@ -49,7 +63,8 @@ export async function migrateLocalData(userId: string): Promise<void> {
       completed_at:    item.completed_at ?? new Date().toISOString(),
     }))
 
-    const { error } = await supabase.from('results').upsert(rows, { ignoreDuplicates: true })
+    const client = createServiceClient()
+    const { error } = await client.from('results').upsert(rows, { ignoreDuplicates: true })
     if (!error) {
       localStorage.setItem(`migrated_${userId}`, '1')
     }

@@ -7,12 +7,18 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { NextRequest, NextResponse } from 'next/server'
+import { getServerSession } from 'next-auth'
 import type { LLMMessage, LLMOptions } from '@/lib/llm/types'
 import { ProviderResolver } from '@/lib/llm/provider-resolver'
 import { DeepSeekProvider } from '@/lib/llm/providers/deepseek-provider'
 import { AnthropicProvider } from '@/lib/llm/providers/anthropic-provider'
 import { OpenAIProvider } from '@/lib/llm/providers/openai-provider'
 import { MockLLMProvider } from '@/lib/llm/provider'
+import { getUserSubscriptionStatus } from '@/lib/member/subscription'
+import { createServiceClient } from '@/lib/supabase/server'
+
+const MAX_MESSAGES_PER_HOUR = 100
+const FREE_TURNS = 3  // anonymous users get 3 turns (enforced client-side; server validates session)
 
 interface ChatRequest {
   messages:   LLMMessage[]
@@ -52,8 +58,55 @@ function buildResolver(): ProviderResolver {
   return new ProviderResolver(entries)
 }
 
+async function checkRateLimit(userId: string): Promise<boolean> {
+  const supabase = createServiceClient()
+  const windowKey = `chat:${new Date().toISOString().slice(0, 13)}`  // hourly bucket
+
+  const { data } = await supabase
+    .from('rate_limits')
+    .select('count')
+    .eq('user_id', userId)
+    .eq('window_key', windowKey)
+    .single()
+
+  const current = (data?.count ?? 0) as number
+  if (current >= MAX_MESSAGES_PER_HOUR) return false
+
+  await supabase
+    .from('rate_limits')
+    .upsert({ user_id: userId, window_key: windowKey, count: current + 1 }, { onConflict: 'user_id,window_key' })
+
+  return true
+}
+
 // Resolver is constructed per-request so env vars are read at runtime (not build time).
 export async function POST(req: NextRequest) {
+  // Auth check — authenticated users must be PRO
+  const session = await getServerSession()
+  const userId = (session?.user as { id?: string } | undefined)?.id
+
+  if (userId) {
+    // Authenticated user: check PRO status
+    const status = await getUserSubscriptionStatus(userId)
+    if (!status?.isPro) {
+      return NextResponse.json(
+        { error: 'Trial expired', code: 'TRIAL_EXPIRED', upgradeUrl: '/pro' },
+        { status: 402 }
+      )
+    }
+
+    // Rate limit
+    const allowed = await checkRateLimit(userId)
+    if (!allowed) {
+      return NextResponse.json(
+        { error: 'Too many requests', code: 'RATE_LIMIT' },
+        { status: 429 }
+      )
+    }
+  }
+  // Anonymous users: client enforces FREE_TURNS (3). No server enforcement needed
+  // since anonymous users have no persistent identity to track server-side.
+
   let body: ChatRequest
   try {
     body = await req.json() as ChatRequest

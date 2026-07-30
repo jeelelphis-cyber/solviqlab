@@ -1,5 +1,6 @@
 import NextAuth from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
+import { syncUser } from '@/lib/supabase/user-sync'
 
 const handler = NextAuth({
   providers: [
@@ -21,10 +22,23 @@ const handler = NextAuth({
       }
       return token
     },
+
     async session({ session, token }) {
       if (session.user && token.googleId) {
         (session.user as typeof session.user & { googleId: string }).googleId = token.googleId as string
       }
+
+      // Sync user to DB and attach userId to session
+      // Runs on every session check — syncUser is idempotent (upsert)
+      if (token.googleId && !token.userId) {
+        const userId = await syncUser(session)
+        if (userId) token.userId = userId
+      }
+
+      if (token.userId) {
+        (session.user as typeof session.user & { id: string }).id = token.userId as string
+      }
+
       return session
     },
   },
