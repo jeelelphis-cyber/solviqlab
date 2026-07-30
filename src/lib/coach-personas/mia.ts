@@ -43,6 +43,8 @@ export const MIA_PERSONA: CoachPersonaConfig = {
   personalityTags: ['warm', 'nurturing', 'direct', 'persistent'],
   specialties: ['weight loss', 'sleep quality', 'stress management', 'healthy habits'],
   communicationStyle: 'nurturing',
+  photoUrl: 'https://files2.heygen.ai/avatar/v3/1f58c0f60faa4cb5bf6c465615e3fb18_39260/preview_target.webp',
+  introVideoUrl: '/coach-intros/mia-en.mp4',
   clusters: ['weight', 'sleep', 'pregnancy'],
   relevantSlugs: [
     'bmi-calculator', 'bmr-calculator', 'tdee-calculator', 'calorie-calculator',
