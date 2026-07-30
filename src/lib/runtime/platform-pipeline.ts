@@ -53,11 +53,11 @@ export function createPlatformPipeline(engines: PlatformEngines): PipelineDefini
     name:    'SolviqLabPlatform',
     version: '1.0.0',
     stages: [
-      // ── P10: UserEngine ─────────────────────────────────────────────────────
+      // ── P10: UserEngine + UserGraph ──────────────────────────────────────────
       {
         name:        'UserEngine.storeResult',
         priority:    10,
-        description: 'Stores the result record, updates completed_slugs, rebuilds journey states.',
+        description: 'Stores result in UserEngine and writes completedStep to UserGraph (SSoT).',
         build: () => (event: ResultEvent, ctx: HandlerContext) => {
           const user = userEngine.getUser()
           if (!user) return
@@ -71,6 +71,20 @@ export function createPlatformPipeline(engines: PlatformEngines): PipelineDefini
             unit:     event.unit,
             metadata: event.metadata,
           })
+
+          // Sprint 4B: write completedStep to UserGraph — GraphGateway becomes SSoT
+          const graph = graphRepo.get(user.id)
+          if (graph) {
+            graphRepo.save({
+              ...graph,
+              journey: {
+                ...graph.journey,
+                completedSteps: [...new Set([...graph.journey.completedSteps, event.slug])],
+                updatedAt:      new Date().toISOString(),
+              },
+              updatedAt: new Date().toISOString(),
+            })
+          }
 
           ctx.emit({
             type:          'platform:intent_state_updated',
@@ -450,8 +464,8 @@ export function createPlatformPipeline(engines: PlatformEngines): PipelineDefini
           const userId = userEngine.getUserId()
           if (!userId) return
 
-          const graph   = graphRepo.get(userId)
-          const gateway = new GraphGateway(graph ?? graphRepo.getOrCreate(userId), userEngine)
+          const graph   = graphRepo.get(userId) ?? graphRepo.getOrCreate(userId)
+          const gateway = new GraphGateway(graph)
           const recCtx  = gateway.recommendation(event.slug)
           const result  = recommendationEngine.recommend(recCtx, 'en')
 

@@ -9,7 +9,6 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import type { UserGraph, QuizResultEntry, QuizResultsNode } from '../graph/types'
-import type { UserEngine } from '../user/engine'
 import type { RecommendationContext } from '../recommendation/types'
 import type { AIContext } from './ai-context-builder'
 import type { JourneyProjection } from './graph-projections/journey'
@@ -23,15 +22,12 @@ import type { SubscriptionInfo }         from './ai-context-builder'
 export class GraphGateway {
   constructor(
     private readonly graph: UserGraph,
-    // Legacy: removed in Sprint 4B when completedSteps migrates to UserGraph
-    private readonly legacyEngine: UserEngine | null = null,
   ) {}
 
   // ── Projections ───────────────────────────────────────────────────────────
 
   recommendation(currentSlug: string): RecommendationContext {
-    const completedSlugs = this.getCompletedSteps()
-    return buildRecommendationProjection(this.graph, currentSlug, completedSlugs)
+    return buildRecommendationProjection(this.graph, currentSlug, this.graph.journey.completedSteps)
   }
 
   journey(): JourneyProjection {
@@ -46,14 +42,8 @@ export class GraphGateway {
     return buildAIContext(this.graph, subscription, recentEventNames)
   }
 
-  // ── Legacy bridge (Sprint 4A only) ───────────────────────────────────────
-  // Returns completedSteps from UserGraph when available, falls back to UserEngine.
-  // Sprint 4B: remove legacyEngine fallback entirely.
-
   getCompletedSteps(): readonly string[] {
-    const fromGraph = this.graph.journey.completedSteps
-    if (fromGraph.length > 0) return fromGraph
-    return this.legacyEngine?.getCompletedSlugs() ?? []
+    return this.graph.journey.completedSteps
   }
 }
 
