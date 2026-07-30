@@ -8,6 +8,7 @@ import {
   type LucideIcon,
 } from 'lucide-react'
 import { CalculatorCard } from './CalculatorCard'
+import { COACH_REGISTRY } from '@/components/coach/CoachBlock'
 import { t } from '../../lib/ui-strings'
 import type { InstrumentMeta } from '../../lib/instruments'
 import { QUIZ_REGISTRY } from '@/lib/quiz/registry'
@@ -110,77 +111,41 @@ export function HomeClient({ instruments, lang }: { instruments: InstrumentMeta[
             </Link>
           </div>
 
-          {/* AI Coach Cards — premium feature */}
-          <div className="grid grid-cols-2 gap-3 max-w-xl mx-auto mb-8">
-            {/* Mia — Health Coach */}
-            <Link
-              href={`/${lang}/coach/mia`}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-rose-400/40 transition-all duration-300"
-            >
-              {/* Square photo area — clean, no overlays */}
-              <div className="relative w-full aspect-square bg-gradient-to-br from-rose-500/30 to-purple-700/30 overflow-hidden">
-                <img
-                  src="https://files2.heygen.ai/avatar/v3/1f58c0f60faa4cb5bf6c465615e3fb18_39260/preview_target.webp"
-                  alt="Mia"
-                  className="w-full h-full object-cover object-top"
-                  loading="lazy"
-                />
-              </div>
-
-              {/* Info + CTA */}
-              <div className="flex flex-col flex-1 px-3 pt-2.5 pb-3 gap-1">
-                <div className="flex items-center justify-between">
-                  <p className="text-white font-bold text-sm">Mia</p>
-                  <div className="flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-                    <span className="text-emerald-400 text-[9px] font-semibold uppercase tracking-wide">{s.coachOnlineNow}</span>
+          {/* AI Coach Cards — registry-driven */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-2xl mx-auto mb-8">
+            {COACH_REGISTRY.map(coach => (
+              <Link
+                key={coach.id}
+                href={coach.href(lang)}
+                className={`group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 ${coach.borderColor}`}
+              >
+                <div className={`relative w-full aspect-square overflow-hidden ${coach.gradientPhoto}`}>
+                  <img
+                    src={coach.photo}
+                    alt={coach.name}
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex flex-col flex-1 px-3 pt-2.5 pb-3 gap-1">
+                  <div className="flex items-center justify-between">
+                    <p className="text-white font-bold text-sm">{coach.name}</p>
+                    <div className="flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                      <span className="text-emerald-400 text-[9px] font-semibold uppercase tracking-wide">{s.coachOnlineNow}</span>
+                    </div>
+                  </div>
+                  <p className={`text-[11px] font-medium ${coach.roleColor}`}>{coach.getRole(s)}</p>
+                  <p className="text-white/40 text-[10px] leading-tight">{coach.getSpec(s)}</p>
+                  <div className="mt-auto pt-2">
+                    <div className={`w-full py-2 rounded-xl text-white text-xs font-bold text-center group-hover:opacity-90 transition-opacity ${coach.gradientCta}`}>
+                      {coach.getCta(s)}
+                    </div>
+                    <p className="text-center text-[9px] text-white/30 mt-1">{s.coachFreeSession}</p>
                   </div>
                 </div>
-                <p className="text-rose-300 text-[11px] font-medium">{s.coachMiaRole}</p>
-                <p className="text-white/40 text-[10px] leading-tight">{s.coachMiaSpec}</p>
-                <div className="mt-auto pt-2">
-                  <div className="w-full py-2 rounded-xl bg-gradient-to-r from-rose-500 to-purple-600 text-white text-xs font-bold text-center group-hover:opacity-90 transition-opacity">
-                    {s.coachTalkTo('Mia')}
-                  </div>
-                  <p className="text-center text-[9px] text-white/30 mt-1">{s.coachFreeSession}</p>
-                </div>
-              </div>
-            </Link>
-
-            {/* Alex — Finance Coach */}
-            <Link
-              href={`/${lang}/coach/alex`}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-blue-400/40 transition-all duration-300"
-            >
-              {/* Square photo area — clean, no overlays */}
-              <div className="relative w-full aspect-square bg-gradient-to-br from-blue-500/30 to-cyan-700/30 overflow-hidden">
-                <img
-                  src="https://files2.heygen.ai/avatar/v3/25ef6c86b1e946969d9a684870c47dfe_14947/preview_talk_1.webp"
-                  alt="Alex"
-                  className="w-full h-full object-cover object-top"
-                  loading="lazy"
-                />
-              </div>
-
-              {/* Info + CTA */}
-              <div className="flex flex-col flex-1 px-3 pt-2.5 pb-3 gap-1">
-                <div className="flex items-center justify-between">
-                  <p className="text-white font-bold text-sm">Alex</p>
-                  <div className="flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-                    <span className="text-emerald-400 text-[9px] font-semibold uppercase tracking-wide">{s.coachOnlineNow}</span>
-                  </div>
-                </div>
-                <p className="text-blue-300 text-[11px] font-medium">{s.coachAlexRole}</p>
-                <p className="text-white/40 text-[10px] leading-tight">{s.coachAlexSpec}</p>
-                <div className="mt-auto pt-2">
-                  <div className="w-full py-2 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-600 text-white text-xs font-bold text-center group-hover:opacity-90 transition-opacity">
-                    {s.coachTalkTo('Alex')}
-                  </div>
-                  <p className="text-center text-[9px] text-white/30 mt-1">{s.coachFreeSession}</p>
-                </div>
-              </div>
-            </Link>
+              </Link>
+            ))}
           </div>
 
           {/* Search bar — Lucide Search icon */}
