@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://solviqlab.com'),
   title: {
     default: 'SolviqLab — Free Professional Calculators',
-    template: '%s | SolviqLab',
+    template: '%s',
   },
   description:
     'Free professional calculators for health, finance, math and unit conversions. Trusted results based on WHO, CFPB, NIST standards.',
