@@ -18,6 +18,7 @@ export const MARCUS_PERSONA: CoachPersonaConfig = {
   communicationStyle: 'analytical',
   clusters: ['investment', 'savings', 'retirement'],
   relevantSlugs: ['compound-interest-calculator', 'investment-calculator', 'savings-calculator', 'retirement-calculator'],
+  introVideoUrl: '/coach-intros/marcus-en.mp4',
   steps: [
     { questionKey: 'marcus.step1.question', contextKey: 'marcus.step1.context', yesKey: 'marcus.step1.yes' },
     { questionKey: 'marcus.step2.question', contextKey: 'marcus.step2.context', yesKey: 'marcus.step2.yes' },
