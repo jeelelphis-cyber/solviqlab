@@ -2,9 +2,12 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useSession } from 'next-auth/react'
 import { AccountService } from '@/lib/account/service'
 import type { HistoryItem, FavoriteItem } from '@/lib/account/service'
 import { getT } from '@/lib/i18n/ui'
+import { GraphRepository } from '@/lib/graph/repository'
+import { createStorageProvider } from '@/lib/user/storage'
 
 // ── Graph reader ──────────────────────────────────────────────────────────────
 
@@ -16,21 +19,20 @@ interface GraphProfile {
   assessments: Array<{ clusterId: string; score: number }>
 }
 
-function readProfile(): GraphProfile {
+function readProfile(userId: string | null): GraphProfile {
+  const empty: GraphProfile = { name: null, age: null, phase: null, goals: [], assessments: [] }
+  if (!userId) return empty
   try {
-    const key = Object.keys(localStorage).find(k => k.startsWith('graph:'))
-    if (!key) return { name: null, age: null, phase: null, goals: [], assessments: [] }
-    const graph = JSON.parse(localStorage.getItem(key) ?? '{}')
+    const graph = new GraphRepository(createStorageProvider()).get(userId)
+    if (!graph) return empty
     return {
-      name: graph?.identity?.name ?? null,
-      age: graph?.identity?.age ?? null,
-      phase: graph?.journey?.currentPhase ?? null,
-      goals: (graph?.goals?.items ?? []).map((g: { text: string }) => g.text),
-      assessments: graph?.assessments?.items ?? [],
+      name:        graph.identity.name,
+      age:         graph.identity.age,
+      phase:       graph.journey.currentPhase,
+      goals:       graph.goals.items.map(g => g.text),
+      assessments: graph.assessments.items.map(a => ({ clusterId: a.clusterId, score: a.score })),
     }
-  } catch {
-    return { name: null, age: null, phase: null, goals: [], assessments: [] }
-  }
+  } catch { return empty }
 }
 
 // ── Cluster colors ────────────────────────────────────────────────────────────
@@ -289,12 +291,14 @@ interface Props {
 
 export function AccountClient({ lang }: Props) {
   const t = getT(lang)
+  const { data: session } = useSession()
+  const userId = (session?.user as { id?: string } | undefined)?.id ?? null
   const [tab, setTab] = useState<Tab>('overview')
   const [profile, setProfile] = useState<GraphProfile>({ name: null, age: null, phase: null, goals: [], assessments: [] })
 
   useEffect(() => {
-    setProfile(readProfile())
-  }, [])
+    setProfile(readProfile(userId))
+  }, [userId])
 
   const tabs: Array<{ id: Tab; label: string; icon: string }> = [
     { id: 'overview',  label: t('account.tab_overview'),  icon: '👤' },

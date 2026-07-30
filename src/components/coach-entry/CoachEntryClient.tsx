@@ -7,6 +7,8 @@ import { PERSONAS } from '@/lib/coach-personas'
 import type { PersonaId } from '@/lib/coach-personas'
 import type { CoachPersonaConfig, CoachMemory } from '@/lib/coach-personas/types'
 import { buildPersonalizedOpening } from '@/lib/coach/coach-utils'
+import { GraphRepository } from '@/lib/graph/repository'
+import { createStorageProvider } from '@/lib/user/storage'
 import {
   loadConversation,
   saveMessage,
@@ -18,17 +20,17 @@ import {
 
 // ── Graph context ─────────────────────────────────────────────────────────────
 
-function readGraphContext(): string {
+function readGraphContext(userId: string | null): string {
+  if (!userId) return ''
   try {
-    const keys = Object.keys(localStorage).filter(k => k.startsWith('graph:'))
-    if (!keys.length) return ''
-    const graph = JSON.parse(localStorage.getItem(keys[0]) ?? '{}')
+    const graph = new GraphRepository(createStorageProvider()).get(userId)
+    if (!graph) return ''
     const parts: string[] = []
-    const assessments: Array<{ clusterId: string; score: number }> = graph?.assessments?.items ?? []
-    if (assessments.length) parts.push('Quiz/calculator results: ' + assessments.map(a => `${a.clusterId}=${a.score}`).join(', '))
-    const goals: Array<{ text: string }> = graph?.goals?.items ?? []
-    if (goals.length) parts.push('Goals: ' + goals.map(g => g.text).join('; '))
-    if (graph?.identity?.age) parts.push(`Age: ${graph.identity.age}`)
+    if (graph.assessments.items.length)
+      parts.push('Quiz/calculator results: ' + graph.assessments.items.map(a => `${a.clusterId}=${a.score}`).join(', '))
+    if (graph.goals.items.length)
+      parts.push('Goals: ' + graph.goals.items.map(g => g.text).join('; '))
+    if (graph.identity.age) parts.push(`Age: ${graph.identity.age}`)
     return parts.join('. ')
   } catch { return '' }
 }
@@ -187,7 +189,7 @@ function ChatStage({ name, lang, persona }: { name: string; lang: string; person
       .catch(() => { /* silent */ })
   }, [session])
 
-  useEffect(() => { graphContext.current = readGraphContext() }, [])
+  useEffect(() => { graphContext.current = readGraphContext(userId.current) }, [session])
 
   // Load conversation history from Supabase (logged-in users)
   useEffect(() => {
@@ -224,7 +226,7 @@ function ChatStage({ name, lang, persona }: { name: string; lang: string; person
           setUserTurns(userCount)
         } else {
           // First visit — personalized opening
-          const opening = buildPersonalizedOpening(name, lang, persona, t)
+          const opening = buildPersonalizedOpening(name, lang, persona, t, uid)
           setMessages([{ from: 'coach', text: opening }])
           // Save Mia's opening to history
           await saveMessage({ user_id: uid, coach_id: persona.id, role: 'coach', content: opening })
@@ -232,7 +234,7 @@ function ChatStage({ name, lang, persona }: { name: string; lang: string; person
       } else {
         // Anonymous user — local opening only
         coachMemory.current = { daysSinceLastVisit: null, previousTopics: [], activePlan: null, source: detectSource() }
-        setMessages([{ from: 'coach', text: buildPersonalizedOpening(name, lang, persona, t) }])
+        setMessages([{ from: 'coach', text: buildPersonalizedOpening(name, lang, persona, t, null) }])
       }
 
       setHistoryLoaded(true)
@@ -486,6 +488,8 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
   const persona: CoachPersonaConfig = PERSONAS[personaId]
   const t = getT(lang)
   const pid = persona.id
+  const { data: outerSession } = useSession()
+  const outerUserId = (outerSession?.user as { id?: string } | undefined)?.id ?? null
   const STATE_KEY = `coach_state_${pid}`
 
   const VIDEO_WATCHED_KEY = `coach_intro_${pid}_watched`
@@ -516,14 +520,10 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
 
   useEffect(() => {
     try {
-      const keys = Object.keys(localStorage).filter(k => k.startsWith('graph:'))
-      if (keys.length) {
-        const graph = JSON.parse(localStorage.getItem(keys[0]) ?? '{}')
-        const assessments: unknown[] = graph?.assessments?.items ?? []
-        setHasResults(assessments.length > 0)
-      }
+      const graph = outerUserId ? new GraphRepository(createStorageProvider()).get(outerUserId) : null
+      setHasResults((graph?.assessments.items.length ?? 0) > 0)
     } catch { /* ignore */ }
-  }, [])
+  }, [outerUserId])
 
   const STEPS = persona.steps.map(s => ({
     question: t(s.questionKey),

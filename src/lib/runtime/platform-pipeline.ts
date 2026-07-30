@@ -12,6 +12,7 @@ import type { AssessmentGraphSync } from '../graph/sync-service'
 import { GraphRepository } from '../graph/repository'
 import { GraphUpdater } from '../graph/updater'
 import { LocalStorageProvider } from '../user/storage'
+import { GraphGateway } from '../intelligence/graph-gateway'
 
 // ── Platform Pipeline Definition ─────────────────────────────────────────────
 // The authoritative declaration of what the platform does after a result arrives.
@@ -36,13 +37,14 @@ export interface PlatformEngines {
   readonly recommendationEngine: RecommendationEngine
   readonly assessmentEngine: AssessmentEngine
   readonly graphSync: AssessmentGraphSync
+  readonly graphRepo: GraphRepository
 }
 
 // Assessment slugs that signal completion of an assessment (trigger Strategy + Planner)
 import { ASSESSMENT_SLUGS } from '../domain/intent-state'
 
 export function createPlatformPipeline(engines: PlatformEngines): PipelineDefinition {
-  const { userEngine, profileEngine, recommendationEngine, assessmentEngine, graphSync } = engines
+  const { userEngine, profileEngine, recommendationEngine, assessmentEngine, graphSync, graphRepo } = engines
   const strategyEngine = new StrategyEngine()
   const policyEngine   = new PolicyEngine()
   const plannerEngine  = new PlannerEngine()
@@ -448,33 +450,10 @@ export function createPlatformPipeline(engines: PlatformEngines): PipelineDefini
           const userId = userEngine.getUserId()
           if (!userId) return
 
-          const user = userEngine.getUser()!
-          const completedSlugs = userEngine.getCompletedSlugs()
-          const journeyStates  = userEngine.getAllJourneyStates()
-
-          const recCtx = {
-            user_id:                  user.id,
-            user_type:                user.type,
-            subscription_tier:        'free' as const,
-            current_slug:             event.slug,
-            completed_slugs:          completedSlugs,
-            journey_states:           journeyStates.map(js => ({
-              journey_id:       js.journey_id,
-              completed_count:  js.completed_count,
-              total_steps:      js.total_steps,
-              progress_percent: js.progress_percent,
-              ai_readiness:     js.ai_readiness,
-              unlocked_rewards: [...js.unlocked_rewards],
-              last_active_at:   js.last_active_at,
-              is_complete:      js.is_complete,
-            })),
-            result_count:             user.result_history.length,
-            last_active_at:           user.last_active_at,
-            registration_trigger_score: 0,
-            current_timestamp:        new Date().toISOString(),
-          }
-
-          const result = recommendationEngine.recommend(recCtx, 'en')
+          const graph   = graphRepo.get(userId)
+          const gateway = new GraphGateway(graph ?? graphRepo.getOrCreate(userId), userEngine)
+          const recCtx  = gateway.recommendation(event.slug)
+          const result  = recommendationEngine.recommend(recCtx, 'en')
 
           // P-16 + P-17: store full RecommendationDecision (slug + score + reasons + alternatives)
           userEngine.setRecommendationDecision(result.decision)

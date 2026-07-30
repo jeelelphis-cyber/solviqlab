@@ -139,6 +139,7 @@ export function createPlatformRuntime(options: PlatformRuntimeOptions = {}): Pla
     recommendationEngine,
     assessmentEngine,
     graphSync,
+    graphRepo,
   })
   buildHandlers(pipeline).forEach(handler => bus.register(handler))
 

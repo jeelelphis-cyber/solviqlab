@@ -1,6 +1,9 @@
 'use client'
 import { useState, useEffect, useCallback } from 'react'
+import { useSession } from 'next-auth/react'
 import { getT } from '@/lib/i18n/ui'
+import { GraphRepository } from '@/lib/graph/repository'
+import { createStorageProvider } from '@/lib/user/storage'
 
 import { PERSONAS } from '@/lib/coach-personas'
 import type { PersonaId } from '@/lib/coach-personas'
@@ -30,23 +33,21 @@ function useCountdown() {
   return { days, hours, mins, secs, expired: diff <= 0 }
 }
 
-// ── Read graph + name from localStorage ──────────────────────────────────────
+// ── Read graph + name via GraphRepository ────────────────────────────────────
 
-function readContext(personaId: string): { name: string; graphSummary: string } {
+function readContext(personaId: string, userId: string | null): { name: string; graphSummary: string } {
   try {
-    const name = localStorage.getItem(`${personaId}_user_name`) ?? ''
-    const keys = Object.keys(localStorage).filter(k => k.startsWith('graph:'))
-    if (!keys.length) return { name, graphSummary: '' }
-    const graph = JSON.parse(localStorage.getItem(keys[0]) ?? '{}')
+    const savedName = localStorage.getItem(`${personaId}_user_name`) ?? ''
+    if (!userId) return { name: savedName, graphSummary: '' }
+    const graph = new GraphRepository(createStorageProvider()).get(userId)
+    if (!graph) return { name: savedName, graphSummary: '' }
     const parts: string[] = []
-    const assessments: Array<{ clusterId: string; score: number }> = graph?.assessments?.items ?? []
-    if (assessments.length) {
-      parts.push('Quiz results: ' + assessments.map(a => `${a.clusterId}=${a.score}`).join(', '))
-    }
-    const goals: Array<{ text: string }> = graph?.goals?.items ?? []
-    if (goals.length) parts.push('Goals: ' + goals.map(g => g.text).join('; '))
-    if (graph?.identity?.age) parts.push(`Age: ${graph.identity.age}`)
-    return { name: name || graph?.identity?.name || '', graphSummary: parts.join('. ') }
+    if (graph.assessments.items.length)
+      parts.push('Quiz results: ' + graph.assessments.items.map(a => `${a.clusterId}=${a.score}`).join(', '))
+    if (graph.goals.items.length)
+      parts.push('Goals: ' + graph.goals.items.map(g => g.text).join('; '))
+    if (graph.identity.age) parts.push(`Age: ${graph.identity.age}`)
+    return { name: savedName || graph.identity.name || '', graphSummary: parts.join('. ') }
   } catch {
     return { name: '', graphSummary: '' }
   }
@@ -115,6 +116,8 @@ export function CoachPlanClient({ lang, personaId }: { lang: string; personaId: 
   const persona: CoachPersonaConfig = PERSONAS[personaId]
   const t = getT(lang)
   const pid = persona.id
+  const { data: session } = useSession()
+  const userId = (session?.user as { id?: string } | undefined)?.id ?? null
   const [name, setName] = useState('')
   const [plan, setPlan] = useState<PlanItem[]>([])
   const [loading, setLoading] = useState(true)
@@ -123,7 +126,7 @@ export function CoachPlanClient({ lang, personaId }: { lang: string; personaId: 
   const load = useCallback(() => {
     setError(false)
     setLoading(true)
-    const { name: n, graphSummary } = readContext(pid)
+    const { name: n, graphSummary } = readContext(pid, userId)
     setName(n)
     generatePlan(persona, n, lang, graphSummary)
       .then(items => { setPlan(items); setLoading(false) })
