@@ -1,4 +1,5 @@
 import { createServiceClient } from './server'
+import { emit } from '@/lib/events/emitter'
 import type { Session } from 'next-auth'
 
 const TRIAL_DAYS = 30
@@ -32,6 +33,11 @@ export async function syncUser(session: Session): Promise<string | null> {
       .from('users')
       .update({ trial_expires_at: trialExpiresAt.toISOString(), is_pro: true })
       .eq('id', data.id)
+
+    emit('TRIAL_STARTED', data.id, 'auth', 'en', { trialExpiresAt: trialExpiresAt.toISOString() })
+    emit('USER_REGISTERED', data.id, 'auth', 'en', { email: session.user?.email ?? '', source: 'google' })
+  } else {
+    emit('USER_LOGGED_IN', data?.id ?? null, 'auth', 'en', { email: session.user?.email ?? '' })
   }
 
   return data?.id ?? null

@@ -16,6 +16,7 @@ import { OpenAIProvider } from '@/lib/llm/providers/openai-provider'
 import { MockLLMProvider } from '@/lib/llm/provider'
 import { getUserSubscriptionStatus } from '@/lib/member/subscription'
 import { createServiceClient } from '@/lib/supabase/server'
+import { emit } from '@/lib/events/emitter'
 
 const MAX_MESSAGES_PER_HOUR = 100
 const FREE_TURNS = 3  // anonymous users get 3 turns (enforced client-side; server validates session)
@@ -98,6 +99,7 @@ export async function POST(req: NextRequest) {
     // Rate limit
     const allowed = await checkRateLimit(userId)
     if (!allowed) {
+      emit('RATE_LIMIT_HIT', userId, 'server', 'en', { endpoint: '/api/llm/chat' })
       return NextResponse.json(
         { error: 'Too many requests', code: 'RATE_LIMIT' },
         { status: 429 }
@@ -115,6 +117,18 @@ export async function POST(req: NextRequest) {
   }
 
   const { messages, options, stream = false, provider: preferredName } = body
+  const sessionId = req.headers.get('x-session-id') ?? 'unknown'
+  const lang      = req.headers.get('x-lang') ?? 'en'
+  const coachId   = (options as { coachId?: string } | undefined)?.coachId ?? 'unknown'
+  const turnNum   = messages.filter((m: LLMMessage) => m.role === 'user').length
+  const lastMsg   = messages.findLast?.((m: LLMMessage) => m.role === 'user')
+
+  // Track user message
+  emit('COACH_MESSAGE_SENT', userId ?? null, sessionId, lang, {
+    coachId,
+    turnNumber:    turnNum,
+    messageLength: typeof lastMsg?.content === 'string' ? lastMsg.content.length : 0,
+  })
 
   let provider
   try {
@@ -154,9 +168,15 @@ export async function POST(req: NextRequest) {
 
   try {
     const response = await provider.complete(messages, options)
+    emit('COACH_MESSAGE_RECEIVED', userId ?? null, sessionId, lang, {
+      coachId,
+      turnNumber: turnNum,
+      provider:   preferredName ?? 'auto',
+    })
     return NextResponse.json(response)
   } catch (err) {
     const status = (err as any)?.code === 'rate_limited' ? 429 : 502
+    emit('API_ERROR', userId ?? null, sessionId, lang, { endpoint: '/api/llm/chat', status })
     return NextResponse.json({ error: 'Provider error' }, { status })
   }
 }
