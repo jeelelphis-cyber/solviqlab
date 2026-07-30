@@ -6,6 +6,7 @@ export interface CoachPersonaConfig {
   avatarLetter: string
   accentColor: string
   photoUrl?: string                        // HeyGen or static photo
+  introVideoUrl?: string                   // Pre-recorded hook video (optional)
   shortBio: string                         // 1-2 sentences for gallery card
   personalityTags: string[]                // e.g. ["warm", "direct", "nurturing"]
   specialties: string[]                    // e.g. ["weight loss", "sleep", "stress"]

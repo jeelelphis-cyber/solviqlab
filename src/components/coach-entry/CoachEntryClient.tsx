@@ -380,6 +380,45 @@ function ChatStage({ name, lang, persona }: { name: string; lang: string; person
   )
 }
 
+// ── Video intro stage ─────────────────────────────────────────────────────────
+
+function VideoIntroStage({ persona, onDone }: { persona: CoachPersonaConfig; onDone: () => void }) {
+  const [ended, setEnded] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  return (
+    <div className="flex flex-col gap-5">
+      <div className="relative rounded-2xl overflow-hidden bg-black aspect-video shadow-xl">
+        <video
+          ref={videoRef}
+          src={persona.introVideoUrl}
+          autoPlay
+          playsInline
+          controls
+          className="w-full h-full object-cover"
+          onEnded={() => setEnded(true)}
+        />
+      </div>
+
+      <button
+        onClick={onDone}
+        className={`w-full py-4 rounded-2xl bg-gradient-to-r ${persona.avatarGradient} text-white font-bold text-base shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 ${!ended ? 'opacity-50' : 'opacity-100'}`}
+      >
+        {ended ? "I'm ready →" : 'Watch the full intro first'}
+      </button>
+
+      {!ended && (
+        <button
+          onClick={onDone}
+          className="text-slate-600 text-xs text-center hover:text-slate-500 transition-colors"
+        >
+          Skip intro
+        </button>
+      )}
+    </div>
+  )
+}
+
 // ── Name stage ────────────────────────────────────────────────────────────────
 
 function NameStage({ onDone, lang, persona }: { onDone: (name: string) => void; lang: string; persona: CoachPersonaConfig }) {
@@ -440,6 +479,7 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
   const pid = persona.id
   const STATE_KEY = `coach_state_${pid}`
 
+  const [videoWatched, setVideoWatched] = useState(!persona.introVideoUrl)
   const [step, setStep] = useState(0)
   const [animating, setAnimating] = useState(false)
   const [name, setName] = useState('')
@@ -551,7 +591,13 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
       {/* Main content */}
       <div className="flex-1 flex flex-col max-w-xl mx-auto w-full px-5 py-8 overflow-y-auto">
 
-        {isCommitment && (
+        {!videoWatched && (
+          <div className="animate-fade-in">
+            <VideoIntroStage persona={persona} onDone={() => setVideoWatched(true)} />
+          </div>
+        )}
+
+        {videoWatched && isCommitment && (
           <div className={`flex flex-col gap-6 transition-all duration-300 ${animating ? 'opacity-0 translate-y-3' : 'opacity-100 translate-y-0'}`}>
             <div className="flex gap-1.5">
               {[...STEPS, { placeholder: true }].map((_, i) => (
@@ -586,13 +632,13 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
           </div>
         )}
 
-        {isNameStep && (
+        {videoWatched && isNameStep && (
           <div className={`transition-all duration-300 ${animating ? 'opacity-0 translate-y-3' : 'opacity-100 translate-y-0'}`}>
             <NameStage onDone={handleName} lang={lang} persona={persona} />
           </div>
         )}
 
-        {isChatStep && (
+        {videoWatched && isChatStep && (
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2 pb-4 border-b border-slate-800">
               <span className="text-emerald-400 text-sm">✓</span>
