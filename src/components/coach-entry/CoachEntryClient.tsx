@@ -402,18 +402,15 @@ function VideoIntroStage({ persona, onDone }: { persona: CoachPersonaConfig; onD
 
       <button
         onClick={onDone}
-        className={`w-full py-4 rounded-2xl bg-gradient-to-r ${persona.avatarGradient} text-white font-bold text-base shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 ${!ended ? 'opacity-50' : 'opacity-100'}`}
+        className={`w-full py-4 rounded-2xl bg-gradient-to-r ${persona.avatarGradient} text-white font-bold text-base shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 ${ended ? 'opacity-100' : 'opacity-70'}`}
       >
-        {ended ? "I'm ready →" : 'Watch the full intro first'}
+        {ended ? "I'm ready →" : "I'm ready →"}
       </button>
 
       {!ended && (
-        <button
-          onClick={onDone}
-          className="text-slate-600 text-xs text-center hover:text-slate-500 transition-colors"
-        >
-          Skip intro
-        </button>
+        <p className="text-slate-600 text-xs text-center">
+          Watch the intro or continue whenever you're ready
+        </p>
       )}
     </div>
   )
@@ -479,7 +476,9 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
   const pid = persona.id
   const STATE_KEY = `coach_state_${pid}`
 
-  const [videoWatched, setVideoWatched] = useState(!persona.introVideoUrl)
+  const VIDEO_WATCHED_KEY = `coach_intro_${pid}_watched`
+  const hasVideo = !!(persona.introVideoUrl && lang === 'en')
+  const [videoWatched, setVideoWatched] = useState(!hasVideo)
   const [step, setStep] = useState(0)
   const [animating, setAnimating] = useState(false)
   const [name, setName] = useState('')
@@ -491,6 +490,8 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
       const saved = JSON.parse(localStorage.getItem(STATE_KEY) ?? '{}')
       if (saved.step) setStep(Number(saved.step))
       if (saved.name) setName(saved.name)
+      // Skip video if already watched in a previous session
+      if (hasVideo && localStorage.getItem(VIDEO_WATCHED_KEY)) setVideoWatched(true)
     } catch { /* ignore */ }
     setStateLoaded(true)
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -593,7 +594,10 @@ export function CoachEntryClient({ lang, personaId }: { lang: string; personaId:
 
         {!videoWatched && (
           <div className="animate-fade-in">
-            <VideoIntroStage persona={persona} onDone={() => setVideoWatched(true)} />
+            <VideoIntroStage persona={persona} onDone={() => {
+              try { localStorage.setItem(VIDEO_WATCHED_KEY, '1') } catch { /* ignore */ }
+              setVideoWatched(true)
+            }} />
           </div>
         )}
 

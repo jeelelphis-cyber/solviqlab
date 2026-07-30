@@ -9,13 +9,13 @@ const COACH_INTROS: Record<string, { avatarId: string; voiceId: string; script: 
   marcus: {
     avatarId: 'e2ebd7fc67994cf9870c8a2226ea2fef_45270',
     voiceId:  'M2WosQ2Ju3f2b7jdddsj', // reuse Mia voice as fallback — swap with male voice ID
-    script: `You just saw what compound interest can do. Now let me show you the other side — what happens when you don't use it.
+    script: `Most people think investing is complicated. It's not. It's one decision — made consistently over time. And that decision compounds.
 
-Every month without a real investment strategy isn't neutral. It's a cost. Money that could be growing — sitting still instead. And that gap compounds too. Just in the wrong direction.
+Every month without a strategy isn't neutral. It's a cost. Money that could be growing is sitting still instead. And that gap compounds too — just in the wrong direction.
 
 I'm Marcus. Twelve years building wealth strategies for people at every starting point. The one thing that separated those who built real wealth? A system. Not luck. Not a hot stock tip. A strategy followed consistently, through market ups and downs.
 
-What I do is build that system for you. Based on where you actually are — not where you think you should be. No jargon. No hype. Just a clear roadmap and the knowledge to follow it.
+What I do is build that system with you. Based on where you actually are — not where you think you should be. No jargon. No hype. Just a clear roadmap and the knowledge to follow it.
 
 The best time to start was ten years ago. The second best time is the next five minutes.
 
