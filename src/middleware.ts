@@ -46,6 +46,9 @@ export function middleware(req: NextRequest) {
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api') ||
     pathname.startsWith('/embed') ||
+    pathname.startsWith('/admin') ||
+    pathname.startsWith('/og') ||   // OG image generation — must not be lang-prefixed
+    pathname.startsWith('/auth') ||  // Auth routes — no lang prefix needed
     pathname.includes('.') // static files
   ) {
     return NextResponse.next()
@@ -62,7 +65,7 @@ export function middleware(req: NextRequest) {
   const url     = req.nextUrl.clone()
   url.pathname  = `/${lang}${pathname === '/' ? '' : pathname}`
 
-  return NextResponse.redirect(url, 307)
+  return NextResponse.redirect(url, 308)
 }
 
 export const config = {
